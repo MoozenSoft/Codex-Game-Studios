@@ -1,22 +1,23 @@
-# Skill Test Spec: /next-step
+# Skill Test Spec: $next-step
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/next-step` tells the user where they are in the pipeline and the one thing to do
-next. It is read-only and declares the Haiku tier (`model: haiku`), which is
-used only when the user types `/next-step` in Manual mode — in auto mode, or when
-Claude starts the skill itself, the session model runs it
-(`.claude/docs/model-tiers.md`). Before it runs, it is handed the resolved
-config block (`project.stage`, `workflow`) and the output of
-`.claude/scripts/story-status.sh`; it reads the session checkpoint itself (Step 3). It then reads
-`.claude/docs/workflow-catalog.yaml`, resolves step completion for the current
-phase with one call to `bash .claude/scripts/artifact-check.sh --phase [phase]`,
+`$next-step` tells the user where they are in the pipeline and the one thing to do
+next. It is read-only and inherits the current authorized session model and
+reasoning effort. It explicitly executes the config helper for `project.stage`,
+`workflow`, `automation` and `automation_always_ask`, then runs
+`.agents/scripts/story-status.sh` and checks the actual command results; fenced
+examples do not execute on load. It reads the session checkpoint itself (Step 3). It then reads
+`.agents/docs/workflow-catalog.yaml`, resolves step completion for the current
+phase with one call to `bash .agents/scripts/artifact-check.sh --phase [phase]`,
 and in Production reads `production/sprint-status.yaml`.
 
 When `workflow` resolves to `minimal` (the default, because `modes.rigor`
 defaults to `minimal`) it skips the phase ladder, reads the session checkpoint
 (Step 3), and walks the minimal path (Step 4m): engine →
-`design/game-brief.md` → stories → `/dev-story` ↔ `/story-done`. The optional
+`design/game-brief.md` → stories → `$dev-story` ↔ `$story-done`. The optional
 argument is **what the user just finished or is stuck
 on** — the skill uses it to advance past the named step, and confusion language
 in it adds an escalation footer. It is not a topic filter.
@@ -30,20 +31,20 @@ director gates are invoked.
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
-- [ ] Frontmatter sets `model: haiku`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
+- [ ] Skill frontmatter does not select a model or reasoning effort; execution inherits the current authorized session configuration.
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keyword: COMPLETE
-- [ ] Does NOT contain "May I write" language, and `allowed-tools` has no Write or Edit (skill is read-only)
+- [ ] 只读分析不改被审阅产物；可选报告写入遵循协作模式及已有授权，不以工具字段代替权限。
 - [ ] Has a next-step handoff (one `→ Next up` recommendation plus escalation paths)
 
 ---
 
 ## Director Gate Checks
 
-None. `/next-step` is a read-only navigation skill. No director gates apply.
+None. `$next-step` is a read-only navigation skill. No director gates apply.
 
 ---
 
@@ -51,7 +52,7 @@ None. `/next-step` is a read-only navigation skill. No director gates apply.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -69,12 +70,12 @@ Fixture defaults.
   `blocker` field
 - `production/session-state/active.md` has a STATUS block naming the in-progress story
 
-**Input:** `/next-step`
+**Input:** `$next-step`
 
 **Expected behavior:**
 1. Skill takes `project.stage: Production` and `workflow: standard` from the config block
-2. Skill reads `.claude/docs/workflow-catalog.yaml` and runs
-   `bash .claude/scripts/artifact-check.sh --phase production`
+2. Skill reads `.agents/docs/workflow-catalog.yaml` and runs
+   `bash .agents/scripts/artifact-check.sh --phase production`
 3. Skill reads `production/sprint-status.yaml`: the in-progress story is
    "currently active", ready-for-dev stories are "next up", done stories count as
    complete, the blocked story is named with its `blocker` text
@@ -101,28 +102,28 @@ Fixture defaults.
 **Fixture:**
 - `project.yaml` sets `project.stage: Concept`, `modes.rigor: full`, and
   `engine.name: "Godot"` (`full`, because at `standard` the art bible is
-  required only when visual-asset stories exist — `.claude/docs/workflow-modes.md`
+  required only when visual-asset stories exist — `.agents/docs/workflow-modes.md`
   — and a Concept-stage project has no stories to decide it by)
 - No `design/gdd/game-concept.md`, no `design/art/art-bible.md`, no
   `design/gdd/systems-index.md`, no sprint files
 
-**Input:** `/next-step`
+**Input:** `$next-step`
 
 **Expected behavior:**
 1. Skill maps `Concept` to the catalog phase `concept`
 2. `artifact-check.sh --phase concept` reports `engine-setup` PRESENT (matched by
    `engine.name` in `project.yaml`) and `game-concept`, `art-bible`, `map-systems` ABSENT
 3. `✓ Done` lists Engine Setup
-4. `→ Next up (REQUIRED)` is **Game Concept Document** with command `/brainstorm`
-5. `Coming up after that` lists Art Bible (`/art-bible`) and Systems Map (`/map-systems`)
+4. `→ Next up (REQUIRED)` is **Game Concept Document** with command `$brainstorm`
+5. `Coming up after that` lists Art Bible (`$art-bible`) and Systems Map (`$map-systems`)
 6. Verdict is COMPLETE
 
 **Assertions:**
 - [ ] Heading reads `## Where You Are: Concept`
 - [ ] Engine Setup is shown under `✓ Done` (not reported missing)
-- [ ] `→ Next up` is Game Concept Document via `/brainstorm`
-- [ ] `/art-bible` and `/map-systems` appear under "Coming up after that", in that order
-- [ ] No Production-stage skill (e.g. `/dev-story`, `/sprint-plan`) is suggested
+- [ ] `→ Next up` is Game Concept Document via `$brainstorm`
+- [ ] `$art-bible` and `$map-systems` appear under "Coming up after that", in that order
+- [ ] No Production-stage skill (e.g. `$dev-story`, `$sprint-plan`) is suggested
 - [ ] Verdict is COMPLETE
 
 ---
@@ -135,14 +136,14 @@ Fixture defaults.
 - `design/gdd/game-concept.md` and `design/gdd/systems-index.md` exist
 - No `docs/architecture/adr-*.md`, no `production/epics/**/story-*.md`, code root empty
 
-**Input:** `/next-step`
+**Input:** `$next-step`
 
 **Expected behavior:**
 1. Config block reports `project.stage` as not set
 2. Skill applies the Step 2 artifact inference (most-advanced match wins):
    `design/gdd/systems-index.md` exists and nothing further → `systems-design`
 3. Skill reports the inferred phase normally with the Step 7 shape
-4. `→ Next up (REQUIRED)` is System GDDs via `/design-system`. The catalog's
+4. `→ Next up (REQUIRED)` is System GDDs via `$design-system`. The catalog's
    `design-system` step has only a `note:` check, so `artifact-check.sh` reports
    it `NO_CHECK` with a note — a **MANUAL** step: the skill asks whether any
    system GDD is already done instead of asserting that none is
@@ -152,9 +153,9 @@ Fixture defaults.
 **Assertions:**
 - [ ] Skill does not stop or error when no stage is recorded
 - [ ] Inferred phase is Systems Design (heading `## Where You Are: Systems Design`), not Concept
-- [ ] `→ Next up` is System GDDs via `/design-system`
+- [ ] `→ Next up` is System GDDs via `$design-system`
 - [ ] The skill asks the user whether any system GDD is already done (MANUAL step), rather than reporting System GDDs as done or as not started
-- [ ] The "Need more detail?" escalation block (`/project-stage-detect`, `/gate-check`, `/start`) is NOT shown
+- [ ] The "Need more detail?" escalation block (`$project-stage-detect`, `$gate-check`, `$start`) is NOT shown
 - [ ] Verdict is COMPLETE
 
 ---
@@ -168,23 +169,23 @@ Fixture defaults.
 - No `design/gdd/gdd-cross-review-*.md`
 - The catalog's `design-review` step has no artifact check (`NO_CHECK`)
 
-**Input:** `/next-step just finished design-review, not sure what's next`
+**Input:** `$next-step just finished design-review, not sure what's next`
 
 **Expected behavior:**
 1. The argument is read as the step the user just finished (Step 5), not as a topic filter
 2. Skill advances past Per-System Design Review even though its artifact check is `NO_CHECK`
-3. `→ Next up (REQUIRED)` is Cross-GDD Review via `/review-all-gdds`
+3. `→ Next up (REQUIRED)` is Cross-GDD Review via `$review-all-gdds`
 4. "not sure" is confusion language, so the Step 9 "Need more detail?" block is
-   appended with `/project-stage-detect`, `/gate-check` and `/start`
-5. The `/project-settings` rigor line is NOT shown: the user does not sound overwhelmed by
+   appended with `$project-stage-detect`, `$gate-check` and `$start`
+5. The `$project-settings` rigor line is NOT shown: the user does not sound overwhelmed by
    process and the project has not outgrown `standard` (no `settings-guidance.md § 4` trigger fires)
 6. Verdict is COMPLETE
 
 **Assertions:**
 - [ ] Per-System Design Review is treated as done because the user named it
-- [ ] `→ Next up` is Cross-GDD Review via `/review-all-gdds`
-- [ ] Escalation block lists `/project-stage-detect`, `/gate-check` and `/start`
-- [ ] No `/project-settings` rigor-change line appears
+- [ ] `→ Next up` is Cross-GDD Review via `$review-all-gdds`
+- [ ] Escalation block lists `$project-stage-detect`, `$gate-check` and `$start`
+- [ ] No `$project-settings` rigor-change line appears
 - [ ] Verdict is COMPLETE
 
 ---
@@ -198,31 +199,31 @@ Fixture defaults.
 - `production/epics/core/story-001.md` is `Status: Complete`,
   `story-002.md` is `Status: In Progress`, `story-003.md` is `Status: Ready`
 - Neither `active.md` (its CHECKPOINT names story-002 as the current task, with
-  **Next step:** `/dev-story` on it) nor the git log (no commit mentions
+  **Next step:** `$dev-story` on it) nor the git log (no commit mentions
   story-002) says story-002's implementation is written
 
-**Input:** `/next-step`
+**Input:** `$next-step`
 
 **Expected behavior:**
 1. `workflow: minimal` sends the skill past the rest of Step 2; `project.stage`
    is not mapped
 2. Skill reads `active.md`'s STATUS and CHECKPOINT blocks (Step 3), then goes to
    Step 4m
-3. Skill runs `bash .claude/scripts/artifact-check.sh --path minimal`
-4. The injected `story-status.sh` list has story-002 on the first `IN_PROGRESS`
+3. Skill runs `bash .agents/scripts/artifact-check.sh --path minimal`
+4. The explicitly fetched `story-status.sh` list has story-002 on the first `IN_PROGRESS`
    line; the skill does not re-run the script or re-rank the stories
 5. Output uses the minimal shape: `## Where You Are: Minimal path — 1 of 3 stories complete`,
    with `✓ Done` giving the count of complete stories, not their titles
-6. `→ Next up` is story-002 with `/dev-story [story-002 path]`
+6. `→ Next up` is story-002 with `$dev-story [story-002 path]`
 7. No phase label, no gate line; the concept doc, art bible, systems map, GDDs,
-   sprint plan and `/gate-check` are not presented as required
+   sprint plan and `$gate-check` are not presented as required
 8. No director agents are spawned and no write tool is called
 
 **Assertions:**
 - [ ] Heading reads `Minimal path — 1 of 3 stories complete`
 - [ ] `active.md`'s checkpoint is read before the next step is chosen (Step 3 runs at `minimal`)
-- [ ] `→ Next up` is story-002 via `/dev-story`, not story-003
-- [ ] No `/gate-check` line and no "Approaching … gate" line appear
+- [ ] `→ Next up` is story-002 via `$dev-story`, not story-003
+- [ ] No `$gate-check` line and no "Approaching … gate" line appear
 - [ ] Game concept, art bible, systems map and GDDs are not listed as next steps
 - [ ] No director gate is invoked and no gate IDs appear in output
 - [ ] No write tool is called
@@ -234,20 +235,20 @@ Fixture defaults.
 
 **Fixture:**
 - As Case 5, except `active.md`'s CHECKPOINT reads
-  **Next step:** `/story-done production/epics/core/story-002.md` (what
-  `/dev-story` writes when it finishes a story)
+  **Next step:** `$story-done production/epics/core/story-002.md` (what
+  `$dev-story` writes when it finishes a story)
 
-**Input:** `/next-step`
+**Input:** `$next-step`
 
 **Expected behavior:**
 1. Step 3 runs at `minimal` and finds the checkpoint's next step
 2. story-002 is still on the first `IN_PROGRESS` line, but `active.md` says its
    implementation is written, so `→ Next up` is story-002 with
-   `/story-done [story-002 path]`
+   `$story-done [story-002 path]`
 3. Verdict is COMPLETE
 
 **Assertions:**
-- [ ] `→ Next up` is story-002 via `/story-done`, not `/dev-story`
+- [ ] `→ Next up` is story-002 via `$story-done`, not `$dev-story`
 - [ ] story-002 is not counted or listed as complete
 - [ ] Verdict is COMPLETE
 
@@ -259,10 +260,10 @@ Fixture defaults.
 - As Case 5, except `story-002.md` is `Status: Blocked` (its file says it waits
   on the art for the player sprite) and `story-003.md` is `Status: Draft`
 
-**Input:** `/next-step I'm stuck`
+**Input:** `$next-step I'm stuck`
 
 **Expected behavior:**
-1. The injected list has no `IN_REVIEW`, `IN_PROGRESS` or `TODO` line: story-002
+1. The explicitly fetched list has no `IN_REVIEW`, `IN_PROGRESS` or `TODO` line: story-002
    is on a `BLOCKED` line and story-003 on an `OTHER` line (`Draft`)
 2. The skill names story-002 with its blocker and story-003 with its status as
    written, and says nothing can be built next
@@ -270,16 +271,16 @@ Fixture defaults.
    ways on" of the every-story-Complete branch
 4. `→ Next up` is clearing the first of them — story-002's blocker
 5. "stuck" is confusion language, so the Step 9 "Need more detail?" block is
-   appended — without its `/gate-check` line, since the minimal path has no
+   appended — without its `$gate-check` line, since the minimal path has no
    phase gates
 6. Verdict is COMPLETE
 
 **Assertions:**
 - [ ] story-002 is named with its blocker; story-003 is named with status `Draft`
-- [ ] Neither story is recommended to `/dev-story` or `/story-done`
+- [ ] Neither story is recommended to `$dev-story` or `$story-done`
 - [ ] The output does not say the build order is done
 - [ ] Heading reads `Minimal path — 1 of 3 stories complete`
-- [ ] The escalation block appears and has no `/gate-check` line
+- [ ] The escalation block appears and has no `$gate-check` line
 - [ ] Verdict is COMPLETE
 
 ---
@@ -293,25 +294,25 @@ Fixture defaults.
   `production/epics/`
 - Run A: `src/` holds 12 `.gd` files. Run B: `src/` holds 3 `.gd` files
 
-**Input:** `/next-step`
+**Input:** `$next-step`
 
 **Expected behavior:**
 1. `workflow: minimal` goes to Step 4m; `artifact-check.sh --path minimal` reports
    `engine-setup` PRESENT and `game-brief` not PRESENT
 2. Run A: the code root already holds the game (10 or more source files, the same
    test Step 2 uses for `production`), so `→ Next up` is the game brief via
-   `/reverse-document design src/`, which writes `design/game-brief.md` from what
+   `$reverse-document design src/`, which writes `design/game-brief.md` from what
    is built
 3. Run B: the code root is not yet a game, so `→ Next up` is the game brief via
-   `/brainstorm`
-4. `/create-stories` follows under "Coming up after that" in both
+   `$brainstorm`
+4. `$create-stories` follows under "Coming up after that" in both
 5. Verdict is COMPLETE
 
 **Assertions:**
-- [ ] Run A's `→ Next up` is `/reverse-document design src/` (the code root for Godot), not `/brainstorm`, which on a built game would start a new idea
-- [ ] Run B's `→ Next up` is `/brainstorm`
-- [ ] The 10-source-file threshold decides between them: 12 files route to `/reverse-document`, 3 files do not
-- [ ] No phase label, concept doc, art bible, systems map or `/gate-check` is presented as required
+- [ ] Run A's `→ Next up` is `$reverse-document design src/` (the code root for Godot), not `$brainstorm`, which on a built game would start a new idea
+- [ ] Run B's `→ Next up` is `$brainstorm`
+- [ ] The 10-source-file threshold decides between them: 12 files route to `$reverse-document`, 3 files do not
+- [ ] No phase label, concept doc, art bible, systems map or `$gate-check` is presented as required
 - [ ] Verdict is COMPLETE, and no file is written
 
 ### Case 9: Minimal path, no engine — the main path comes first
@@ -322,21 +323,21 @@ Fixture defaults.
 - Run A: nothing under `prototypes/`. Run B: `prototypes/flood-racer/index.html`
   exists (a one-shot game was made)
 
-**Input:** `/next-step`
+**Input:** `$next-step`
 
 **Expected behavior:**
 1. Step 4m; `artifact-check.sh --path minimal` reports `engine-setup` not PRESENT
-2. Run A: no game made yet, so `→ Next up` is `/prototype` (make a game), with
-   `/setup-engine` under "Coming up after that"
+2. Run A: no game made yet, so `→ Next up` is `$prototype` (make a game), with
+   `$setup-engine` under "Coming up after that"
 3. Run B: the game is made, so one line says to play it and ask for changes in
-   plain words, and `→ Next up` is `/setup-engine` to grow it into a project
+   plain words, and `→ Next up` is `$setup-engine` to grow it into a project
 4. Verdict is COMPLETE
 
 **Assertions:**
-- [ ] Run A's `→ Next up` is `/prototype`, not `/setup-engine`
-- [ ] Run B's `→ Next up` is `/setup-engine`, with the change-it-after-play line above it
-- [ ] No studio-mode line, phase label or `/gate-check` appears at `minimal`
-- [ ] Variant — nothing under `prototypes/`, but `src/` holds 12 source files: `→ Next up` is `/setup-engine`, as before this change (an existing codebase is not sent to `/prototype`)
+- [ ] Run A's `→ Next up` is `$prototype`, not `$setup-engine`
+- [ ] Run B's `→ Next up` is `$setup-engine`, with the change-it-after-play line above it
+- [ ] No studio-mode line, phase label or `$gate-check` appears at `minimal`
+- [ ] Variant — nothing under `prototypes/`, but `src/` holds 12 source files: `→ Next up` is `$setup-engine`, as before this change (an existing codebase is not sent to `$prototype`)
 - [ ] Verdict is COMPLETE, and no file is written
 
 ---
@@ -349,27 +350,27 @@ Fixture defaults.
 - Run A: nothing under `prototypes/`. Run B: `prototypes/flood-racer-concept/`
   exists (an engine prototype was made; it writes no brief)
 
-**Input:** `/next-step`
+**Input:** `$next-step`
 
 **Expected behavior:**
 1. Step 4m; `engine-setup` is PRESENT and `game-brief` is not
-2. Run A: `→ Next up` is `/prototype` (say the game in one line; on an engine, a
-   quick throwaway build), with `/brainstorm` under "Coming up after that" for
+2. Run A: `→ Next up` is `$prototype` (say the game in one line; on an engine, a
+   quick throwaway build), with `$brainstorm` under "Coming up after that" for
    someone with no idea yet
-3. Run B: `→ Next up` is `/brainstorm`, which writes the one-page brief
+3. Run B: `→ Next up` is `$brainstorm`, which writes the one-page brief
 4. Verdict is COMPLETE
 
 **Assertions:**
-- [ ] Run A's `→ Next up` is `/prototype`, not `/brainstorm`
-- [ ] Run B's `→ Next up` is `/brainstorm` (a made prototype is not sent back to `/prototype`)
-- [ ] Variant — `src/` holds 12 source files: `→ Next up` is `/reverse-document design src`, as in Case 8
+- [ ] Run A's `→ Next up` is `$prototype`, not `$brainstorm`
+- [ ] Run B's `→ Next up` is `$brainstorm` (a made prototype is not sent back to `$prototype`)
+- [ ] Variant — `src/` holds 12 source files: `→ Next up` is `$reverse-document design src`, as in Case 8
 - [ ] Verdict is COMPLETE, and no file is written
 
 ---
 
 ## Protocol Compliance
 
-- [ ] Uses the injected config block for `project.stage` and `workflow` instead of re-reading them
+- [ ] Explicitly executes the config helper, checks its result for `project.stage` and `workflow`, and reuses that result within this run; absent execution is not an explicitly fetched value
 - [ ] Resolves step completion with one `artifact-check.sh` call, not a Glob per step
 - [ ] Gives exactly one primary (`→ Next up`) recommendation
 - [ ] Never auto-runs the recommended skill
@@ -387,6 +388,6 @@ Fixture defaults.
   Case 2 runs at `full` only so that the art bible is required, and does not
   assert that listing.
 - The minimal path's "every story Complete" branch (three ways on: play the
-  build, `/create-stories`, `/project-settings`) is not separately tested.
-- The `/reverse-document` route for a built game with no brief is Case 8; the code
+  build, `$create-stories`, `$project-settings`) is not separately tested.
+- The `$reverse-document` route for a built game with no brief is Case 8; the code
   root for Unity (`Assets/`) and Unreal (`Source/<Module>/`) is not given a fixture.

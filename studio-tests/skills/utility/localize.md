@@ -1,8 +1,10 @@
-# Skill Test Spec: /localize
+# Skill Test Spec: $localize
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/localize` runs the localization pipeline through one required subcommand:
+`$localize` runs the localization pipeline through one required subcommand:
 `scan`, `extract`, `validate`, `status`, `brief`, `cultural-review`,
 `vo-pipeline`, `rtl-check`, `freeze` or `qa`. It works on a single source string
 table under `assets/data/strings/` (`strings-en.json` is the English source; the
@@ -25,13 +27,13 @@ as passed. No director gates apply.
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keywords: COMPLETE, FAIL, NOT ASSESSED, PASS WITH CONDITIONS
 - [ ] Contains "May I write" collaborative protocol language before writing the string table or a report
-- [ ] Has a next-step handoff (the Recommended Workflow chain ending in `/gate-check release`)
+- [ ] Has a next-step handoff (the Recommended Workflow chain ending in `$gate-check release`)
 - [ ] The QA gate note is tiered: at `workflow: full` the Polish → Release gate requires PASS or PASS WITH CONDITIONS for every translated locale being shipped (recommended at `standard`, dropped at `minimal`)
 - [ ] The `freeze` question names the file it writes — "This writes `production/localization/freeze-status.md`" — before the user answers
 
@@ -39,7 +41,7 @@ Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
 
 ## Director Gate Checks
 
-None. `/localize` is a pipeline utility and spawns no director. The only agent
+None. `$localize` is a pipeline utility and spawns no director. The only agent
 it spawns is `localization-lead` (an operations-tier agent), and only in the
 `cultural-review` and `qa` modes.
 
@@ -49,7 +51,7 @@ it spawns is `localization-lead` (an operations-tier agent), and only in the
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -64,7 +66,7 @@ Fixture defaults.
   `assets/data/strings/strings-en.json`
 - No `production/localization/freeze-status.md` exists
 
-**Input:** `/localize extract`
+**Input:** `$localize extract`
 
 **Expected behavior:**
 1. Skill scans source files for localized string references and compares them
@@ -92,7 +94,7 @@ Fixture defaults.
 **Fixture:**
 - Any project state
 
-**Input:** `/localize`
+**Input:** `$localize`
 
 **Expected behavior:**
 1. Skill finds no subcommand in the argument
@@ -115,7 +117,7 @@ Fixture defaults.
 - `strings-de.json` lacks 4 keys present in the English source
 - One French entry omits the `{playerName}` placeholder its English source has
 
-**Input:** `/localize validate`
+**Input:** `$localize validate`
 
 **Expected behavior:**
 1. Skill reads every string table file in `assets/data/strings/`
@@ -137,7 +139,7 @@ Fixture defaults.
 **Fixture:**
 - `assets/data/strings/` does not exist
 
-**Input:** `/localize status`
+**Input:** `$localize status`
 
 **Expected behavior:**
 1. Skill looks for the source string table and finds none
@@ -159,7 +161,7 @@ Fixture defaults.
 - `assets/data/strings/strings-en.json` exists with player-facing strings
 - Any review mode
 
-**Input:** `/localize cultural-review`
+**Input:** `$localize cultural-review`
 
 **Expected behavior:**
 1. Skill spawns `localization-lead` to audit strings and assets for cultural
@@ -181,12 +183,12 @@ Fixture defaults.
 ### Case 6: Scan With an Unresolved Code Root — NOT ASSESSED, never "no hardcoded strings"
 
 **Fixture:**
-- `project.yaml` has no `engine.name`; `.claude/docs/technical-preferences.md`
+- `project.yaml` has no `engine.name`; `.agents/docs/technical-preferences.md`
   reads `[TO BE CONFIGURED]`
 - Both `src/` and `Assets/` exist and hold UI code with hardcoded strings
   (ambiguous tree)
 
-**Input:** `/localize scan`
+**Input:** `$localize scan`
 
 **Expected behavior:**
 1. Skill tries to resolve the code root and cannot (no engine, two candidate roots)
@@ -212,7 +214,7 @@ Fixture defaults.
 - No one has played the French build: there are no in-game observations for the
   functional, overflow, contextual-accuracy or VO checks
 
-**Input:** `/localize qa`
+**Input:** `$localize qa`
 
 **Expected behavior:**
 1. Skill spawns `localization-lead` for the QA plan
@@ -240,7 +242,7 @@ Fixture defaults.
 - [ ] Extract writes only the diff of new entries, never a full replacement of the table
 - [ ] Reports NOT ASSESSED instead of zero results when the code root or the string table is missing
 - [ ] `qa` issues PASS, PASS WITH CONDITIONS, NOT ASSESSED or FAIL per locale, first match FAIL → NOT ASSESSED → PASS WITH CONDITIONS → PASS
-- [ ] Ends with the Recommended Workflow chain / `/gate-check release` handoff
+- [ ] Ends with the Recommended Workflow chain / `$gate-check release` handoff
 
 ---
 
@@ -250,7 +252,7 @@ Fixture defaults.
   is not separately tested; Case 6 covers the unresolved root.
 - `extract` while `freeze-status.md` shows Status: ACTIVE (new keys appended to
   `## Post-Freeze Changes` with a freeze-violation warning) is not tested.
-- `freeze` (pre-freeze checklist and `AskUserQuestion` [A]/[B]), `brief`,
+- `freeze` (pre-freeze checklist and `当前 Codex 可用的提问工具` [A]/[B]), `brief`,
   `vo-pipeline` and `rtl-check` are not exercised by a dedicated case; `qa` is
   covered only for its NOT ASSESSED branch (Case 7).
 - The `qa` gate note — a FAIL blocks release for that locale only — needs a live

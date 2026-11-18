@@ -1,0 +1,10 @@
+[
+  {
+    "type": "collab_tool_call",
+    "status": "completed"
+  },
+  {
+    "type": "collab_tool_call",
+    "status": "completed"
+  }
+]

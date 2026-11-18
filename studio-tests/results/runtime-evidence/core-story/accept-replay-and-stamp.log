@@ -1,0 +1,15 @@
+accepted	production/qa/evidence/grow-dusk-fish/accepted.tsv	production/qa/evidence/grow-dusk-fish/accepted.png
+RECEIPT: production/qa/evidence/story-001-n-retry/stamp.txt
+UNCHANGED: src/main.ts
+UNCHANGED: tests/integration/n-retry.spec.ts
+4d3418f4feb5147be77ca7008d1de1575fa695be46f88e78472c3b0fd199c7b4 *tests/integration/n-retry.spec.ts
+be410bdccdff510480f3f5ff034b66018a6693539b6d357e8e39bf70eff79829 *src/main.ts
+f808b1552d1aa997092d3f5a4dc7908f6fd4d3c99dd7058da6b1815e38cfea8f *package-lock.json
+a581086db754dff749f5c207394548563b998afdcfc114abe64dd50763a836b2 *data/config.json
+ M design/game-brief.md
+ M project.yaml
+ M src/main.ts
+?? production/epics/
+?? tests/integration/n-retry.spec.ts
+f56bab3c63f57504b0b9a73bd58426585412b53a
+probe

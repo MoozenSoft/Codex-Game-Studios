@@ -1,5 +1,7 @@
 # Agent Test Spec: [agent-name]
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 
 [One paragraph describing this agent's domain, what decisions it owns, and what it
@@ -13,9 +15,9 @@ delegates vs. handles directly. Include which gates it triggers (if any).]
 
 ## Static Assertions (Structural)
 
-- [ ] Agent file exists at `.claude/agents/[name].md`
-- [ ] Frontmatter has `name`, `description`, `model`, `tools` fields
-- [ ] Model tier is `[opus | sonnet | haiku | inherit]` — frontmatter `model:` reads exactly that alias (tiers: `.claude/docs/model-tiers.md`)
+- [ ] Agent file exists at `.codex/agents/[name].toml`
+- [ ] Native TOML has `name`, `description`, `developer_instructions` fields
+- [ ] The role declares the correct model family when required. The caller resolves it and passes the model at dispatch. `model_reasoning_effort` follows client settings unless explicitly configured. Tool access follows actual capabilities and permissions (see `.agents/docs/model-tiers.md`)
 - [ ] Domain clearly stated
 - [ ] Escalation path documented
 - [ ] Does not make decisions outside its domain
@@ -35,12 +37,12 @@ delegates vs. handles directly. Include which gates it triggers (if any).]
 **Expected behavior**:
 1. Agent accepts the request
 2. Agent produces [specific output type]
-3. Agent asks before writing files (if applicable)
+3. Agent applies the configured automation mode and reuses existing authorization for file writes
 
 **Assertions**:
 - [ ] Agent handles request within its domain without escalating
 - [ ] Output format matches expected structure
-- [ ] Collaborative protocol followed (ask → draft → approve)
+- [ ] Configured automation mode followed; necessary unresolved decisions are asked, and existing authorization is reused
 
 **Case Verdict**: PASS / FAIL / PARTIAL / NOT ASSESSED
 
@@ -135,7 +137,7 @@ delegates vs. handles directly. Include which gates it triggers (if any).]
 
 - [ ] Stays within declared domain — no unilateral cross-domain changes
 - [ ] Escalates conflicts to correct parent
-- [ ] Uses `"May I write"` before file writes (or is read-only)
+- [ ] Applies the configured automation mode and existing authorization before file writes (or is read-only)
 - [ ] Presents findings before requesting approval
 - [ ] Does not skip tiers in the delegation hierarchy
 

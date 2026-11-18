@@ -1,0 +1,18 @@
+test_artifact_check_uses_shared_catalog_for_external_project (test_paths.SharedScriptTests.test_artifact_check_uses_shared_catalog_for_external_project) ... ok
+test_config_set_rejects_unshared_local_engine (test_paths.SharedScriptTests.test_config_set_rejects_unshared_local_engine) ... ok
+test_disabled_session_tracking_keeps_tool_guard_active (test_paths.SharedScriptTests.test_disabled_session_tracking_keeps_tool_guard_active) ... ok
+test_grow_copy_preserves_extra_config_globals_and_functions (test_paths.SharedScriptTests.test_grow_copy_preserves_extra_config_globals_and_functions) ... ok
+test_grow_guard_treats_src_agents_as_metadata (test_paths.SharedScriptTests.test_grow_guard_treats_src_agents_as_metadata) ... ok
+test_grow_record_writes_engine_without_touching_agents (test_paths.SharedScriptTests.test_grow_record_writes_engine_without_touching_agents) ... ok
+test_reference_files_are_saved_and_deduplicated (test_paths.SharedScriptTests.test_reference_files_are_saved_and_deduplicated) ... ok
+test_registry_reports_invalid_status_and_removed_entry (test_paths.SharedScriptTests.test_registry_reports_invalid_status_and_removed_entry) ... ok
+test_review_receipt_detects_content_change_with_same_mtime (test_paths.SharedScriptTests.test_review_receipt_detects_content_change_with_same_mtime) ... ok
+test_session_checkpoint_is_repeatable_and_preserves_notes (test_paths.SharedScriptTests.test_session_checkpoint_is_repeatable_and_preserves_notes) ... ok
+test_stage_writer_creates_consistent_config_and_mirror (test_paths.SharedScriptTests.test_stage_writer_creates_consistent_config_and_mirror) ... ok
+test_web_scaffold_escapes_title_and_preserves_existing_files (test_paths.SharedScriptTests.test_web_scaffold_escapes_title_and_preserves_existing_files) ... ok
+test_web_scaffold_refuses_existing_package (test_paths.SharedScriptTests.test_web_scaffold_refuses_existing_package) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 13.442s
+
+OK

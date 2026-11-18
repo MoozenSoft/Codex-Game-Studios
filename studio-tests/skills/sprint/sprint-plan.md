@@ -1,18 +1,20 @@
-# Skill Test Spec: /sprint-plan
+# Skill Test Spec: $sprint-plan
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/sprint-plan` (`new`, `update` or `status`) plans a sprint from the story
+`$sprint-plan` (`new`, `update` or `status`) plans a sprint from the story
 backlog. It globs `production/epics/**/story-*.md`, greps their status lines and
 plans from the stories marked `Ready`, as many as `story_granularity` allows; it
-reads the previous sprint (identified from the injected Existing Sprints listing)
+reads the previous sprint (identified from the explicitly fetched Existing Sprints listing)
 for velocity and carryover, and the milestone in `production/milestones/` and
 GDDs for context when they exist. For `new` it numbers the sprint one past the
 highest `sprint-NNN.md` in the listing and presents a draft with Must Have /
 Should Have / Nice to Have task tables and a Carryover from Previous Sprint table
 (every not-Complete story of the previous sprint, listed there only) before any
 write, and prepares `production/sprint-status.yaml` alongside it. The review
-mode comes from the injected config block, `--review` overriding it for one run;
+mode comes from the explicitly fetched config block, `--review` overriding it for one run;
 the skill never asks for one and never writes `modes.review_mode` or
 `production/review-mode.txt`. In full review mode the PR-SPRINT producer gate
 reviews the draft; in lean and solo modes the gate is skipped with a note. A QA
@@ -25,13 +27,13 @@ files written) or BLOCKED (no stories found, or write declined).
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keywords: COMPLETE, BLOCKED
 - [ ] Contains "May I write" language (skill writes sprint file)
-- [ ] Has a next-step handoff (`/qa-plan sprint`, `/story-readiness`, `/dev-story`)
+- [ ] Has a next-step handoff (`$qa-plan sprint`, `$story-readiness`, `$dev-story`)
 
 ---
 
@@ -42,7 +44,7 @@ Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
 | PR-SPRINT | After the draft is presented, before write approval | full only (not lean/solo) |
 
 PR-SPRINT verdicts: REALISTIC / CONCERNS / UNREALISTIC — or NOT ASSESSED
-[missing input] (`.claude/docs/director-gates.md`), which is never treated as
+[missing input] (`.agents/docs/director-gates.md`), which is never treated as
 REALISTIC.
 
 ---
@@ -51,7 +53,7 @@ REALISTIC.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -61,7 +63,7 @@ Fixture defaults.
 ### Case 1: Happy Path — Ready backlog generates sprint
 
 **Fixture:**
-- The injected Existing Sprints listing shows `sprint-001.md` and `sprint-002.md`
+- The explicitly fetched Existing Sprints listing shows `sprint-001.md` and `sprint-002.md`
 - `production/milestones/milestone-02.md` exists
 - 5 stories under `production/epics/` across 2 epics have `Status: Ready`
 - `project.yaml` sets `modes.review_mode: full` and
@@ -69,7 +71,7 @@ Fixture defaults.
 - `production/qa/qa-plan-sprint-003.md` exists
 - The producer returns REALISTIC
 
-**Input:** `/sprint-plan new`
+**Input:** `$sprint-plan new`
 
 **Expected behavior:**
 1. Skill reads the milestone and the previous sprint (sprint-002)
@@ -101,20 +103,20 @@ Fixture defaults.
 - `production/epics/` contains no story files (`production/epics/**/story-*.md` matches nothing)
 - No `--review` flag, no `modes.review_mode` in `project.yaml`, no `production/review-mode.txt`
 
-**Input:** `/sprint-plan new`
+**Input:** `$sprint-plan new`
 
 **Expected behavior:**
-1. Phase 0 takes the review mode from the injected config block — with nothing
+1. Phase 0 takes the review mode from the explicitly fetched config block — with nothing
    configured, the `modes.rigor` value — and asks no review-depth question
 2. Phase 1's glob returns nothing; skill outputs "No stories found under
-   `production/epics/`. Run `/create-stories` first (at `standard`/`full`,
-   `/create-epics` before it)."
+   `production/epics/`. Run `$create-stories` first (at `standard`/`full`,
+   `$create-epics` before it)."
 3. Skill stops without inventing work items; verdict BLOCKED
 4. No gate is invoked and nothing is written
 
 **Assertions:**
 - [ ] Verdict is BLOCKED
-- [ ] Output contains "No stories found under `production/epics/`" and recommends `/create-stories`
+- [ ] Output contains "No stories found under `production/epics/`" and recommends `$create-stories`
 - [ ] No sprint draft is produced from invented work items
 - [ ] PR-SPRINT gate is NOT invoked
 - [ ] No review-depth question is asked, and no write happens — `project.yaml` gains no `modes.review_mode` and no `production/review-mode.txt` is created
@@ -129,19 +131,19 @@ Fixture defaults.
 - A QA plan for the sprint exists in `production/qa/`
 - The producer returns CONCERNS: the sprint is overloaded
 
-**Input:** `/sprint-plan new`
+**Input:** `$sprint-plan new`
 
 **Expected behavior:**
 1. Skill drafts the sprint with all 8 stories and presents it
 2. PR-SPRINT runs; producer returns CONCERNS
-3. Skill asks via `AskUserQuestion`: "Producer flagged concerns with this sprint
+3. Skill asks via `当前 Codex 可用的提问工具`: "Producer flagged concerns with this sprint
    plan. How do you want to proceed?" with [A] Proceed as planned,
    [B] Adjust scope, [C] Extend the sprint timeline
 4. User selects [B]; skill revises the story list and re-presents the plan
 5. Skill asks "May I write" for the revised plan; writes on approval
 
 **Assertions:**
-- [ ] CONCERNS from PR-SPRINT surfaces through `AskUserQuestion` ([A] Proceed / [B] Adjust scope / [C] Extend timeline) before any write
+- [ ] CONCERNS from PR-SPRINT surfaces through `当前 Codex 可用的提问工具` ([A] Proceed / [B] Adjust scope / [C] Extend timeline) before any write
 - [ ] On [B], the revised plan is re-presented before write approval
 - [ ] The revised sprint (not the original) is written, and `production/sprint-status.yaml` lists the revised stories
 - [ ] Verdict is COMPLETE after revision and write
@@ -154,18 +156,18 @@ Fixture defaults.
 - 4 `Ready` stories under `production/epics/`
 - `project.yaml` sets `modes.rigor: standard` and pins no review mode (no
   `modes.review_mode`, no `production/review-mode.txt`, no `--review`), so the
-  injected block reads `review_mode: lean (rigor:standard)`
+  explicitly fetched block reads `review_mode: lean (rigor:standard)`
 - No QA plan for this sprint exists in `production/qa/`
 
-**Input:** `/sprint-plan new`
+**Input:** `$sprint-plan new`
 
 **Expected behavior:**
-1. Skill reads `review_mode` from the injected config block — `lean` — and asks
+1. Skill reads `review_mode` from the explicitly fetched config block — `lean` — and asks
    no review-depth question
 2. Skill drafts the sprint and presents it
 3. PR-SPRINT is skipped; output notes "PR-SPRINT skipped — Lean mode."
 4. The QA plan check still runs: skill states "This sprint has no QA plan …" and
-   asks via `AskUserQuestion` with [A] Run /qa-plan sprint now and
+   asks via `当前 Codex 可用的提问工具` with [A] Run $qa-plan sprint now and
    [B] Skip for now
 5. User selects [A]; skill asks for direct approval of the write
 6. User approves; both files are written; verdict COMPLETE
@@ -183,7 +185,7 @@ Fixture defaults.
 ### Case 5: Edge Case — Previous sprint still has open stories
 
 **Fixture:**
-- The injected Existing Sprints listing shows `sprint-002.md` as the latest sprint
+- The explicitly fetched Existing Sprints listing shows `sprint-002.md` as the latest sprint
 - `production/sprint-status.yaml` still holds sprint 2; 2 of its stories are not
   `done`: one `in-progress`, and one `ready-for-dev` that was never started (its
   story file says `Status: Ready`)
@@ -191,7 +193,7 @@ Fixture defaults.
 - `project.yaml` sets `modes.review_mode: full` and `modes.story_granularity: balanced`
 - A QA plan for the sprint exists in `production/qa/`
 
-**Input:** `/sprint-plan new`
+**Input:** `$sprint-plan new`
 
 **Expected behavior:**
 1. Skill reads sprint-002 for velocity and carryover, and numbers the new
@@ -207,7 +209,7 @@ Fixture defaults.
    lists the 2 carryover stories alongside the 5 new ones
 
 **Assertions:**
-- [ ] Skill reads the previous sprint (sprint-002, identified from the injected listing)
+- [ ] Skill reads the previous sprint (sprint-002, identified from the explicitly fetched listing)
 - [ ] The 2 unfinished stories appear in the "Carryover from Previous Sprint" table with Reason and New Estimate — not silently dropped
 - [ ] The unstarted sprint-002 story appears only under Carryover — not again in Must Have / Should Have / Nice to Have, although its status is `Ready`
 - [ ] The carryover is passed to the PR-SPRINT gate
@@ -218,13 +220,13 @@ Fixture defaults.
 ### Case 6: Gate returns UNREALISTIC — Stories deferred before the write
 
 **Fixture:**
-- The injected Existing Sprints listing shows `sprint-002.md` as the latest sprint
+- The explicitly fetched Existing Sprints listing shows `sprint-002.md` as the latest sprint
 - 9 `Ready` stories estimated at 20 days in total; available capacity is 10 days
 - `project.yaml` sets `modes.review_mode: full` and `modes.story_granularity: balanced`
 - A QA plan for the sprint exists in `production/qa/`
 - The producer returns UNREALISTIC and names 4 stories to defer
 
-**Input:** `/sprint-plan new`
+**Input:** `$sprint-plan new`
 
 **Expected behavior:**
 1. Skill drafts sprint 003 with the 9 stories and presents it
@@ -252,7 +254,7 @@ Fixture defaults.
 - The producer returns NOT ASSESSED — the stories carry no estimates
 - Asked for estimates, the user has none yet and goes ahead
 
-**Input:** `/sprint-plan new`
+**Input:** `$sprint-plan new`
 
 **Expected behavior:**
 1. Skill drafts the sprint and presents it; PR-SPRINT returns NOT ASSESSED

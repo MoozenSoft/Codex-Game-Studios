@@ -1,0 +1,11 @@
+warning: in the working copy of 'tests/integration/boot.spec.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/unit/rules.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/integration/boot.spec.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/unit/rules.test.ts', LF will be replaced by CRLF the next time Git touches it
+[probe 6d50a7d] 验证钓鱼规则红绿测试及浏览器启动与确定性回放
+ 5 files changed, 299 insertions(+)
+ create mode 100644 production/qa/evidence/core-grow/round2/rule-red.log
+ create mode 100644 production/qa/evidence/core-grow/round2/tests-green-corrected.log
+ create mode 100644 production/qa/evidence/core-grow/round2/tests-green.log
+ create mode 100644 tests/integration/boot.spec.ts
+ create mode 100644 tests/unit/rules.test.ts

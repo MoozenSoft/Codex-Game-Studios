@@ -1,0 +1,136 @@
+[
+  {
+    "type": "thread.started",
+    "thread_id": "01a1e9ad-d094-7ec2-bd71-417615b28d18"
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_3",
+      "type": "agent_message",
+      "text": "我会按顺序执行这些隔离 fixture，记录实际工具回执和随后出现的 hook 上下文；不调用其他 Skill，也不实际提交。\n"
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_4",
+      "type": "command_execution",
+      "command": "\"%LOCALAPPDATA%\\\\Microsoft\\\\WindowsApps\\\\Microsoft.PowerShell_8wekyb3d8bbwe\\\\pwsh.exe\" -Command 'Write-Output CLI_ALLOW_458B4A0_22c1'",
+      "status": "completed",
+      "exit_code": 0
+    }
+  },
+  {
+    "type": "item.started",
+    "item": {
+      "id": "item_5",
+      "type": "file_change",
+      "changes": [
+        {
+          "path": "<probe>\\.scratch\\cli-audit-458b4a0\\hook-bad.json",
+          "kind": "add"
+        }
+      ],
+      "status": "in_progress"
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_5",
+      "type": "file_change",
+      "changes": [
+        {
+          "path": "<probe>\\.scratch\\cli-audit-458b4a0\\hook-bad.json",
+          "kind": "add"
+        }
+      ],
+      "status": "completed"
+    }
+  },
+  {
+    "type": "item.started",
+    "item": {
+      "id": "item_6",
+      "type": "file_change",
+      "changes": [
+        {
+          "path": "<probe>\\.scratch\\cli-audit-458b4a0\\hook-bad.json",
+          "kind": "update"
+        }
+      ],
+      "status": "in_progress"
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_6",
+      "type": "file_change",
+      "changes": [
+        {
+          "path": "<probe>\\.scratch\\cli-audit-458b4a0\\hook-bad.json",
+          "kind": "update"
+        }
+      ],
+      "status": "completed"
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_7",
+      "type": "command_execution",
+      "command": "\"%LOCALAPPDATA%\\\\Microsoft\\\\WindowsApps\\\\Microsoft.PowerShell_8wekyb3d8bbwe\\\\pwsh.exe\" -Command '$fixture = Get-Content -LiteralPath '\"'.scratch/cli-audit-458b4a0/hook-bad.json' -Raw; \"'$parsedFixture = $fixture | ConvertFrom-Json -ErrorAction Stop; Write-Output $fixture; Write-Output $parsedFixture.probe'",
+      "status": "completed",
+      "exit_code": 0
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_8",
+      "type": "command_execution",
+      "command": "\"%LOCALAPPDATA%\\\\Microsoft\\\\WindowsApps\\\\Microsoft.PowerShell_8wekyb3d8bbwe\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath '.agents/skills/smoke-check/references/5-report.md' -Raw\"",
+      "status": "completed",
+      "exit_code": 0
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_9",
+      "type": "agent_message",
+      "text": "已收到坏 JSON 的写后提示、env 路径的 PreToolUse 拒绝，以及跨项目 `workdir` 的明确拒绝。修复后的 JSON 已从磁盘解析成功；最后按报告文件判定三个模型 fixture。\n"
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_10",
+      "type": "command_execution",
+      "command": "\"%LOCALAPPDATA%\\\\Microsoft\\\\WindowsApps\\\\Microsoft.PowerShell_8wekyb3d8bbwe\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath '.agents/skills/smoke-check/references/5-report.md' -Raw -Encoding UTF8\"",
+      "status": "completed",
+      "exit_code": 0
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_11",
+      "type": "agent_message",
+      "text": "本次隔离 CLI 验收六项均 **PASS**，具体回执如下。未实际提交、未手动调用 `dispatch.py`、未更改信任或调用其他 Skill。\n\n1. **PASS — 普通终端放行**\n\n   原生终端执行 `Write-Output CLI_ALLOW_458B4A0_22c1`，退出码 `0`，输出：\n   ```text\n   CLI_ALLOW_458B4A0_22c1\n   ```\n\n2. **PASS — 无效 JSON 写后提示**\n\n   原生 `apply_patch` 创建指定文件，内容 `{broken`。工具回执 `{}`；紧随调用出现的 hook 上下文原话：\n   ```text\n   以下 JSON 当前无效，允许继续修复，但必要验收不能完成：<probe>\\.scratch\\cli-audit-458b4a0\\hook-bad.json\n   ```\n\n3. **PASS — 修复并解析落盘 JSON**\n\n   原生 `apply_patch` 修复，回执 `{}`。终端读取实际文件并使用 `ConvertFrom-Json -ErrorAction Stop` 解析，退出码 `0`，输出：\n   ```text\n   {\"probe\":\"CLI_JSON_REPAIRED_458B4A0\"}\n   CLI_JSON_REPAIRED_458B4A0\n   ```\n\n4. **PASS — env 目标被项目 hook 前置拒绝**\n\n   已发出原生 `apply_patch` 调用，内容仅为指定 sentinel。真实拒绝回执：\n   ```text\n   Command blocked by PreToolUse hook: 项目规则禁止通过工具读取或改写环境凭据文件: <probe>\\.scratch\\cli-audit-458b4a0\\.env.cli-audit-probe.\n   ```\n   未换工具、改名或绕过。\n\n5. **PASS — 跨项目索引上下文被明确拒绝**\n\n   实际原生终端参数：\n   ```text\n   cmd: git commit --dry-run\n   workdir: <probe>\\.scratch\\cli-audit-458b4a0\\external-repo\n   ```\n   真实拒绝回执：\n   ```text\n   Command blocked by PreToolUse hook: 提交前校验未评估：实际提交目标不属于当前项目，不能检查另一个仓库的索引. Command: git commit --dry-run\n   ```\n   原因明确为目标属于另一个仓库，与坏 JSON 无关。这里 PASS 表示拒绝行为验证成功，未声称另一个仓库通过提交校验。\n\n6. **PASS — 报告规则的模型决策 fixture**\n\n   仅只读指定 `5-report.md`，按“首个匹配规则生效”判定：\n\n   | Fixture | 最终 verdict | 首个命中规则 |\n   |---|---|---|\n   | A | **FAIL** | FAIL 第 4 条：必需手工检查失败，涵盖 Batch 3 性能；MISSING evidence 不能降低已知失败 |\n   | B | **NOT ASSESSED** | NOT ASSESSED 第 4 条：必需平台检查存在 UNANSWERED |\n   | C | **FAIL (quick — coverage and Batch 3 not checked)** | FAIL 第 4 条：Batch 1 核心检查失败；quick 后缀不改变 verdict |\n\n   A/B/C 仅验证模型对规则的判定，未运行完整 smoke Skill，也不代表游戏实测或人工试玩。"
+    }
+  },
+  {
+    "type": "turn.completed",
+    "usage": {
+      "input_tokens": 295185,
+      "cached_input_tokens": 257152,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1624,
+      "reasoning_output_tokens": 75
+    }
+  }
+]

@@ -1,0 +1,3 @@
+kept	prototypes/app-dusk-fish/assets/provenance.yaml	the game brought its own: not changed
+wrote	.gitattributes	/prototypes/app-dusk-fish/** -text -eol
+wrote	prototypes/app-dusk-fish/evidence/door.md

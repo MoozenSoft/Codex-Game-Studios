@@ -1,0 +1,22 @@
+test_grow_copy_preserves_classic_top_level_bindings (test_paths.SharedScriptTests.test_grow_copy_preserves_classic_top_level_bindings) ... FAIL
+
+======================================================================
+FAIL: test_grow_copy_preserves_classic_top_level_bindings (test_paths.SharedScriptTests.test_grow_copy_preserves_classic_top_level_bindings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Git\Codex-Game-Studios\studio-tests\automated\test_paths.py", line 101, in test_grow_copy_preserves_classic_top_level_bindings
+    self.assertEqual(node.returncode,0,node.stderr)
+AssertionError: 1 != 0 : C:\Users\xingxing\AppData\Local\Temp\工作室 路径-5di8zm6z\src\main.js:5
+window.growObservation={color:ART.color,bonus:BONUS,offset:OFFSET,duration:CONFIG.duration.value,extra:nextDuration()};
+                              ^
+
+ReferenceError: ART is not defined
+    at C:\Users\xingxing\AppData\Local\Temp\工作室 路径-5di8zm6z\src\main.js:5:31
+
+Node.js v24.14.0
+
+
+----------------------------------------------------------------------
+Ran 1 test in 4.590s
+
+FAILED (failures=1)

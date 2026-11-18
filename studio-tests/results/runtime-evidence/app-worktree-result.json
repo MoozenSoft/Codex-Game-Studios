@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-17",
+  "timezone": "Asia/Shanghai",
+  "scope": "真实 App 会话中的 Git 工作树隔离验收；不重复游戏测试",
+  "result": "PASS_WITH_NOTES",
+  "environment": {
+    "original_checkout": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance",
+    "expected_branch": "app-acceptance",
+    "actual_branch": "app-acceptance",
+    "model_policy": "保持 Sol；未选择或切换模型",
+    "tools": "仅标准终端与本项目文档/配置脚本；未调用 MCP、全局 Skills 或私有客户端数据",
+    "git_bash": "D:\\Program Files\\Git\\bin\\bash.exe",
+    "python": "经项目 python-run.sh 解析的已装 Python 3.12.10；未裸调用 python/py 安装器"
+  },
+  "worktree": {
+    "path": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收",
+    "initial_target_exists": false,
+    "creation": "本轮允许工具范围内无可用原生工作树接口，按授权使用 git worktree add 降级；命令因 .git/worktrees 沙箱写权限失败后，以同一限定命令正常提权成功",
+    "head": "6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5",
+    "tree": "993b8f1a02e87e2fbdb3962c0c7d63382471ac6a",
+    "detached": true,
+    "retained": true,
+    "git_hooks": "创建时用单次 -c core.hooksPath 指向不存在目录，禁用 Git hooks；未修改持久 Git 配置；新工作树 hooks 未重新信任、未测试"
+  },
+  "configuration": {
+    "file_content": "modes:\n  automation: guided\n",
+    "new_worktree": {
+      "invocation_cwd": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收/src",
+      "helper": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.agents/scripts/yaml-helper.sh",
+      "args": [
+        "--root",
+        "..",
+        "resolve_config",
+        "--keys",
+        "automation"
+      ],
+      "value": "guided",
+      "source": "project.local.yaml",
+      "exit_code": 0
+    },
+    "original_checkout": {
+      "invocation_cwd": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance",
+      "value_before": "collaborative",
+      "value_after": "collaborative",
+      "source": "default",
+      "exit_code": 0
+    },
+    "implicit_root_observation": "此前从新工作树 src 调用原 checkout 的外部脚本、不加 --root，真实输出为 collaborative (default)，原 commands 记录完整保留；为该外部脚本显式指定 --root .. 后读到 guided (project.local.yaml)。本次从同一 src 调用新工作树自己的 ../.agents/scripts/yaml-helper.sh，不加 --root，实际读到 guided (project.local.yaml)，退出 0。外部脚本的根定位结果不构成新工作树自身入口失败；自身正常入口已按实际结果单独记录。",
+    "normal_entry_without_root": {
+      "invocation_cwd": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收/src",
+      "helper": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收/.agents/scripts/yaml-helper.sh",
+      "args": [
+        "resolve_config",
+        "--keys",
+        "automation"
+      ],
+      "explicit_root": false,
+      "value": "guided",
+      "source": "project.local.yaml",
+      "exit_code": 0,
+      "result": "PASS",
+      "command_id": "new_worktree_own_entry_without_root"
+    }
+  },
+  "isolation": {
+    "personal_ignore_paths": [
+      "project.local.yaml",
+      "production/session-state/active.md",
+      "production/agent-memory/probe.md"
+    ],
+    "check_ignore_exit_original": 0,
+    "check_ignore_exit_new": 0,
+    "new_worktree_tracked_status": "clean",
+    "new_worktree_diff_exit": 0,
+    "new_worktree_cached_diff_exit": 0,
+    "new_worktree_ignored_files": [
+      ".scratch/app-worktree-marker.txt",
+      "project.local.yaml"
+    ],
+    "original_marker_exists": false,
+    "original_project_local_exists_before": false,
+    "original_project_local_exists_after": false,
+    "new_session_state_written": false,
+    "new_memory_probe_written": false,
+    "original_before_report_comparison": {
+      "file_count_before": 1076,
+      "file_count_after": 1076,
+      "differences": [],
+      "status_unchanged": true,
+      "tracked_diff_unchanged": true,
+      "head_unchanged": true,
+      "tree_unchanged": true
+    },
+    "original_preexisting_tracked_change": ".agents/scripts/one-shot-run.sh（原有修改，哈希及 diff 均保持）",
+    "selected_original_fingerprints": [
+      {
+        "path": ".agents/scripts/one-shot-run.sh",
+        "exists": true,
+        "length": 13179,
+        "sha256": "2E3A00327D81D64AD0010F4F6716C7FAE3B75FF341C0E706108A8E06DCF4369E"
+      },
+      {
+        "path": ".scratch/app-worktree-marker.txt",
+        "exists": false,
+        "length": null,
+        "sha256": null
+      },
+      {
+        "path": "production/agent-memory/probe.md",
+        "exists": false,
+        "length": null,
+        "sha256": null
+      },
+      {
+        "path": "production/session-state/active.md",
+        "exists": true,
+        "length": 3194,
+        "sha256": "5824A4D7AECE3A956173BB340E94C0C5D1B31E309E103D3EAB18475746CA5E06"
+      },
+      {
+        "path": "project.local.yaml",
+        "exists": false,
+        "length": null,
+        "sha256": null
+      },
+      {
+        "path": "project.yaml",
+        "exists": true,
+        "length": 1252,
+        "sha256": "1BF81B291D00D63F68F2574457D87A8007E57953B720D7B786A65E5974518960"
+      }
+    ]
+  },
+  "writes": {
+    "new_worktree_user_files": [
+      "project.local.yaml",
+      ".scratch/app-worktree-marker.txt"
+    ],
+    "original_checkout_user_files": [
+      "production/qa/evidence/app-worktree-result.json",
+      "production/qa/evidence/app-worktree-result.md"
+    ],
+    "git_metadata": "git worktree add 所需管理元数据；源 checkout 的分支/HEAD/tree 未变",
+    "other_source_framework_game_configuration_edits": false,
+    "commit": false,
+    "push": false,
+    "install": false
+  },
+  "limitations": [
+    "从新工作树 src 调用其自身 yaml-helper，无需 --root，正常入口已验证；此前外部原 checkout 脚本的结果仅说明该脚本默认定位其所属 checkout，不能推广为新工作树入口失败。",
+    "未使用原生 App 工作树工具，结论限于终端 Git worktree 降级路径。",
+    "新工作树 hooks 未重新信任，未测试 hooks 或恢复注入。",
+    "本轮未运行游戏测试、人工试玩、体验/乐趣、原生引擎验收或框架全量测试；不作 PROCEED/发布判断。",
+    "工作树是当前 HEAD 的干净受跟踪快照；原 checkout 既有未提交修改和未跟踪历史证据未复制到新工作树。"
+  ],
+  "commands": [
+    {
+      "id": "git_bash_sandbox_failure",
+      "cwd": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance",
+      "command": "由 git --exec-path 定位 D:\\Program Files\\Git\\bin\\bash.exe；执行 --version / yaml-helper.sh resolve_config --keys automation",
+      "exit_code": -1073741502,
+      "raw_output": "GIT_EXEC_PATH=D:/Program Files/Git/mingw64/libexec/git-core\r\nGIT_BASH=D:\\Program Files\\Git\\bin\\bash.exe\r\n      0 [main] bash (42392) D:\\Program Files\\Git\\bin\\..\\usr\\bin\\bash.exe: *** fatal error - NtCreateDirectoryObject(\\BaseNamedObjects\\msys-2.0S5-8981897249b60cab): 0xC0000022\nBASH_EXIT=-1073741502\r\nORIGINAL_CWD=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\r\n      0 [main] bash (43116) D:\\Program Files\\Git\\bin\\..\\usr\\bin\\bash.exe: *** fatal error - NtCreateDirectoryObject(\\BaseNamedObjects\\msys-2.0S5-8981897249b60cab): 0xC0000022\nCONFIG_EXIT=-1073741502\r\nHEAD_AND_TREE\r\n6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5\n993b8f1a02e87e2fbdb3962c0c7d63382471ac6a\nWORKTREE_LIST\r\nworktree D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance\nHEAD 6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5\nbranch refs/heads/app-acceptance\n\nworktree D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/.scratch/CLI 工作树 验收\nHEAD cc1076080a16154af378fa5082a089b69169837e\ndetached\n\nworktree D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/.scratch/cli-framework-worktree\nHEAD cc1076080a16154af378fa5082a089b69169837e\ndetached\n\nTARGET=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\\.scratch\\App 工作树 验收\r\nTARGET_EXISTS=False\r\nREPORT_DESTINATIONS\r\nproduction/qa/evidence/app-worktree-result.json EXISTS=False\r\nproduction/qa/evidence/app-worktree-result.md EXISTS=False\r\nPERSONAL_PATHS_IGNORE_CHECK\r\n.gitignore:13:project.local.yaml\tproject.local.yaml\n.gitignore:17:production/session-state/\tproduction/session-state/active.md\n.gitignore:15:production/agent-memory/\tproduction/agent-memory/probe.md\nCHECK_IGNORE_EXIT=0\r\n"
+    },
+    {
+      "id": "original_config_before",
+      "cwd": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance",
+      "command": "& \"D:\\Program Files\\Git\\bin\\bash.exe\" -c \"pwd -P\"\n& \"D:\\Program Files\\Git\\bin\\bash.exe\" \"D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.agents/scripts/yaml-helper.sh\" resolve_config --keys automation",
+      "exit_code": 0,
+      "output": "POWERSHELL_CWD=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\r\n/d/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance\nautomation: collaborative (default)\nCONFIG_EXIT=0\r\n"
+    },
+    {
+      "id": "worktree_add_sandbox_failure",
+      "cwd": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance",
+      "command": "git -c core.hooksPath=<目标工作树内不存在的 hooks-disabled 路径> worktree add --detach <target> 6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5",
+      "exit_code": 128,
+      "output": "CWD=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\r\nTARGET=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\\.scratch\\App 工作树 验收\r\nHOOKS_OVERRIDE=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\\.scratch\\App 工作树 验收\\.scratch\\hooks-disabled-8f3b8bdc-d18e-4b21-b22a-6b301e45f7ab\r\nCOMMAND=git -c core.hooksPath=<HOOKS_OVERRIDE> worktree add --detach <TARGET> 6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5\r\nPreparing worktree (detached HEAD 6dd4742)\nfatal: could not create directory of '.git/worktrees/App-工作树-验收': Permission denied\nWORKTREE_ADD_EXIT=128\r\n"
+    },
+    {
+      "id": "worktree_add_fallback",
+      "cwd": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance",
+      "command": "git -c core.hooksPath=\"D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收/.scratch/hooks-disabled-8f3b8bdc-d18e-4b21-b22a-6b301e45f7ab\" worktree add --detach \"D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收\" 6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5",
+      "exit_code": 0,
+      "output": "CWD=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\r\nTARGET=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\\.scratch\\App 工作树 验收\r\nHOOKS_OVERRIDE=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\\.scratch\\App 工作树 验收\\.scratch\\hooks-disabled-8f3b8bdc-d18e-4b21-b22a-6b301e45f7ab\r\nCOMMAND=git -c core.hooksPath=<HOOKS_OVERRIDE> worktree add --detach <TARGET> 6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5\r\nPreparing worktree (detached HEAD 6dd4742)\nUpdating files:  96% (966/1006)\rUpdating files:  97% (976/1006)\rUpdating files:  98% (986/1006)\rUpdating files:  98% (990/1006)\rUpdating files:  99% (996/1006)\rUpdating files:  99% (1003/1006)\rUpdating files: 100% (1006/1006)\rUpdating files: 100% (1006/1006), done.\nHEAD is now at 6dd4742 完成N键重试故事并记录真实应用全流程验收\nWORKTREE_ADD_EXIT=0\r\n"
+    },
+    {
+      "id": "new_config_implicit_root",
+      "cwd": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收/src",
+      "command": "& \"D:\\Program Files\\Git\\bin\\bash.exe\" -c \"pwd -P\"\n& \"D:\\Program Files\\Git\\bin\\bash.exe\" \"D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.agents/scripts/yaml-helper.sh\" resolve_config --keys automation",
+      "exit_code": 0,
+      "output": "POWERSHELL_CWD=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\\.scratch\\App 工作树 验收\\src\r\n/d/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收/src\nHELPER=D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.agents/scripts/yaml-helper.sh\r\nautomation: collaborative (default)\nCONFIG_EXIT=0\r\n"
+    },
+    {
+      "id": "new_config_explicit_root",
+      "cwd": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收/src",
+      "command": "& \"D:\\Program Files\\Git\\bin\\bash.exe\" -c \"pwd -P\"\n& \"D:\\Program Files\\Git\\bin\\bash.exe\" \"D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.agents/scripts/yaml-helper.sh\" --root .. resolve_config --keys automation",
+      "exit_code": 0,
+      "output": "POWERSHELL_CWD=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\\.scratch\\App 工作树 验收\\src\r\n/d/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收/src\nHELPER=D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.agents/scripts/yaml-helper.sh\r\nARGS=--root .. resolve_config --keys automation\r\nautomation: guided (project.local.yaml)\nCONFIG_EXIT=0\r\n"
+    },
+    {
+      "id": "original_config_after_and_interpreter",
+      "cwd": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance",
+      "command": "& \"D:\\Program Files\\Git\\bin\\bash.exe\" -c \"pwd -P\"\n& \"D:\\Program Files\\Git\\bin\\bash.exe\" \"D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.agents/scripts/yaml-helper.sh\" resolve_config --keys automation\n& \"D:\\Program Files\\Git\\bin\\bash.exe\" \"D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.agents/scripts/python-run.sh\" -c \"import sys; print(sys.executable); print(sys.version)\"",
+      "exit_code": 0,
+      "output": "POWERSHELL_CWD=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\r\n/d/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance\nautomation: collaborative (default)\nCONFIG_EXIT=0\r\nC:\\Users\\xingxing\\AppData\\Local\\Python\\pythoncore-3.12-64\\python.exe\r\n3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]\r\nPYTHON_RUN_EXIT=0\r\n"
+    },
+    {
+      "id": "git_isolation_checks",
+      "cwd": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance",
+      "command": "原 checkout 与新工作树分别运行：git rev-parse HEAD 'HEAD^{tree}'; git check-ignore -v -- project.local.yaml production/session-state/active.md production/agent-memory/probe.md；新工作树运行 git symbolic-ref -q HEAD、git status --porcelain=v1 --untracked-files=all、git diff --exit-code --no-ext-diff、git diff --cached --exit-code --no-ext-diff、git ls-files --others --ignored --exclude-standard；原 checkout 执行 Test-Path 检查隔离标记和 project.local.yaml。各命令逐行执行，非组合 shell 分隔执行。",
+      "exit_code": 0,
+      "output": "ORIGINAL_CWD=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\r\nORIGINAL_BRANCH_HEAD_TREE\r\napp-acceptance\n6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5\n993b8f1a02e87e2fbdb3962c0c7d63382471ac6a\nWORKTREE_REGISTRATION\r\nworktree D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance\nHEAD 6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5\nbranch refs/heads/app-acceptance\n\nworktree D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/.scratch/CLI 工作树 验收\nHEAD cc1076080a16154af378fa5082a089b69169837e\ndetached\n\nworktree D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/.scratch/cli-framework-worktree\nHEAD cc1076080a16154af378fa5082a089b69169837e\ndetached\n\nworktree D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收\nHEAD 6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5\ndetached\n\nORIGINAL_IGNORE_CHECK\r\n.gitignore:13:project.local.yaml\tproject.local.yaml\n.gitignore:17:production/session-state/\tproduction/session-state/active.md\n.gitignore:15:production/agent-memory/\tproduction/agent-memory/probe.md\nORIGINAL_CHECK_IGNORE_EXIT=0\r\nORIGINAL_MARKER_EXISTS\r\nFalse\r\nORIGINAL_LOCAL_CONFIG_EXISTS\r\nFalse\r\nWORKTREE_CWD=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\\.scratch\\App 工作树 验收\r\nWORKTREE_HEAD_TREE\r\n6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5\n993b8f1a02e87e2fbdb3962c0c7d63382471ac6a\nWORKTREE_SYMBOLIC_REF\r\nSYMBOLIC_REF_EXIT=1\r\nWORKTREE_STATUS\r\nSTATUS_EXIT=0\r\nWORKTREE_DIFF\r\nDIFF_EXIT=0\r\nCACHED_DIFF_EXIT=0\r\nWORKTREE_IGNORE_CHECK\r\n.gitignore:13:project.local.yaml\tproject.local.yaml\n.gitignore:17:production/session-state/\tproduction/session-state/active.md\n.gitignore:15:production/agent-memory/\tproduction/agent-memory/probe.md\nWORKTREE_CHECK_IGNORE_EXIT=0\r\nWORKTREE_IGNORED_FILES\r\n.scratch/app-worktree-marker.txt\nproject.local.yaml\nIGNORED_FILES_EXIT=0\r\nWORKTREE_GIT_PATHS\r\nD:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.git/worktrees/App-工作树-验收\nD:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.git\nWORKTREE_ALLOWED_FILES_SHA256\r\nBC888E37B010E246B78AF1686153D77B2F5CF76509C45107ED9CF75D2506411A  D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\\.scratch\\App 工作树 验收\\project.local.yaml\r\n2AFA857FBD0A1F08CDAF47398BACA93E3B9BA3D9625976CAE8473CB91203D29F  D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\\.scratch\\App 工作树 验收\\.scratch\\app-worktree-marker.txt\r\nWORKTREE_SESSION_STATE_EXISTS=False\r\nWORKTREE_MEMORY_PROBE_EXISTS=False\r\n"
+    },
+    {
+      "id": "new_worktree_own_entry_without_root",
+      "cwd": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收/src",
+      "helper_absolute_path": "D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收/.agents/scripts/yaml-helper.sh",
+      "git_bash": "D:\\Program Files\\Git\\bin\\bash.exe",
+      "command": "& 'D:\\Program Files\\Git\\bin\\bash.exe' '../.agents/scripts/yaml-helper.sh' resolve_config --keys automation",
+      "args": [
+        "resolve_config",
+        "--keys",
+        "automation"
+      ],
+      "explicit_root": false,
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "output": "POWERSHELL_CWD=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\\.scratch\\App 工作树 验收\\src\r\nGIT_BASH=D:\\Program Files\\Git\\bin\\bash.exe\r\nHELPER_ABSOLUTE=D:\\Git\\Codex-Game-Studios\\.scratch\\codex-capability-probe\\app-web-acceptance\\.scratch\\App 工作树 验收\\.agents\\scripts\\yaml-helper.sh\r\nCOMMAND=bash ../.agents/scripts/yaml-helper.sh resolve_config --keys automation\r\n/d/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/.scratch/App 工作树 验收/src\nautomation: guided (project.local.yaml)\nCONFIG_EXIT=0\r\n",
+      "expected_output": "automation: guided (project.local.yaml)",
+      "expected_output_matched": true
+    }
+  ],
+  "post_report_verification": {
+    "status": "verified",
+    "excluded_owned_reports": [
+      "production/qa/evidence/app-worktree-result.json",
+      "production/qa/evidence/app-worktree-result.md"
+    ],
+    "file_count_before": 1076,
+    "file_count_after_excluding_owned_reports": 1076,
+    "differences": [],
+    "status_unchanged_excluding_owned_reports": true,
+    "tracked_diff_unchanged": true,
+    "branch_unchanged": true,
+    "head_unchanged": true,
+    "tree_unchanged": true,
+    "new_user_files": [
+      "production/qa/evidence/app-worktree-result.json",
+      "production/qa/evidence/app-worktree-result.md"
+    ],
+    "normal_entry_followup": {
+      "status": "verified",
+      "scope": "仅补充自身入口对照，并验证两份既有报告的解析、内容和历史原始命令记录保留；不重复前轮隔离或游戏验收",
+      "normal_entry_exit_code": 0,
+      "normal_entry_expected_output_matched": true,
+      "original_command_count": 8,
+      "original_command_records_preserved": true,
+      "normal_entry_record_count": 1,
+      "cwd_and_absolute_helper_recorded": true,
+      "own_entry_has_no_root_argument": true,
+      "misattributed_self_entry_failure_claim_removed": true,
+      "report_json_parses": true,
+      "markdown_contains_new_observation": true,
+      "prior_isolation_verification_reused": true,
+      "new_files_created": false,
+      "write_targets": [
+        "production/qa/evidence/app-worktree-result.json",
+        "production/qa/evidence/app-worktree-result.md"
+      ]
+    }
+  }
+}

@@ -1,5 +1,7 @@
 # Agent Test Spec: analytics-engineer
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 - **Domain**: Telemetry event taxonomy and naming (`[category].[action].[detail]`), funnel definitions, A/B test framework design (hypothesis, segmentation, variant assignment, success metrics, minimum sample size, minimum run duration, mutual exclusion between concurrent tests), dashboard specification, privacy compliance of data collection, data-informed design recommendations
 - **Does NOT own**: Implementing tracking in game code (programmers — it writes specs for them), design decisions (game-designer decides; data informs), economy design decisions (economy-designer), live ops event design (live-ops-designer)
@@ -10,8 +12,8 @@
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references telemetry, A/B testing, event tracking, analytics)
-- [ ] `tools:` reads `Read, Glob, Grep, Write, Edit, Bash, WebSearch` — Bash serves the data-pipeline work `description:` names; tracking in game code is excluded by the body's "What This Agent Must NOT Do" list, not by the tool list
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over game implementation, economy design, or live ops scheduling
 
 ---
@@ -91,4 +93,4 @@
 - Case 6 (mutual exclusion) is a data integrity test — overlapping tests produce unusable results; this must be caught
 - Case 4 (data vs. design intent) is a coordination test — verify the agent leaves the call to game-designer
 - Case 5 is the most important context-awareness test; naming convention drift across schemas causes dashboard breakage
-- No automated runner; review manually or via `/skill-test`
+- No automated runner; review manually or via `$skill-test`

@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 105.172,
+  "command": [
+    "%USERPROFILE%\\AppData\\Local\\fnm_multishells\\29384_1794561706594\\codex.cmd",
+    "exec",
+    "--json",
+    "--approve-for-me",
+    "-C",
+    "<probe>\\.scratch\\CLI 全量 工作树\\src",
+    "-o",
+    "<repo>\\.scratch\\cli-comprehensive-2026-11-18\\worktree.result.md",
+    "<stdin prompt>"
+  ],
+  "model_override": false
+}

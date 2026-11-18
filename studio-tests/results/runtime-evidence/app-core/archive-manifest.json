@@ -1,0 +1,697 @@
+[
+  {
+    "path": "app-acceptance/45-loss.png",
+    "sha256": "c81dcaa964c7ba199c3f381ccda0437843dc4fd5c8c2fa86218a6d1bf147e97f",
+    "bytes": 93868
+  },
+  {
+    "path": "app-acceptance/45-pause.png",
+    "sha256": "16169c3024181f13705c2fabd6938c4d67cc53956de551320f8e20c9c977dc16",
+    "bytes": 93050
+  },
+  {
+    "path": "app-acceptance/45-resume-retry.png",
+    "sha256": "eac47631fcfda4c57165896c76b3d8ecf0adb23b583253988f522354b97d7578",
+    "bytes": 89195
+  },
+  {
+    "path": "app-acceptance/45-win.png",
+    "sha256": "5bec91a2dc08261e35f5f8b218a925a66d884bbffcf1f59f6371eb2a70872240",
+    "bytes": 98041
+  },
+  {
+    "path": "app-acceptance/60-loss.png",
+    "sha256": "d52acc851a86f3139e6bc91c10736d2784ac85368df058b84f887777b9b566df",
+    "bytes": 94106
+  },
+  {
+    "path": "app-acceptance/60-pause.png",
+    "sha256": "bbe9e5b4372a396369d09f6239f8147eafa1d64dcad0c58b838b0e68ab5eb88e",
+    "bytes": 93622
+  },
+  {
+    "path": "app-acceptance/60-win.png",
+    "sha256": "1f98dabd17adacae0eb3d2ea8d60285c6d5bf4689714399264827473db1fab4a",
+    "bytes": 97349
+  },
+  {
+    "path": "app-acceptance/after.json",
+    "sha256": "b4752848b6438b32853bbf42e4e3598384fe4e005938aa89b4178e7715bc3c4b",
+    "bytes": 7192
+  },
+  {
+    "path": "app-acceptance/baseline-add.log",
+    "sha256": "365101be4092af591dbc3e8da4918861e31a054f3d5da4f7f4c87aaa335d3a96",
+    "bytes": 379
+  },
+  {
+    "path": "app-acceptance/baseline-commit.log",
+    "sha256": "20be2008b0b8060e08438efc28bcd837d9d8a643f9126e0db876bdad3de31437",
+    "bytes": 878
+  },
+  {
+    "path": "app-acceptance/baseline-tag.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "app-acceptance/before.json",
+    "sha256": "72b99c604c0ee212eee6577e3f814a6df13e22fe150698ebdf4f65267e3b1f4f",
+    "bytes": 168739
+  },
+  {
+    "path": "app-acceptance/checkpoint.log",
+    "sha256": "bf1b2a567d8571b81fe342ffd97893639a60c4ae2a0cf4d40f2ffa5bdcf076ca",
+    "bytes": 58
+  },
+  {
+    "path": "app-acceptance/commands.jsonl",
+    "sha256": "7f427b372751ce3aa00cf03e70257f9b5f9ab3fdfb6b8aac3b6c88137a6bc438",
+    "bytes": 38708
+  },
+  {
+    "path": "app-acceptance/door-after.log",
+    "sha256": "e916dfe1832df8c7347ebf76b585b678aa017ca9806f8beadd51d16bc8462d17",
+    "bytes": 200
+  },
+  {
+    "path": "app-acceptance/door-baseline-shots.log",
+    "sha256": "4daf369d12b63f785b36b131479256cad9d5c97d254ef516ccd22cfdd05663ac",
+    "bytes": 390
+  },
+  {
+    "path": "app-acceptance/final-suite.log",
+    "sha256": "8c210c12e4ef88f82088ff928db191319bbe20fb355aca89d4babf9bbce46983",
+    "bytes": 2720
+  },
+  {
+    "path": "app-acceptance/final-suite.log.e2e",
+    "sha256": "fb65c8ef4bc0158121028795d87c0b43ada1d1510531184d6ab9890f42143fa2",
+    "bytes": 2419
+  },
+  {
+    "path": "app-acceptance/final-suite.log.unit",
+    "sha256": "bc30b7d7363bdbf4f4d67df2569da7bcc5c8b38cd9f289677f2663308beede95",
+    "bytes": 301
+  },
+  {
+    "path": "app-acceptance/framework-static.log",
+    "sha256": "0e1c5ca738c3c6dc9e10401455d29e13b67e5a55d98bbb548d6bc0f51e49ec70",
+    "bytes": 457
+  },
+  {
+    "path": "app-acceptance/frozen-prototype.json",
+    "sha256": "8d676b900655f18c04ae276eef80a42a4bfffd2df5928f5ace18afa6bad144f9",
+    "bytes": 5552
+  },
+  {
+    "path": "app-acceptance/import-45-loss.log",
+    "sha256": "b3840d82111fb73e5f22783bcfd7ecbf8c8f2e6deaedac9e0f09e89d18e7d055",
+    "bytes": 2780
+  },
+  {
+    "path": "app-acceptance/import-45-pause.log",
+    "sha256": "b91e0e1ccc8bc189df134baf1203b52e9401a8ff2605ceed8d8371b27d5c7156",
+    "bytes": 2746
+  },
+  {
+    "path": "app-acceptance/import-45-resume-retry.log",
+    "sha256": "959e36a7fc1cf88806805aea38085e99e9bdfca5bff65f9b3ea2db1f48aa1663",
+    "bytes": 3064
+  },
+  {
+    "path": "app-acceptance/import-45-win.log",
+    "sha256": "4e638cf48269f694ba380d8328b377c2694100853f1323bc707553e2b5ba2348",
+    "bytes": 3013
+  },
+  {
+    "path": "app-acceptance/n-code-review.md",
+    "sha256": "d0e7117446b853135155735307520e73fecb62324da83950e37647e5c1993788",
+    "bytes": 2075
+  },
+  {
+    "path": "app-acceptance/n-over.png",
+    "sha256": "3d0ad6c0d5b52e139d3565324e693d9623869080e58027612c635eeebddfae2a",
+    "bytes": 90192
+  },
+  {
+    "path": "app-acceptance/n-pause.png",
+    "sha256": "4b3d4a3a88c01395995b2650d46778ebc08557ed173ca5fcb72285fd626f1fd9",
+    "bytes": 93714
+  },
+  {
+    "path": "app-acceptance/n-play.png",
+    "sha256": "599b7a01f47f77afbce2b50dc391d9e6fb6c0b62125eb5ace0fe3f8dc2a2e27f",
+    "bytes": 90075
+  },
+  {
+    "path": "app-acceptance/n-readiness-and-red-gate.md",
+    "sha256": "04d1bbdf0a1c4699f295fee31d2c1512d485101227e3e4181b71622ac065f075",
+    "bytes": 1618
+  },
+  {
+    "path": "app-acceptance/n-red.log",
+    "sha256": "42b548830068fc7b29a712438acb3c5aaae670820f395d8d2cb434a7a405a496",
+    "bytes": 3931
+  },
+  {
+    "path": "app-acceptance/n-red.log.e2e",
+    "sha256": "42b548830068fc7b29a712438acb3c5aaae670820f395d8d2cb434a7a405a496",
+    "bytes": 3931
+  },
+  {
+    "path": "app-acceptance/n-results.png",
+    "sha256": "3d0ad6c0d5b52e139d3565324e693d9623869080e58027612c635eeebddfae2a",
+    "bytes": 90192
+  },
+  {
+    "path": "app-acceptance/n-suite.log",
+    "sha256": "452f17102b893d4521b74b3243401b51bf3165d3b837c3140c5d92bb7abb259e",
+    "bytes": 2505
+  },
+  {
+    "path": "app-acceptance/n-suite.log.e2e",
+    "sha256": "3f19fa144ada0cb55c1df3d892c8128977fd5d78c93e1664c0f4c99899781d44",
+    "bytes": 2204
+  },
+  {
+    "path": "app-acceptance/n-suite.log.unit",
+    "sha256": "dd650d7cb9f52739c439f17da797bff35ac907ba68a817b6d3a8c1e29ced8fd6",
+    "bytes": 301
+  },
+  {
+    "path": "app-acceptance/n-title.png",
+    "sha256": "59f80c5c258b94a66b1675cd64526339b8663ed2a90ff4ef3950e567caeba968",
+    "bytes": 95973
+  },
+  {
+    "path": "app-acceptance/r-over.png",
+    "sha256": "3d0ad6c0d5b52e139d3565324e693d9623869080e58027612c635eeebddfae2a",
+    "bytes": 90192
+  },
+  {
+    "path": "app-acceptance/r-pause.png",
+    "sha256": "4b3d4a3a88c01395995b2650d46778ebc08557ed173ca5fcb72285fd626f1fd9",
+    "bytes": 93714
+  },
+  {
+    "path": "app-acceptance/r-play.png",
+    "sha256": "599b7a01f47f77afbce2b50dc391d9e6fb6c0b62125eb5ace0fe3f8dc2a2e27f",
+    "bytes": 90075
+  },
+  {
+    "path": "app-acceptance/r-results.png",
+    "sha256": "3d0ad6c0d5b52e139d3565324e693d9623869080e58027612c635eeebddfae2a",
+    "bytes": 90192
+  },
+  {
+    "path": "app-acceptance/r-title.png",
+    "sha256": "59f80c5c258b94a66b1675cd64526339b8663ed2a90ff4ef3950e567caeba968",
+    "bytes": 95973
+  },
+  {
+    "path": "app-acceptance/repro-hookless.log",
+    "sha256": "e180ac01b42a6468624aad66845311e2118aaa8c1859538f1aa0d6c800bc027d",
+    "bytes": 608
+  },
+  {
+    "path": "app-acceptance/repro-hookless.png",
+    "sha256": "7a5175f59992a07616d58b06a310b2a3909c43df6d406a736ef54995563a09ed",
+    "bytes": 4250
+  },
+  {
+    "path": "app-acceptance/repro-normal.log",
+    "sha256": "bd1cf654be3344914c8002f5521e0237c80f4f44eed5742cf74d99bd44903b41",
+    "bytes": 2235
+  },
+  {
+    "path": "app-acceptance/repro-normal.png",
+    "sha256": "bf0492f95a0e7334366c91b678a2b5b000ae42c4380b2e0fd5aa3491f4a9adec",
+    "bytes": 89201
+  },
+  {
+    "path": "app-acceptance/repro.md",
+    "sha256": "2f05d00665eb9c03b756ed5527da3c324535e0aa816e20cd3186ddbfaedfcbca",
+    "bytes": 2514
+  },
+  {
+    "path": "app-acceptance/round2-60-loss.log",
+    "sha256": "277ad264d8e77e5b2819d612f635db28a36055f93ee5cd76470612d614c512fc",
+    "bytes": 2772
+  },
+  {
+    "path": "app-acceptance/round2-60-pause.log",
+    "sha256": "cdf0383ea2a106130a62fdd7351c0f89223018f53bbd1d231ae389c29144bbdc",
+    "bytes": 2746
+  },
+  {
+    "path": "app-acceptance/round2-60-win.log",
+    "sha256": "2637dbf19f0c30217c0892e9405f0b46db640b816351564bdce27e4e19e3be73",
+    "bytes": 3013
+  },
+  {
+    "path": "app-acceptance/round2-build.log",
+    "sha256": "b72abe508ed03af958dabbf417b29ea0d4f9ad05e4cc69ca564ea37c9cfd9e83",
+    "bytes": 339
+  },
+  {
+    "path": "app-acceptance/round2-change-add.log",
+    "sha256": "1e896dfa0815b46cb92f2c784cf70a995e3f540e6fd596369fe066e21d09ff2e",
+    "bytes": 220
+  },
+  {
+    "path": "app-acceptance/round2-change-commit.log",
+    "sha256": "610e4358e60026e32444cd77d26741e913366066f13e417acf0f5684421de491",
+    "bytes": 1086
+  },
+  {
+    "path": "app-acceptance/round2-coherence.log",
+    "sha256": "9da0c332d186b0cd724c7a4628cb1e284e3f3e457749411cffc67326e4dda705",
+    "bytes": 804
+  },
+  {
+    "path": "app-acceptance/round2-commands.jsonl",
+    "sha256": "fc08f696177bd3e8a5519f59ee081563d650c55f37f7c72256e4d34a986ecae2",
+    "bytes": 25247
+  },
+  {
+    "path": "app-acceptance/round2-config.log",
+    "sha256": "dc54092054afa62523e00d922918b8165cf51c192c49b93b193d251c47814618",
+    "bytes": 267
+  },
+  {
+    "path": "app-acceptance/round2-copy-add.log",
+    "sha256": "5a027f201787c77ad04d7ecd4d4e4f269308e1de784d5baca772aa9e9fb0f038",
+    "bytes": 1617
+  },
+  {
+    "path": "app-acceptance/round2-copy-build.log",
+    "sha256": "25df08a1738cadeaef66d5599a5706bddd34b05d0427fbce2426ee23334bd2f2",
+    "bytes": 370
+  },
+  {
+    "path": "app-acceptance/round2-copy-commit.log",
+    "sha256": "ad86d9d856ffc4c01aac9214300faee5d0f6b490f3e40279c9c6ee1ef45d8bbd",
+    "bytes": 2424
+  },
+  {
+    "path": "app-acceptance/round2-copy-replay.log",
+    "sha256": "33425317538ec6b105aa5cc8a4738c7167369f8c977b64d50eb29c434cfe9d46",
+    "bytes": 132
+  },
+  {
+    "path": "app-acceptance/round2-dev-config.log",
+    "sha256": "f01e2812efaf34d8cb0e04a1cbe1c062ab9ff9fb6d7c66a8564c6d203c7643d5",
+    "bytes": 730
+  },
+  {
+    "path": "app-acceptance/round2-dev-status.log",
+    "sha256": "6c39c66442aa21b20da2ec581352757f41d5681fbc8466e04929ba34250e4a66",
+    "bytes": 76
+  },
+  {
+    "path": "app-acceptance/round2-door.log",
+    "sha256": "9f80a509c1aa46527a9feb428618c68aa179cd8f043e66d6ecdf9fa2eb56fe01",
+    "bytes": 393
+  },
+  {
+    "path": "app-acceptance/round2-final-done-config.log",
+    "sha256": "469602a59a287ec439c4989bada99632405d4f0fbd4ba07acfc6c046ceed3029",
+    "bytes": 496
+  },
+  {
+    "path": "app-acceptance/round2-final-done-receipt.log",
+    "sha256": "9f7c3bd7a110f56a8397ef41ce25fa0b7258b64afcfc0b05b133c973da0ba0d3",
+    "bytes": 171
+  },
+  {
+    "path": "app-acceptance/round2-final-suite.log",
+    "sha256": "bbc5e1b984316d844181373b70178b7225ea17febd628e5a68c8a1cf80c886d5",
+    "bytes": 753
+  },
+  {
+    "path": "app-acceptance/round2-framework.log",
+    "sha256": "3c66f531c265a5cf4bb75901cf948e6386e730c6d42e4c0676d750d70545c9a2",
+    "bytes": 457
+  },
+  {
+    "path": "app-acceptance/round2-grow-copy.log",
+    "sha256": "7feb8ef8b7f1de335d75a467de0f2b758b9d687eb02d96f8c08dd056bfa2e774",
+    "bytes": 715
+  },
+  {
+    "path": "app-acceptance/round2-grow-guard.log",
+    "sha256": "c46caf59dd99a052bed688955fc4967043f4b7e80b76eb3d9ddc06dac9b9fd63",
+    "bytes": 220
+  },
+  {
+    "path": "app-acceptance/round2-grow-record.log",
+    "sha256": "ea600ade3b5899d63c512a1aa3a4c952005ac5977f286daf6098d78354923bee",
+    "bytes": 84
+  },
+  {
+    "path": "app-acceptance/round2-grow-reference.log",
+    "sha256": "c0db2e201da33c3fadbe38a55200475f16ef352708ff7b32b37b6fb6f769c70c",
+    "bytes": 233
+  },
+  {
+    "path": "app-acceptance/round2-grown-tag.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "app-acceptance/round2-integrity.json",
+    "sha256": "5c7f52b9be5b0063c22d597e58bc2d37ad3380b65877b5dd8f26030ade22afd3",
+    "bytes": 139862
+  },
+  {
+    "path": "app-acceptance/round2-n-add.log",
+    "sha256": "f7c86db5f369316d6d567ff8cf67ac69f7b8e5237a619664892eb893149d9ac0",
+    "bytes": 6484
+  },
+  {
+    "path": "app-acceptance/round2-n-commit.log",
+    "sha256": "77847f82bb12bee14d28c311507f003806a30a432bed5473134aee324c073db5",
+    "bytes": 3945
+  },
+  {
+    "path": "app-acceptance/round2-n-green-smoke.log",
+    "sha256": "90060e65796cd635fc1600770bb2c5f66297ccd6800c5f2d5703d9c8bb75ca5c",
+    "bytes": 773
+  },
+  {
+    "path": "app-acceptance/round2-n-red.log",
+    "sha256": "478a897444eb1dfc793800e11506678192c84c4e031eeb7b2e940446f467c54b",
+    "bytes": 969
+  },
+  {
+    "path": "app-acceptance/round2-n-replay.log",
+    "sha256": "34a243b316df49c4200f2fecac325b22c4e0123002c77fdfffb8eba78f0e9f95",
+    "bytes": 152
+  },
+  {
+    "path": "app-acceptance/round2-n-suite.log",
+    "sha256": "c4d4a5996c915cc4ba6d972f91bbd7b52e4053ff7f4bfaea16334e6b6f53b74d",
+    "bytes": 741
+  },
+  {
+    "path": "app-acceptance/round2-npm-ci.log",
+    "sha256": "b7a491a6ba063dd39cc62a2efb8943eeceb5cbf4ba7f4f40405509650f2fc115",
+    "bytes": 237
+  },
+  {
+    "path": "app-acceptance/round2-oneshot-tag.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "bytes": 1
+  },
+  {
+    "path": "app-acceptance/round2-r-accept.log",
+    "sha256": "767f147acb07385c691d9b5bff6d9fc1b377a9b6666d013fb645d319a65fe6fa",
+    "bytes": 119
+  },
+  {
+    "path": "app-acceptance/round2-r-add.log",
+    "sha256": "00eff63b7b377489d676b3f773a04d73f40e61cb0a47db38857963db6a1b52a7",
+    "bytes": 341
+  },
+  {
+    "path": "app-acceptance/round2-r-commit.log",
+    "sha256": "8f0598c09166bd701372cb10c5e07d2abd9a307a3ff420a865b8706901fcf3c9",
+    "bytes": 660
+  },
+  {
+    "path": "app-acceptance/round2-r-green.log",
+    "sha256": "90edaa7898a92b2552f02857c9f41fda00eb5a24e2dda9f09c2f89d0c017ed98",
+    "bytes": 1260
+  },
+  {
+    "path": "app-acceptance/round2-r-red.log",
+    "sha256": "3342cd9731a3eb4d0f8f955b6d648d4976bfc068d425fc657df5ad1b2426e3eb",
+    "bytes": 3980
+  },
+  {
+    "path": "app-acceptance/round2-r-replay.log",
+    "sha256": "09b0ca0e9153136b538e0c81c5fda7ca3bf003073f79dc5467347b7a952912c6",
+    "bytes": 196
+  },
+  {
+    "path": "app-acceptance/round2-r-smoke.log",
+    "sha256": "c2520b801d7a1f92f441541a706461a6a88d4b3e0bd588e8721605f4b28ced1e",
+    "bytes": 774
+  },
+  {
+    "path": "app-acceptance/round2-readiness-adrs.log",
+    "sha256": "246a8fa37aad932bd6ae2dd24a1f9535a27416114640b7703322fd79692026dd",
+    "bytes": 189
+  },
+  {
+    "path": "app-acceptance/round2-readiness-config.log",
+    "sha256": "e2688aabd482512275300b1786ad85fc57fe1f5fcb87afac3403f865550894e5",
+    "bytes": 561
+  },
+  {
+    "path": "app-acceptance/round2-readiness-facts.log",
+    "sha256": "9d3b6bd2719b7c58d277893d51926dd0095e1536d9fdd8205a4ba07291fa2193",
+    "bytes": 287
+  },
+  {
+    "path": "app-acceptance/round2-record-add.log",
+    "sha256": "387001711b51272f7f50cc62903c0032ed23653ea3e79b5126184d574e32c174",
+    "bytes": 247
+  },
+  {
+    "path": "app-acceptance/round2-record-commit.log",
+    "sha256": "165f596364756b821968171da8ba6c18c39c0bda0ce89147e13bdc1176beb855",
+    "bytes": 417
+  },
+  {
+    "path": "app-acceptance/round2-reference-add.log",
+    "sha256": "c615abc56082ce6094d51a30d038fc5cfa445e1d17a49bca008fbfefeb1a06f1",
+    "bytes": 286
+  },
+  {
+    "path": "app-acceptance/round2-reference-commit.log",
+    "sha256": "b505a266d1a153ab5812894cfe713532356473d9706f6e46310995639fcb856a",
+    "bytes": 766
+  },
+  {
+    "path": "app-acceptance/round2-report-restage.log",
+    "sha256": "72e727df18791a1d28f06b3e11dc3ba1fe16bca79988b6b111129ffa294ea31f",
+    "bytes": 141
+  },
+  {
+    "path": "app-acceptance/round2-review-config.log",
+    "sha256": "c52f00dba6867631423face93d48399c06589a6cd17cf8f47b69a6dde3cd27e6",
+    "bytes": 36
+  },
+  {
+    "path": "app-acceptance/round2-routing.log",
+    "sha256": "fbe555f10329d394a8d52d5ee8fe9ac085b9a0ecf9802a2c1f03c05c05bec2ab",
+    "bytes": 32
+  },
+  {
+    "path": "app-acceptance/round2-rule-red.log",
+    "sha256": "90792f4f8e3005d96938409df5bbb77688ee3327144b2abe86c852cac7d986ae",
+    "bytes": 1727
+  },
+  {
+    "path": "app-acceptance/round2-smoke-config.log",
+    "sha256": "bb47f4e6e8f7c902d55ba5e4de5f137328ff89c39499ab73230dbeae021f8122",
+    "bytes": 313
+  },
+  {
+    "path": "app-acceptance/round2-smoke.log",
+    "sha256": "5ad9f7564cfddf7823058d4aa00ffa38c652592fc0a71784991174de1b82ab60",
+    "bytes": 773
+  },
+  {
+    "path": "app-acceptance/round2-story-close.log",
+    "sha256": "6c39c66442aa21b20da2ec581352757f41d5681fbc8466e04929ba34250e4a66",
+    "bytes": 76
+  },
+  {
+    "path": "app-acceptance/round2-story-done-red-config.log",
+    "sha256": "98408dccdf8713c0f97bde87390f085928b8b45cc19d73459dbd428f097bbbb4",
+    "bytes": 598
+  },
+  {
+    "path": "app-acceptance/round2-story-done-red-facts.log",
+    "sha256": "3497fa4cb62954e36b0b326e19e604fd259f37cadbe07d2299cfd2febefea4e8",
+    "bytes": 206
+  },
+  {
+    "path": "app-acceptance/round2-story-status.log",
+    "sha256": "c4e253705cdce7ec3d0ea40e705a42fb12e2aa28144913b3d94beb2350a71701",
+    "bytes": 20
+  },
+  {
+    "path": "app-acceptance/round2-test-add.log",
+    "sha256": "a8894cef694269db50845d5e561272189d25199280bd52b9018476305511a3c2",
+    "bytes": 240
+  },
+  {
+    "path": "app-acceptance/round2-test-commit.log",
+    "sha256": "ce8af69821ecb4e506500078aa92181577f29c6fa0330024a81ff8874223e845",
+    "bytes": 445
+  },
+  {
+    "path": "app-acceptance/round2-test-run.log",
+    "sha256": "b38ffbf48fd083c303bf753d648deb3ecd634fef2851100fb101005070460f0f",
+    "bytes": 739
+  },
+  {
+    "path": "app-acceptance/round2-tests-green.log",
+    "sha256": "f866248f57d7a269a613a4277957fdee1e8300d49dcbf7657a05155b3e0e7416",
+    "bytes": 1258
+  },
+  {
+    "path": "app-acceptance/round2-ts-add.log",
+    "sha256": "af765c8ac9eb842276ffe30c220b30775f1754e54ac01685b1ba472160ee5df7",
+    "bytes": 847
+  },
+  {
+    "path": "app-acceptance/round2-ts-commit.log",
+    "sha256": "255bdfa68ed21f369388d71caa4876638a50d0ffa4a34a838cd3f612248aa674",
+    "bytes": 1433
+  },
+  {
+    "path": "app-acceptance/round2-tune.log",
+    "sha256": "2dd1fa8536eb88cf0c36dc17f1c30390c2956037b107a0e671530a34fbf7d0ff",
+    "bytes": 56
+  },
+  {
+    "path": "app-acceptance/round2-typescript-build-fixed.log",
+    "sha256": "606b3c0efd2987a27d79b94edc1a2e12b56c02ce3bdc87e874399238ea7d634e",
+    "bytes": 198
+  },
+  {
+    "path": "app-acceptance/round2-typescript-build-green.log",
+    "sha256": "f1b62459db4b1eb17a76d8b94832aa28dd9caba7b7538f756f0963a9cd6925a4",
+    "bytes": 371
+  },
+  {
+    "path": "app-acceptance/round2-typescript-build.log",
+    "sha256": "606b3c0efd2987a27d79b94edc1a2e12b56c02ce3bdc87e874399238ea7d634e",
+    "bytes": 198
+  },
+  {
+    "path": "app-acceptance/round2-typescript-migrate.log",
+    "sha256": "10b343c508a0b1b078e304f041a5e2f8c6e692532777492cac3c956e84571300",
+    "bytes": 122
+  },
+  {
+    "path": "app-acceptance/round2-typescript-replay.log",
+    "sha256": "c502041758aca66590af2743c2dc14faf302938138d9dbf0ac66548498dac30f",
+    "bytes": 150
+  },
+  {
+    "path": "app-acceptance/run-command.ps1",
+    "sha256": "cbb4afde119687e89eb68b65d366bb3073757caa6dff8eda2abc807037a3b30d",
+    "bytes": 2240
+  },
+  {
+    "path": "app-acceptance/test-run.log",
+    "sha256": "fd50fd2f7921f122f18daf76cca747a7059879298b2aac553ead1aa9d584c622",
+    "bytes": 1190
+  },
+  {
+    "path": "app-acceptance/test-run.log.e2e",
+    "sha256": "710612ae4dc0e341cf865dc0e5c01402c3192505f98064af670b3e17f33a9ac8",
+    "bytes": 889
+  },
+  {
+    "path": "app-acceptance/test-run.log.unit",
+    "sha256": "6b0b470c2362e7b7954d23bb0716fb37da419cbef080773f038234e4387d8da2",
+    "bytes": 301
+  },
+  {
+    "path": "grow-app-dusk-fish/accepted.png",
+    "sha256": "81736a5044fce158c8bbded139326157dcf03e8304f1df31d93925a9e7b92fb0",
+    "bytes": 97727
+  },
+  {
+    "path": "grow-app-dusk-fish/accepted.tsv",
+    "sha256": "6f428f830e74fa1584eeb866e0b76e8a4322c90d9f4d7f5087758a943a4b0197",
+    "bytes": 5444
+  },
+  {
+    "path": "grow-app-dusk-fish/copy.png",
+    "sha256": "1f98dabd17adacae0eb3d2ea8d60285c6d5bf4689714399264827473db1fab4a",
+    "bytes": 97349
+  },
+  {
+    "path": "grow-app-dusk-fish/copy.tsv",
+    "sha256": "0dc13c6334d0d02336381c19b820782247db535e0653caf215b4f9e649357bd7",
+    "bytes": 5439
+  },
+  {
+    "path": "grow-app-dusk-fish/grow.md",
+    "sha256": "b2957f9d741b0b93bb4565ac1a6d8d059241f541e0ac84fb8ced994140b79ee7",
+    "bytes": 1231
+  },
+  {
+    "path": "grow-app-dusk-fish/reference-again.tsv",
+    "sha256": "2d71a0b6df33e9a692ca8a067f9891ee30c5f9b7205adece0a75f6e3a990c65b",
+    "bytes": 5340
+  },
+  {
+    "path": "grow-app-dusk-fish/reference.png",
+    "sha256": "1f98dabd17adacae0eb3d2ea8d60285c6d5bf4689714399264827473db1fab4a",
+    "bytes": 97349
+  },
+  {
+    "path": "grow-app-dusk-fish/reference.tsv",
+    "sha256": "6b5bf3022742fe07ce0e0c7e7f424a21f651007037513b5297dfa2ed452290c5",
+    "bytes": 5444
+  },
+  {
+    "path": "grow-app-dusk-fish/story.png",
+    "sha256": "81736a5044fce158c8bbded139326157dcf03e8304f1df31d93925a9e7b92fb0",
+    "bytes": 97727
+  },
+  {
+    "path": "grow-app-dusk-fish/story.tsv",
+    "sha256": "aff153dd6fc80d0edcd168b8d16bd1ade7c41512eb698a2401d62192b7e03409",
+    "bytes": 5444
+  },
+  {
+    "path": "grow-app-dusk-fish/typescript.png",
+    "sha256": "1f98dabd17adacae0eb3d2ea8d60285c6d5bf4689714399264827473db1fab4a",
+    "bytes": 97349
+  },
+  {
+    "path": "grow-app-dusk-fish/typescript.tsv",
+    "sha256": "441b2c8e0c4d756b83499dc07dc4c64c8d0f64e8edb99fe918c2e099ca1885ee",
+    "bytes": 5445
+  },
+  {
+    "path": "story-001-n-retry/over.png",
+    "sha256": "3d0ad6c0d5b52e139d3565324e693d9623869080e58027612c635eeebddfae2a",
+    "bytes": 90192
+  },
+  {
+    "path": "story-001-n-retry/pause.png",
+    "sha256": "4b3d4a3a88c01395995b2650d46778ebc08557ed173ca5fcb72285fd626f1fd9",
+    "bytes": 93714
+  },
+  {
+    "path": "story-001-n-retry/play.png",
+    "sha256": "599b7a01f47f77afbce2b50dc391d9e6fb6c0b62125eb5ace0fe3f8dc2a2e27f",
+    "bytes": 90075
+  },
+  {
+    "path": "story-001-n-retry/results.png",
+    "sha256": "3d0ad6c0d5b52e139d3565324e693d9623869080e58027612c635eeebddfae2a",
+    "bytes": 90192
+  },
+  {
+    "path": "story-001-n-retry/stamp.txt",
+    "sha256": "f087f3bb7db10e1f0b91d1d21ad7cdd9f8c4d7d0d41eca32c98dd9678d6d0d0f",
+    "bytes": 270
+  },
+  {
+    "path": "story-001-n-retry/title.png",
+    "sha256": "59f80c5c258b94a66b1675cd64526339b8663ed2a90ff4ef3950e567caeba968",
+    "bytes": 95973
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "godot-import",
+    "exit": 124,
+    "command": [
+      "D:/Git/godot-worktrees/4.7.2-stable/bin/godot.windows.editor.dev.x86_64.console.exe",
+      "--headless",
+      "--path",
+      "<gap-fixtures>\\engine-fixtures\\godot",
+      "--editor",
+      "--import"
+    ]
+  },
+  {
+    "name": "unity-batch",
+    "exit": 0,
+    "command": [
+      "C:/Program Files/Unity/Hub/Editor/6000.3.5f2/Editor/Unity.exe",
+      "-batchmode",
+      "-nographics",
+      "-quit",
+      "-projectPath",
+      "<gap-fixtures>\\engine-fixtures\\unity",
+      "-executeMethod",
+      "Probe.Run",
+      "-logFile",
+      "<gap-fixtures>\\unity-editor.log"
+    ]
+  },
+  {
+    "name": "unreal-commandlet",
+    "exit": 124,
+    "command": [
+      "D:/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor-Cmd.exe",
+      "<gap-fixtures>\\engine-fixtures\\unreal\\Probe.uproject",
+      "-run=ResavePackages",
+      "-ProjectOnly",
+      "-unattended",
+      "-NullRHI",
+      "-NoSound",
+      "-NoSplash",
+      "-NoShaderCompile",
+      "-nop4",
+      "-stdout",
+      "-FullStdOutLogOutput",
+      "-NoLogTimes",
+      "-abslog=<gap-fixtures>\\unreal-editor.log"
+    ]
+  }
+]

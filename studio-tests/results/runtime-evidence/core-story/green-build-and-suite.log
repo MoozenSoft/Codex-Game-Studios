@@ -1,0 +1,72 @@
+
+> dusk-fish@0.0.0 build
+> tsc --noEmit && vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 13 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                 0.46 kB │ gzip: 0.32 kB
+dist/assets/index-BCToumLQ.js  11.57 kB │ gzip: 5.38 kB
+
+✓ built in 38ms
+
+> dusk-fish@0.0.0 test
+> npm run test:unit && npm run test:e2e
+
+
+> dusk-fish@0.0.0 test:unit
+> vitest run
+
+
+ RUN  v5.0.5 <probe>
+
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  00:46:34
+   Duration  365ms (transform 49%, worker 27%, import 17%, tests 7%)
+
+
+> dusk-fish@0.0.0 test:e2e
+> npm run build:single && playwright test
+
+
+> dusk-fish@0.0.0 build:single
+> tsc --noEmit && vite build --mode single
+
+vite v8.3.4 building client environment for single...
+transforming...
+✓ 13 modules transformed.
+rendering chunks...
+[plugin vite:singlefile] 
+
+[plugin vite:singlefile] Inlining: index-BCToumLQ.js
+computing gzip size...
+dist-single/index.html  12.00 kB │ gzip: 5.65 kB
+
+✓ built in 29ms
+
+Running 12 tests using 3 workers
+
+(node:35912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28032) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26256) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 tests\integration\boot.spec.ts:19:1 › 标题与画布正常启动，无浏览器错误 @boot (998ms)
+  ✓   3 tests\integration\retry.spec.ts:22:5 › over 画面真实键盘 r 重试并重置整局 (2.6s)
+  ✓   4 tests\integration\boot.spec.ts:27:1 › reference 开场输入钓满三鱼，同 seed 完整状态和画面重复 (2.2s)
+  ✓   6 tests\integration\boot.spec.ts:51:1 › 方向键移动、暂停冻结和恢复均保留 (125ms)
+  ✓   7 tests\integration\boot.spec.ts:74:1 › 零 seed 有效，非法 seed 保持原型的默认回退 (189ms)
+  ✓   5 tests\integration\retry.spec.ts:22:5 › over 画面真实键盘 Enter 重试并重置整局 (470ms)
+  ✓   8 tests\integration\retry.spec.ts:22:5 › results 画面真实键盘 r 重试并重置整局 (322ms)
+  ✓   9 tests\integration\retry.spec.ts:22:5 › results 画面真实键盘 Enter 重试并重置整局 (130ms)
+  ✓   1 tests\integration\n-retry.spec.ts:52:3 › N 在 over 真实结果画面重试并重置完整状态与 RNG (4.0s)
+  ✓  10 tests\integration\retry.spec.ts:58:1 › R 在标题、游玩及暂停时均不会重开游戏 (169ms)
+  ✓  11 tests\integration\n-retry.spec.ts:52:3 › N 在 results 真实结果画面重试并重置完整状态与 RNG (313ms)
+  ✓  12 tests\integration\n-retry.spec.ts:76:1 › N 在标题、游玩和暂停均不重开且与无 N 的同 seed 对照一致 (184ms)
+
+  12 passed (8.4s)

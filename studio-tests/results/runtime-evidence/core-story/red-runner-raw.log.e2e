@@ -1,0 +1,73 @@
+
+> dusk-fish@0.0.0 test:e2e
+> npm run build:single && playwright test tests/integration/n-retry.spec.ts
+
+
+> dusk-fish@0.0.0 build:single
+> tsc --noEmit && vite build --mode single
+
+vite v8.3.4 building client environment for single...
+transforming...
+✓ 13 modules transformed.
+rendering chunks...
+[plugin vite:singlefile] 
+
+[plugin vite:singlefile] Inlining: index-7nSlXmj5.js
+computing gzip size...
+dist-single/index.html  11.97 kB │ gzip: 5.64 kB
+
+✓ built in 30ms
+
+Running 3 tests using 1 worker
+
+(node:21952) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests\integration\n-retry.spec.ts:52:3 › N 在 over 真实结果画面重试并重置完整状态与 RNG (784ms)
+(node:23376) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests\integration\n-retry.spec.ts:52:3 › N 在 results 真实结果画面重试并重置完整状态与 RNG (1.2s)
+(node:32752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests\integration\n-retry.spec.ts:76:1 › N 在标题、游玩和暂停均不重开且与无 N 的同 seed 对照一致 (1.6s)
+
+
+  1) tests\integration\n-retry.spec.ts:52:3 › N 在 over 真实结果画面重试并重置完整状态与 RNG ────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "play"
+    Received: "over"
+
+      63 |     const events = await page.evaluate(() => window.game!.events);
+      64 |     writeFileSync(`${evidence}/n-${ending}-attempt.json`, JSON.stringify({ initial, before, after, scene, events }, null, 2));
+    > 65 |     expect(scene).toBe('play');
+         |                   ^
+      66 |     expect(after).toEqual(initial);
+      67 |     expect(events).toEqual(['start']);
+      68 |     await page.screenshot({ path: `${evidence}/n-${ending}-after.png` });
+        at <probe>\tests\integration\n-retry.spec.ts:65:19
+
+    Error Context: test-results\n-retry-N-在-over-真实结果画面重试并重置完整状态与-RNG\error-context.md
+
+  2) tests\integration\n-retry.spec.ts:52:3 › N 在 results 真实结果画面重试并重置完整状态与 RNG ─────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "play"
+    Received: "results"
+
+      63 |     const events = await page.evaluate(() => window.game!.events);
+      64 |     writeFileSync(`${evidence}/n-${ending}-attempt.json`, JSON.stringify({ initial, before, after, scene, events }, null, 2));
+    > 65 |     expect(scene).toBe('play');
+         |                   ^
+      66 |     expect(after).toEqual(initial);
+      67 |     expect(events).toEqual(['start']);
+      68 |     await page.screenshot({ path: `${evidence}/n-${ending}-after.png` });
+        at <probe>\tests\integration\n-retry.spec.ts:65:19
+
+    Error Context: test-results\n-retry-N-在-results-真实结果画面重试并重置完整状态与-RNG\error-context.md
+
+  2 failed
+    tests\integration\n-retry.spec.ts:52:3 › N 在 over 真实结果画面重试并重置完整状态与 RNG ─────────────────────────
+    tests\integration\n-retry.spec.ts:52:3 › N 在 results 真实结果画面重试并重置完整状态与 RNG ──────────────────────
+  1 passed (13.0s)

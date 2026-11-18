@@ -1,0 +1,31 @@
+=== CCGS Config (resolved: local->yaml->legacy->default; use as-is) ===
+review_mode: solo (rigor:minimal)
+automation: collaborative (default)
+workflow: minimal (rigor:minimal)
+qa.level: minimal (rigor:minimal)
+automation_always_ask: scope_changes, file_deletions, schema_changes (default)
+system_overrides: none
+gate_level: logic=blocking(default) integration=blocking(project.yaml) visual=blocking(default) ui=blocking(default) config=advisory(default; /smoke-check: blocking)
+review_gate: skill-gates=skip phase-gates=skip (review_mode solo, rigor:minimal; a --review flag overrides)
+=== end ===
+stories	1	paths
+complete	0
+in_review	0
+in_progress	1
+todo	0
+blocked	0
+other	0
+no_status	0
+STORY	production/epics/EPIC-ACCEPTANCE/story-001-n-retry.md	IN_PROGRESS	In Progress	Integration	Core	S	-	n/a	5	0	尚未运行；不声明通过。	None	-
+RECEIPT: production/qa/evidence/story-001-n-retry/stamp.txt
+UNCHANGED: src/main.ts
+UNCHANGED: tests/integration/n-retry.spec.ts
+be410bdccdff510480f3f5ff034b66018a6693539b6d357e8e39bf70eff79829 *src/main.ts
+4d3418f4feb5147be77ca7008d1de1575fa695be46f88e78472c3b0fd199c7b4 *tests/integration/n-retry.spec.ts
+f808b1552d1aa997092d3f5a4dc7908f6fd4d3c99dd7058da6b1815e38cfea8f *package-lock.json
+a581086db754dff749f5c207394548563b998afdcfc114abe64dd50763a836b2 *data/config.json
+ M design/game-brief.md
+ M project.yaml
+ M src/main.ts
+?? production/epics/
+?? tests/integration/n-retry.spec.ts

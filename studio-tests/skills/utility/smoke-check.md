@@ -1,8 +1,10 @@
-# Skill Test Spec: /smoke-check
+# Skill Test Spec: $smoke-check
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/smoke-check` is the gate between implementation and QA hand-off. Phase 1 runs
+`$smoke-check` is the gate between implementation and QA hand-off. Phase 1 runs
 `project-coherence.sh`, verifies that **game test files** exist under the
 engine's test root or `tests/smoke/` (not merely that `tests/` exists), and
 reads the engine from `project.yaml` (falling back to `technical-preferences.md`),
@@ -15,20 +17,23 @@ file. At `qa.level: minimal` with no game tests, the automated row is WAIVED
 and Phase 2 runs a build check instead — `commands.smoke`, else
 `commands.build`, when set. Phase 3 scans test coverage against the QA plan or
 sprint stories; Phase 4 batch-verifies manual smoke checks with
-`AskUserQuestion`, and Batch 1 first asks whether the build was launched this
+`当前 Codex 可用的提问工具`, and Batch 1 first asks whether the build was launched this
 session — "not launched" makes the manual checks NOT ASSESSED. The report is written
 to `production/qa/smoke-[date].md` after explicit approval.
 
 Verdicts, first matching rule wins: FAIL (a test failure, a suite that did not
-complete — timeout, compile/parse/build error, no results file — or a Batch
-1/Batch 2 check FAILED, or a failed build check), NOT ASSESSED (suite unconfirmed NOT RUN, a runner that
+complete — timeout, compile/parse/build error, no results file — or any required
+manual/platform check FAIL, including Batch 3 save/load and performance, or a
+failed build check), NOT ASSESSED (suite unconfirmed NOT RUN, a runner that
 could not run or executed zero tests, unconfirmed `PlayMode: NOT RUN`, a check
 that could not execute — including a build not launched this session — an
 `UNKNOWN` coverage row, Batch 3 skipped — or no game tests at `qa.level`
 `standard`/`full`; at `minimal` the automated row is WAIVED and the batches carry
 the verdict), PASS WITH WARNINGS (MISSING test evidence, a runner warning such
-as gdUnit4 101's leaked orphans, or a NOT RUN suite the developer confirmed),
-PASS. NOT ASSESSED ranks above both pass values and below FAIL.
+as gdUnit4 101's leaked orphans, or a NOT RUN suite the developer confirmed,
+provided every required manual/platform check is PASS or justified N/A),
+PASS. NOT TESTED and UNANSWERED prevent either pass value. NOT ASSESSED ranks
+above both pass values and below FAIL.
 Whether a FAIL blocks hand-off depends on `qa.level` (advisory at `minimal`)
 and `testing.strict.config` (unset → blocking).
 
@@ -38,19 +43,19 @@ No director gates apply. The skill does NOT invoke any director agents.
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keywords: PASS, PASS WITH WARNINGS, NOT ASSESSED, FAIL
 - [ ] Contains "May I write" collaborative protocol language before writing the report
-- [ ] Has a next-step handoff (re-run `/smoke-check` after a FAIL; QA hand-off to qa-tester on PASS)
+- [ ] Has a next-step handoff (re-run `$smoke-check` after a FAIL; QA hand-off to qa-tester on PASS)
 
 ---
 
 ## Director Gate Checks
 
-None. `/smoke-check` is a pre-QA utility skill. No director gates apply.
+None. `$smoke-check` is a pre-QA utility skill. No director gates apply.
 
 ---
 
@@ -58,7 +63,7 @@ None. `/smoke-check` is a pre-QA utility skill. No director gates apply.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -73,10 +78,10 @@ Fixture defaults.
   `tests/unit/` and `tests/integration/`
 - `production/qa/qa-plan-sprint-005.md` exists
 - The runner exits 0 with 12 tests, 12 passing
-- The developer says the build was launched this session and selects no FAILED item in Batch 1, Batch 2 or Batch 3
+- The developer says the build was launched this session and explicitly answers PASS for every check in Batch 1, Batch 2 and Batch 3
 - Every sprint story is COVERED or EXPECTED (no MISSING, no UNKNOWN)
 
-**Input:** `/smoke-check`
+**Input:** `$smoke-check`
 
 **Expected behavior:**
 1. Phase 1 reports environment: Godot, tests found, QA plan path
@@ -85,14 +90,15 @@ Fixture defaults.
    under `timeout 900`; the report says `commands.test` was the command run
 3. Exit 0 with tests found → automated tests PASS (12/12)
 4. Coverage scan: all stories COVERED or EXPECTED
-5. `AskUserQuestion` for Batch 1, Batch 2 and Batch 3 — nothing selected
+5. Single-select questions collect an explicit PASS for every required check
+   in Batch 1, Batch 2 and Batch 3
 6. Report names its checklist source (the QA plan's Smoke Test Scope)
 7. Asks "May I write this smoke check report to `production/qa/smoke-[date].md`?"
 8. Writes after approval; delivers "Smoke check passed cleanly. The build is ready for manual QA."
 
 **Assertions:**
 - [ ] Automated test runner is invoked via Bash, after the Godot import
-- [ ] `AskUserQuestion` is used for manual smoke check batches
+- [ ] `当前 Codex 可用的提问工具` is used for manual smoke check batches
 - [ ] "May I write" is asked before writing the report file
 - [ ] Report is written to `production/qa/smoke-[date].md`
 - [ ] Verdict is PASS
@@ -107,7 +113,7 @@ Fixture defaults.
 - The runner exits 100: 10 tests run, 8 passing, 2 failing —
   `test_health_clamp_at_zero`, `test_damage_calculation_negative`
 
-**Input:** `/smoke-check`
+**Input:** `$smoke-check`
 
 **Expected behavior:**
 1. Skill runs automated tests via Bash; exit 100 → FAIL
@@ -118,13 +124,13 @@ Fixture defaults.
 6. Gate is blocking (`qa.level: standard`, `testing.strict.config` unset → blocking)
 7. Delivers: "The smoke check failed. Do not hand off to QA until these failures
    are resolved: …" listing each failure, then "Fix the failures and run
-   `/smoke-check` again to re-gate before QA hand-off."
+   `$smoke-check` again to re-gate before QA hand-off."
 
 **Assertions:**
 - [ ] Failing test names are listed in the report
 - [ ] Verdict is FAIL
 - [ ] The blocking message directs the developer to fix failures before QA hand-off
-- [ ] `/smoke-check` re-run is suggested after fixing
+- [ ] `$smoke-check` re-run is suggested after fixing
 
 ---
 
@@ -133,26 +139,26 @@ Fixture defaults.
 **Fixture:**
 - As Case 1: runner exits 0 with 8/8 passing
 - One Logic story has no matching test file (MISSING coverage); no UNKNOWN rows
-- The developer selects no FAILED item in Batch 1, Batch 2 or Batch 3
+- The developer explicitly answers PASS for every check in Batch 1, Batch 2 and Batch 3
 
-**Input:** `/smoke-check`
+**Input:** `$smoke-check`
 
 **Expected behavior:**
 1. Automated tests PASS
 2. Coverage scan finds 1 MISSING entry for a Logic story
-3. `AskUserQuestion` is used for Batches 1–3 — nothing selected
+3. Single-select questions collect an explicit PASS for every required check in Batches 1–3
 4. Report shows automated tests PASS, manual checks PASS, and the MISSING entry
    under "Missing Test Evidence" with its expected test path
 5. Verdict is PASS WITH WARNINGS; the message says the build is ready for manual
    QA and lists the MISSING entry as an advisory item to resolve before
-   `/story-done` on the affected story
+   `$story-done` on the affected story
 6. Asks to write the report; writes after approval
 
 **Assertions:**
-- [ ] `AskUserQuestion` is used for manual smoke check batches (not inline text prompts)
+- [ ] `当前 Codex 可用的提问工具` is used for manual smoke check batches (or explicit plain-text answers when the tool is unavailable)
 - [ ] MISSING test coverage entry appears in the report
 - [ ] Verdict is PASS WITH WARNINGS (not PASS, not FAIL)
-- [ ] Advisory note says the MISSING entry must be resolved before `/story-done`
+- [ ] Advisory note says the MISSING entry must be resolved before `$story-done`
 - [ ] Report file is written to `production/qa/smoke-[date].md`
 
 ---
@@ -162,22 +168,22 @@ Fixture defaults.
 **Fixture:**
 - `project.yaml` sets `modes.rigor: standard` (so `qa.level` resolves to `standard`)
 - Engine is Godot; `tests/unit/` and `tests/integration/` exist but hold only
-  the `.gdignore_placeholder` files `/test-setup` creates
+  the `.gdignore_placeholder` files `$test-setup` creates
 - No `tests/smoke/` directory
 
-**Input:** `/smoke-check`
+**Input:** `$smoke-check`
 
 **Expected behavior:**
 1. Phase 1 counts game test files, not directories — none are found
 2. Skill delivers: "Smoke check: **NOT ASSESSED — no game tests found** under
-   [the test root] or `tests/smoke/`. Run `/test-setup` to scaffold the testing
+   [the test root] or `tests/smoke/`. Run `$test-setup` to scaffold the testing
    infrastructure, or point me at where tests live."
 3. Skill stops — no automated run, no manual batches, no report written
 
 **Assertions:**
 - [ ] The presence of `tests/` and its subdirectories is not treated as tests existing
 - [ ] Verdict is NOT ASSESSED — the skill does not stop without a verdict
-- [ ] `/test-setup` is suggested as the remediation step
+- [ ] `$test-setup` is suggested as the remediation step
 - [ ] No further phases run and no report file is written
 
 ---
@@ -190,7 +196,7 @@ Fixture defaults.
 - `commands.smoke` is `godot --headless --quit-after 5`; it exits 0 with no `SCRIPT ERROR` line
 - The user says the build was launched this session and confirms every Batch 1, Batch 2 and Batch 3 check
 
-**Input:** `/smoke-check`
+**Input:** `$smoke-check`
 
 **Expected behavior:**
 1. Phase 1 finds no game test files and, at `qa.level: minimal`, records the automated row as `WAIVED — qa.level: minimal, no game tests`
@@ -206,7 +212,7 @@ Fixture defaults.
 - [ ] Batch 1 and Batch 2 still run — PASS is never given without them
 - [ ] Verdict is PASS and the report's Automated Tests row reads WAIVED
 - [ ] A Batch 1 or Batch 2 check that could not be executed (no build) makes the verdict NOT ASSESSED, as at any level
-- [ ] Variant — the user answers that the build was not launched this session: Batches 2 and 3 are not asked (the skip is said), the Batch 1 checks read `NOT RUN — build not launched this session`, and the verdict is NOT ASSESSED — never PASS from an empty failure list
+- [ ] Variant — the user answers that the build was not launched this session: Batches 2 and 3 are not asked (the skip is said), the Batch 1 checks read `NOT TESTED — build not launched this session`, and the verdict is NOT ASSESSED — unexecuted checks are NOT TESTED and cannot establish PASS
 - [ ] Variant — `commands.smoke` prints `SCRIPT ERROR` (Godot's boot check exits 0 on it): the build check is FAIL and so is the verdict
 
 ---
@@ -216,13 +222,13 @@ Fixture defaults.
 **Fixture:**
 - Valid test setup, automated tests pass, manual smoke checks confirmed
 
-**Input:** `/smoke-check`
+**Input:** `$smoke-check`
 
 **Expected behavior:**
 1. Skill runs all phases and produces a verdict
 2. No director agents are spawned at any point
 3. No gate IDs (CD-*, TD-*, AD-*, PR-*) appear in output
-4. No `/gate-check` is invoked
+4. No `$gate-check` is invoked
 
 **Assertions:**
 - [ ] No director gate is invoked
@@ -234,13 +240,13 @@ Fixture defaults.
 ### Case 6: gdUnit4 Lookalikes — exit 0 over zero tests, and exit 101
 
 **Fixture:**
-- As Case 1, with every story COVERED or EXPECTED and nothing selected in
-  Batch 1, Batch 2 or Batch 3
+- As Case 1, with every story COVERED or EXPECTED and an explicit PASS for
+  every required check in Batch 1, Batch 2 and Batch 3
 - Run A: the suites under `tests/unit/` declare no test functions; the runner
   prints `No test cases found` and exits 0
 - Run B: the runner exits 101 — 12 tests, 12 passing, 2 orphan nodes leaked
 
-**Input:** `/smoke-check`
+**Input:** `$smoke-check`
 
 **Expected behavior:**
 1. Run A: exit 0 is not read as a pass — the automated tests are
@@ -263,7 +269,7 @@ Fixture defaults.
 - As Case 2 (`qa.level: standard`, `testing.strict` unset)
 - The runner hangs; `timeout 900` ends it with exit 124 and no summary printed
 
-**Input:** `/smoke-check`
+**Input:** `$smoke-check`
 
 **Expected behavior:**
 1. Exit 124 is a gate FAILURE, never a pass — the run did not complete and
@@ -282,9 +288,10 @@ Fixture defaults.
 
 **Fixture:**
 - As Case 1: runner exits 0 with 12/12 passing, no MISSING or UNKNOWN rows
-- In Batch 3 the developer selects only "Performance not checked this session"
+- In Batch 3 the developer explicitly answers `performance=NOT TESTED`;
+  `data_save_load=PASS` and every other required check is explicitly PASS
 
-**Input:** `/smoke-check`
+**Input:** `$smoke-check`
 
 **Expected behavior:**
 1. Batches 1 and 2 pass
@@ -302,11 +309,11 @@ Fixture defaults.
 
 **Fixture:**
 - `engine.name: Unity`; `com.unity.test-framework` is in `Packages/manifest.json`
-- `commands.test` is the Edit Mode command `/setup-engine` writes
+- `commands.test` is the Edit Mode command `$setup-engine` writes
 - `Assets/Tests/EditMode/` and `Assets/Tests/PlayMode/` both hold test files
 - Edit Mode exits 0 with 8/8 passing; Play Mode exits 2 with 1 of 3 failing
 
-**Input:** `/smoke-check`
+**Input:** `$smoke-check`
 
 **Expected behavior:**
 1. The Edit Mode run deletes `test-results/editmode.xml` first, then runs
@@ -328,20 +335,20 @@ Fixture defaults.
 
 **Fixture:**
 - As Case 1: runner exits 0 with 12/12 passing; the developer says the build was
-  launched this session and selects no FAILED item in Batch 1 or Batch 2
+  launched this session and explicitly answers PASS for every check in Batch 1 and Batch 2
 - One Logic story in the sprint has no matching test file (it would be MISSING
   if scanned)
 - The sprint plan and QA plan exist
 
-**Input:** `/smoke-check quick`
+**Input:** `$smoke-check quick`
 
 **Expected behavior:**
 1. Phases 1 and 2 run as normal; the automated tests PASS (12/12)
 2. Phase 3 is skipped and says so: "Coverage scan skipped — run
-   `/smoke-check sprint` for full coverage analysis."
-3. `AskUserQuestion` is used for Batch 1 and Batch 2 only; Batch 3 is not asked
+   `$smoke-check sprint` for full coverage analysis."
+3. `当前 Codex 可用的提问工具` is used for Batch 1 and Batch 2 only; Batch 3 is not asked
 4. The report's Argument line reads `quick`, and its Test Coverage section reads
-   "Coverage: not checked (quick run) — run `/smoke-check sprint` before
+   "Coverage: not checked (quick run) — run `$smoke-check sprint` before
    hand-off." in place of story rows — the scan was skipped, not passed
 5. The unscanned Logic story is not reported as MISSING, no coverage row is
    invented for it, and Missing Test Evidence reads "Not checked (quick run).",
@@ -366,13 +373,14 @@ Fixture defaults.
 
 **Fixture:**
 - As Case 1: runner exits 0 with 12/12 passing; the developer says the build was
-  launched this session and selects no FAILED item in Batches 1, 2 or 3;
+  launched this session and explicitly answers PASS for every check in Batches 1, 2 and 3;
   every story COVERED or EXPECTED
-- Console batch: the developer selects "UI outside TV safe zone / text clipped —
-  FAILED" and describes the clipped text on the pause menu
-- PC and mobile batches (variants below): nothing selected
+- Console batch: the developer explicitly answers FAIL for the TV safe zone /
+  text clipping check and describes clipped text on the pause menu; all other
+  required console checks have explicit PASS answers
+- PC and mobile batches (variants below): every required check has an explicit PASS
 
-**Input:** `/smoke-check sprint --platform console`
+**Input:** `$smoke-check sprint --platform console`
 
 **Expected behavior:**
 1. Phases 1–3 run as in Case 1
@@ -392,7 +400,7 @@ Fixture defaults.
 - [ ] The overall verdict is FAIL, driven by the console check alone
 - [ ] No PC or mobile batch is asked and no PC or Mobile row appears
 - [ ] The user's description of the failure is recorded in the report
-- [ ] Variant `--platform all`, nothing selected in any platform batch: the PC, console and mobile batches are all asked, the table has three rows each PASS, and the verdict is PASS
+- [ ] Variant `--platform all`, every required platform check explicitly PASS: the PC, console and mobile batches are all asked, the table has three rows each PASS, and the verdict is PASS
 - [ ] Variant `quick --platform pc`: Phase 3 and Batch 3 are skipped as in Case 10, the PC batch is still asked, and the table has a PC row
 
 ---
@@ -400,17 +408,17 @@ Fixture defaults.
 ### Case 12: Phase files — each `references/` file is read before its phase, and again after compaction
 
 **Fixture:**
-- As Case 1 (valid setup, 12/12 passing, nothing selected in any batch)
+- As Case 1 (valid setup, 12/12 passing, every required check explicitly PASS)
 - The conversation is compacted during Phase 3, after the test run finished and
   before the coverage scan's results are used
 
-**Input:** `/smoke-check`
+**Input:** `$smoke-check`
 
 **Expected behavior:**
 1. `references/1-detect-setup.md` is read before the Phase 1 work, and likewise
    `references/2-run-tests.md` before the test runner is invoked,
    `references/3-coverage.md` before the story list is drawn,
-   `references/4-manual-checks.md` before the first `AskUserQuestion`,
+   `references/4-manual-checks.md` before the first `当前 Codex 可用的提问工具`,
    `references/5-report.md` before the report is assembled and
    `references/6-write-gate.md` before "May I write" is asked
 2. The reads happen phase by phase, in order — each phase's steps come from its
@@ -422,23 +430,83 @@ Fixture defaults.
 
 **Assertions:**
 - [ ] Six Read calls on `references/1-…` through `6-…` appear in the transcript, one per phase, in phase order
-- [ ] Each file is read before the first action of its own phase (the runner for 2, the story scan for 3, `AskUserQuestion` for 4, the report for 5, the write question for 6)
+- [ ] Each file is read before the first action of its own phase (the runner for 2, the story scan for 3, `当前 Codex 可用的提问工具` for 4, the report for 5, the write question for 6)
 - [ ] `references/3-coverage.md` is read a second time after the compaction, before the coverage work continues
 - [ ] No other phase's file is re-read after the compaction
 - [ ] The reads change none of Case 1's results (Verdict PASS)
 
 ---
 
+### Case 16: Dismissed or partially answered manual checks
+
+**Fixture:**
+- Automated tests pass and the current build is launched.
+- In single-select manual questions, `core_launch=PASS`, `core_new_game=FAIL`,
+  `core_menu=NOT TESTED`; `core_navigation` is dismissed without an answer.
+- The user describes the new-session failure. Other offered checks pass.
+
+**Input:** `$smoke-check sprint`
+
+**Expected behavior:**
+1. The report retains each distinct result, including `core_navigation=UNANSWERED`.
+2. The known new-session failure makes the overall verdict FAIL.
+3. Variant: change `core_new_game` to PASS; missing and untested results now make
+   the verdict NOT ASSESSED, never PASS or PASS WITH WARNINGS.
+4. Without the tool, ask for explicit check-ID/result pairs in plain text and wait.
+
+**Assertions:**
+- [ ] A dismissed question does not count as a pass or as an explicit skip.
+- [ ] NOT TESTED and UNANSWERED appear in the report and prevent a pass.
+- [ ] Known FAIL outranks NOT ASSESSED.
+- [ ] A free-text N/A requires a scope reason; a blank is never N/A.
+- [ ] With `request_user_input_async`, use string options under `title`; its
+      submission receipt remains WAITING until the later user answers. A receipt
+      cannot count as PASS, NOT TESTED, or an answered question.
+
+---
+
+### Case 17: Batch 3 and platform failures outrank missing evidence
+
+**Fixture:**
+- Valid setup with automated tests passing 12/12.
+- One Logic story has MISSING test evidence; all other coverage rows are COVERED.
+- Every required manual/platform result is explicitly PASS except the check
+  under test. Exercise each variant separately:
+  - `performance=FAIL`: frame-rate hitches were observed.
+  - `data_save_load=FAIL`: loading lost current progress.
+  - Console safe-zone check FAIL: pause-menu text was clipped.
+
+**Input:** `$smoke-check sprint --platform console`
+
+**Expected behavior:**
+1. Retain the failing check and its observed symptom; ask for details as needed.
+2. Each variant returns overall FAIL despite the MISSING evidence warning.
+3. The platform-failure variant records Console FAIL in the platform table.
+4. Variant: replace the failing result with NOT TESTED or UNANSWERED and leave
+   every other required check explicitly PASS. Return NOT ASSESSED, never a pass.
+5. If that unresolved check is on the platform, increment Not Assessed and set
+   Console NOT ASSESSED. With both a platform FAIL and an unresolved platform
+   check, retain both counts and return platform/overall FAIL.
+
+**Assertions:**
+- [ ] Performance, save/load and platform failures each trigger FAIL on their own.
+- [ ] MISSING evidence never turns an observed failure into PASS WITH WARNINGS.
+- [ ] NOT TESTED/UNANSWERED prevents PASS and PASS WITH WARNINGS.
+- [ ] Platform precedence is FAIL > NOT ASSESSED > PASS; incomplete checks remain
+      counted even when a stronger failure determines the verdict.
+
+---
+
 ## Protocol Compliance
 
-- [ ] Uses `AskUserQuestion` for all manual smoke check batches (Batch 1, Batch 2, Batch 3), and Batch 1 asks whether the build was launched this session; "not launched" yields NOT ASSESSED
+- [ ] Uses `当前 Codex 可用的提问工具` for all manual smoke check batches (Batch 1, Batch 2, Batch 3), and Batch 1 asks whether the build was launched this session; "not launched" yields NOT ASSESSED
 - [ ] Resolves the editor executable from `commands.test`, then `engine.path`, then `PATH` before reporting the runner unavailable; a bare `godot` that does not resolve is never read as "no engine installed"
 - [ ] Never edits `project.yaml`: a `commands.test` missing flags or using a relative path is adjusted for the run and reported to the user
 - [ ] Runs automated tests via Bash before asking any manual questions
 - [ ] Asks "May I write" before creating the report file — never writes without approval
 - [ ] Verdict vocabulary is PASS / PASS WITH WARNINGS / NOT ASSESSED / FAIL — no other verdicts
-- [ ] FAIL is triggered by automated test failures, a suite that did not complete (timeout, compile/parse/build error, no results file), or Batch 1/Batch 2 FAIL responses
-- [ ] PASS WITH WARNINGS is triggered by MISSING test coverage, a runner warning on a passing suite (gdUnit4 101), or a confirmed NOT RUN — with no critical failures
+- [ ] FAIL is triggered by automated test failures, a suite that did not complete (timeout, compile/parse/build error, no results file), or any required manual/platform FAIL, including Batch 3 save/load and performance
+- [ ] PASS WITH WARNINGS requires all required manual and platform checks PASS or justified N/A, and a warning such as MISSING test coverage, a passing-suite runner warning (gdUnit4 101), or a confirmed NOT RUN; a FAIL or unassessed check prevents it
 - [ ] Unconfirmed NOT RUN (runner not available) yields NOT ASSESSED — never FAIL, never a pass verdict
 - [ ] A run over zero tests, a runner that could not run, and an unconfirmed `PlayMode: NOT RUN` yield NOT ASSESSED
 - [ ] Does not invoke director gates at any point

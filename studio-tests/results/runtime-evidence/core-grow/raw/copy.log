@@ -1,0 +1,25 @@
+one_shot	prototypes/dusk-fish
+guard	node	pass	v24.14.0	ok	^22.12 || ^24 || >=26
+guard	engine	pass	unset
+guard	root	pass	not grown
+guard	git	pass
+guard	clean	pass	0	-
+commit	5237684
+tag	one-shot/dusk-fish	5237684
+CREATED	package.json
+CREATED	package-lock.json
+CREATED	vite.config.ts
+CREATED	tsconfig.json
+CREATED	playwright.config.ts
+CREATED	src/hook.ts
+CREATED	.gitignore
+CREATED	index.html
+CREATED	src/main.js
+CREATED	src/config.js
+CREATED	src/dev/tune.ts
+config	27	26
+CREATED	data/config.json
+CREATED	data/config-notes.md
+CREATED	assets/provenance.yaml
+CREATED	design/feel-log.md
+NEEDS	npm_install	npm ci

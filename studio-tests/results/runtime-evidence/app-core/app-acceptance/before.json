@@ -1,0 +1,4594 @@
+{
+  "head": "40e156784f9c5020b9232cec2a0a95951e43cc32",
+  "source": [
+    {
+      "path": "assets/provenance.yaml",
+      "sha256": "707ceef654446adb3efe51c5493417ccb1ca6ec2ef8e41241279a782d8623a24",
+      "bytes": 838
+    },
+    {
+      "path": "brief.md",
+      "sha256": "f5f5124329e54203ab5505ffa8bb1c22d671e8625fe798c56ba7673ce8d67b38",
+      "bytes": 4966
+    },
+    {
+      "path": "config.js",
+      "sha256": "a9e27955b0385ad8d921831ea5988fa8f499dfc9911c1bb735f6bc8c878f3275",
+      "bytes": 4353
+    },
+    {
+      "path": "evidence/brief-words.tsv",
+      "sha256": "79d4b666ffb5591413017f41feef1d1002bbd58d973b30f5ef35029590d0ba77",
+      "bytes": 475
+    },
+    {
+      "path": "evidence/changes.tsv",
+      "sha256": "b687d213ff1f9abd8a57283728a43534611b00aecf3fe9a43a4aa8c567fd3573",
+      "bytes": 211
+    },
+    {
+      "path": "evidence/check-run.yaml",
+      "sha256": "0e9fbd602e9abf6a2773d68fca1c257aab72d2699276a69cd0c9c6744ed4be33",
+      "bytes": 2959
+    },
+    {
+      "path": "evidence/checklist.tsv",
+      "sha256": "5304c0d746b88c4a2b7d45f99185b2a6968b663920d77af2a171a74c3af41e5a",
+      "bytes": 1350
+    },
+    {
+      "path": "evidence/figures.png",
+      "sha256": "730311579d1249bee6ccb26cb9bf7ac98bfcab8d10a7e813fca0ba5204d9de64",
+      "bytes": 40112
+    },
+    {
+      "path": "evidence/handover.md",
+      "sha256": "26251c6450242ec8652c846c2a134087e422e0a3eeb4f19d3783c015692be6ed",
+      "bytes": 1633
+    },
+    {
+      "path": "evidence/iteration-1-small.png",
+      "sha256": "4fe463f98dc0ebc62c703c3832145f41265e884627c461f7e6471d526a7e7b31",
+      "bytes": 50583
+    },
+    {
+      "path": "evidence/iteration-1-timeout.png",
+      "sha256": "c81dcaa964c7ba199c3f381ccda0437843dc4fd5c8c2fa86218a6d1bf147e97f",
+      "bytes": 93868
+    },
+    {
+      "path": "evidence/iteration-1-timeout.tsv",
+      "sha256": "8c80cf0ec77bb1d6d8b406d6a99c913a0f63cae00bd8a828c199476c00f46611",
+      "bytes": 2810
+    },
+    {
+      "path": "evidence/iteration-1-win.png",
+      "sha256": "fc064e383d1efd110aa1bf8f3acd9c99a4df9d936ff3260f5ddab859150b2b29",
+      "bytes": 97967
+    },
+    {
+      "path": "evidence/iteration-1-win.tsv",
+      "sha256": "6216aeea7d22171914f2922bc6c12826609818888f0fdd515c67323a84d6249c",
+      "bytes": 2961
+    },
+    {
+      "path": "evidence/loss-retry.png",
+      "sha256": "509f91afad862e0e42cd70d6af733ec057863c8463d1c6d4a6ea73b316654d24",
+      "bytes": 88771
+    },
+    {
+      "path": "evidence/loss-retry.tsv",
+      "sha256": "bfd5f0aa7b3fd221c1342390ab7e0cd6001fa0ee76c78494d3adf12140d4fb8f",
+      "bytes": 2676
+    },
+    {
+      "path": "evidence/nearest-game.txt",
+      "sha256": "882b546db5d2a077969e9dabc5c77e3d796c61e548c07bc9692cac08a96e4016",
+      "bytes": 210
+    },
+    {
+      "path": "evidence/pause.png",
+      "sha256": "d24afc348c7b6dce4687b31b1f2bcabb5fff87e475a77efb05957f0789c2e71b",
+      "bytes": 92807
+    },
+    {
+      "path": "evidence/pause.tsv",
+      "sha256": "bf7028a7471cc840e6068ab777082189d435864568945ad443eefb90cd66bf8e",
+      "bytes": 2776
+    },
+    {
+      "path": "evidence/play.png",
+      "sha256": "df364848f462811a2d618c301d392ded96fdad51a439512906a032bb8c21085e",
+      "bytes": 89442
+    },
+    {
+      "path": "evidence/replay.png",
+      "sha256": "d24afc348c7b6dce4687b31b1f2bcabb5fff87e475a77efb05957f0789c2e71b",
+      "bytes": 92807
+    },
+    {
+      "path": "evidence/replay.tsv",
+      "sha256": "8b5c8bda034515a33e9795c7c86d7dcd98b243d192c6ee92e9aa895839b522a2",
+      "bytes": 2777
+    },
+    {
+      "path": "evidence/resume.png",
+      "sha256": "0e28b00bc4c67919d5e3c7c3401b470cfc27fac20891f6bedbd83118a6bb6926",
+      "bytes": 89110
+    },
+    {
+      "path": "evidence/resume.tsv",
+      "sha256": "3775fad238740ee9e866d4b7978bb1e2e1d546a05386d49b3030909ca807dfc4",
+      "bytes": 2645
+    },
+    {
+      "path": "evidence/self-check.tsv",
+      "sha256": "54430e0bf68f55c3fb104a41477aaa03f197f270e590dbb07aba638699f8bbdb",
+      "bytes": 4478
+    },
+    {
+      "path": "evidence/win-retry.png",
+      "sha256": "dbf9c4a0d416f8353441dbc3c60b284587c6c94421cc5a872461fb7b9d5600be",
+      "bytes": 89041
+    },
+    {
+      "path": "evidence/win-retry.tsv",
+      "sha256": "732077d845c7264b95a68f70b444d8abdcce27b9dd3abaf5ef8d36db489b9c60",
+      "bytes": 2725
+    },
+    {
+      "path": "evidence/win-run.tsv",
+      "sha256": "eb71f82fe4d66dcebd5e55d2fe3b5373b2308c9750e66f40ad5635de105820c7",
+      "bytes": 2947
+    },
+    {
+      "path": "evidence/win.png",
+      "sha256": "7c729894213f4d5dd79ee7fca77190ea5e16bdebffbe95b004b680100ef20a30",
+      "bytes": 97973
+    },
+    {
+      "path": "feel-log.md",
+      "sha256": "3746da24e36a28d04db6247143ce73d7783284d9b6754d564fa86a6d35dd2391",
+      "bytes": 177
+    },
+    {
+      "path": "index.html",
+      "sha256": "ade2ee9e16c6bf16cca479f23ebe84b79730cdfe5b31a4521aa80335adf54eef",
+      "bytes": 12685
+    }
+  ],
+  "prototype": [
+    {
+      "path": "assets/provenance.yaml",
+      "sha256": "707ceef654446adb3efe51c5493417ccb1ca6ec2ef8e41241279a782d8623a24",
+      "bytes": 838
+    },
+    {
+      "path": "brief.md",
+      "sha256": "f2f4d486544fa14dc31835881137fdd1fcce554c7a899c045e7f8edb37be4e9b",
+      "bytes": 4549
+    },
+    {
+      "path": "brief.source.md",
+      "sha256": "f5f5124329e54203ab5505ffa8bb1c22d671e8625fe798c56ba7673ce8d67b38",
+      "bytes": 4966
+    },
+    {
+      "path": "config.js",
+      "sha256": "a9e27955b0385ad8d921831ea5988fa8f499dfc9911c1bb735f6bc8c878f3275",
+      "bytes": 4353
+    },
+    {
+      "path": "evidence/brief-words.tsv",
+      "sha256": "79d4b666ffb5591413017f41feef1d1002bbd58d973b30f5ef35029590d0ba77",
+      "bytes": 475
+    },
+    {
+      "path": "evidence/changes.tsv",
+      "sha256": "b687d213ff1f9abd8a57283728a43534611b00aecf3fe9a43a4aa8c567fd3573",
+      "bytes": 211
+    },
+    {
+      "path": "evidence/check-run.yaml",
+      "sha256": "0e9fbd602e9abf6a2773d68fca1c257aab72d2699276a69cd0c9c6744ed4be33",
+      "bytes": 2959
+    },
+    {
+      "path": "evidence/checklist.tsv",
+      "sha256": "5304c0d746b88c4a2b7d45f99185b2a6968b663920d77af2a171a74c3af41e5a",
+      "bytes": 1350
+    },
+    {
+      "path": "evidence/figures.png",
+      "sha256": "730311579d1249bee6ccb26cb9bf7ac98bfcab8d10a7e813fca0ba5204d9de64",
+      "bytes": 40112
+    },
+    {
+      "path": "evidence/handover.md",
+      "sha256": "26251c6450242ec8652c846c2a134087e422e0a3eeb4f19d3783c015692be6ed",
+      "bytes": 1633
+    },
+    {
+      "path": "evidence/iteration-1-small.png",
+      "sha256": "4fe463f98dc0ebc62c703c3832145f41265e884627c461f7e6471d526a7e7b31",
+      "bytes": 50583
+    },
+    {
+      "path": "evidence/iteration-1-timeout.png",
+      "sha256": "c81dcaa964c7ba199c3f381ccda0437843dc4fd5c8c2fa86218a6d1bf147e97f",
+      "bytes": 93868
+    },
+    {
+      "path": "evidence/iteration-1-timeout.tsv",
+      "sha256": "8c80cf0ec77bb1d6d8b406d6a99c913a0f63cae00bd8a828c199476c00f46611",
+      "bytes": 2810
+    },
+    {
+      "path": "evidence/iteration-1-win.png",
+      "sha256": "fc064e383d1efd110aa1bf8f3acd9c99a4df9d936ff3260f5ddab859150b2b29",
+      "bytes": 97967
+    },
+    {
+      "path": "evidence/iteration-1-win.tsv",
+      "sha256": "6216aeea7d22171914f2922bc6c12826609818888f0fdd515c67323a84d6249c",
+      "bytes": 2961
+    },
+    {
+      "path": "evidence/loss-retry.png",
+      "sha256": "509f91afad862e0e42cd70d6af733ec057863c8463d1c6d4a6ea73b316654d24",
+      "bytes": 88771
+    },
+    {
+      "path": "evidence/loss-retry.tsv",
+      "sha256": "bfd5f0aa7b3fd221c1342390ab7e0cd6001fa0ee76c78494d3adf12140d4fb8f",
+      "bytes": 2676
+    },
+    {
+      "path": "evidence/nearest-game.txt",
+      "sha256": "882b546db5d2a077969e9dabc5c77e3d796c61e548c07bc9692cac08a96e4016",
+      "bytes": 210
+    },
+    {
+      "path": "evidence/pause.png",
+      "sha256": "d24afc348c7b6dce4687b31b1f2bcabb5fff87e475a77efb05957f0789c2e71b",
+      "bytes": 92807
+    },
+    {
+      "path": "evidence/pause.tsv",
+      "sha256": "bf7028a7471cc840e6068ab777082189d435864568945ad443eefb90cd66bf8e",
+      "bytes": 2776
+    },
+    {
+      "path": "evidence/play.png",
+      "sha256": "df364848f462811a2d618c301d392ded96fdad51a439512906a032bb8c21085e",
+      "bytes": 89442
+    },
+    {
+      "path": "evidence/replay.png",
+      "sha256": "d24afc348c7b6dce4687b31b1f2bcabb5fff87e475a77efb05957f0789c2e71b",
+      "bytes": 92807
+    },
+    {
+      "path": "evidence/replay.tsv",
+      "sha256": "8b5c8bda034515a33e9795c7c86d7dcd98b243d192c6ee92e9aa895839b522a2",
+      "bytes": 2777
+    },
+    {
+      "path": "evidence/resume.png",
+      "sha256": "0e28b00bc4c67919d5e3c7c3401b470cfc27fac20891f6bedbd83118a6bb6926",
+      "bytes": 89110
+    },
+    {
+      "path": "evidence/resume.tsv",
+      "sha256": "3775fad238740ee9e866d4b7978bb1e2e1d546a05386d49b3030909ca807dfc4",
+      "bytes": 2645
+    },
+    {
+      "path": "evidence/self-check.tsv",
+      "sha256": "54430e0bf68f55c3fb104a41477aaa03f197f270e590dbb07aba638699f8bbdb",
+      "bytes": 4478
+    },
+    {
+      "path": "evidence/win-retry.png",
+      "sha256": "dbf9c4a0d416f8353441dbc3c60b284587c6c94421cc5a872461fb7b9d5600be",
+      "bytes": 89041
+    },
+    {
+      "path": "evidence/win-retry.tsv",
+      "sha256": "732077d845c7264b95a68f70b444d8abdcce27b9dd3abaf5ef8d36db489b9c60",
+      "bytes": 2725
+    },
+    {
+      "path": "evidence/win-run.tsv",
+      "sha256": "eb71f82fe4d66dcebd5e55d2fe3b5373b2308c9750e66f40ad5635de105820c7",
+      "bytes": 2947
+    },
+    {
+      "path": "evidence/win.png",
+      "sha256": "7c729894213f4d5dd79ee7fca77190ea5e16bdebffbe95b004b680100ef20a30",
+      "bytes": 97973
+    },
+    {
+      "path": "feel-log.md",
+      "sha256": "3746da24e36a28d04db6247143ce73d7783284d9b6754d564fa86a6d35dd2391",
+      "bytes": 177
+    },
+    {
+      "path": "index.html",
+      "sha256": "ade2ee9e16c6bf16cca479f23ebe84b79730cdfe5b31a4521aa80335adf54eef",
+      "bytes": 12685
+    }
+  ],
+  "protected": [
+    {
+      "path": ".agents/docs/agent-roster.md",
+      "sha256": "47a83dd5c96eb41654e655c79c050b746a96fe37594fd6f4eabd54c13e830249",
+      "bytes": 6097
+    },
+    {
+      "path": ".agents/docs/agent-teams.md",
+      "sha256": "65262f9e9ad246d64e245d7f39b07c29e8ed69f48c249eecd60085b969302e6e",
+      "bytes": 716
+    },
+    {
+      "path": ".agents/docs/automation-modes.md",
+      "sha256": "93342474bd115c825c6ebcb0ede95357c39b883d753baf7333a97132aac7fa5e",
+      "bytes": 3145
+    },
+    {
+      "path": ".agents/docs/code-root-resolution.md",
+      "sha256": "692f09278692aa2f012a5cb25da8a47722d2bc58540438f97417e63ef7459e51",
+      "bytes": 4829
+    },
+    {
+      "path": ".agents/docs/codex-runtime.md",
+      "sha256": "5a0274ebdcb3c26fbeb1468abd426c83ff422cd3003b243a80ec2a5be216d9ee",
+      "bytes": 4367
+    },
+    {
+      "path": ".agents/docs/coding-standards.md",
+      "sha256": "962e8f98987176089ba0ed9888a06776583da0b753c20333812a1f300e7bd6ce",
+      "bytes": 5750
+    },
+    {
+      "path": ".agents/docs/config-resolution.md",
+      "sha256": "793354adfba9e79e13794f018b96d69102dfa6b90887c31403df04d7d84222fd",
+      "bytes": 4307
+    },
+    {
+      "path": ".agents/docs/context-management.md",
+      "sha256": "cc9c490a5be4670d5e036ee333c0cdd1207108d8b1019862f197d7b017289559",
+      "bytes": 7973
+    },
+    {
+      "path": ".agents/docs/coordination-rules.md",
+      "sha256": "8efc43e67dd4aef6e86378e16ea497352626a033ad13137fc6ea879b093c4122",
+      "bytes": 1633
+    },
+    {
+      "path": ".agents/docs/director-gates.md",
+      "sha256": "85a9be033e0de18675f7987c71b6e86fd32fc22a3612466256d5673f978a15cc",
+      "bytes": 11208
+    },
+    {
+      "path": ".agents/docs/director-gates/ad-art-bible.md",
+      "sha256": "0a038c93036a850f875ffae830dda9545e09278ad01ea890e9d8251e3dfb1ec7",
+      "bytes": 1621
+    },
+    {
+      "path": ".agents/docs/director-gates/ad-concept-visual.md",
+      "sha256": "cc27b36bf0b0d4592c39873f18d04bfe8ca92fabc0c2642887bbfe8389e6ec2c",
+      "bytes": 1564
+    },
+    {
+      "path": ".agents/docs/director-gates/ad-phase-gate.md",
+      "sha256": "34ff318b12e7f045fea40f21eed4491de1d2a5ac34312094b0b9a3b8c7ec3532",
+      "bytes": 2056
+    },
+    {
+      "path": ".agents/docs/director-gates/ad-visual.md",
+      "sha256": "09801e2ed6b23576fb7aa4f256ee30abf922386011a40ddaf61171a796e43205",
+      "bytes": 1088
+    },
+    {
+      "path": ".agents/docs/director-gates/cd-gdd-align.md",
+      "sha256": "2d4877923ab30b4aa92963ce6fbdfd4fdeb370ac73fb055df0212fbd45fad527",
+      "bytes": 1141
+    },
+    {
+      "path": ".agents/docs/director-gates/cd-narrative.md",
+      "sha256": "4c30524fa7f21b7c485080d83fded9a3ca60159792ee719d3be11cc510d72393",
+      "bytes": 1141
+    },
+    {
+      "path": ".agents/docs/director-gates/cd-phase-gate.md",
+      "sha256": "2c68ac7b86af57cb80a6a934a3de7e5738d56c8922c30ffa740150bed78ed4b6",
+      "bytes": 1559
+    },
+    {
+      "path": ".agents/docs/director-gates/cd-pillars.md",
+      "sha256": "bbc19c89a196bbdd4fb2bbb4f9c4dc7236f4fdf5880ab1c2a7ee4a1dc561bfa5",
+      "bytes": 1129
+    },
+    {
+      "path": ".agents/docs/director-gates/cd-playtest.md",
+      "sha256": "4d053937e8cb833a4f0481f0e79e76b027715cd56c2cdf880aeb24b55b9dee29",
+      "bytes": 1193
+    },
+    {
+      "path": ".agents/docs/director-gates/cd-systems.md",
+      "sha256": "1570cfc80912d7ac223bceabb26a29183e132d78bf6d6bed57c48e2d26fd5412",
+      "bytes": 1580
+    },
+    {
+      "path": ".agents/docs/director-gates/lp-code-review.md",
+      "sha256": "18bc3696ef4f5fab954648fa0e2909e25b7d471aea246941c1b0670e8490752a",
+      "bytes": 978
+    },
+    {
+      "path": ".agents/docs/director-gates/lp-feasibility.md",
+      "sha256": "2e1169482aee4d6c78283924fb15bf8536169f83c1172d1cb138355cc457be64",
+      "bytes": 1169
+    },
+    {
+      "path": ".agents/docs/director-gates/nd-consistency.md",
+      "sha256": "b2fcbfbf66a392d3c8fc2d89391b0f00e8ed02830a5e80a37c706d2739cb8bf7",
+      "bytes": 1045
+    },
+    {
+      "path": ".agents/docs/director-gates/pr-epic.md",
+      "sha256": "e387caffa56acc74fc0edec5b2952536b53fb023954310b510a2e2affc35488f",
+      "bytes": 1723
+    },
+    {
+      "path": ".agents/docs/director-gates/pr-milestone.md",
+      "sha256": "5cc688df81cda5385b3ea065d7c7f4b78d05dbab1ff1f524b1f61bbcb9bebaac",
+      "bytes": 1071
+    },
+    {
+      "path": ".agents/docs/director-gates/pr-phase-gate.md",
+      "sha256": "1f56810eb7b38fdbca758350e949b67a5bd072933f9c7b91d1d7409cbdb0db1f",
+      "bytes": 2026
+    },
+    {
+      "path": ".agents/docs/director-gates/pr-scope.md",
+      "sha256": "09641b9fd9d873bf8ec4f130534f6db7cc957e38c0b933ece470255987924851",
+      "bytes": 1189
+    },
+    {
+      "path": ".agents/docs/director-gates/pr-sprint.md",
+      "sha256": "229998747edc598196e1b1d59770425db310c48b367afd5da24424de9c45f584",
+      "bytes": 1098
+    },
+    {
+      "path": ".agents/docs/director-gates/ql-story-ready.md",
+      "sha256": "6edc8780170d0161fa4f0a96944433057cd0d4b481e7e8a660a3e290ed4fee84",
+      "bytes": 1436
+    },
+    {
+      "path": ".agents/docs/director-gates/ql-test-coverage.md",
+      "sha256": "00a53a7e780893f3307f7ca80164693e6cad5eedad4139ef30380e569657a712",
+      "bytes": 1079
+    },
+    {
+      "path": ".agents/docs/director-gates/td-adr.md",
+      "sha256": "86e7a2d5d9f8883ffd739af872732b292f6fb4f77f7b5ff03ac5790fec118e27",
+      "bytes": 1058
+    },
+    {
+      "path": ".agents/docs/director-gates/td-architecture.md",
+      "sha256": "7729f56c03fdcbdc66452a3002ebf9786ab1382e6a23bfbe79ab635431c246d8",
+      "bytes": 1202
+    },
+    {
+      "path": ".agents/docs/director-gates/td-change-impact.md",
+      "sha256": "62f309c78bd97e09d72a4ad01b18f278acdb7c49d2093fc543730991e9cae9a8",
+      "bytes": 1316
+    },
+    {
+      "path": ".agents/docs/director-gates/td-engine-risk.md",
+      "sha256": "de4c94217b9d7f7033ef9b02b4d6dfd4ceb98b4ed27aa532feccbae52ba04ca5",
+      "bytes": 1132
+    },
+    {
+      "path": ".agents/docs/director-gates/td-feasibility.md",
+      "sha256": "bea698694251d526f529b1cd573985d01ef0ba556cc0bade03d7ccb25eeab028",
+      "bytes": 1159
+    },
+    {
+      "path": ".agents/docs/director-gates/td-manifest.md",
+      "sha256": "06a6872dd067b7fd25372012f31ca57a9d1d99321cc8ab34fee5c5c749144d76",
+      "bytes": 1317
+    },
+    {
+      "path": ".agents/docs/director-gates/td-phase-gate.md",
+      "sha256": "259453c73b2b54b688630ea83c1d04a346562429b02718f5c524de81f78e14ff",
+      "bytes": 1940
+    },
+    {
+      "path": ".agents/docs/director-gates/td-system-boundary.md",
+      "sha256": "ebaf1b74da2d1e2d6b76f5c2d44480990fae93fbd84c6ffe9c0fbf6136946bbf",
+      "bytes": 1818
+    },
+    {
+      "path": ".agents/docs/directory-structure.md",
+      "sha256": "a9f2390fe6366a3ad54305d3efc7c02e0f0c3d4d637fa65c7528acbe2c3d6095",
+      "bytes": 3118
+    },
+    {
+      "path": ".agents/docs/effects-map.md",
+      "sha256": "4481451be0bce08c7433aa5290cf636f3b8eea1f83bfb09b08dc691570b5d196",
+      "bytes": 135022
+    },
+    {
+      "path": ".agents/docs/error-recovery-protocol.md",
+      "sha256": "5b151208cb8c8fd9d7b594eebd043d19a181e1755fd0c501de2cf9fe165374c2",
+      "bytes": 3412
+    },
+    {
+      "path": ".agents/docs/hooks-reference.md",
+      "sha256": "497c3d5efe8e5e940956a71128cd4ae40d9f06f5d5d1ffa07d2015e6c09eab1b",
+      "bytes": 1803
+    },
+    {
+      "path": ".agents/docs/hooks-reference/codex-events.md",
+      "sha256": "e4698ecc5ebccae8c0dae5e840ef1907993efccac94821aca03d1803c8412b09",
+      "bytes": 2629
+    },
+    {
+      "path": ".agents/docs/hooks-reference/hook-input-schemas.md",
+      "sha256": "58565e0a441ef8fa1ac5321789ebad59dc6916c6023ba2f8e8315923c324e061",
+      "bytes": 1143
+    },
+    {
+      "path": ".agents/docs/hooks-reference/post-merge-asset-validation.md",
+      "sha256": "6fa16298b7e97fed5b8fc482986ff298d618ef909c4f886b54c70f0d318dbe04",
+      "bytes": 1078
+    },
+    {
+      "path": ".agents/docs/hooks-reference/post-sprint-retrospective.md",
+      "sha256": "022cecf8189033ea3b1c3b9e7518ad26a89ea2791b7c91186300536497afd14a",
+      "bytes": 2153
+    },
+    {
+      "path": ".agents/docs/hooks-reference/pre-commit-code-quality.md",
+      "sha256": "a24f046acf5d2b2e788c70e45e432b42604933b3e5934487aa34dfd25e481c63",
+      "bytes": 2875
+    },
+    {
+      "path": ".agents/docs/hooks-reference/pre-commit-design-check.md",
+      "sha256": "6b1e955cf730fec7790e1f0e90c364f92903a58bf1cc9236f34256113235cb84",
+      "bytes": 2201
+    },
+    {
+      "path": ".agents/docs/hooks-reference/pre-push-test-gate.md",
+      "sha256": "d38d29a7267c3bd2eda3e3a5c2f7d8581ed8cb916e629ac0c59e47fb1d6b4d1a",
+      "bytes": 1941
+    },
+    {
+      "path": ".agents/docs/model-tiers.md",
+      "sha256": "c99251a5e1a3495cef3a6cd23d239609a67809f2f416c61ef51829559485e6e4",
+      "bytes": 752
+    },
+    {
+      "path": ".agents/docs/project-local-template.md",
+      "sha256": "a2dea6ffd9d8dfb172cefd4a08c3544bb074f2a00473b28bd468394015fb7c1e",
+      "bytes": 647
+    },
+    {
+      "path": ".agents/docs/quick-start.md",
+      "sha256": "547e5f6ab44a04f284b533870fbbcd0ff1c56fb127a5232bc91197ff3c446a26",
+      "bytes": 2551
+    },
+    {
+      "path": ".agents/docs/rule-routing.md",
+      "sha256": "5de1dbaf263eeac1a8c13ccabfce85699f6189e1449c3a22727834f718d3ac52",
+      "bytes": 683
+    },
+    {
+      "path": ".agents/docs/rules-reference.md",
+      "sha256": "df671321ac8ac1bed468b781e10535ebfceb115dc52aeb2d690f8711362fd723",
+      "bytes": 4412
+    },
+    {
+      "path": ".agents/docs/run-and-observe.md",
+      "sha256": "433bc3f2edee95a062564aaead59bffab332ca819495461e1039961665d19262",
+      "bytes": 16065
+    },
+    {
+      "path": ".agents/docs/settings-guidance.md",
+      "sha256": "950ea88208d32c79f520f53a12306dc7dde35278a34cff9564d30f26fda555ed",
+      "bytes": 6606
+    },
+    {
+      "path": ".agents/docs/settings-local-template.md",
+      "sha256": "8ac3da1abcb683bb4743301af130bce74a9d9579c8bbe809c5691cd0995fe617",
+      "bytes": 1036
+    },
+    {
+      "path": ".agents/docs/setup-requirements.md",
+      "sha256": "6a99e6be5939c2ca33fe7916c537353d700416c48d006ec376efacccda9dc64b",
+      "bytes": 2284
+    },
+    {
+      "path": ".agents/docs/share-link.md",
+      "sha256": "342db9b0c29cca23e2182ca5571038f9ed5e89a0ca9c2df1b4746efb86e269b7",
+      "bytes": 4352
+    },
+    {
+      "path": ".agents/docs/skills-reference.md",
+      "sha256": "8c7b52791cee358da308c3c28f3dc6ce18b1488db9a6d858f6d0f9cbd72b49b9",
+      "bytes": 9330
+    },
+    {
+      "path": ".agents/docs/technical-preferences.md",
+      "sha256": "268fec1347d0d4c00be540c82c804e695b3b7bb4c7243ddab8a35f291d55a371",
+      "bytes": 2789
+    },
+    {
+      "path": ".agents/docs/templates/accessibility-requirements.md",
+      "sha256": "be652bc2daae52564116e31520fc0fdf8dd8ef46f931e83dbcb26f8341e91734",
+      "bytes": 24310
+    },
+    {
+      "path": ".agents/docs/templates/adoption-plan.md",
+      "sha256": "da579d02cf699040fbaa0ff01b425dce062e1be2fbd352864604e7a1390915a2",
+      "bytes": 2253
+    },
+    {
+      "path": ".agents/docs/templates/adoption-summary.md",
+      "sha256": "880c31668a0d7bf6a19fb3e2a0d73b9e00941dedf40e8429642957357dbc09d2",
+      "bytes": 533
+    },
+    {
+      "path": ".agents/docs/templates/architecture-decision-record.md",
+      "sha256": "a9847f73f655a01d77e1ad95cdf8188c67fe7c6b061417224cfd5c5665a0caaf",
+      "bytes": 6595
+    },
+    {
+      "path": ".agents/docs/templates/architecture-doc-from-code.md",
+      "sha256": "5919f062be9ef57d9da5132f36b8c8ef53291cf8a8b34b7af43e521cd74897f2",
+      "bytes": 6494
+    },
+    {
+      "path": ".agents/docs/templates/architecture-traceability.md",
+      "sha256": "2a874c0873e4b311680f3ced4043a834cf674a3bf9b9228a84537d0509201721",
+      "bytes": 3396
+    },
+    {
+      "path": ".agents/docs/templates/art-bible.md",
+      "sha256": "b6e1d99c91819a1d79cd7ff6327bf2303071cea3206f9923166625e3fb1d3777",
+      "bytes": 2795
+    },
+    {
+      "path": ".agents/docs/templates/bug-closure-record.md",
+      "sha256": "a07cde04ca837053fe611171c81b88399f38ee95ceb3b476353f1147700febcb",
+      "bytes": 406
+    },
+    {
+      "path": ".agents/docs/templates/bug-report.md",
+      "sha256": "ed115a7509082066bb4e059dac21183b674c0251979c9ca43e1aa7a717e8fd83",
+      "bytes": 1638
+    },
+    {
+      "path": ".agents/docs/templates/certification-console.md",
+      "sha256": "f635142588ec4d53ed863f4e4032c35db56f465f3d74ded493d12d33d19a51af",
+      "bytes": 453
+    },
+    {
+      "path": ".agents/docs/templates/certification-itch.md",
+      "sha256": "bc1ffb11cc7f69bbb0ec7956d6a2a4c32baac10981c106705c6da7fffa8fa033",
+      "bytes": 298
+    },
+    {
+      "path": ".agents/docs/templates/certification-none.md",
+      "sha256": "705bbdb75a0d416a9b423bc887d667796f406aaec68a3776625e9b4392d4751f",
+      "bytes": 87
+    },
+    {
+      "path": ".agents/docs/templates/certification-steam.md",
+      "sha256": "f07458b6f77820c557bb6ba29ae031db2d5754c3aebe48a09011007e4c93f521",
+      "bytes": 381
+    },
+    {
+      "path": ".agents/docs/templates/certification-unknown.md",
+      "sha256": "e845aa4171a019e82c0322ac0137fc627b5d68f1a7159e2691cabc066cc1ecdc",
+      "bytes": 199
+    },
+    {
+      "path": ".agents/docs/templates/changelog-internal.md",
+      "sha256": "c49595e5fac70f0920f3753b6c3c315a9fa0c94e107444095b9a336e938c8210",
+      "bytes": 1052
+    },
+    {
+      "path": ".agents/docs/templates/changelog-template.md",
+      "sha256": "cc9a45f7b0dbede27fba78745c754f5fe29b7c90e4ea641a346191daba9457a1",
+      "bytes": 936
+    },
+    {
+      "path": ".agents/docs/templates/concept-doc-from-prototype.md",
+      "sha256": "2e120d0fc950c56adf290f410d055ec3336a577d1d641bab0d45d1da77ec808e",
+      "bytes": 8554
+    },
+    {
+      "path": ".agents/docs/templates/design-doc-from-implementation.md",
+      "sha256": "c0597e13ae4bc9fe4174f024ca9fe6b7697da91dc952a3a5a96f05914d86b8ab",
+      "bytes": 6373
+    },
+    {
+      "path": ".agents/docs/templates/difficulty-curve.md",
+      "sha256": "4aa7b30c66c2882110c3b1cd794594a52d8fd98666bf6c491921515993290279",
+      "bytes": 22588
+    },
+    {
+      "path": ".agents/docs/templates/economy-model.md",
+      "sha256": "22af6a9df657a17e8155a6130d04a8ce04c095e5dcb7ad5c2648449013b35a58",
+      "bytes": 4482
+    },
+    {
+      "path": ".agents/docs/templates/faction-design.md",
+      "sha256": "abe1d5720e68169e349156bbcb42db135ecca25bf1510dda5ddd1deb3980f257",
+      "bytes": 4653
+    },
+    {
+      "path": ".agents/docs/templates/game-brief.md",
+      "sha256": "e779e2e64f3736dfc9f1d2860ca18c59aa2838349596c146f0e23cd8be1931f8",
+      "bytes": 7068
+    },
+    {
+      "path": ".agents/docs/templates/game-concept.md",
+      "sha256": "cdb9e6792ee7d95c4427a2a73d8cab0213b44bc439e79ce0aae069b0f9e6e369",
+      "bytes": 12808
+    },
+    {
+      "path": ".agents/docs/templates/game-design-document.md",
+      "sha256": "5f57516a1d1994d9236a1fadc809462fbc55097c3f21a884293bc475b62ab16b",
+      "bytes": 1197
+    },
+    {
+      "path": ".agents/docs/templates/game-pillars.md",
+      "sha256": "3603610be7704cdee1c421813cd248ce07a410969dc3416aa2b9e4959801d3c8",
+      "bytes": 12852
+    },
+    {
+      "path": ".agents/docs/templates/guidance/accessibility-requirements-guide.md",
+      "sha256": "9e86f4bbd8d3b5d4dda65fa7a719af2c448f3037137b9742fcc39d1914518233",
+      "bytes": 13410
+    },
+    {
+      "path": ".agents/docs/templates/guidance/game-design-document-guide.md",
+      "sha256": "f6431f3d65ad54f20db1234ef7890a6d461f2c1f52cb438ba157e40364b6cfa1",
+      "bytes": 9937
+    },
+    {
+      "path": ".agents/docs/templates/guidance/hud-design-guide.md",
+      "sha256": "68c7c3871c959408b5dbcd8a73a4c906f674f7e8d17c03f735f29e9549613e9a",
+      "bytes": 35185
+    },
+    {
+      "path": ".agents/docs/templates/guidance/interaction-pattern-library-guide-game-specific.md",
+      "sha256": "2298ecf4a701a14e8ee861e3ce1787c2394221b36a9a410a993a232b6b0bc149",
+      "bytes": 12382
+    },
+    {
+      "path": ".agents/docs/templates/guidance/interaction-pattern-library-guide-navigation-feedback.md",
+      "sha256": "72f3e8f3e5a9347b171cb76d18ce9ae57478bdd61a9c9fcbbf1ae4aff83b0ebd",
+      "bytes": 9156
+    },
+    {
+      "path": ".agents/docs/templates/guidance/interaction-pattern-library-guide-standard-controls.md",
+      "sha256": "635ea81444d00fca02a17f9a0d4fef75149a9f0f103ebdf21f62ef313d3af55d",
+      "bytes": 41094
+    },
+    {
+      "path": ".agents/docs/templates/guidance/interaction-pattern-library-guide.md",
+      "sha256": "066a6cae7884013dd16f49c02afe54d9cfa54e624ec864d4ed5ad61d529a7d40",
+      "bytes": 1735
+    },
+    {
+      "path": ".agents/docs/templates/guidance/ux-spec-guide.md",
+      "sha256": "47f72f705ffef14cbf81fba6ebb5d914f992a9f06612ce04ec3e90da05a9dfb2",
+      "bytes": 32163
+    },
+    {
+      "path": ".agents/docs/templates/help-escalation.md",
+      "sha256": "5b0c866876e549be60b92c928c69aa05f70671d1e7c6bf906661eb270aa940f3",
+      "bytes": 591
+    },
+    {
+      "path": ".agents/docs/templates/help-where-you-are-minimal.md",
+      "sha256": "064bd937787c85bf7ec06f22bdc7b99663d13d3071fa732a6d2b854424770f1e",
+      "bytes": 857
+    },
+    {
+      "path": ".agents/docs/templates/help-where-you-are.md",
+      "sha256": "b0ccdeff9a23dabdb73dc437f1670163e340c412924d65e5715c4ad38249c1bd",
+      "bytes": 704
+    },
+    {
+      "path": ".agents/docs/templates/hud-design.md",
+      "sha256": "36bc4c6d4291b2e47d29cbf97ca311e0da171aeb4d3d92cab7ff3b9a6eb0dbde",
+      "bytes": 18264
+    },
+    {
+      "path": ".agents/docs/templates/incident-response.md",
+      "sha256": "a332006b15e79a3e8a40bd20cbd6e3c88e79883c1deda3073be27df14402689e",
+      "bytes": 3938
+    },
+    {
+      "path": ".agents/docs/templates/interaction-pattern-library.md",
+      "sha256": "a7f15b362654131f2c649cbf0029f2c16890602acced37b13145dff22f339efe",
+      "bytes": 33395
+    },
+    {
+      "path": ".agents/docs/templates/launch-checklist.md",
+      "sha256": "5d9954386661a0886d0df7d14de6be08eb0288efecff079b3b298f746d789c71",
+      "bytes": 7207
+    },
+    {
+      "path": ".agents/docs/templates/level-design-document.md",
+      "sha256": "61b48448c070490ebb0bb5214cfbfa3a926683f687dc1f74c83d310dc063aacb",
+      "bytes": 3248
+    },
+    {
+      "path": ".agents/docs/templates/milestone-definition.md",
+      "sha256": "787462069d14754bb367a63ed41228cf15e78725326c5f4ca6638c1ea2e6932b",
+      "bytes": 2326
+    },
+    {
+      "path": ".agents/docs/templates/narrative-character-sheet.md",
+      "sha256": "b40bb1cb386727a9c506cbbd76f037990e4461315554e0f78f896f0195cc79e2",
+      "bytes": 3197
+    },
+    {
+      "path": ".agents/docs/templates/one-shot-lean/config.js",
+      "sha256": "e122e7f882314ef73278cf5f64b0533889932abca1666bafeada98f314755fca",
+      "bytes": 577
+    },
+    {
+      "path": ".agents/docs/templates/one-shot-lean/index.html",
+      "sha256": "707763d0e848a89aa576239b82c75b93dcb05bf83ad42158c8cf48678ce43482",
+      "bytes": 8581
+    },
+    {
+      "path": ".agents/docs/templates/one-shot-lean/tune.js",
+      "sha256": "982bd186fb1255173f883c7ce2cf98bc8a5f3c8e00c38d8ce30eb2a136993763",
+      "bytes": 8758
+    },
+    {
+      "path": ".agents/docs/templates/patch-notes-brief.md",
+      "sha256": "7d87eda21b344ba1af19314fb22fc90e803d4eac2d64f10694f554e41fcbb998",
+      "bytes": 206
+    },
+    {
+      "path": ".agents/docs/templates/patch-notes-commentary.md",
+      "sha256": "79dd00b7b422780b23df83f8f1d204a3d037be113bc5aa801bbda7f70fbd027e",
+      "bytes": 181
+    },
+    {
+      "path": ".agents/docs/templates/pitch-document.md",
+      "sha256": "c316ceae886be7405946836db9e295591abae6ce9f4afbd0e455b0156f827293",
+      "bytes": 3876
+    },
+    {
+      "path": ".agents/docs/templates/player-journey.md",
+      "sha256": "fcb350eefe8fd77ce179880beff2e55023ec1e3101e3f48bff32cb8777a05be7",
+      "bytes": 18039
+    },
+    {
+      "path": ".agents/docs/templates/post-mortem.md",
+      "sha256": "e7e2ea73be4295761c2a355ab542be620d5b947ca5749ad8efd43abdd9c16390",
+      "bytes": 1685
+    },
+    {
+      "path": ".agents/docs/templates/project-stage-report.md",
+      "sha256": "957b8c043e14ee985ab75f0e4e679c0df85ad69d6a02625932e5711071972d2c",
+      "bytes": 2236
+    },
+    {
+      "path": ".agents/docs/templates/prototype-report.md",
+      "sha256": "fca00987274a6e1a4c9c2218d0588f0a44245bce9e6d8f9c7286173e388e7e09",
+      "bytes": 3177
+    },
+    {
+      "path": ".agents/docs/templates/quick-design-change.md",
+      "sha256": "59e13603547fa738e0ccae595a539e25934bb6769712334858f95ce77f46a038",
+      "bytes": 1371
+    },
+    {
+      "path": ".agents/docs/templates/quick-design-new-system.md",
+      "sha256": "c3f00e1388040a32fe4de840d97c42677db0ccf825791bd7ff34773f545c8445",
+      "bytes": 1341
+    },
+    {
+      "path": ".agents/docs/templates/quick-design-tuning.md",
+      "sha256": "148eff6e25710b4d37e71742d80f1471f1ea4f16ce37e89ba3b42e9eb22212f5",
+      "bytes": 730
+    },
+    {
+      "path": ".agents/docs/templates/release-checklist-template.md",
+      "sha256": "f1c758dc978ad488ec4df6a96df4c5169e8d316bd5771483540b8366ca83722b",
+      "bytes": 4120
+    },
+    {
+      "path": ".agents/docs/templates/release-notes.md",
+      "sha256": "636492331445f251a8529a060c8439c92a82ea039321cbacc9eb5ea72e0b9c9c",
+      "bytes": 750
+    },
+    {
+      "path": ".agents/docs/templates/release-platform-requirements.md",
+      "sha256": "a0da131cba4eda0a530c042eba6eda589412dfeb09d31bb9d695835fd4637731",
+      "bytes": 1475
+    },
+    {
+      "path": ".agents/docs/templates/risk-register-entry.md",
+      "sha256": "0d4460ea5b5a3b2a87506fab8db2344efbffb9cf39b4ece285025038f9e0ff34",
+      "bytes": 1438
+    },
+    {
+      "path": ".agents/docs/templates/session-state.md",
+      "sha256": "b5bd45e3f7b820a62676e0924e5be9ff6e6ac1df8b066e3f9cb0fbb3910f05a4",
+      "bytes": 3104
+    },
+    {
+      "path": ".agents/docs/templates/SKILL-CONTRACT-TEMPLATE.md",
+      "sha256": "fbb1d5ef8dba9749eb158e4e096b8293fc40b93197e2aaafb17765c7ca72c163",
+      "bytes": 17540
+    },
+    {
+      "path": ".agents/docs/templates/soak-test-protocol.md",
+      "sha256": "9562832a4a9794f6753d4160cfb2fd93cee1dccf61b4ddaac0d1e6fa8220d4f7",
+      "bytes": 4256
+    },
+    {
+      "path": ".agents/docs/templates/sound-bible.md",
+      "sha256": "f15d102361545eb93c1e265a50bff958bdba1e276fe03ba701eddc168b99037f",
+      "bytes": 5296
+    },
+    {
+      "path": ".agents/docs/templates/sprint-plan.md",
+      "sha256": "a9eb0a7908947aae1dcf9c03acc44ea44e7b45bff96c818b8855ed44d78616b7",
+      "bytes": 1781
+    },
+    {
+      "path": ".agents/docs/templates/sprint-status.yaml",
+      "sha256": "1fcf3b4e661d39777c383ea5e54597f6de164ade50a6bcee066f13c1512763d4",
+      "bytes": 946
+    },
+    {
+      "path": ".agents/docs/templates/start-paths.md",
+      "sha256": "1ad376ba02394ef4dfb4f2c4cfd0b25544ff93a5891112bb87f45b12f83932eb",
+      "bytes": 2786
+    },
+    {
+      "path": ".agents/docs/templates/story.md",
+      "sha256": "043b913e66c2263f38822c6bc9e298731e77f3aae70e02c22764788cae7e737e",
+      "bytes": 3951
+    },
+    {
+      "path": ".agents/docs/templates/systems-index.md",
+      "sha256": "757abd3c742f3a12fe778013309c20a9570c75e50c08865b600e67d38f591b32",
+      "bytes": 5694
+    },
+    {
+      "path": ".agents/docs/templates/technical-design-document.md",
+      "sha256": "6823816cd83b7adf04dddb42ea34a1fd69b61824972004192f5ca7edda5629b9",
+      "bytes": 2879
+    },
+    {
+      "path": ".agents/docs/templates/test-evidence.md",
+      "sha256": "7b30b0b167617966f63e1574c10a916a88d61d45279080eef2eb92d5ad8e4584",
+      "bytes": 3272
+    },
+    {
+      "path": ".agents/docs/templates/test-plan.md",
+      "sha256": "e0e0f7039801ed02d44d56d6992154edb43ff087ff27e044bca69e2599e0b097",
+      "bytes": 5188
+    },
+    {
+      "path": ".agents/docs/templates/ux-spec.md",
+      "sha256": "d33832997bb5ba69c265021c1d86997af7d98aee26deae634277d80f7df70ac5",
+      "bytes": 16472
+    },
+    {
+      "path": ".agents/docs/templates/vertical-slice-report.md",
+      "sha256": "3aa3b37b68d4372a6681d13cb6ff5686e1df358635c2878d5abfaf708c0c2914",
+      "bytes": 5492
+    },
+    {
+      "path": ".agents/docs/workflow-catalog.yaml",
+      "sha256": "cedaee42765f779f72577635e35bba8f0885429a9a6c4b54de22acaaf1daadfa",
+      "bytes": 21822
+    },
+    {
+      "path": ".agents/docs/workflow-modes.md",
+      "sha256": "d6aec75ea897d76ef1a1d0249a6498377f014c649f12ec61e70e66e23f48857e",
+      "bytes": 16448
+    },
+    {
+      "path": ".agents/docs/worktree-setup.md",
+      "sha256": "17436590503f21a3ac0d30d8ad07388f89f6c6da229d771905392a73f6589617",
+      "bytes": 921
+    },
+    {
+      "path": ".agents/engines/engines.tsv",
+      "sha256": "a32474e3c67dbd23a24ffb3edc73afb353b0e4d28a2cc3b7e95a0f62704ce834",
+      "bytes": 469
+    },
+    {
+      "path": ".agents/engines/README.md",
+      "sha256": "9ec668b5450fb986e6b87c35dc1bcb758c3e272299d11dcfdaa710c85766b596",
+      "bytes": 1807
+    },
+    {
+      "path": ".agents/engines/web/grow/config.js",
+      "sha256": "30ce3e936407ef2fb63d5537bdd521351f62d023def4fb5a5692580ea36dca2f",
+      "bytes": 545
+    },
+    {
+      "path": ".agents/engines/web/grow/tune.ts",
+      "sha256": "b1d2fa98ae9feb8bb3a7ad768ce4143422060166f940c456d28ed5aa80ac5dc1",
+      "bytes": 9573
+    },
+    {
+      "path": ".agents/engines/web/README.md",
+      "sha256": "fa5f51ba2471c07f2282eef16bb85f649df727b127835699ad518fe3226b75d9",
+      "bytes": 5169
+    },
+    {
+      "path": ".agents/engines/web/scaffold/.gitignore",
+      "sha256": "2b5082a65fb1b6875852f3a98664c1c315a6440250d42eb4a5b975b818ee402e",
+      "bytes": 83
+    },
+    {
+      "path": ".agents/engines/web/scaffold/assets/provenance.yaml",
+      "sha256": "b460afa58a7bb8947e8b102ec89568316d1f3e60df54cdf4d3f8a2d9c122b08c",
+      "bytes": 958
+    },
+    {
+      "path": ".agents/engines/web/scaffold/data/config.json",
+      "sha256": "fd7b6b06497ebcb9541bcbaf289b4de13d78fed3cac9cbdce8de23c0dff7280b",
+      "bytes": 142
+    },
+    {
+      "path": ".agents/engines/web/scaffold/index.html",
+      "sha256": "d92f5fdbf1281e15aa7d6a0b3bf8553e02f689c3309589e695ad901240bfcc0d",
+      "bytes": 426
+    },
+    {
+      "path": ".agents/engines/web/scaffold/package-lock.json",
+      "sha256": "af15dfa7cc85e1a1300a923cdfbebde5d4bc06028b311f070a853046126d90a4",
+      "bytes": 51989
+    },
+    {
+      "path": ".agents/engines/web/scaffold/package.json",
+      "sha256": "f5fee63ba82c7ddcde91545613f809e9b21b09a45a0c16f3d54493dd36ae9090",
+      "bytes": 670
+    },
+    {
+      "path": ".agents/engines/web/scaffold/playwright.config.ts",
+      "sha256": "b24850721990ec1f0d7a1477f37b476094d5db0310dc3bd7d94674bbfab8db4b",
+      "bytes": 2242
+    },
+    {
+      "path": ".agents/engines/web/scaffold/src/game/rules.ts",
+      "sha256": "c3eb0e09403d4bd68e1ae17adb6fe15b08fec6d7580baf429a6b0d276dacbe36",
+      "bytes": 1868
+    },
+    {
+      "path": ".agents/engines/web/scaffold/src/hook.ts",
+      "sha256": "aef3257dd7a6f7bbdf8fdc5ba1911ec435f1d4206fa1234db8b898691ada8736",
+      "bytes": 2521
+    },
+    {
+      "path": ".agents/engines/web/scaffold/src/main.ts",
+      "sha256": "6cc57ae3a090f09f11b937ec3895a4fedd723b5e40b6e6f7101c799331814b37",
+      "bytes": 6509
+    },
+    {
+      "path": ".agents/engines/web/scaffold/tests/integration/boot.spec.ts.tmpl",
+      "sha256": "c66cab7b7834661fefcde44213261f702cdfbaccdf86d687eef8b230efc26b50",
+      "bytes": 2299
+    },
+    {
+      "path": ".agents/engines/web/scaffold/tests/unit/rules.test.ts.tmpl",
+      "sha256": "39d436b22946a598912a3d67f3235dbd9e3fe79f69f41e819d7ad3d263517862",
+      "bytes": 1085
+    },
+    {
+      "path": ".agents/engines/web/scaffold/tsconfig.json",
+      "sha256": "622b338b86fcf2498f2d883bc0cb2e53ec83fb1b9c747f02ec157513f9125da0",
+      "bytes": 358
+    },
+    {
+      "path": ".agents/engines/web/scaffold/vite.config.ts",
+      "sha256": "c4f69832d007c5be4a07025b688e53696cfad1e2d16d1087882cc11f6747cbee",
+      "bytes": 1131
+    },
+    {
+      "path": ".agents/engines/web/starters/phaser/package-lock.json",
+      "sha256": "e62c23ff152af047d642ec383f143ef7c7848cb15f7753ff53bdf607e5e036ab",
+      "bytes": 52690
+    },
+    {
+      "path": ".agents/engines/web/starters/phaser/package.json",
+      "sha256": "972b28f5cfeecfb3904f7b015d5bb6353a63d0aa707aa345ab41c6518cd0533e",
+      "bytes": 717
+    },
+    {
+      "path": ".agents/engines/web/starters/phaser/src/main.ts",
+      "sha256": "d6fd67e37df5ff97b91b7251045f6eb823af56d0fcd17fc2d5e81734c2bd8487",
+      "bytes": 7428
+    },
+    {
+      "path": ".agents/engines/web/starters/pixi/package-lock.json",
+      "sha256": "c8133b59d14481f0d4d7cfba07d9567baf889ca4d68fe3072863f950e29f44ac",
+      "bytes": 56316
+    },
+    {
+      "path": ".agents/engines/web/starters/pixi/package.json",
+      "sha256": "e2340a0255b96ad48886fde8eef4396f2fb6357191bbc58fe0557d28b58e5636",
+      "bytes": 719
+    },
+    {
+      "path": ".agents/engines/web/starters/pixi/src/main.ts",
+      "sha256": "1952c9113a086809e9024595e1fb7700f3cf600a56426fbd5593b08cdb578a37",
+      "bytes": 7348
+    },
+    {
+      "path": ".agents/engines/web/starters/three/package-lock.json",
+      "sha256": "82ecdaf9ceeacbe03b817af2164d226464b6cdb33cacc06ac893e3f09fca9565",
+      "bytes": 54838
+    },
+    {
+      "path": ".agents/engines/web/starters/three/package.json",
+      "sha256": "7e8c7e4b630692f4c6be9570e6e9abf611c39a16f00efdab5df96cd3fda9af18",
+      "bytes": 749
+    },
+    {
+      "path": ".agents/engines/web/starters/three/src/main.ts",
+      "sha256": "1941dbfe076c83e9da9368e042ad040e6e00107e0a9bf9bec044327dfd51da1f",
+      "bytes": 7456
+    },
+    {
+      "path": ".agents/genres/art-direction.md",
+      "sha256": "47352216483c19bacb00339202e89365f07bfc991a165056fc3e830a77100840",
+      "bytes": 6965
+    },
+    {
+      "path": ".agents/genres/chipsets.yaml",
+      "sha256": "c1563e75bfbf7f4ab4378e0f039ab3039af0b26ad79e51498dc4d77e80f56d5f",
+      "bytes": 16356
+    },
+    {
+      "path": ".agents/genres/chipsets/action-adventure.md",
+      "sha256": "767e358fc98f5efd09f1dc59912587fdf97293a709f64c2f9d6af2d51d0abb9a",
+      "bytes": 4391
+    },
+    {
+      "path": ".agents/genres/chipsets/action-roguelite.md",
+      "sha256": "16d1407902a20e0adbd74425e7f79ec4e9d5260960fdd31bceda2d9178bc0919",
+      "bytes": 3552
+    },
+    {
+      "path": ".agents/genres/chipsets/action-rpg.md",
+      "sha256": "42efbdb86a4c4aa6145931e3bfc75f0d6f0bae590caa1d09549c075a53f94d7d",
+      "bytes": 4230
+    },
+    {
+      "path": ".agents/genres/chipsets/arcade-classic.md",
+      "sha256": "ecc1905036b28be1496b9bc4be4c64d532792898186bc511630d715c30d938ad",
+      "bytes": 3989
+    },
+    {
+      "path": ".agents/genres/chipsets/arcade-sports.md",
+      "sha256": "34ae0976cf09347cb6276e58f97c4af2bf538511d71b2bcb85ae8ff843e1c151",
+      "bytes": 3963
+    },
+    {
+      "path": ".agents/genres/chipsets/async-multiplayer.md",
+      "sha256": "49a06b9752133bff16e4c87eef65098beff59402073be9c15f0f491b212b2593",
+      "bytes": 4215
+    },
+    {
+      "path": ".agents/genres/chipsets/auto-battler.md",
+      "sha256": "739a36dd84c2926313944240d9657f7d23c8c9095854c3101b6aa076cac39fe4",
+      "bytes": 4050
+    },
+    {
+      "path": ".agents/genres/chipsets/battle-royale.md",
+      "sha256": "76009545551b4e618024cb634b9742e3d17f8c23013e1591a1a38fc40f3e5b5c",
+      "bytes": 3876
+    },
+    {
+      "path": ".agents/genres/chipsets/beat-em-up.md",
+      "sha256": "cf107e1c98a78dd5bb9b75124e13d27c730546637dbacaf9a817fbe1e77bc325",
+      "bytes": 3784
+    },
+    {
+      "path": ".agents/genres/chipsets/board-and-abstract.md",
+      "sha256": "bbeece75ce604ff892724322c36652c8ecadc85028c1fe3c612b864bdd7f1ac8",
+      "bytes": 3886
+    },
+    {
+      "path": ".agents/genres/chipsets/card-battler.md",
+      "sha256": "6185f5e2dae3f6b37b0dc21361fc176096589f42c0008d0b4ebcd53c6ed85ff1",
+      "bytes": 4399
+    },
+    {
+      "path": ".agents/genres/chipsets/character-action.md",
+      "sha256": "f78d6c133f581ca3e42d959d0f3a27a20e5e233b81bde87d5bee3ae885ee2d45",
+      "bytes": 3745
+    },
+    {
+      "path": ".agents/genres/chipsets/city-builder.md",
+      "sha256": "0261f2e82bac981b875881c16fe93e939109244738ff79764cf2bd5634bbe1ce",
+      "bytes": 4270
+    },
+    {
+      "path": ".agents/genres/chipsets/co-op.md",
+      "sha256": "3096ec0c0f358fc83f5cc0012628eb3ef9b8e86414ac2d01dcb15537c5101e7c",
+      "bytes": 4489
+    },
+    {
+      "path": ".agents/genres/chipsets/colony-sim.md",
+      "sha256": "8f1f190eb0f0ead7de54ed47182e9e28ae6b8a61f19921ba716cb8e1b0c59798",
+      "bytes": 4276
+    },
+    {
+      "path": ".agents/genres/chipsets/competitive-multiplayer.md",
+      "sha256": "1e67518bb5cb7d6a6453b8aacb27ebe481f4ecf851cb93b5eda7a76a806671bd",
+      "bytes": 4217
+    },
+    {
+      "path": ".agents/genres/chipsets/cozy-cleanup.md",
+      "sha256": "28c63a1cad4e86c9696faf7f5ad7fcbb2edad26e30e4b08e33e90529dd3f6071",
+      "bytes": 3788
+    },
+    {
+      "path": ".agents/genres/chipsets/creature-collector.md",
+      "sha256": "9e7e3af6ae53401363b390aee2e5bc71c97792a57be8e122d5e8ac787f58f9e6",
+      "bytes": 3871
+    },
+    {
+      "path": ".agents/genres/chipsets/detective.md",
+      "sha256": "32b3ed9f968b1bf222f7c1a9adad6d741440cf93adedfa33285e9c312140ad19",
+      "bytes": 4060
+    },
+    {
+      "path": ".agents/genres/chipsets/dungeon-crawler.md",
+      "sha256": "71792e7f81cf183e1e26c33a8be6247795b1a178b1c62f2f419f90226e2e9ee6",
+      "bytes": 3230
+    },
+    {
+      "path": ".agents/genres/chipsets/endless-runner.md",
+      "sha256": "02a64ddff67913126b1d68d1375496b344e33c42a7c40fae86a036e2584b1d10",
+      "bytes": 3543
+    },
+    {
+      "path": ".agents/genres/chipsets/extraction.md",
+      "sha256": "a571b96789bbe7170fe6c2995c1c2ae3a5c4112730f2149784457b62f9ba2e53",
+      "bytes": 4260
+    },
+    {
+      "path": ".agents/genres/chipsets/factory-automation.md",
+      "sha256": "f4f9f8e4b763aca24855dee3234662915b89c15eec3ccd7cab736d90d77d31d2",
+      "bytes": 4214
+    },
+    {
+      "path": ".agents/genres/chipsets/falling-block-puzzle.md",
+      "sha256": "ef220818d1128c3b0ec3c1708a69276d5de38b007d2dbae623557749cab78f9d",
+      "bytes": 3227
+    },
+    {
+      "path": ".agents/genres/chipsets/farming-life-sim.md",
+      "sha256": "6a3500a2f35e4b08c1fb8cffbf7a005de8793093754fd40124664ea5f5e10fb8",
+      "bytes": 4360
+    },
+    {
+      "path": ".agents/genres/chipsets/fighting.md",
+      "sha256": "e4746d77858f1a3ca3dc8dbbae039342199d153c61198c7f45a8970fe13096b1",
+      "bytes": 4050
+    },
+    {
+      "path": ".agents/genres/chipsets/first-person-shooter.md",
+      "sha256": "043b98a878427ae30908e3237f0b922dcf588a8492edc5145190e09ccf04d852",
+      "bytes": 3830
+    },
+    {
+      "path": ".agents/genres/chipsets/fishing.md",
+      "sha256": "5280555485947ec48e19be17bdb3fed64d603b018b763955488f798080fb2747",
+      "bytes": 3763
+    },
+    {
+      "path": ".agents/genres/chipsets/flight.md",
+      "sha256": "25ab104a04673c0d73b7100c68b67a2515db1cb72fb16f2b0e93a79ec9165f1f",
+      "bytes": 4187
+    },
+    {
+      "path": ".agents/genres/chipsets/grid-puzzle.md",
+      "sha256": "a7e40d4b35698d5808d3b87ac6a9333e8da8f19a2d970d4ead1c687eec0c85f1",
+      "bytes": 4228
+    },
+    {
+      "path": ".agents/genres/chipsets/hidden-object.md",
+      "sha256": "8c38d199a1494f1301284f78d7f6363ec831a17cefac2e80e0840a808b2139da",
+      "bytes": 3159
+    },
+    {
+      "path": ".agents/genres/chipsets/idle-incremental.md",
+      "sha256": "1241f3da5b969d9b9a1b93ca0288a6a496d8765261ba579c2556b55ec67b0cd3",
+      "bytes": 4219
+    },
+    {
+      "path": ".agents/genres/chipsets/level-maker.md",
+      "sha256": "18f715fcd0ea7da43683c71c0578469ff7acaec3d5353f5b3c369b9d72039eff",
+      "bytes": 3825
+    },
+    {
+      "path": ".agents/genres/chipsets/logic-puzzle.md",
+      "sha256": "32a6865594812783f5b0f7cd026a236a16319ce644ff1dc6b4c8626749cdebc6",
+      "bytes": 3570
+    },
+    {
+      "path": ".agents/genres/chipsets/management-tycoon.md",
+      "sha256": "9e2f348ab496e9b08211ac5877bf2886f33f333bf28ac27766f2b63560a91c0c",
+      "bytes": 3920
+    },
+    {
+      "path": ".agents/genres/chipsets/metroidvania.md",
+      "sha256": "302e63459463af7b2cd37f9a60a4f65d6f68bfbef633e3929d56d21000080d03",
+      "bytes": 4009
+    },
+    {
+      "path": ".agents/genres/chipsets/mining.md",
+      "sha256": "d0df05709a85e1555ed9f9d59782c8c8e5088e2d9810ed0b8806d1be7bc75957",
+      "bytes": 3894
+    },
+    {
+      "path": ".agents/genres/chipsets/mmo.md",
+      "sha256": "efdcf745afab30b92c9d55e2d661c3e936dbb44d6afc599cd2377d1cd39b0e80",
+      "bytes": 4647
+    },
+    {
+      "path": ".agents/genres/chipsets/moba.md",
+      "sha256": "92df5e41f379f518b9d3f9e9252ab1c7430327f20eb35f22ba38d4462eaca639",
+      "bytes": 4009
+    },
+    {
+      "path": ".agents/genres/chipsets/parkour.md",
+      "sha256": "5d5e840434a3dae13c88e4a7417e34eedb65dc57baa3930081eecee6432b0d87",
+      "bytes": 3888
+    },
+    {
+      "path": ".agents/genres/chipsets/party-game.md",
+      "sha256": "3f78aa289d68f7d42b0d4301475122ac85ab488fbe6d7af600d8650f510782f8",
+      "bytes": 4560
+    },
+    {
+      "path": ".agents/genres/chipsets/pet-raising.md",
+      "sha256": "2e46977d95623251bd67dbdf5ce17885f6a97716dcde5240903de2c14c475cd4",
+      "bytes": 3358
+    },
+    {
+      "path": ".agents/genres/chipsets/physics-puzzle.md",
+      "sha256": "3a4d1899bdccfdb9f7aa84bd02952628986295c56d67d9db8a2999225252943a",
+      "bytes": 4141
+    },
+    {
+      "path": ".agents/genres/chipsets/platformer.md",
+      "sha256": "ba415c89dd02da089b458b46cd6844a88fb58ce226689a858484c4779ef160bd",
+      "bytes": 3156
+    },
+    {
+      "path": ".agents/genres/chipsets/point-and-click.md",
+      "sha256": "2f21ee5c3d4031082114e631ea0bb39206ee33237e048d27d1110ea9b9d9e8b7",
+      "bytes": 4169
+    },
+    {
+      "path": ".agents/genres/chipsets/puzzle-platformer.md",
+      "sha256": "7e92325b71a9e3f598d8272fe22c9cd706cbbca43c7f24102b5cb02a03f42fa8",
+      "bytes": 3963
+    },
+    {
+      "path": ".agents/genres/chipsets/racing.md",
+      "sha256": "cc4322eb31e913a084ec24880d8aed93a538e2dbcb15562831928acd440af805",
+      "bytes": 4303
+    },
+    {
+      "path": ".agents/genres/chipsets/real-time-strategy.md",
+      "sha256": "634abdeda4ad1d06148e6cb55ac68ce81a2e1bdf27eafbfc40e0b89128de88d6",
+      "bytes": 4257
+    },
+    {
+      "path": ".agents/genres/chipsets/rhythm.md",
+      "sha256": "faa16faab62170963d33a105ae778446af92f9e6a2e27b2185f0658595350154",
+      "bytes": 4420
+    },
+    {
+      "path": ".agents/genres/chipsets/roguelike-deckbuilder.md",
+      "sha256": "b049426e03b3529e285ce1f7b87133cecb77b2a70f6731dac10afb1415541c34",
+      "bytes": 4400
+    },
+    {
+      "path": ".agents/genres/chipsets/sailing.md",
+      "sha256": "582c53b67e475930a7c3c94256a69da3ba84d857a47a0c5f303ea528ebe0dd0c",
+      "bytes": 3410
+    },
+    {
+      "path": ".agents/genres/chipsets/sandbox.md",
+      "sha256": "17326bacb47f196de05d18b7196c4979c7ce6357bc52402993f3c868c8b5066a",
+      "bytes": 4416
+    },
+    {
+      "path": ".agents/genres/chipsets/shoot-em-up.md",
+      "sha256": "197ea131b659a959545cca7442cd280d847a62fafe4618db3a9a6c0cedaf212c",
+      "bytes": 4042
+    },
+    {
+      "path": ".agents/genres/chipsets/skate-and-surf.md",
+      "sha256": "09710b9db2d392a61a6e81e33dd4adf5ee3d9a459f19f792802a5ef93b5f41ba",
+      "bytes": 3683
+    },
+    {
+      "path": ".agents/genres/chipsets/soulslike.md",
+      "sha256": "3a7fb901243f4112ca37e08fb1429f67a947be81f4bcdede80b35c89a03caf54",
+      "bytes": 4078
+    },
+    {
+      "path": ".agents/genres/chipsets/stealth.md",
+      "sha256": "95d5bc90be1bc80796891bed55291c137dc52c4af636cd87acb204c568498875",
+      "bytes": 4544
+    },
+    {
+      "path": ".agents/genres/chipsets/survival-crafting.md",
+      "sha256": "e3547728aae45c6f7653dcae7e40e00c9be6ede942bc23d76b21214919986b4c",
+      "bytes": 4313
+    },
+    {
+      "path": ".agents/genres/chipsets/survival-horror.md",
+      "sha256": "a484a8aa1c31969b686d6a21d349fa6a58c1259f98bc140c8e2baba3441e8086",
+      "bytes": 4195
+    },
+    {
+      "path": ".agents/genres/chipsets/survivors-like.md",
+      "sha256": "727ee12caf8f58baca0961b51d64724fad02d9e09e84159d0bd5196e36c34ec2",
+      "bytes": 4284
+    },
+    {
+      "path": ".agents/genres/chipsets/tactical-rpg.md",
+      "sha256": "88359427346e7b7fe623da2187d2bfb845c4e8eba68f379bfc139a8de1fd207f",
+      "bytes": 4114
+    },
+    {
+      "path": ".agents/genres/chipsets/tower-defense.md",
+      "sha256": "00a7f31e4f41ded66413f236351756faab79ba030541a227b6a0cafebe3ecc4f",
+      "bytes": 3962
+    },
+    {
+      "path": ".agents/genres/chipsets/traditional-roguelike.md",
+      "sha256": "797cb484d8f70d30cd9601cb7099882c1c3a9d191f33a2d96367473a91da59f5",
+      "bytes": 4514
+    },
+    {
+      "path": ".agents/genres/chipsets/trivia-quiz.md",
+      "sha256": "0cc4ae601e8eef50dd5eca9ce8cb3002a5b21557e02f3fac8de5a08cca97dd55",
+      "bytes": 3150
+    },
+    {
+      "path": ".agents/genres/chipsets/turn-based-jrpg.md",
+      "sha256": "da87a90cb4f52e761e075ab83ca3e08b186fc3e19fb948552cacd5de99aee97e",
+      "bytes": 3823
+    },
+    {
+      "path": ".agents/genres/chipsets/turn-based-strategy.md",
+      "sha256": "6444601992afe7273e843726ccc6f83b553adf20fc70d98961fce500652433c1",
+      "bytes": 4371
+    },
+    {
+      "path": ".agents/genres/chipsets/twin-stick-shooter.md",
+      "sha256": "5607aaa148ed8a1fa1ff58ab53bf61762431cf76a97341141b0bfac12326bbce",
+      "bytes": 3787
+    },
+    {
+      "path": ".agents/genres/chipsets/visual-novel.md",
+      "sha256": "ad1d82b4b087190e1759ecf645de7e7b65a9135db1046e532388ab6dbd20d8a7",
+      "bytes": 4319
+    },
+    {
+      "path": ".agents/genres/chipsets/walking-sim.md",
+      "sha256": "9518043ce27db4a39fe017fe64b28a9da0f164464b03034474e94a727513efb2",
+      "bytes": 4461
+    },
+    {
+      "path": ".agents/genres/chipsets/word-game.md",
+      "sha256": "198e7f66f0a44e6d4d83b0520da66e7ebc40808746d8ee2623845608c090009b",
+      "bytes": 3579
+    },
+    {
+      "path": ".agents/genres/mashups.md",
+      "sha256": "23eb81de24e854c6f316d5b201a6fbfe34ef709b91ce5605500b87ea4b825df0",
+      "bytes": 8758
+    },
+    {
+      "path": ".agents/genres/online-and-devices.md",
+      "sha256": "a9f89674d14565798da39a847e6750ec9d0860dfb1195baf96d48b81c3f65c4d",
+      "bytes": 3005
+    },
+    {
+      "path": ".agents/genres/sources.md",
+      "sha256": "bb2a20d9d6a32a774f657171137960cd26ffd452b17e6f7de633c27c28125575",
+      "bytes": 17565
+    },
+    {
+      "path": ".agents/rules/agent-memory.md",
+      "sha256": "6e1bddbc1a41906ab01241a78ee37bb35eed60063942b012f26de5a930c72027",
+      "bytes": 3155
+    },
+    {
+      "path": ".agents/rules/ai-code.md",
+      "sha256": "23719730e64627bfd5f07dd75a8b1dcfc7f1b35543c24bed78e518430542b1b5",
+      "bytes": 753
+    },
+    {
+      "path": ".agents/rules/data-files.md",
+      "sha256": "1639325ba78b04e7a447faae101932ea3bddf8a4d0917e920551691e7175eac1",
+      "bytes": 2491
+    },
+    {
+      "path": ".agents/rules/design-docs.md",
+      "sha256": "afb96f02e054a426ac98f9d1835187ccb4a459fecc0beb6e53a681c750103ea5",
+      "bytes": 2202
+    },
+    {
+      "path": ".agents/rules/engine-code.md",
+      "sha256": "0c4d68da1f3ae79619001e1115c054a9e6cdeccf02dee98d16c7fc4f5da757d5",
+      "bytes": 2035
+    },
+    {
+      "path": ".agents/rules/gameplay-code.md",
+      "sha256": "4f10ff5d6d0897a0301d8d8707fd806c42fe8fca113f9cbb218002467e9da366",
+      "bytes": 1482
+    },
+    {
+      "path": ".agents/rules/narrative.md",
+      "sha256": "be8925e4d9a6242eb7db40fd918bdc94aa6f40e498f9e3aa8d7ffe27ede4a819",
+      "bytes": 755
+    },
+    {
+      "path": ".agents/rules/network-code.md",
+      "sha256": "ff65f01bdaa2e571caca0dd025001fb6e043b3f2e16454eba36e24fbff8d12ca",
+      "bytes": 811
+    },
+    {
+      "path": ".agents/rules/prototype-code.md",
+      "sha256": "eaec97d8912c7ac37f4c08ca1d044ce70a3fb2b7f58688cb33757ef58e643fcb",
+      "bytes": 3170
+    },
+    {
+      "path": ".agents/rules/scene-files.md",
+      "sha256": "c184c693e5f31a21faa66512d305881f446b62209aaabfaf6b78749907ea480c",
+      "bytes": 1859
+    },
+    {
+      "path": ".agents/rules/shader-code.md",
+      "sha256": "e52f3a5fc123771c333038d141fc0053a34cf36495798e352b97e710e1c44e33",
+      "bytes": 2179
+    },
+    {
+      "path": ".agents/rules/skill-authoring.md",
+      "sha256": "005968fe4ed20147d5fb414e3814926c05958fbaac1b77a1d5086ae243e33eae",
+      "bytes": 4126
+    },
+    {
+      "path": ".agents/rules/test-standards.md",
+      "sha256": "889226f20d02c19e32a2dd236b7ca809542e16beb9b2f1afecf600f164e188cd",
+      "bytes": 4362
+    },
+    {
+      "path": ".agents/rules/ui-code.md",
+      "sha256": "3e956ed2b2995a3e20022f0bba08f6d8074e43c08fe3a1164801201271a9a524",
+      "bytes": 716
+    },
+    {
+      "path": ".agents/scripts/__pycache__/git-index-check.cpython-312.pyc",
+      "sha256": "bb72146a8a65a9bf5e703afa78ef1e8400e041d62bce2e7efa170e9e673b0d11",
+      "bytes": 5151
+    },
+    {
+      "path": ".agents/scripts/adr-dep-graph.sh",
+      "sha256": "e7133e2e9427f7ebbb9224dba0ef6dcc193073c42911835ce88392fd3279f2f2",
+      "bytes": 8853
+    },
+    {
+      "path": ".agents/scripts/adr-status.sh",
+      "sha256": "28b3eb74c77006b804ad2bdd0ee85174cc2ee19b0eac715c5a44cff21933ba5e",
+      "bytes": 13605
+    },
+    {
+      "path": ".agents/scripts/agent-check.sh",
+      "sha256": "ea5a5757ccabf9edfc1c8b3c633a0a2393f1dbfc4585d65e85d8b5e83c9afe20",
+      "bytes": 309
+    },
+    {
+      "path": ".agents/scripts/artifact-check.sh",
+      "sha256": "37e4fdc2959141fac118474dc6cc4fc5b6a70ef36f8150cb35bec5a13aa04672",
+      "bytes": 13782
+    },
+    {
+      "path": ".agents/scripts/asset-scan.sh",
+      "sha256": "4f04da5e926248650b1d7474745dd3aaa3248a18535a38fc8f19c27e428f2c47",
+      "bytes": 33809
+    },
+    {
+      "path": ".agents/scripts/bug-stats.sh",
+      "sha256": "fc54a8ab49bfd87bb5bc1d4b0d8ee9d8a3a9478c35e30c2335ffc688d76bc4b2",
+      "bytes": 10673
+    },
+    {
+      "path": ".agents/scripts/code-markers.sh",
+      "sha256": "d588290150e77b7601fd499e88c921e1413ee6342da7183cff3b7aeab0f90db1",
+      "bytes": 10548
+    },
+    {
+      "path": ".agents/scripts/compat-inventory.sh",
+      "sha256": "4b627b60e40b5afbdf354b629e6c880d6beaf2ad927a7ff2b5f3af99d71e8ad9",
+      "bytes": 309
+    },
+    {
+      "path": ".agents/scripts/config-set.sh",
+      "sha256": "2f5c94b1fb96c2d369a9f5a2b84b4100498d331ddffbecac104e977140e5747d",
+      "bytes": 25879
+    },
+    {
+      "path": ".agents/scripts/content-count.sh",
+      "sha256": "1c0abbeea3aa7bf8f4ff0e100dddd66672e8c8010869a66b2314adb009dd80d4",
+      "bytes": 19961
+    },
+    {
+      "path": ".agents/scripts/cut-apply.sh",
+      "sha256": "86b2568c1312bae9a6b8c4c0f54a8fc8b26d152c006d76ac28a3d065e7aac9b3",
+      "bytes": 17202
+    },
+    {
+      "path": ".agents/scripts/cut-read.sh",
+      "sha256": "558026151bd1f426eb4cb5f817a4bfaa8a721b8f61182a3261c9a9a8343ba05d",
+      "bytes": 13013
+    },
+    {
+      "path": ".agents/scripts/debt-register.sh",
+      "sha256": "56e349870a0ecc874dd1f8820d2caa68b73ae026e569e72b9fcab479d49278b3",
+      "bytes": 22402
+    },
+    {
+      "path": ".agents/scripts/door-in.sh",
+      "sha256": "714cd5bebc8efd765f5a686e99d0ae4d723be3372ad20c7a9ded0aceb675ed09",
+      "bytes": 19053
+    },
+    {
+      "path": ".agents/scripts/engine-row.awk",
+      "sha256": "b046ab82afcccd00a34da6af873df6e41b86901364eb4c4e9eb0a9ddfcdd6305",
+      "bytes": 907
+    },
+    {
+      "path": ".agents/scripts/flaky-stats.sh",
+      "sha256": "43edda2dd4874531ee2e1a2ba9f431934bbc2aa2fab64a88473c6a2b6a293a60",
+      "bytes": 17863
+    },
+    {
+      "path": ".agents/scripts/framework_validation.py",
+      "sha256": "355aac38ba6657598c3c0769141c05b8ac1035571939f318a6347e5dbe9482c4",
+      "bytes": 6626
+    },
+    {
+      "path": ".agents/scripts/game-read.sh",
+      "sha256": "022fef746897b69120f120c635010097fa0eefb0f7139faecbc83095950b6057",
+      "bytes": 12637
+    },
+    {
+      "path": ".agents/scripts/gdd-structure-check.sh",
+      "sha256": "b93ea336956abdab9732953ba6937ecb0b94a0729d0342c8fdf99cc8b709c32b",
+      "bytes": 6038
+    },
+    {
+      "path": ".agents/scripts/git-index-check.py",
+      "sha256": "88c3218b85b82cf1dd9a06a409da4ef2284ca267081f4fffe6c937e14e70af33",
+      "bytes": 3093
+    },
+    {
+      "path": ".agents/scripts/godot-parse-check.gd",
+      "sha256": "3de55ef05756b1a8eede944520f8b41d0c6b6e40df5e518e6f03fb49080a155f",
+      "bytes": 1241
+    },
+    {
+      "path": ".agents/scripts/inputs-check.sh",
+      "sha256": "d6ac20e05644e20c086cb3d88738c2cae6d32fb73bf4ff71b1583e8ca47105fa",
+      "bytes": 7502
+    },
+    {
+      "path": ".agents/scripts/itch-zip.sh",
+      "sha256": "37a0192fcc51adcd4fcf2f548b0acb6c811b5ef5a1c634a925399a501ba722f4",
+      "bytes": 6674
+    },
+    {
+      "path": ".agents/scripts/json-flat.awk",
+      "sha256": "9ea94aa603a3e09e9932f5eb22ca9aeb88f50996a9a437e996fead92ee471919",
+      "bytes": 3429
+    },
+    {
+      "path": ".agents/scripts/md-section.sh",
+      "sha256": "7343d510ba9705245cc2d37be81fdcb06f0823bd7ddf879723e614f199a2a9ff",
+      "bytes": 17794
+    },
+    {
+      "path": ".agents/scripts/migrate-v1-config.sh",
+      "sha256": "5dfb80b2cdaa13df69c82ed9f07b34dcfa59275d2c09eafd86d928fad3862259",
+      "bytes": 36220
+    },
+    {
+      "path": ".agents/scripts/one-shot-check.sh",
+      "sha256": "96f0d6526e9fa8aaa4134bc51d0f4c476f389653e836f855c3b25e45e2d31014",
+      "bytes": 31116
+    },
+    {
+      "path": ".agents/scripts/one-shot-driver.js",
+      "sha256": "3effaad08fbed1be6aa44ccd607ce7395b79283c5063f45bfef33aaec4ac36b7",
+      "bytes": 44979
+    },
+    {
+      "path": ".agents/scripts/one-shot-grow.sh",
+      "sha256": "99f3bbec6b510c7a0e7f91ecaa10a831d5ede696353f6e04f4e59fc0a8453227",
+      "bytes": 27837
+    },
+    {
+      "path": ".agents/scripts/one-shot-new.sh",
+      "sha256": "4e004f59d001a1d8bef50a55b6168c7679ab18c789adbc0d2623d50ca60b368a",
+      "bytes": 7831
+    },
+    {
+      "path": ".agents/scripts/one-shot-run.sh",
+      "sha256": "6bb203ac0ffe6aeb3e03a0e13cf1c227edb282f910abad981b975e6014daedc3",
+      "bytes": 13069
+    },
+    {
+      "path": ".agents/scripts/one-shot-share.sh",
+      "sha256": "8870a29ea81ec43ce91672c386b4ac9bae63f5d4d2e71c25a189da278c1f8e5a",
+      "bytes": 4164
+    },
+    {
+      "path": ".agents/scripts/one-shot-tune.sh",
+      "sha256": "19091e0686c3dac1f88df183813f8103b33ce796fc9a839e5405e98cd0ca1562",
+      "bytes": 11236
+    },
+    {
+      "path": ".agents/scripts/page-shot.sh",
+      "sha256": "81a3f1455d5dfe16f579e3ac6ac827db6156301853354abb732478db713e7ed1",
+      "bytes": 15244
+    },
+    {
+      "path": ".agents/scripts/plan-math.sh",
+      "sha256": "dc7ed85e3269a45d795480f15f721dbc0b1be4c172b4ccd067cf1c77c8599ccd",
+      "bytes": 11451
+    },
+    {
+      "path": ".agents/scripts/project-coherence.sh",
+      "sha256": "ec8e6b71690e800ea8207ce042fccb70c151f4906b767284631b5e3c420edabb",
+      "bytes": 17550
+    },
+    {
+      "path": ".agents/scripts/project-state.sh",
+      "sha256": "7ebd1db4b31f347e978140d50d7f055d898adfd79f4c3221d0d38e8658db0784",
+      "bytes": 14086
+    },
+    {
+      "path": ".agents/scripts/python-run.sh",
+      "sha256": "fd0c6dbf76b7b98dc784d643986e50f13a725af46e9dd891c1807fa00b663d25",
+      "bytes": 349
+    },
+    {
+      "path": ".agents/scripts/read-guard.sh",
+      "sha256": "23f02c6c7c7cc41c898575e8ad3d85d66761e69f66a936502b28dbabc0b07df9",
+      "bytes": 6325
+    },
+    {
+      "path": ".agents/scripts/references-save.py",
+      "sha256": "5fc225a086ea976e7fa49f77d7ae745a44c91fd68a3075914415f1452193b299",
+      "bytes": 2097
+    },
+    {
+      "path": ".agents/scripts/references-save.sh",
+      "sha256": "56f6f9942c66d56752146a194d86f0ad61b2be107b95070c07094eccec9a52bc",
+      "bytes": 342
+    },
+    {
+      "path": ".agents/scripts/registry.sh",
+      "sha256": "a2efa9ce541b031bed455648fea96213ac5f82eafce1e0f99e55ee7a1ecf5f8b",
+      "bytes": 35486
+    },
+    {
+      "path": ".agents/scripts/review-receipts.sh",
+      "sha256": "9bc22c5c2364f52282fc3ec49e1fabbc639e96fd79bb15ca832e8af7b455c83c",
+      "bytes": 17776
+    },
+    {
+      "path": ".agents/scripts/review-scope.sh",
+      "sha256": "6b89beb7d305728346d2d290a00e255c41b65ff584897f94241f8c0343146b08",
+      "bytes": 5126
+    },
+    {
+      "path": ".agents/scripts/rotate-session-state.sh",
+      "sha256": "2a61fe390f9ee77f80d343b7d2f36642d1742db239334b0ea0c1a5f07ed9e7d3",
+      "bytes": 6416
+    },
+    {
+      "path": ".agents/scripts/rule-routing.py",
+      "sha256": "5023270d07c76828c3d94391d11e845b4f47fbc49b78cf1e856fce2b86941d0a",
+      "bytes": 2479
+    },
+    {
+      "path": ".agents/scripts/session-state.sh",
+      "sha256": "9ea9d80cb663034b1eaacae9d36478a106d88d19f23e44bd62f2414ec8b61e82",
+      "bytes": 10086
+    },
+    {
+      "path": ".agents/scripts/set-stage.sh",
+      "sha256": "88f6971f049afd1a89a071489495b544eae124ca0a91beffb35fd87717c4ee3c",
+      "bytes": 13774
+    },
+    {
+      "path": ".agents/scripts/skill-lint.sh",
+      "sha256": "91f3a618d02f312a9f643e302e099eb5caf18f980f435f83a88c5f015113a5e5",
+      "bytes": 309
+    },
+    {
+      "path": ".agents/scripts/story-facts.sh",
+      "sha256": "35e4cbf5821a8c0b7bf881e7d9ce414011e2103782423fbd6dc1c1c99c714bab",
+      "bytes": 15769
+    },
+    {
+      "path": ".agents/scripts/story-status.sh",
+      "sha256": "18e287fe5b22149899033a8d25d925ff2daf821a707a7d0c783bc0d38c9e7637",
+      "bytes": 3585
+    },
+    {
+      "path": ".agents/scripts/studio-inspect.py",
+      "sha256": "9761db44ab27260fa529dc2985618a36a719d2ccc6e16343ffdaddc544a80158",
+      "bytes": 3977
+    },
+    {
+      "path": ".agents/scripts/test-run.sh",
+      "sha256": "6fe66c4e332eabddf86d1ee72228b4efdf2404cd7635e12163fbdff6ce229e49",
+      "bytes": 38852
+    },
+    {
+      "path": ".agents/scripts/test-scaffold.sh",
+      "sha256": "4fad15ec193da2ba46dcd80625c6613d61450fa4e2775d715bfdffc005d3a498",
+      "bytes": 33247
+    },
+    {
+      "path": ".agents/scripts/validate-framework.py",
+      "sha256": "f8b83bcaf2e16ab9ca8d7517941cfc5d337891f3f517ab30142303f1098559d5",
+      "bytes": 868
+    },
+    {
+      "path": ".agents/scripts/vendor-three.sh",
+      "sha256": "907714d40f8b773e0c6e66015c8d6831be028571ebf8892a1ff538b468a4dab3",
+      "bytes": 6671
+    },
+    {
+      "path": ".agents/scripts/web-detect.sh",
+      "sha256": "4eaa8bf796441feedfbc043ac3c93c069d764493d7b527ff6f95712687f099e8",
+      "bytes": 17374
+    },
+    {
+      "path": ".agents/scripts/web-scaffold.sh",
+      "sha256": "be2a5cb6bb5704affe0bdd550d398035a560e029e31cdff47ad0cdb26243153a",
+      "bytes": 9135
+    },
+    {
+      "path": ".agents/scripts/write-guard.sh",
+      "sha256": "9a7b6eca6774ff01abdea951d572a9f090a77df155a6fdedade92b1b19701ffb",
+      "bytes": 21421
+    },
+    {
+      "path": ".agents/scripts/yaml-get.awk",
+      "sha256": "7539d6ab9d93393c493ac001237b1860a821e484a2ec57f96e926fb6db1f995a",
+      "bytes": 3518
+    },
+    {
+      "path": ".agents/scripts/yaml-helper.sh",
+      "sha256": "59c5f392f759a0a14124cadd42a228d1cdef8e604b2d18bf64a068c835681b34",
+      "bytes": 102300
+    },
+    {
+      "path": ".agents/skills/adopt/references/1-detect.md",
+      "sha256": "d675b18feec4c30f590984c8b7614cbdd29ef8dcb8ebc4fce29912d77aca68da",
+      "bytes": 3874
+    },
+    {
+      "path": ".agents/skills/adopt/references/2-format-audit.md",
+      "sha256": "555f438582457cacbed061901ab295e3e9fcf5711af406e7e64d6f9820c2cab5",
+      "bytes": 10124
+    },
+    {
+      "path": ".agents/skills/adopt/references/3-classify.md",
+      "sha256": "216c3631fb31fe114e740851d7c0fe2eeac7a8f9c79fe6afaf27de294010edca",
+      "bytes": 1298
+    },
+    {
+      "path": ".agents/skills/adopt/references/4-migration-plan.md",
+      "sha256": "e03ff9c8d171458234f5276f901da6e9b73ceba729eb0fddafe9cce472d58a7b",
+      "bytes": 2767
+    },
+    {
+      "path": ".agents/skills/adopt/references/5-summary.md",
+      "sha256": "e6f047dfa7c6d4c5fe03d0136d3e526fb3a5c9172bac88ed625e2de552f06bbf",
+      "bytes": 1889
+    },
+    {
+      "path": ".agents/skills/adopt/references/6-write.md",
+      "sha256": "0eeebfbb7e29fc046da9ab37c1c2792c3ef39e9c171e25814544efe82a7afc8f",
+      "bytes": 3484
+    },
+    {
+      "path": ".agents/skills/adopt/references/7-first-action.md",
+      "sha256": "3ae5a926eeccc95921b8825e23b034b6e9135b1298e3278233d9426acee09687",
+      "bytes": 2806
+    },
+    {
+      "path": ".agents/skills/adopt/SKILL.md",
+      "sha256": "3c0b61d254a04289105b3bac81238bf75206ba925f5f499be9cbdcfaadb5e9a6",
+      "bytes": 5137
+    },
+    {
+      "path": ".agents/skills/architecture-decision/CONTRACT.md",
+      "sha256": "aa95b47f126d074a4db1451ed61c14956a95f4397e8d19bf1d38ec89f0e8e51b",
+      "bytes": 10803
+    },
+    {
+      "path": ".agents/skills/architecture-decision/references/0-accept.md",
+      "sha256": "ac4e722d0f8585692857c80286db60714655437032d05f8310c0f8007f8b6066",
+      "bytes": 5144
+    },
+    {
+      "path": ".agents/skills/architecture-decision/references/0-retrofit.md",
+      "sha256": "9e5bf64176685ae736fd97e41a98a5c93f3636de7341423c6547e5472a0b080d",
+      "bytes": 3734
+    },
+    {
+      "path": ".agents/skills/architecture-decision/references/1-engine-context.md",
+      "sha256": "bd8e78028c62a0b78b68ec481b5f919118119cf51d589e2f9d72a0bb700ebdbf",
+      "bytes": 1788
+    },
+    {
+      "path": ".agents/skills/architecture-decision/references/3-gather-context.md",
+      "sha256": "300038f5dd0c98439dd73d728ccef43cb69080b4299e87239de1ff79bc50b91b",
+      "bytes": 3561
+    },
+    {
+      "path": ".agents/skills/architecture-decision/references/4-decide.md",
+      "sha256": "4e9612edecf5b0ddd619660a0984e5901a1be8b73768eeb7e081ee186d05a595",
+      "bytes": 3777
+    },
+    {
+      "path": ".agents/skills/architecture-decision/references/5-generate.md",
+      "sha256": "fc18edaffd8767e66ab26190dbb444972c161fffb7188c9d0634d5d94eb50a20",
+      "bytes": 12845
+    },
+    {
+      "path": ".agents/skills/architecture-decision/SKILL.md",
+      "sha256": "ae47df16366ae2138a55dadd384d96c9623b4b71baf5cfbc676eada0faf0a0b0",
+      "bytes": 7053
+    },
+    {
+      "path": ".agents/skills/architecture-review/references/1-load.md",
+      "sha256": "06b5eff9d1b5970e022aa3731117b76e6868a9460102037d9efd81d912d75c74",
+      "bytes": 10140
+    },
+    {
+      "path": ".agents/skills/architecture-review/references/2-extract-requirements.md",
+      "sha256": "8fbec906d05534bfd1255b719476fd819241527a8df076f2857b17b2f2b44e9e",
+      "bytes": 3505
+    },
+    {
+      "path": ".agents/skills/architecture-review/references/3-traceability.md",
+      "sha256": "45ee337e971f2faab58579398a1bac188b12b4788d98a0d16ce9d5546bcc671a",
+      "bytes": 5918
+    },
+    {
+      "path": ".agents/skills/architecture-review/references/4-conflicts.md",
+      "sha256": "a40a21ac55115ef0e5b0c8cf9df890bd26e754fb0b634408701dd7ff046efbab",
+      "bytes": 4011
+    },
+    {
+      "path": ".agents/skills/architecture-review/references/5-engine.md",
+      "sha256": "df51b572c26e2df2948c79d33afd1ab65045cc6e181cfcf3ad75b353776227ea",
+      "bytes": 5607
+    },
+    {
+      "path": ".agents/skills/architecture-review/references/6-document-coverage.md",
+      "sha256": "08094893a0847b96c8b724b6cbefbf84024ac0d3d320ad2d73fe82015c8d1fb4",
+      "bytes": 1044
+    },
+    {
+      "path": ".agents/skills/architecture-review/references/7-report.md",
+      "sha256": "e7239b150ae9541e26fc5e89ef818a77d2c4c5b1585e3d451bb4add65793a76c",
+      "bytes": 3777
+    },
+    {
+      "path": ".agents/skills/architecture-review/references/8-write.md",
+      "sha256": "77f098728fbbe59984c13680fd0c5bc7e7b93193ef6b7b8973dc1ccc4fecb171",
+      "bytes": 8568
+    },
+    {
+      "path": ".agents/skills/architecture-review/references/9-handoff.md",
+      "sha256": "db0d1d967928ea49f1b5af0097c14363e79053100d8e448425d4ccbc95a9fd2c",
+      "bytes": 2112
+    },
+    {
+      "path": ".agents/skills/architecture-review/references/lens-engine.md",
+      "sha256": "86fae08efe3f23927d8203fd09c29899ed9bf7da0088d0a45842138babd85e2c",
+      "bytes": 3886
+    },
+    {
+      "path": ".agents/skills/architecture-review/SKILL.md",
+      "sha256": "0854c9b9daae0d63754e3cca8f59d451c880f4f2ffd4aae030a9fd3292c5d9df",
+      "bytes": 6240
+    },
+    {
+      "path": ".agents/skills/art-bible/references/lens-art-director.md",
+      "sha256": "166be0dc92fb93416dcbbb0234b467489abf9b0cd57028e736062418e9016b44",
+      "bytes": 4215
+    },
+    {
+      "path": ".agents/skills/art-bible/references/lens-technical-artist.md",
+      "sha256": "547a4f1b1f708f136234e43b47dfbe421b2b0cd835d3c611d6408d8cf6053d4c",
+      "bytes": 1486
+    },
+    {
+      "path": ".agents/skills/art-bible/references/lens-ux-designer.md",
+      "sha256": "a7381144df5014ebbfc115be154924553e9ff1b2397ca1be95b6fa88a2fd9398",
+      "bytes": 1249
+    },
+    {
+      "path": ".agents/skills/art-bible/SKILL.md",
+      "sha256": "5a1723f617ff58ff9ea7863af0c47b92b1249f5132b68d9a01c72c0b9e1e9de7",
+      "bytes": 26031
+    },
+    {
+      "path": ".agents/skills/asset-audit/SKILL.md",
+      "sha256": "44dabbc7b49c0dc51eeefa5ef924ab1ee086ae5103d4a487f98024652354a203",
+      "bytes": 8411
+    },
+    {
+      "path": ".agents/skills/asset-spec/SKILL.md",
+      "sha256": "479d5a9fb3ff0b2e324f5e3871c9de79fb63d0aca49ca9ee9c824e56fb06cb28",
+      "bytes": 20895
+    },
+    {
+      "path": ".agents/skills/balance-check/SKILL.md",
+      "sha256": "90094438ab2bbac90a3f8a5a17c205550543b68bd7e4e70bd238de963d0bb848",
+      "bytes": 9545
+    },
+    {
+      "path": ".agents/skills/brainstorm/references/full-concept.md",
+      "sha256": "12c47f6323457a32918262df1d9680caf0b00001939a9b777bb49f7d872103f8",
+      "bytes": 12816
+    },
+    {
+      "path": ".agents/skills/brainstorm/SKILL.md",
+      "sha256": "f6038d118a9ee566913fb1ed9c9b343f72e2b1643f229b49b22362f8de3f5431",
+      "bytes": 7472
+    },
+    {
+      "path": ".agents/skills/bug-report/SKILL.md",
+      "sha256": "42e41f967fccb1c81701fd8ce82486dfab168e81da19c2903eb9a12d7b49eaaa",
+      "bytes": 10851
+    },
+    {
+      "path": ".agents/skills/bug-triage/SKILL.md",
+      "sha256": "c11ed456a104f714a2fcb4519e432b5f953fb4aa6522d810d7acec7fbec1236b",
+      "bytes": 9753
+    },
+    {
+      "path": ".agents/skills/code-review/references/lens-engine.md",
+      "sha256": "936efe6fd444f0b9adb4e8f33a1d2829b7f9f4090a2b2586869fbb583d5464d0",
+      "bytes": 3775
+    },
+    {
+      "path": ".agents/skills/code-review/SKILL.md",
+      "sha256": "4b2c6002bfadf898342ee6474f2d9dfb495b1644ccee1a5d7af43a1fdb349621",
+      "bytes": 14375
+    },
+    {
+      "path": ".agents/skills/consistency-check/SKILL.md",
+      "sha256": "d9b1c2e9bc1bfbf7667290a41b881c73ec320d3eeb3f428d6863b17de53875fe",
+      "bytes": 15636
+    },
+    {
+      "path": ".agents/skills/content-audit/SKILL.md",
+      "sha256": "921d8988707e5d0247a17b4a7e3fa4d62ac64f5d6aef3596dae88106a17265d9",
+      "bytes": 15146
+    },
+    {
+      "path": ".agents/skills/create-architecture/references/0-load-context.md",
+      "sha256": "0b39cb0c8ab23fde2f4627e3789668d93e4fff9bb667399fcd43cdc75167e413",
+      "bytes": 10583
+    },
+    {
+      "path": ".agents/skills/create-architecture/references/1-layers.md",
+      "sha256": "a24a99e3336f0ec0b8424b85819091301021fd78e1002ac7d39163e26b5a1d30",
+      "bytes": 2542
+    },
+    {
+      "path": ".agents/skills/create-architecture/references/2-module-ownership.md",
+      "sha256": "f5b996ff9afaa173787aea35934fd6975b141b2be5ce5597f8eb45295be3322e",
+      "bytes": 1147
+    },
+    {
+      "path": ".agents/skills/create-architecture/references/3-data-flow.md",
+      "sha256": "a5e4d63e3c128878cac7f9630fc3482cfbe881a0a0026506a6d3e55f35f6686f",
+      "bytes": 990
+    },
+    {
+      "path": ".agents/skills/create-architecture/references/4-api-boundaries.md",
+      "sha256": "27ea33935e8136e671cd7e8c8413a71d493e537866eac8ff535caca3511419dc",
+      "bytes": 1017
+    },
+    {
+      "path": ".agents/skills/create-architecture/references/5-adr-audit.md",
+      "sha256": "cdcab3c6e0d722a31357d38099d474016f4129b88f02e98378725ab9bc5dc6ec",
+      "bytes": 1923
+    },
+    {
+      "path": ".agents/skills/create-architecture/references/6-missing-adrs.md",
+      "sha256": "a09e493f6a8bc0c99c8bc48130f6c773aac0c53c7669706525c99b70f6c6b444",
+      "bytes": 715
+    },
+    {
+      "path": ".agents/skills/create-architecture/references/7-write.md",
+      "sha256": "a5a68d423e27ec7b3393c370b0ee840439b3194f510623b34046841191353cac",
+      "bytes": 4894
+    },
+    {
+      "path": ".agents/skills/create-architecture/references/8-handoff.md",
+      "sha256": "e24c779a96f51ea8289c440c53464f1e9b36fcc2e23b544314c0ad144a583f22",
+      "bytes": 2466
+    },
+    {
+      "path": ".agents/skills/create-architecture/SKILL.md",
+      "sha256": "b819e22111ebd31dac27829e497deae1eff67a2e3e8e3adafb7b193805e7c7a8",
+      "bytes": 7482
+    },
+    {
+      "path": ".agents/skills/create-control-manifest/SKILL.md",
+      "sha256": "6e8f07a089294d196c304196737eb8b5bf11cd71003f1df747b49ad4a57971f4",
+      "bytes": 13644
+    },
+    {
+      "path": ".agents/skills/create-epics/CONTRACT.md",
+      "sha256": "358d62f8e58da9513c9e6cbe6a96bf75d828c78de245754d2681cd0617bd3a62",
+      "bytes": 7533
+    },
+    {
+      "path": ".agents/skills/create-epics/references/pr-epic-gate.md",
+      "sha256": "990efdfb2d6955ace5c3562e4753a5a8599f63cb39a48e51366124bcbca4f6d3",
+      "bytes": 1657
+    },
+    {
+      "path": ".agents/skills/create-epics/SKILL.md",
+      "sha256": "1abd44f9b83cc70137c4df3234bdc9fde4a3f2a21b6467f94104cfa3babe345f",
+      "bytes": 12529
+    },
+    {
+      "path": ".agents/skills/create-stories/CONTRACT.md",
+      "sha256": "5b5d2f03e0d6c1476abfa59161e0a85057c31d4d686134a41322cc769f64535e",
+      "bytes": 9005
+    },
+    {
+      "path": ".agents/skills/create-stories/references/qa-lead-gate.md",
+      "sha256": "1c3eb43de23a63894a51038813e0fc63ae3f514f7d743f15cffff1de8fd9d27b",
+      "bytes": 3110
+    },
+    {
+      "path": ".agents/skills/create-stories/SKILL.md",
+      "sha256": "49584a1384a5a83fe21bf2c55d2c3b64f102afae5dfefa1918a270bebb3cca86",
+      "bytes": 20795
+    },
+    {
+      "path": ".agents/skills/cut/SKILL.md",
+      "sha256": "69141d319681bc99eb2c45bbdddb1fdc7179d5fc84c556c6db4b32e6b9295631",
+      "bytes": 10386
+    },
+    {
+      "path": ".agents/skills/day-one-patch/agents/openai.yaml",
+      "sha256": "3bf863a8856d04a6a1c4f23b3aae6cbf5388544129662c55cc733c2d9c23bbbf",
+      "bytes": 45
+    },
+    {
+      "path": ".agents/skills/day-one-patch/SKILL.md",
+      "sha256": "a9c421007b6e0ba85fb51a7c37bbd1ac280f0463b3079c0b376ce87e2d48f440",
+      "bytes": 11712
+    },
+    {
+      "path": ".agents/skills/design-review/SKILL.md",
+      "sha256": "229a8cf93632e239dfb410ffa91cb3ad1414919f6f5467beeb65166a11d8125e",
+      "bytes": 28688
+    },
+    {
+      "path": ".agents/skills/design-system/references/1-parse-arguments.md",
+      "sha256": "8ef3cde4c5ab6d9714ce9f4bcdb0419ef292e09ed0f2094b537ba8e4258604c6",
+      "bytes": 6963
+    },
+    {
+      "path": ".agents/skills/design-system/references/2-gather-context.md",
+      "sha256": "fd60b96fba4690183d037f2e4f38ba3cbd9255d9f972a8d35edcdcf3e8b6f86a",
+      "bytes": 12309
+    },
+    {
+      "path": ".agents/skills/design-system/references/3-file-skeleton.md",
+      "sha256": "d9dfda4386126b76a7ecdd705eed19901d2c11e0773871201214423d4f1eeee6",
+      "bytes": 3169
+    },
+    {
+      "path": ".agents/skills/design-system/references/4-section-design.md",
+      "sha256": "1a126bad33266af36c64f994414ac2166bfd2b80f8e65576b8363c5634d56e88",
+      "bytes": 29751
+    },
+    {
+      "path": ".agents/skills/design-system/references/5-post-design.md",
+      "sha256": "100368a1eb3c38e7730c6494a606d3fbc83f99d54f213bc802be1e8eae232441",
+      "bytes": 10854
+    },
+    {
+      "path": ".agents/skills/design-system/references/lens-creative-director.md",
+      "sha256": "783ae4cb2a19bc79f9ced53cc8da5b19bc77a6a7fc08f83881e42bebcefbb9f7",
+      "bytes": 1836
+    },
+    {
+      "path": ".agents/skills/design-system/references/lens-qa-lead.md",
+      "sha256": "7a6a6e93a1d203039ab7e51da686cdfe93610c7361e71be7ffd1995d2a085dbe",
+      "bytes": 1274
+    },
+    {
+      "path": ".agents/skills/design-system/references/lens-specialists.md",
+      "sha256": "45a71be806d587fa17f527d6baf3ff435f96fa98d7649b18d3a1780ad1f50bc0",
+      "bytes": 3315
+    },
+    {
+      "path": ".agents/skills/design-system/references/lens-systems-designer.md",
+      "sha256": "0a779d324fa54981188dd4c144dcb97de53712f8363bddfebd7fed795d9a37f5",
+      "bytes": 2619
+    },
+    {
+      "path": ".agents/skills/design-system/SKILL.md",
+      "sha256": "48d492348356aead7b572acdaa6d396c6b7f4ff341ed6ba11f9648caeb8ba494",
+      "bytes": 9471
+    },
+    {
+      "path": ".agents/skills/dev-story/agents/openai.yaml",
+      "sha256": "3bf863a8856d04a6a1c4f23b3aae6cbf5388544129662c55cc733c2d9c23bbbf",
+      "bytes": 45
+    },
+    {
+      "path": ".agents/skills/dev-story/CONTRACT.md",
+      "sha256": "a56a717f10ec5695956a0a373b6b203fc519d354b1b0d5e47ff611b210023b42",
+      "bytes": 13050
+    },
+    {
+      "path": ".agents/skills/dev-story/references/engine-checks.md",
+      "sha256": "c3ec789cc1c424366e5e85ebc56e5df317b5dfdd011f9e944e6242235640fdb4",
+      "bytes": 1528
+    },
+    {
+      "path": ".agents/skills/dev-story/references/version-mismatch.md",
+      "sha256": "580aed9de5ab3d43f1d49a9fce8eb13866436131df15eeebfc220feeab3212fb",
+      "bytes": 2124
+    },
+    {
+      "path": ".agents/skills/dev-story/SKILL.md",
+      "sha256": "bb33b9804bfce60ffa61dae698dc8d7d44e388f50148d2498a020b39dcad76ca",
+      "bytes": 21663
+    },
+    {
+      "path": ".agents/skills/estimate/SKILL.md",
+      "sha256": "9e3397920561d53608678149f2e5356b2069d17d16264a3c1f6cb25adc57d161",
+      "bytes": 6184
+    },
+    {
+      "path": ".agents/skills/gate-check/CONTRACT.md",
+      "sha256": "ee57edf6ce1adcfbbb7416271879a4fa91124d5ce9216feaa7da859e1ef73c0d",
+      "bytes": 11734
+    },
+    {
+      "path": ".agents/skills/gate-check/references/2b-workflow-tier.md",
+      "sha256": "02216887f7636f438cfd4ba961d68cf5cc5fcfc11ca1926bbd6169b3e05e4114",
+      "bytes": 7310
+    },
+    {
+      "path": ".agents/skills/gate-check/references/3-run-gate-check.md",
+      "sha256": "437a3030b8b2c53adee795135571108b969e8ec360980c290be338fe2087a6eb",
+      "bytes": 9380
+    },
+    {
+      "path": ".agents/skills/gate-check/references/4-assessment.md",
+      "sha256": "7b8405d9c5a6c9f7b8dafa5cab634d499797a6bd65bb2296b4d50bf8e162b582",
+      "bytes": 8022
+    },
+    {
+      "path": ".agents/skills/gate-check/references/5-verdict.md",
+      "sha256": "a6aae49e722fa128ba572ef77ad8392d8367625b99639aeeee88b5ead3c44dbc",
+      "bytes": 9027
+    },
+    {
+      "path": ".agents/skills/gate-check/references/6-update-stage.md",
+      "sha256": "ead50268ccc880051afef4cfa806e691928d28979853b26d2e66de0fc20f24c1",
+      "bytes": 3276
+    },
+    {
+      "path": ".agents/skills/gate-check/references/7-next-steps.md",
+      "sha256": "e1ce0eaf7d00fb557a3c38c7114c4effcf1ee3757becaad55616f3ac5911c307",
+      "bytes": 8005
+    },
+    {
+      "path": ".agents/skills/gate-check/references/gate-polish.md",
+      "sha256": "25bc728e8041f571bc4ee78f551a081c1728bc62fe1c466c7d1da89e4b0dfec8",
+      "bytes": 3549
+    },
+    {
+      "path": ".agents/skills/gate-check/references/gate-pre-production.md",
+      "sha256": "303c5a34b67ba74577dd8e5761e77dee64cbf7442ab3bf66f88526f06389b53d",
+      "bytes": 5947
+    },
+    {
+      "path": ".agents/skills/gate-check/references/gate-production.md",
+      "sha256": "4c86971d9d9c072cc36174b9303f770f7623fba436ee9d83765732d82f973377",
+      "bytes": 7995
+    },
+    {
+      "path": ".agents/skills/gate-check/references/gate-release.md",
+      "sha256": "d58cb29b140c056ea6f87c8c052b01de9d8d762ed91cd7284c18f5ea665eaef5",
+      "bytes": 3567
+    },
+    {
+      "path": ".agents/skills/gate-check/references/gate-systems-design.md",
+      "sha256": "2922d29ae25bf551b618929052bffaf68e1e8c20a5e635df9e463520f86bc41e",
+      "bytes": 1819
+    },
+    {
+      "path": ".agents/skills/gate-check/references/gate-technical-setup.md",
+      "sha256": "b039870bb36187ac9e759b85260e7c9ef887a13ee569428d80d460403e385964",
+      "bytes": 2473
+    },
+    {
+      "path": ".agents/skills/gate-check/SKILL.md",
+      "sha256": "96597e092bea4b3d536d701f13c8f2ab2e9f0a9758a1a21cd5e2dd9a953bedc1",
+      "bytes": 9263
+    },
+    {
+      "path": ".agents/skills/hotfix/agents/openai.yaml",
+      "sha256": "3bf863a8856d04a6a1c4f23b3aae6cbf5388544129662c55cc733c2d9c23bbbf",
+      "bytes": 45
+    },
+    {
+      "path": ".agents/skills/hotfix/SKILL.md",
+      "sha256": "2294a3305340a2c20acd4e9c28130b274d26d78cbf211074bdb4c7719c93051f",
+      "bytes": 11933
+    },
+    {
+      "path": ".agents/skills/launch-checklist/agents/openai.yaml",
+      "sha256": "3bf863a8856d04a6a1c4f23b3aae6cbf5388544129662c55cc733c2d9c23bbbf",
+      "bytes": 45
+    },
+    {
+      "path": ".agents/skills/launch-checklist/SKILL.md",
+      "sha256": "5f0c4e254b30274b6e633acdd96303cede7bca3b5736e206565282091042d4e6",
+      "bytes": 16940
+    },
+    {
+      "path": ".agents/skills/localize/SKILL.md",
+      "sha256": "42452c74830a96828b7c6441edf0d6a7c9eecccaccbc19b2b562b63160003741",
+      "bytes": 21371
+    },
+    {
+      "path": ".agents/skills/map-systems/SKILL.md",
+      "sha256": "6b807e97745cde0f0ed3b0dc30111319517e28b30637378705dfce06ab1e3326",
+      "bytes": 22873
+    },
+    {
+      "path": ".agents/skills/milestone-review/SKILL.md",
+      "sha256": "975d59e1a5b58b611584cb8661f40d1a608ebae9699cc4a40ae005521242795a",
+      "bytes": 11311
+    },
+    {
+      "path": ".agents/skills/next-step/SKILL.md",
+      "sha256": "c7cef844ec0294ccb08fa84a1497798447b2ce6fb7201c721a2c3badb0d40bfb",
+      "bytes": 23320
+    },
+    {
+      "path": ".agents/skills/onboard/SKILL.md",
+      "sha256": "70e03330c35627982f97506e742b51d018902003867fdc71d8009b0f19b7630d",
+      "bytes": 5756
+    },
+    {
+      "path": ".agents/skills/patch-notes/SKILL.md",
+      "sha256": "36c05eb97d8cead1b051b5d390fedaf1513bbe6384c520b3ca73f536a13056f4",
+      "bytes": 9930
+    },
+    {
+      "path": ".agents/skills/perf-profile/SKILL.md",
+      "sha256": "2e2e60d522d56585b0e2cfe6c53b4cfbdd19f4fe853d26812c533e041283cc60",
+      "bytes": 10488
+    },
+    {
+      "path": ".agents/skills/playtest-report/SKILL.md",
+      "sha256": "a83cc00d1e0b7f88001d72d675815d1377fa70101df1061bb7a9b5c0ad455214",
+      "bytes": 7122
+    },
+    {
+      "path": ".agents/skills/project-settings/SKILL.md",
+      "sha256": "0be767a90d7082495c886db30fba6fcb2fc6e8e05b66d99d8752c311cc84533c",
+      "bytes": 21565
+    },
+    {
+      "path": ".agents/skills/project-stage-detect/SKILL.md",
+      "sha256": "0f9736569855e6bded13448830b4cf9e7916f33f710f19c12783e7cda2146523",
+      "bytes": 13011
+    },
+    {
+      "path": ".agents/skills/propagate-design-change/SKILL.md",
+      "sha256": "7f4ec1b8029ef97b3183581d7d4876fd10b1c609ad1f25cb7e500333493f4760",
+      "bytes": 11488
+    },
+    {
+      "path": ".agents/skills/prototype/references/1-question.md",
+      "sha256": "cd7aa43ee013cf950d05c6cb55e4539b9d9d4778296fae73031b9fbe8890d693",
+      "bytes": 3403
+    },
+    {
+      "path": ".agents/skills/prototype/references/2-load-context.md",
+      "sha256": "2b6134f20acd6a9ea53458f16d1fdfdf64142c0b1eef481a99ecac9e96a24291",
+      "bytes": 969
+    },
+    {
+      "path": ".agents/skills/prototype/references/3-choose-path.md",
+      "sha256": "2271dc20efa39f4973f81a45c0dd92de055f8aebac0ae26466130b9d87d0de51",
+      "bytes": 6464
+    },
+    {
+      "path": ".agents/skills/prototype/references/4-plan.md",
+      "sha256": "d63a17b7f7aa399538e3e0e22ad559c36031aa605e5cb82737c14f4c92e6181a",
+      "bytes": 1336
+    },
+    {
+      "path": ".agents/skills/prototype/references/5-implement.md",
+      "sha256": "7c996727bc6686ea690d5d8b0bd4243c5c0a62b8dc01fb05cb816d0e9983a9a4",
+      "bytes": 3934
+    },
+    {
+      "path": ".agents/skills/prototype/references/6-debrief.md",
+      "sha256": "520531327abdba9e26ce1cb935db17d709ac27fb8413b20f783861cf3c9b2237",
+      "bytes": 2342
+    },
+    {
+      "path": ".agents/skills/prototype/references/7-report.md",
+      "sha256": "e7f28b6188be40cf32fd535b788718d2f541dec926dfe980439935a0b08aebbd",
+      "bytes": 1244
+    },
+    {
+      "path": ".agents/skills/prototype/references/8-cd-review.md",
+      "sha256": "b306ab00170c6fc3fd39a475a7ded7f1717d863c556ac3eea75f64cd0adbe59d",
+      "bytes": 2570
+    },
+    {
+      "path": ".agents/skills/prototype/references/9-summary.md",
+      "sha256": "26fa38c28db154641303f2c9f81ea4aea44cebb4abf74293289125bd1b033ca3",
+      "bytes": 3713
+    },
+    {
+      "path": ".agents/skills/prototype/references/one-shot-0-door.md",
+      "sha256": "a36658122f9eaf277b48d800264bde618e0afc5febc5c1aec929aa361a764a61",
+      "bytes": 9331
+    },
+    {
+      "path": ".agents/skills/prototype/references/one-shot-1-card.md",
+      "sha256": "dd3934eec4f37f70f63b8643af6547218a0aec8806858861a28482855c8633e7",
+      "bytes": 16134
+    },
+    {
+      "path": ".agents/skills/prototype/references/one-shot-2-build.md",
+      "sha256": "f659478bf707ef1f59685e2704185c6a2d6ce8f4050160b31ad506a2353bd17b",
+      "bytes": 8610
+    },
+    {
+      "path": ".agents/skills/prototype/references/one-shot-2c-self-check.md",
+      "sha256": "30c6c9ef123f23bf2124e7c0d4150c9c0d6c4427f28981c35e3bf73213b26fa9",
+      "bytes": 5693
+    },
+    {
+      "path": ".agents/skills/prototype/references/one-shot-3-handover.md",
+      "sha256": "ee785f5e8a4d0041dba467359fc1f0599edf91c1239e91eca5a9f0e5117c1f8f",
+      "bytes": 7213
+    },
+    {
+      "path": ".agents/skills/prototype/references/one-shot-4-change.md",
+      "sha256": "9ab735be8bef484e738a67bd072689bd5b8a3d1274991c8c78407abbee450448",
+      "bytes": 11194
+    },
+    {
+      "path": ".agents/skills/prototype/references/one-shot-5-grow.md",
+      "sha256": "f2ff7fb5656e36274fcd3d0d8fdd2d5a47d700be89c1daa1393dcdd4db68fdb0",
+      "bytes": 13707
+    },
+    {
+      "path": ".agents/skills/prototype/references/one-shot-files.md",
+      "sha256": "de62cfc9db6c791f8679339938601528ed041f3a19c23ef88ed13a163d12e4c1",
+      "bytes": 8325
+    },
+    {
+      "path": ".agents/skills/prototype/references/spike-mode.md",
+      "sha256": "62610e8fe1ea3b148c7b3d19ea594fed8d32953203b2f1159287abae794e1d94",
+      "bytes": 4038
+    },
+    {
+      "path": ".agents/skills/prototype/SKILL.md",
+      "sha256": "60b18fbfaa8c1a3bf96d08c2a7fe865eae5e2cd5bbc530af281f99fde65eb614",
+      "bytes": 9307
+    },
+    {
+      "path": ".agents/skills/qa-plan/SKILL.md",
+      "sha256": "c76f431e066e756fe082c7a24cf3113d58dad1f84871619f92f0f205a91ee435",
+      "bytes": 17812
+    },
+    {
+      "path": ".agents/skills/quick-design/SKILL.md",
+      "sha256": "c55b4cb70a8f5e81eef1271089c96248738c22f4aed60ddff2f44eab5ec57438",
+      "bytes": 12196
+    },
+    {
+      "path": ".agents/skills/regression-suite/SKILL.md",
+      "sha256": "141beb3c9b7ef28b6bc3ac196c62f7cff0759c2a012abf3dfadc6be1a7d2177f",
+      "bytes": 14361
+    },
+    {
+      "path": ".agents/skills/release-checklist/SKILL.md",
+      "sha256": "c203c0d7984aa83df1d62f510545eb016fb46fa85a4df119a92d911d66455508",
+      "bytes": 15192
+    },
+    {
+      "path": ".agents/skills/retrospective/SKILL.md",
+      "sha256": "4361f0af11d52775093e8e47c11b68f72bd10d559e6d24fab7cefa9d03860037",
+      "bytes": 12683
+    },
+    {
+      "path": ".agents/skills/reverse-document/references/from-a-game.md",
+      "sha256": "1c64e13d84d3cbdf0353e7452d4825cdcbafb8d7dd3a4ef6400a8f02c9c5bdd9",
+      "bytes": 6299
+    },
+    {
+      "path": ".agents/skills/reverse-document/SKILL.md",
+      "sha256": "1c57a8803d5e51194bf5b727ef96c7e767985b1c949f5df64ae525ed87c82a7b",
+      "bytes": 16469
+    },
+    {
+      "path": ".agents/skills/review-all-gdds/references/1-load.md",
+      "sha256": "3a5bfae925faa8ceec1b3533d7eaf12b43b66b0a7b9a00a2d938cb22006ed997",
+      "bytes": 5046
+    },
+    {
+      "path": ".agents/skills/review-all-gdds/references/2-consistency.md",
+      "sha256": "7460f9f660dce6e9f51e28ce2ce192aadc281828696ac026b71719c90dc26389",
+      "bytes": 6503
+    },
+    {
+      "path": ".agents/skills/review-all-gdds/references/3-design-holism.md",
+      "sha256": "6c00a834c1f38348bdc8fda6c2573c9790557616b71b0ad2046773835cc5d2a3",
+      "bytes": 7695
+    },
+    {
+      "path": ".agents/skills/review-all-gdds/references/4-scenarios.md",
+      "sha256": "d047503556c710fc47bd7eb33562e59c10807eb417c4b8639a45f11c6bd32fa6",
+      "bytes": 4485
+    },
+    {
+      "path": ".agents/skills/review-all-gdds/references/5-report.md",
+      "sha256": "5627de2493b435aa561832f268c57c2b092d6c3b9a62bc62c2db66a43993e03f",
+      "bytes": 4662
+    },
+    {
+      "path": ".agents/skills/review-all-gdds/references/6-write.md",
+      "sha256": "591fdfa7904e3d0cf583ec547109781f9bd2f294202a72641ad835feee166d7c",
+      "bytes": 2507
+    },
+    {
+      "path": ".agents/skills/review-all-gdds/references/7-handoff.md",
+      "sha256": "79c3f3f00ba5e7c058a0524129e613412f3476c7c89e02daa61ad3dbee208d6c",
+      "bytes": 2060
+    },
+    {
+      "path": ".agents/skills/review-all-gdds/SKILL.md",
+      "sha256": "879dea0c49b43efcc5290c890263f3050dd1f1d93cc8fe8a1e00fd0aa2700b79",
+      "bytes": 7682
+    },
+    {
+      "path": ".agents/skills/scope-check/SKILL.md",
+      "sha256": "8f3b6ef845cb7d00a6224ad46ae9df5a174ea29598e5b05dc20e69ac77b858d8",
+      "bytes": 7194
+    },
+    {
+      "path": ".agents/skills/security-audit/SKILL.md",
+      "sha256": "a6f1132bebb3179cd3bd838ba1c11609e360f6e98c770966844c23fdf0f41541",
+      "bytes": 22647
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/11-upgrade.md",
+      "sha256": "758f9f9f1bd6bfc8980b8ada54c236171efcc483d783018549309d02d68e0a88",
+      "bytes": 4496
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/12-output-summary.md",
+      "sha256": "a9b6385d6da3ddff78abeb3b3315fa39416cd2115ce1745e9dea18ebadb8fbb1",
+      "bytes": 1739
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/2-guided-mode.md",
+      "sha256": "5eb3cfc8a20de757b459212ea1701d815b8bdc4d44b8e1e781edb511933d415a",
+      "bytes": 10167
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/3-version.md",
+      "sha256": "7d2749338a4b90c01f42b29ff551d8743424341f0ab94cb67a8960c9b91210c0",
+      "bytes": 2663
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/4-project-stack.md",
+      "sha256": "18d050cca0d8836acca47e9c54e15f1ec455e03cc86675ca7eb7aa82e8a44a0a",
+      "bytes": 2029
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/5-technical-preferences.md",
+      "sha256": "9fe5254cde8473b0985b3fb16747d0a805276f29db7e6b7581054e134749bcca",
+      "bytes": 8763
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/5.5-project-yaml.md",
+      "sha256": "f349ee132e662c0fba04a9915f5ab463516d62fa7f64a0ac53e7b05d290aa62f",
+      "bytes": 29341
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/6-knowledge-gap.md",
+      "sha256": "21a5ae3ae4b5e438e7bece6f118bfe69883620f9012681421669c05964d712b0",
+      "bytes": 1939
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/7-reference-docs.md",
+      "sha256": "73a74b1ad3c4405dfe15ddc51dc9568165fc059f8da3cfb26e57f0d37dd2e4fc",
+      "bytes": 6170
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/7.5-scaffold.md",
+      "sha256": "c23acaf9fa066ec136a9b7c8d709fe4b46c60086bb2f63eba0094cff23947540",
+      "bytes": 4186
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/8-verify.md",
+      "sha256": "450ffccb1dbd577e3a39b1eaccb4a5f52c9d1ce0416eb3f4beb4bc6bd7636ef5",
+      "bytes": 2041
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/godot-language-config.md",
+      "sha256": "7bf3c486e873f71d72d3f665f7663a411c7ca862732f7a3712f8a5c64c157e71",
+      "bytes": 7572
+    },
+    {
+      "path": ".agents/skills/setup-engine/references/web.md",
+      "sha256": "e39112016aa1f2b29cd45ff5a648118eac6b56a8a182862d2e8a605977036a50",
+      "bytes": 12903
+    },
+    {
+      "path": ".agents/skills/setup-engine/SKILL.md",
+      "sha256": "f7729154f5df9abb04b731e250b7af395742ed9a9aeb8293702537d716fb7e60",
+      "bytes": 8020
+    },
+    {
+      "path": ".agents/skills/skill-improve/SKILL.md",
+      "sha256": "f59066b77b12958ca2215ae1ba9efa7856184eac691faf22c8f4e714c3c3b0e4",
+      "bytes": 7691
+    },
+    {
+      "path": ".agents/skills/skill-test/SKILL.md",
+      "sha256": "3f817c1f0536f8cc7f4778e22b4176ab586dcd4840be6e72922fc0e067465d04",
+      "bytes": 27382
+    },
+    {
+      "path": ".agents/skills/smoke-check/references/1-detect-setup.md",
+      "sha256": "10d2bb2796fbd8b31a787bc73890066a86accc8159be398162f03e948cd71069",
+      "bytes": 5664
+    },
+    {
+      "path": ".agents/skills/smoke-check/references/2-run-tests.md",
+      "sha256": "41b1b33fd6891fbeedcb23b9d09b48a911278534c8b1edb4914dc6035ec826af",
+      "bytes": 13531
+    },
+    {
+      "path": ".agents/skills/smoke-check/references/3-coverage.md",
+      "sha256": "db1d5af002dd3d0661a820abbcaa31b21fdfa499153ef6883abc1116c0654d23",
+      "bytes": 1656
+    },
+    {
+      "path": ".agents/skills/smoke-check/references/4-manual-checks.md",
+      "sha256": "d7e7de30d11268a6eb370d65b26bcc261310b824a6a662519f0828beb2c98f8b",
+      "bytes": 5774
+    },
+    {
+      "path": ".agents/skills/smoke-check/references/5-report.md",
+      "sha256": "b221b773f4c8db5a9459ec6c3dd2fd8fe252e9d2b30dcd46d6bf5e348ba51839",
+      "bytes": 6780
+    },
+    {
+      "path": ".agents/skills/smoke-check/references/6-write-gate.md",
+      "sha256": "630e81acd4fb4c8312bfae65afaf83d284a825395c9614d8e49b02a42bc18fec",
+      "bytes": 4618
+    },
+    {
+      "path": ".agents/skills/smoke-check/SKILL.md",
+      "sha256": "cff315ce5216428df8943f6a0c8a9da95bb5f7ceb41fa2fd19b7ef7577af7f63",
+      "bytes": 5087
+    },
+    {
+      "path": ".agents/skills/soak-test/SKILL.md",
+      "sha256": "c472c99ca6fb185ecb6fea67462819eb5bcb60eb545845a32f1c6f69063c2afd",
+      "bytes": 13210
+    },
+    {
+      "path": ".agents/skills/sprint-plan/SKILL.md",
+      "sha256": "37f387985fce31ea12fcd83bf80e61a2b8613aa20e8f255130123ef2cd49f37f",
+      "bytes": 19919
+    },
+    {
+      "path": ".agents/skills/sprint-status/SKILL.md",
+      "sha256": "4476e05942d4f475e138bbd7351abac992a06cf9efbb8a6e277886fae2940e27",
+      "bytes": 12298
+    },
+    {
+      "path": ".agents/skills/start/SKILL.md",
+      "sha256": "0b38fd9674b77f8ebf3a7d673c9d647264434903b0b6fd07cc4bff99a3a5682c",
+      "bytes": 19703
+    },
+    {
+      "path": ".agents/skills/story-done/agents/openai.yaml",
+      "sha256": "3bf863a8856d04a6a1c4f23b3aae6cbf5388544129662c55cc733c2d9c23bbbf",
+      "bytes": 45
+    },
+    {
+      "path": ".agents/skills/story-done/CONTRACT.md",
+      "sha256": "716a4b6225e3769b125977961bc85150fe4994dd46de285b7d4107bcca9309ec",
+      "bytes": 11412
+    },
+    {
+      "path": ".agents/skills/story-done/references/review-gates.md",
+      "sha256": "49618b4e574a5db5dd9b25bc681b92d357b513ef9e05c760a4509d0471913741",
+      "bytes": 2464
+    },
+    {
+      "path": ".agents/skills/story-done/references/sprint-next.md",
+      "sha256": "7b6ccd2b4abad443b990b28da8ba2db1d861e28c3005d08e1abc5f00d8eef116",
+      "bytes": 1492
+    },
+    {
+      "path": ".agents/skills/story-done/references/tech-debt-row.md",
+      "sha256": "876c7b10231b65a2c7883a4dd8a36eefdba529a2dee5e56bcbef2aa675cf1b21",
+      "bytes": 1329
+    },
+    {
+      "path": ".agents/skills/story-done/SKILL.md",
+      "sha256": "8073104d580b4705a86b4822760f5f1f0b6653c93200292c2ff26feb0cf0f7dd",
+      "bytes": 23490
+    },
+    {
+      "path": ".agents/skills/story-readiness/CONTRACT.md",
+      "sha256": "729ddd4f06a531e71de7f24eb4693fe452007de1992f2f17eccdaf1c4760b3d5",
+      "bytes": 6616
+    },
+    {
+      "path": ".agents/skills/story-readiness/references/qa-lead-gate.md",
+      "sha256": "f919c5e0cfc94d1caccd0c68c4ab5b97b64fca75c24d1632ab6f2297a534c226",
+      "bytes": 1643
+    },
+    {
+      "path": ".agents/skills/story-readiness/SKILL.md",
+      "sha256": "1dce50e1a3a3e1735495e7d9ae4cdf449b2a158d37ca5a6df9cf62b20f4807c0",
+      "bytes": 15602
+    },
+    {
+      "path": ".agents/skills/team-audio/SKILL.md",
+      "sha256": "692274f9a00e69ba6d978c60d865c12e9376601fe2ee8aadaa04cb44e4834ec7",
+      "bytes": 17873
+    },
+    {
+      "path": ".agents/skills/team-combat/SKILL.md",
+      "sha256": "8880ba91ad36c21208271d4054d697a80be120aafd257a119e86761125387ba1",
+      "bytes": 19437
+    },
+    {
+      "path": ".agents/skills/team-level/SKILL.md",
+      "sha256": "ee1360ae7a688c51fede3a20a61f8368bfbd6de82d509df1826725d4a69a5fd2",
+      "bytes": 19408
+    },
+    {
+      "path": ".agents/skills/team-live-ops/SKILL.md",
+      "sha256": "de4269d5c4e81154e71d99d2fa6a46053d79893359d7771f87986ebf7c5059f0",
+      "bytes": 17281
+    },
+    {
+      "path": ".agents/skills/team-narrative/SKILL.md",
+      "sha256": "c64d527b123ea176bdaaad35ce73f7ac94fac8004b8b42a770116311b401777a",
+      "bytes": 18273
+    },
+    {
+      "path": ".agents/skills/team-polish/SKILL.md",
+      "sha256": "780aaaaf9e4b64c4b7d672db043758bdca90b7b3177543c23318b9f22d33da56",
+      "bytes": 18529
+    },
+    {
+      "path": ".agents/skills/team-qa/SKILL.md",
+      "sha256": "c5c85fdb2ae4568002c8498ac50b852f26aecb96cf06abfeec93dada16263ee9",
+      "bytes": 26416
+    },
+    {
+      "path": ".agents/skills/team-release/SKILL.md",
+      "sha256": "35ecaf3c03d139574029810f369010ce5a3cf3e24c38fddaef09a953929eda2c",
+      "bytes": 22818
+    },
+    {
+      "path": ".agents/skills/team-ui/SKILL.md",
+      "sha256": "f0154c810f0ed27df456b5997a028568ea955ef85e251a6c1b9707c8574f0df6",
+      "bytes": 22984
+    },
+    {
+      "path": ".agents/skills/tech-debt/SKILL.md",
+      "sha256": "24d2d5bb050086b611a67ce3ff4ca4a38e10a1db5733f61963e647e7aae0e479",
+      "bytes": 10431
+    },
+    {
+      "path": ".agents/skills/test-evidence-review/SKILL.md",
+      "sha256": "2277a029e311cd5db500c8f33af1d52ffd6f58a89fb3800e0b771d14ddb0d785",
+      "bytes": 16952
+    },
+    {
+      "path": ".agents/skills/test-flakiness/SKILL.md",
+      "sha256": "159567aa3e7a84f8484d899251432a2b104b2b536a37f1c33571054469d2a0c6",
+      "bytes": 10753
+    },
+    {
+      "path": ".agents/skills/test-helpers/SKILL.md",
+      "sha256": "13beb394053d8cb91b912380c43107e9d4893a25d5356ce07db6090e285530af",
+      "bytes": 18169
+    },
+    {
+      "path": ".agents/skills/test-setup/references/1-detect.md",
+      "sha256": "5461f9a3399e9af56ae6c23a80271118097465f99f5298ab4ccbbacac3e9f765",
+      "bytes": 1943
+    },
+    {
+      "path": ".agents/skills/test-setup/references/2-plan.md",
+      "sha256": "26c92ffca849dbde78d6ea222979c326e4b620ba8f89e08c092c529d83096309",
+      "bytes": 1704
+    },
+    {
+      "path": ".agents/skills/test-setup/references/3-directories.md",
+      "sha256": "89cb759a8371acf71b36b2f09dea7836a29124929fb4c1a901d4c19d6282be86",
+      "bytes": 13466
+    },
+    {
+      "path": ".agents/skills/test-setup/references/4-ci.md",
+      "sha256": "348c5d26ceeaa945a50adb8d49d3de5d697d76abff3b92c5b8c8f2e033f20081",
+      "bytes": 6683
+    },
+    {
+      "path": ".agents/skills/test-setup/references/5-smoke-seed.md",
+      "sha256": "379591347534bd29c5028c8da812113a2e2f6102f969a16cd394fb298979deb1",
+      "bytes": 1295
+    },
+    {
+      "path": ".agents/skills/test-setup/references/6-summary.md",
+      "sha256": "08efe5ca33797e047ed6c14cc6e121a261033c5c08ed534c3335632202c1d2a4",
+      "bytes": 2088
+    },
+    {
+      "path": ".agents/skills/test-setup/SKILL.md",
+      "sha256": "0f816960ac7c1e9db28b67344262724a7103d3d2b1ab49b4650fe45da1e0be80",
+      "bytes": 3570
+    },
+    {
+      "path": ".agents/skills/ux-design/references/2-gather-context.md",
+      "sha256": "5b02ca139720808be3412997ab102936442fe00ecf6a3ecae7d197010308d5a0",
+      "bytes": 8420
+    },
+    {
+      "path": ".agents/skills/ux-design/references/3-file-skeleton.md",
+      "sha256": "a24525849ee01bd5d9d6df9e98d4f9114297d7d595a4a12697c1540d3dfa31c4",
+      "bytes": 5063
+    },
+    {
+      "path": ".agents/skills/ux-design/references/4-authoring.md",
+      "sha256": "84b2bbea7a8c38dac3a1c23a18f1ad9f5b3614ed0c3c8a01ce738966b3dc5b7e",
+      "bytes": 1690
+    },
+    {
+      "path": ".agents/skills/ux-design/references/5-crossref-handoff.md",
+      "sha256": "7f9e439aed36ab6d976bf8449c8baf7fe4e709716039c32973aaf895ba99f3f1",
+      "bytes": 2931
+    },
+    {
+      "path": ".agents/skills/ux-design/references/sections-hud.md",
+      "sha256": "59524eb5115e7c19e682f379e1e7504d5e3fb4ce07ea48a88f9bf8b8fd95dee3",
+      "bytes": 7340
+    },
+    {
+      "path": ".agents/skills/ux-design/references/sections-patterns.md",
+      "sha256": "e6cef65dcdd31c2ce54818c3bf62ca68de0ca934e72e14d83f18640a294eab2a",
+      "bytes": 2028
+    },
+    {
+      "path": ".agents/skills/ux-design/references/sections-ux-spec.md",
+      "sha256": "585cb36acbe880eee885c3a0352ab6ec1ccddaaf5fb359f0c1dfa8ea65c19afa",
+      "bytes": 12196
+    },
+    {
+      "path": ".agents/skills/ux-design/SKILL.md",
+      "sha256": "086630beeab20c690d5906bf5df4f406e7792b1c882aec4446871267363f8136",
+      "bytes": 9973
+    },
+    {
+      "path": ".agents/skills/ux-review/SKILL.md",
+      "sha256": "d0feefd8e9245ede65916555c4b3e77af0243453b7e5ab81c3c33d2b1f8a8a98",
+      "bytes": 15398
+    },
+    {
+      "path": ".agents/skills/vertical-slice/SKILL.md",
+      "sha256": "3ef75439b1515867e229735bb6d8ceae313599aadb1eb06b1f0918991bc2d412",
+      "bytes": 21662
+    },
+    {
+      "path": ".agents/skills/write-changelog/SKILL.md",
+      "sha256": "d84c476b35d9ea0590ac165bcd90610591a12ea12534eff6372861fd147c854c",
+      "bytes": 10607
+    },
+    {
+      "path": ".codex/agents/accessibility-specialist.toml",
+      "sha256": "c3387dfeaa3a52a9dcdd957ddb8412ee1ea04cb071093b2ce22158eb85883d97",
+      "bytes": 7180
+    },
+    {
+      "path": ".codex/agents/ai-programmer.toml",
+      "sha256": "5c077ce8a91c7beb602bc14acb6c1acc31c0c015a5aa437969187f109b176e27",
+      "bytes": 3283
+    },
+    {
+      "path": ".codex/agents/analytics-engineer.toml",
+      "sha256": "5b695f1784b317222e5d6fcf46c958fa1932317c7ab579a6e388c372eed5ada6",
+      "bytes": 3695
+    },
+    {
+      "path": ".codex/agents/art-director.toml",
+      "sha256": "18171fa3eaae1f2f431a110737b01fcbc376a685505a02425483f0529798b1a9",
+      "bytes": 5438
+    },
+    {
+      "path": ".codex/agents/audio-director.toml",
+      "sha256": "f075e8b6b4621616b1caeebfdfbef4825911c2ce4cb4efc3dc69a972a657cfa5",
+      "bytes": 3554
+    },
+    {
+      "path": ".codex/agents/community-manager.toml",
+      "sha256": "d90f77422da233f6ef15ba7d0bce690b41b8bd8be038c4264c141b2fe6ea75d5",
+      "bytes": 7052
+    },
+    {
+      "path": ".codex/agents/creative-director.toml",
+      "sha256": "ad8dcd19fcca2014cdf9aea52f95d2f6a26e8bf168d0d902c69904a44f1aa980",
+      "bytes": 12233
+    },
+    {
+      "path": ".codex/agents/devops-engineer.toml",
+      "sha256": "4fb1cfea5eccdc906d9e95cecf4f2facb5e0d74215b23671a65cbd9c4e8ab9b1",
+      "bytes": 4013
+    },
+    {
+      "path": ".codex/agents/economy-designer.toml",
+      "sha256": "2e2a00f1bed74268d53ec225c12c242260d63b77bd38b64f95692f2a4e1ed913",
+      "bytes": 5791
+    },
+    {
+      "path": ".codex/agents/engine-programmer.toml",
+      "sha256": "602340a8ddbdfc460694041ac6d45e4c03307c44e4bfba3cb152452e96ba3acc",
+      "bytes": 4561
+    },
+    {
+      "path": ".codex/agents/game-designer.toml",
+      "sha256": "352672caa589d0fe555993f5181f91bf4cf73f75d32515bf8f8a662ceda19112",
+      "bytes": 11768
+    },
+    {
+      "path": ".codex/agents/gameplay-programmer.toml",
+      "sha256": "4287d75cdf645f8b3b709eb1f076fff071f2438b9c2fba1e3338ae9f45320724",
+      "bytes": 5999
+    },
+    {
+      "path": ".codex/agents/godot-csharp-specialist.toml",
+      "sha256": "3a75d3ad35bce9c004a788b7f30e883ddc5edb368ea71e48f66abef93e278cd2",
+      "bytes": 17086
+    },
+    {
+      "path": ".codex/agents/godot-gdextension-specialist.toml",
+      "sha256": "3496b0e5bd7fd092cde522dc2509543398e2444215044237591fca6ef8d06b41",
+      "bytes": 14519
+    },
+    {
+      "path": ".codex/agents/godot-gdscript-specialist.toml",
+      "sha256": "1bcbd9d7b8dbd92abd5f1e9c4ba59b4614289616c221c066c9f9d1d637fca864",
+      "bytes": 12967
+    },
+    {
+      "path": ".codex/agents/godot-shader-specialist.toml",
+      "sha256": "0ee221358d5e496a21648839bc0ac700bed21289ff80f92a0be778c8dc71ab80",
+      "bytes": 11193
+    },
+    {
+      "path": ".codex/agents/godot-specialist.toml",
+      "sha256": "77de1b273002c82e354f3ef8b30023e28463184969b9092c9060ffb82c925d2a",
+      "bytes": 8376
+    },
+    {
+      "path": ".codex/agents/lead-programmer.toml",
+      "sha256": "a8acbe0ba83a0fd71e101a689244fa649a6115816ed7f0831cdd73d0c4f891a4",
+      "bytes": 4771
+    },
+    {
+      "path": ".codex/agents/level-designer.toml",
+      "sha256": "b7f231541c16f273d6fea9a76212efb21a6d0b76811c78b6a6d1f9738f5aecfb",
+      "bytes": 4116
+    },
+    {
+      "path": ".codex/agents/live-ops-designer.toml",
+      "sha256": "cfc79a8efa437c1881e194b1cd5f81144272c1f7c3e74c2a6252fc9ee1c9fa1c",
+      "bytes": 7942
+    },
+    {
+      "path": ".codex/agents/localization-lead.toml",
+      "sha256": "58be2d3edd157d8474f90ecade73867a2916f62fbcf2b18281b923f8ab772bf9",
+      "bytes": 8227
+    },
+    {
+      "path": ".codex/agents/narrative-director.toml",
+      "sha256": "eed73eb4ecc94c69432f092b2c32f14dc5b23d9ba1494d0e0ee21e12f87849bc",
+      "bytes": 5001
+    },
+    {
+      "path": ".codex/agents/network-programmer.toml",
+      "sha256": "1622cd59fbafcae27b3d1a845bdb0bd75112c7c4a47d74ca284fde3f5dba35cf",
+      "bytes": 4351
+    },
+    {
+      "path": ".codex/agents/performance-analyst.toml",
+      "sha256": "14be398d270314008d5148ea62674ab2cb40cbc0feb4ed53c95407db9ce2c1b7",
+      "bytes": 3917
+    },
+    {
+      "path": ".codex/agents/producer.toml",
+      "sha256": "583da26a5a9f00b72fd0c0d7c4af542fb20ccab5f1534648c29273df593ce8d2",
+      "bytes": 5815
+    },
+    {
+      "path": ".codex/agents/prototyper.toml",
+      "sha256": "6bc009a57bbc9df96f212223a56acea056b9eb178c9248bf5fbf2d3284ed7f0f",
+      "bytes": 12898
+    },
+    {
+      "path": ".codex/agents/qa-lead.toml",
+      "sha256": "bab255769e9b3912ce49ffdfc6fc4ae8a677b59104466a7fb46b7eb1811be584",
+      "bytes": 7124
+    },
+    {
+      "path": ".codex/agents/qa-tester.toml",
+      "sha256": "007aa45d8aac91aa567952ec22bc024cc3ca176e955a0ac95d17de3211f703fd",
+      "bytes": 9803
+    },
+    {
+      "path": ".codex/agents/release-manager.toml",
+      "sha256": "ac5634e4517e0011b07744893bdc637b869879c747c9baca3340718790c47cc7",
+      "bytes": 7063
+    },
+    {
+      "path": ".codex/agents/security-engineer.toml",
+      "sha256": "9cae5703a80e4ed40ab23fb90408868688cbee508e5072c81cd7d7f023930c1a",
+      "bytes": 6776
+    },
+    {
+      "path": ".codex/agents/sound-designer.toml",
+      "sha256": "6964365605173276bebe3aa1810395b5862a93b51bd16f7b8e9847817bd27661",
+      "bytes": 2870
+    },
+    {
+      "path": ".codex/agents/systems-designer.toml",
+      "sha256": "99316348fc20622f9dedbaed0aaa519329246691f187b8fb0dacd63e2f429120",
+      "bytes": 6009
+    },
+    {
+      "path": ".codex/agents/technical-artist.toml",
+      "sha256": "1c3f63f591a131ae0edbc72d94c90aefa0d6887cf36cb174484548197ef20002",
+      "bytes": 4449
+    },
+    {
+      "path": ".codex/agents/technical-director.toml",
+      "sha256": "aa1a7a0bacd3b3ea05f964ef81bae8e3acab8ddf84e613b23c6949542694608a",
+      "bytes": 6136
+    },
+    {
+      "path": ".codex/agents/tools-programmer.toml",
+      "sha256": "bd6b308cb97643359ec17fd8db3ab8b645f75d1a00a4cdabe0ec815a44bb1f3c",
+      "bytes": 4149
+    },
+    {
+      "path": ".codex/agents/ue-blueprint-specialist.toml",
+      "sha256": "4f13b72088eaa86ee53b86f062efe84c7a2773126465c61f1eb4ab7fd0d5ea2c",
+      "bytes": 8101
+    },
+    {
+      "path": ".codex/agents/ue-gas-specialist.toml",
+      "sha256": "d75aa6f8c60f4ead7c9080b02cb130a030250be9a01b76efa14336fef413ddc2",
+      "bytes": 7608
+    },
+    {
+      "path": ".codex/agents/ue-replication-specialist.toml",
+      "sha256": "3a6a9248eda188875481b93bcb4fc5ef1c3bc6fadb283e28fff5443141e55a46",
+      "bytes": 7395
+    },
+    {
+      "path": ".codex/agents/ue-umg-specialist.toml",
+      "sha256": "3c24f6418a66ea69091fb8a29b44057d0e6f265204d0ed03a58e4a47e14049e0",
+      "bytes": 7849
+    },
+    {
+      "path": ".codex/agents/ui-programmer.toml",
+      "sha256": "b930228e9afa36ba7617d2326b66bc2cffe7f923df81d047cf5734889647547f",
+      "bytes": 4354
+    },
+    {
+      "path": ".codex/agents/unity-addressables-specialist.toml",
+      "sha256": "a140abf62bc21a64bf38278ab49b4cdcfbcfe12ed9481ac6498222f4e0517f82",
+      "bytes": 9317
+    },
+    {
+      "path": ".codex/agents/unity-dots-specialist.toml",
+      "sha256": "446b9b15536c457686183392fc96313cfc71c5fe27e3e8ec79359c4ddee5a2f4",
+      "bytes": 8287
+    },
+    {
+      "path": ".codex/agents/unity-shader-specialist.toml",
+      "sha256": "8ec56cb1dacb8d51dd6925e623dd1b75a8f8d3af78972d77d64373f3c1db9ffe",
+      "bytes": 9119
+    },
+    {
+      "path": ".codex/agents/unity-specialist.toml",
+      "sha256": "2dfd17a0b2964b8cc07c02e0ba61259c34f91f47fdc95d3095f5eeb5c3df6755",
+      "bytes": 10794
+    },
+    {
+      "path": ".codex/agents/unity-ui-specialist.toml",
+      "sha256": "3438fbc38cb256c01dc8894e2fb1718a212a483d8c2dd46997551691a0586f15",
+      "bytes": 10127
+    },
+    {
+      "path": ".codex/agents/unreal-specialist.toml",
+      "sha256": "e50b31949e496bc99618dcd2d6d9ed34fb2ad81128363c64a141c2edd3fd1a01",
+      "bytes": 9883
+    },
+    {
+      "path": ".codex/agents/ux-designer.toml",
+      "sha256": "2d89977b4327015ed47f7db911af94cf8d392b8b388bc2c71aaf913973e6cdce",
+      "bytes": 3811
+    },
+    {
+      "path": ".codex/agents/world-builder.toml",
+      "sha256": "9ace0505f21b30cf7c65ce7e7aa5427de6620c6578fa68564341e400582a2dfd",
+      "bytes": 4454
+    },
+    {
+      "path": ".codex/agents/writer.toml",
+      "sha256": "dc1db49366a102e326508c2999e16eb3788c28fb0c44d80e1f52a0e98181dd39",
+      "bytes": 4117
+    },
+    {
+      "path": ".codex/config.toml",
+      "sha256": "f80f8c92c5084fb8c0d241059c14ca3156987c6bef43314d918ee2255ac2a629",
+      "bytes": 121
+    },
+    {
+      "path": ".codex/hooks.json",
+      "sha256": "2d42dc18ff6d3d877ebe884e9efc1f29af16861d1446a09affb0182fcbc37f34",
+      "bytes": 3411
+    },
+    {
+      "path": ".codex/hooks/__pycache__/event_input.cpython-312.pyc",
+      "sha256": "bb0208d6a1a6d415ae516905ee64d02f446c1a69ddc1eee5b63b2ce3f59dec82",
+      "bytes": 3692
+    },
+    {
+      "path": ".codex/hooks/__pycache__/event_log.cpython-312.pyc",
+      "sha256": "303d3a546d8d8bad19a38ccf1513769bee733a60f48228c70303dd089d8cba8f",
+      "bytes": 4665
+    },
+    {
+      "path": ".codex/hooks/dispatch.py",
+      "sha256": "972ed512be17456026d16e5371256adf81a7ebaa06565b4f864c6df31adf4b23",
+      "bytes": 4100
+    },
+    {
+      "path": ".codex/hooks/event_input.py",
+      "sha256": "592578286611e58ee262ed4944088e10f2e96f406f6091cb1d67e443fa3239ca",
+      "bytes": 2025
+    },
+    {
+      "path": ".codex/hooks/event_log.py",
+      "sha256": "51e658b9d4ad69e7d467c02a386207ed7646be04ee356e658f4d9eb595d4c9f9",
+      "bytes": 2125
+    },
+    {
+      "path": ".codex/hooks/run.sh",
+      "sha256": "a8f4ad04fb05a9d09774f1ff176c55c4fd67defcfc0e40b49cc354bd7e443d01",
+      "bytes": 858
+    },
+    {
+      "path": "studio-tests/AGENTS.md",
+      "sha256": "8b70651d16e08957cbcf74b092151b5b8517273b71e76bf8e0235dc4935fd6fc",
+      "bytes": 1495
+    },
+    {
+      "path": "studio-tests/agents/directors/art-director.md",
+      "sha256": "3162ded48aeaddfbe02af6f0b1c5fadc4176e15e902db85aa115050af08aef7e",
+      "bytes": 8972
+    },
+    {
+      "path": "studio-tests/agents/directors/creative-director.md",
+      "sha256": "fe0129ce6ce3ab44b03a1747fc9bee840cd744481037c5a1cab86f70b7538774",
+      "bytes": 9027
+    },
+    {
+      "path": "studio-tests/agents/directors/producer.md",
+      "sha256": "77404a62705ee5cc18cc0721f815267c562437dcf8f1592a37e97dcae3f258fb",
+      "bytes": 10761
+    },
+    {
+      "path": "studio-tests/agents/directors/technical-director.md",
+      "sha256": "cd309d5b24e2ed4cd555a6ecca1cc6d5b9c343889340ebbcf0eb04fd0bc73e6d",
+      "bytes": 11532
+    },
+    {
+      "path": "studio-tests/agents/engine/godot/godot-csharp-specialist.md",
+      "sha256": "d5985b0ca42ab0e401c4bf9821b01e9a19c85d8bce51d3afb80cfb67789ade3e",
+      "bytes": 5360
+    },
+    {
+      "path": "studio-tests/agents/engine/godot/godot-gdextension-specialist.md",
+      "sha256": "6efb5635546eedc1e84053c5f1853ac596f4299f639c6c9a97ac7607018bdac8",
+      "bytes": 6024
+    },
+    {
+      "path": "studio-tests/agents/engine/godot/godot-gdscript-specialist.md",
+      "sha256": "0110fd179c0b9d6204a16ad5909c5809925ce2f71061b5a4d9d425eb3c86c425",
+      "bytes": 5383
+    },
+    {
+      "path": "studio-tests/agents/engine/godot/godot-shader-specialist.md",
+      "sha256": "362655be3cb1bae79f9705647ea0d4a35a860478ff820027baca8e22f23356b0",
+      "bytes": 6056
+    },
+    {
+      "path": "studio-tests/agents/engine/godot/godot-specialist.md",
+      "sha256": "9d6bf090ff56220aa1bbd433e3a98741452024fc735febf978e932cb882df3bb",
+      "bytes": 6553
+    },
+    {
+      "path": "studio-tests/agents/engine/unity/unity-addressables-specialist.md",
+      "sha256": "66beba6f587b498e3b65ed704876cac8c2841c4b2b85a6d5e8f16fee5d7de9bc",
+      "bytes": 6886
+    },
+    {
+      "path": "studio-tests/agents/engine/unity/unity-dots-specialist.md",
+      "sha256": "e8aa4472bc39ef7eb9ee5262bd985e23e15bfbda1048f1874992d12c42dc5a67",
+      "bytes": 6343
+    },
+    {
+      "path": "studio-tests/agents/engine/unity/unity-shader-specialist.md",
+      "sha256": "c96c0e887d36dd586c4d0dc5a65036a79d3443eb68929e5732a659c9f5f98ed4",
+      "bytes": 5782
+    },
+    {
+      "path": "studio-tests/agents/engine/unity/unity-specialist.md",
+      "sha256": "2224f4952c1853d4d59f34791f1377aafa22222d707b0689c7bc6376a4a0ad67",
+      "bytes": 6622
+    },
+    {
+      "path": "studio-tests/agents/engine/unity/unity-ui-specialist.md",
+      "sha256": "2e332b27c2b6ab8abe1cca16081f99e56862e5e92c549f5e49dbf30ac644c400",
+      "bytes": 5791
+    },
+    {
+      "path": "studio-tests/agents/engine/unreal/ue-blueprint-specialist.md",
+      "sha256": "6686dc816e532fda0a1e06925d2cae800256d7dbc38282eb079375de3d3bd7d2",
+      "bytes": 6259
+    },
+    {
+      "path": "studio-tests/agents/engine/unreal/ue-gas-specialist.md",
+      "sha256": "c9a28057fdbb5e484daa316b90d272ebab70a9246fd1edd2565030c729aa6ee9",
+      "bytes": 7455
+    },
+    {
+      "path": "studio-tests/agents/engine/unreal/ue-replication-specialist.md",
+      "sha256": "8cf234537c3a826945fb51ff4671aa92d18340a798d0410ad592c387c21759f7",
+      "bytes": 7400
+    },
+    {
+      "path": "studio-tests/agents/engine/unreal/ue-umg-specialist.md",
+      "sha256": "95d10b2ae26ad8156f2e154cc85dc59c1a422b2a673321a2a37531b8a1e9f6cd",
+      "bytes": 6706
+    },
+    {
+      "path": "studio-tests/agents/engine/unreal/unreal-specialist.md",
+      "sha256": "badd8c739180b47206867fa175c3f9384883b67852d134f418eea1dac47a1520",
+      "bytes": 6334
+    },
+    {
+      "path": "studio-tests/agents/leads/audio-director.md",
+      "sha256": "11e1d0df196eef3d9b7bb7e88d09d4045a55f4c501c416d0e4b3262877a49bcb",
+      "bytes": 8471
+    },
+    {
+      "path": "studio-tests/agents/leads/game-designer.md",
+      "sha256": "d8a177134bc0104c624dc2572335edb04746127aa7879add531c1ba89fadeb3d",
+      "bytes": 9527
+    },
+    {
+      "path": "studio-tests/agents/leads/lead-programmer.md",
+      "sha256": "eceaf8c17f4d087cca71458645e747b45f535c022645893ea315b84309694b3b",
+      "bytes": 9200
+    },
+    {
+      "path": "studio-tests/agents/leads/level-designer.md",
+      "sha256": "3af352063e1128f81b9cfcf50f13916c7d64ea018befca67aff3c386afe39fca",
+      "bytes": 8586
+    },
+    {
+      "path": "studio-tests/agents/leads/narrative-director.md",
+      "sha256": "da169123990d65baad151daf2deb5b921b23dec74a9ee8e055144ecaf5a4f349",
+      "bytes": 10409
+    },
+    {
+      "path": "studio-tests/agents/leads/qa-lead.md",
+      "sha256": "dfff20777be2bda34df2dde334469c6528779a0bd64bb14c86d5af1465309015",
+      "bytes": 10358
+    },
+    {
+      "path": "studio-tests/agents/leads/systems-designer.md",
+      "sha256": "b832776f46e5042aca2d7f0e0710c2269fc8fdae5c0df3f1d1c900f1c92aee97",
+      "bytes": 8481
+    },
+    {
+      "path": "studio-tests/agents/operations/analytics-engineer.md",
+      "sha256": "5cd8bd16cc8351038dba80c7503972b74af80c5de4148ffac6028fa5a64a904e",
+      "bytes": 8678
+    },
+    {
+      "path": "studio-tests/agents/operations/community-manager.md",
+      "sha256": "1db279962e0d250fd9ab0d8cde218a4d432755cf1b8cc731f754a8a9bb077815",
+      "bytes": 8116
+    },
+    {
+      "path": "studio-tests/agents/operations/devops-engineer.md",
+      "sha256": "2d88b31b08d07acb56add5db6e66ea2409945dda1ba3c0e032a29038f8200499",
+      "bytes": 8212
+    },
+    {
+      "path": "studio-tests/agents/operations/economy-designer.md",
+      "sha256": "8f72b53554de9346de9f437b9e1fc750d16ad3adceb6fd1919736dbb7cc67ca2",
+      "bytes": 7709
+    },
+    {
+      "path": "studio-tests/agents/operations/live-ops-designer.md",
+      "sha256": "a18bd66e60b1f854442c4773f7a9fb4284014f407e4a43b642f8b5e5eeb5135d",
+      "bytes": 7026
+    },
+    {
+      "path": "studio-tests/agents/operations/localization-lead.md",
+      "sha256": "e36a40211f5e11bcf10a0f9484ff32e6060aaa84834eba6f1a44bbc1695506d4",
+      "bytes": 8295
+    },
+    {
+      "path": "studio-tests/agents/operations/release-manager.md",
+      "sha256": "ec8ac7bcba71298790c9c5856071f281442d41309bf9fc6dfa6e2d7caedb94df",
+      "bytes": 8389
+    },
+    {
+      "path": "studio-tests/agents/qa/accessibility-specialist.md",
+      "sha256": "8f92f525a320a9e92b770fa824aae30c25494aee38c0c76e5a82788f6ff3a7d4",
+      "bytes": 6777
+    },
+    {
+      "path": "studio-tests/agents/qa/qa-tester.md",
+      "sha256": "35bc73789345a34943f881c8021e70d80c5d030dc11fac994eae5ae5b464047b",
+      "bytes": 8634
+    },
+    {
+      "path": "studio-tests/agents/qa/security-engineer.md",
+      "sha256": "ebf2c7f6ec07f5edac70b249eb89e579a99d47e5452075dcb8009d10de33147f",
+      "bytes": 8234
+    },
+    {
+      "path": "studio-tests/agents/specialists/ai-programmer.md",
+      "sha256": "bf420f94fdfa748daf3a88fcbcca4c13548d36b427290f2bdeaa9a54a98ee6c3",
+      "bytes": 5793
+    },
+    {
+      "path": "studio-tests/agents/specialists/engine-programmer.md",
+      "sha256": "22d00da23f5c95e749adcc9fd31618df0dabe48edf5435a4e9289c8d88159a76",
+      "bytes": 5294
+    },
+    {
+      "path": "studio-tests/agents/specialists/gameplay-programmer.md",
+      "sha256": "9d5685102dcca053c6dd09058f21c31517170310ac7b80a3ded4e2e325de48b8",
+      "bytes": 5233
+    },
+    {
+      "path": "studio-tests/agents/specialists/network-programmer.md",
+      "sha256": "68120d6aaa0b93d2e420ff9df4a1896fe561882441f41318e5c6ee7a4dddfa60",
+      "bytes": 5647
+    },
+    {
+      "path": "studio-tests/agents/specialists/performance-analyst.md",
+      "sha256": "2a88f2f49490196173360a653b6df43ef2d11528684e79876de161d9f0ad6873",
+      "bytes": 6319
+    },
+    {
+      "path": "studio-tests/agents/specialists/prototyper.md",
+      "sha256": "745b14e9409c1a7f5d568e2a6448a1dce2f92ec5d330277d042c26997d2da640",
+      "bytes": 8800
+    },
+    {
+      "path": "studio-tests/agents/specialists/sound-designer.md",
+      "sha256": "0d809e075b7b626bb402008443913929be411e6564182b39a0eb47798f71891e",
+      "bytes": 5548
+    },
+    {
+      "path": "studio-tests/agents/specialists/technical-artist.md",
+      "sha256": "60d411f0a9ad022940887b5e7d547cdd5b69efbaf706e1bda6d3f2c5aed130fa",
+      "bytes": 5534
+    },
+    {
+      "path": "studio-tests/agents/specialists/tools-programmer.md",
+      "sha256": "d5cf0de2c02b58d055f091383d1a03c0326d3245763874998ce75d146b8252a7",
+      "bytes": 5621
+    },
+    {
+      "path": "studio-tests/agents/specialists/ui-programmer.md",
+      "sha256": "6ebfc5b1059a616a87d3615310b927f15bcae1308a0bd49c2c175020dea2ee98",
+      "bytes": 5293
+    },
+    {
+      "path": "studio-tests/agents/specialists/ux-designer.md",
+      "sha256": "f24967eb57f23aafbb3dffc677b4fdea75ad5bdff7c6247e79ef59967d00bead",
+      "bytes": 6202
+    },
+    {
+      "path": "studio-tests/agents/specialists/world-builder.md",
+      "sha256": "c4099df2cd9bb814f84116c2a5c4467299bf1296ef52d3c4e1f3c86b7dc7a3f4",
+      "bytes": 7539
+    },
+    {
+      "path": "studio-tests/agents/specialists/writer.md",
+      "sha256": "eb498663faa0d674c539b9b5ad8ac0b73c4161dd38be2323f79e162ec5b2b40b",
+      "bytes": 7225
+    },
+    {
+      "path": "studio-tests/automated/test_agents.py",
+      "sha256": "1f86af36ab3cf4051b1e63a22a891b8378a7ef66772eae16dc32f50411913f40",
+      "bytes": 1589
+    },
+    {
+      "path": "studio-tests/automated/test_catalog.py",
+      "sha256": "1f244eb9013c5929182d780544269fa0defe0d3fd29a784559d361d73784582c",
+      "bytes": 1139
+    },
+    {
+      "path": "studio-tests/automated/test_config.py",
+      "sha256": "d9eb8b1ba833cc5a7a870397d5b75b950f0a6d195208c7df0cacbaff7a2d1540",
+      "bytes": 5458
+    },
+    {
+      "path": "studio-tests/automated/test_core_skills.py",
+      "sha256": "9adc26dbe0362be78f519750b81a7d8d9ff6788b85ef4aa142d4873d92db8d58",
+      "bytes": 1705
+    },
+    {
+      "path": "studio-tests/automated/test_git_index.py",
+      "sha256": "42f54c0db921d21888f39ec6bb3b9e6ceb77e9015b8fbe10f4e88877add3ff42",
+      "bytes": 2613
+    },
+    {
+      "path": "studio-tests/automated/test_hooks.py",
+      "sha256": "f7b8a223fea424807b4175ee32e540c108557820bd50fc91e55efe988f1e17c1",
+      "bytes": 12743
+    },
+    {
+      "path": "studio-tests/automated/test_inspection.py",
+      "sha256": "242498e458a1fca2eb2fd4913a1ab22168b7375d07c19194a28e2426ae59489f",
+      "bytes": 1280
+    },
+    {
+      "path": "studio-tests/automated/test_inventory.py",
+      "sha256": "3474f6e879f94664ab66d8a5a478d9381183cae9d1d31ccf83539df958e5267f",
+      "bytes": 7360
+    },
+    {
+      "path": "studio-tests/automated/test_migration_complete.py",
+      "sha256": "6d715f9d4a9e0909272d5d25d6c4d6eb3e5a311ce3b315a1a6afbd766a76ef2a",
+      "bytes": 1152
+    },
+    {
+      "path": "studio-tests/automated/test_paths.py",
+      "sha256": "40572e519f03a67847dfc05d933675abfd9296a6e0771055fbf74b1ea6c9f039",
+      "bytes": 11221
+    },
+    {
+      "path": "studio-tests/automated/test_rule_routing.py",
+      "sha256": "1ab7c32656acb0f2b134ad68a75bfe487248db9d6464f387e59e4e0083979e23",
+      "bytes": 1749
+    },
+    {
+      "path": "studio-tests/automated/test_yaml.py",
+      "sha256": "5635e1d0a8eda524952b69049fdf8014700da6ed03d10174a2dea9e857140d49",
+      "bytes": 2048
+    },
+    {
+      "path": "studio-tests/catalog.yaml",
+      "sha256": "8addbf202fb7d64f6461d06f04f8a95d730b1b3eaab2ec069174cef4d1958dfb",
+      "bytes": 31431
+    },
+    {
+      "path": "studio-tests/fixtures/grow/evaluate-module.mjs",
+      "sha256": "cc4f42f1c7b09c065bf0d130aa24619ad5833020f6736bc90e27bc52c186ac62",
+      "bytes": 1029
+    },
+    {
+      "path": "studio-tests/fixtures/hooks/event-examples.json",
+      "sha256": "59ce3254923949adc770a366a78d33e6f98fd9dd400e5fecbb02e76ffab98adb",
+      "bytes": 943
+    },
+    {
+      "path": "studio-tests/fixtures/prepare-representatives.py",
+      "sha256": "896455e3765c777a1d838bbf1c82bb6d93e6e0909f98ee67a121065283dca1ac",
+      "bytes": 5949
+    },
+    {
+      "path": "studio-tests/migration-inventory.json",
+      "sha256": "4ee981081462f0504cbf53b82b37d6c5239c9ecef214548e2090ef72cf76df7d",
+      "bytes": 775410
+    },
+    {
+      "path": "studio-tests/quality-rubric.md",
+      "sha256": "4f9d09668471d3a15fe029e0e8cc5b19af43a5bfd5bb6fe9a3548f75117232c4",
+      "bytes": 16021
+    },
+    {
+      "path": "studio-tests/README.md",
+      "sha256": "0f86e926b959a7b5b9572141d38950d5d9fa8cb87f68332543edc5d5b5d4f083",
+      "bytes": 9556
+    },
+    {
+      "path": "studio-tests/requirements.txt",
+      "sha256": "1c9693e2926963840160a3cf9a63de84bbadf696303e14e13afdeba366d83ecc",
+      "bytes": 78
+    },
+    {
+      "path": "studio-tests/results/codex-app-events-trace.json",
+      "sha256": "e3a88b5f9453617b74a6cf44d6dcdb9ee61ee5ab0a631118fc126e54e6e887de",
+      "bytes": 8578
+    },
+    {
+      "path": "studio-tests/results/codex-app-probe-trace.json",
+      "sha256": "5f8f2c52f6ac1a71b9d10ccb1036745fe5abf709adb79475642a8954bca57ef1",
+      "bytes": 2829
+    },
+    {
+      "path": "studio-tests/results/codex-app-probe.json",
+      "sha256": "4bcd989e434022697ddc568cd00190a08badd3cbfdff927c4da30e758221b449",
+      "bytes": 2310
+    },
+    {
+      "path": "studio-tests/results/codex-app-visible-result.json",
+      "sha256": "2214675cf42c66b50ffb35999b88f9c1959df7f728c441c45a249425a4d54eee",
+      "bytes": 872
+    },
+    {
+      "path": "studio-tests/results/codex-capabilities.md",
+      "sha256": "40483613bbb7957fff33807fc2c8132319b8e4f6f7cc72a7f0d32719185e2944",
+      "bytes": 7237
+    },
+    {
+      "path": "studio-tests/results/codex-cli-probe.json",
+      "sha256": "0903fe984288b33b830da8e0334acef7b9b644f46020296e28e361ef5233821d",
+      "bytes": 1375
+    },
+    {
+      "path": "studio-tests/results/codex-config-final-tests.txt",
+      "sha256": "b971c00c46c6e296e042491d76ffaedb6127cc57119b421952dc234deecbd430",
+      "bytes": 1172
+    },
+    {
+      "path": "studio-tests/results/codex-events-unit-tests.txt",
+      "sha256": "a8245da259d171dca39a17f451a338cbbd9562b5715f7ac7698892ca98ebf225",
+      "bytes": 2271
+    },
+    {
+      "path": "studio-tests/results/codex-incremental-tests.txt",
+      "sha256": "08274b5dba7b38d900b82a23071494ffd622482c65f9a3138f0eeaa07efacc19",
+      "bytes": 8576
+    },
+    {
+      "path": "studio-tests/results/codex-index-unit-tests.txt",
+      "sha256": "9005f548f85f3d577c9ed38a5162bbdf984b3794796b9a87ef47cf9306e76fca",
+      "bytes": 683
+    },
+    {
+      "path": "studio-tests/results/codex-shared-script-tests.txt",
+      "sha256": "868d523fcf6d2a6ca593eb17a4e40a6af6c1a0808a261af432ba2c19a16651df",
+      "bytes": 2016
+    },
+    {
+      "path": "studio-tests/results/config-tests-2026-11-16.txt",
+      "sha256": "65b03d638f4d1f81aa96652ef79f477db5fdf05fdb7a242d1289ee5a8e73b61f",
+      "bytes": 1853
+    },
+    {
+      "path": "studio-tests/results/representatives/agent-gameplay-programmer.md",
+      "sha256": "ea121628e09fe7e37d4b7a59d050ade7947ee8b8bf872e37958a09dc37ec3ca3",
+      "bytes": 4444
+    },
+    {
+      "path": "studio-tests/results/representatives/agent-godot-specialist.md",
+      "sha256": "e1bb8f5157df48bfae3cb64e325a2718a36b7244a95138a71ad223f4f236777b",
+      "bytes": 3360
+    },
+    {
+      "path": "studio-tests/results/representatives/agent-lead-programmer.md",
+      "sha256": "1dc7b60d5490b4f4535fc0e31a8d0e6934389b76725b177cd58d26a589b24cf4",
+      "bytes": 4518
+    },
+    {
+      "path": "studio-tests/results/representatives/agent-qa-tester.md",
+      "sha256": "70de0547165e6b4a78b9fe854126fc5f60e78cbe2e4b05263c3114643f364f09",
+      "bytes": 3976
+    },
+    {
+      "path": "studio-tests/results/representatives/agent-release-manager.md",
+      "sha256": "28ef05889c856fa0f15397818bd77b10239ad2c87e2522627c3b485dbf0b5cbc",
+      "bytes": 4755
+    },
+    {
+      "path": "studio-tests/results/representatives/agent-technical-director.md",
+      "sha256": "21effbe8708c3710feaf5e007a460a01f074ca0c2ab5d6b892fd8fbeebc365e9",
+      "bytes": 5565
+    },
+    {
+      "path": "studio-tests/results/representatives/gate-recheck.txt",
+      "sha256": "3af02253476af3b70a5600125b3420ebb9cf2eebe567a24828c2201a3e129e64",
+      "bytes": 802
+    },
+    {
+      "path": "studio-tests/results/representatives/original-suite-results.json",
+      "sha256": "7dcd3170b6d8fcb5f78eb87eddf61abf298cd47abb9ef4114aab6d9b1fcc0d8f",
+      "bytes": 7270
+    },
+    {
+      "path": "studio-tests/results/representatives/README.md",
+      "sha256": "ab6b8f7622d37c847d32d0dfd6051a6df4ae425dde46a3664fc56cf29f5c39d4",
+      "bytes": 883
+    },
+    {
+      "path": "studio-tests/results/representatives/skill-balance-check.md",
+      "sha256": "b30d32cdea27c53335a81dba3073a6a0089edf79362f06a5187595a479ba0989",
+      "bytes": 1991
+    },
+    {
+      "path": "studio-tests/results/representatives/skill-design-review.md",
+      "sha256": "36a515144ead8b89edbf45fd140c17830bfda696b93406d7018dc15ac6437e4b",
+      "bytes": 3955
+    },
+    {
+      "path": "studio-tests/results/representatives/skill-dev-story.md",
+      "sha256": "260e78d73b5cdfd55617433f26a162a38d04680c828392473a41babfee5e2727",
+      "bytes": 1550
+    },
+    {
+      "path": "studio-tests/results/representatives/skill-gate-check.md",
+      "sha256": "3a2ecc57ce96bc8fbbd45717116fb458e361053c029af107d6d5fa1e37591384",
+      "bytes": 4667
+    },
+    {
+      "path": "studio-tests/results/representatives/skill-project-settings.md",
+      "sha256": "659dd4e34fc5fd689fa67320c8c3b671f94d73d38fb14e595abe76bf375097ef",
+      "bytes": 1455
+    },
+    {
+      "path": "studio-tests/results/representatives/skill-quick-design.md",
+      "sha256": "888cde6e0a732b3a5732fdf667bda9267f7fb64bd8470663514c96cf5a93ae96",
+      "bytes": 3113
+    },
+    {
+      "path": "studio-tests/results/representatives/skill-sprint-status.md",
+      "sha256": "767a88f73ac4dfccddc5f150cd27fc16d0897be178259aa99ca5260f2289b17b",
+      "bytes": 1682
+    },
+    {
+      "path": "studio-tests/results/representatives/skill-story-readiness.md",
+      "sha256": "a57842ef9e761cf2b749ccb4a40005befc168aa25556a2436b09b87cd8ff3206",
+      "bytes": 4267
+    },
+    {
+      "path": "studio-tests/results/representatives/skill-team-combat.md",
+      "sha256": "93b01f36dc99f7b6c312a527934f15f840916bb5712c89ba17e6787e52fd527e",
+      "bytes": 6624
+    },
+    {
+      "path": "studio-tests/results/representatives/summary.json",
+      "sha256": "409f053bcf4cc5db26942f7219300779353114263903fefbef717f3f2541f7fe",
+      "bytes": 6466
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/app-fresh-result.md",
+      "sha256": "18bf15b5050f268393ff09dc0e7fc2a258e09e1253b9dc0180ba42a624950301",
+      "bytes": 9854
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow-result-round2.md",
+      "sha256": "3b0dee0b98861d7124a180f7f367ec3c59801eb0b7689367fb2b24e845ed42bd",
+      "bytes": 12682
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow-result.md",
+      "sha256": "55d77225c5248898fc2af4d8450107dee0f45b580307487c98e35af193d40fcb",
+      "bytes": 11257
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/prototype-after.json",
+      "sha256": "b4be22ba3d3441dcb4b43cacf9b02a572da774c1f8190d48f6e7df15d6ca2b3d",
+      "bytes": 2972
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/prototype-before.json",
+      "sha256": "b4be22ba3d3441dcb4b43cacf9b02a572da774c1f8190d48f6e7df15d6ca2b3d",
+      "bytes": 2972
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/prototype-comparison.json",
+      "sha256": "7f44ad5908abfd2851856c2d0969b95c056a654192b92257c50d70c71f4cba8c",
+      "bytes": 94
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/baseline.log",
+      "sha256": "cc03e0678858a139de1d7e92893b99dd8cb5c60e03e5712c0318ce28ed43146e",
+      "bytes": 8325
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/change-small.log",
+      "sha256": "7f0cfabd288714e1376ba0c076e636156c03391c2580c911e2d1d9bbe8bfc4dd",
+      "bytes": 2387
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/change-timeout.log",
+      "sha256": "8c80cf0ec77bb1d6d8b406d6a99c913a0f63cae00bd8a828c199476c00f46611",
+      "bytes": 2810
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/change-win-corrected.log",
+      "sha256": "6216aeea7d22171914f2922bc6c12826609818888f0fdd515c67323a84d6249c",
+      "bytes": 2961
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/change-win.log",
+      "sha256": "93a3d6968e7ece10601b97d67af1a17313274675e486bb3b8a870a00c4172a05",
+      "bytes": 2271
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/commands.jsonl",
+      "sha256": "5e821a51869a771f9993afbca9350cf4c89c39ca8b353f6aca11275aace98a6b",
+      "bytes": 4205
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/copy-build.log",
+      "sha256": "38e2b4b26da356b711f84e93a5f6c7136654dcf025309cbd877a9a4d6c95d9ef",
+      "bytes": 380
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/copy-replay.log",
+      "sha256": "4c16708c146d273e5ceea732a041596e0a27d1b8d8979cc14042669abdfed5b4",
+      "bytes": 197
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/copy.log",
+      "sha256": "5c2b76c1b8f27b9f78efff2dd5896b205bbe098b310f379a0da6f1f0782b156d",
+      "bytes": 632
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/final-audit.log",
+      "sha256": "57030a50fd015bb57655c4840efa7bbeefba2dfd6a1097d65f2c4d30295aeddc",
+      "bytes": 2071
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/minimal-repro.log",
+      "sha256": "a4510ec979d65b989b15452de1a9a86f4902f9128145827fdd3ace3a86ecad51",
+      "bytes": 775
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/npm-ci.log",
+      "sha256": "ded60935349cf26751d62d1006cb7d9a13fa5f145daad33501ec5df14a3040c0",
+      "bytes": 313
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/preflight.log",
+      "sha256": "5820f6ccd0331232187de89eca574d13e1a2ef76293ae4ef9c5f254bb209164b",
+      "bytes": 444
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/reference-commit.log",
+      "sha256": "fe596b7e504a85cf725eea50444e631d0acc5390f1b9681988514a772eec1e94",
+      "bytes": 1621
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/raw/reference.log",
+      "sha256": "6b04734fe4f738975e0715142a1ce200debee374500aea34327d43772b36f3e4",
+      "bytes": 225
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/audit-final.log",
+      "sha256": "e551b444e6166ef8d174a2513523bef3076052c2b999253d663f4c0645228d49",
+      "bytes": 299
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/commands.jsonl",
+      "sha256": "d62e56d0b3f28938c5cf9b293c344c2ffebae0905db63290977316bbd2858050",
+      "bytes": 9372
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/copy-build.log",
+      "sha256": "1e493a03f390aca1565e8ca3367ad45f633890957dbd8355356f2029b061c02f",
+      "bytes": 508
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/copy-commit.log",
+      "sha256": "8a3f5c58f4e8688d58eb3e1f3a0222279ae01412368c9601d46dc2b132018bc6",
+      "bytes": 4178
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/evidence-paths.json",
+      "sha256": "de370614bfddb5e3d913ed3bd3e4890404cc4de05f4bd902c9fc8b70cc438056",
+      "bytes": 2239
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/feature-commit.log",
+      "sha256": "3d3af2f9cd0d1dd6585d1d7be09a242d4cd5a05e15fc176c91c088e9e5070310",
+      "bytes": 7242
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/final-checks.log",
+      "sha256": "c26f5bb2bd525f0f8c26cf5fac8fa645689bf933b363e8c7abeb7249572c82ee",
+      "bytes": 4120
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/git-final.log",
+      "sha256": "63af749e108eb0e0979a7bc9ed3212ff4aa762da7fda4b47fa4523c3fc126967",
+      "bytes": 2555
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/grow-commit.log",
+      "sha256": "2216a64e3068e30a762d3cbc81c0e477baf978d2368217375aa910158f7dc707",
+      "bytes": 2275
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/immutable-after-known.json",
+      "sha256": "ae3ba7148d85612df05dd78ed111877b8b49b69043bf75f1b71e79024e719633",
+      "bytes": 69789
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/immutable-before.json",
+      "sha256": "4bf95a95a862d8d51f21dc73bde0047831b0429ba4a12a96e6c4a1b20044ab4a",
+      "bytes": 69789
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/immutable-comparison.json",
+      "sha256": "4ae0eeda2b397f45a54d1c187d2fb29f53b2fb89160eeb026d42136e3ff16e75",
+      "bytes": 253
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/preflight.log",
+      "sha256": "d2cb92874c36433ca00657ee398950dd2b06f0184a4ac52e6532a8db8af21d90",
+      "bytes": 358
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/project-before.txt",
+      "sha256": "bed8040165fba537ff12b62747e3858be9af140580523eff260c4a5254e105fc",
+      "bytes": 1195
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/record.log",
+      "sha256": "922c80be6cee18971baebe9ea279b1f8db1514fb4769c487222788af4540451a",
+      "bytes": 2025
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/report-commit.log",
+      "sha256": "bc383dae105b422e482a194b76f7fde4c04b2bb0c8ef964ebc5baafd1cc02a6a",
+      "bytes": 8098
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/retry-green.log",
+      "sha256": "23c94e70d136ae9a5e2c17b3abfa56201b60a6f55d9f5e71d6715f7809d8f9e8",
+      "bytes": 1867
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/retry-over-after.png",
+      "sha256": "4b1c7b670f42536f7ce7db91ebbb243b64720f4a3352fa23c5a7cf5993bb6c33",
+      "bytes": 88450
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/retry-over-before-red.png",
+      "sha256": "c81dcaa964c7ba199c3f381ccda0437843dc4fd5c8c2fa86218a6d1bf147e97f",
+      "bytes": 93868
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/retry-over-before.png",
+      "sha256": "72f7b1325c7b101feaaf96ff0317ec3b51c4c3f300f4af3c671fd847166fb94c",
+      "bytes": 94259
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/retry-over.json",
+      "sha256": "d3f7ce95001204a40a0137f01311f91c11defbc25ce361f0d78518a3b622a3f6",
+      "bytes": 1904
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/retry-red.log",
+      "sha256": "03d1d558584857aefe766fefc21d52037ddfd146273a46b0e01c4b8982a1674f",
+      "bytes": 3492
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/retry-results-after.png",
+      "sha256": "4b1c7b670f42536f7ce7db91ebbb243b64720f4a3352fa23c5a7cf5993bb6c33",
+      "bytes": 88450
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/retry-results-before-red.png",
+      "sha256": "fc064e383d1efd110aa1bf8f3acd9c99a4df9d936ff3260f5ddab859150b2b29",
+      "bytes": 97967
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/retry-results-before.png",
+      "sha256": "3f92aa3def4c62cff57bdb11ebe0d5262fa8d98f9eb8d5c5098913b4b140f4fc",
+      "bytes": 98465
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/retry-results.json",
+      "sha256": "41b64c2f564d1c270ae0c54eb143deadcc47dab31d57625fc6fc61c304c32fbb",
+      "bytes": 1939
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/rule-red.log",
+      "sha256": "75726cc89f6f9f68ca7b59b0df794d6d9799ac47c12805c8aff8dfdef918f06e",
+      "bytes": 1059
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/rules-before-mutation.txt",
+      "sha256": "a5b30b2f09096bb438a0ff41cd09bb2e268ad18b4966a0337230a6e4e6cf4ec8",
+      "bytes": 891
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/scope-summary.json",
+      "sha256": "4dcbe4a87cd715fa9d5e4a56fd1aa4662eccae1b19ef8a81ec77db65f5279f83",
+      "bytes": 450
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/scope-summary.log",
+      "sha256": "b6854961fd5d5e4791a53ffc4883975b34e5fd022568fa3f88527775d97a08e3",
+      "bytes": 488
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/story-compare.log",
+      "sha256": "23561bd759fb49c1c154f6c232eaa279a4e3919488903770b4ce9148e01cd594",
+      "bytes": 176
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/story-pixel-comparison.json",
+      "sha256": "f1f37168914ba419addcdd749b3cfd82006132bddae56b35bd1493121321bf32",
+      "bytes": 191
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/story-state-comparison.json",
+      "sha256": "1266a4814f6d08e40b8b32ac070805296a7fa765120c5ff4d9e279e417a899f2",
+      "bytes": 2322
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/story.log",
+      "sha256": "a63b8c14f5fdd9fcd54bd5e45b6bd24c251b1c8cfacec52c2b5fbf204bc2c804",
+      "bytes": 1377
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/test-run-final.log",
+      "sha256": "3fc46b0eb2163849d879de83d5b6ce91802e5106fc7d659ee98663ea416c8cae",
+      "bytes": 2110
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/test-run-grow.log",
+      "sha256": "f24909e35d07d2abae9d55cb8fa42cefbb3afce35fa9f1ca2d6ca0be81da41c1",
+      "bytes": 1389
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/tests-commit.log",
+      "sha256": "dd45e105bd09b0da580ab6ddaa35d5bed2747d1564e4ed8d57533205f57284f9",
+      "bytes": 941
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/tests-green-corrected.log",
+      "sha256": "a2592838273e1b03caf0fd2e96d7ea24066b1f1b44ca730267ec7637afd8156a",
+      "bytes": 1457
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/tests-green.log",
+      "sha256": "71f7802c4a45dfbfaa49ea547d0577100a5fcb7f63722443861f19415fcff37f",
+      "bytes": 2713
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/typescript-check.log",
+      "sha256": "1926ea60869027adf21f820301fd67a9bc928d92631cec958751b703ea8dcd66",
+      "bytes": 119
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/typescript-commit.log",
+      "sha256": "0a1b39ca461cd094203407b1cba921443760ec77dbf3d2116ec1d8ce4cab74d8",
+      "bytes": 887
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-grow/round2/typescript-replay.log",
+      "sha256": "a6b75aed0e302b7cf19ca549843d3998a5f1b1aa1000311220482fc9e06ec581",
+      "bytes": 527
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/core-prototype-result.md",
+      "sha256": "17d589b8b2ff66ba1c5dc0b6abb8ad888220a2e979082b73b65a9d2729ed4463",
+      "bytes": 3736
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/grow-dusk-fish/accepted.png",
+      "sha256": "3f92aa3def4c62cff57bdb11ebe0d5262fa8d98f9eb8d5c5098913b4b140f4fc",
+      "bytes": 98465
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/grow-dusk-fish/accepted.tsv",
+      "sha256": "67b6c0880d7e1617be82daef5ec230ad8dd18bb62e60c0c2a4dd6931ee51e764",
+      "bytes": 5489
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/grow-dusk-fish/copy.png",
+      "sha256": "fc064e383d1efd110aa1bf8f3acd9c99a4df9d936ff3260f5ddab859150b2b29",
+      "bytes": 97967
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/grow-dusk-fish/copy.tsv",
+      "sha256": "8ea5ecc7a2444c470bc69e2301e03c5f6de4c0a5b39194bb6daf2e962c290893",
+      "bytes": 5483
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/grow-dusk-fish/grow.md",
+      "sha256": "57dbd42e05cb2fbe5227b4bbabc776daec432f80f62c85b097634b0f815538a0",
+      "bytes": 2294
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/grow-dusk-fish/reference-again.tsv",
+      "sha256": "0d88c824e105bfe8183533903f657320523ac0f5c6243f9e11055964e5892bc4",
+      "bytes": 5466
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/grow-dusk-fish/reference.png",
+      "sha256": "fc064e383d1efd110aa1bf8f3acd9c99a4df9d936ff3260f5ddab859150b2b29",
+      "bytes": 97967
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/grow-dusk-fish/reference.tsv",
+      "sha256": "db714325694c3fa79a9dcf39d1397b93ff53d9c7d9d60d87260d4ae7fbdad436",
+      "bytes": 5488
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/grow-dusk-fish/story.png",
+      "sha256": "3f92aa3def4c62cff57bdb11ebe0d5262fa8d98f9eb8d5c5098913b4b140f4fc",
+      "bytes": 98465
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/grow-dusk-fish/story.tsv",
+      "sha256": "67b6c0880d7e1617be82daef5ec230ad8dd18bb62e60c0c2a4dd6931ee51e764",
+      "bytes": 5489
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/grow-dusk-fish/typescript.png",
+      "sha256": "fc064e383d1efd110aa1bf8f3acd9c99a4df9d936ff3260f5ddab859150b2b29",
+      "bytes": 97967
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/grow-dusk-fish/typescript.tsv",
+      "sha256": "ecf14091c13b5ecd83e90cc007e826318b0718da21768c18e3b92e7f6e5a029e",
+      "bytes": 5489
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/parent-audit.json",
+      "sha256": "a1236db9d8c43ae9579e8095002bd1522967aa14f25afa3440811ad0d3c68f32",
+      "bytes": 2110
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/prototype-input.md",
+      "sha256": "f5f5124329e54203ab5505ffa8bb1c22d671e8625fe798c56ba7673ce8d67b38",
+      "bytes": 4966
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/prototype/check-run.yaml",
+      "sha256": "5a01a4d6f20c3a7d220661cb581da6b6417cad24a557d3e57dcb4ee121e14574",
+      "bytes": 3046
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/prototype/figures.png",
+      "sha256": "730311579d1249bee6ccb26cb9bf7ac98bfcab8d10a7e813fca0ba5204d9de64",
+      "bytes": 40112
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/prototype/loss-retry.tsv",
+      "sha256": "bfd5f0aa7b3fd221c1342390ab7e0cd6001fa0ee76c78494d3adf12140d4fb8f",
+      "bytes": 2676
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/prototype/pause.tsv",
+      "sha256": "bf7028a7471cc840e6068ab777082189d435864568945ad443eefb90cd66bf8e",
+      "bytes": 2776
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/prototype/play.png",
+      "sha256": "df364848f462811a2d618c301d392ded96fdad51a439512906a032bb8c21085e",
+      "bytes": 89442
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/prototype/resume.tsv",
+      "sha256": "3775fad238740ee9e866d4b7978bb1e2e1d546a05386d49b3030909ca807dfc4",
+      "bytes": 2645
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/prototype/win-run.tsv",
+      "sha256": "eb71f82fe4d66dcebd5e55d2fe3b5373b2308c9750e66f40ad5635de105820c7",
+      "bytes": 2947
+    },
+    {
+      "path": "studio-tests/results/runtime-evidence/README.md",
+      "sha256": "bbc26287ee3c4b52cb880f6c0a2957528aa4d2262a9fc07e6424cc86b93f3100",
+      "bytes": 1050
+    },
+    {
+      "path": "studio-tests/results/task2-tests-2026-11-16.txt",
+      "sha256": "4a4f4b8a420c81c5f73a9f05258d91603adc101cc98f1c4a9abd65168ad2bb96",
+      "bytes": 3388
+    },
+    {
+      "path": "studio-tests/results/task3-role-boundaries.json",
+      "sha256": "d380ff3e63512c25db233ea56020f8fc62bd38a36d8eeb6684c8c8910b7c1155",
+      "bytes": 1554
+    },
+    {
+      "path": "studio-tests/results/task3-role-runtime.json",
+      "sha256": "087680fe65ff7ba1b3f05270e1ca4853845affe67b5d99b3f01d04d30d76113d",
+      "bytes": 1101
+    },
+    {
+      "path": "studio-tests/runtime-matrix.json",
+      "sha256": "5c21074258fa085cfa9f14b2cdd0339560c303692b93a06fd4903571bdad6361",
+      "bytes": 13867
+    },
+    {
+      "path": "studio-tests/skills/analysis/asset-audit.md",
+      "sha256": "a26f24544f3d32c0e7992b2dc4ab610f6e3fa6eb392c83d0b11218e23fd94cfd",
+      "bytes": 15906
+    },
+    {
+      "path": "studio-tests/skills/analysis/balance-check.md",
+      "sha256": "2ca0bfc0660e71791b428004f9bc40def8b76c596138b99cb0841289c595e921",
+      "bytes": 12605
+    },
+    {
+      "path": "studio-tests/skills/analysis/code-review.md",
+      "sha256": "ed281956b1857e9ac631d6a575c2792a7d5e2e8e0d3d35acb6154588c2af108b",
+      "bytes": 14382
+    },
+    {
+      "path": "studio-tests/skills/analysis/consistency-check.md",
+      "sha256": "60995bab1730373d9fc86b3b201e38cd5e50cf2c48d5bb9fee23a72de3d200af",
+      "bytes": 18504
+    },
+    {
+      "path": "studio-tests/skills/analysis/content-audit.md",
+      "sha256": "f16f021da8e638139cb176755d0d22b88ecf9977f70fa5bbca2ddc0dd2d1522d",
+      "bytes": 15293
+    },
+    {
+      "path": "studio-tests/skills/analysis/estimate.md",
+      "sha256": "04bdbf0a237f65e7062625bac66c633cb82f893adb4035c9097ea69341482161",
+      "bytes": 9410
+    },
+    {
+      "path": "studio-tests/skills/analysis/perf-profile.md",
+      "sha256": "905588a1ded7dc615d95b2719ddbbeac2782702a2aa874ba32d89b31ec7ea14a",
+      "bytes": 15392
+    },
+    {
+      "path": "studio-tests/skills/analysis/scope-check.md",
+      "sha256": "8c19ba1d678f25c7ce24d54fc74d3e2910df38905beaa23da77305642942bb1f",
+      "bytes": 10000
+    },
+    {
+      "path": "studio-tests/skills/analysis/security-audit.md",
+      "sha256": "2f9f849a00482283c49cba796e3c681b8c0f27d1e6868950990341db9cefac42",
+      "bytes": 16463
+    },
+    {
+      "path": "studio-tests/skills/analysis/tech-debt.md",
+      "sha256": "bc3a2a5837502b71dd6b4ba734c791b8d81864eaf79deb97b62734ba0964b173",
+      "bytes": 15351
+    },
+    {
+      "path": "studio-tests/skills/analysis/test-evidence-review.md",
+      "sha256": "8d38864b0cf73db3b41b45849281bb16fc1c60f9f8ecd0eac742efa0611b95d9",
+      "bytes": 17227
+    },
+    {
+      "path": "studio-tests/skills/analysis/test-flakiness.md",
+      "sha256": "440d0d415139a599f417a8f8115cd7ffc220502e0f3414e01dfcb1991949bdaa",
+      "bytes": 10891
+    },
+    {
+      "path": "studio-tests/skills/authoring/architecture-decision.md",
+      "sha256": "955acbb581fe3e6cffb8f37e3187aef28d585d29922d62f1a8ab4e52f68ba329",
+      "bytes": 19478
+    },
+    {
+      "path": "studio-tests/skills/authoring/art-bible.md",
+      "sha256": "3bf728584c82164933a1bcf6766abf2488d22980d716b49bec45806aadf8aeda",
+      "bytes": 16952
+    },
+    {
+      "path": "studio-tests/skills/authoring/create-architecture.md",
+      "sha256": "95d15f419494d8322cb5e7e27787b6362afa1732175212b12ce2666f39aa5dad",
+      "bytes": 20843
+    },
+    {
+      "path": "studio-tests/skills/authoring/design-system.md",
+      "sha256": "7748a7ab1ebfa4f11f55c0281b05848bd07a8dddeae8f6093aa9486f6f380a91",
+      "bytes": 25074
+    },
+    {
+      "path": "studio-tests/skills/authoring/quick-design.md",
+      "sha256": "d869b53b46b28a0ce98b267e3341799ba350db86a02fc7fb872be2eda9069c6f",
+      "bytes": 12444
+    },
+    {
+      "path": "studio-tests/skills/authoring/ux-design.md",
+      "sha256": "02fae7a4bd57edeade1e66548b28b3a0aa552ed1839fd4602b3f60b09f9205ba",
+      "bytes": 15428
+    },
+    {
+      "path": "studio-tests/skills/authoring/ux-review.md",
+      "sha256": "23272cf04db1fa092ea470be131e1dfa2108ea139b7ebd561baaf5f390e2f013",
+      "bytes": 12493
+    },
+    {
+      "path": "studio-tests/skills/gate/gate-check.md",
+      "sha256": "6dcd4b96f5db02a6e5c51f7181b3b216ecba082ccd8ce47f84748ecf475f927e",
+      "bytes": 24397
+    },
+    {
+      "path": "studio-tests/skills/pipeline/create-control-manifest.md",
+      "sha256": "754d44f90355ddc4c1dc14c394f03f6e25ef968c0ac55d572a57381924f903f9",
+      "bytes": 11924
+    },
+    {
+      "path": "studio-tests/skills/pipeline/create-epics.md",
+      "sha256": "a56f8edd7518abcb6498e13a292e5d42b478b304cf47ed5bc1e4c187d5882c62",
+      "bytes": 15976
+    },
+    {
+      "path": "studio-tests/skills/pipeline/create-stories.md",
+      "sha256": "d1a17ac395bbf070021d08fd7e6cd8cb87c8b19ff2887e214b14ca2e58a5659d",
+      "bytes": 17638
+    },
+    {
+      "path": "studio-tests/skills/pipeline/dev-story.md",
+      "sha256": "6ff5d152313a6d10eabbc5f69eb63418f9414d08eab7b94d2950a8702ad8d8d4",
+      "bytes": 25883
+    },
+    {
+      "path": "studio-tests/skills/pipeline/map-systems.md",
+      "sha256": "ce41882557da8576a2d565ab8e986fa72f82672251847c098c95386500efb2a7",
+      "bytes": 14606
+    },
+    {
+      "path": "studio-tests/skills/pipeline/propagate-design-change.md",
+      "sha256": "053af99bbce05ae339d2ed76d55da97141f727b4221851da84fb5e8b5326f0e2",
+      "bytes": 13276
+    },
+    {
+      "path": "studio-tests/skills/pipeline/vertical-slice.md",
+      "sha256": "a6edcf6ee9705131c8fe1b60de51743eb3a136474845583d30562e27f4668326",
+      "bytes": 16243
+    },
+    {
+      "path": "studio-tests/skills/readiness/story-done.md",
+      "sha256": "d1762ede2b188a27ebec270e4787b658cd55199da6c1cc129ff1edc45156ee2d",
+      "bytes": 22248
+    },
+    {
+      "path": "studio-tests/skills/readiness/story-readiness.md",
+      "sha256": "f4aba7f18ae98660d594ff0a560b49f85ba4731d59c2e0e5ac897276cd9bfd8a",
+      "bytes": 19880
+    },
+    {
+      "path": "studio-tests/skills/review/architecture-review.md",
+      "sha256": "ff0e8b1faac9f1ed6ceac010efac120f55b6fc1609fe61e39e18e2846ba0385d",
+      "bytes": 13140
+    },
+    {
+      "path": "studio-tests/skills/review/design-review.md",
+      "sha256": "efcc4d206064f83eb5373babdc9498d2b755a424c98081355807eacee03a7db8",
+      "bytes": 13378
+    },
+    {
+      "path": "studio-tests/skills/review/review-all-gdds.md",
+      "sha256": "4ee6a64858de9c6181624465703a52d5ff441ad002b6fdd5940c3b75be88266a",
+      "bytes": 20004
+    },
+    {
+      "path": "studio-tests/skills/sprint/milestone-review.md",
+      "sha256": "5f75e114e19271d2484a49b41a802c5f3ce09266c1a5b07a6ec1abaf09b906fe",
+      "bytes": 14635
+    },
+    {
+      "path": "studio-tests/skills/sprint/patch-notes.md",
+      "sha256": "1aa29524b232b9f3f06ade60206c99a75a01479c5f0fe73b111906ff7eb2e2ce",
+      "bytes": 12736
+    },
+    {
+      "path": "studio-tests/skills/sprint/retrospective.md",
+      "sha256": "21c42bfadae257ee4a69fd654717732191aba674114d8c8839d514d60e63d888",
+      "bytes": 12970
+    },
+    {
+      "path": "studio-tests/skills/sprint/sprint-plan.md",
+      "sha256": "86f9af2e04feb102799eca05ca13e00f8a555dbe41b528c9409b6d1caaaf4841",
+      "bytes": 14916
+    },
+    {
+      "path": "studio-tests/skills/sprint/sprint-status.md",
+      "sha256": "715738429649b88f3a0369d21bb1ee674cc1141ec07165de6520a39fd5f4ba04",
+      "bytes": 11996
+    },
+    {
+      "path": "studio-tests/skills/sprint/write-changelog.md",
+      "sha256": "5d9cd0ee5141404b23b17310eab82efc62c50e30ea0a561402d094a62aefb782",
+      "bytes": 12258
+    },
+    {
+      "path": "studio-tests/skills/team/team-audio.md",
+      "sha256": "5ddc0199e618be29b3118f4d56393662a01123609e63c0258f9602047141347c",
+      "bytes": 20122
+    },
+    {
+      "path": "studio-tests/skills/team/team-combat.md",
+      "sha256": "160be62885c1bb74f8bbf5695f4b67858c2832aabd1a3310cb7d10ff48bbcfb0",
+      "bytes": 17414
+    },
+    {
+      "path": "studio-tests/skills/team/team-level.md",
+      "sha256": "4d316874376900427105e183729336ec6143f652ebc128dfa3d2136d8ac667ca",
+      "bytes": 17444
+    },
+    {
+      "path": "studio-tests/skills/team/team-live-ops.md",
+      "sha256": "f717f994f7576fc4b67b57d25ddcb72c6a216d469966543005b4200b05bca410",
+      "bytes": 16362
+    },
+    {
+      "path": "studio-tests/skills/team/team-narrative.md",
+      "sha256": "7abdd70c1b9a21345a86cdeb7467ae3028554382fde4d4285d2c7fe70b57cc1e",
+      "bytes": 19797
+    },
+    {
+      "path": "studio-tests/skills/team/team-polish.md",
+      "sha256": "bd674aae062d8547da85e4f0d342463f04d2c80f455a258630725c297ae3c0df",
+      "bytes": 26530
+    },
+    {
+      "path": "studio-tests/skills/team/team-qa.md",
+      "sha256": "4381f828a84009b8a816b46f5afadf49a412f9c44eb351eeff0b2383ac6966a9",
+      "bytes": 27733
+    },
+    {
+      "path": "studio-tests/skills/team/team-release.md",
+      "sha256": "c0a8b30562962a4ba6bf0121d5a506461c149eeb2ca5da3a8a30d807320b1fb1",
+      "bytes": 25260
+    },
+    {
+      "path": "studio-tests/skills/team/team-ui.md",
+      "sha256": "c1c0c4d7ef18c60f706a1592f8beff8279090d51edf58a578c4c536ac215cf58",
+      "bytes": 19761
+    },
+    {
+      "path": "studio-tests/skills/utility/adopt.md",
+      "sha256": "d607cc750924540f4335df63c7afeb6b533df5d48770c896d44bfbf20c15297d",
+      "bytes": 15272
+    },
+    {
+      "path": "studio-tests/skills/utility/asset-spec.md",
+      "sha256": "849e82261dab8d0cac03d870d3dceb0a8d0b48a26222f71741f028958633a795",
+      "bytes": 13472
+    },
+    {
+      "path": "studio-tests/skills/utility/brainstorm.md",
+      "sha256": "b2d9eededeee5020967fad78ef2927a11468d237ea1c72582e693a3e58dcdb31",
+      "bytes": 15420
+    },
+    {
+      "path": "studio-tests/skills/utility/bug-report.md",
+      "sha256": "a72ada652d72257dbe75fd9552c317df57930a9b16249662af83203341fc3d04",
+      "bytes": 15101
+    },
+    {
+      "path": "studio-tests/skills/utility/bug-triage.md",
+      "sha256": "906d513e16671a0f8bbc38bc43dfc40cbf21d8505c7715e767c80a2e3a44fb5e",
+      "bytes": 10769
+    },
+    {
+      "path": "studio-tests/skills/utility/cut.md",
+      "sha256": "59a0b426bb01fcdce086c353c647a426f2d9b349de2d65368ae460f1f7e348c5",
+      "bytes": 8967
+    },
+    {
+      "path": "studio-tests/skills/utility/day-one-patch.md",
+      "sha256": "7964724f0e6145ee8d32435f8849f96ef2f929b02ce14742974eba6982c7c5ef",
+      "bytes": 12591
+    },
+    {
+      "path": "studio-tests/skills/utility/hotfix.md",
+      "sha256": "191bea8472352c5f70ab417dd8e04801fe30afb3fc0b18b758776e38f7162a58",
+      "bytes": 14121
+    },
+    {
+      "path": "studio-tests/skills/utility/launch-checklist.md",
+      "sha256": "6c97f89d090b73192e476a11bdf30cbcf0bf419dab2d3a85d0922f260e55556e",
+      "bytes": 14799
+    },
+    {
+      "path": "studio-tests/skills/utility/localize.md",
+      "sha256": "3bcfc52b08f18a11e094e7091a442517fb57757eee7851a6e925bf8f5d5ac22b",
+      "bytes": 11212
+    },
+    {
+      "path": "studio-tests/skills/utility/next-step.md",
+      "sha256": "8ceeffc95f1c314722e9feb7b71bc6253a497605e2ee100b557b5885671b5db8",
+      "bytes": 18656
+    },
+    {
+      "path": "studio-tests/skills/utility/onboard.md",
+      "sha256": "455c1506df498428785da4622d85064571285de32a1e0bea7f42fc150049d61c",
+      "bytes": 9171
+    },
+    {
+      "path": "studio-tests/skills/utility/playtest-report.md",
+      "sha256": "ef378134fbaac94292c2a6a08fbf4a1eb7001516396a20579951de219ce9b328",
+      "bytes": 9964
+    },
+    {
+      "path": "studio-tests/skills/utility/project-settings.md",
+      "sha256": "010ae5923afbd2e97934ace32f34d47741280b333a3c8516a5ce92635e89012f",
+      "bytes": 12455
+    },
+    {
+      "path": "studio-tests/skills/utility/project-stage-detect.md",
+      "sha256": "3f647937af9b126a97099a3942b92451a0690e395fc95e4261ed4496b94ae4df",
+      "bytes": 13945
+    },
+    {
+      "path": "studio-tests/skills/utility/prototype.md",
+      "sha256": "7a6862e3deb7ed1f699ff4978a62fabe607f7b09404ff8ca5cfdcc7a2a019b30",
+      "bytes": 26929
+    },
+    {
+      "path": "studio-tests/skills/utility/qa-plan.md",
+      "sha256": "7b93209d27f2aec8f51ea19ac98b19668b804ae9a9328b955712553c9615b02f",
+      "bytes": 9279
+    },
+    {
+      "path": "studio-tests/skills/utility/regression-suite.md",
+      "sha256": "a91aa6a0f4e8ce141e043c52a6e66499e8c764d299fa0a4a50a37423a1255808",
+      "bytes": 12271
+    },
+    {
+      "path": "studio-tests/skills/utility/release-checklist.md",
+      "sha256": "a73bb61cab4434bccf938d54d976a1d4ebfedd2aebe718e25290b3f5655f8eda",
+      "bytes": 13156
+    },
+    {
+      "path": "studio-tests/skills/utility/reverse-document.md",
+      "sha256": "fd0579206aa5329720efe0cceae7c6659123a44503667bc4234966e882180da7",
+      "bytes": 13366
+    },
+    {
+      "path": "studio-tests/skills/utility/setup-engine.md",
+      "sha256": "2cf771c3dbb45764f2707806542cd744a13085a338e8e2b7db1193aa06ce638e",
+      "bytes": 19307
+    },
+    {
+      "path": "studio-tests/skills/utility/skill-improve.md",
+      "sha256": "48380d9b4724662407ef7ab6d25820287cb671396a131fbacd571d492f128692",
+      "bytes": 15726
+    },
+    {
+      "path": "studio-tests/skills/utility/skill-test.md",
+      "sha256": "d09717a4af0aae602757ad9cd22602d08ac4ba0b58b037bcdcc99f01ff9fe207",
+      "bytes": 18767
+    },
+    {
+      "path": "studio-tests/skills/utility/smoke-check.md",
+      "sha256": "80111dc9e7b838d44dcc580b8c61f8f1425cdf6f469d47ed3f2cbe5bf2a1b431",
+      "bytes": 23363
+    },
+    {
+      "path": "studio-tests/skills/utility/soak-test.md",
+      "sha256": "c5769ce6fadfea0284d6c3f0aea61028cf02b41a8f06c600050bb746ccc4df7c",
+      "bytes": 10162
+    },
+    {
+      "path": "studio-tests/skills/utility/start.md",
+      "sha256": "121aa674892e43668894287bb65dee67f8056db517b88443a5901fb9a2850ea2",
+      "bytes": 23446
+    },
+    {
+      "path": "studio-tests/skills/utility/test-helpers.md",
+      "sha256": "2739d51953be85a60658b1a81d7d46fbfc4cf861f4640c27caa6a6ca9fed6a06",
+      "bytes": 10312
+    },
+    {
+      "path": "studio-tests/skills/utility/test-setup.md",
+      "sha256": "e1a914061402bb6fdbbf5ca0899908ceac31ba8ce9388d6a44e74602687a1440",
+      "bytes": 8869
+    },
+    {
+      "path": "studio-tests/templates/agent-test-spec.md",
+      "sha256": "e231bbadb842375cad74d715a040378c856313c894074656694422921f528395",
+      "bytes": 4978
+    },
+    {
+      "path": "studio-tests/templates/skill-test-spec.md",
+      "sha256": "9ad0ec8dad071882fa41ff403e860a69ac078fbf88100b7cb422d6fb95d809ad",
+      "bytes": 5597
+    },
+    {
+      "path": "studio-tests/validate-yaml.py",
+      "sha256": "f90fde362b3845ef3a69169ea1c645fbc974ae21a8345bc6fa0bdbd69ad46de1",
+      "bytes": 2728
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "6134c77fbccfae81b9596b77f5bdc1879f0e7b401bff45101d3d73ff562993e2",
+      "bytes": 4319
+    }
+  ]
+}

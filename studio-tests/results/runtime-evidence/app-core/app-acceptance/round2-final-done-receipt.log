@@ -1,0 +1,4 @@
+RECEIPT: production/qa/evidence/story-001-n-retry/stamp.txt
+UNCHANGED: src/main.ts
+UNCHANGED: tests/integration/n-retry.spec.ts
+UNCHANGED: tests/integration/retry.spec.ts

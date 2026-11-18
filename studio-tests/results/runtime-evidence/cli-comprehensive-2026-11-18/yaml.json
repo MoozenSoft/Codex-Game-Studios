@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "coverage": {
+    "yaml_files": 17,
+    "skill_frontmatters": 75
+  },
+  "checks": []
+}

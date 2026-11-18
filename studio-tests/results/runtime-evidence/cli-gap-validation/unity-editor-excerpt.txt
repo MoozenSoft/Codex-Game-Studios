@@ -1,0 +1,9 @@
+UNITY_PROBE_READY 6000.3.5f2
+
+abort_threads: Failed aborting id: 00000000000087F8, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 3320
+[usbmuxd] Stop listen thread
+[usbmuxd] Listen thread exiting
+Exiting batchmode successfully now!
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -1,0 +1,12 @@
+{
+  "source": "依据本次 App/CLI 已观察到的事件名与工具输入构造的最小脱敏协议样例；不是完整私有会话记录。",
+  "events": [
+    {"hook_event_name": "SessionStart", "session_id": "fixture-session"},
+    {"hook_event_name": "PreToolUse", "session_id": "fixture-session", "tool_name": "Bash", "tool_use_id": "fixture-normal", "tool_input": {"command": "git status --short"}},
+    {"hook_event_name": "PostToolUse", "session_id": "fixture-session", "tool_name": "apply_patch", "tool_use_id": "fixture-write", "tool_input": {"command": "*** Begin Patch\r\n*** Add File: data/中文.json\r\n+{}\r\n*** End Patch\r\n"}},
+    {"hook_event_name": "PreCompact", "session_id": "fixture-session"},
+    {"hook_event_name": "SubagentStart", "session_id": "fixture-session"},
+    {"hook_event_name": "SubagentStop", "session_id": "fixture-session"},
+    {"hook_event_name": "Stop", "session_id": "fixture-session"}
+  ]
+}

@@ -1,0 +1,36 @@
+browser	C:/Program Files/Google/Chrome/Application/chrome.exe
+time	2026-11-17 12:07:26
+render	cheap
+ua	HeadlessChrome/157.0.0.0
+scene	0	title
+state	0	title	{"t":0,"score":0,"gained":"","x":400,"y":510,"phase":0,"target":0.32,"cooldown":0,"feedback":0,"message":"Find the gold. Press Space.","fish":"[8 items]"}
+scene	1	play
+state	1	play	{"t":0,"score":0,"gained":"","x":400,"y":510,"phase":0,"target":0.32,"cooldown":0,"feedback":0,"message":"Find the gold. Press Space.","fish":"[8 items]"}
+state	120	play	{"t":1.98,"score":0,"gained":"","x":400,"y":510,"phase":1.29,"target":0.32,"cooldown":0,"feedback":0,"message":"Find the gold. Press Space.","fish":"[8 items]"}
+digits	log	52px "Trebuchet MS", sans-serif	tabular	0
+digits	log	25px "Trebuchet MS", sans-serif	tabular	0
+digits	log	14px "Trebuchet MS", sans-serif	tabular	0
+digits	log	23px "Trebuchet MS", sans-serif	tabular	0
+loop	log	none	no loop() step was marked
+first	log	none	no state.beat
+pressure	none	the game set no number state.margin in play
+steptime	120	0.003	0.100
+frametime	2	1.6	1.9	60	0	0
+done	120	play	stop	2.0	59
+measured	1280x720
+text	play	canvas	64,33,179,54	40.5	14.47	inside	dusk-fish
+text	play	canvas	63,75,335,91	22.5	10.73	inside	A small ritual before the light goes.
+text	play	canvas	849,41,1210,58	25.5	10.73	inside	ARROWS move   /   SPACE catch   /   P pause
+text	play	canvas	1015,174,1169,187	25.5	12.00	inside	BEFORE NIGHTFALL
+text	play	canvas	1014,213,1135,252	72.0	15.12	inside	43.0s
+text	play	canvas	1014,289,1170,307	34.5	15.12	inside	0 / 3 CAUGHT
+text	play	canvas	1013,340,1165,351	21.0	11.21	inside	YOUR EVENING HAUL
+text	play	canvas	1013,453,1176,466	22.5	15.12	inside	Three fish. One dusk.
+text	play	canvas	1014,484,1189,496	21.0	11.21	inside	Enter retries at the end.
+text	play	canvas	1014,538,1069,548	19.5	11.21	inside	SEED 721
+text	play	canvas	150,592,405,603	21.0	10.73	inside	REEL WHEN THE NEEDLE IS IN GOLD
+text	play	canvas	151,657,378,675	27.0	14.47	inside	Find the gold. Press Space.
+text	play	canvas	795,659,890,671	21.0	10.73	inside	SPACE to reel
+screen	120	play	449e1d2a	drawn
+uncaught	0
+shot	/d/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/production/qa/evidence/app-acceptance/repro-normal.png	89201

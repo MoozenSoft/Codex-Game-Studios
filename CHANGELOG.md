@@ -1,5 +1,10 @@
 # Changelog
 
+## [未发布] — Codex 迁移
+
+迁移到 .agents/skills、Codex 原生角色与事件适配，保留三种协作模式且默认 collaborative。新增框架自动化与客户端运行证据，能力状态见 studio-tests/results。上游历史记录保留。
+
+
 What's new in Claude Code Game Studios, written for the people using it.
 
 See [UPGRADING.md](UPGRADING.md) for step-by-step upgrade instructions, and

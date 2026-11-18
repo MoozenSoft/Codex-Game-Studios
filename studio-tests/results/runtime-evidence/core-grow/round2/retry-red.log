@@ -1,0 +1,56 @@
+
+Running 5 tests using 1 worker
+
+(node:26628) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests\integration\retry.spec.ts:22:5 › over 画面真实键盘 r 重试并重置整局 (797ms)
+(node:16616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests\integration\retry.spec.ts:22:5 › over 画面真实键盘 Enter 重试并重置整局 (1.0s)
+  ✘  3 tests\integration\retry.spec.ts:22:5 › results 画面真实键盘 r 重试并重置整局 (354ms)
+(node:35232) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 tests\integration\retry.spec.ts:22:5 › results 画面真实键盘 Enter 重试并重置整局 (887ms)
+  ✓  5 tests\integration\retry.spec.ts:58:1 › R 在标题、游玩及暂停时均不会重开游戏 (297ms)
+
+
+  1) tests\integration\retry.spec.ts:22:5 › over 画面真实键盘 r 重试并重置整局 ──────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "play"
+    Received: "over"
+
+      43 |       await page.keyboard.press(key);
+      44 |       await page.evaluate(() => window.game!.step());
+    > 45 |       expect(await page.evaluate(() => window.game!.scene)).toBe('play');
+         |                                                             ^
+      46 |       const after = await page.evaluate(() => window.game!.state as State);
+      47 |       expect(after).toEqual(initial);
+      48 |       expect(await page.evaluate(() => window.game!.events)).toEqual(['start']);
+        at <probe>\tests\integration\retry.spec.ts:45:61
+
+    Error Context: test-results\retry-over-画面真实键盘-r-重试并重置整局\error-context.md
+
+  2) tests\integration\retry.spec.ts:22:5 › results 画面真实键盘 r 重试并重置整局 ───────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "play"
+    Received: "results"
+
+      43 |       await page.keyboard.press(key);
+      44 |       await page.evaluate(() => window.game!.step());
+    > 45 |       expect(await page.evaluate(() => window.game!.scene)).toBe('play');
+         |                                                             ^
+      46 |       const after = await page.evaluate(() => window.game!.state as State);
+      47 |       expect(after).toEqual(initial);
+      48 |       expect(await page.evaluate(() => window.game!.events)).toEqual(['start']);
+        at <probe>\tests\integration\retry.spec.ts:45:61
+
+    Error Context: test-results\retry-results-画面真实键盘-r-重试并重置整局\error-context.md
+
+  2 failed
+    tests\integration\retry.spec.ts:22:5 › over 画面真实键盘 r 重试并重置整局 ───────────────────────────────────
+    tests\integration\retry.spec.ts:22:5 › results 画面真实键盘 r 重试并重置整局 ────────────────────────────────
+  3 passed (12.6s)

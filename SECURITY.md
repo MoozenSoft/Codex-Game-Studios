@@ -1,80 +1,12 @@
-# Security Policy
+# 权限与问题报告
 
-## Supported Versions
+使用 Codex 当前 sandbox、审批与托管策略；项目配置和角色正文不能赋予额外权限。
+正常审阅项目和 hook 定义后再信任，变更定义按客户端要求重新核对；不把绕过信任或沙箱作为安装步骤。
 
-Security fixes go to the newest 1.3.x release only. Forks and
-older releases are not supported.
+事件适配器只记录最少事件元数据，不保存完整用户消息、原始命令或凭据。
+文件 patch 的越界与环境凭据目标在执行前拒绝；常见危险命令守卫是辅助约束，不是完整 shell/MCP 安全边界。
+写后检查不能撤销已发生的写入；必要失败阻止任务完成，普通未完成内容仍允许修复。
+具体覆盖和未覆盖工具路径见 `.agents/docs/hooks-reference/codex-events.md`。
 
-## Reporting a Vulnerability
-
-**Do not report security vulnerabilities through public GitHub issues.**
-
-Use GitHub's private vulnerability reporting instead:
-
-**[Report a vulnerability →](https://github.com/Donchitos/Claude-Code-Game-Studios/security/advisories/new)**
-
-Include as much detail as possible:
-- Description of the vulnerability and what it affects
-- Steps to reproduce
-- Potential impact and attack scenarios
-- Any suggested mitigations
-
-**What to expect:**
-- Acknowledgment within **48 hours**
-- Status update within **7 days**
-- Resolution within **90 days** for confirmed vulnerabilities
-
-## What Is In Scope
-
-CCGS is a **local development tool** — it installs shell hooks and coordinates
-AI agents that run directly on your machine. Security issues are primarily about
-contributed code that executes in users' environments without their awareness.
-
-### High Severity
-- Hooks (`.claude/hooks/*.sh`) that execute malicious or undisclosed shell
-  commands on user machines
-- Skills or agents that exfiltrate environment variables, API keys, or secrets
-- Prompt injection via skill or agent definitions that causes Claude to bypass
-  safety measures or take unauthorized destructive actions
-- Contributions that silently alter behavior in ways users cannot audit
-
-### Medium Severity
-- Skills that make undisclosed outbound network requests
-- Agent definitions that escalate permissions or bypass user confirmation prompts
-- Hook patterns that behave differently across platforms to conceal behavior
-- Skills that write outside their documented scope without an explicit user
-  approval step
-
-### Out of Scope
-- The behavior of Claude or the Claude Code CLI itself
-  (report to [Anthropic](https://www.anthropic.com/security))
-- Bugs in the user's Claude Code installation or editor extension
-- Theoretical vulnerabilities with no realistic attack path
-- Issues requiring physical access to the user's machine
-
-## Security Guidelines for Contributors
-
-When contributing hooks, skills, or agents:
-
-- **Hooks must be POSIX-compatible** — use `grep -E`, not `grep -P`; avoid
-  platform-specific syntax that behaves differently across operating systems
-- **No silent network calls** from hooks or skills unless explicitly documented
-  and opt-in by the user
-- **No reading secrets or environment variables** beyond what is minimally
-  required and clearly documented in the skill's header
-- **Skills must not write outside their documented scope** without an explicit
-  user confirmation step
-
-## Disclosure Policy
-
-We follow a **90-day coordinated disclosure** timeline:
-
-1. You submit the vulnerability privately
-2. We acknowledge within 48 hours
-3. We confirm and assess severity within 7 days
-4. We develop and test a fix
-5. We notify you before any public disclosure
-6. Public disclosure happens after the fix ships, or at 90 days — whichever
-   comes first
-
-We credit reporters in release notes unless you prefer to remain anonymous.
+问题报告附客户端/平台版本、复现输入、预期与实际行为及脱敏证据。不要提交 .env、密钥、个人客户端设置、私有会话或完整浏览器配置。
+涉及敏感信息时先形成私下可审阅的报告；对外 issue、评论和发布遵循明确用户授权。

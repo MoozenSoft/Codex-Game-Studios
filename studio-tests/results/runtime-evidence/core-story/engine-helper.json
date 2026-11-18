@@ -1,0 +1,22 @@
+{
+  "schema": "helper-result/1",
+  "status": "done",
+  "conclusion": "指定范围内未发现阻塞问题。N 经真实键盘事件进入现有输入路径，仅在 over/results 调用 begin/reset；R/Enter、其它场景和玩法计算保持原样。测试能识别旧实现缺少 N 的错误，并验证完整 State、事件及 RNG 重置。",
+  "evidence": [
+    { "location": "src/input.ts:5", "quoted_code": "if (!e.repeat) { down.add(e.code); hit.add(e.code); }", "why": "输入保存 KeyboardEvent.code；结果场景查询 KeyN，与现有 KeyR 使用同一路径，没有另接监听器或生命周期变化。" },
+    { "location": "src/main.ts:85", "quoted_code": "if(pressed('Enter')||pressed('KeyR')||pressed('KeyN'))begin();", "why": "over/results 两处均只扩展按键条件和提示；title/play/pause 未加入 N 分支。原 R/Enter 条件保留。" },
+    { "location": "src/main.ts:60", "quoted_code": "function begin(){reset();scene='play';events.push('start');}", "why": "复用既有重置路径；reset 第 21–25 行重新建立 RNG、清空事件并创建完整初始 State。step 第 91 行消费后清空 hit，N 不会跨步遗留。" },
+    { "location": "tests/integration/n-retry.spec.ts:25", "quoted_code": "await page.keyboard.press(key);", "why": "N 使用 Playwright 真实键盘输入；hook 仅推进固定步，不直接写状态、场景或 hit。reachEnding 通过移动和 Space 实际到达胜负结果。" },
+    { "location": "tests/integration/n-retry.spec.ts:65", "quoted_code": "expect(scene).toBe('play'); expect(after).toEqual(initial); expect(events).toEqual(['start']);", "why": "同时验证场景、完整 State 和事件；第 71 行再次完成同一局并比较终态，覆盖 RNG 序列重置。red.log 显示旧实现分别停留 over/results，两个新重试用例真实失败。" },
+    { "location": "tests/integration/n-retry.spec.ts:87", "quoted_code": "if (withN) await page.keyboard.press('n');", "why": "游玩中的 N 与无 N 使用相同 seed 和步数比较；标题及暂停另有场景与完整 State 不变断言，没有仅靠共用错误结果通过。" },
+    { "location": "docs/engine-reference/web/VERSION.md:4", "quoted_code": "- Vite: 8.3.4", "why": "本次差异没有新增 Web 或 Vite API。已读取 green-build-and-suite.log 和 green-test-run.log：构建成功，6 个 unit 与 12 个 E2E 全通过；日志包含原 R/Enter 四种结果重试回归。" }
+  ],
+  "actions_taken": [],
+  "confidence": "高；限指定代码、测试及已有证据的独立引擎检查。",
+  "caveats": [
+    "未重新执行测试、浏览器或人工试玩，未查看截图；已有测试结果来自所读日志。",
+    "docs/engine-reference/web/deprecated-apis.md 与 breaking-changes.md 缺失，因此版本化 API 文档兼容性未评估；不据此声称全部 Web API 已核验。本次没有引入新 API，已有 Chrome 运行证据覆盖相关键盘路径。",
+    "协作配置沿用父任务给定的 minimal/solo/collaborative；本次 resolve_config 调用未返回可读配置值，未独立确认配置来源。",
+    "没有写入产物或工作笔记；本返回仅代表指定 helper 引擎检查，不代表全量独立评审。"
+  ]
+}

@@ -1,19 +1,21 @@
 # Agent Test Spec: audio-director
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 **Domain owned:** Sonic identity — sound palette, music direction and emotional mapping, audio event architecture, mix strategy, adaptive audio design, audio asset specifications and naming.
 **Does NOT own:** Visual design (art-director), audio engine code (gameplay-programmer / engine-programmer), audio middleware changes (technical-director approval), narrative story content (narrative-director), UX interaction flows (ux-designer).
-**Gate IDs handled:** None. No director gate is assigned to audio-director (`AD-` gates belong to art-director). Design-review verdicts come from the `/design-review` skill, which spawns audio-director as a specialist that returns findings.
+**Gate IDs handled:** None. No director gate is assigned to audio-director (`AD-` gates belong to art-director). Design-review verdicts come from the `$design-review` skill, which spawns audio-director as a specialist that returns findings.
 
 ---
 
 ## Static Assertions (Structural)
 
-Verified by reading the agent's `.claude/agents/audio-director.md` frontmatter:
+Verified by reading the agent's `.codex/agents/audio-director.toml` frontmatter:
 
 - [ ] `description:` field is present and domain-specific (references music direction, sound design, mix, audio implementation — not generic)
-- [ ] `tools:` reads Read, Glob, Grep, Write, Edit, WebSearch and `disallowedTools:` lists Bash
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over visual design, code implementation, or narrative content
 
 ---
@@ -39,8 +41,8 @@ Verified by reading the agent's `.claude/agents/audio-director.md` frontmatter:
 - [ ] Limits its contribution to audio requirements taken from its mix strategy (e.g., one slider per bus in its volume hierarchy — master, music, SFX, dialogue)
 
 ### Case 3: Review findings — specific, verdict left to the review skill
-**Scenario:** `/design-review` in full mode spawns audio-director as the adversarial specialist for a boss-encounter GDD that contains music triggers. The spawn prompt reads: "Your job is NOT to validate this design — your job is to find problems. Be specific and critical." The GDD's final-boss cue is an upbeat, major-key orchestral piece with fast tempo; the game pillars and narrative context for the encounter specify "dread, inevitability, and tragic sacrifice."
-**Expected:** Returns specific findings: the cue's major key, fast tempo, and upbeat register contradict the emotional targets, with revision directions offered as options. It returns findings, not a verdict — the review's verdict is produced by `/design-review`.
+**Scenario:** `$design-review` in full mode spawns audio-director as the adversarial specialist for a boss-encounter GDD that contains music triggers. The spawn prompt reads: "Your job is NOT to validate this design — your job is to find problems. Be specific and critical." The GDD's final-boss cue is an upbeat, major-key orchestral piece with fast tempo; the game pillars and narrative context for the encounter specify "dread, inevitability, and tragic sacrifice."
+**Expected:** Returns specific findings: the cue's major key, fast tempo, and upbeat register contradict the emotional targets, with revision directions offered as options. It returns findings, not a verdict — the review's verdict is produced by `$design-review`.
 **Assertions:**
 - [ ] Identifies the specific musical characteristics that conflict (major key, fast tempo, upbeat register)
 - [ ] Names the emotional targets the cue contradicts (dread, inevitability, tragic sacrifice), treating them as the encounter's emotional mapping

@@ -1,0 +1,8 @@
+test_core_skill_metadata_and_resources_exist (test_core_skills.CoreSkillTests.test_core_skill_metadata_and_resources_exist) ... ok
+test_story_close_policy_rejects_required_failure_and_unknown (test_core_skills.CoreSkillTests.test_story_close_policy_rejects_required_failure_and_unknown) ... ok
+test_story_lifecycle_requires_explicit_invocation (test_core_skills.CoreSkillTests.test_story_lifecycle_requires_explicit_invocation) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+OK

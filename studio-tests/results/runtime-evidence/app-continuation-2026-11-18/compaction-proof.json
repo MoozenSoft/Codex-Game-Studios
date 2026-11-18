@@ -1,0 +1,49 @@
+{
+  "native_precompact_count": 1,
+  "completed_context_compaction": {
+    "type": "contextCompaction",
+    "id": "01a1ebf8-7e69-7c21-8eb1-84c839837da7",
+    "startedAtMs": 1794960293481,
+    "completedAtMs": 1794960373291
+  },
+  "checkpoint_unchanged": true,
+  "explicit_checkpoint_read": true,
+  "marker_recovered": true,
+  "session_start_after_compaction": true,
+  "events": [
+    {
+      "time": "2026-11-18T00:04:53.430869+00:00",
+      "event": "PreCompact",
+      "tool": null,
+      "tool_use_id": null
+    },
+    {
+      "time": "2026-11-18T00:09:19.940384+00:00",
+      "event": "SessionStart",
+      "tool": null,
+      "tool_use_id": null
+    },
+    {
+      "time": "2026-11-18T00:09:25.576167+00:00",
+      "event": "PreToolUse",
+      "tool": "Bash",
+      "tool_use_id": "exec-5442d10c-489b-459e-af69-4eda52850b53"
+    },
+    {
+      "time": "2026-11-18T00:09:26.924336+00:00",
+      "event": "PostToolUse",
+      "tool": "Bash",
+      "tool_use_id": "exec-5442d10c-489b-459e-af69-4eda52850b53"
+    },
+    {
+      "time": "2026-11-18T00:09:34.173454+00:00",
+      "event": "Stop",
+      "tool": null,
+      "tool_use_id": null
+    }
+  ],
+  "checkpoint_context_received": {
+    "timestamp": "2026-11-18T00:09:20.017Z",
+    "text": "工作室检查点：\n<!-- STATUS -->\nBranch: app-acceptance\nTask: APP_CONTINUATION_2026_11_18\n<!-- /STATUS -->\n<!-- CHECKPOINT -->\nMarker: APP_COMPACT_RESTORE_81c7fa\nStage: compact-and-restore-probe\nAllowed: read-only acceptance and bounded role probe\nPending: verify native compaction, then qa-tester delegation and follow-up\nGame implementation and actual commits are not approved.\n<!-- /CHECKPOINT -->\n"
+  }
+}

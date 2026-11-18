@@ -1,0 +1,19 @@
+browser	C:/Program Files/Google/Chrome/Application/chrome.exe
+time	2026-11-17 12:06:05
+render	cheap
+hookless	the game has window.game; its own loop is stepped
+ua	HeadlessChrome/157.0.0.0
+scene	0	hookless
+state	0	hookless	{}
+stuck	660	hookless	11	
+stuck	1260	hookless	10	
+stuck	1860	hookless	10	
+state	1924	hookless	{}
+pressure	none	the game set no number state.margin in play
+steptime	1924	0.000	0.100
+frametime	none	no frame was drawn in play
+done	1924	hookless	stop	32.1	246
+measured	1280x720
+screen	1924	hookless	c9d0dc5	blank
+uncaught	0
+shot	/d/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/prototypes/app-dusk-fish/evidence/baseline/play-30s.png	4250

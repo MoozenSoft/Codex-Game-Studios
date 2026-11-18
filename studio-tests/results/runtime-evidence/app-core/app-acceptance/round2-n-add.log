@@ -1,0 +1,87 @@
+warning: in the working copy of 'design/game-brief.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'project.yaml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main.ts', LF will be replaced by CRLF the next time Git touches it
+The following paths are ignored by one of your .gitignore files:
+production/qa/evidence/app-acceptance/final-suite.log
+production/qa/evidence/app-acceptance/n-red.log
+production/qa/evidence/app-acceptance/n-suite.log
+production/qa/evidence/app-acceptance/round2-60-loss.log
+production/qa/evidence/app-acceptance/round2-60-pause.log
+production/qa/evidence/app-acceptance/round2-60-win.log
+production/qa/evidence/app-acceptance/round2-build.log
+production/qa/evidence/app-acceptance/round2-change-add.log
+production/qa/evidence/app-acceptance/round2-change-commit.log
+production/qa/evidence/app-acceptance/round2-coherence.log
+production/qa/evidence/app-acceptance/round2-config.log
+production/qa/evidence/app-acceptance/round2-copy-add.log
+production/qa/evidence/app-acceptance/round2-copy-build.log
+production/qa/evidence/app-acceptance/round2-copy-commit.log
+production/qa/evidence/app-acceptance/round2-copy-replay.log
+production/qa/evidence/app-acceptance/round2-dev-config.log
+production/qa/evidence/app-acceptance/round2-dev-status.log
+production/qa/evidence/app-acceptance/round2-door.log
+production/qa/evidence/app-acceptance/round2-final-done-config.log
+production/qa/evidence/app-acceptance/round2-final-done-receipt.log
+production/qa/evidence/app-acceptance/round2-final-suite.log
+production/qa/evidence/app-acceptance/round2-framework.log
+production/qa/evidence/app-acceptance/round2-grow-copy.log
+production/qa/evidence/app-acceptance/round2-grow-guard.log
+production/qa/evidence/app-acceptance/round2-grow-record.log
+production/qa/evidence/app-acceptance/round2-grow-reference.log
+production/qa/evidence/app-acceptance/round2-grown-tag.log
+production/qa/evidence/app-acceptance/round2-n-green-smoke.log
+production/qa/evidence/app-acceptance/round2-n-red.log
+production/qa/evidence/app-acceptance/round2-n-replay.log
+production/qa/evidence/app-acceptance/round2-n-suite.log
+production/qa/evidence/app-acceptance/round2-npm-ci.log
+production/qa/evidence/app-acceptance/round2-oneshot-tag.log
+production/qa/evidence/app-acceptance/round2-r-accept.log
+production/qa/evidence/app-acceptance/round2-r-add.log
+production/qa/evidence/app-acceptance/round2-r-commit.log
+production/qa/evidence/app-acceptance/round2-r-green.log
+production/qa/evidence/app-acceptance/round2-r-red.log
+production/qa/evidence/app-acceptance/round2-r-replay.log
+production/qa/evidence/app-acceptance/round2-r-smoke.log
+production/qa/evidence/app-acceptance/round2-readiness-adrs.log
+production/qa/evidence/app-acceptance/round2-readiness-config.log
+production/qa/evidence/app-acceptance/round2-readiness-facts.log
+production/qa/evidence/app-acceptance/round2-record-add.log
+production/qa/evidence/app-acceptance/round2-record-commit.log
+production/qa/evidence/app-acceptance/round2-reference-add.log
+production/qa/evidence/app-acceptance/round2-reference-commit.log
+production/qa/evidence/app-acceptance/round2-review-config.log
+production/qa/evidence/app-acceptance/round2-routing.log
+production/qa/evidence/app-acceptance/round2-rule-red.log
+production/qa/evidence/app-acceptance/round2-smoke-config.log
+production/qa/evidence/app-acceptance/round2-smoke.log
+production/qa/evidence/app-acceptance/round2-story-close.log
+production/qa/evidence/app-acceptance/round2-story-done-red-config.log
+production/qa/evidence/app-acceptance/round2-story-done-red-facts.log
+production/qa/evidence/app-acceptance/round2-story-status.log
+production/qa/evidence/app-acceptance/round2-test-add.log
+production/qa/evidence/app-acceptance/round2-test-commit.log
+production/qa/evidence/app-acceptance/round2-test-run.log
+production/qa/evidence/app-acceptance/round2-tests-green.log
+production/qa/evidence/app-acceptance/round2-ts-add.log
+production/qa/evidence/app-acceptance/round2-ts-commit.log
+production/qa/evidence/app-acceptance/round2-tune.log
+production/qa/evidence/app-acceptance/round2-typescript-build-fixed.log
+production/qa/evidence/app-acceptance/round2-typescript-build-green.log
+production/qa/evidence/app-acceptance/round2-typescript-build.log
+production/qa/evidence/app-acceptance/round2-typescript-migrate.log
+production/qa/evidence/app-acceptance/round2-typescript-replay.log
+hint: Use -f if you really want to add them.
+hint: Disable this message with "git config set advice.addIgnoredFile false"
+warning: in the working copy of 'production/epics/EPIC-APP-ACCEPTANCE/story-001-n-retry.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/final-suite.log.e2e', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/final-suite.log.unit', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/n-code-review.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/n-readiness-and-red-gate.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/n-red.log.e2e', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/n-suite.log.e2e', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/n-suite.log.unit', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/round2-commands.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-core-result-round2.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/story-001-n-retry/stamp.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/smoke-2026-11-17.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/integration/n-retry.spec.ts', LF will be replaced by CRLF the next time Git touches it

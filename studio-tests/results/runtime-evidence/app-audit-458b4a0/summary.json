@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-17",
+  "source_commit": "458b4a0",
+  "client": "Codex App",
+  "package": "OpenAI.Codex",
+  "package_version": "26.1111.2228.0",
+  "display_name": "ChatGPT",
+  "selected_mode": "Codex",
+  "target_confirmed_by_user": true,
+  "backend_version": "0.169.0-alpha.11.1",
+  "originator": "Codex Desktop",
+  "source_class": "vscode",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "model_override": false,
+  "execution": "Four turns started or answered in the App UI; app-server protocol used only for readback.",
+  "source_files_from_commit": 1126,
+  "source_files_matched_after_run": 1126,
+  "completed_turns": 4,
+  "checks": [
+    {
+      "id": "app_identity_and_workspace",
+      "status": "passed"
+    },
+    {
+      "id": "startup_checkpoint",
+      "status": "passed"
+    },
+    {
+      "id": "shared_engine_and_windows_helper",
+      "status": "passed"
+    },
+    {
+      "id": "user_reviewed_hook_registration",
+      "status": "passed",
+      "scope": "trust/registration, not seven live events"
+    },
+    {
+      "id": "ordinary_tool_allow",
+      "status": "passed",
+      "operation_result": "ALLOWED"
+    },
+    {
+      "id": "json_post_warning_and_repair",
+      "status": "passed",
+      "operation_result": "INVALID then REPAIRED"
+    },
+    {
+      "id": "env_patch_pre_denial",
+      "status": "passed",
+      "operation_result": "BLOCKED"
+    },
+    {
+      "id": "cross_repo_commit_context_denial",
+      "status": "passed",
+      "operation_result": "BLOCKED; target index not assessed"
+    },
+    {
+      "id": "async_accepted_receipt_remains_waiting",
+      "status": "passed",
+      "operation_result": "WAITING"
+    },
+    {
+      "id": "native_question_widget_independent_answers",
+      "status": "passed",
+      "operation_result": "plan=yes; story=no"
+    },
+    {
+      "id": "qa_plan_saved_without_backfill",
+      "status": "passed",
+      "operation_result": "plan saved; story unchanged"
+    },
+    {
+      "id": "invalid_staged_json_denial",
+      "status": "passed",
+      "operation_result": "BLOCKED; staged JSON invalid"
+    },
+    {
+      "id": "smoke_verdict_fixtures",
+      "status": "passed",
+      "scope": "model decisions only; no game smoke run"
+    },
+    {
+      "id": "game_checkpoint_and_index_preserved",
+      "status": "passed",
+      "scope": "seven reviewed adapter files retained; five intentional tracked changes"
+    },
+    {
+      "id": "final_result_visible_in_app",
+      "status": "passed",
+      "evidence": "ui-evidence.txt"
+    }
+  ],
+  "not_assessed": [
+    "live PreCompact",
+    "all role workflows",
+    "native engine runs",
+    "full game smoke/playtest",
+    "remote CI"
+  ],
+  "client_observations": [
+    "App was minimized; user confirmed the renamed window and selected the existing isolated project.",
+    "Some UI updates were not immediately exposed; reopening the same chat and scrolling to the bottom displayed final messages and native question cards.",
+    "Only UI Automation text excerpts are published; no screenshot of unrelated windows is used as evidence."
+  ]
+}

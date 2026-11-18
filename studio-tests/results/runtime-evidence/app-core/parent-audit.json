@@ -1,0 +1,17 @@
+{
+  "source_files": 31,
+  "source_hash_mismatches": [],
+  "source_file_set_unchanged": true,
+  "frozen_files": 42,
+  "frozen_hash_mismatches": [],
+  "frozen_file_set_unchanged": true,
+  "protected_files": 854,
+  "protected_changes": [
+    ".agents/scripts/one-shot-run.sh"
+  ],
+  "known_parent_import_fix_matches": true,
+  "unexpected_protected_changes": [],
+  "head": "6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5",
+  "head_tree": "993b8f1a02e87e2fbdb3962c0c7d63382471ac6a",
+  "status": "passed"
+}

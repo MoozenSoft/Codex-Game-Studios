@@ -1,0 +1,408 @@
+[
+  {
+    "label": "baseline",
+    "id": "01a1e9d1-0e7c-7bd1-a4d0-7660ca7dac43",
+    "status": "completed",
+    "duration_ms": 79184,
+    "items": [
+      {
+        "type": "userMessage",
+        "id": "01a1e9d1-204a-7300-b521-34ee4dbc3818"
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc5e80123487d09105fbac6633a31b",
+        "phase": "commentary",
+        "text_sha256": "2edaad17faba784a83e3eaa3abf29fb07e188f99e0adb2bb487c0aba5b941b2d",
+        "last_message": false
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-74d9ba66-268b-4b09-be56-57b46aa3916f",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'Get-Location\ngit rev-parse --show-toplevel'",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc5e91c8c087d093966a7c3d0fc893",
+        "phase": "commentary",
+        "text_sha256": "0b8c5582ce60ac60f10ef3407bbe2ec1fda74afd44589a03ec567858160861ba",
+        "last_message": false
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-0b8fb7e1-5972-439c-aa20-6cf3fe750185",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath '%USERPROFILE%/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/using-superpowers/SKILL.md'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-7da03ccc-0ea0-4343-b029-179831213727",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath '.agents/docs/config-resolution.md'\nGet-Content -LiteralPath '.agents/docs/codex-runtime.md'\nTest-Path -LiteralPath '.codegraph'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-058a82f1-5972-41b1-b701-788405e22d3a",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"& 'D:/Program Files/Git/bin/bash.exe' '.agents/scripts/yaml-helper.sh' --root '.scratch/app-audit-458b4a0/config-case' resolve_config --keys 'engine,engine_values,engine_row'\"",
+        "cwd": "<app-probe>",
+        "status": "failed",
+        "exitCode": 1
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-cee16c8e-2abc-43ad-95b3-10b725e1e98d",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath '%USERPROFILE%/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/using-superpowers/references/codex-tools.md'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc5ea6cfd087d0841a363104116f27",
+        "phase": "commentary",
+        "text_sha256": "43c574b637e74955fe265e3c7945523da4536dff656178ab0200505ea931326e",
+        "last_message": false
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-b6afed23-3757-4acf-8d57-4f480959ffd5",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"& 'D:/Program Files/Git/bin/bash.exe' '.agents/scripts/yaml-helper.sh' --root '.scratch/app-audit-458b4a0/config-case' resolve_config --keys 'engine,engine_values,engine_row'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc5ec03fe887d091ce9e6b08796105",
+        "phase": "final_answer",
+        "text_sha256": "c64e4d6f2c3b58bdf7dbe8058119a0df4c17d79864538707121951fd13fd485f",
+        "last_message": true
+      }
+    ]
+  },
+  {
+    "label": "qa-waiting",
+    "id": "01a1e9d6-82b2-7383-bb23-ca16ea5383e4",
+    "status": "completed",
+    "duration_ms": 308271,
+    "items": [
+      {
+        "type": "userMessage",
+        "id": "01a1e9d6-838d-70c2-b577-7d0292f7ec72"
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc5fe62a4087d0969cdad2d4508b99",
+        "phase": "commentary",
+        "text_sha256": "f560a7e6b61567010065d10953681d5ba4d68b52b3795927dcfa5b74dbd2e1eb",
+        "last_message": false
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-c20c93b6-f6fa-4bcb-823a-ff16d6e8952f",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Write-Output 'APP_ALLOW_458B4A0_4d7e'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "fileChange",
+        "id": "exec-f3fa039d-2c6b-4807-be90-5c225562b5f8",
+        "changes": [
+          {
+            "path": "<app-probe>\\.scratch\\app-audit-458b4a0\\hook-bad.json",
+            "kind": {
+              "type": "add"
+            },
+            "diff": "{broken\n"
+          }
+        ],
+        "status": "completed",
+        "startedAtMs": 1794924538196,
+        "completedAtMs": 1794924538433
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc5ffb694087d0ba55d8b00ecfbb6f",
+        "phase": "commentary",
+        "text_sha256": "ef1292a923dc0da4f2f4a78b0c5631c5aeec533d7a212a4c94e09a159e60ff1f",
+        "last_message": false
+      },
+      {
+        "type": "fileChange",
+        "id": "exec-eadbe618-695a-4464-a784-20e55b797a70",
+        "changes": [
+          {
+            "path": "<app-probe>\\.scratch\\app-audit-458b4a0\\hook-bad.json",
+            "kind": {
+              "type": "update",
+              "move_path": null
+            },
+            "diff": "@@ -1 +1 @@\n-{broken\n+{\"probe\":\"APP_JSON_REPAIRED_458B4A0\"}\n"
+          }
+        ],
+        "status": "completed",
+        "startedAtMs": 1794924547588,
+        "completedAtMs": 1794924547736
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-608f5085-d97d-44d2-8790-8edfc81bd723",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -Raw -LiteralPath '.scratch/app-audit-458b4a0/hook-bad.json' | ConvertFrom-Json | Select-Object -ExpandProperty probe\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc602155e887d0aafa6ac4e740ed74",
+        "phase": "commentary",
+        "text_sha256": "36816fadd9a90e5b752d767ccc505952d427943b70f8082a180499dd6ac6b73a",
+        "last_message": false
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-874ac562-6426-45ef-84d6-0921148f02a1",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath '.agents/skills/qa-plan/SKILL.md'\nGet-Content -LiteralPath '.agents/docs/automation-modes.md'\nGet-Content -LiteralPath '.agents/docs/codex-runtime.md'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-e32ee053-345e-4239-8185-d23de480ad57",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"& 'D:/Program Files/Git/bin/bash.exe' '.agents/skills/qa-plan/../../scripts/yaml-helper.sh' resolve_config --keys 'automation,workflow,qa.level,system_overrides,engine'\"",
+        "cwd": "<app-probe>",
+        "status": "failed",
+        "exitCode": 1
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-297734e8-dde2-4a75-a581-80962364440b",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"& 'D:/Program Files/Git/bin/bash.exe' '.agents/scripts/python-run.sh' '.agents/scripts/rule-routing.py' '.scratch/app-audit-458b4a0/story-app-acceptance.md' 'production/qa/qa-plan-app-acceptance-2026-11-17.md'\"",
+        "cwd": "<app-probe>",
+        "status": "failed",
+        "exitCode": 1
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-ff9677a8-154a-41a1-a07b-e6cd7e5fa476",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"rg --files --hidden --glob '\"'!external-repo/**'\"' '.scratch/app-audit-458b4a0' -g 'story-app-acceptance.md'\nrg -n -A 30 '\"'^## (Acceptance Criteria|Context|Dependencies)|''^> '\"\\\\*\\\\*(Type|Status|Estimate)\\\\*\\\\*|\"'^# |''^(Type|Status|Estimate):'\"' '.scratch/app-audit-458b4a0/story-app-acceptance.md'\nGet-Content -LiteralPath '.agents/docs/workflow-modes.md'\nGet-Content -LiteralPath '.agents/docs/coding-standards.md'\nTest-Path -LiteralPath 'design/gdd/systems-index.md'\nTest-Path -LiteralPath 'docs/architecture/control-manifest.md'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc6039b02487d092ae453fe33bc031",
+        "phase": "commentary",
+        "text_sha256": "b66189dae1fbb5613a825addf6ae2b2a33314b708c6d0e1eb72ba2f79d935ea4",
+        "last_message": false
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-0cf761b0-ddc2-47ec-b81d-9349d5d0c91a",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"& 'D:/Program Files/Git/bin/bash.exe' '.agents/skills/qa-plan/../../scripts/yaml-helper.sh' resolve_config --keys 'automation,workflow,qa.level,system_overrides,engine'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-394ee600-4170-4d1b-87da-b8cfdd3b532a",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"& 'D:/Program Files/Git/bin/bash.exe' '.agents/scripts/python-run.sh' '.agents/scripts/rule-routing.py' '.scratch/app-audit-458b4a0/story-app-acceptance.md' 'production/qa/qa-plan-app-acceptance-2026-11-17.md'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-b4db83a3-5045-4e37-b58d-f25606cee328",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath '.agents/rules/test-standards.md'\nTest-Path -LiteralPath 'production/qa/qa-plan-app-acceptance-2026-11-17.md'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc607d508c87d0b30f413263fa0d33",
+        "phase": "commentary",
+        "text_sha256": "46792876237dff6d40984626f83e3a231b4400afe1a5ab02202793d5e7d85384",
+        "last_message": false
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc608b70b087d0b017be47e6de9aea",
+        "phase": "commentary",
+        "text_sha256": "ba75f7947cd151b543f280028ffea701173e4fd4eb6410e3a2622bb29a21a4f9",
+        "last_message": false
+      },
+      {
+        "type": "agentMessage",
+        "id": "call_eddfdc3c6a2c41c09a1731ef841f5986",
+        "phase": "final_answer",
+        "text_sha256": "5742ac8941338daf4245aa59cd14628898f8cb3c63c58d8de62b25cce7423725",
+        "last_message": false
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc60b9095c87d08d87e75f1dd3a85a",
+        "phase": "commentary",
+        "text_sha256": "3d945d19a6cfd94028cea9d90195a37bd490ce86d0d5df3d3aa4881fcbdf3e6e",
+        "last_message": false
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc61073f3887d096ca28cca16c8218",
+        "phase": "final_answer",
+        "text_sha256": "facb907fef6c378ce735be83fb91e3980b74aae2a06ede56aa1a9fdfce385284",
+        "last_message": true
+      }
+    ]
+  },
+  {
+    "label": "qa-output",
+    "id": "01a1e9dd-1f85-7053-97a8-e5638c5880bd",
+    "status": "completed",
+    "duration_ms": 146483,
+    "items": [
+      {
+        "type": "userMessage",
+        "id": "01a1e9dd-202e-7d31-8ba5-b9239854406c"
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc61a32bac87d0a4fa166dce073f62",
+        "phase": "commentary",
+        "text_sha256": "85bcb2c7c2cfd4b7592ada529868892eb5552cf944f23f2380abb39a9f07241b",
+        "last_message": false
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-9aca6de9-d5fe-49ad-bca7-30ce169a215c",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath '%USERPROFILE%/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/verification-before-completion/SKILL.md'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-5607a1da-eba2-4cf8-b073-c97a7b0280ee",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Test-Path -LiteralPath 'production/qa/qa-plan-app-acceptance-2026-11-17.md'\nGet-FileHash -Algorithm SHA256 -LiteralPath '.scratch/app-audit-458b4a0/story-app-acceptance.md'\nGet-Content -LiteralPath '.scratch/app-audit-458b4a0/story-app-acceptance.md'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc61bf27d087d0ae9716e46f2ed8ec",
+        "phase": "commentary",
+        "text_sha256": "f1e35044c78eedf2c3629ca9e9c1ee2d3a74be2adba894a0b414d237cae104c6",
+        "last_message": false
+      },
+      {
+        "type": "fileChange",
+        "id": "exec-9b59cae5-ba7b-4da6-817a-7a2a788abc40",
+        "changes": [
+          {
+            "path": "<app-probe>\\production\\qa\\qa-plan-app-acceptance-2026-11-17.md",
+            "kind": {
+              "type": "add"
+            },
+            "diff": "# QA Plan：App 验收计数规则\n\n**日期**：2026-11-17  \n**范围**：Story 902，1 个计数规则故事  \n**故事来源**：[story-app-acceptance.md](<app-probe>/.scratch/app-audit-458b4a0/story-app-acceptance.md)  \n**Engine**：Web 8.3.4（project.yaml）  \n**配置**：collaborative / workflow minimal / qa.level minimal  \n**Sprint**：不适用，单故事范围  \n**当前状态**：计划草稿；下列故事测试均未执行。\n\n## 输入与缺口\n\n- 声明类型为 Logic，估算 S，现有状态 Ready。\n- AC1：初始计数为 0，合法事件每次加 1，非法事件保持原值。\n- AC2：相同初始状态与相同事件序列产生相同计数。\n- 无 GDD、ADR 或公式引用；用例直接来自上述验收条件。无 Edge Cases 文档，边界仅从验收条件推导。\n- 系统索引及 control manifest 不存在。\n- 未提供事件合法性定义、调用接口及实现文件。执行前须确认具体事件样本与调用方式；确认前，可执行验证记为 NOT ASSESSED。\n- 不推定溢出、负初始值、并发或持久化行为。\n\n## Test Summary\n\n| Story | Type | Automated Test Required | Manual Verification Required |\n|---|---|---|---|\n| Story 902：App 验收计数规则 | Logic（故事声明） | | 初始值、逐事件更新、固定序列重放及结果记录 |\n\n`qa.level=minimal` 不要求自动化测试文件，仍须留下可核验的人工执行证据。本故事未涉及 Visual/Feel 或 UI，截图要求不适用。\n\n## Manual QA Checklist\n\n**方法**：通过专用 fixture 的已确认接口逐步执行并读取计数。  \n**输入约定**：L 为已确认合法事件，I 为已确认非法事件；同一序列重放时，事件内容及顺序保持一致。每个用例使用独立状态，从 0 开始。  \n**签核角色**：qa-lead 或用户指定审阅者；本回合不委派。  \n**证据**：具体输入、初始值、每步实际计数、预期值、执行回执、判定与审阅结论。\n\n| ID | 对应条件 | 操作 | 预期结果 |\n|---|---|---|---|\n| QA902-01 | AC1 | 初始化，不发送事件 | 计数为 0 |\n| QA902-02 | AC1 | 初始化后发送 L | 计数由 0 变为 1 |\n| QA902-03 | AC1 | 顺序发送 L、L、L | 每步计数为 1、2、3 |\n| QA902-04 | AC1 | 初始化后发送 I、I | 每步计数均为 0 |\n| QA902-05 | AC1 | 顺序发送 L、I、L、I | 每步计数为 1、1、2、2；非法事件在非零状态下也不改变计数 |\n| QA902-06 | AC2 | 两份独立的相同初始状态，重放完全相同的 L、I、L、I 序列 | 两次每步计数一致，最终均为 2 |\n| QA902-07 | AC1、AC2 | 两份独立的相同初始状态，各执行空事件序列 | 两次计数均为 0 |\n\n- [ ] 已确认 L、I 的具体样本及合法性依据。\n- [ ] 已确认可读取计数的专用 fixture 接口。\n- [ ] 已逐项执行 QA902-01 至 QA902-07，保留实际值，不以预期值代替执行证据。\n- [ ] 任何失败或无法执行项保留为 FAIL 或 NOT ASSESSED。\n- [ ] 审阅者核对两条验收条件均有证据覆盖。\n\n## Smoke Test Scope\n\n仅覆盖本故事的最小核验链：\n\n1. 初始化得到 0。\n2. 合法事件使计数加 1。\n3. 非法事件保持计数。\n4. 相同状态与序列重放得到相同结果。\n\n本回合不执行上述故事测试，不启动已有游戏，不运行完整游戏测试。真实 hooks 探针属于 App 集成验收证据，不能替代计数规则验证。minimal 不增加完整 smoke suite 门禁。\n\n## Playtest Requirements\n\n本故事无主观体验、Visual/Feel 或 UI 条件，无需玩家试玩。\n\n## Definition of Done — 本故事\n\n- [ ] 两条验收条件均有实际执行证据及审阅结论。\n- [ ] 事件样本与调用接口缺口已解决。\n- [ ] 未改变已有游戏或其他 story。\n- [ ] 实现如有变更，已完成相应代码评审；本计划不声称已评审。\n- [ ] 仅在验证通过并获得相应授权后更新故事状态；本回合不标记 Complete。\n"
+          }
+        ],
+        "status": "completed",
+        "startedAtMs": 1794925025034,
+        "completedAtMs": 1794925025302
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-a6755c8d-e822-4c1b-8313-d479d2c85bd2",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"rg -n -C 3 'subprocess|write_text|write_bytes|mkdir|Temporary|scope|def main|add_argument' '.agents/scripts/validate-framework.py'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-5753d8c8-6fa6-49af-a742-e5db1ec3c155",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command '$ErrorActionPreference = '\"'Stop'\n\"'$cgsExpectedPlan = @'\"'\n# QA Plan：App 验收计数规则\n\n**日期**：2026-11-17  \n**范围**：Story 902，1 个计数规则故事  \n**故事来源**：[story-app-acceptance.md](<app-probe>/.scratch/app-audit-458b4a0/story-app-acceptance.md)  \n**Engine**：Web 8.3.4（project.yaml）  \n**配置**：collaborative / workflow minimal / qa.level minimal  \n**Sprint**：不适用，单故事范围  \n**当前状态**：计划草稿；下列故事测试均未执行。\n\n## 输入与缺口\n\n- 声明类型为 Logic，估算 S，现有状态 Ready。\n- AC1：初始计数为 0，合法事件每次加 1，非法事件保持原值。\n- AC2：相同初始状态与相同事件序列产生相同计数。\n- 无 GDD、ADR 或公式引用；用例直接来自上述验收条件。无 Edge Cases 文档，边界仅从验收条件推导。\n- 系统索引及 control manifest 不存在。\n- 未提供事件合法性定义、调用接口及实现文件。执行前须确认具体事件样本与调用方式；确认前，可执行验证记为 NOT ASSESSED。\n- 不推定溢出、负初始值、并发或持久化行为。\n\n## Test Summary\n\n| Story | Type | Automated Test Required | Manual Verification Required |\n|---|---|---|---|\n| Story 902：App 验收计数规则 | Logic（故事声明） | | 初始值、逐事件更新、固定序列重放及结果记录 |\n\n\"'`qa.level=minimal` 不要求自动化测试文件，仍须留下可核验的人工执行证据。本故事未涉及 Visual/Feel 或 UI，截图要求不适用。\n\n## Manual QA Checklist\n\n**方法**：通过专用 fixture 的已确认接口逐步执行并读取计数。  \n**输入约定**：L 为已确认合法事件，I 为已确认非法事件；同一序列重放时，事件内容及顺序保持一致。每个用例使用独立状态，从 0 开始。  \n**签核角色**：qa-lead 或用户指定审阅者；本回合不委派。  \n**证据**：具体输入、初始值、每步实际计数、预期值、执行回执、判定与审阅结论。\n\n| ID | 对应条件 | 操作 | 预期结果 |\n|---|---|---|---|\n| QA902-01 | AC1 | 初始化，不发送事件 | 计数为 0 |\n| QA902-02 | AC1 | 初始化后发送 L | 计数由 0 变为 1 |\n| QA902-03 | AC1 | 顺序发送 L、L、L | 每步计数为 1、2、3 |\n| QA902-04 | AC1 | 初始化后发送 I、I | 每步计数均为 0 |\n| QA902-05 | AC1 | 顺序发送 L、I、L、I | 每步计数为 1、1、2、2；非法事件在非零状态下也不改变计数 |\n| QA902-06 | AC2 | 两份独立的相同初始状态，重放完全相同的 L、I、L、I 序列 | 两次每步计数一致，最终均为 2 |\n| QA902-07 | AC1、AC2 | 两份独立的相同初始状态，各执行空事件序列 | 两次计数均为 0 |\n\n- [ ] 已确认 L、I 的具体样本及合法性依据。\n- [ ] 已确认可读取计数的专用 fixture 接口。\n- [ ] 已逐项执行 QA902-01 至 QA902-07，保留实际值，不以预期值代替执行证据。\n- [ ] 任何失败或无法执行项保留为 FAIL 或 NOT ASSESSED。\n- [ ] 审阅者核对两条验收条件均有证据覆盖。\n\n## Smoke Test Scope\n\n仅覆盖本故事的最小核验链：\n\n1. 初始化得到 0。\n2. 合法事件使计数加 1。\n3. 非法事件保持计数。\n4. 相同状态与序列重放得到相同结果。\n\n本回合不执行上述故事测试，不启动已有游戏，不运行完整游戏测试。真实 hooks 探针属于 App 集成验收证据，不能替代计数规则验证。minimal 不增加完整 smoke suite 门禁。\n\n## Playtest Requirements\n\n本故事无主观体验、Visual/Feel 或 UI 条件，无需玩家试玩。\n\n## Definition of Done — 本故事\n\n- [ ] 两条验收条件均有实际执行证据及审阅结论。\n- [ ] 事件样本与调用接口缺口已解决。\n- [ ] 未改变已有游戏或其他 story。\n- [ ] 实现如有变更，已完成相应代码评审；本计划不声称已评审。\n- [ ] 仅在验证通过并获得相应授权后更新故事状态；本回合不标记 Complete。\n'\"'@\n\"'$cgsActualPlan = [System.IO.File]::ReadAllText((Join-Path (Get-Location) '\"'production/qa/qa-plan-app-acceptance-2026-11-17.md')).Replace(\\\"\"'`r`n\", \"`n\")\nif ($cgsActualPlan.TrimEnd() -cne $cgsExpectedPlan.TrimEnd()) { throw '\"'PLAN_CONTENT_MISMATCH' }\nWrite-Output 'PLAN_CONTENT_MATCH'\n\"'$cgsStoryHash = (Get-FileHash -Algorithm SHA256 -LiteralPath '\"'.scratch/app-audit-458b4a0/story-app-acceptance.md').Hash\nif (\"'$cgsStoryHash -ne '\"'6A17A86E580B4709965694A0CDAEB1288F628A5DCD197345A41514CF607B1029') { throw 'STORY_CHANGED' }\nWrite-Output ('STORY_UNCHANGED_SHA256=' + \"'$cgsStoryHash)'",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-2f1b4680-a02b-4c3e-86ab-8467452c4931",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"rg -n -C 3 '\"'^(import|from)|subprocess|write_text|write_bytes|mkdir|Temporary|def validate|def check|def run'\"' '.agents/scripts/framework_validation.py'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc6204217c87d08769d547628daded",
+        "phase": "commentary",
+        "text_sha256": "fec392d75f23b04f756b28a3ce03a6be5facdfe9eb8f6a8b0e7d49c5ebab81ea",
+        "last_message": false
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-803db4b0-c5df-4520-a2c9-9b7d254d1aa8",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command '$env:PYTHONDONTWRITEBYTECODE = '\"'1'\n& 'D:/Program Files/Git/bin/bash.exe' '.agents/scripts/python-run.sh' '.agents/scripts/validate-framework.py' --scope all --format json\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc621d624487d0a360bbe5c2ffb609",
+        "phase": "final_answer",
+        "text_sha256": "ee570ad0894fa188dfac920d8a7edd6aeeedae1de2ba9a418260ba51ff6013f7",
+        "last_message": true
+      }
+    ]
+  },
+  {
+    "label": "final",
+    "id": "01a1e9e1-35f9-7691-9ff7-4fc6fd170f85",
+    "status": "completed",
+    "duration_ms": 46246,
+    "items": [
+      {
+        "type": "userMessage",
+        "id": "01a1e9e1-36c4-76f0-b0e4-69c404d5952e"
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc629d84c487d0b915251c2fc8a700",
+        "phase": "commentary",
+        "text_sha256": "0b763ea26c93517e0ccdf4d18538ff28711c5ed51fe085013631ac278dc02dbb",
+        "last_message": false
+      },
+      {
+        "type": "commandExecution",
+        "id": "exec-367e7e86-661a-4630-9a84-f8f7a41ac968",
+        "command": "\"%USERPROFILE%\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath '.agents/skills/smoke-check/references/5-report.md'\"",
+        "cwd": "<app-probe>",
+        "status": "completed",
+        "exitCode": 0
+      },
+      {
+        "type": "agentMessage",
+        "id": "msg_091c0bae80128f74016afc62babb9887d0b9ae0fca7e2491f4",
+        "phase": "final_answer",
+        "text_sha256": "74c83333d5c6d068d0c6ba62fa97bf60201745a71a3ca63070154ca36c012db1",
+        "last_message": true
+      }
+    ]
+  }
+]

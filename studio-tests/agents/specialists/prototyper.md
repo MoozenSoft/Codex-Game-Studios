@@ -1,5 +1,7 @@
 # Agent Test Spec: prototyper
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 - **Domain**: Rapid throwaway prototypes in the `prototypes/` directory, concept validation experiments, mechanical feasibility tests. Standards intentionally relaxed for speed — prototypes are not production code.
 - **Does NOT own**: Production source code in `src/` (gameplay-programmer), design documents (game-designer), production-grade architecture decisions (lead-programmer / technical-director)
@@ -10,8 +12,8 @@
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references throwaway builds / concept prototypes / speed over standards)
-- [ ] `tools:` reads Read, Glob, Grep, Write, Edit, Bash (it writes and runs throwaway builds) and `isolation:` reads `worktree` — frontmatter cannot scope writes to a directory, so the boundary to `prototypes/` is the body's Isolation Requirements (next assertion)
-- [ ] Model tier is `sonnet` — frontmatter `model:` reads exactly `sonnet` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition explicitly states that prototype code is not production code and must not be copied into the production code root
 
 ---
@@ -24,7 +26,7 @@
 - States the falsifiable hypothesis ("If the player draws 3 cards per turn with a hand limit of 7, they will feel [Y] — evidenced by [Z]") and the riskiest assumption before building
 - Recommends a prototype path with rationale — a card mechanic where timing precision is not the question points to the Paper path or a browser build, not the Engine path
 - Proposes scope in 3–5 bullets (deck, draw N, hand limit 7, a minimal state display) and gets confirmation before building
-- Output goes to `prototypes/card-draw-concept/` (`rules.md` + `play-log.md` on the Paper path, or a browser build in the one-shot's folder from `bash .claude/scripts/one-shot-new.sh`, opening by double-click); every code file starts with the `PROTOTYPE - NOT FOR PRODUCTION` header naming the question and date
+- Output goes to `prototypes/card-draw-concept/` (`rules.md` + `play-log.md` on the Paper path, or a browser build in the one-shot's folder from `bash .agents/scripts/one-shot-new.sh`, opening by double-click); every code file starts with the `PROTOTYPE - NOT FOR PRODUCTION` header naming the question and date
 - Code prioritizes speed over correctness: no unit tests, no doc comments required, global state is acceptable; no menus or polish
 - Does NOT implement production patterns (dependency injection, signals) unless they take less time than not using them; a browser build still keeps its tuning values in `config.js`
 - Asks "May I write this to [filepath]?" before writing
@@ -66,7 +68,7 @@
 - Does NOT apply production coding standards (no required test coverage, no doc comments, global state acceptable)
 - Writes the output to `prototypes/grid-movement-concept/` not to `src/`
 - After writing, hands control back: asks the user to run the project and paste any errors or describe what they observe, rather than assuming it worked
-- If a Godot 4.6 API is uncertain, flags the specific API with a note to verify against the Godot 4.6 docs — `docs/engine-reference/godot/VERSION.md` reaches the agent through `CLAUDE.md`'s import, and its Knowledge Gap Warning says to cross-reference that directory before suggesting Godot API calls
+- If a Godot 4.6 API is uncertain, flags the specific API with a note to verify against the Godot 4.6 docs — `docs/engine-reference/godot/VERSION.md` reaches the agent through `AGENTS.md`'s import, and its Knowledge Gap Warning says to cross-reference that directory before suggesting Godot API calls
 
 ---
 
@@ -76,13 +78,13 @@
 - [ ] Declines production implementation requests, stating production is written from scratch and pointing to the prototype's REPORT.md as the hand-off
 - [ ] Produces a structured REPORT.md with a PROCEED / PIVOT / KILL recommendation, backed by evidence, after prototype evaluation
 - [ ] Does not recommend preserving prototype code in production form without explicit warnings
-- [ ] Uses the project's configured engine and scripting language; flags version uncertainty, per the Knowledge Gap Warning in the `VERSION.md` that `CLAUDE.md` imports
+- [ ] Uses the project's configured engine and scripting language; flags version uncertainty, per the Knowledge Gap Warning in the `VERSION.md` that `AGENTS.md` imports
 
 ---
 
 ## Coverage Notes
 - Case 2 (production redirect) is critical — prototype code leaking into src/ is a common quality problem
 - Case 4 (abandonment honesty) tests whether the agent avoids sunk-cost bias — prototypes that fail should be cleanly abandoned
-- Case 5 requires that `project.yaml` has `engine.name` and `engine.language` configured; test is incomplete if not configured. With neither `project.yaml` nor `.claude/docs/technical-preferences.md` naming them, the expected output is a question about the engine and language, not a guess
+- Case 5 requires that `project.yaml` has `engine.name` and `engine.language` configured; test is incomplete if not configured. With neither `project.yaml` nor `.agents/docs/technical-preferences.md` naming them, the expected output is a question about the engine and language, not a guess
 - The intentional relaxation of coding standards is a feature, not a gap — do not flag missing tests or doc comments as failures in prototype output
-- No automated runner; review manually or via `/skill-test`
+- No automated runner; review manually or via `$skill-test`

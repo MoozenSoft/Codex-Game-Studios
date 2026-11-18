@@ -1,0 +1,75 @@
+# The one-shot's small check (check-run/1).
+# Written by one-shot-check.sh --record: the results are /prototype's reading of
+# evidence/self-check.tsv; never edited by hand.
+kind: check-run/1
+engine: web
+browser: "HeadlessChrome/157.0.0.0"
+time: "2026-11-18 09:47:59"
+checks:
+  - id: boots
+    result: pass
+    evidence:
+      - "evidence/self-check.tsv"
+  - id: shot
+    result: pass
+    evidence:
+      - "evidence/play.png"
+  - id: outlines
+    result: pass
+    evidence:
+      - "evidence/figures.png"
+  - id: brief-words
+    result: pass
+    evidence:
+      - "evidence/brief-words.tsv"
+  - id: emoji
+    result: pass
+    evidence:
+      - "evidence/self-check.tsv"
+  - id: nearest-game
+    result: pass
+    evidence:
+      - "evidence/nearest-game.txt"
+brief_checklist:
+  - id: L1
+    result: pass
+    evidence: "evidence/play.png"
+    item: "Look: 两块深蓝面板和青色信号灯。一块显示按键提示、分数和状态，另一块横排三个方形信号格。 *(面板分工与布局：provisional)*"
+  - id: L2
+    result: pass
+    evidence: "index.html:15"
+    item: "References: 无外部素材或参考作品。"
+  - id: L3
+    result: pass
+    evidence: "evidence/play.png"
+    item: "View: 固定 2D 单屏。 *(provisional)*"
+  - id: F1
+    result: pass
+    evidence: "evidence/reset.png"
+    item: "开始与重置"
+  - id: F2
+    result: pass
+    evidence: "index.html:154"
+    item: "三格顺序点亮及固定计分"
+  - id: F3
+    result: pass
+    evidence: "evidence/play.png"
+    item: "即时胜利显示"
+  - id: F4
+    result: pass
+    evidence: "index.html:15"
+    item: "双面板离线页面"
+  - id: M1
+    result: pass
+    evidence: "evidence/reset.png"
+    item: "待机时三格全暗、分数为 `0`；按 `Enter` 开始。"
+  - id: C1
+    result: pass
+    evidence: "index.html:146"
+    item: "点亮三格即通关。不设计时、随机或失败惩罚；这轮只验证输入反馈是否清楚。 *(provisional)*"
+measures:
+  - id: step-time
+    value: 0.100
+    unit: ms
+    by: browser
+    detail: "mean 0.003 ms, slowest 0.100 ms, 74 steps"

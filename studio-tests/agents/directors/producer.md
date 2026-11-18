@@ -1,5 +1,7 @@
 # Agent Test Spec: producer
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 **Domain owned:** Scope management, sprint planning validation, milestone tracking, epic prioritization, production phase gate.
 **Does NOT own:** Game design decisions (creative-director / game-designer), technical architecture (technical-director), creative direction.
@@ -9,11 +11,11 @@
 
 ## Static Assertions (Structural)
 
-Verified by reading the agent's `.claude/agents/producer.md` frontmatter:
+Verified by reading the agent's `.codex/agents/producer.toml` frontmatter:
 
 - [ ] `description:` field is present and domain-specific (references scope, sprint, milestone, production — not generic)
-- [ ] `tools:` includes Write and Edit (it authors sprint plans per its Output Format and maintains the risk register) and Bash only because a preloaded skill needs it (`skills:` includes `scope-check`, which reads `git log`)
-- [ ] Model tier is `opus` — frontmatter `model:` reads exactly `opus` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over design decisions or technical architecture
 
 ---
@@ -74,7 +76,7 @@ Verified by reading the agent's `.claude/agents/producer.md` frontmatter:
 - [ ] Does not invent a capacity or velocity figure to judge the load against
 
 ### Case 7: Phase gate at `minimal` — the brief's Build order is the plan
-**Scenario:** `/gate-check production` at `workflow: minimal` runs the panel with `review_mode: lean` set explicitly, so the producer is spawned alone for PR-PHASE-GATE. The context gives the target phase (Production), the tier, and the gate's required artifacts at that tier: a filled `design/game-brief.md` with its Build order, and stories under `production/epics/`. Both are present — the Build order lists four MVP features, the first three independent and the fourth depending on the first, and there is one story per feature in that order, none Blocked. `team.size` is `individual`; the brief states a six-week target for the MVP. The sprint plan and sprint capacity are passed as "not required at `workflow: minimal`".
+**Scenario:** `$gate-check production` at `workflow: minimal` runs the panel with `review_mode: lean` set explicitly, so the producer is spawned alone for PR-PHASE-GATE. The context gives the target phase (Production), the tier, and the gate's required artifacts at that tier: a filled `design/game-brief.md` with its Build order, and stories under `production/epics/`. Both are present — the Build order lists four MVP features, the first three independent and the fourth depending on the first, and there is one story per feature in that order, none Blocked. `team.size` is `individual`; the brief states a six-week target for the MVP. The sprint plan and sprint capacity are passed as "not required at `workflow: minimal`".
 **Expected:** Returns `PR-PHASE-GATE: READY` — the Build order is the plan at this tier, its dependency is ordered, and four stories fit a solo developer's six weeks. The absent sprint plan and velocity are not findings.
 **Assertions:**
 - [ ] Verdict is exactly one of READY / CONCERNS / NOT READY (the PR-PHASE-GATE verdicts), formatted as `PR-PHASE-GATE: READY`
@@ -96,7 +98,7 @@ Verified by reading the agent's `.claude/agents/producer.md` frontmatter:
 ---
 
 ## Coverage Notes
-- PR-EPIC (the epic-structure review `/create-epics` runs before it writes any epic) has no case yet.
-- PR-MILESTONE (milestone health review) is not covered — deferred to integration with /milestone-review skill.
+- PR-EPIC (the epic-structure review `$create-epics` runs before it writes any epic) has no case yet.
+- PR-MILESTONE (milestone health review) is not covered — deferred to integration with $milestone-review skill.
 - PR-PHASE-GATE is covered at `minimal` (Case 7); a `standard`/`full` Production gate judged against a sprint plan has no case yet.
 - Multi-sprint burn-down and velocity trend analysis are not covered here.

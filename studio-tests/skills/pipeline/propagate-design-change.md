@@ -1,8 +1,10 @@
-# Skill Test Spec: /propagate-design-change
+# Skill Test Spec: $propagate-design-change
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/propagate-design-change` handles GDD revision cascades into the architecture.
+`$propagate-design-change` handles GDD revision cascades into the architecture.
 Given a changed GDD path, it asks git what changed (`git diff HEAD`, then the last
 commit), summarises the changed sections, checks the entity registry for
 downstream GDDs to re-check, then finds every ADR that references the GDD — by
@@ -24,13 +26,13 @@ Verdicts: COMPLETE (impact report saved) or BLOCKED (user declined the write).
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keywords: COMPLETE, BLOCKED
 - [ ] Contains "May I" ask-before-write language for each file it changes
-- [ ] Has a next-step handoff at the end (`/architecture-decision`, `/architecture-review`)
+- [ ] Has a next-step handoff at the end (`$architecture-decision`, `$architecture-review`)
 - [ ] Documents that the impact report is shown before any change is made
 - [ ] Documents gate TD-CHANGE-IMPACT: runs in full, skipped in lean/solo
 
@@ -39,7 +41,7 @@ Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
 ## Director Gate Checks
 
 One gate: **TD-CHANGE-IMPACT** (`technical-director`,
-`.claude/docs/director-gates/td-change-impact.md`), spawned after the Design
+`.agents/docs/director-gates/td-change-impact.md`), spawned after the Design
 Change Impact Report is presented and before the per-ADR resolution workflow.
 
 - `full` → spawned with the full impact report (change summary, classifications,
@@ -47,7 +49,7 @@ Change Impact Report is presented and before the per-ADR resolution workflow.
 - `lean` → skipped; output notes "TD-CHANGE-IMPACT skipped — Lean mode."
 - `solo` → skipped; output notes "TD-CHANGE-IMPACT skipped — Solo mode."
 
-Verdict handling: APPROVE → resolution workflow; CONCERNS → `AskUserQuestion` with
+Verdict handling: APPROVE → resolution workflow; CONCERNS → `当前 Codex 可用的提问工具` with
 `Revise the impact assessment` / `Accept with noted concerns` / `Discuss further`;
 REJECT → no resolution; the impact is re-analysed first; NOT ASSESSED [missing
 input] → never read as APPROVE: the input is supplied and the gate re-run, or the
@@ -60,7 +62,7 @@ and the Verdict line.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -78,7 +80,7 @@ Fixture defaults.
   ADR-0005's decision does not depend on it
 - `docs/architecture/requirements-traceability.md` exists
 
-**Input:** `/propagate-design-change design/gdd/combat.md`
+**Input:** `$propagate-design-change design/gdd/combat.md`
 
 **Expected behavior:**
 1. Verifies the file exists; runs `git diff HEAD -- design/gdd/combat.md` and
@@ -115,7 +117,7 @@ Fixture defaults.
 - 3 ADRs, each with a `## GDD Requirements Addressed` section, none naming
   `combat.md` in the table or in prose
 
-**Input (both fixtures):** `/propagate-design-change design/gdd/combat.md`
+**Input (both fixtures):** `$propagate-design-change design/gdd/combat.md`
 
 **Expected behavior (tables present):**
 1. Both scans return 0 with N = 3
@@ -130,11 +132,11 @@ Fixture defaults.
 1. Both scans return 0 with N = 3; the section check is also empty
 2. Reports "3 ADRs found, none contains a 'GDD Requirements Addressed' section —
    traceability cannot be computed (a `gate-pre-production` blocker). Run
-   `/architecture-decision retrofit [adr]`."
+   `$architecture-decision retrofit [adr]`."
 
 **Assertions:**
 - [ ] With tables present, the "no architecture impact" message is printed
-- [ ] With tables absent, the skill does NOT report "no impact" — it reports that traceability cannot be computed and names `/architecture-decision retrofit [adr]`, the form that skill parses
+- [ ] With tables absent, the skill does NOT report "no impact" — it reports that traceability cannot be computed and names `$architecture-decision retrofit [adr]`, the form that skill parses
 - [ ] No per-ADR resolution ask and no ADR edit happens in either fixture
 - [ ] Skill does NOT error or crash when no references are found
 
@@ -147,7 +149,7 @@ Fixture defaults.
 - `design/gdd/combat.md` is committed, has no uncommitted changes, and was not
   touched by the last commit
 
-**Input:** `/propagate-design-change design/gdd/combat.md`
+**Input:** `$propagate-design-change design/gdd/combat.md`
 
 **Expected behavior:**
 1. `git diff HEAD -- design/gdd/combat.md` is empty
@@ -169,11 +171,11 @@ Fixture defaults.
 **Fixture:**
 - Multiple GDDs exist in `design/gdd/`
 
-**Input:** `/propagate-design-change` (no argument)
+**Input:** `$propagate-design-change` (no argument)
 
 **Expected behavior:**
 1. Skill detects no argument is provided
-2. Skill fails with: "Usage: `/propagate-design-change design/gdd/[system].md`
+2. Skill fails with: "Usage: `$propagate-design-change design/gdd/[system].md`
    Provide the path to the GDD that was changed."
 3. No diff, scan or analysis is performed
 
@@ -192,14 +194,14 @@ Fixture defaults.
 - A GDD edit that leaves one referencing ADR classified Needs Review
 - TD-CHANGE-IMPACT returns CONCERNS: a second ADR was under-classified
 
-**Input:** `/propagate-design-change design/gdd/[system].md`
+**Input:** `$propagate-design-change design/gdd/[system].md`
 
 **Expected behavior:**
 1. The Design Change Impact Report is presented
 2. `technical-director` is spawned via `Agent` with gate TD-CHANGE-IMPACT, passing
    the full report
 3. CONCERNS are surfaced, naming the flagged ADR
-4. `AskUserQuestion`: `Revise the impact assessment` / `Accept with noted concerns`
+4. `当前 Codex 可用的提问工具`: `Revise the impact assessment` / `Accept with noted concerns`
    / `Discuss further`
 5. The per-ADR resolution workflow starts only after that answer
 
@@ -227,7 +229,7 @@ Fixture defaults.
   `## GDD Requirements Addressed`), ADR-0006 (Feature, loot tables, names `loot.md`
   in prose only), ADR-0007 (Feature, enemy AI, no mention)
 
-**Input (both fixtures):** `/propagate-design-change design/gdd/loot.md`
+**Input (both fixtures):** `$propagate-design-change design/gdd/loot.md`
 
 **Expected behavior (minimal):**
 1. The diff and Change Summary run as usual
@@ -257,7 +259,7 @@ Fixture defaults.
 - [ ] Resolution asked per ADR — never one decision for the whole set
 - [ ] "May I" asked before each file change; ADR content is never deleted, only marked Superseded
 - [ ] TD-CHANGE-IMPACT runs in `full`, skipped with a named note in `lean`/`solo`
-- [ ] Ends with follow-up actions matching the resolutions (`/architecture-decision` for Superseded ADRs, `/architecture-review` when many are affected)
+- [ ] Ends with follow-up actions matching the resolutions (`$architecture-decision` for Superseded ADRs, `$architecture-review` when many are affected)
 
 ---
 

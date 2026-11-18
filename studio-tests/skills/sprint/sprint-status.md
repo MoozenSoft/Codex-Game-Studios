@@ -1,8 +1,10 @@
-# Skill Test Spec: /sprint-status
+# Skill Test Spec: $sprint-status
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/sprint-status` is a Haiku-tier read-only skill that produces a concise sprint
+`$sprint-status` is a read-only skill that produces a concise sprint
 snapshot. It uses the sprint named by its argument, or the most recently
 modified file in `production/sprints/`, and reads `production/sprint-status.yaml`
 as the source of truth for story status (falling back to markdown scanning with
@@ -12,7 +14,7 @@ more than 4 days old. The burndown verdict is On Track / At Risk / Behind,
 derived from completion % against time consumed %, and any STALE story upgrades
 it to at least At Risk. Fast escalation flags go at the top of the output: the
 SPRINT AT RISK critical flag, the Must Haves completion flag, and the missing
-stories flag. When no sprint files exist it points to `/sprint-plan new` at
+stories flag. When no sprint files exist it points to `$sprint-plan new` at
 `standard`/`full` workflow, and reports build-order progress at `minimal` —
 where, if every unfinished story is Blocked, Draft or unstatused, it names them
 (each blocked one with its blocker) and never reports the build order done. It
@@ -23,9 +25,9 @@ recommendation.
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings or numbered check sections
 - [ ] Contains burndown verdict keywords: On Track, At Risk, Behind
 - [ ] Does NOT require "May I write" language (read-only skill)
@@ -35,7 +37,7 @@ Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
 
 ## Director Gate Checks
 
-None. `/sprint-status` is a read-only reporting skill; no gates are invoked.
+None. `$sprint-status` is a read-only reporting skill; no gates are invoked.
 
 ---
 
@@ -43,7 +45,7 @@ None. `/sprint-status` is a read-only reporting skill; no gates are invoked.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -62,14 +64,14 @@ Fixture defaults.
   - 1 with `status: blocked`, `priority: must-have`,
     `blocker: "Waiting on physics ADR acceptance"`
 
-**Input:** `/sprint-status`
+**Input:** `$sprint-status`
 
 **Expected behavior:**
 1. Skill selects `sprint-004.md` and reads `production/sprint-status.yaml`
 2. Skill computes 65% time consumed and 3/6 = 50% complete — 15 points behind
 3. A blocked Must Have with 35% of sprint time remaining (under 40%) triggers
    the critical flag at the top: "SPRINT AT RISK: … Recommend replanning with
-   `/sprint-plan update`."
+   `$sprint-plan update`."
 4. Skill outputs the status table with the blocker in the Blocker column and
    the burndown verdict At Risk
 
@@ -77,7 +79,7 @@ Fixture defaults.
 - [ ] Output includes "Progress: 3/6 tasks (50%)" and a status table listing all 6 stories
 - [ ] The blocked story is named with "Waiting on physics ADR acceptance" in its Blocker column
 - [ ] Burndown is At Risk (50% complete vs 65% time consumed — 15 points behind)
-- [ ] The SPRINT AT RISK critical flag appears at the top, recommending `/sprint-plan update`
+- [ ] The SPRINT AT RISK critical flag appears at the top, recommending `$sprint-plan update`
 - [ ] Skill does not write any files
 
 ---
@@ -90,7 +92,7 @@ Fixture defaults.
   5 days from today (50% of time consumed)
 - All 5 stories have `status: done` (3 `must-have`, 2 `should-have`)
 
-**Input:** `/sprint-status`
+**Input:** `$sprint-status`
 
 **Expected behavior:**
 1. Skill reads the yaml — 5/5 complete
@@ -109,23 +111,23 @@ Fixture defaults.
 
 ---
 
-### Case 3: No Sprint Files — Guidance to run /sprint-plan
+### Case 3: No Sprint Files — Guidance to run $sprint-plan
 
 **Fixture:**
 - `production/sprints/` directory is absent
 - `project.yaml` sets `modes.workflow: standard`
 
-**Input:** `/sprint-status`
+**Input:** `$sprint-status`
 
 **Expected behavior:**
 1. Skill finds no sprint files
 2. At `standard` workflow, skill reports: "No sprint files found. Start a sprint
-   with `/sprint-plan new`."
+   with `$sprint-plan new`."
 3. Skill stops
 
 **Assertions:**
 - [ ] Skill does not error or crash when no sprint file exists
-- [ ] Output states "No sprint files found" and recommends `/sprint-plan new`
+- [ ] Output states "No sprint files found" and recommends `$sprint-plan new`
 - [ ] Skill stops there — no burndown verdict and no status table are emitted
 - [ ] The `workflow: minimal` build-order report is not used at `standard`
 
@@ -143,7 +145,7 @@ Fixture defaults.
   `> **Last Updated**: [3 days before today]`
 - No stories are Blocked
 
-**Input:** `/sprint-status`
+**Input:** `$sprint-status`
 
 **Expected behavior:**
 1. Skill resolves the dates with one grep for the `Last Updated` field across
@@ -171,7 +173,7 @@ Fixture defaults.
   lists 4 stories (2 `done`, 2 `in-progress`) with sprint dates
 - `project.yaml` sets `modes.review_mode: full`
 
-**Input:** `/sprint-status`
+**Input:** `$sprint-status`
 
 **Expected behavior:**
 1. Skill reads the sprint and produces the status snapshot
@@ -191,9 +193,9 @@ Fixture defaults.
 
 **Fixture:**
 - `production/sprints/` does not exist
-- `project.yaml` sets neither `modes.rigor` nor `modes.workflow`, so the injected
+- `project.yaml` sets neither `modes.rigor` nor `modes.workflow`, so the explicitly fetched
   block reads `workflow: minimal (rigor:minimal)`
-- The injected `story-status.sh` list reads:
+- The explicitly fetched `story-status.sh` list reads:
   ```
   IN_REVIEW    production/epics/core/story-003-dash.md
   IN_PROGRESS  production/epics/core/story-002-jump.md
@@ -201,21 +203,21 @@ Fixture defaults.
   COMPLETE     1 of 4
   ```
 
-**Input:** `/sprint-status`
+**Input:** `$sprint-status`
 
 **Expected behavior:**
 1. Skill finds no sprint files; at `workflow: minimal` it reports build-order
-   progress instead of pointing to `/sprint-plan`
+   progress instead of pointing to `$sprint-plan`
 2. Skill prints "Build order: 1 of 4 stories complete"
 3. Next is story-003 (In Review), the first line — ahead of story-002, which
    comes first in file order; skill recommends
-   `/story-done production/epics/core/story-003-dash.md`
+   `$story-done production/epics/core/story-003-dash.md`
 4. Skill stops — no burndown verdict, no status table, no write
 
 **Assertions:**
-- [ ] Output does not say "No sprint files found" and does not recommend `/sprint-plan new`
+- [ ] Output does not say "No sprint files found" and does not recommend `$sprint-plan new`
 - [ ] Output shows "Build order: 1 of 4 stories complete" — the `In Review` story is not counted as complete
-- [ ] Next is story-003, the first line of the list, with `/story-done` and its path — the story files are not re-ranked into file order
+- [ ] Next is story-003, the first line of the list, with `$story-done` and its path — the story files are not re-ranked into file order
 - [ ] No burndown verdict is emitted and no file is written
 
 ---
@@ -223,9 +225,9 @@ Fixture defaults.
 ### Case 7: Minimal Workflow — Every unfinished story Blocked or Draft
 
 **Fixture:**
-- `production/sprints/` does not exist; the injected block reads
+- `production/sprints/` does not exist; the explicitly fetched block reads
   `workflow: minimal (rigor:minimal)`
-- The injected `story-status.sh` list reads:
+- The explicitly fetched `story-status.sh` list reads:
   ```
   BLOCKED      production/epics/core/story-003-dash.md  (Blocked)
   OTHER        production/epics/core/story-004-parry.md  (Draft)
@@ -233,7 +235,7 @@ Fixture defaults.
   ```
 - story-003's file carries the note `BLOCKED: waiting on the dash animation`
 
-**Input:** `/sprint-status`
+**Input:** `$sprint-status`
 
 **Expected behavior:**
 1. There is no `IN_REVIEW`, `IN_PROGRESS` or `TODO` line and 2 of 4 stories are
@@ -257,7 +259,7 @@ Fixture defaults.
 - [ ] Presents the story status table before the Burndown verdict
 - [ ] Does not ask for approval
 - [ ] Ends with at most one recommended next step
-- [ ] Declares `model: haiku` (when a declared tier is used: `.claude/docs/model-tiers.md`)
+- [ ] Skill frontmatter does not select a model or reasoning effort; execution inherits the current authorized session configuration.
 
 ---
 
@@ -268,5 +270,5 @@ Fixture defaults.
 - The markdown fallback when `production/sprint-status.yaml` is absent (with its
   "No `sprint-status.yaml` found" warning) is not tested.
 - A sprint without dates ("burndown assessment skipped") is not tested.
-- Selecting a specific sprint by argument (`/sprint-status 3`) is not tested;
+- Selecting a specific sprint by argument (`$sprint-status 3`) is not tested;
   the cases above use the most recently modified sprint file.

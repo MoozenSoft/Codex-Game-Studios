@@ -1,0 +1,16 @@
+stories	1	paths
+complete	1
+in_review	0
+in_progress	0
+todo	0
+blocked	0
+other	0
+no_status	0
+STORY	production/epics/EPIC-ACCEPTANCE/story-001-n-retry.md	COMPLETE	Complete	Integration	Core	S	-	n/a	5	0	本轮实际通过：新 N 3/3，全套 18/18（6 unit + 12 integration），Web smoke @boot 1/1。旧实现先红灯 1 passed / 2 failed，第一次 story-done 为 BLOCKED 且保持 Ready，详见 evidence/core-story/story-done-red.md。	None	-
+RECEIPT: production/qa/evidence/story-001-n-retry/stamp.txt
+UNCHANGED: src/main.ts
+UNCHANGED: tests/integration/n-retry.spec.ts
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/accepted.tsv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/story.tsv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'project.yaml', LF will be replaced by CRLF the next time Git touches it
+f56bab3c63f57504b0b9a73bd58426585412b53a

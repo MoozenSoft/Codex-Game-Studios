@@ -1,0 +1,62 @@
+{
+  "platform": "Windows本机WSL Ubuntu，非远端GitHub CI",
+  "python": "3.12.3",
+  "pyyaml": "6.0.1",
+  "node": null,
+  "selected_tests": 55,
+  "failures": 0,
+  "errors": 0,
+  "excluded": "test_paths.py 的13个共享脚本场景未列入本次选择，当前Ubuntu缺少Node；不声称Linux全量通过。",
+  "yaml": {
+    "exit_code": 0,
+    "coverage": {
+      "yaml_files": 17,
+      "skill_frontmatters": 75
+    },
+    "checks": []
+  },
+  "complete": {
+    "exit_code": 0,
+    "checks": [
+      {
+        "id": "migration.coverage",
+        "status": "passed",
+        "required": true,
+        "file": "studio-tests/migration-inventory.json",
+        "reason": "pending=0，total=743"
+      }
+    ],
+    "counts": {
+      "passed": 1,
+      "failed": 0,
+      "not_assessed": 0
+    },
+    "stage": "complete",
+    "scope": "all",
+    "coverage": {
+      "json_files": 38,
+      "toml_files": 50,
+      "skills": 75,
+      "skill_resources": 206,
+      "source_total": 743,
+      "active": 733,
+      "retired": 10,
+      "pending": 0,
+      "native_components": 17
+    }
+  },
+  "bash_syntax_checked": 50,
+  "bash_syntax_failures": [],
+  "global_git_config_used": false,
+  "original_bash_syntax_failures": [
+    {
+      "file": ".agents/scripts/page-shot.sh",
+      "stderr": "/mnt/d/Git/Codex-Game-Studios/.agents/scripts/page-shot.sh: line 89: syntax error near unexpected token `$'in\\r''\n/mnt/d/Git/Codex-Game-Studios/.agents/scripts/page-shot.sh: line 89: `  case \"$1\" in\n'\n"
+    },
+    {
+      "file": ".agents/scripts/story-status.sh",
+      "stderr": "/mnt/d/Git/Codex-Game-Studios/.agents/scripts/story-status.sh: line 36: syntax error near unexpected token `$'in\\r''\n/mnt/d/Git/Codex-Game-Studios/.agents/scripts/story-status.sh: line 36: `case \"${1:-}\" in\n'\n"
+    }
+  ],
+  "recheck": "Normalize only page-shot.sh/story-status.sh CRLF to LF; rerun all 50 Bash syntax checks."
+}

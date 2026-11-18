@@ -1,0 +1,47 @@
+{"command": ["git", "add", "--", "production/qa/evidence/core-grow-result-round2.md", "production/qa/evidence/core-grow/prototype-after.json", "production/qa/evidence/core-grow/prototype-before.json", "production/qa/evidence/core-grow/prototype-comparison.json", "production/qa/evidence/core-grow/round2/audit-final.log", "production/qa/evidence/core-grow/round2/commands.jsonl", "production/qa/evidence/core-grow/round2/copy-build.log", "production/qa/evidence/core-grow/round2/copy-commit.log", "production/qa/evidence/core-grow/round2/evidence-paths.json", "production/qa/evidence/core-grow/round2/feature-commit.log", "production/qa/evidence/core-grow/round2/final-checks.log", "production/qa/evidence/core-grow/round2/git-final.log", "production/qa/evidence/core-grow/round2/grow-commit.log", "production/qa/evidence/core-grow/round2/immutable-after-known.json", "production/qa/evidence/core-grow/round2/immutable-before.json", "production/qa/evidence/core-grow/round2/immutable-comparison.json", "production/qa/evidence/core-grow/round2/preflight.log", "production/qa/evidence/core-grow/round2/project-record.diff", "production/qa/evidence/core-grow/round2/record.log", "production/qa/evidence/core-grow/round2/retry-green.log", "production/qa/evidence/core-grow/round2/retry-red.log", "production/qa/evidence/core-grow/round2/rule-red.log", "production/qa/evidence/core-grow/round2/scope-summary.json", "production/qa/evidence/core-grow/round2/scope-summary.log", "production/qa/evidence/core-grow/round2/story-compare.log", "production/qa/evidence/core-grow/round2/story.log", "production/qa/evidence/core-grow/round2/test-run-final.log", "production/qa/evidence/core-grow/round2/test-run-final.log.e2e", "production/qa/evidence/core-grow/round2/test-run-final.log.unit", "production/qa/evidence/core-grow/round2/tests-commit.log", "production/qa/evidence/core-grow/round2/tests-green-corrected.log", "production/qa/evidence/core-grow/round2/tests-green.log", "production/qa/evidence/core-grow/round2/typescript-check.log", "production/qa/evidence/core-grow/round2/typescript-commit.log", "production/qa/evidence/core-grow/round2/typescript-replay.log"], "exit_code": 0}
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/test-run-final.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/test-run-final.log.e2e', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/test-run-final.log.unit', LF will be replaced by CRLF the next time Git touches it
+
+{"command": ["git", "commit", "-m", "保存第二轮 grow 与 R 重试验收报告及范围审计证据", "--", "production/qa/evidence/core-grow-result-round2.md", "production/qa/evidence/core-grow/prototype-after.json", "production/qa/evidence/core-grow/prototype-before.json", "production/qa/evidence/core-grow/prototype-comparison.json", "production/qa/evidence/core-grow/round2/audit-final.log", "production/qa/evidence/core-grow/round2/commands.jsonl", "production/qa/evidence/core-grow/round2/copy-build.log", "production/qa/evidence/core-grow/round2/copy-commit.log", "production/qa/evidence/core-grow/round2/evidence-paths.json", "production/qa/evidence/core-grow/round2/feature-commit.log", "production/qa/evidence/core-grow/round2/final-checks.log", "production/qa/evidence/core-grow/round2/git-final.log", "production/qa/evidence/core-grow/round2/grow-commit.log", "production/qa/evidence/core-grow/round2/immutable-after-known.json", "production/qa/evidence/core-grow/round2/immutable-before.json", "production/qa/evidence/core-grow/round2/immutable-comparison.json", "production/qa/evidence/core-grow/round2/preflight.log", "production/qa/evidence/core-grow/round2/project-record.diff", "production/qa/evidence/core-grow/round2/record.log", "production/qa/evidence/core-grow/round2/retry-green.log", "production/qa/evidence/core-grow/round2/retry-red.log", "production/qa/evidence/core-grow/round2/rule-red.log", "production/qa/evidence/core-grow/round2/scope-summary.json", "production/qa/evidence/core-grow/round2/scope-summary.log", "production/qa/evidence/core-grow/round2/story-compare.log", "production/qa/evidence/core-grow/round2/story.log", "production/qa/evidence/core-grow/round2/test-run-final.log", "production/qa/evidence/core-grow/round2/test-run-final.log.e2e", "production/qa/evidence/core-grow/round2/test-run-final.log.unit", "production/qa/evidence/core-grow/round2/tests-commit.log", "production/qa/evidence/core-grow/round2/tests-green-corrected.log", "production/qa/evidence/core-grow/round2/tests-green.log", "production/qa/evidence/core-grow/round2/typescript-check.log", "production/qa/evidence/core-grow/round2/typescript-commit.log", "production/qa/evidence/core-grow/round2/typescript-replay.log"], "exit_code": 0}
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/test-run-final.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/test-run-final.log.e2e', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/test-run-final.log.unit', LF will be replaced by CRLF the next time Git touches it
+[probe f56bab3] 保存第二轮 grow 与 R 重试验收报告及范围审计证据
+ 29 files changed, 2028 insertions(+)
+ create mode 100644 production/qa/evidence/core-grow-result-round2.md
+ create mode 100644 production/qa/evidence/core-grow/prototype-after.json
+ create mode 100644 production/qa/evidence/core-grow/prototype-before.json
+ create mode 100644 production/qa/evidence/core-grow/prototype-comparison.json
+ create mode 100644 production/qa/evidence/core-grow/round2/audit-final.log
+ create mode 100644 production/qa/evidence/core-grow/round2/commands.jsonl
+ create mode 100644 production/qa/evidence/core-grow/round2/copy-build.log
+ create mode 100644 production/qa/evidence/core-grow/round2/copy-commit.log
+ create mode 100644 production/qa/evidence/core-grow/round2/evidence-paths.json
+ create mode 100644 production/qa/evidence/core-grow/round2/feature-commit.log
+ create mode 100644 production/qa/evidence/core-grow/round2/final-checks.log
+ create mode 100644 production/qa/evidence/core-grow/round2/git-final.log
+ create mode 100644 production/qa/evidence/core-grow/round2/grow-commit.log
+ create mode 100644 production/qa/evidence/core-grow/round2/immutable-after-known.json
+ create mode 100644 production/qa/evidence/core-grow/round2/immutable-before.json
+ create mode 100644 production/qa/evidence/core-grow/round2/immutable-comparison.json
+ create mode 100644 production/qa/evidence/core-grow/round2/preflight.log
+ create mode 100644 production/qa/evidence/core-grow/round2/project-record.diff
+ create mode 100644 production/qa/evidence/core-grow/round2/scope-summary.json
+ create mode 100644 production/qa/evidence/core-grow/round2/scope-summary.log
+ create mode 100644 production/qa/evidence/core-grow/round2/story-compare.log
+ create mode 100644 production/qa/evidence/core-grow/round2/story.log
+ create mode 100644 production/qa/evidence/core-grow/round2/test-run-final.log
+ create mode 100644 production/qa/evidence/core-grow/round2/test-run-final.log.e2e
+ create mode 100644 production/qa/evidence/core-grow/round2/test-run-final.log.unit
+ create mode 100644 production/qa/evidence/core-grow/round2/tests-commit.log
+ create mode 100644 production/qa/evidence/core-grow/round2/typescript-check.log
+ create mode 100644 production/qa/evidence/core-grow/round2/typescript-commit.log
+ create mode 100644 production/qa/evidence/core-grow/round2/typescript-replay.log
+
+{"command": ["git", "diff", "--exit-code", "HEAD"], "exit_code": 0}
+
+{"command": ["git", "status", "--porcelain", "--untracked-files=no"], "exit_code": 0}
+
+{"command": ["git", "log", "-1", "--format=%h %s"], "exit_code": 0}
+f56bab3 保存第二轮 grow 与 R 重试验收报告及范围审计证据

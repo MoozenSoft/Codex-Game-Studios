@@ -1,5 +1,7 @@
 # Agent Test Spec: ue-umg-specialist
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 - **Domain**: UMG widget hierarchy design, data binding patterns, CommonUI input routing and input action data, widget styling (WidgetStyle assets), UI optimization (widget pooling, ListView, invalidation)
 - **Does NOT own**: UX flow and screen navigation design (ux-designer), gameplay logic (gameplay-programmer), backend data sources (game code), server communication
@@ -10,8 +12,8 @@
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references UMG, widget hierarchy, CommonUI)
-- [ ] `tools:` reads Read, Glob, Grep, Write, Edit, Bash — no `Agent` tool
-- [ ] Model tier is `sonnet` — frontmatter `model:` reads exactly `sonnet` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over UX flow, navigation architecture, or gameplay data logic
 
 ---
@@ -76,4 +78,4 @@
 - Case 3 (CommonUI input routing) requires project to have CommonUI configured; test is skipped if project does not use CommonUI
 - Case 4 (performance) is a high-impact failure mode — 300ms hitches are shipping-blocking; prioritize this test case
 - Case 5 is the most important context-awareness test for UI pipeline consistency
-- No automated runner; review manually or via `/skill-test`
+- No automated runner; review manually or via `$skill-test`

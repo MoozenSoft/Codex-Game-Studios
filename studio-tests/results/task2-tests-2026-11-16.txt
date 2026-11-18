@@ -1,0 +1,31 @@
+test_automation_independent_of_rigor (test_config.ConfigTests.test_automation_independent_of_rigor) ... ok
+test_default_automation_is_collaborative (test_config.ConfigTests.test_default_automation_is_collaborative) ... ok
+test_explicit_root_wins_over_callers_project (test_config.ConfigTests.test_explicit_root_wins_over_callers_project) ... ok
+test_framework_folders_are_not_game_test_roots (test_config.ConfigTests.test_framework_folders_are_not_game_test_roots) ... ok
+test_invalid_local_enum_falls_back_with_warning (test_config.ConfigTests.test_invalid_local_enum_falls_back_with_warning) ... ok
+test_local_automation_override (test_config.ConfigTests.test_local_automation_override) ... ok
+test_subdirectory_uses_helpers_checkout (test_config.ConfigTests.test_subdirectory_uses_helpers_checkout) ... ok
+test_unknown_command_fails (test_config.ConfigTests.test_unknown_command_fails) ... ok
+test_dependencies_resolve_and_active_targets_exist (test_inventory.InventoryTests.test_dependencies_resolve_and_active_targets_exist) ... ok
+test_formal_skills_match_catalog (test_inventory.InventoryTests.test_formal_skills_match_catalog) ... ok
+test_hook_events_have_explicit_dispositions (test_inventory.InventoryTests.test_hook_events_have_explicit_dispositions) ... ok
+test_inventory_covers_sources (test_inventory.InventoryTests.test_inventory_covers_sources) ... ok
+test_pass_claims_require_evidence (test_inventory.InventoryTests.test_pass_claims_require_evidence) ... ok
+test_retirement_has_replacement (test_inventory.InventoryTests.test_retirement_has_replacement) ... ok
+test_runtime_matrix_covers_clients_and_catalog_categories (test_inventory.InventoryTests.test_runtime_matrix_covers_clients_and_catalog_categories) ... ok
+test_config_set_rejects_unshared_local_engine (test_paths.SharedScriptTests.test_config_set_rejects_unshared_local_engine) ... ok
+test_grow_guard_treats_src_agents_as_metadata (test_paths.SharedScriptTests.test_grow_guard_treats_src_agents_as_metadata) ... ok
+test_grow_record_writes_engine_without_touching_agents (test_paths.SharedScriptTests.test_grow_record_writes_engine_without_touching_agents) ... ok
+test_reference_files_are_saved_and_deduplicated (test_paths.SharedScriptTests.test_reference_files_are_saved_and_deduplicated) ... ok
+test_session_checkpoint_is_repeatable_and_preserves_notes (test_paths.SharedScriptTests.test_session_checkpoint_is_repeatable_and_preserves_notes) ... ok
+test_stage_writer_creates_consistent_config_and_mirror (test_paths.SharedScriptTests.test_stage_writer_creates_consistent_config_and_mirror) ... ok
+test_web_scaffold_escapes_title_and_preserves_existing_files (test_paths.SharedScriptTests.test_web_scaffold_escapes_title_and_preserves_existing_files) ... ok
+test_web_scaffold_refuses_existing_package (test_paths.SharedScriptTests.test_web_scaffold_refuses_existing_package) ... ok
+test_cross_engine_gameplay_and_shader_paths (test_rule_routing.RoutingTests.test_cross_engine_gameplay_and_shader_paths) ... ok
+test_rule_does_not_expand_to_unrelated_directories (test_rule_routing.RoutingTests.test_rule_does_not_expand_to_unrelated_directories) ... ok
+test_windows_relative_paths_are_normalized (test_rule_routing.RoutingTests.test_windows_relative_paths_are_normalized) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 32.078s
+
+OK

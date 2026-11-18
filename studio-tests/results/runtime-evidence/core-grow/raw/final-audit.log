@@ -1,0 +1,52 @@
+{"before_count": 31, "after_count": 31, "unchanged": true, "differences": []}
+
+dusk-fish@0.0.0 <probe>
+├── @playwright/test@1.64.1
+├── typescript@7.0.2
+├── vite-plugin-singlefile@2.3.3
+├── vite@8.3.4
+└── vitest@5.0.5
+
+5b90e81 验收：保存 dusk-fish 同种子迁移参考回放
+5237684 原型迭代一：单局改为四十五秒并保存验收基线
+design/game-brief.md
+prototypes/dusk-fish/assets/provenance.yaml
+prototypes/dusk-fish/brief.md
+prototypes/dusk-fish/config.js
+prototypes/dusk-fish/evidence/brief-words.tsv
+prototypes/dusk-fish/evidence/changes.tsv
+prototypes/dusk-fish/evidence/check-run.yaml
+prototypes/dusk-fish/evidence/checklist.tsv
+prototypes/dusk-fish/evidence/figures.png
+prototypes/dusk-fish/evidence/handover.md
+prototypes/dusk-fish/evidence/iteration-1-small.png
+prototypes/dusk-fish/evidence/iteration-1-timeout.png
+prototypes/dusk-fish/evidence/iteration-1-timeout.tsv
+prototypes/dusk-fish/evidence/iteration-1-win.png
+prototypes/dusk-fish/evidence/iteration-1-win.tsv
+prototypes/dusk-fish/evidence/loss-retry.png
+prototypes/dusk-fish/evidence/loss-retry.tsv
+prototypes/dusk-fish/evidence/nearest-game.txt
+prototypes/dusk-fish/evidence/pause.png
+prototypes/dusk-fish/evidence/pause.tsv
+prototypes/dusk-fish/evidence/play.png
+prototypes/dusk-fish/evidence/replay.png
+prototypes/dusk-fish/evidence/replay.tsv
+prototypes/dusk-fish/evidence/resume.png
+prototypes/dusk-fish/evidence/resume.tsv
+prototypes/dusk-fish/evidence/self-check.tsv
+prototypes/dusk-fish/evidence/win-retry.png
+prototypes/dusk-fish/evidence/win-retry.tsv
+prototypes/dusk-fish/evidence/win-run.tsv
+prototypes/dusk-fish/evidence/win.png
+prototypes/dusk-fish/feel-log.md
+prototypes/dusk-fish/index.html
+production/qa/evidence/grow-dusk-fish/exact
+production/qa/evidence/grow-dusk-fish/reference-again.tsv
+production/qa/evidence/grow-dusk-fish/reference.png
+production/qa/evidence/grow-dusk-fish/reference.tsv
+production/qa/evidence/grow-dusk-fish/replay.args
+one-shot/dusk-fish
+v24.14.0
+
+11.9.0

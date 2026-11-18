@@ -1,0 +1,744 @@
+{
+  "source_directory": "D:\\Git\\Claude-Code-Game-Studios\\.claude\\agents",
+  "normalization": "UTF-8正文仅统一CRLF/CR为LF；不翻译、不改写、不替换正文路径或命令",
+  "roles": {
+    "accessibility-specialist": {
+      "source_path": ".claude/agents/accessibility-specialist.md",
+      "source_sha256": "cdeb167e35c909c23e556d13a0e9b9e17bbb9f2d8681b12722a55595f2ef67ee",
+      "body_sha256": "0d0ee1d4f77b15c8d13639ef1577815df0ff12eb31311b807b48bccdca7074ce",
+      "body_lines": 157,
+      "description": "Accessibility standards and assistive features — remapping, text scaling, colorblind modes, screen reader support.",
+      "metadata": {
+        "name": "accessibility-specialist",
+        "description": "Accessibility standards and assistive features — remapping, text scaling, colorblind modes, screen reader support.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 10
+      }
+    },
+    "ai-programmer": {
+      "source_path": ".claude/agents/ai-programmer.md",
+      "source_sha256": "d2b459057da8d13757f617d9a6e11d71e1859223d24d7fb9b1dec821798f4096",
+      "body_sha256": "c21e24fef5b3139c0ced04ffa1ebb3468770e440ab8491e030dcb5dc9c9ade4d",
+      "body_lines": 90,
+      "description": "Implements game AI — behavior trees, state machines, pathfinding, perception, decision-making, NPC and enemy behavior, AI debugging.",
+      "metadata": {
+        "name": "ai-programmer",
+        "description": "Implements game AI — behavior trees, state machines, pathfinding, perception, decision-making, NPC and enemy behavior, AI debugging.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 20
+      }
+    },
+    "analytics-engineer": {
+      "source_path": ".claude/agents/analytics-engineer.md",
+      "source_sha256": "8e9209c41928e761c10ff0e185d2eb873195053f48aba1a1aff6668959fe424f",
+      "body_sha256": "48956dabcb4bd15dd9bc218406d20ad48aeceee86b3988966a9072b4527e8fc1",
+      "body_lines": 96,
+      "description": "Telemetry and analytics — event tracking, player behavior, A/B test frameworks, dashboard specification, data pipelines.",
+      "metadata": {
+        "name": "analytics-engineer",
+        "description": "Telemetry and analytics — event tracking, player behavior, A/B test frameworks, dashboard specification, data pipelines.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash, WebSearch",
+        "model": "inherit",
+        "maxTurns": 20
+      }
+    },
+    "art-director": {
+      "source_path": ".claude/agents/art-director.md",
+      "source_sha256": "4fb49a645ddf0969266b3e586a171ccb4b11e7022e4d2a815da1b909cc32f5c2",
+      "body_sha256": "484e4b3da9a22fc7b21589693d98052f8d0c6a8f050b6ddd44a4ea4398ac2118",
+      "body_lines": 133,
+      "description": "Owns visual identity — style guides, art bible, asset standards, color palettes, UI visual direction.",
+      "metadata": {
+        "name": "art-director",
+        "description": "Owns visual identity — style guides, art bible, asset standards, color palettes, UI visual direction.",
+        "tools": "Read, Glob, Grep, Write, Edit, WebSearch",
+        "model": "inherit",
+        "maxTurns": 20,
+        "disallowedTools": "Bash",
+        "memory": "project"
+      }
+    },
+    "audio-director": {
+      "source_path": ".claude/agents/audio-director.md",
+      "source_sha256": "34843b1df941705c6e070d53dbd85a9c5969302b25243de57a8789533817fb9f",
+      "body_sha256": "ebf375bf54df989da2a4928d701b7c92360799c1e97e6b3f37c2a99c6817bbb3",
+      "body_lines": 108,
+      "description": "Owns sonic identity — music direction, sound palette, audio implementation strategy, mix balance.",
+      "metadata": {
+        "name": "audio-director",
+        "description": "Owns sonic identity — music direction, sound palette, audio implementation strategy, mix balance.",
+        "tools": "Read, Glob, Grep, Write, Edit, WebSearch",
+        "model": "inherit",
+        "maxTurns": 20,
+        "disallowedTools": "Bash",
+        "memory": "project"
+      }
+    },
+    "community-manager": {
+      "source_path": ".claude/agents/community-manager.md",
+      "source_sha256": "621a24b21b4ed3477714afa7087fab7fa87a2811e945467b36136558bf84ce85",
+      "body_sha256": "2745341c01707b97495f61c9eb8c358987c4fa41d67f564d8ae1d8603436bfc1",
+      "body_lines": 154,
+      "description": "Player-facing communication — patch notes, social posts, community updates, feedback collection, player bug triage, crisis communication.",
+      "metadata": {
+        "name": "community-manager",
+        "description": "Player-facing communication — patch notes, social posts, community updates, feedback collection, player bug triage, crisis communication.",
+        "tools": "Read, Glob, Grep, Write, Edit",
+        "model": "sonnet",
+        "maxTurns": 10,
+        "disallowedTools": "Bash"
+      }
+    },
+    "creative-director": {
+      "source_path": ".claude/agents/creative-director.md",
+      "source_sha256": "88c74e347ffdf55a41b04f1fb9bebb198ee0f8fddea13dd9a4bc64e8c22f0c24",
+      "body_sha256": "6e041091b79ad501441d781f89572c5da3de1b1bf7e6fb9b80af02102540e900",
+      "body_lines": 350,
+      "description": "Highest creative authority — vision, tone, aesthetic direction. Use when a decision affects game identity or department leads deadlock.",
+      "metadata": {
+        "name": "creative-director",
+        "description": "Highest creative authority — vision, tone, aesthetic direction. Use when a decision affects game identity or department leads deadlock.",
+        "tools": "Read, Glob, Grep, Write, Edit, WebSearch",
+        "model": "opus",
+        "maxTurns": 30,
+        "memory": "project",
+        "disallowedTools": "Bash"
+      }
+    },
+    "devops-engineer": {
+      "source_path": ".claude/agents/devops-engineer.md",
+      "source_sha256": "5c554b26e1e9fb7ef44b6ba8044ab1406b5c90021d9524d12ecadb1727cfc511",
+      "body_sha256": "e4dc41ed6d293196a052722906e2d09560998ffdf6fc37304c32256392937a87",
+      "body_lines": 106,
+      "description": "Build pipelines, CI/CD configuration, version control workflow, branching strategy, automated test pipelines, deployment infrastructure.",
+      "metadata": {
+        "name": "devops-engineer",
+        "description": "Build pipelines, CI/CD configuration, version control workflow, branching strategy, automated test pipelines, deployment infrastructure.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 10
+      }
+    },
+    "economy-designer": {
+      "source_path": ".claude/agents/economy-designer.md",
+      "source_sha256": "fe1d1872b10dd91cfcd947dc3c6804e262ce85a2a29a13ef931510d445713db1",
+      "body_sha256": "8bdff0564bfcee7b1477eebd9f5a507450b721bce10e7a927f01faded3b3715f",
+      "body_lines": 141,
+      "description": "Resource economies — loot tables, sink/faucet analysis, progression curve calibration, economic balance.",
+      "metadata": {
+        "name": "economy-designer",
+        "description": "Resource economies — loot tables, sink/faucet analysis, progression curve calibration, economic balance.",
+        "tools": "Read, Glob, Grep, Write, Edit",
+        "model": "inherit",
+        "maxTurns": 20,
+        "disallowedTools": "Bash",
+        "memory": "project"
+      }
+    },
+    "engine-programmer": {
+      "source_path": ".claude/agents/engine-programmer.md",
+      "source_sha256": "2ab8db5c67d80a133293812ebf3c45184ec3f1cf173246544dfe2c4ba9e66978",
+      "body_sha256": "7e44ae6c6d2946a120abe34e692ee7731c27bbddd3557fc7e2396915d91fb3ad",
+      "body_lines": 106,
+      "description": "Core engine systems — rendering pipeline, physics, memory, resource loading, scene management, performance-critical framework code.",
+      "metadata": {
+        "name": "engine-programmer",
+        "description": "Core engine systems — rendering pipeline, physics, memory, resource loading, scene management, performance-critical framework code.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 20
+      }
+    },
+    "game-designer": {
+      "source_path": ".claude/agents/game-designer.md",
+      "source_sha256": "8eb1ddb6f56ec4ee06be5f41d32370dcd82dda65a3ad5d512bfcf4d731902518",
+      "body_sha256": "3f8e2a6ad7fe789b07ed024953399fd097de7dccc2b16512a694046e7f1bf064",
+      "body_lines": 234,
+      "description": "Mechanical and systems design — core loops, progression, combat, economy, player-facing rules. Mechanics-level questions.",
+      "metadata": {
+        "name": "game-designer",
+        "description": "Mechanical and systems design — core loops, progression, combat, economy, player-facing rules. Mechanics-level questions.",
+        "tools": "Read, Glob, Grep, Write, Edit, WebSearch",
+        "model": "inherit",
+        "maxTurns": 20,
+        "disallowedTools": "Bash",
+        "skills": [
+          "balance-check"
+        ],
+        "memory": "project"
+      }
+    },
+    "gameplay-programmer": {
+      "source_path": ".claude/agents/gameplay-programmer.md",
+      "source_sha256": "a2d3e81dc8b3d1251f3ee0fa4bdb2e9b39589578659326fddb0031360430099f",
+      "body_sha256": "413f2190f3581fc622d81304bf68d12834ccb1a27523e649a4fab53bf79b6e4b",
+      "body_lines": 132,
+      "description": "Implements designed mechanics as code — player systems, combat, interactive features, gameplay system code.",
+      "metadata": {
+        "name": "gameplay-programmer",
+        "description": "Implements designed mechanics as code — player systems, combat, interactive features, gameplay system code.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 20
+      }
+    },
+    "godot-csharp-specialist": {
+      "source_path": ".claude/agents/godot-csharp-specialist.md",
+      "source_sha256": "5c12cf49ecdfeefe8cc1316108eb5f58ceb2ec9c2e6df5088f93776867c3c920",
+      "body_sha256": "4bb1f6b99a435e7939ab5b472acf3cbcb6f61d537e9bccc5f812b487226eb16b",
+      "body_lines": 414,
+      "description": "Godot 4 C# quality — .NET patterns, attribute-based exports, signal delegates, async patterns, type-safe node access.",
+      "metadata": {
+        "name": "godot-csharp-specialist",
+        "description": "Godot 4 C# quality — .NET patterns, attribute-based exports, signal delegates, async patterns, type-safe node access.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 20
+      }
+    },
+    "godot-gdextension-specialist": {
+      "source_path": ".claude/agents/godot-gdextension-specialist.md",
+      "source_sha256": "2a3a0ff569cc24a7716985387601f1e6e51f93acfefb0ad06a249f0c8b90ca46",
+      "body_sha256": "5b1897147496f7c6bcaa9ac3f804cd8dff46a171f418e685dc60b0cdb5f1d79b",
+      "body_lines": 342,
+      "description": "Native code integration with Godot — GDExtension API, godot-cpp and godot-rust bindings, custom node types, the native boundary.",
+      "metadata": {
+        "name": "godot-gdextension-specialist",
+        "description": "Native code integration with Godot — GDExtension API, godot-cpp and godot-rust bindings, custom node types, the native boundary.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 20
+      }
+    },
+    "godot-gdscript-specialist": {
+      "source_path": ".claude/agents/godot-gdscript-specialist.md",
+      "source_sha256": "9c151d5a77d483e85dae2ea37a1c847e63e49741bcd6efb3c16731ac205c88c1",
+      "body_sha256": "b5ee51f557d8749d605785ad0ef5617161b93a145bd617984dc1d8e51d84d08f",
+      "body_lines": 304,
+      "description": "GDScript code quality — static typing enforcement, signal architecture, coroutine patterns, GDScript idioms, typed and performant.",
+      "metadata": {
+        "name": "godot-gdscript-specialist",
+        "description": "GDScript code quality — static typing enforcement, signal architecture, coroutine patterns, GDScript idioms, typed and performant.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 20
+      }
+    },
+    "godot-shader-specialist": {
+      "source_path": ".claude/agents/godot-shader-specialist.md",
+      "source_sha256": "a1dfbad09f249122833d5357b070dbeddc101d8b468cc970b4cf112ffae55917",
+      "body_sha256": "10b13fbd2f31b906a2496504025bf193e33d7182016c9becd7ce779d4e00eed6",
+      "body_lines": 272,
+      "description": "Godot rendering customization — shading language, visual shaders, material setup, particle shaders, post-processing.",
+      "metadata": {
+        "name": "godot-shader-specialist",
+        "description": "Godot rendering customization — shading language, visual shaders, material setup, particle shaders, post-processing.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 20
+      }
+    },
+    "godot-specialist": {
+      "source_path": ".claude/agents/godot-specialist.md",
+      "source_sha256": "05a4bc411c9d9f52fbdb904fdb2905c644c435ecc1f50b8f19a8a934f10e7ae7",
+      "body_sha256": "e29344ba878a1f543e07b130b809c619013944af2b39aba59d2773e68db7eeba",
+      "body_lines": 204,
+      "description": "Authority on Godot-specific patterns and APIs — node/scene architecture, signals, resources; guides GDScript vs C# vs GDExtension.",
+      "metadata": {
+        "name": "godot-specialist",
+        "description": "Authority on Godot-specific patterns and APIs — node/scene architecture, signals, resources; guides GDScript vs C# vs GDExtension.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash, Agent",
+        "model": "inherit",
+        "maxTurns": 20
+      }
+    },
+    "lead-programmer": {
+      "source_path": ".claude/agents/lead-programmer.md",
+      "source_sha256": "040cd3f0f4d310a0490a67bf75835d21dd589050cb1c6c5fa2837df9eb7a0c43",
+      "body_sha256": "12d1fa00ac7470089ba579832dcbbb650e20ea550d68411a79dbeb54cfcdacfe",
+      "body_lines": 108,
+      "description": "Lead programmer — code-level architecture, coding standards, code review, API design, refactoring strategy, assigning work to specialist programmers.",
+      "metadata": {
+        "name": "lead-programmer",
+        "description": "Lead programmer — code-level architecture, coding standards, code review, API design, refactoring strategy, assigning work to specialist programmers.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 20,
+        "skills": [
+          "tech-debt"
+        ],
+        "memory": "project"
+      }
+    },
+    "level-designer": {
+      "source_path": ".claude/agents/level-designer.md",
+      "source_sha256": "fe2784450abcc07aba7a7c50f3800c44577e150de3089965c9aead47a0428353",
+      "body_sha256": "a7c12739f5e2e0ca40c56639dec7b6a565de64cb447f10249f45de60f88ee8f6",
+      "body_lines": 112,
+      "description": "Spatial design for levels and areas — encounter layouts, pacing, difficulty, layout planning, environmental storytelling.",
+      "metadata": {
+        "name": "level-designer",
+        "description": "Spatial design for levels and areas — encounter layouts, pacing, difficulty, layout planning, environmental storytelling.",
+        "tools": "Read, Glob, Grep, Write, Edit",
+        "model": "inherit",
+        "maxTurns": 20,
+        "disallowedTools": "Bash",
+        "memory": "project"
+      }
+    },
+    "live-ops-designer": {
+      "source_path": ".claude/agents/live-ops-designer.md",
+      "source_sha256": "8d5bafde506cd9270f1af7da7a2046a929c1f82ba1de39c6addc73bd60eb3caf",
+      "body_sha256": "8215b40070f6a9bdb289ae08b46ee0f05e86664300df7b542cec110865ea9a0e",
+      "body_lines": 174,
+      "description": "Post-launch content — seasonal events, battle passes, content cadence, retention, engagement analytics. Keeps the game fresh.",
+      "metadata": {
+        "name": "live-ops-designer",
+        "description": "Post-launch content — seasonal events, battle passes, content cadence, retention, engagement analytics. Keeps the game fresh.",
+        "tools": "Read, Glob, Grep, Write, Edit",
+        "model": "inherit",
+        "maxTurns": 20,
+        "disallowedTools": "Bash"
+      }
+    },
+    "localization-lead": {
+      "source_path": ".claude/agents/localization-lead.md",
+      "source_sha256": "034a85074f11acdafd8a3816c21c14df932f35b28a60a2bcd3baa8924b7097f9",
+      "body_sha256": "bc00e9a94545b5f079ac00cdaece689a2005617796e414d3823831c185e8f3a6",
+      "body_lines": 183,
+      "description": "Internationalization architecture — i18n system design, string extraction workflows, locale testing, locale-specific issues, translation pipeline.",
+      "metadata": {
+        "name": "localization-lead",
+        "description": "Internationalization architecture — i18n system design, string extraction workflows, locale testing, locale-specific issues, translation pipeline.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 20,
+        "memory": "project"
+      }
+    },
+    "narrative-director": {
+      "source_path": ".claude/agents/narrative-director.md",
+      "source_sha256": "8bc2d1b89d02c17b061b0027bbfb02bfca9b21812def752d422cff42a0f6df77",
+      "body_sha256": "7da8589ce08eccf9c609891caf11e6025228247d0dc73597405b353e766011cf",
+      "body_lines": 121,
+      "description": "Story architecture, world-building, character design, dialogue strategy. Narrative structure and direction rather than writing individual lines.",
+      "metadata": {
+        "name": "narrative-director",
+        "description": "Story architecture, world-building, character design, dialogue strategy. Narrative structure and direction rather than writing individual lines.",
+        "tools": "Read, Glob, Grep, Write, Edit, WebSearch",
+        "model": "inherit",
+        "maxTurns": 20,
+        "disallowedTools": "Bash",
+        "memory": "project"
+      }
+    },
+    "network-programmer": {
+      "source_path": ".claude/agents/network-programmer.md",
+      "source_sha256": "8060320bb115241806b7287540ccee94722c1b47879a9324f562f13d2591bc74",
+      "body_sha256": "22e8cfa7897de94cc5bc621ad55655a396e70b706639f8156e8fa6fa0888d3cf",
+      "body_lines": 101,
+      "description": "Multiplayer networking — state replication, lag compensation, matchmaking, network protocol, netcode and bandwidth optimization.",
+      "metadata": {
+        "name": "network-programmer",
+        "description": "Multiplayer networking — state replication, lag compensation, matchmaking, network protocol, netcode and bandwidth optimization.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 20
+      }
+    },
+    "performance-analyst": {
+      "source_path": ".claude/agents/performance-analyst.md",
+      "source_sha256": "d745187317ed50068fd0c9a33ff6e400a27af3a135046e734ea49c76f7daa9bd",
+      "body_sha256": "bb68574b5de42b49982a6765805ce7045ee01d7f4667e6ec9d8e9a63a55a3521",
+      "body_lines": 107,
+      "description": "Performance analyst — profiling, bottlenecks, memory analysis, frame time investigation, recommends optimizations, tracks metrics over time.",
+      "metadata": {
+        "name": "performance-analyst",
+        "description": "Performance analyst — profiling, bottlenecks, memory analysis, frame time investigation, recommends optimizations, tracks metrics over time.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 20,
+        "memory": "project"
+      }
+    },
+    "producer": {
+      "source_path": ".claude/agents/producer.md",
+      "source_sha256": "31d4c62ab7fcddabbb91a486dbba5e0d1f701ab2e25cb6c9e7577419e754a18c",
+      "body_sha256": "390c98bedbb1e32a3a1247a434b7fff75aa0628d5908d5d77d7499175a4673b2",
+      "body_lines": 155,
+      "description": "Production concerns — sprint planning, milestone tracking, risk, scope, cross-department coordination when multiple departments must synchronize.",
+      "metadata": {
+        "name": "producer",
+        "description": "Production concerns — sprint planning, milestone tracking, risk, scope, cross-department coordination when multiple departments must synchronize.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash, WebSearch",
+        "model": "opus",
+        "maxTurns": 30,
+        "memory": "project",
+        "skills": [
+          "scope-check",
+          "estimate"
+        ]
+      }
+    },
+    "prototyper": {
+      "source_path": ".claude/agents/prototyper.md",
+      "source_sha256": "3a86381d9cc76f28c5f7fc2143b60c2f336735b84644dffcb255c8ec47c29612",
+      "body_sha256": "a326d65b207d404f075011f62cdf0cbf75bea510151425172edd648cd1438898",
+      "body_lines": 297,
+      "description": "Throwaway builds — concept prototypes after brainstorm to test an idea is fun before GDDs; vertical slices pre-production. Speed over standards.",
+      "metadata": {
+        "name": "prototyper",
+        "description": "Throwaway builds — concept prototypes after brainstorm to test an idea is fun before GDDs; vertical slices pre-production. Speed over standards.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 25,
+        "isolation": "worktree"
+      }
+    },
+    "qa-lead": {
+      "source_path": ".claude/agents/qa-lead.md",
+      "source_sha256": "13a8faf6fe2aea73bf1e3fa9e31f57784803060a1bbd956c470841f2a2140ac6",
+      "body_sha256": "7ac6a5649b8bf95c149fc650474982bfd7c768f42b9f28778ce93150a4674326",
+      "body_lines": 148,
+      "description": "Test strategy and process — test plan creation, bug severity assessment, regression planning, release quality gates, readiness evaluation.",
+      "metadata": {
+        "name": "qa-lead",
+        "description": "Test strategy and process — test plan creation, bug severity assessment, regression planning, release quality gates, readiness evaluation.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 20,
+        "skills": [
+          "bug-report",
+          "release-checklist"
+        ],
+        "memory": "project"
+      }
+    },
+    "qa-tester": {
+      "source_path": ".claude/agents/qa-tester.md",
+      "source_sha256": "670a1becc4c3cca328dbeef08dc78ed5fc8afa662ec3648795635dbb9a6e8e9c",
+      "body_sha256": "7eab524c3fcc9f44cc32e5a0b57d4f4b942e2faf5fe22793842c78e8e3396cd9",
+      "body_lines": 261,
+      "description": "Writes test cases, bug reports, and checklists — test case generation, regression checklist creation, execution documentation.",
+      "metadata": {
+        "name": "qa-tester",
+        "description": "Writes test cases, bug reports, and checklists — test case generation, regression checklist creation, execution documentation.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 60
+      }
+    },
+    "release-manager": {
+      "source_path": ".claude/agents/release-manager.md",
+      "source_sha256": "1b94fa31b022109b203b7d66d5a88994a1b69cd7ce9f006c5edc2fc188dfa01e",
+      "body_sha256": "c0ce61ab5e01babeef2737f3ab4ad41a8d6f184a2696da9bb7594b6e7960682b",
+      "body_lines": 176,
+      "description": "Release pipeline — certification checklists, store submissions and page prep, platform requirements, version numbering, release-day coordination.",
+      "metadata": {
+        "name": "release-manager",
+        "description": "Release pipeline — certification checklists, store submissions and page prep, platform requirements, version numbering, release-day coordination.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 20,
+        "skills": [
+          "release-checklist",
+          "write-changelog",
+          "patch-notes"
+        ]
+      }
+    },
+    "security-engineer": {
+      "source_path": ".claude/agents/security-engineer.md",
+      "source_sha256": "db24dbef20665d6a0163ff28c4c341566979b7714fd063902b560c5124fdb5ef",
+      "body_sha256": "b9e69d7df822cc2497afc4c8c8aa28a10f21dcc9228f09c223eee353dc51bf36",
+      "body_lines": 147,
+      "description": "Protects against cheating, exploits, breaches — anti-cheat measures, secure save data and network comms, player privacy compliance.",
+      "metadata": {
+        "name": "security-engineer",
+        "description": "Protects against cheating, exploits, breaches — anti-cheat measures, secure save data and network comms, player privacy compliance.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 20
+      }
+    },
+    "sound-designer": {
+      "source_path": ".claude/agents/sound-designer.md",
+      "source_sha256": "90ee4ef61023926d3c03f3d759ccfd81dec6c6893ea4a1b22524528881848c80",
+      "body_sha256": "ea65ab37a62b804ef1b04055428286a912c789b58f7623483873fe05db8a23a2",
+      "body_lines": 79,
+      "description": "SFX specifications and spec sheets — audio event documentation, mixing parameters, sound category definitions.",
+      "metadata": {
+        "name": "sound-designer",
+        "description": "SFX specifications and spec sheets — audio event documentation, mixing parameters, sound category definitions.",
+        "tools": "Read, Glob, Grep, Write, Edit",
+        "model": "inherit",
+        "maxTurns": 10,
+        "disallowedTools": "Bash"
+      }
+    },
+    "systems-designer": {
+      "source_path": ".claude/agents/systems-designer.md",
+      "source_sha256": "377edb042d15188340a61ab5cda384074f981d9c23a0a3e14e71873f0be289c4",
+      "body_sha256": "54558511c6107e4e19a4d358528cc024ee25f37561a9daead21a89087aa7f2aa",
+      "body_lines": 150,
+      "description": "Detailed subsystem mechanics — combat formulas, progression curves, crafting recipes, status effect interactions, mathematical modeling of a mechanic.",
+      "metadata": {
+        "name": "systems-designer",
+        "description": "Detailed subsystem mechanics — combat formulas, progression curves, crafting recipes, status effect interactions, mathematical modeling of a mechanic.",
+        "tools": "Read, Glob, Grep, Write, Edit",
+        "model": "inherit",
+        "maxTurns": 20,
+        "disallowedTools": "Bash",
+        "memory": "project"
+      }
+    },
+    "technical-artist": {
+      "source_path": ".claude/agents/technical-artist.md",
+      "source_sha256": "fa0659ab3524a521c4296fbacffe5baec47fdb25e0abd2dbaeed4ab2d915afb5",
+      "body_sha256": "6a9afa51d6ba6f867651dcd3bcd23bbe20077bbb9d12fb747db81e034cbc81ba",
+      "body_lines": 113,
+      "description": "Technical artist bridging art and engineering — shaders, VFX, rendering optimization, art pipeline tools, art-to-engine issues.",
+      "metadata": {
+        "name": "technical-artist",
+        "description": "Technical artist bridging art and engineering — shaders, VFX, rendering optimization, art pipeline tools, art-to-engine issues.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 20
+      }
+    },
+    "technical-director": {
+      "source_path": ".claude/agents/technical-director.md",
+      "source_sha256": "8022e08de9f13efc87b78cae3adc3c75ad3af501b63f9ecbd0d7f96e1e8ffc57",
+      "body_sha256": "04961c90d8d81ce66ece64827e58033607a6bb89e1d84589ae28a850ec22e978",
+      "body_lines": 148,
+      "description": "High-level technical decisions — engine architecture, technology choices, performance strategy, technical risk, cross-system conflicts.",
+      "metadata": {
+        "name": "technical-director",
+        "description": "High-level technical decisions — engine architecture, technology choices, performance strategy, technical risk, cross-system conflicts.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash, WebSearch",
+        "model": "opus",
+        "maxTurns": 30,
+        "memory": "project"
+      }
+    },
+    "tools-programmer": {
+      "source_path": ".claude/agents/tools-programmer.md",
+      "source_sha256": "2ffd83c3d619988995b1df1426c4fd77bfa312fa5bd55ac9e910503ccb53d0b6",
+      "body_sha256": "e40c5a3c0073b1750d07362056792250e97bad69a7bc50d4044b32d70b2669d5",
+      "body_lines": 103,
+      "description": "Internal dev tools — editor extensions, content authoring tools, debug utilities, pipeline automation, editor workflow.",
+      "metadata": {
+        "name": "tools-programmer",
+        "description": "Internal dev tools — editor extensions, content authoring tools, debug utilities, pipeline automation, editor workflow.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 20
+      }
+    },
+    "ue-blueprint-specialist": {
+      "source_path": ".claude/agents/ue-blueprint-specialist.md",
+      "source_sha256": "3bd61ad7888f0a24057438eed93da67c60ce9b4c70bd891102be98fe23c28d35",
+      "body_sha256": "835295d0cd6f09c72fe9eedcad264ed2fe2081d97c88cc633a6bbec7a43ebb68",
+      "body_lines": 176,
+      "description": "Blueprint architecture and Blueprint/C++ boundary — optimization, maintainable graphs. Prevents Blueprint spaghetti, enforces clean BP patterns.",
+      "metadata": {
+        "name": "ue-blueprint-specialist",
+        "description": "Blueprint architecture and Blueprint/C++ boundary — optimization, maintainable graphs. Prevents Blueprint spaghetti, enforces clean BP patterns.",
+        "tools": "Read, Glob, Grep, Write, Edit",
+        "model": "sonnet",
+        "maxTurns": 20,
+        "disallowedTools": "Bash"
+      }
+    },
+    "ue-gas-specialist": {
+      "source_path": ".claude/agents/ue-gas-specialist.md",
+      "source_sha256": "6c812f5a42b0cd37e49c5c46999227cbe796a50ee0998114564058cf2997a6b6",
+      "body_sha256": "ebe24184bb8199537c169b013b178d30e87cfdf7c1efb82334023ad11b620c8e",
+      "body_lines": 147,
+      "description": "Gameplay Ability System — abilities, gameplay effects, attribute sets, tags, ability tasks, prediction. Prevents common GAS anti-patterns.",
+      "metadata": {
+        "name": "ue-gas-specialist",
+        "description": "Gameplay Ability System — abilities, gameplay effects, attribute sets, tags, ability tasks, prediction. Prevents common GAS anti-patterns.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 20
+      }
+    },
+    "ue-replication-specialist": {
+      "source_path": ".claude/agents/ue-replication-specialist.md",
+      "source_sha256": "42e20e2851d880f7ae6602e31042ae14a693a0257d09fcdc6625e007e46c27b3",
+      "body_sha256": "6e7b8d91747d01660ceef14ad31d50ede8037ec06f09c193b0a9141e1d60291e",
+      "body_lines": 159,
+      "description": "Unreal networking — property replication, RPCs, client prediction, relevancy, net serialization, bandwidth. Server-authoritative architecture.",
+      "metadata": {
+        "name": "ue-replication-specialist",
+        "description": "Unreal networking — property replication, RPCs, client prediction, relevancy, net serialization, bandwidth. Server-authoritative architecture.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 20
+      }
+    },
+    "ue-umg-specialist": {
+      "source_path": ".claude/agents/ue-umg-specialist.md",
+      "source_sha256": "8f5d13f67576692d0735e972a0c724bd762be3bef313576785af76b28861b6f5",
+      "body_sha256": "a59194e388dc7b7d70f3c7309e459c1f19958056298d93eb077c416b3612b615",
+      "body_lines": 164,
+      "description": "Unreal UI implementation — UMG widget hierarchy, data binding, CommonUI input routing, widget styling, UI optimization.",
+      "metadata": {
+        "name": "ue-umg-specialist",
+        "description": "Unreal UI implementation — UMG widget hierarchy, data binding, CommonUI input routing, widget styling, UI optimization.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 20
+      }
+    },
+    "ui-programmer": {
+      "source_path": ".claude/agents/ui-programmer.md",
+      "source_sha256": "864b6dc1b3034cd136d67751d503ca80ffb8141823296f077cf58b5786707a74",
+      "body_sha256": "7039c22966fca8ecc42789d5ba844048546987ea98ab7691d41d9efd2c1f769a",
+      "body_lines": 109,
+      "description": "Implements user interface systems — menus, HUDs, inventory screens, dialogue boxes, UI framework code, screen flow.",
+      "metadata": {
+        "name": "ui-programmer",
+        "description": "Implements user interface systems — menus, HUDs, inventory screens, dialogue boxes, UI framework code, screen flow.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "inherit",
+        "maxTurns": 20
+      }
+    },
+    "unity-addressables-specialist": {
+      "source_path": ".claude/agents/unity-addressables-specialist.md",
+      "source_sha256": "cfd7d28d184aff327f3afdb9fe3d3b5bbedfcb3de8cc644980f24a41b0fdef03",
+      "body_sha256": "dd6e897f24aad99a5443947f3ad9c5c9e08e5454ba3ff93afc670cd3933e51c2",
+      "body_lines": 183,
+      "description": "Unity asset management — Addressable groups, loading/unloading, content catalogs, remote delivery, asset bundle optimization, fast load times.",
+      "metadata": {
+        "name": "unity-addressables-specialist",
+        "description": "Unity asset management — Addressable groups, loading/unloading, content catalogs, remote delivery, asset bundle optimization, fast load times.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 20
+      }
+    },
+    "unity-dots-specialist": {
+      "source_path": ".claude/agents/unity-dots-specialist.md",
+      "source_sha256": "4f54c55d142de8a01bbc7cfbc0fe491a486001b4ebae2ffad158e225f568d47e",
+      "body_sha256": "8a133c611258682f4371e75ea6ffefb80ec91ece314cb6d51d11b1c7b1650afd",
+      "body_lines": 161,
+      "description": "Unity Data-Oriented Technology Stack — Entity Component System, Jobs, Burst compiler optimization, hybrid renderer, correct ECS patterns.",
+      "metadata": {
+        "name": "unity-dots-specialist",
+        "description": "Unity Data-Oriented Technology Stack — Entity Component System, Jobs, Burst compiler optimization, hybrid renderer, correct ECS patterns.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 20
+      }
+    },
+    "unity-shader-specialist": {
+      "source_path": ".claude/agents/unity-shader-specialist.md",
+      "source_sha256": "b2f8ac7c887fc65f182fcbf71f1366079fcdc87585eaf16970ffecaf4d5d04df",
+      "body_sha256": "35d6da41bbabe8d7eed40b56f7ee2d92ebb7dafde37aeeb6e7c6e52df043e8ec",
+      "body_lines": 197,
+      "description": "Unity rendering — Shader Graph, custom HLSL, VFX Graph, render pipeline customization (URP/HDRP), post-processing within performance budgets.",
+      "metadata": {
+        "name": "unity-shader-specialist",
+        "description": "Unity rendering — Shader Graph, custom HLSL, VFX Graph, render pipeline customization (URP/HDRP), post-processing within performance budgets.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 20
+      }
+    },
+    "unity-specialist": {
+      "source_path": ".claude/agents/unity-specialist.md",
+      "source_sha256": "e3b72478196ae081aff1a86e01e254d971b55d21d794ab012abefe241839e549",
+      "body_sha256": "fb3467d7ee3899ed95de2d2626a715dc7ca4c23044efd0cf49bb55188910d9df",
+      "body_lines": 217,
+      "description": "Authority on Unity-specific patterns and APIs — guides MonoBehaviour vs DOTS/ECS, Unity subsystems including Addressables and Input System.",
+      "metadata": {
+        "name": "unity-specialist",
+        "description": "Authority on Unity-specific patterns and APIs — guides MonoBehaviour vs DOTS/ECS, Unity subsystems including Addressables and Input System.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash, Agent",
+        "model": "inherit",
+        "maxTurns": 20
+      }
+    },
+    "unity-ui-specialist": {
+      "source_path": ".claude/agents/unity-ui-specialist.md",
+      "source_sha256": "8894127c20d7deda4e6b78e605483fd021f61518c1a75c253458ed6a4aa5e891",
+      "body_sha256": "3d035f3ba3fd7739694248543daf280ce2777173781f05fc39a009b4b5172347",
+      "body_lines": 231,
+      "description": "Unity UI implementation — UI Toolkit (UXML/USS), UGUI Canvas, data binding, runtime UI performance, cross-platform adaptation.",
+      "metadata": {
+        "name": "unity-ui-specialist",
+        "description": "Unity UI implementation — UI Toolkit (UXML/USS), UGUI Canvas, data binding, runtime UI performance, cross-platform adaptation.",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash",
+        "model": "sonnet",
+        "maxTurns": 20
+      }
+    },
+    "unreal-specialist": {
+      "source_path": ".claude/agents/unreal-specialist.md",
+      "source_sha256": "efc5f0abd482bbdfbeba61c8f1c51007152e5a2f538365d85da50be75527bc47",
+      "body_sha256": "291b2e2c0f257cbd162b4f1fae09744114b25fa4e8743efe368038ec02f439e4",
+      "body_lines": 203,
+      "description": "Authority on Unreal-specific patterns and APIs — guides Blueprint vs C++, UE subsystems (GAS, Enhanced Input, Niagara, etc.).",
+      "metadata": {
+        "name": "unreal-specialist",
+        "description": "Authority on Unreal-specific patterns and APIs — guides Blueprint vs C++, UE subsystems (GAS, Enhanced Input, Niagara, etc.).",
+        "tools": "Read, Glob, Grep, Write, Edit, Bash, Agent",
+        "model": "inherit",
+        "maxTurns": 20
+      }
+    },
+    "ux-designer": {
+      "source_path": ".claude/agents/ux-designer.md",
+      "source_sha256": "90d079a8d336c9f477b6d4e9ebf7479da9573ceb5f2390854163357c2714530d",
+      "body_sha256": "f9fdb404b891f16bdabb2225e26c37e782b679c56ea8ff88932b5e54621058b6",
+      "body_lines": 98,
+      "description": "User experience flows, interaction design, information architecture — user flow mapping, interaction pattern design, onboarding, accessibility requirements.",
+      "metadata": {
+        "name": "ux-designer",
+        "description": "User experience flows, interaction design, information architecture — user flow mapping, interaction pattern design, onboarding, accessibility requirements.",
+        "tools": "Read, Glob, Grep, Write, Edit, WebSearch",
+        "model": "inherit",
+        "maxTurns": 20,
+        "disallowedTools": "Bash",
+        "memory": "project"
+      }
+    },
+    "world-builder": {
+      "source_path": ".claude/agents/world-builder.md",
+      "source_sha256": "bf861a74a7905ca99241d953f82dafa1b64e9e2416c793433941bf016476ef96",
+      "body_sha256": "be70ac7dbe8bdcc282bd17b153d23158c5932529871aafd61a374b958baa8329",
+      "body_lines": 114,
+      "description": "World builder for lore — factions, cultures, history, geography, ecology, world rules. Faction design, lore consistency checks.",
+      "metadata": {
+        "name": "world-builder",
+        "description": "World builder for lore — factions, cultures, history, geography, ecology, world rules. Faction design, lore consistency checks.",
+        "tools": "Read, Glob, Grep, Write, Edit",
+        "model": "inherit",
+        "maxTurns": 20,
+        "disallowedTools": "Bash",
+        "memory": "project"
+      }
+    },
+    "writer": {
+      "source_path": ".claude/agents/writer.md",
+      "source_sha256": "b229e9ec79771866c2e80294ec2a801479a7479ddf7e788a55b65164cc80da9c",
+      "body_sha256": "4429bbd4a8904610384454ea336a7be58ea0252da3a3e7b52c1c073cd93b561b",
+      "body_lines": 114,
+      "description": "Writer of player-facing text — dialogue, lore entries, item and ability descriptions, environmental text.",
+      "metadata": {
+        "name": "writer",
+        "description": "Writer of player-facing text — dialogue, lore entries, item and ability descriptions, environmental text.",
+        "tools": "Read, Glob, Grep, Write, Edit",
+        "model": "inherit",
+        "maxTurns": 20,
+        "disallowedTools": "Bash",
+        "memory": "project"
+      }
+    }
+  }
+}

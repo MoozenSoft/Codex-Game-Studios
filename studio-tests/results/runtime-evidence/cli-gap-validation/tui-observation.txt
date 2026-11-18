@@ -1,0 +1,19 @@
+宿主为 VS Code 新建的集成终端，工作目录为受信任的隔离探针。
+CLI 标题 OpenAI Codex (v0.169.0)，实际模型 GPT-6.1-Sol low。
+
+内置工具 PTY 的进程创建失败，返回 Access is denied。
+自行创建 ConPTY 后，Codex 返回 Error: stdin is not a terminal。
+在集成终端通过单次独立运行选项启动 CLI。同步问题接口标志只用于本次试验。
+
+首轮回复 TUI_READY。键入 /compact 时出现原生菜单选项。
+提交后屏幕显示以下三行：
+  Hook failed
+    hook returned invalid PreCompact hook JSON output
+  Context compacted · 11s
+恢复回合单独回复 TUI_GAP_80QF7。
+
+原生问题面板显示 Question 1/1 (1 unanswered) 及 Alpha、Beta 选项。
+可见提交结果为 Questions 1/1 answered、answer: Alpha 和 SIGNAL Alpha。
+两次回合均提交 Alpha，第二个选项的实际提交未取得证据。
+
+本文件转录实际屏幕内容。结构化线程证据在同目录的 tui-thread-proof.json。

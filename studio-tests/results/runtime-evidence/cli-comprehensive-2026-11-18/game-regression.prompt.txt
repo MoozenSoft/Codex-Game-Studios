@@ -1,0 +1,4 @@
+这是CLI对已有隔离Web游戏的全量自动回归。仅运行既有代码、测试、构建及截图，不改源码、测试、故事、配置、检查点，不安装、不实际提交、不改信任。测试失败须保留并报告，不通过修改测试掩盖。
+当前已有游戏位于<probe>。用实际D:/Program Files/Git/bin/bash.exe运行本checkout .agents/scripts/test-run.sh web --root <当前fixture根> --timeout 180 --log .scratch/cli-full-20261118/game-tests.log。它应运行既有Vitest和Playwright两部分，并完成构建。不要只看helper退出0，必须读ran、zero_tests、unit/e2e exit、tests计数、build/browser及rule行。依赖或浏览器不可用就NOT ASSESSED，不安装。
+两部分通过后，用本checkout .agents/scripts/one-shot-run.sh dist-single .scratch/cli-full-20261118/game-input.png --log "Enter wait:0.2" --stop 2 --root <当前fixture根> 执行真实浏览器输入并截图。实际观察是否drawn、有无crash/error、scene/state变化；不知道控件语义时可只记录实际输入和状态，不编造试玩结论。已有CGS_PYTHON可用；沙箱拒绝正常审批重试，不绕过。
+最终报告测试数量和必要失败、真实浏览器输出、截图路径。自动输入不等于人工试玩，人工乐趣和手感仍未评估。

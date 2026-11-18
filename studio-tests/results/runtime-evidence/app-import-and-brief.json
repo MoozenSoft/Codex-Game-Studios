@@ -1,0 +1,34 @@
+{
+  "source": "实际App会话的只读预览、brief与批准后保存/导入回合；GUI真实批准另见app-brief-approval.json",
+  "thread_id": "01a1e792-5d44-71a0-aa74-234e8a7c2065",
+  "turns": [
+    {
+      "id": "01a1e7a2-3247-7251-a605-49ecd8bfa934",
+      "status": "completed",
+      "error": null,
+      "items": [
+        {
+          "type": "agentMessage",
+          "id": "msg_063e1a734cb200a9016afbd09aa90887d0853757a40bdd0117",
+          "text": "已完成保存与导入，cwd 与 `app-acceptance` 分支保持一致。\n\n- [原型 brief](<probe>/app-web-acceptance/prototypes/app-dusk-fish/brief.md)\n- [项目 brief](<probe>/app-web-acceptance/design/game-brief.md)\n- 旧 brief 已原样保留为 `brief.source.md`。\n\n31/31 个源文件 SHA-256 匹配，源目录未变，两份新 brief 一致。框架静态校验通过。\n\n未构建、下载、提交、打 tag 或写检查点。浏览器运行、回放实测及人工试玩均为 **NOT ASSESSED**。",
+          "phase": "final_answer"
+        }
+      ],
+      "truncated": true
+    },
+    {
+      "id": "01a1e79e-23b6-70f0-bd80-371b6af3fa83",
+      "status": "completed",
+      "error": null,
+      "items": [
+        {
+          "type": "agentMessage",
+          "id": "msg_063e1a734cb200a9016afbcf53185c87d0b4f5abce5a1ef2ed",
+          "text": "核对通过：\n\n- cwd：`<probe>/app-web-acceptance`\n- 分支：`app-acceptance`\n- 已读取项目 `AGENTS.md`、codex-runtime、automation-modes 及本地 `$start`、`$prototype`。\n- 实际配置：`collaborative (default)`；review 为 `solo`，workflow 为 `minimal`，引擎未配置。\n- Git Bash：`D:/Program Files/Git/bin/bash.exe`；通过 `python-run.sh` 确认已装 Python `3.12.10`。沙箱启动受阻后，经正常审批完成只读检查。\n- 导入 dry-run 成功：`kind game`，31 个文件，共 979,133 字节；目标目录不存在。\n\n**brief 草稿｜app-dusk-fish｜未保存**\n\n| 字段 | 草稿 |\n|---|---|\n| Pitch | 黄昏池畔移动渔夫，把握判定时机，在 45 秒内钓到 3 条鱼。 |\n| Look | 2D 矢量渔夫、池塘、鱼与 HUD；暮色配色沿用源码。 |\n| Controls | 方向键移动；Space 在判定区收鱼；Enter 开始／重试；P 暂停／继续。 |\n| Core loop | 移动 → 观察判定条 → 收鱼 → 累计渔获 → 胜负后重试。 |\n| Goal & fail state | 45 秒内钓到 3 条获胜，超时失败。 |\n| First minute / Challenge | 开始后进入时机挑战；源码中每次成功后判定条加快，失误有冷却。 |\n| Features | 源码已见上述机制、`config.js` 集中参数、固定步进及 seed `721`；运行效果待验证。 |\n| Out of scope | 本次保存与导入批准不包含构建、下载、提交或打 tag。 |\n\n**导入计划草稿**\n\n1. 原样复制源目录到当前项目 `prototypes/app-dusk-fish/`，逐文件核对 SHA-256；源目录保持只读。\n2. 将复制来的旧 brief 保留为 `brief.source.md`，保存本次 brief 到目标 `brief.md` 和 `design/game-brief.md`。历史限制与授权不作为当前授权。\n3. 后续构建与运行验收等待另行授权。\n\n本回合未保存或导入文件，未写报告或检查点。工作区原有未跟踪项 `production/qa/` 前后状态一致。浏览器运行、回放实测及人工试玩均为 **NOT ASSESSED**。\n\n是否批准下一回合保存这份 brief 并按上述计划导入？",
+          "phase": "final_answer"
+        }
+      ],
+      "truncated": true
+    }
+  ]
+}

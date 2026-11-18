@@ -1,0 +1,12 @@
+warning: in the working copy of 'design/game-brief.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prototypes/app-dusk-fish/assets/provenance.yaml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prototypes/app-dusk-fish/brief.md', LF will be replaced by CRLF the next time Git touches it
+[app-acceptance df53774] 保存应用验收原型与导入简报基线
+ 7 files changed, 500 insertions(+)
+ create mode 100644 design/game-brief.md
+ create mode 100644 prototypes/app-dusk-fish/assets/provenance.yaml
+ create mode 100644 prototypes/app-dusk-fish/brief.md
+ create mode 100644 prototypes/app-dusk-fish/brief.source.md
+ create mode 100644 prototypes/app-dusk-fish/config.js
+ create mode 100644 prototypes/app-dusk-fish/feel-log.md
+ create mode 100644 prototypes/app-dusk-fish/index.html

@@ -1,0 +1,9 @@
+warning: in the working copy of 'production/qa/evidence/grow-app-dusk-fish/exact', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-app-dusk-fish/replay.args', LF will be replaced by CRLF the next time Git touches it
+[app-acceptance dbb0fb3] 保存成长前同种子双跑参考证据
+ 5 files changed, 339 insertions(+)
+ create mode 100644 production/qa/evidence/grow-app-dusk-fish/exact
+ create mode 100644 production/qa/evidence/grow-app-dusk-fish/reference-again.tsv
+ create mode 100644 production/qa/evidence/grow-app-dusk-fish/reference.png
+ create mode 100644 production/qa/evidence/grow-app-dusk-fish/reference.tsv
+ create mode 100644 production/qa/evidence/grow-app-dusk-fish/replay.args

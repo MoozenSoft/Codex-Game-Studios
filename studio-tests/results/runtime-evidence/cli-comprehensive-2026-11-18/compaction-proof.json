@@ -1,0 +1,51 @@
+{
+  "native_items": [
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "contextCompaction",
+          "id": "01a1ec30-c337-7542-9446-604a4c42fa99",
+          "startedAtMs": 1794963981111,
+          "completedAtMs": null
+        },
+        "threadId": "01a1ec2e-523f-7331-8d74-394f0d37c6f4",
+        "turnId": "01a1ec30-badc-74d3-8cfd-5478b33ee0c4",
+        "startedAtMs": 1794963981111
+      },
+      "emittedAtMs": 1794963981114
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "contextCompaction",
+          "id": "01a1ec30-c337-7542-9446-604a4c42fa99",
+          "startedAtMs": 1794963981111,
+          "completedAtMs": 1794964026067
+        },
+        "threadId": "01a1ec2e-523f-7331-8d74-394f0d37c6f4",
+        "turnId": "01a1ec30-badc-74d3-8cfd-5478b33ee0c4",
+        "contentTokenCount": null,
+        "completedAtMs": 1794964026067
+      },
+      "emittedAtMs": 1794964026074
+    }
+  ],
+  "status": {
+    "completed": true,
+    "trigger": "CLI-created thread via installed CLI app-server thread/compact/start",
+    "native_tui_slash_tested": false
+  },
+  "checkpoint_before": "45ae7d0cd07390d0998e5c665a2ed71b50cb43c7cd98dc50f12003feb27c7b59",
+  "checkpoint_after_compaction_before_qa_answer": "45ae7d0cd07390d0998e5c665a2ed71b50cb43c7cd98dc50f12003feb27c7b59",
+  "checkpoint_preserved": true,
+  "recovery_turn": {
+    "id": "01a1ec32-2902-74b3-ae7a-273a4057549e",
+    "status": "completed",
+    "item_types": [
+      "userMessage",
+      "agentMessage"
+    ]
+  }
+}

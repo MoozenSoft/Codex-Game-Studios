@@ -1,0 +1,9 @@
+{
+  "agent_role": "qa-tester",
+  "agent_thread_id": "01a1ec08-8b01-7443-b760-d4c3cd2f8b5b",
+  "parent_thread_id": "01a1ec07-e928-7b43-a32d-5812c6c70316",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "source_body_sha256": "53e0af1faae53cae3d2ff9a3801607249cdb75c40e4631d0a58c74395c06ca01",
+  "full_role_instructions_before_first_tool": true
+}

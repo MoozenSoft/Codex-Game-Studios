@@ -1,8 +1,10 @@
-# Skill Test Spec: /consistency-check
+# Skill Test Spec: $consistency-check
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/consistency-check [full | since-last-review | entity:<name> | item:<name>]`
+`$consistency-check [full | since-last-review | entity:<name> | item:<name>]`
 compares every in-scope GDD in `design/gdd/` against the entity registry
 (`design/registry/entities.yaml`). It reads the registry once, builds entity,
 item, formula and constant lookups, then greps each GDD for each registered name
@@ -19,15 +21,15 @@ after a "May I update / May I add" ask; afterwards the verdict is COMPLETE, or
 BLOCKED while conflicts remain. Every 🔴 CONFLICT is appended to
 `docs/consistency-failures.md` after a "May I append" ask, a breadcrumb is appended to
 `production/session-state/active.md`, and the skill closes with an
-`AskUserQuestion` widget (collaborative and guided modes). No director gates.
+`当前 Codex 可用的提问工具` widget (collaborative and guided modes). No director gates.
 
 ---
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keywords: PASS, CONFLICTS FOUND, NOT ASSESSED, COMPLETE, BLOCKED
 - [ ] The analysis phases (1–5) are read-only
@@ -49,7 +51,7 @@ required as part of the scan itself.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -64,7 +66,7 @@ Fixture defaults.
 - `design/gdd/` contains 4 system GDDs plus `game-concept.md`, `systems-index.md` and a `gdd-cross-review-[date].md`
 - Every value the GDDs state for a registered name matches the registry
 
-**Input:** `/consistency-check`
+**Input:** `$consistency-check`
 
 **Expected behavior:**
 1. Skill reads the registry and reports `Registry loaded: 3 entities, 0 items, 0 formulas, 2 constants` and `Scope: full`
@@ -73,7 +75,7 @@ Fixture defaults.
 4. No conflicts or stale entries; the report's Clean Entries line reads `✅ 5 registry entries verified across all GDDs with no conflicts.`
 5. Verdict: PASS
 6. Nothing is appended to `docs/consistency-failures.md`; the breadcrumb is appended to `production/session-state/active.md`
-7. Closes with the `AskUserQuestion` widget (Fix / Run `/design-review` / Stop)
+7. Closes with the `当前 Codex 可用的提问工具` widget (Fix / Run `$design-review` / Stop)
 
 **Assertions:**
 - [ ] The in-scope GDD list (4 GDDs, non-system docs excluded) is reported before the scan
@@ -81,7 +83,7 @@ Fixture defaults.
 - [ ] Verdict is PASS when registry and GDDs agree
 - [ ] `design/registry/entities.yaml` and `docs/consistency-failures.md` are not written; the only write is the `active.md` breadcrumb
 - [ ] The breadcrumb names `docs/consistency-failures.md`, not an invented report file
-- [ ] The skill closes with the `AskUserQuestion` widget, not plain text
+- [ ] The skill closes with the `当前 Codex 可用的提问工具` widget, not plain text
 
 ---
 
@@ -94,7 +96,7 @@ Fixture defaults.
 - `design/gdd/loot.md` states `crit_multiplier = 2.0`
 - The registry entry is newer than the last commit to `combat.md` (not stale)
 
-**Input:** `/consistency-check`
+**Input:** `$consistency-check`
 
 **Expected behavior:**
 1. The constant scan (3d) greps `crit_multiplier` and finds 2.0 in `loot.md`
@@ -122,7 +124,7 @@ Fixture defaults.
 - `design/gdd/combat.md` now says goblin health is 50; `git log` shows it changed after the registry entry was written
 - No other GDD states a goblin health value
 
-**Input:** `/consistency-check entity:goblin`
+**Input:** `$consistency-check entity:goblin`
 
 **Expected behavior:**
 1. Scope is limited to the `goblin` entity across all GDDs; the report shows `Scope: entity:goblin`
@@ -149,17 +151,17 @@ Fixture defaults.
 - `design/registry/entities.yaml` is the shipped stub with no entries
 - `design/gdd/` is empty
 
-**Input:** `/consistency-check`
+**Input:** `$consistency-check`
 
 **Expected behavior:**
 1. Skill reads the registry and finds no entries
-2. Skill outputs: "Entity registry is empty. Run `/design-system` to write GDDs — the registry is populated automatically after each GDD is completed. Nothing to check yet."
+2. Skill outputs: "Entity registry is empty. Run `$design-system` to write GDDs — the registry is populated automatically after each GDD is completed. Nothing to check yet."
 3. Verdict: **NOT ASSESSED — entity registry empty**; the skill stops without scanning
 4. No file is written — not the registry, not the reflexion log, not the session-state breadcrumb
 
 **Assertions:**
-- [ ] Skill outputs the empty-registry message naming `/design-system`
-- [ ] Verdict is NOT ASSESSED, naming the empty registry as the reason — never PASS, CONFLICTS FOUND, COMPLETE or BLOCKED, and never no verdict at all (`.claude/rules/skill-authoring.md` obligation 1)
+- [ ] Skill outputs the empty-registry message naming `$design-system`
+- [ ] Verdict is NOT ASSESSED, naming the empty registry as the reason — never PASS, CONFLICTS FOUND, COMPLETE or BLOCKED, and never no verdict at all (`.agents/rules/skill-authoring.md` obligation 1)
 - [ ] No file is written, including `production/session-state/active.md`
 - [ ] Skill does NOT crash or produce a partial report
 
@@ -172,7 +174,7 @@ Fixture defaults.
 - `design/registry/entities.yaml` has 3 entities, each with a `source:` GDD
 - `design/gdd/gdd-cross-review-[date].md` exists, and no system GDD has changed since it
 
-**Input:** `/consistency-check since-last-review`
+**Input:** `$consistency-check since-last-review`
 
 **Expected behavior:**
 1. Skill reads the registry and reports what it loaded
@@ -194,7 +196,7 @@ Fixture defaults.
 - `design/registry/entities.yaml` has entities `goblin` and `orc_warlord`
 - `design/gdd/` contains 3 system GDDs; one mentions a `goblin_shaman`
 
-**Input:** `/consistency-check entity:goblin_shaman`
+**Input:** `$consistency-check entity:goblin_shaman`
 
 **Expected behavior:**
 1. Skill reads the registry and reports what it loaded, `Scope: entity:goblin_shaman`
@@ -216,7 +218,7 @@ Fixture defaults.
 - `design/registry/entities.yaml` has entries
 - `design/gdd/` contains ≥2 GDDs
 
-**Input:** `/consistency-check`
+**Input:** `$consistency-check`
 
 **Expected behavior:**
 1. Skill loads the registry and runs the consistency scan
@@ -240,7 +242,7 @@ Fixture defaults.
 - `design/gdd/combat.md` `## Detailed Design` states `crit_multiplier = 1.5`
 - `design/gdd/loot.md` states `crit_multiplier = 2.0` only in its `## Tuning Knobs` section, which `standard` does not require; no required section of `loot.md` states a value for it
 
-**Input:** `/consistency-check`
+**Input:** `$consistency-check`
 
 **Expected behavior:**
 1. Only hits inside the sections `standard` requires are compared
@@ -264,7 +266,7 @@ Fixture defaults.
 - `design/gdd/combat.md` `## Detailed Design` states `crit_multiplier = 1.5`
 - `design/gdd/loot.md` states `crit_multiplier = 2.0` only in its `## Tuning Knobs` section
 
-**Input:** `/consistency-check`
+**Input:** `$consistency-check`
 
 **Expected behavior:**
 1. The config block lists `system_overrides: loot=full`, so `loot.md`'s effective tier is `full` and every one of its sections is compared; `combat.md` stays at `standard`
@@ -294,7 +296,7 @@ Fixture defaults.
   list on `goblin`
 - The user approves both asks: the stale-entry update and the new-entry add
 
-**Input:** `/consistency-check`
+**Input:** `$consistency-check`
 
 **Expected behavior:**
 1. The scan reports one ⚠️ STALE REGISTRY entry (`goblin`) and one unregistered
@@ -326,14 +328,14 @@ Fixture defaults.
 - [ ] No director gates — the review mode is not an input
 - [ ] Registry writes are gated by "May I update" / "May I add"; entries are never deleted (`status: deprecated` instead)
 - [ ] Every 🔴 CONFLICT is appended to `docs/consistency-failures.md` after a "May I append" ask that names it
-- [ ] Closes with `AskUserQuestion` in collaborative and guided modes; in autonomous mode prints findings and records via `log_decision`
+- [ ] Closes with `当前 Codex 可用的提问工具` in collaborative and guided modes; in autonomous mode prints findings and records via `log_decision`
 
 ---
 
 ## Coverage Notes
 
 - This skill checks registered facts across GDDs. Deep design theory analysis
-  (pillar drift, dominant strategies) is handled by `/review-all-gdds`.
+  (pillar drift, dominant strategies) is handled by `$review-all-gdds`.
 - Facts that are not in the registry are not compared; two GDDs that disagree on
   an unregistered value are not detected. Phase 6 offers to register names that
   appear in more than one GDD.

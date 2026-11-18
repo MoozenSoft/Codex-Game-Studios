@@ -1,0 +1,4 @@
+warning: in the working copy of '.gitattributes', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'studio-tests/results/codex-adaptation-status.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'studio-tests/results/runtime-evidence/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'studio-tests/runtime-matrix.json', LF will be replaced by CRLF the next time Git touches it

@@ -16,10 +16,10 @@ game actually uses is read from its `package.json`, never from a setting.
 ## Pinned versions
 
 Exact versions, each published at least two weeks before the pin date. The
-web template's `package.json` (`.claude/engines/web/scaffold/`) pins exactly
+web template's `package.json` (`.agents/engines/web/scaffold/`) pins exactly
 these, with its lockfile committed; when one changes here, it changes there.
 The template has no library, so it pins the first five; the starters
-(`.claude/engines/web/starters/`) pin their library from this table, each with
+(`.agents/engines/web/starters/`) pin their library from this table, each with
 its own lockfile.
 
 | Package | Pinned | Published | First release of this major | Node |
@@ -40,9 +40,9 @@ its own lockfile.
   the JavaScript compiler API that 7.0 does not ship (`breaking-changes.md`).
 - **three.js types:** `three` ships no type declarations; `@types/three` does,
   versioned to match the three.js release.
-- **The one-shot uses the same three.js.** `/prototype` without an engine
-  bundles three.js 0.186.1 into one plain script (`.claude/scripts/vendor-three.sh`,
-  `.claude/skills/prototype/references/one-shot-files.md`), so a one-shot that
+- **The one-shot uses the same three.js.** `$prototype` without an engine
+  bundles three.js 0.186.1 into one plain script (`.agents/scripts/vendor-three.sh`,
+  `.agents/skills/prototype/references/one-shot-files.md`), so a one-shot that
   grows into a web project keeps its three.js version. Change both together.
 
 Sources: the npm registry (`registry.npmjs.org/<package>`: `time`, `engines`,
@@ -67,7 +67,7 @@ calls.
 
 This file is the template's pin, not the project's. A project made from the
 template matches it until someone upgrades; an existing web project set up
-with `/setup-engine web` keeps its own versions, which can be older (Vite 5, Phaser 3, PixiJS 7) or
+with `$setup-engine web` keeps its own versions, which can be older (Vite 5, Phaser 3, PixiJS 7) or
 newer than these. **Before trusting a version-qualified claim here, read the
 version the project actually installs**: the package's entry in the lockfile,
 or `node_modules/<package>/package.json`. A Phaser 3 project needs Phaser 3

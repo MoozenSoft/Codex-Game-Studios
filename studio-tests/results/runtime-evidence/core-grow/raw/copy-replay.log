@@ -1,0 +1,4 @@
+run	copy	production/qa/evidence/grow-dusk-fish/copy.tsv	production/qa/evidence/grow-dusk-fish/copy.png	0
+errors	2
+match	no	error	0	Uncaught ReferenceError: ART is not defined
+was	scene	0	title

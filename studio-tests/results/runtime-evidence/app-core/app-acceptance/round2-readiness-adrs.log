@@ -1,0 +1,9 @@
+adrs	0	docs/architecture/adr-*.md
+template_sections	17	.agents/docs/templates/architecture-decision-record.md
+accepted	0
+proposed	0
+deprecated	0
+superseded	0
+unfilled	0
+other	0
+no_status	0

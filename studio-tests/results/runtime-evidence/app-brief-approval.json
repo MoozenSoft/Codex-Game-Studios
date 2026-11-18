@@ -1,0 +1,27 @@
+{
+  "window_id": 143067878,
+  "elements": [
+    {
+      "role": "Text",
+      "label": "brief 草稿｜app-dusk-fish｜未保存",
+      "element_token": "s000000b1:214"
+    },
+    {
+      "role": "Text",
+      "label": "是否批准下一回合保存这份 brief 并按上述计划导入？",
+      "element_token": "s000000b1:223"
+    },
+    {
+      "role": "Text",
+      "label": "是否批准下一回合保存 brief 并导入？草稿范围：将源 dusk-fish 的 31 个文件原样复制到当前项目 prototypes/app-dusk-fish/，逐文件校验 SHA-256；将复制来的旧 brief 保留为 brief.source.md，再保存本次 brief 到目标 brief.md 与 design/game-brief.md。固定需求为矢量钓鱼、方向键移动、Space 判定区收鱼、45 秒钓 3 条、Enter 开始/重试、P 暂停、config.js 集中参数及固定 seed 回放。源目录始终只读；构建、下载、提交、打 tag 均不包含在此次批准范围内。未回答不会执行。",
+      "element_token": "s000000b1:230"
+    },
+    {
+      "role": "Text",
+      "label": "批准保存并导入",
+      "element_token": "s000000b1:231"
+    }
+  ],
+  "snapshot_id": "s000000b1",
+  "source": "Codex App GUI 可访问树，当前验收会话，仅相关问题和回答"
+}

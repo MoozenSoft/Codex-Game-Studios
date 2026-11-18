@@ -1,0 +1,91 @@
+{
+  "description": "游戏工作室 Codex 生命周期与工具校验。需要客户端正常审阅和信任。",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "commandWindows": "$cgsGitRoot = Split-Path (Split-Path (Split-Path (git --exec-path))); & (Join-Path $cgsGitRoot \"bin/bash.exe\") \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "^(?:functions\\.)?(?:Bash|exec_command|apply_patch)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "commandWindows": "$cgsGitRoot = Split-Path (Split-Path (Split-Path (git --exec-path))); & (Join-Path $cgsGitRoot \"bin/bash.exe\") \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "^(?:functions\\.)?(?:Bash|exec_command|apply_patch)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "commandWindows": "$cgsGitRoot = Split-Path (Split-Path (Split-Path (git --exec-path))); & (Join-Path $cgsGitRoot \"bin/bash.exe\") \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "commandWindows": "$cgsGitRoot = Split-Path (Split-Path (Split-Path (git --exec-path))); & (Join-Path $cgsGitRoot \"bin/bash.exe\") \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "commandWindows": "$cgsGitRoot = Split-Path (Split-Path (Split-Path (git --exec-path))); & (Join-Path $cgsGitRoot \"bin/bash.exe\") \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "commandWindows": "$cgsGitRoot = Split-Path (Split-Path (Split-Path (git --exec-path))); & (Join-Path $cgsGitRoot \"bin/bash.exe\") \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "commandWindows": "$cgsGitRoot = Split-Path (Split-Path (Split-Path (git --exec-path))); & (Join-Path $cgsGitRoot \"bin/bash.exe\") \"$(git rev-parse --show-toplevel)/.codex/hooks/run.sh\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

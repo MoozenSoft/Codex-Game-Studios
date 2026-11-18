@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".scratch/cli-full-20261118/story.md",
+    "sha256": "a4838dd8480b24d0c678809a86ae42fef310217cc2c17fa4890c06160d993233"
+  },
+  {
+    "path": "production/epics/cli-full-acceptance/story-001.md",
+    "sha256": "c9e425db0e5ad2bb580a543453e87c4d4f700599c33de985559c68967706f2e9"
+  },
+  {
+    "path": "production/epics/cli-full-acceptance/EPIC.md",
+    "sha256": "d2910e4e5e0575d777aaef2f42e290f9258671e9ca691032490258a9c3595fbd"
+  },
+  {
+    "path": "production/qa/smoke-2099-12-31-cli-full-acceptance.md",
+    "sha256": "997b24452bf47037be925baba50b6874d48df054b4505060388ef121a48fe0ec"
+  }
+]

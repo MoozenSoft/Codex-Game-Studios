@@ -1,5 +1,7 @@
 # Agent Test Spec: economy-designer
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 - **Domain**: Resource economy design, loot table design, progression curves (XP, level, unlock), in-game market and shop design, economic balance analysis, sink and faucet mechanics, inflation/deflation risk assessment, entity registry values for items and currencies
 - **Does NOT own**: Live ops event scheduling and structure (live-ops-designer), core gameplay mechanics (game-designer), code implementation, analytics tracking design (analytics-engineer), narrative justification for economy systems (writer)
@@ -10,8 +12,8 @@
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references economy, loot tables, progression curves, balance)
-- [ ] `tools:` reads `Read, Glob, Grep, Write, Edit` and `disallowedTools:` names `Bash` — design documents only, no code or analytics tooling
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over live ops scheduling, code, or narrative
 
 ---
@@ -80,4 +82,4 @@
 - Case 3 (inflation risk) is an economic health test — missed inflation risks cause long-term economy damage in live games
 - Case 4 requires the agent to produce actual numbers, not curve shapes — verify math is present, not just a narrative
 - Case 5 is the most important context-awareness test; agent must use provided data, not placeholder values
-- No automated runner; review manually or via `/skill-test`
+- No automated runner; review manually or via `$skill-test`

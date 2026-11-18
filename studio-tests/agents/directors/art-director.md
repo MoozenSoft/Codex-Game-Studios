@@ -1,5 +1,7 @@
 # Agent Test Spec: art-director
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 **Domain owned:** Visual identity, art bible authorship and enforcement, asset quality standards, UI/UX visual design, visual phase gate, concept art evaluation.
 **Does NOT own:** UX interaction flows and information architecture (ux-designer's domain), audio direction (audio-director), code implementation.
@@ -9,11 +11,11 @@
 
 ## Static Assertions (Structural)
 
-Verified by reading the agent's `.claude/agents/art-director.md` frontmatter:
+Verified by reading the agent's `.codex/agents/art-director.toml` frontmatter:
 
 - [ ] `description:` field is present and domain-specific (references visual identity, art bible, asset standards — not generic)
-- [ ] `tools:` includes Read (which also opens images for visual review) and Write/Edit for the art bible it maintains, and no Bash — `disallowedTools:` blocks it
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over UX interaction flows or audio direction
 
 ---
@@ -65,7 +67,7 @@ Verified by reading the agent's `.claude/agents/art-director.md` frontmatter:
 - [ ] Verdict token is `AD-VISUAL: REJECT`, with rationale traceable to specific lines or rules in the provided context
 
 ### Case 6: Missing gate input — NOT ASSESSED
-**Scenario:** A complete, internally consistent art bible is submitted for sign-off with the pillars and the visual identity anchor, but no platform or performance constraints: the context gives none, `project.yaml` sets no `platform.*` or `performance.*` keys, and `.claude/docs/technical-preferences.md` still holds only unconfigured placeholders. Request is tagged AD-ART-BIBLE.
+**Scenario:** A complete, internally consistent art bible is submitted for sign-off with the pillars and the visual identity anchor, but no platform or performance constraints: the context gives none, `project.yaml` sets no `platform.*` or `performance.*` keys, and `.agents/docs/technical-preferences.md` still holds only unconfigured placeholders. Request is tagged AD-ART-BIBLE.
 **Expected:** Returns `AD-ART-BIBLE: NOT ASSESSED`, naming the platform and performance constraints as the input it could not read — without them, the gate's check that the asset standards are achievable on the platform cannot be made.
 **Assertions:**
 - [ ] Verdict token is `AD-ART-BIBLE: NOT ASSESSED` — not APPROVE, although every section it could check is sound
@@ -86,7 +88,7 @@ Verified by reading the agent's `.claude/agents/art-director.md` frontmatter:
 ---
 
 ## Coverage Notes
-- AD-PHASE-GATE (full visual phase advancement) is not covered — deferred to integration with /gate-check skill.
+- AD-PHASE-GATE (full visual phase advancement) is not covered — deferred to integration with $gate-check skill.
 - Asset pipeline standards (file format, resolution, naming conventions) compliance checks are not covered here.
 - Shader visual output review is not covered — that interaction with the engine specialist is deferred.
 - UI component visual review (as distinct from UX flow review) could benefit from additional cases.

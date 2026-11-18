@@ -1,0 +1,1 @@
+补测说明：上回合测试输入的production/agent-notes/qa-tester.md不是本项目合同路径，不能据此报告框架忽略规则有缺陷。真正约定是production/agent-memory/qa-tester.md。请在当前中文空格工作树根目录（明确git -C ..，当前cwd是src）原生执行git check-ignore -v -- project.local.yaml production/session-state/active.md production/agent-memory/qa-tester.md，报告3项实际匹配及退出码。不创建任何文件、不改信任、不调用其他Skill。这是纠正测试路径后的一次必要定向验证。

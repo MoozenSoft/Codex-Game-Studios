@@ -1,8 +1,10 @@
-# Skill Test Spec: /soak-test
+# Skill Test Spec: $soak-test
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/soak-test [duration] [focus]` generates an observation protocol for an
+`$soak-test [duration] [focus]` generates an observation protocol for an
 extended play session — the human plays, the skill writes the plan. Duration is
 `30m`, `1h`, `2h` or `4h` (default `1h`); focus is `memory`, `stability`,
 `balance` or `all` (default `all`). It reads `engine.name` and `performance.*`
@@ -18,26 +20,26 @@ The protocol document carries a Verdict section with PASS / PASS WITH CONCERNS /
 NOT ASSESSED / FAIL for the tester to fill in after the session; a short soak
 cannot return PASS. The skill asks "May I write this soak test protocol to
 `production/qa/soak-test-[date]-[duration].md`?" before writing, and never runs
-the soak itself. Its run steps end with `/bug-triage sprint`, or `/bug-triage full`
+the soak itself. Its run steps end with `$bug-triage sprint`, or `$bug-triage full`
 at `workflow: minimal`, which has no sprints. No director gates apply.
 
 ---
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keywords: PASS, PASS WITH CONCERNS, NOT ASSESSED, FAIL
 - [ ] Contains "May I write" collaborative protocol language before writing the protocol
-- [ ] Has a next-step handoff (`/bug-triage sprint` after the session, `/bug-triage full` at `workflow: minimal`; `/smoke-check` after fixing a FAIL)
+- [ ] Has a next-step handoff (`$bug-triage sprint` after the session, `$bug-triage full` at `workflow: minimal`; `$smoke-check` after fixing a FAIL)
 
 ---
 
 ## Director Gate Checks
 
-None. `/soak-test` is a QA planning utility. No director gates apply.
+None. `$soak-test` is a QA planning utility. No director gates apply.
 
 ---
 
@@ -45,7 +47,7 @@ None. `/soak-test` is a QA planning utility. No director gates apply.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -57,11 +59,11 @@ Fixture defaults.
 **Fixture:**
 - `project.yaml` has `engine.name: Godot`, `performance.target_framerate: 60` and
   `modes.workflow: standard` (pinned: unset resolves to minimal, which ends the run
-  steps with `/bug-triage full`, Case 6)
+  steps with `$bug-triage full`, Case 6)
 - `design/gdd/game-concept.md` states the intended session length
 - The user approves the write
 
-**Input:** `/soak-test 2h all`
+**Input:** `$soak-test 2h all`
 
 **Expected behavior:**
 1. Skill loads context: engine, performance budgets, concept, latest playtest and QA plan
@@ -76,7 +78,7 @@ Fixture defaults.
    checkpoint, Post-Session Analysis, and a Verdict section left for the tester
 6. Skill asks "May I write this soak test protocol to
    `production/qa/soak-test-[date]-2h.md`?"
-7. After writing, prints the run steps ending with `/bug-triage sprint`
+7. After writing, prints the run steps ending with `$bug-triage sprint`
 
 **Assertions:**
 - [ ] Checkpoints are exactly T+0, T+20, T+40, T+60, T+80, T+100, T+120
@@ -93,7 +95,7 @@ Fixture defaults.
 **Fixture:**
 - No arguments provided; engine configured
 
-**Input:** `/soak-test`
+**Input:** `$soak-test`
 
 **Expected behavior:**
 1. Duration defaults to `1h`, focus to `all` — no questions are needed to start
@@ -114,7 +116,7 @@ Fixture defaults.
 **Fixture:**
 - `project.yaml` has `engine.name: Unreal`
 
-**Input:** `/soak-test 4h memory`
+**Input:** `$soak-test 4h memory`
 
 **Expected behavior:**
 1. Checkpoints for `4h`: T+0, T+30, T+60, T+90, T+120, T+180, T+240
@@ -141,7 +143,7 @@ Fixture defaults.
 - `project.yaml` has `engine.name: Unity` and no `performance` block
 - `technical-preferences.md` Performance Budgets are `[TO BE CONFIGURED]`
 
-**Input:** `/soak-test 30m memory`
+**Input:** `$soak-test 30m memory`
 
 **Expected behavior:**
 1. Skill falls back from `project.yaml` to `technical-preferences.md` for budgets
@@ -167,7 +169,7 @@ Fixture defaults.
 **Fixture:**
 - Engine configured; valid duration and focus provided
 
-**Input:** `/soak-test 1h stability`
+**Input:** `$soak-test 1h stability`
 
 **Expected behavior:**
 1. Skill generates and writes the soak test protocol
@@ -181,24 +183,24 @@ Fixture defaults.
 
 ---
 
-### Case 6: Minimal workflow — the run steps end with `/bug-triage full`
+### Case 6: Minimal workflow — the run steps end with `$bug-triage full`
 
 **Fixture:**
 - `project.yaml`: `engine.name: Godot`, `modes.workflow: minimal` (pinned: Case 1 pins
   `standard`; this case tests the opposite)
 - No `production/sprints/` directory; the user approves the write
 
-**Input:** `/soak-test 1h all`
+**Input:** `$soak-test 1h all`
 
 **Expected behavior:**
 1. The protocol is built and written as in Case 2
 2. After writing, "Protocol written." lists the run steps; step 5 reads
-   `/bug-triage full`, since `workflow: minimal` has no sprints
-3. The closing line still says to run `/smoke-check` again after fixing a FAIL
+   `$bug-triage full`, since `workflow: minimal` has no sprints
+3. The closing line still says to run `$smoke-check` again after fixing a FAIL
 
 **Assertions:**
-- [ ] The post-session step is `/bug-triage full`, not `/bug-triage sprint`
-- [ ] Steps 1–4 and the `/smoke-check` line are unchanged from the `standard` run
+- [ ] The post-session step is `$bug-triage full`, not `$bug-triage sprint`
+- [ ] Steps 1–4 and the `$smoke-check` line are unchanged from the `standard` run
 - [ ] The workflow is resolved from `project.yaml` and changes only that step
 
 ---

@@ -1,0 +1,2 @@
+start	Enter
+play	ArrowRight:0.5 ArrowLeft:0.5 Space wait:0.65 Space wait:0.65 Space wait:0.65

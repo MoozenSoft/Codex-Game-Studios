@@ -1,5 +1,7 @@
 # Agent Test Spec: ue-replication-specialist
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 - **Domain**: Property replication (UPROPERTY Replicated/ReplicatedUsing), RPCs (Server/Client/NetMulticast), client prediction and reconciliation, net relevancy and always-relevant settings, net serialization (FArchive/NetSerialize), bandwidth optimization and replication frequency tuning
 - **Does NOT own**: Gameplay logic being replicated (gameplay-programmer), transport-layer networking and matchmaking (network-programmer, who coordinates server hosting with devops-engineer), GAS-specific prediction (ue-gas-specialist handles GAS net prediction)
@@ -10,8 +12,8 @@
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references replication, RPCs, client prediction, bandwidth)
-- [ ] `tools:` reads Read, Glob, Grep, Write, Edit, Bash — no `Agent` tool
-- [ ] Model tier is `sonnet` — frontmatter `model:` reads exactly `sonnet` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over server infrastructure, game server architecture, or gameplay logic correctness
 
 ---
@@ -80,4 +82,4 @@
 - Case 3 (RPC security) is a shipping-critical test — unvalidated RPCs are a top-ten multiplayer exploit vector
 - Case 5 is the most important context-awareness test; agent must use actual budget numbers, not generic advice
 - Case 1 GAS branch: if GAS is configured, agent should detect it and defer to ue-gas-specialist for GAS-managed attributes
-- No automated runner; review manually or via `/skill-test`
+- No automated runner; review manually or via `$skill-test`

@@ -1,0 +1,7 @@
+test_import_with_existing_manual_hook_still_draws (test_import_runner.ImportRunnerBrowserTests.test_import_with_existing_manual_hook_still_draws) ... ok
+test_import_without_hook_still_draws (test_import_runner.ImportRunnerBrowserTests.test_import_without_hook_still_draws) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 13.297s
+
+OK

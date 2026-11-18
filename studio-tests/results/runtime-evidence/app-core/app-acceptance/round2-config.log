@@ -1,0 +1,6 @@
+=== CCGS Config (resolved: local->yaml->legacy->default; use as-is) ===
+review_mode: solo (rigor:minimal)
+automation: collaborative (default)
+workflow: minimal (rigor:minimal)
+automation_always_ask: scope_changes, file_deletions, schema_changes (default)
+=== end ===

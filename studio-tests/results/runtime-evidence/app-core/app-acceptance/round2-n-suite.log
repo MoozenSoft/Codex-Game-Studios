@@ -1,0 +1,26 @@
+engine	Web
+exe	npm	path
+command	default	npm test 2>&1
+timeout	900	timeout
+half	unit	npm run test:unit
+half	e2e	npm run test:e2e
+browser	C:\Program Files\Google\Chrome\Application\chrome.exe	page-shot.sh --which
+ran	yes	-
+unit_exit	0
+unit_timed_out	no
+unit_zero_tests	no	-
+unit_tests	total=3 passed=3 failed=0
+unit_log	production/qa/evidence/app-acceptance/n-suite.log.unit
+e2e_exit	0
+e2e_timed_out	no
+e2e_browser	started	-
+e2e_build	ok
+e2e_zero_tests	no	-
+e2e_tests	total=14 passed=14 failed=0
+e2e_log	production/qa/evidence/app-acceptance/n-suite.log.e2e
+exit	0
+timed_out	no
+zero_tests	no	-
+tests	total=17 passed=17 failed=0
+rule	web:pass	exit 0 in each half that ran; tests passed: 17
+log	production/qa/evidence/app-acceptance/n-suite.log

@@ -1,0 +1,5 @@
+
+> app-dusk-fish@0.0.0 build:single
+> tsc --noEmit && vite build --mode single
+
+src/screen.ts(47,56): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.

@@ -1,0 +1,8 @@
+one_shot	prototypes/app-dusk-fish
+guard	node	pass	v24.14.0	ok	^22.12 || ^24 || >=26
+guard	engine	pass	unset
+guard	root	pass	not grown
+guard	git	pass
+guard	clean	pass	0	-
+commit	83646f5
+tag	one-shot/app-dusk-fish	83646f5

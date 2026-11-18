@@ -1,0 +1,614 @@
+{
+  "cli_version": "0.169.0",
+  "surface": "installed Codex CLI app-server",
+  "source_commit": "458b4a0 plus current dispatcher patch",
+  "registration": [
+    {
+      "eventName": "preToolUse",
+      "enabled": true,
+      "trustStatus": "trusted"
+    },
+    {
+      "eventName": "postToolUse",
+      "enabled": true,
+      "trustStatus": "trusted"
+    },
+    {
+      "eventName": "preCompact",
+      "enabled": true,
+      "trustStatus": "trusted"
+    },
+    {
+      "eventName": "sessionStart",
+      "enabled": true,
+      "trustStatus": "trusted"
+    },
+    {
+      "eventName": "subagentStart",
+      "enabled": true,
+      "trustStatus": "trusted"
+    },
+    {
+      "eventName": "subagentStop",
+      "enabled": true,
+      "trustStatus": "trusted"
+    },
+    {
+      "eventName": "stop",
+      "enabled": true,
+      "trustStatus": "trusted"
+    }
+  ],
+  "manual_compaction": {
+    "thread": "01a1ec7e-dd87-70e2-871b-4e752602231d",
+    "marker": "CGS_HOOK_RECOVERY_25eaa9ee2c",
+    "answer": [
+      "CGS_HOOK_RECOVERY_25eaa9ee2c"
+    ],
+    "events": [
+      {
+        "threadId": "01a1ec7e-dd87-70e2-871b-4e752602231d",
+        "turnId": "01a1ec7e-f1b1-7b80-a8c7-42f9f4c0e243",
+        "method": "hook/started",
+        "run": {
+          "eventName": "sessionStart",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-70e2-871b-4e752602231d",
+        "turnId": "01a1ec7e-f1b1-7b80-a8c7-42f9f4c0e243",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "sessionStart",
+          "status": "completed",
+          "entries": [
+            {
+              "kind": "context",
+              "text": "[隔离探针启动检查点已注入]"
+            }
+          ],
+          "source": "project",
+          "durationMs": 887
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-70e2-871b-4e752602231d",
+        "turnId": "01a1ec7e-f1b1-7b80-a8c7-42f9f4c0e243",
+        "method": "hook/started",
+        "run": {
+          "eventName": "stop",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-70e2-871b-4e752602231d",
+        "turnId": "01a1ec7e-f1b1-7b80-a8c7-42f9f4c0e243",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "stop",
+          "status": "completed",
+          "entries": [],
+          "source": "project",
+          "durationMs": 785
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-70e2-871b-4e752602231d",
+        "turnId": "01a1ec7f-1af6-75e3-af17-42ce1181ae7b",
+        "method": "hook/started",
+        "run": {
+          "eventName": "preCompact",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-70e2-871b-4e752602231d",
+        "turnId": "01a1ec7f-1af6-75e3-af17-42ce1181ae7b",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "preCompact",
+          "status": "completed",
+          "entries": [
+            {
+              "kind": "warning",
+              "text": "压缩前保留已授权任务的检查点；production/session-state/active.md 是恢复依据，事件日志不替代任务内容。"
+            }
+          ],
+          "source": "project",
+          "durationMs": 610
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-70e2-871b-4e752602231d",
+        "turnId": "01a1ec7f-1af6-75e3-af17-42ce1181ae7b",
+        "method": "item/completed",
+        "item": {
+          "type": "contextCompaction",
+          "id": "01a1ec7f-1dc7-7811-b835-8da057ac99e1",
+          "status": null,
+          "kind": null,
+          "agentThreadId": null,
+          "completedAtMs": 1794969130601
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-70e2-871b-4e752602231d",
+        "turnId": "01a1ec7f-567a-7232-a3f7-d81b3a2ccd79",
+        "method": "hook/started",
+        "run": {
+          "eventName": "sessionStart",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-70e2-871b-4e752602231d",
+        "turnId": "01a1ec7f-567a-7232-a3f7-d81b3a2ccd79",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "sessionStart",
+          "status": "completed",
+          "entries": [
+            {
+              "kind": "context",
+              "text": "[隔离探针启动检查点已注入]"
+            }
+          ],
+          "source": "project",
+          "durationMs": 607
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-70e2-871b-4e752602231d",
+        "turnId": "01a1ec7f-567a-7232-a3f7-d81b3a2ccd79",
+        "method": "hook/started",
+        "run": {
+          "eventName": "stop",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-70e2-871b-4e752602231d",
+        "turnId": "01a1ec7f-567a-7232-a3f7-d81b3a2ccd79",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "stop",
+          "status": "completed",
+          "entries": [],
+          "source": "project",
+          "durationMs": 525
+        }
+      }
+    ]
+  },
+  "tui_manual_compaction": {
+    "command": "/compact",
+    "surface": "Codex CLI in VS Code integrated terminal",
+    "visible_reminder": "压缩前保留已授权任务的检查点；production/session-state/active.md 是恢复依据，事件日志不替代任务内容。",
+    "visible_completion": "Context compacted · 19s",
+    "hook_log": [
+      {
+        "time": "2026-11-18T02:35:08.190703+00:00",
+        "event": "PreCompact",
+        "tool": null,
+        "tool_use_id": null
+      }
+    ]
+  },
+  "automatic_compaction": {
+    "threshold_tokens": 6500,
+    "scope": "total",
+    "thread": "01a1ec7c-f7b6-7530-b3c8-a48d1f9c7b90",
+    "marker": "CGS_HOOK_RECOVERY_5065c52d72",
+    "answer": [
+      "CGS_HOOK_RECOVERY_5065c52d72"
+    ],
+    "events": [
+      {
+        "threadId": "01a1ec7c-f7b6-7530-b3c8-a48d1f9c7b90",
+        "turnId": "01a1ec7d-0c74-7590-a620-cbb7c1114625",
+        "method": "hook/started",
+        "run": {
+          "eventName": "sessionStart",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7c-f7b6-7530-b3c8-a48d1f9c7b90",
+        "turnId": "01a1ec7d-0c74-7590-a620-cbb7c1114625",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "sessionStart",
+          "status": "completed",
+          "entries": [
+            {
+              "kind": "context",
+              "text": "工作室检查点：\n<!-- STATUS -->\n受控 Story 验收：结果画面按 N 重试；详见 CHECKPOINT 与 core-story-result.md。\n<!-- /STATUS -->\n<!-- CHECKPOINT -->\n**Updated:** 2026-11-17\n**Branch:** `probe`\n**Current task:** $story-done — production/epics/EPIC-ACCEPTANCE/story-001-n-retry.md: COMPLETE WITH NOTES, closed\n**Next step:** 人工试玩 build；不作 PROCEED 判断，不继续扩大本 Story\n**Blocked on:** none（必要自动化和视觉检查已通过）；完整人工 smoke 尚未评估\n**Files in progress:** none\n**Open questions:** 人工试玩、手感、性能和乐趣难度未评估；未提交\n**Run result:** OBSERVED — 胜败 N 重试前后图已查看；production/qa/evidence/story-001-n-retry/n-results-after.png\n**Same-seed run:** CHANGED, accepted — 仅结果提示 N 变化，玩法轨迹相同，0 errors\n**Evidence:** production/qa/evidence/core-story-result.md；原型 31/31 SHA256 不变\n<!-- /CHECKPOINT -->\n"
+            }
+          ],
+          "source": "project",
+          "durationMs": 652
+        }
+      },
+      {
+        "threadId": "01a1ec7c-f7b6-7530-b3c8-a48d1f9c7b90",
+        "turnId": "01a1ec7d-0c74-7590-a620-cbb7c1114625",
+        "method": "hook/started",
+        "run": {
+          "eventName": "stop",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7c-f7b6-7530-b3c8-a48d1f9c7b90",
+        "turnId": "01a1ec7d-0c74-7590-a620-cbb7c1114625",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "stop",
+          "status": "completed",
+          "entries": [],
+          "source": "project",
+          "durationMs": 919
+        }
+      },
+      {
+        "threadId": "01a1ec7c-f7b6-7530-b3c8-a48d1f9c7b90",
+        "turnId": "01a1ec7d-6066-7b81-bffc-77065bd8f44d",
+        "method": "hook/started",
+        "run": {
+          "eventName": "preCompact",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7c-f7b6-7530-b3c8-a48d1f9c7b90",
+        "turnId": "01a1ec7d-6066-7b81-bffc-77065bd8f44d",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "preCompact",
+          "status": "completed",
+          "entries": [
+            {
+              "kind": "warning",
+              "text": "压缩前保留已授权任务的检查点；production/session-state/active.md 是恢复依据，事件日志不替代任务内容。"
+            }
+          ],
+          "source": "project",
+          "durationMs": 608
+        }
+      },
+      {
+        "threadId": "01a1ec7c-f7b6-7530-b3c8-a48d1f9c7b90",
+        "turnId": "01a1ec7d-6066-7b81-bffc-77065bd8f44d",
+        "method": "item/completed",
+        "item": {
+          "type": "contextCompaction",
+          "id": "01a1ec7d-62f2-7333-8975-87c33d317c48",
+          "status": null,
+          "kind": null,
+          "agentThreadId": null,
+          "completedAtMs": 1794969020523
+        }
+      },
+      {
+        "threadId": "01a1ec7c-f7b6-7530-b3c8-a48d1f9c7b90",
+        "turnId": "01a1ec7d-6066-7b81-bffc-77065bd8f44d",
+        "method": "hook/started",
+        "run": {
+          "eventName": "sessionStart",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7c-f7b6-7530-b3c8-a48d1f9c7b90",
+        "turnId": "01a1ec7d-6066-7b81-bffc-77065bd8f44d",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "sessionStart",
+          "status": "completed",
+          "entries": [
+            {
+              "kind": "context",
+              "text": "工作室检查点：\n<!-- STATUS -->\n受控 Story 验收：结果画面按 N 重试；详见 CHECKPOINT 与 core-story-result.md。\n<!-- /STATUS -->\n<!-- CHECKPOINT -->\n**Updated:** 2026-11-17\n**Branch:** `probe`\n**Current task:** $story-done — production/epics/EPIC-ACCEPTANCE/story-001-n-retry.md: COMPLETE WITH NOTES, closed\n**Next step:** 人工试玩 build；不作 PROCEED 判断，不继续扩大本 Story\n**Blocked on:** none（必要自动化和视觉检查已通过）；完整人工 smoke 尚未评估\n**Files in progress:** none\n**Open questions:** 人工试玩、手感、性能和乐趣难度未评估；未提交\n**Run result:** OBSERVED — 胜败 N 重试前后图已查看；production/qa/evidence/story-001-n-retry/n-results-after.png\n**Same-seed run:** CHANGED, accepted — 仅结果提示 N 变化，玩法轨迹相同，0 errors\n**Evidence:** production/qa/evidence/core-story-result.md；原型 31/31 SHA256 不变\n<!-- /CHECKPOINT -->\n"
+            }
+          ],
+          "source": "project",
+          "durationMs": 883
+        }
+      },
+      {
+        "threadId": "01a1ec7c-f7b6-7530-b3c8-a48d1f9c7b90",
+        "turnId": "01a1ec7d-6066-7b81-bffc-77065bd8f44d",
+        "method": "hook/started",
+        "run": {
+          "eventName": "stop",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7c-f7b6-7530-b3c8-a48d1f9c7b90",
+        "turnId": "01a1ec7d-6066-7b81-bffc-77065bd8f44d",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "stop",
+          "status": "completed",
+          "entries": [],
+          "source": "project",
+          "durationMs": 536
+        }
+      }
+    ]
+  },
+  "native_delegation": {
+    "thread": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+    "child": "01a1ec7f-3716-7eb3-8a89-d2c0ee269fe6",
+    "child_meta": {
+      "subscription_error": "{\"code\": -32600, \"message\": \"no rollout found for thread id 01a1ec7f-3716-7eb3-8a89-d2c0ee269fe6\"}",
+      "parentThreadId": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+      "status": {
+        "type": "idle"
+      },
+      "source": {
+        "subAgent": {
+          "thread_spawn": {
+            "parent_thread_id": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+            "depth": 1,
+            "agent_path": "/root/hook_qa_lead",
+            "agent_nickname": "Arendt",
+            "agent_role": "qa-lead"
+          }
+        }
+      },
+      "agentRole": "qa-lead"
+    },
+    "answer": [
+      "本次使用 $team-qa 的 Phase 2 委派进行只读 smoke test：仅启动一名 qa-lead，不启动 qa-tester。先执行标记命令，再等待子代理返回；不读写文件。",
+      "Shell 返回：`CGS_HOOK_TOOL_OK`\nqa-lead 子代理实际返回：`CGS_HOOK_CHILD_OK`"
+    ],
+    "events": [
+      {
+        "threadId": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+        "turnId": "01a1ec7e-f1cb-73d2-8c7d-601aa44a1a0f",
+        "method": "hook/started",
+        "run": {
+          "eventName": "sessionStart",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+        "turnId": "01a1ec7e-f1cb-73d2-8c7d-601aa44a1a0f",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "sessionStart",
+          "status": "completed",
+          "entries": [
+            {
+              "kind": "context",
+              "text": "[隔离探针启动检查点已注入]"
+            }
+          ],
+          "source": "project",
+          "durationMs": 1054
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+        "turnId": "01a1ec7e-f1cb-73d2-8c7d-601aa44a1a0f",
+        "method": "hook/started",
+        "run": {
+          "eventName": "preToolUse",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+        "turnId": "01a1ec7e-f1cb-73d2-8c7d-601aa44a1a0f",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "preToolUse",
+          "status": "completed",
+          "entries": [],
+          "source": "project",
+          "durationMs": 637
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+        "turnId": "01a1ec7e-f1cb-73d2-8c7d-601aa44a1a0f",
+        "method": "hook/started",
+        "run": {
+          "eventName": "postToolUse",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+        "turnId": "01a1ec7e-f1cb-73d2-8c7d-601aa44a1a0f",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "postToolUse",
+          "status": "completed",
+          "entries": [],
+          "source": "project",
+          "durationMs": 591
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+        "turnId": "01a1ec7e-f1cb-73d2-8c7d-601aa44a1a0f",
+        "method": "item/completed",
+        "item": {
+          "type": "subAgentActivity",
+          "id": "call_77a821c0ab6244259ff78edd80f0cc14",
+          "status": null,
+          "kind": "started",
+          "agentThreadId": "01a1ec7f-3716-7eb3-8a89-d2c0ee269fe6",
+          "completedAtMs": 1794969127659
+        }
+      },
+      {
+        "threadId": "01a1ec7f-3716-7eb3-8a89-d2c0ee269fe6",
+        "turnId": "01a1ec7f-4aeb-7e32-95d2-90778762cb33",
+        "method": "hook/started",
+        "run": {
+          "eventName": "subagentStart",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7f-3716-7eb3-8a89-d2c0ee269fe6",
+        "turnId": "01a1ec7f-4aeb-7e32-95d2-90778762cb33",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "subagentStart",
+          "status": "completed",
+          "entries": [],
+          "source": "project",
+          "durationMs": 545
+        }
+      },
+      {
+        "threadId": "01a1ec7f-3716-7eb3-8a89-d2c0ee269fe6",
+        "turnId": "01a1ec7f-4aeb-7e32-95d2-90778762cb33",
+        "method": "hook/started",
+        "run": {
+          "eventName": "subagentStop",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7f-3716-7eb3-8a89-d2c0ee269fe6",
+        "turnId": "01a1ec7f-4aeb-7e32-95d2-90778762cb33",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "subagentStop",
+          "status": "completed",
+          "entries": [
+            {
+              "kind": "warning",
+              "text": "核对该子代理简报中约定的产物路径和证据；仅有完成事件不代表产物验收通过。"
+            }
+          ],
+          "source": "project",
+          "durationMs": 506
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+        "turnId": "01a1ec7e-f1cb-73d2-8c7d-601aa44a1a0f",
+        "method": "item/completed",
+        "item": {
+          "type": "subAgentActivity",
+          "id": "subagent-completed-01a1ec7f-4aeb-7e32-95d2-90778762cb33",
+          "status": null,
+          "kind": "completed",
+          "agentThreadId": "01a1ec7f-3716-7eb3-8a89-d2c0ee269fe6",
+          "completedAtMs": 1794969138951
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+        "turnId": "01a1ec7e-f1cb-73d2-8c7d-601aa44a1a0f",
+        "method": "item/completed",
+        "item": {
+          "type": "collabAgentToolCall",
+          "id": "call_151ead79086c4f8d89b0314faa5b2e21",
+          "status": "completed",
+          "kind": null,
+          "agentThreadId": null,
+          "completedAtMs": 1794969138959
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+        "turnId": "01a1ec7e-f1cb-73d2-8c7d-601aa44a1a0f",
+        "method": "hook/started",
+        "run": {
+          "eventName": "stop",
+          "status": "running",
+          "entries": [],
+          "source": "project",
+          "durationMs": null
+        }
+      },
+      {
+        "threadId": "01a1ec7e-dd87-7423-88b7-c0e5a92c7fc0",
+        "turnId": "01a1ec7e-f1cb-73d2-8c7d-601aa44a1a0f",
+        "method": "hook/completed",
+        "run": {
+          "eventName": "stop",
+          "status": "completed",
+          "entries": [],
+          "source": "project",
+          "durationMs": 602
+        }
+      }
+    ]
+  },
+  "completed_event_types": [
+    "postToolUse",
+    "preCompact",
+    "preToolUse",
+    "sessionStart",
+    "stop",
+    "subagentStart",
+    "subagentStop"
+  ],
+  "integrity": {
+    "source_dispatcher": "43bcac503119d1d797e05a84832440c361982e1b55aa521f80943de64583a900",
+    "probe_dispatcher_restored": true,
+    "checkpoint_unchanged": true,
+    "index_unchanged": true
+  },
+  "framework_tests": {
+    "ran": 106,
+    "failed": 0,
+    "skipped": 0
+  }
+}

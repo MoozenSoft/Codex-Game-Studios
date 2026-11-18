@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-18",
+  "source_commit": "458b4a0",
+  "surface": "Codex App",
+  "backend_version": "0.169.0-alpha.11.1",
+  "originator": "Codex Desktop",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "native_ui_compaction": true,
+  "real_precompact_event": true,
+  "checkpoint_preserved": true,
+  "session_start_context_observed_on_following_restore_request": true,
+  "explicit_file_recovery_verified": true,
+  "native_role": "qa-tester",
+  "full_role_instructions_at_startup": true,
+  "child_model": "gpt-6.1-sol",
+  "child_reasoning_effort": "high",
+  "model_and_effort_overrides_omitted": true,
+  "same_agent_followup_passed": true,
+  "seven_event_kinds_observed": {
+    "PreCompact": 1,
+    "SessionStart": 2,
+    "PreToolUse": 16,
+    "PostToolUse": 16,
+    "Stop": 3,
+    "SubagentStart": 1,
+    "SubagentStop": 2
+  },
+  "original_index_restored": true,
+  "shared_suite_rerun": false,
+  "not_assessed": [
+    "CLI PreCompact",
+    "automatic compaction paths",
+    "all 49 role workflows",
+    "native engine/editor runs",
+    "full game playtest",
+    "remote CI"
+  ],
+  "limits": [
+    "Only App manual compaction and one read-only qa-tester probe were added.",
+    "SessionStart was observed on this following restore request; no guarantee is inferred for every compaction.",
+    "The numerical answer is a model continuation fixture, not an executed game test.",
+    "Delegation message bodies are not exported; role calls retain only task/type/target and override fields."
+  ],
+  "protected_original_files_restored": true,
+  "verification": {
+    "shared_codex_contracts": {
+      "tests": 8,
+      "status": "passed"
+    },
+    "migration_inventory": {
+      "tests": 8,
+      "status": "passed"
+    },
+    "complete_exit_code": 0,
+    "full_suite_repeated": false
+  }
+}

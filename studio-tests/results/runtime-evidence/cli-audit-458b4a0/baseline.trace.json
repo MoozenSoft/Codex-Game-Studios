@@ -1,0 +1,88 @@
+[
+  {
+    "type": "thread.started",
+    "thread_id": "01a1e9a7-9c89-7f82-ae2f-577e89cda9e7"
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_3",
+      "type": "agent_message",
+      "text": "我会仅执行指定的只读验收命令，记录真实项目根和配置 helper 输出；不读取 session-state 或 hook 文件。\n"
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_4",
+      "type": "command_execution",
+      "command": "\"%LOCALAPPDATA%\\\\Microsoft\\\\WindowsApps\\\\Microsoft.PowerShell_8wekyb3d8bbwe\\\\pwsh.exe\" -Command 'git rev-parse --show-toplevel'",
+      "status": "completed",
+      "exit_code": 0
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_5",
+      "type": "command_execution",
+      "command": "\"%LOCALAPPDATA%\\\\Microsoft\\\\WindowsApps\\\\Microsoft.PowerShell_8wekyb3d8bbwe\\\\pwsh.exe\" -Command \"& 'D:/Program Files/Git/bin/bash.exe' '<probe>\\\\.agents\\\\scripts\\\\yaml-helper.sh' resolve_config --root '<probe>\\\\.scratch\\\\cli-audit-458b4a0\\\\config-case' --keys engine,engine_values,engine_row\"",
+      "status": "failed",
+      "exit_code": 1
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_6",
+      "type": "agent_message",
+      "text": "已取得真实项目根。Git Bash 在沙箱内启动时遇到访问拒绝（0xC0000022）；我将通过当前自动审批机制重试同一条只读 helper 命令。\n"
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_7",
+      "type": "command_execution",
+      "command": "\"%LOCALAPPDATA%\\\\Microsoft\\\\WindowsApps\\\\Microsoft.PowerShell_8wekyb3d8bbwe\\\\pwsh.exe\" -Command \"& 'D:/Program Files/Git/bin/bash.exe' '<probe>\\\\.agents\\\\scripts\\\\yaml-helper.sh' resolve_config --root '<probe>\\\\.scratch\\\\cli-audit-458b4a0\\\\config-case' --keys engine,engine_values,engine_row\"",
+      "status": "completed",
+      "exit_code": 0
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_8",
+      "type": "agent_message",
+      "text": "重试启动成功，但输出中的 `workflow[--root]` 表明 helper 将 `--root` 当成了工作流参数，尚未验证指定临时项目。我会把 `--root` 调整到子命令前，重新执行指定查询。\n"
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_9",
+      "type": "command_execution",
+      "command": "\"%LOCALAPPDATA%\\\\Microsoft\\\\WindowsApps\\\\Microsoft.PowerShell_8wekyb3d8bbwe\\\\pwsh.exe\" -Command \"& 'D:/Program Files/Git/bin/bash.exe' '<probe>\\\\.agents\\\\scripts\\\\yaml-helper.sh' --root '<probe>\\\\.scratch\\\\cli-audit-458b4a0\\\\config-case' resolve_config --keys engine,engine_values,engine_row\"",
+      "status": "completed",
+      "exit_code": 0
+    }
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_10",
+      "type": "agent_message",
+      "text": "验收标记：`CLI_AUDIT_458B4A0_RECOVERY_9f24`\n\n- 真实项目根：`<probe>`\n- 指定临时项目 helper 查询成功，退出码 `0`。\n- 共享引擎：`Web`，来源 `project.yaml`；版本、语言均为 `unset`。\n- `engine_row`：`engine=Web`，`code_root=src`，`test_root=tests`。\n- 出现本地引擎忽略说明：`engine.name` 不允许本地覆盖，已忽略。\n\nGit Bash 首次沙箱启动失败，经正常自动审批重试成功。未修改文件、全局配置或信任设置；本次工具执行不构成两项待审 hook 已触发的证据。"
+    }
+  },
+  {
+    "type": "turn.completed",
+    "usage": {
+      "input_tokens": 134913,
+      "cached_input_tokens": 100608,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1004,
+      "reasoning_output_tokens": 157
+    }
+  }
+]

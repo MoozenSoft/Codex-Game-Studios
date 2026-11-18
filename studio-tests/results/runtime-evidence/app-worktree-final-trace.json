@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "thread": {
+    "id": "01a1e7d5-5b28-7e52-ba2d-d28599c13b25",
+    "status": {
+      "type": "notLoaded"
+    }
+  },
+  "page": {
+    "order": "newest_first",
+    "limit": 1,
+    "hasMore": true,
+    "nextCursor": "{\"requestedThreadId\":\"01a1e7d5-5b28-7e52-ba2d-d28599c13b25\",\"rolloutOrdinal\":168,\"includeAnchor\":false,\"scope\":{\"kind\":\"turns\"}}"
+  },
+  "turns": [
+    {
+      "id": "01a1e7e3-9277-7761-b5af-00636b353c1d",
+      "status": "completed",
+      "error": null,
+      "items": [
+        {
+          "type": "agentMessage",
+          "id": "msg_03398bd92a397b48016afbe0c6328087d09a799ee929ce92f3",
+          "text": "已补齐正常入口对照：从新工作树 `src` 调用其自身 `../.agents/scripts/yaml-helper.sh`，不加 `--root`，实际返回 **`guided (project.local.yaml)`，退出码 0**。\n\n原 checkout 外部脚本的真实输出完整保留，已修正归因，`post_report_verification` 已完成。\n\n仅更新 [Markdown 报告](D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/production/qa/evidence/app-worktree-result.md) 与 [JSON 报告](D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/production/qa/evidence/app-worktree-result.json)。未重复其它验收，未新增文件、修改框架或配置，未提交。",
+          "phase": "final_answer"
+        }
+      ],
+      "truncated": true
+    }
+  ],
+  "truncated": true
+}

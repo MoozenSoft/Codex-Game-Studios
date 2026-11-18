@@ -1,19 +1,21 @@
 # Agent Test Spec: level-designer
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 **Domain owned:** Level layouts, encounter design (per-encounter difficulty), pacing charts, environmental storytelling, secret and optional content placement, flow analysis.
 **Does NOT own:** Game-wide systems (game-designer / systems-designer), story decisions (narrative-director — coordinates with), visual art style (art-director), level implementation in the engine and enemy AI code (programmers), game-wide difficulty parameters.
-**Gate IDs handled:** None. Design-review verdicts come from the `/design-review` skill, which spawns level-designer as a specialist that returns findings.
+**Gate IDs handled:** None. Design-review verdicts come from the `$design-review` skill, which spawns level-designer as a specialist that returns findings.
 
 ---
 
 ## Static Assertions (Structural)
 
-Verified by reading the agent's `.claude/agents/level-designer.md` frontmatter:
+Verified by reading the agent's `.codex/agents/level-designer.toml` frontmatter:
 
 - [ ] `description:` field is present and domain-specific (references level layout, encounter design, pacing, environmental storytelling — not generic)
-- [ ] `tools:` reads Read, Glob, Grep, Write, Edit and `disallowedTools:` lists Bash
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over narrative dialogue, AI behavior code, or visual art style
 
 ---
@@ -39,8 +41,8 @@ Verified by reading the agent's `.claude/agents/level-designer.md` frontmatter:
 - [ ] Specifies the desired patrol in level design terms (e.g., route through named chokepoints and sight lines, pressure zones, spawn timing) for the programmer to implement
 
 ### Case 3: Review findings — specific, verdict left to the review skill
-**Scenario:** `/design-review` in full mode spawns level-designer as the adversarial specialist for the level document of "The Ancient Forge." The spawn prompt reads: "Your job is NOT to validate this design — your job is to find problems. Be specific and critical." Section 3 of the level introduces a dramatically harder elite enemy with new attack patterns, with no earlier moment that introduces it, no environmental readability cues (no visible cover or safe zones), and no checkpoint nearby.
-**Expected:** Returns specific findings locating the problem in section 3: the difficulty spike, the missing readability cues, and the missing checkpoint, each with a concrete spatial fix offered as an option. It returns findings, not a verdict — `/design-review` issues the verdict.
+**Scenario:** `$design-review` in full mode spawns level-designer as the adversarial specialist for the level document of "The Ancient Forge." The spawn prompt reads: "Your job is NOT to validate this design — your job is to find problems. Be specific and critical." Section 3 of the level introduces a dramatically harder elite enemy with new attack patterns, with no earlier moment that introduces it, no environmental readability cues (no visible cover or safe zones), and no checkpoint nearby.
+**Expected:** Returns specific findings locating the problem in section 3: the difficulty spike, the missing readability cues, and the missing checkpoint, each with a concrete spatial fix offered as an option. It returns findings, not a verdict — `$design-review` issues the verdict.
 **Assertions:**
 - [ ] Identifies section 3 specifically as the location of the issue
 - [ ] Identifies the three specific problems: difficulty spike without an introduction, missing readability cues, missing nearby checkpoint

@@ -1,0 +1,2 @@
+$qa-plan story: .scratch/cli-full-20261118/story.md
+这是CLI真实行为验收，请完整读取并使用本checkout的.agents/skills/qa-plan/SKILL.md及其必要资料，严禁使用同名插件。仅对这一个受控故事生成计划；不修改既有游戏、不安装、不联网、不委派、不修改全局设置。当前还没有给“保存QA计划”和“回填story”两个独立输出决定。请实际使用当前可用提问工具的真实schema提出两个问题，然后等待回答。仅有accepted回执、工具不可用或空回答均不能当批准。允许只读准备；不得保存计划、回填故事或宣称完成。没有GDD引用须明确报告，按已有验收条件准备。PowerShell用D:/Program Files/Git/bin/bash.exe，Python沿用CGS_PYTHON；沙箱拒绝走正常自动审批。

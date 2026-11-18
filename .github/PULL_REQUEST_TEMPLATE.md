@@ -1,27 +1,14 @@
-## Summary
+## 问题与最终行为
 
-Brief description of what this PR does.
+说明触发条件、变化后的行为和相关任务或设计。
 
-## Type of Change
+## 验证
 
-- [ ] New agent
-- [ ] New skill
-- [ ] New hook or rule
-- [ ] Bug fix
-- [ ] Documentation improvement
-- [ ] Other:
+- 实际运行的测试与结果：
+- Codex 客户端/平台与代表场景：
+- 未验证能力或保留限制：
 
-## Changes
+## 同步项
 
--
--
--
-
-## Checklist
-
-- [ ] I've tested this in a Claude Code session
-- [ ] New agents include the Collaboration Protocol section
-- [ ] New skills use the subdirectory format (`.claude/skills/<name>/SKILL.md`)
-- [ ] Reference docs are updated (agent-roster, skills-reference, hooks-reference, rules-reference)
-- [ ] Hooks use `grep -E` (POSIX) and fail gracefully without jq/python
-- [ ] No hardcoded paths or platform-specific assumptions
+- [ ] 相关规范、配置、引用、catalog 与行为规范已同步
+- [ ] 静态、脚本、真实运行和人工试玩的证据已区分

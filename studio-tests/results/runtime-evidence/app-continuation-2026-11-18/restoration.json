@@ -1,0 +1,31 @@
+{
+  "prepared": {
+    "date": "2026-11-18T00:04:18.223767+00:00",
+    "source_commit": "458b4a0",
+    "copied": 1126,
+    "protected_files": 1006,
+    "checkpoint_sha256": "52da80526bd11b9f8902e0782b37b4815a6e5efdebba52156a6a56989ec6b442",
+    "events_before_bytes": 52701,
+    "fixture_head": "6dd47426a2bf9cda5fac1fde3b0f1bcca8d184c5"
+  },
+  "before_restore": {
+    "source_files_matched_after_run": 1126,
+    "checkpoint_unchanged_during_run": true,
+    "fixture_head_unchanged": true,
+    "event_counts": {
+      "PreCompact": 1,
+      "SessionStart": 2,
+      "PreToolUse": 16,
+      "PostToolUse": 16,
+      "Stop": 3,
+      "SubagentStart": 1,
+      "SubagentStop": 2
+    },
+    "all_seven_kinds_observed": true
+  },
+  "restored": {
+    "protected_changes": [],
+    "framework_restore_errors": [],
+    "index_restored": true
+  }
+}

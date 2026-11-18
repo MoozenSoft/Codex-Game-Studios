@@ -1,0 +1,15 @@
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/exact', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/reference-again.tsv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/reference.tsv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/replay.args', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/exact', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/reference-again.tsv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/reference.tsv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/replay.args', LF will be replaced by CRLF the next time Git touches it
+[probe 5b90e81] 验收：保存 dusk-fish 同种子迁移参考回放
+ 5 files changed, 331 insertions(+)
+ create mode 100644 production/qa/evidence/grow-dusk-fish/exact
+ create mode 100644 production/qa/evidence/grow-dusk-fish/reference-again.tsv
+ create mode 100644 production/qa/evidence/grow-dusk-fish/reference.png
+ create mode 100644 production/qa/evidence/grow-dusk-fish/reference.tsv
+ create mode 100644 production/qa/evidence/grow-dusk-fish/replay.args

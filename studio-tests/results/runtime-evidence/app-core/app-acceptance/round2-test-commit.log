@@ -1,0 +1,6 @@
+warning: in the working copy of 'tests/integration/boot.spec.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/unit/rules.test.ts', LF will be replaced by CRLF the next time Git touches it
+[app-acceptance cefb391] 验证计时规则红绿与浏览器启动回放
+ 2 files changed, 60 insertions(+)
+ create mode 100644 tests/integration/boot.spec.ts
+ create mode 100644 tests/unit/rules.test.ts

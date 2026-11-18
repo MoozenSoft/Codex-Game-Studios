@@ -1,3 +1,5 @@
+> 上游历史指南：仅供追溯，不作为 Codex 版升级步骤。当前范围和操作见 [UPGRADING.md](../UPGRADING.md)。
+
 # Migration Guide: v1.0 → v1.1 project.yaml
 
 This guide covers converting an **existing project's config files** to

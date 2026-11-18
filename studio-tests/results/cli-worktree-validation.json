@@ -1,0 +1,18 @@
+{
+  "surface": "当前Codex CLI会话的Git工作树降级路径",
+  "worktree": "<probe>/.scratch/CLI 工作树 验收",
+  "tree": "2eed3d73899155cd7a4aba4410143c57d32248f6",
+  "chinese_and_space_path": true,
+  "local_output": "automation: guided (project.local.yaml)\n",
+  "origin_output": "automation: collaborative (default)\n",
+  "subdirectory_output": "automation: guided (project.local.yaml)\n",
+  "personal_paths_ignored": [
+    "project.local.yaml",
+    "production/session-state/active.md",
+    "production/agent-memory/probe.md"
+  ],
+  "marker_isolated": true,
+  "status": "passed",
+  "hooks": "新工作树hooks信任未执行，不能据此判通过",
+  "initial_probe_correction": "首次从主仓库cwd调用另一checkout的helper时，按既定优先级读了调用处配置；已分别使用显式root与真正工作树子目录进行本报告的实际核对。"
+}

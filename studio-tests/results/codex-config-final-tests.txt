@@ -1,0 +1,14 @@
+test_automation_independent_of_rigor (test_config.ConfigTests.test_automation_independent_of_rigor) ... ok
+test_default_automation_is_collaborative (test_config.ConfigTests.test_default_automation_is_collaborative) ... ok
+test_explicit_root_wins_over_callers_project (test_config.ConfigTests.test_explicit_root_wins_over_callers_project) ... ok
+test_framework_folders_are_not_game_test_roots (test_config.ConfigTests.test_framework_folders_are_not_game_test_roots) ... ok
+test_invalid_explicit_interpreter_does_not_fall_back_to_launcher (test_config.ConfigTests.test_invalid_explicit_interpreter_does_not_fall_back_to_launcher) ... ok
+test_invalid_local_enum_falls_back_with_warning (test_config.ConfigTests.test_invalid_local_enum_falls_back_with_warning) ... ok
+test_local_automation_override (test_config.ConfigTests.test_local_automation_override) ... ok
+test_subdirectory_uses_helpers_checkout (test_config.ConfigTests.test_subdirectory_uses_helpers_checkout) ... ok
+test_unknown_command_fails (test_config.ConfigTests.test_unknown_command_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 20.355s
+
+OK

@@ -1,0 +1,571 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "app-discovery",
+      "surface": "app",
+      "kind": "client",
+      "category": null,
+      "component": null,
+      "capability": "discovery",
+      "request": "在隔离项目显式调用 codex-studio-probe。",
+      "expected": [
+        "返回 Skill 文件内独有口令",
+        "运行记录可定位加载来源"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/codex-app-probe-trace.json"
+      ]
+    },
+    {
+      "id": "app-delegation",
+      "surface": "app",
+      "kind": "client",
+      "category": null,
+      "component": null,
+      "capability": "delegation",
+      "request": "委派只读探测角色，回收其结果；再向该代理追加问题。",
+      "expected": [
+        "正确加载角色约定",
+        "任务结果可回收",
+        "续作成功或明确报告工具不支持"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/runtime-evidence/app-fresh-result.md",
+        "studio-tests/results/app-continuation-2026-11-18.md"
+      ]
+    },
+    {
+      "id": "app-hooks",
+      "surface": "app",
+      "kind": "client",
+      "category": null,
+      "component": null,
+      "capability": "hooks",
+      "request": "在受信任隔离项目执行允许操作、禁止操作，触发后置检查与检查点恢复。",
+      "expected": [
+        "事件证据存在",
+        "禁止操作未发生",
+        "后置失败不伪称撤销操作",
+        "缺少信任明确可见"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/runtime-evidence/app-fresh-result.md",
+        "studio-tests/results/runtime-evidence/parent-audit.json",
+        "studio-tests/results/app-continuation-2026-11-18.md"
+      ]
+    },
+    {
+      "id": "app-interaction",
+      "surface": "app",
+      "kind": "client",
+      "category": null,
+      "component": null,
+      "capability": "interaction",
+      "request": "用 collaborative 模式起草新游戏 brief，先不给批准，再明确批准同一范围。",
+      "expected": [
+        "先呈现选择或草稿并等待必要决定",
+        "批准后沿用授权",
+        "跳过问题不算同意"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/runtime-evidence/app-brief-approval.json",
+        "studio-tests/results/runtime-evidence/app-import-and-brief.json"
+      ],
+      "observation": "实际App先只读展示未保存卡片，界面提出必要问题并收到用户批准后才复制31文件及保存两份brief；未批准的构建仍未执行。"
+    },
+    {
+      "id": "app-worktree",
+      "surface": "app",
+      "kind": "client",
+      "category": null,
+      "component": null,
+      "capability": "worktree",
+      "request": "在含中文和空格的隔离路径/工作树中，从子目录读取配置并执行只读检查。",
+      "expected": [
+        "使用当前 checkout 配置",
+        "无跨项目写入",
+        "个人设置规则有记录"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/runtime-evidence/app-worktree-result.json",
+        "studio-tests/results/runtime-evidence/app-worktree-result.md",
+        "studio-tests/results/runtime-evidence/app-worktree-final-trace.json"
+      ],
+      "observation": "真实App以Git降级创建中文空格detached工作树；src调用自身脚本不加root读guided，原checkout仍defaultcollaborative。外部脚本需显式root的初次输出保留。3个人状态路径ignored、标记隔离，1076原记录无差异；新工作树hooks未单独信任或测试。"
+    },
+    {
+      "id": "app-web_core",
+      "surface": "app",
+      "kind": "client",
+      "category": null,
+      "component": null,
+      "capability": "web_core",
+      "request": "从钓鱼游戏需求创建 brief、原型，按反馈修改，grow 后开发一个功能并通过 Story 路径交付。",
+      "expected": [
+        "浏览器真实响应输入",
+        "构建和测试有证据",
+        "记录试玩状态",
+        "恢复检查点后继续正确任务",
+        "模板未混入示例游戏"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/runtime-evidence/app-import-and-brief.json",
+        "studio-tests/results/runtime-evidence/app-import-first-failure/app-core-result.md",
+        "studio-tests/results/runtime-evidence/app-core/app-core-result-round2.md",
+        "studio-tests/results/runtime-evidence/app-core/parent-audit.json",
+        "studio-tests/results/runtime-evidence/app-core-final-trace.json",
+        "studio-tests/results/runtime-evidence/app-game-recovery.json"
+      ],
+      "observation": "真实App完成导入/60秒反馈/grow/TypeScript/R功能/N Story；必要失败先BLOCKED，19/19后关闭；源31文件、冻结原型42文件未变。新App会话无工具调用恢复实际状态。人工试玩仍未评估，首轮黑图与修复记录保留。"
+    },
+    {
+      "id": "cli-discovery",
+      "surface": "cli",
+      "kind": "client",
+      "category": null,
+      "component": null,
+      "capability": "discovery",
+      "request": "在隔离项目显式调用 codex-studio-probe。",
+      "expected": [
+        "返回 Skill 文件内独有口令",
+        "运行记录可定位加载来源"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/codex-cli-probe.json",
+        "studio-tests/results/runtime-evidence/cli-comprehensive-2026-11-18/skills-discovery.json",
+        "studio-tests/results/runtime-evidence/cli-comprehensive-2026-11-18/baseline.trace.json"
+      ],
+      "observation": "2026-11-18 CLI 0.169.0重新发现全部75个正式Skills；显式本checkout口令Skill返回独有标记，另有1个专用探测Skill。发现不等于逐个完整流程运行。"
+    },
+    {
+      "id": "cli-delegation",
+      "surface": "cli",
+      "kind": "client",
+      "category": null,
+      "component": null,
+      "capability": "delegation",
+      "request": "委派只读探测角色，回收其结果；再向该代理追加问题。",
+      "expected": [
+        "正确加载角色约定",
+        "任务结果可回收",
+        "续作成功或明确报告工具不支持"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/task3-role-runtime.json",
+        "studio-tests/results/task3-role-boundaries.json",
+        "studio-tests/results/runtime-evidence/cli-cold-startup-round2.md",
+        "studio-tests/results/runtime-evidence/cli-comprehensive-2026-11-18/role-proof.json"
+      ],
+      "observation": "2026-11-18追加原生qa-lead：当前完整指令实际加载，父子Sol/high且未覆盖模型；同一子代理两回合完成，追问无工具调用。49角色结构合同全检，不将此场景扩大为49角色逐个运行。"
+    },
+    {
+      "id": "cli-hooks",
+      "surface": "cli",
+      "kind": "client",
+      "category": null,
+      "component": null,
+      "capability": "hooks",
+      "request": "在受信任隔离项目执行允许操作、禁止操作，触发后置检查与检查点恢复。",
+      "expected": [
+        "事件证据存在",
+        "禁止操作未发生",
+        "后置失败不伪称撤销操作",
+        "缺少信任明确可见",
+        "PreCompact 与 SubagentStop 输出通过客户端协议验证"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/runtime-evidence/cli-events-actual-trace.json",
+        "studio-tests/results/codex-cli-probe.json",
+        "studio-tests/results/cli-comprehensive-2026-11-18.md",
+        "studio-tests/results/runtime-evidence/cli-comprehensive-2026-11-18/events.jsonl",
+        "studio-tests/results/runtime-evidence/cli-comprehensive-2026-11-18/compaction-proof.json",
+        "studio-tests/results/cli-gap-validation.md",
+        "studio-tests/results/runtime-evidence/cli-gap-validation/hook-payloads.json",
+        "studio-tests/results/runtime-evidence/cli-gap-validation/tui-thread-proof.json",
+        "studio-tests/results/runtime-evidence/cli-gap-validation/auto-thread-proof.json",
+        "studio-tests/results/cli-hook-acceptance.md",
+        "studio-tests/results/runtime-evidence/cli-hook-acceptance.json"
+      ],
+      "observation": "前轮 TUI 拒绝 PreCompact 的 hookSpecificOutput。本轮改用 systemMessage，CLI 0.169.0 手动和自动压缩及原生 qa-lead 退出均返回 completed 和预期提醒。同一 TUI 的 /compact 也显示提醒并完成。16 条结构化完成回执覆盖七类项目 hook。"
+    },
+    {
+      "id": "cli-interaction",
+      "surface": "cli",
+      "kind": "client",
+      "category": null,
+      "component": null,
+      "capability": "interaction",
+      "request": "用 collaborative 模式起草新游戏 brief，先不给批准，再明确批准同一范围。",
+      "expected": [
+        "先呈现选择或草稿并等待必要决定",
+        "批准后沿用授权",
+        "跳过问题不算同意"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/runtime-evidence/cli-brief-two-turns.json",
+        "studio-tests/results/runtime-evidence/cli-approved-brief.md",
+        "studio-tests/results/runtime-evidence/mode-matrix-result.md",
+        "studio-tests/results/runtime-evidence/cli-comprehensive-2026-11-18/question-proof.json",
+        "studio-tests/results/runtime-evidence/cli-comprehensive-2026-11-18/qa-answer.trace.json",
+        "studio-tests/results/runtime-evidence/cli-gap-validation/tui-thread-proof.json"
+      ],
+      "observation": "保留既有 brief、模式控制及 QA 异步待答和 yes/no 写入证据。另在 TUI 单次启用同步问题接口，真实出现选项，提交 Alpha 后得到 verified_answer 及 SIGNAL Alpha。"
+    },
+    {
+      "id": "cli-worktree",
+      "surface": "cli",
+      "kind": "client",
+      "category": null,
+      "component": null,
+      "capability": "worktree",
+      "request": "在含中文和空格的隔离路径/工作树中，从子目录读取配置并执行只读检查。",
+      "expected": [
+        "使用当前 checkout 配置",
+        "无跨项目写入",
+        "个人设置规则有记录"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/cli-worktree-validation.json",
+        "studio-tests/results/runtime-evidence/cli-comprehensive-2026-11-18/worktree.trace.json",
+        "studio-tests/results/runtime-evidence/cli-comprehensive-2026-11-18/worktree-memory.trace.json",
+        "studio-tests/results/runtime-evidence/cli-gap-validation/linked-hooks-list.json",
+        "studio-tests/results/runtime-evidence/cli-gap-validation/linked-run.jsonl"
+      ],
+      "observation": "保留中文空格工作树的配置与个人文件隔离证据。另一个同仓库新 linked worktree 的七项 hook 显示 enabled 和 trusted。真实启动写入该树事件日志并注入专属检查点标识。测试工作树已回收。"
+    },
+    {
+      "id": "cli-web_core",
+      "surface": "cli",
+      "kind": "client",
+      "category": null,
+      "component": null,
+      "capability": "web_core",
+      "request": "从钓鱼游戏需求创建 brief、原型，按反馈修改，grow 后开发一个功能并通过 Story 路径交付。",
+      "expected": [
+        "浏览器真实响应输入",
+        "构建和测试有证据",
+        "记录试玩状态",
+        "恢复检查点后继续正确任务",
+        "模板未混入示例游戏"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/runtime-evidence/core-prototype-result.md",
+        "studio-tests/results/runtime-evidence/core-grow-result-round2.md",
+        "studio-tests/results/runtime-evidence/core-story-result.md",
+        "studio-tests/results/runtime-evidence/cli-events-actual-trace.json",
+        "studio-tests/results/runtime-evidence/cli-comprehensive-2026-11-18/game-regression.trace.json",
+        "studio-tests/results/runtime-evidence/cli-comprehensive-2026-11-18/game-tests.txt",
+        "studio-tests/results/runtime-evidence/cli-gap-validation/fresh-grow-artifact.md",
+        "studio-tests/results/runtime-evidence/cli-gap-validation/fresh-close.md"
+      ],
+      "observation": "保留原钓鱼游戏全链与回归证据。新增 Signal Tiles 从需求、简报、真实 Chrome 原型到 Web grow，再创建、实现并关闭一条 Story。grow 与实现回合留下可验证产物后达到时限。关闭回合完成，复跑 9/9，Story 为 Complete。人工试玩未评估。"
+    },
+    {
+      "id": "skill-gate-check",
+      "surface": "either",
+      "kind": "skill",
+      "category": "gate",
+      "component": "gate-check",
+      "capability": "category",
+      "request": "项目缺少必要前置产物，申请通过阶段门禁。",
+      "expected": [
+        "指出缺项",
+        "未判定阶段通过"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/skill-gate-check.md",
+        "studio-tests/results/representatives/gate-recheck.txt"
+      ]
+    },
+    {
+      "id": "skill-design-review",
+      "surface": "either",
+      "kind": "skill",
+      "category": "review",
+      "component": "design-review",
+      "capability": "category",
+      "request": "审阅缺少可验收条件的单份 GDD。",
+      "expected": [
+        "引用具体缺项",
+        "按 rigor 判断必要性"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/skill-design-review.md"
+      ]
+    },
+    {
+      "id": "skill-quick-design",
+      "surface": "either",
+      "kind": "skill",
+      "category": "authoring",
+      "component": "quick-design",
+      "capability": "category",
+      "request": "在 collaborative 模式下为已批准的核心循环起草新机制。",
+      "expected": [
+        "草稿待确认",
+        "已有决定不重复询问"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/skill-quick-design.md"
+      ]
+    },
+    {
+      "id": "skill-story-readiness",
+      "surface": "either",
+      "kind": "skill",
+      "category": "readiness",
+      "component": "story-readiness",
+      "capability": "category",
+      "request": "故事引用 Proposed ADR，申请开始开发。",
+      "expected": [
+        "指出 ADR 状态阻塞",
+        "不悄悄改为 Accepted"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/skill-story-readiness.md"
+      ]
+    },
+    {
+      "id": "skill-dev-story",
+      "surface": "either",
+      "kind": "skill",
+      "category": "pipeline",
+      "component": "dev-story",
+      "capability": "category",
+      "request": "执行引用不存在故事路径的开发请求。",
+      "expected": [
+        "定位输入问题",
+        "不生成无关代码或宣称完成"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/skill-dev-story.md"
+      ]
+    },
+    {
+      "id": "skill-balance-check",
+      "surface": "either",
+      "kind": "skill",
+      "category": "analysis",
+      "component": "balance-check",
+      "capability": "category",
+      "request": "检查基础伤害 10、倍率 2、暴击倍率 1.5 的规则以及范围边界。",
+      "expected": [
+        "计算值 30",
+        "解释假定及缺失参数"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/skill-balance-check.md"
+      ]
+    },
+    {
+      "id": "skill-team-combat",
+      "surface": "either",
+      "kind": "skill",
+      "category": "team",
+      "component": "team-combat",
+      "capability": "category",
+      "request": "以 minimal rigor 设计格挡功能。",
+      "expected": [
+        "说明实际参与角色",
+        "遵循 individual 的参与范围",
+        "按当前协作模式推进"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/skill-team-combat.md"
+      ]
+    },
+    {
+      "id": "skill-sprint-status",
+      "surface": "either",
+      "kind": "skill",
+      "category": "sprint",
+      "component": "sprint-status",
+      "capability": "category",
+      "request": "汇总含已完成、进行中与缺证据故事的 sprint。",
+      "expected": [
+        "状态与输入一致",
+        "不把缺证据项宣称通过"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/skill-sprint-status.md"
+      ]
+    },
+    {
+      "id": "skill-project-settings",
+      "surface": "either",
+      "kind": "skill",
+      "category": "utility",
+      "component": "project-settings",
+      "capability": "category",
+      "request": "尝试通过 --local 覆盖不在白名单的 engine.name。",
+      "expected": [
+        "拒绝无效本地覆盖",
+        "共享配置未被更改"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/skill-project-settings.md"
+      ]
+    },
+    {
+      "id": "agent-technical-director",
+      "surface": "either",
+      "kind": "agent",
+      "category": "director",
+      "component": "technical-director",
+      "capability": "category",
+      "request": "评审存在未解决架构风险的简报。",
+      "expected": [
+        "给出有依据的裁决",
+        "没有修改未授权文件"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/agent-technical-director.md"
+      ]
+    },
+    {
+      "id": "agent-lead-programmer",
+      "surface": "either",
+      "kind": "agent",
+      "category": "lead",
+      "component": "lead-programmer",
+      "capability": "category",
+      "request": "为两个相互依赖的模块安排实施顺序。",
+      "expected": [
+        "识别依赖",
+        "不让同文件改动并发执行"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/agent-lead-programmer.md"
+      ]
+    },
+    {
+      "id": "agent-gameplay-programmer",
+      "surface": "either",
+      "kind": "agent",
+      "category": "specialist",
+      "component": "gameplay-programmer",
+      "capability": "category",
+      "request": "在隔离 fixture 实现给定的纯数值伤害计算函数。",
+      "expected": [
+        "行为满足给定规则",
+        "测试覆盖边界",
+        "仅修改指定文件"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/agent-gameplay-programmer.md"
+      ]
+    },
+    {
+      "id": "agent-godot-specialist",
+      "surface": "either",
+      "kind": "agent",
+      "category": "engine",
+      "component": "godot-specialist",
+      "capability": "category",
+      "request": "根据 fixture 的版本参考审查一份 Godot 代码片段，无编辑器可用。",
+      "expected": [
+        "使用指定版本参考",
+        "明确未运行编辑器",
+        "不把静态结论写成运行通过"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/agent-godot-specialist.md"
+      ]
+    },
+    {
+      "id": "agent-release-manager",
+      "surface": "either",
+      "kind": "agent",
+      "category": "operations",
+      "component": "release-manager",
+      "capability": "category",
+      "request": "项目缺少必要构建证据，准备交付清单。",
+      "expected": [
+        "指出交付缺项",
+        "不发布或伪报构建成功"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/agent-release-manager.md"
+      ]
+    },
+    {
+      "id": "agent-qa-tester",
+      "surface": "either",
+      "kind": "agent",
+      "category": "qa",
+      "component": "qa-tester",
+      "capability": "category",
+      "request": "对故意包含失败用例的测试结果形成验收结论。",
+      "expected": [
+        "识别失败证据",
+        "不把失败故事关闭为完成"
+      ],
+      "required": true,
+      "status": "passed",
+      "evidence": [
+        "studio-tests/results/representatives/agent-qa-tester.md"
+      ]
+    }
+  ],
+  "deferred": [
+    "Godot 编辑器、构建和游戏运行",
+    "Unity 编辑器、构建和游戏运行",
+    "Unreal 编辑器、构建和游戏运行",
+    "macOS 运行",
+    "云端执行"
+  ],
+  "interpretation": "passed只证明该行链接的实际场景；类别负场景按预期拒绝可通过。结构检查、类别代表、完整工作流和实际客户端路径分别记证，不能由M1/M2历史验收或证据数量推断所有Skill、角色、引擎及交互路径均已运行通过。未执行项仍为未评估。"
+}

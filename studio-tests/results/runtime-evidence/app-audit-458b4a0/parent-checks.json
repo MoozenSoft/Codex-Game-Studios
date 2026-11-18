@@ -1,0 +1,61 @@
+{
+  "waiting": {
+    "plan_absent": true,
+    "story_unchanged": true,
+    "story_sha256": "6a17a86e580b4709965694a0cdaeb1288f628a5dcd197345a41514cf607b1029",
+    "env_fixture_absent": true,
+    "repaired_json": {
+      "probe": "APP_JSON_REPAIRED_458B4A0"
+    }
+  },
+  "qa_output": {
+    "qa_plan_written": true,
+    "seven_test_cases_saved": true,
+    "story_unchanged": true,
+    "story_sha256": "6a17a86e580b4709965694a0cdaeb1288f628a5dcd197345a41514cf607b1029",
+    "plan_sha256": "20f6defec4c30286241a318c6c200e576183015abd564e7d0629a1936873f0ee"
+  },
+  "final": {
+    "four_turns_completed": true,
+    "originator": "Codex Desktop",
+    "hook_receipts": 4,
+    "question_call_and_receipt": 2,
+    "native_widget_answer_messages": 1,
+    "story_unchanged": true,
+    "story_sha256": "6a17a86e580b4709965694a0cdaeb1288f628a5dcd197345a41514cf607b1029",
+    "plan_sha256": "20f6defec4c30286241a318c6c200e576183015abd564e7d0629a1936873f0ee",
+    "env_fixture_absent": true,
+    "json_repaired": true,
+    "fixture_head_unchanged": true,
+    "committed_source_files_matched_after_run": 1126,
+    "source_changes": []
+  },
+  "restored_before_retention": {
+    "protected_changes": [],
+    "framework_restore_errors": [],
+    "index_restored": true
+  },
+  "final_isolation": {
+    "protected_tracked_count": 1006,
+    "retained_reviewed_adapter": [
+      ".codex/hooks.json",
+      ".codex/hooks/dispatch.py",
+      ".codex/hooks/event_input.py",
+      ".codex/hooks/event_log.py",
+      ".codex/hooks/run.sh",
+      ".agents/scripts/git-index-check.py",
+      ".agents/scripts/yaml-helper.sh"
+    ],
+    "intentional_tracked_adapter_changes": [
+      ".agents/scripts/git-index-check.py",
+      ".agents/scripts/yaml-helper.sh",
+      ".codex/hooks.json",
+      ".codex/hooks/dispatch.py",
+      ".codex/hooks/event_input.py"
+    ],
+    "other_tracked_changes": [],
+    "index_restored": true,
+    "checkpoint_restored": true,
+    "reason": "仅保留用户正常审阅的新hook定义与运行依赖；其余原框架、既有游戏、检查点和索引恢复原件"
+  }
+}

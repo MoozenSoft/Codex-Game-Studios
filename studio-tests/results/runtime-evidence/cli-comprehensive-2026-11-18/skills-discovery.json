@@ -1,0 +1,619 @@
+{
+  "expected": 75,
+  "discovered": 76,
+  "missing": [],
+  "extra": [
+    "codex-studio-probe"
+  ],
+  "skills": [
+    {
+      "name": "adopt",
+      "description": "本项目游戏工作室工作流：adopt。Brownfield audit — do existing artifacts actually work? Numbered migration plan. Unlike $project-stage-detect, checks compliance not existence.",
+      "path": "<probe>\\.agents\\skills\\adopt\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "architecture-decision",
+      "description": "本项目游戏工作室工作流：architecture-decision。Create an ADR documenting a technical decision: context, alternatives considered, consequences.",
+      "path": "<probe>\\.agents\\skills\\architecture-decision\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "architecture-review",
+      "description": "本项目游戏工作室工作流：architecture-review。Traceability matrix mapping GDD requirements to ADRs. Finds gaps, cross-ADR conflicts, engine compatibility. PASS/CONCERNS/NOT ASSESSED/FAIL.",
+      "path": "<probe>\\.agents\\skills\\architecture-review\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "art-bible",
+      "description": "本项目游戏工作室工作流：art-bible。Author the Art Bible — visual identity gating asset production. Run before $map-systems.",
+      "path": "<probe>\\.agents\\skills\\art-bible\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "asset-audit",
+      "description": "本项目游戏工作室工作流：asset-audit。Audit assets against naming conventions, file size budgets, format standards. Finds orphaned assets, missing references.",
+      "path": "<probe>\\.agents\\skills\\asset-audit\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "asset-spec",
+      "description": "本项目游戏工作室工作流：asset-spec。Per-asset visual specs plus AI generation prompts from GDDs and character profiles. After the art bible.",
+      "path": "<probe>\\.agents\\skills\\asset-spec\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "balance-check",
+      "description": "本项目游戏工作室工作流：balance-check。Find balance outliers, broken progressions, degenerate strategies, economy imbalances in formulas and data. 'Check game balance'.",
+      "path": "<probe>\\.agents\\skills\\balance-check\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "brainstorm",
+      "description": "本项目游戏工作室工作流：brainstorm。Guides the user through finding and choosing a game concept. Use when the user wants game ideas, a new concept, a game jam idea, or to explore other directions, including dropping the current idea and starting over.",
+      "path": "<probe>\\.agents\\skills\\brainstorm\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "bug-report",
+      "description": "本项目游戏工作室工作流：bug-report。Structured bug report from a description, or analyze code for potential bugs. Reproduction steps, severity.",
+      "path": "<probe>\\.agents\\skills\\bug-report\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "bug-triage",
+      "description": "本项目游戏工作室工作流：bug-triage。Re-evaluate open bugs — priority vs severity, assign to sprints, surface systemic trends. Run when the count grows.",
+      "path": "<probe>\\.agents\\skills\\bug-triage\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "code-review",
+      "description": "本项目游戏工作室工作流：code-review。Architectural review of written code: coding standards, SOLID, testability, performance.",
+      "path": "<probe>\\.agents\\skills\\code-review\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "codex-studio-probe",
+      "description": "用于用户明确要求验证游戏工作室项目级 Skill 发现与读取的只读测试。",
+      "path": "<probe>\\.agents\\skills\\codex-studio-probe\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "consistency-check",
+      "description": "本项目游戏工作室工作流：consistency-check。Scan GDDs against the entity registry for cross-document conflicts. Grep-first approach targets conflicting sections, different stats.",
+      "path": "<probe>\\.agents\\skills\\consistency-check\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "content-audit",
+      "description": "本项目游戏工作室工作流：content-audit。Audit GDD content counts against what's implemented — planned vs built.",
+      "path": "<probe>\\.agents\\skills\\content-audit\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "create-architecture",
+      "description": "本项目游戏工作室工作流：create-architecture。Author the architecture blueprint before code is written. Validates decisions against the pinned engine, flags knowledge gaps.",
+      "path": "<probe>\\.agents\\skills\\create-architecture\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "create-control-manifest",
+      "description": "本项目游戏工作室工作流：create-control-manifest。Builds a short list of must-do and never-do coding rules per system from accepted ADRs. Use when the user wants programmer rules or a cheat sheet from the ADRs, or needs it regenerated after ADR changes.",
+      "path": "<probe>\\.agents\\skills\\create-control-manifest\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "create-epics",
+      "description": "本项目游戏工作室工作流：create-epics。Turns the GDDs and architecture into epics, one per architectural module. Use when the user wants to break the game into epics or plan the work before writing stories. Not for splitting one epic into stories.",
+      "path": "<probe>\\.agents\\skills\\create-epics\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "create-stories",
+      "description": "本项目游戏工作室工作流：create-stories。Breaks one epic into implementable stories with acceptance criteria. Use when the user wants stories for an epic or the next batch of work to build. Not for turning the whole design into epics.",
+      "path": "<probe>\\.agents\\skills\\create-stories\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "cut",
+      "description": "本项目游戏工作室工作流：cut。Proposes cuts and a polish list to finish the game from its brief and what is built; the person picks each cut. A game to sell also gets a release date and a feature freeze. Use when asked what to cut, how to finish or ship it, or for a polish list.",
+      "path": "<probe>\\.agents\\skills\\cut\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "day-one-patch",
+      "description": "本项目游戏工作室工作流：day-one-patch。Day-one launch patch — focused fix for known issues found after gold master. Mini-sprint with QA gate and rollback.",
+      "path": "<probe>\\.agents\\skills\\day-one-patch\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "design-review",
+      "description": "本项目游戏工作室工作流：design-review。Reviews one design document for completeness, internal consistency, implementability, and design standards. Before handing to programmers.",
+      "path": "<probe>\\.agents\\skills\\design-review\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "design-system",
+      "description": "本项目游戏工作室工作流：design-system。Section-by-section GDD authoring for one system — walks through each required section, cross-references dependencies.",
+      "path": "<probe>\\.agents\\skills\\design-system\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "dev-story",
+      "description": "本项目游戏工作室工作流：dev-story。Implements one story in code with tests, following its ADRs. Use when the user says to build, implement or start working on a story. Not for checking readiness beforehand or closing the story after.",
+      "path": "<probe>\\.agents\\skills\\dev-story\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "estimate",
+      "description": "本项目游戏工作室工作流：estimate。Estimate task effort from complexity, dependencies, velocity, risk. Structured estimate with confidence levels.",
+      "path": "<probe>\\.agents\\skills\\estimate\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "gate-check",
+      "description": "本项目游戏工作室工作流：gate-check。Ready to advance between development stages? PASS/CONCERNS/NOT ASSESSED/FAIL with blockers and required artifacts. 'Can we move to production?'",
+      "path": "<probe>\\.agents\\skills\\gate-check\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "hotfix",
+      "description": "本项目游戏工作室工作流：hotfix。Emergency fix bypassing normal sprint process — hotfix branch, approvals tracked, backport verified, full audit trail.",
+      "path": "<probe>\\.agents\\skills\\hotfix\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "launch-checklist",
+      "description": "本项目游戏工作室工作流：launch-checklist。Launch readiness across every department: code, content, store, marketing, community, infrastructure, legal, go/no-go sign-offs.",
+      "path": "<probe>\\.agents\\skills\\launch-checklist\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "localize",
+      "description": "本项目游戏工作室工作流：localize。Localization pipeline — find hardcoded strings, extract string tables, cultural review, VO, RTL, enforce string freeze.",
+      "path": "<probe>\\.agents\\skills\\localize\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "map-systems",
+      "description": "本项目游戏工作室工作流：map-systems。Decompose a concept into individual systems, map dependencies, prioritize design order, create the systems index.",
+      "path": "<probe>\\.agents\\skills\\map-systems\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "milestone-review",
+      "description": "本项目游戏工作室工作流：milestone-review。Milestone progress review — completeness, quality metrics, risk, go/no-go recommendation. At checkpoints or before a deadline.",
+      "path": "<probe>\\.agents\\skills\\milestone-review\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "next-step",
+      "description": "本项目游戏工作室工作流：next-step。Names the one next step: make a game, change it after play, grow it, or the next studio-mode step. Use when asked what to do next, or stuck.",
+      "path": "<probe>\\.agents\\skills\\next-step\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "onboard",
+      "description": "本项目游戏工作室工作流：onboard。Onboarding doc for a new contributor or agent — project state, conventions, priorities relevant to the specified role.",
+      "path": "<probe>\\.agents\\skills\\onboard\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "patch-notes",
+      "description": "本项目游戏工作室工作流：patch-notes。Player-facing patch notes from git history and changelogs. Translates developer language into player communication.",
+      "path": "<probe>\\.agents\\skills\\patch-notes\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "perf-profile",
+      "description": "本项目游戏工作室工作流：perf-profile。Performance profiling — find bottlenecks, measure against budgets, produce ranked optimization recommendations.",
+      "path": "<probe>\\.agents\\skills\\perf-profile\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "playtest-report",
+      "description": "本项目游戏工作室工作流：playtest-report。Structured playtest report template, or turn existing playtest notes into structured feedback.",
+      "path": "<probe>\\.agents\\skills\\playtest-report\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "project-settings",
+      "description": "本项目游戏工作室工作流：project-settings。Shows or changes a project setting and where its value comes from. Use to check or set one.",
+      "path": "<probe>\\.agents\\skills\\project-settings\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "project-stage-detect",
+      "description": "本项目游戏工作室工作流：project-stage-detect。Analyze project state, detect stage, identify gaps, recommend next steps. 'Where are we in development?'",
+      "path": "<probe>\\.agents\\skills\\project-stage-detect\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "propagate-design-change",
+      "description": "本项目游戏工作室工作流：propagate-design-change。Finds architecture decisions (ADRs) made stale by a changed GDD and walks through resolving each. Use when the user changed a number or rule in a GDD and asks which ADRs or architecture decisions are now out of date.",
+      "path": "<probe>\\.agents\\skills\\propagate-design-change\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "prototype",
+      "description": "本项目游戏工作室工作流：prototype。Asks a few questions, writes a one-page brief, builds a playable browser game as one HTML folder it plays and screenshots; with an engine set, a throwaway engine or paper prototype. Ends on proceed, pivot or kill. Use when the user says make me a game, wants to try a game idea or mechanic, needs a quick spike, asks to change a game it made, or says they love or hate it.",
+      "path": "<probe>\\.agents\\skills\\prototype\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "qa-plan",
+      "description": "本项目游戏工作室工作流：qa-plan。QA test plan for a sprint — classifies stories by Logic/Integration/Visual/UI, covers automated tests, manual cases, smoke scope.",
+      "path": "<probe>\\.agents\\skills\\qa-plan\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "quick-design",
+      "description": "本项目游戏工作室工作流：quick-design。Lightweight spec for small changes — tuning adjustments, minor mechanics. Embeds directly into stories; skips full GDD.",
+      "path": "<probe>\\.agents\\skills\\quick-design\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "regression-suite",
+      "description": "本项目游戏工作室工作流：regression-suite。Map test coverage to GDD critical paths, find fixed bugs lacking regression tests, flag drift from new features.",
+      "path": "<probe>\\.agents\\skills\\regression-suite\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "release-checklist",
+      "description": "本项目游戏工作室工作流：release-checklist。Pre-release checklist — build verification, certification requirements, store metadata, launch readiness.",
+      "path": "<probe>\\.agents\\skills\\release-checklist\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "retrospective",
+      "description": "本项目游戏工作室工作流：retrospective。Sprint or milestone retrospective from completed work, velocity, blockers. Actionable insights for the next iteration.",
+      "path": "<probe>\\.agents\\skills\\retrospective\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "reverse-document",
+      "description": "本项目游戏工作室工作流：reverse-document。Writes missing design or architecture docs, or a game's brief, from code. Use when code or prototypes have no docs.",
+      "path": "<probe>\\.agents\\skills\\reverse-document\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "review-all-gdds",
+      "description": "本项目游戏工作室工作流：review-all-gdds。Holistic cross-GDD review — contradictions between systems, dominant strategies, economic imbalance, cognitive overload, pillar drift.",
+      "path": "<probe>\\.agents\\skills\\review-all-gdds\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "scope-check",
+      "description": "本项目游戏工作室工作流：scope-check。Scope creep check — current scope versus the original plan. Flags additions, quantifies bloat, recommends cuts. 'Any scope creep?' Finishing a game from its brief is $cut's.",
+      "path": "<probe>\\.agents\\skills\\scope-check\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "security-audit",
+      "description": "本项目游戏工作室工作流：security-audit。Security audit — save tampering, cheat vectors, network exploits, data exposure, input validation. Before public or multiplayer release.",
+      "path": "<probe>\\.agents\\skills\\security-audit\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "setup-engine",
+      "description": "本项目游戏工作室工作流：setup-engine。Sets up and pins the engine version: web for a new project unless Godot, Unity or Unreal is named. Use to choose or upgrade it.",
+      "path": "<probe>\\.agents\\skills\\setup-engine\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "skill-improve",
+      "description": "本项目游戏工作室工作流：skill-improve。Improve a skill via a test-fix-retest loop — static checks, targeted fixes, keep or revert on score change.",
+      "path": "<probe>\\.agents\\skills\\skill-improve\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "skill-test",
+      "description": "本项目游戏工作室工作流：skill-test。Validate skill files for structural compliance and behavioral correctness. Four modes: static linter, spec, category rubric, audit.",
+      "path": "<probe>\\.agents\\skills\\skill-test\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "smoke-check",
+      "description": "本项目游戏工作室工作流：smoke-check。Critical-path smoke gate before QA hand-off — runs the automated suite. A failed check means the build is not QA-ready.",
+      "path": "<probe>\\.agents\\skills\\smoke-check\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "soak-test",
+      "description": "本项目游戏工作室工作流：soak-test。Soak test protocol for extended play — what to observe and log for slow leaks, fatigue, late-appearing edge cases.",
+      "path": "<probe>\\.agents\\skills\\soak-test\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "sprint-plan",
+      "description": "本项目游戏工作室工作流：sprint-plan。New or updated sprint plan from the current milestone, completed work, and available capacity.",
+      "path": "<probe>\\.agents\\skills\\sprint-plan\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "sprint-status",
+      "description": "本项目游戏工作室工作流：sprint-status。Fast, concise sprint snapshot — burndown and emerging risks for situational awareness. 'How is the sprint going?'",
+      "path": "<probe>\\.agents\\skills\\sprint-status\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "start",
+      "description": "本项目游戏工作室工作流：start。Guides a first-time user through onboarding and picks the right workflow. Use when the user is new, just cloned or installed the studio, has no idea or engine yet, asks where to begin, or wants to bring in an existing game. A request for a game itself ('make me a game where...') is $prototype's.",
+      "path": "<probe>\\.agents\\skills\\start\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "story-done",
+      "description": "本项目游戏工作室工作流：story-done。Closes a finished story: verifies each acceptance criterion, checks for design or ADR deviations and updates its status. Use when the user says a story is done, finished or ready to close.",
+      "path": "<probe>\\.agents\\skills\\story-done\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "story-readiness",
+      "description": "本项目游戏工作室工作流：story-readiness。Checks whether a story is ready to implement: clear acceptance criteria, no open questions, valid ADR and dependencies. Use when the user asks if a story, or the sprint's stories, are ready to start or build.",
+      "path": "<probe>\\.agents\\skills\\story-readiness\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "team-audio",
+      "description": "本项目游戏工作室工作流：team-audio。Orchestrate the audio team — audio-director, sound-designer, technical-artist, gameplay-programmer — direction through implementation.",
+      "path": "<probe>\\.agents\\skills\\team-audio\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "team-combat",
+      "description": "本项目游戏工作室工作流：team-combat。Orchestrate the combat team — game-designer, gameplay-programmer, ai-programmer, technical-artist, sound-designer, qa-tester — design through implement and validate.",
+      "path": "<probe>\\.agents\\skills\\team-combat\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "team-level",
+      "description": "本项目游戏工作室工作流：team-level。Orchestrate the level team — level-designer, narrative-director, world-builder, art-director, systems-designer, qa-tester — for complete area creation.",
+      "path": "<probe>\\.agents\\skills\\team-level\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "team-live-ops",
+      "description": "本项目游戏工作室工作流：team-live-ops。Orchestrate the live-ops team — live-ops-designer, economy-designer, analytics-engineer, community-manager, writer — for a season or live event.",
+      "path": "<probe>\\.agents\\skills\\team-live-ops\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "team-narrative",
+      "description": "本项目游戏工作室工作流：team-narrative。Orchestrate the narrative team — narrative-director, writer, world-builder, level-designer — for story, world lore, narrative-driven levels.",
+      "path": "<probe>\\.agents\\skills\\team-narrative\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "team-polish",
+      "description": "本项目游戏工作室工作流：team-polish。Orchestrate the polish team — performance-analyst, technical-artist, sound-designer, qa-tester — to optimize and harden a feature or area.",
+      "path": "<probe>\\.agents\\skills\\team-polish\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "team-qa",
+      "description": "本项目游戏工作室工作流：team-qa。Orchestrate the QA team through a full testing cycle — qa-lead strategy and test plan, qa-tester case writing, execution, sign-off.",
+      "path": "<probe>\\.agents\\skills\\team-qa\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "team-release",
+      "description": "本项目游戏工作室工作流：team-release。Orchestrate the release team — release-manager, qa-lead, devops-engineer, producer — to execute a release from candidate to deployment.",
+      "path": "<probe>\\.agents\\skills\\team-release\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "team-ui",
+      "description": "本项目游戏工作室工作流：team-ui。Orchestrate the UI team through the UX pipeline — authoring, visual design, implementation, review, polish. Uses $ux-design, $ux-review, studio templates.",
+      "path": "<probe>\\.agents\\skills\\team-ui\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "tech-debt",
+      "description": "本项目游戏工作室工作流：tech-debt。Track, categorize and prioritize technical debt across the codebase — scans for debt indicators, maintains a register.",
+      "path": "<probe>\\.agents\\skills\\tech-debt\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "test-evidence-review",
+      "description": "本项目游戏工作室工作流：test-evidence-review。Quality review of test files and evidence — goes beyond existence, evaluates assertion coverage. ADEQUATE/INCOMPLETE/MISSING/NOT ASSESSED per story.",
+      "path": "<probe>\\.agents\\skills\\test-evidence-review\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "test-flakiness",
+      "description": "本项目游戏工作室工作流：test-flakiness。Find flaky tests from CI logs — aggregates pass rates, spots intermittent failures, recommends quarantine. After multiple runs.",
+      "path": "<probe>\\.agents\\skills\\test-flakiness\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "test-helpers",
+      "description": "本项目游戏工作室工作流：test-helpers。Generate engine-specific test helper libraries — assertion utilities, factory functions, mocks in the engine's test folder. Reduces boilerplate.",
+      "path": "<probe>\\.agents\\skills\\test-helpers\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "test-setup",
+      "description": "本项目游戏工作室工作流：test-setup。Sets up the test framework and CI: tests/ directory, engine runner, GitHub Actions workflow. Use once, before the first sprint.",
+      "path": "<probe>\\.agents\\skills\\test-setup\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "ux-design",
+      "description": "本项目游戏工作室工作流：ux-design。Section-by-section UX spec authoring for a screen, flow or HUD. Reads the player journey to provide context; also project-wide accessibility.",
+      "path": "<probe>\\.agents\\skills\\ux-design\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "ux-review",
+      "description": "本项目游戏工作室工作流：ux-review。Validate a UX spec, HUD design or pattern library — accessibility, GDD alignment, readiness. APPROVED / NOT ASSESSED / NEEDS REVISION / MAJOR REVISION NEEDED.",
+      "path": "<probe>\\.agents\\skills\\ux-review\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "vertical-slice",
+      "description": "本项目游戏工作室工作流：vertical-slice。Pre-production validation — end-to-end build to confirm the full loop is achievable before committing to Production. After GDDs, architecture, UX specs.",
+      "path": "<probe>\\.agents\\skills\\vertical-slice\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "write-changelog",
+      "description": "本项目游戏工作室工作流：write-changelog。Writes a changelog from git commits and sprint data. Use for an internal or player-facing one.",
+      "path": "<probe>\\.agents\\skills\\write-changelog\\SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,40 @@
+warning: in the working copy of 'design/game-brief.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/epics/EPIC-APP-ACCEPTANCE/story-001-n-retry.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/final-suite.log.e2e', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/final-suite.log.unit', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/n-code-review.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/n-readiness-and-red-gate.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/n-red.log.e2e', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/n-suite.log.e2e', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/n-suite.log.unit', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-acceptance/round2-commands.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/app-core-result-round2.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/story-001-n-retry/stamp.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/smoke-2026-11-17.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'project.yaml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/integration/n-retry.spec.ts', LF will be replaced by CRLF the next time Git touches it
+[app-acceptance 6dd4742] 完成N键重试故事并记录真实应用全流程验收
+ 25 files changed, 4340 insertions(+), 3 deletions(-)
+ create mode 100644 production/epics/EPIC-APP-ACCEPTANCE/story-001-n-retry.md
+ create mode 100644 production/qa/evidence/app-acceptance/final-suite.log.e2e
+ create mode 100644 production/qa/evidence/app-acceptance/final-suite.log.unit
+ create mode 100644 production/qa/evidence/app-acceptance/frozen-prototype.json
+ create mode 100644 production/qa/evidence/app-acceptance/n-code-review.md
+ create mode 100644 production/qa/evidence/app-acceptance/n-readiness-and-red-gate.md
+ create mode 100644 production/qa/evidence/app-acceptance/n-red.log.e2e
+ create mode 100644 production/qa/evidence/app-acceptance/n-suite.log.e2e
+ create mode 100644 production/qa/evidence/app-acceptance/n-suite.log.unit
+ create mode 100644 production/qa/evidence/app-acceptance/round2-commands.jsonl
+ create mode 100644 production/qa/evidence/app-acceptance/round2-integrity.json
+ create mode 100644 production/qa/evidence/app-core-result-round2.md
+ create mode 100644 production/qa/evidence/grow-app-dusk-fish/story.png
+ create mode 100644 production/qa/evidence/grow-app-dusk-fish/story.tsv
+ create mode 100644 production/qa/evidence/story-001-n-retry/over.png
+ create mode 100644 production/qa/evidence/story-001-n-retry/pause.png
+ create mode 100644 production/qa/evidence/story-001-n-retry/play.png
+ create mode 100644 production/qa/evidence/story-001-n-retry/results.png
+ create mode 100644 production/qa/evidence/story-001-n-retry/stamp.txt
+ create mode 100644 production/qa/evidence/story-001-n-retry/title.png
+ create mode 100644 production/qa/smoke-2026-11-17.md
+ create mode 100644 tests/integration/n-retry.spec.ts

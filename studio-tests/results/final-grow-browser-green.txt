@@ -1,0 +1,6 @@
+test_generated_config_keeps_classic_bindings_in_chrome (test_grow_config_scope.GrowConfigBrowserTests.test_generated_config_keeps_classic_bindings_in_chrome) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 10.447s
+
+OK

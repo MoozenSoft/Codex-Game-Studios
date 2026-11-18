@@ -1,0 +1,44 @@
+[
+  {
+    "eventName": "preToolUse",
+    "enabled": true,
+    "trustStatus": "trusted",
+    "matcher": "^(?:functions\\.)?(?:Bash|exec_command|apply_patch)$"
+  },
+  {
+    "eventName": "postToolUse",
+    "enabled": true,
+    "trustStatus": "trusted",
+    "matcher": "^(?:functions\\.)?(?:Bash|exec_command|apply_patch)$"
+  },
+  {
+    "eventName": "preCompact",
+    "enabled": true,
+    "trustStatus": "trusted",
+    "matcher": null
+  },
+  {
+    "eventName": "sessionStart",
+    "enabled": true,
+    "trustStatus": "trusted",
+    "matcher": null
+  },
+  {
+    "eventName": "subagentStart",
+    "enabled": true,
+    "trustStatus": "trusted",
+    "matcher": null
+  },
+  {
+    "eventName": "subagentStop",
+    "enabled": true,
+    "trustStatus": "trusted",
+    "matcher": null
+  },
+  {
+    "eventName": "stop",
+    "enabled": true,
+    "trustStatus": "trusted",
+    "matcher": null
+  }
+]

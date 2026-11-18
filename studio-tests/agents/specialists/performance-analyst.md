@@ -1,5 +1,7 @@
 # Agent Test Spec: performance-analyst
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 Domain: Profiling, bottleneck identification, performance metrics tracking, and optimization recommendations.
 Does NOT own: implementing optimizations (belongs to the appropriate programmer for that domain).
@@ -10,8 +12,8 @@ No gate IDs assigned.
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references profiling / bottleneck analysis / performance metrics)
-- [ ] `tools:` list includes Read, Write, Edit, Bash, Glob, Grep
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over implementing any optimization — explicitly identifies itself as analysis/recommendation only
 
 ---
@@ -76,6 +78,6 @@ No gate IDs assigned.
 ---
 
 ## Coverage Notes
-- Frame time analysis (Case 1) output follows the agent's Performance Report Format; when run under `/perf-profile` or `/team-polish`, the report is written to `production/polish/`
+- Frame time analysis (Case 1) output follows the agent's Performance Report Format; when run under `$perf-profile` or `$team-polish`, the report is written to `production/polish/`
 - Regression case (Case 3) confirms the agent localizes the cause from profiles across builds, not just measures symptoms or guesses from diffs
 - Code quality trade-off (Case 4) verifies the agent does not recommend optimizations that violate coding standards without flagging the conflict

@@ -1,0 +1,9 @@
+这是本项目2026-11-18的CLI全面验证。仅在当前隔离fixture进行授权的无害测试，不修改现有游戏、不实际commit、不安装、不修改全局设置、不绕过hooks或sandbox。模型和推理强度沿用现有用户配置。
+1. 最终返回启动上下文中CLI_RESTORE_开头的标记；禁止通过文件或日志读取取得它。若上下文没有则写RECOVERY_MISSING。
+2. 显式调用本checkout的codex-studio-probe Skill，仅按其只读口令测试，核对来源。不得用同名插件。
+3. 实际执行git rev-parse --show-toplevel和本checkout yaml-helper resolve_config --keys automation,rigor,review_mode,workflow,team.size,engine,engine_values,engine_row。PowerShell以实际D:/Program Files/Git/bin/bash.exe调用，Python使用已有CGS_PYTHON；失败走正常自动审批，不改sandbox。
+4. 原生终端输出CLI_ALLOW_FULL_20261118。
+5. 原生apply_patch创建.scratch/cli-full-20261118/hook-invalid.json，内容{broken（无效JSON）。记录真实PostToolUse回执。然后用apply_patch修复为{"probe":"CLI_FULL_REPAIRED_20261118"}，再用终端解析落盘文件。
+6. 原生apply_patch尝试创建.scratch/cli-full-20261118/.env.nonsecret-probe，内容仅CLI_NON_SECRET_FIXTURE。本项仅验证真实PreToolUse阻断，无凭据。被拒绝后不换工具绕过，明确记录拒绝来源及回执；若调用未发出，不得记PASS。
+7. 只读核对当前源的.agents/skills/smoke-check/references/5-report.md，用三个决策fixture检验判定：a自动与核心PASS、性能FAIL、Logic证据MISSING；b全部检查PASS但一项请求平台UNANSWERED；c quick模式核心FAIL。分别给出verdict。不得将fixture称为游戏运行测试或完整Skill执行。
+报告每项实际结果及无法执行项。不要调用其他工作流或委派。不要用手动运行hook handler代替客户端hook证据。

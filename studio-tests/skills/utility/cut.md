@@ -1,22 +1,24 @@
-# Skill Test Spec: /cut
+# Skill Test Spec: $cut
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/cut` finishes a game from its brief. It runs only when asked (`/cut`, "what should I cut?",
+`$cut` finishes a game from its brief. It runs only when asked (`$cut`, "what should I cut?",
 "how do I finish this?") and works on the game `design/game-brief.md` describes. Phase 1 runs
 `cut-read.sh` for observation rows: the Features list by number with its marks, Keep, Avoid and
 Out of scope, the Dates line, `project.goal`, the built game (a one-shot's last check record,
 run again once when stale and never fixed; a project's smoke command), the feel log's last
 checklist, the polish list and the stories traced to a Features item. With no brief it stops and
-names `/scope-check` when GDDs exist.
+names `$scope-check` when GDDs exist.
 
 Phase 2 proposes cuts in a fixed order, each with a reason from what exists, and never an item a
 Keep line names; polish rows come only from sources (check fails, smoke failures, the person), each ending `· from: <source>`. Phase 3
 asks a target date and proposes a freeze date 70% of the way to it only for `sell`,
 `early_access` and `publisher`; any other goal gets no date. An unset goal is guessed with
-`/start`'s table and shown *guessed*; it is written (through `config-set.sh`) only when the
+`$start`'s table and shown *guessed*; it is written (through `config-set.sh`) only when the
 person changes it on the screen. Phase 4 shows one screen with a Writes line and asks the pick,
-multi-select. Phase 5 runs `cut-apply.sh` (the `[-]` move into Out of scope, marks, the Dates
+one single-select question per proposal, or an explicit plain-text set of proposal numbers. Phase 5 runs `cut-apply.sh` (the `[-]` move into Out of scope, marks, the Dates
 line, polish rows, a cut story's Blocked status, the renumbering of stories after a moved item)
 and makes one commit of exactly those files, the pick being the commit instruction. In
 `autonomous` it writes the polish list only and reports the proposals; cuts and dates wait. The
@@ -26,21 +28,21 @@ freeze date is recorded and never enforced. No director gates apply.
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec`, no fixture needed.
+Checked against the SKILL.md by `$skill-test spec`, no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Resolves `automation` and names `collaborative`, `guided` and `autonomous`
 - [ ] Names every write on the Writes line before the pick, and writes nothing before it
 - [ ] Never proposes an item a Keep line names
 - [ ] Asks dates only for `sell`, `early_access` and `publisher`
-- [ ] Has a next-step handoff (`/create-stories` for the not-yet items left)
+- [ ] Has a next-step handoff (`$create-stories` for the not-yet items left)
 
 ---
 
 ## Director Gate Checks
 
-None. `/cut` proposes; the person picks. No gate is invoked.
+None. `$cut` proposes; the person picks. No gate is invoked.
 
 ---
 
@@ -48,7 +50,7 @@ None. `/cut` proposes; the person picks. No gate is invoked.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` § Fixture defaults.
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` § Fixture defaults.
 
 ---
 
@@ -64,14 +66,14 @@ Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` § Fixture defaults.
 - `prototypes/drowned-tower/evidence/check-run.yaml` newer than every game file, with
   `base.readable` failed and not marked deliberate
 
-**Input:** `/cut`
+**Input:** `$cut`
 
 **Expected behavior:**
 1. Runs `cut-read.sh`; its rows show both briefs, `dates asked` and a fresh record
 2. Proposes "Boss rush mode" first (Out of scope rules out boss fights), with that reason
 3. Never offers "Tide rises" (a Keep line names the tide)
 4. Polish shows a row for the readable fail, `· from: readable check of <date>`
-5. Asks the cut pick (multi-select) and when to release it in one call; then runs
+5. Asks the cut pick (single-select per proposal or an explicit numbered set) and when to release it in one call; then runs
    `cut-read.sh --target <date>` and asks "Freeze on <date>?" with `Freeze then` / `Another date`
 6. On the pick: `cut-apply.sh` with both `--brief` paths, `--cut 4 "<reason>"`, `--dates` and
    `--polish`; one commit `docs: cut Boss rush mode · dates · polish list (1 rows)` of the files
@@ -89,7 +91,7 @@ Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` § Fixture defaults.
 
 **Fixture:** as Case 1, with `project.goal: hobby`
 
-**Input:** `/cut`
+**Input:** `$cut`
 
 **Expected behavior:**
 1. `cut-read.sh` shows `dates not_asked`
@@ -107,11 +109,11 @@ Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` § Fixture defaults.
 **Fixture:** as Case 1 with no `project.goal`; the brief's In your words says "I want to put
 it on Steam"
 
-**Input:** `/cut`
+**Input:** `$cut`
 
 **Expected behavior:**
 1. `cut-read.sh` shows `goal - unset` and `dates guess`
-2. Guesses `sell` with `/start`'s goal table and shows `Goal: sell (guessed)`
+2. Guesses `sell` with `$start`'s goal table and shows `Goal: sell (guessed)`
 3. Asks the dates, as for `sell`
 4. Writes no `project.goal`
 
@@ -125,10 +127,10 @@ it on Steam"
 
 **Fixture:** as Case 2 (`hobby`)
 
-**Input:** `/cut`, then "actually I want to sell it"
+**Input:** `$cut`, then "actually I want to sell it"
 
 **Expected behavior:**
-1. Runs `bash .claude/scripts/config-set.sh project.goal sell`
+1. Runs `bash .agents/scripts/config-set.sh project.goal sell`
 2. Asks the dates at once
 
 **Assertions:**
@@ -140,11 +142,11 @@ it on Steam"
 
 **Fixture:** no `design/game-brief.md`; `design/gdd/combat.md` exists
 
-**Input:** `/cut`
+**Input:** `$cut`
 
 **Expected behavior:**
 1. `cut-read.sh` prints `brief none` and exits 1
-2. Says /cut works from the brief's Features list and names `/scope-check`; stops
+2. Says $cut works from the brief's Features list and names `$scope-check`; stops
 
 **Assertions:**
 - [ ] Nothing is written and nothing is asked
@@ -155,7 +157,7 @@ it on Steam"
 
 **Fixture:** as Case 1, with `prototypes/drowned-tower/config.js` changed after the record
 
-**Input:** `/cut`
+**Input:** `$cut`
 
 **Expected behavior:**
 1. `cut-read.sh` shows `record ... stale prototypes/drowned-tower/config.js`
@@ -174,7 +176,7 @@ it on Steam"
 `modes.automation: autonomous`; stories `story-001` (`Brief MVP feature 2`, Ready) and
 `story-002` (`Brief MVP feature 4`, Ready)
 
-**Input:** `/cut`
+**Input:** `$cut`
 
 **Expected behavior:**
 1. Runs `timeout 900 npm run smoke`; a failure becomes a polish row
@@ -191,11 +193,11 @@ it on Steam"
 
 **Fixture:** as Case 7 with `modes.automation: collaborative`
 
-**Input:** `/cut`, pick item 2; later "bring back Ghost companion"
+**Input:** `$cut`, pick item 2; later "bring back Ghost companion"
 
 **Expected behavior:**
 1. `cut-apply.sh --cut 2` moves the item; `story-001`'s Status becomes
-   `Blocked — BLOCKED: cut by /cut <date>: <reason>` and its Requirement
+   `Blocked — BLOCKED: cut by $cut <date>: <reason>` and its Requirement
    `Brief Out of scope: Ghost companion`; `story-002` becomes `Brief MVP feature 3`
 2. The commit includes both stories
 3. "Bring back" runs `cut-apply.sh --back "Ghost companion" not_yet`: the item is the last
@@ -211,8 +213,8 @@ it on Steam"
 
 - [ ] Shows the proposals, polish rows and dates on one screen before asking the pick
 - [ ] Names every file on the Writes line before writing, and writes nothing before the pick
-- [ ] Asks with the question tool, multi-select; without one, lists the options numbered and ends the turn; a skipped or dismissed question is asked again in plain text
+- [ ] Uses one single-select question per proposal or an explicit numbered set; without the tool, lists options in plain text and waits; only an explicit `none` means no cuts, while a blank or dismissal remains unanswered
 - [ ] Commits only the `wrote` paths in one commit, the pick being the commit instruction; with no git, says "Not committed"
 - [ ] In `autonomous`, writes the polish list only, leaves cuts and dates in the report, and commits nothing
 - [ ] Writes `project.goal` only when the person changes it on the screen
-- [ ] Ends with the next step: build what is left before the freeze (`/create-stories` in a project) and work down the polish list
+- [ ] Ends with the next step: build what is left before the freeze (`$create-stories` in a project) and work down the polish list

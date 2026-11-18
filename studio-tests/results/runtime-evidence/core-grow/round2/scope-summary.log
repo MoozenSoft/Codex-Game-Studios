@@ -1,0 +1,4 @@
+{"agents_unchanged": true, "historical_report_unchanged": true, "reference_unchanged": true, "known_immutable_changes": [".codex/hooks/__pycache__/event_input.cpython-312.pyc", ".codex/hooks/dispatch.py"], "project_only_appended_engine": true, "brief_sections_unchanged": {"Keep": true, "Avoid": true, "Out of scope": true, "Look and references": true}, "transition_js_removed": true}
+
+此定向检查不覆盖或改变 immutable-comparison.json 中已记录的 hook 哈希失败。
+

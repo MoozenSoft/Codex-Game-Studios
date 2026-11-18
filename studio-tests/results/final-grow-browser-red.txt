@@ -1,0 +1,16 @@
+test_generated_config_keeps_classic_bindings_in_chrome (test_grow_config_scope.GrowConfigBrowserTests.test_generated_config_keeps_classic_bindings_in_chrome) ... FAIL
+
+======================================================================
+FAIL: test_generated_config_keeps_classic_bindings_in_chrome (test_grow_config_scope.GrowConfigBrowserTests.test_generated_config_keeps_classic_bindings_in_chrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Git\Codex-Game-Studios\studio-tests\browser\test_grow_config_scope.py", line 91, in test_generated_config_keeps_classic_bindings_in_chrome
+    self.assertEqual(json.loads(parser.result), {'color':'purple', 'bonus':2, 'offset':3, 'extra':35})
+AssertionError: {'error': 'Uncaught ReferenceError: ART is not defined'} != {'color': 'purple', 'bonus': 2, 'offset': 3, 'extra': 35}
+- {'error': 'Uncaught ReferenceError: ART is not defined'}
++ {'bonus': 2, 'color': 'purple', 'extra': 35, 'offset': 3}
+
+----------------------------------------------------------------------
+Ran 1 test in 13.007s
+
+FAILED (failures=1)

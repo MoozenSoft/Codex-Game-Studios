@@ -1,0 +1,87 @@
+# The one-shot's small check (check-run/1).
+# Written by one-shot-check.sh --record: the results are /prototype's reading of
+# evidence/self-check.tsv; never edited by hand.
+kind: check-run/1
+engine: web
+browser: "HeadlessChrome/157.0.0.0"
+time: "2026-11-16 20:35:22"
+checks:
+  - id: boots
+    result: pass
+    evidence:
+      - "evidence/self-check.tsv"
+  - id: shot
+    result: pass
+    evidence:
+      - "evidence/play.png"
+  - id: outlines
+    result: pass
+    evidence:
+      - "evidence/figures.png"
+  - id: brief-words
+    result: pass
+    evidence:
+      - "evidence/brief-words.tsv"
+  - id: emoji
+    result: pass
+    evidence:
+      - "evidence/self-check.tsv"
+  - id: nearest-game
+    result: pass
+    evidence:
+      - "evidence/nearest-game.txt"
+brief_checklist:
+  - id: L1
+    result: pass
+    evidence: "evidence/play.png"
+    item: "Look: 2D原创矢量钓鱼；靛蓝暮色、青绿池水、杏色渔夫与金色判定区；渔夫有草帽、身体、手臂与钓竿，鱼有尾鳍、背鳍与眼睛；每个形象手绘，无 emoji 或单一圆形替身。配色与造型细节 *(guessed)*。"
+  - id: L2
+    result: pass
+    evidence: "evidence/play.png"
+    item: "View: 2D 固定俯视镜头；池畔木栈道和可游动的鱼影。*(guessed)*"
+  - id: F1
+    result: pass
+    evidence: "evidence/figures.png"
+    item: "绘制 2D 原创矢量渔夫、池塘、鱼与 HUD，无 emoji。"
+  - id: F2
+    result: pass
+    evidence: "index.html:146"
+    item: "方向键移动渔夫，Space 在判定条区域内收鱼。"
+  - id: F3
+    result: pass
+    evidence: "index.html:151"
+    item: "30 秒倒计时、3 条胜利与超时失败。"
+  - id: F4
+    result: pass
+    evidence: "index.html:145"
+    item: "Enter 开始/重试，P 暂停/继续，显示操作与结果。"
+  - id: F5
+    result: pass
+    evidence: "index.html:194"
+    item: "config.js 集中数值，固定步进、seed 回放及 window.game 钩子。"
+  - id: S1
+    result: pass
+    evidence: "index.html:146"
+    item: "移动、判定条、收鱼 · in the slice"
+  - id: S2
+    result: pass
+    evidence: "evidence/pause.png"
+    item: "倒计时、胜负、暂停和重试 · in the slice"
+  - id: S3
+    result: pass
+    evidence: "index.html:194"
+    item: "固定步进、确定 seed 与测试钩子 · in the slice"
+  - id: M1
+    result: pass
+    evidence: "index.html:145"
+    item: "Enter 离开标题后，方向键沿池畔栈道移动，观察循环判定条，Space 在金色区域内收鱼；三条后进入胜利结果，或三十秒到时失败，Enter 立即重试。"
+  - id: C1
+    result: pass
+    evidence: "index.html:158"
+    item: "开局即需瞄准时机；每条鱼后判定条加快，失误有短暂收线冷却但不扣已获鱼，失败清空本局重新开始。加速与冷却细节 *(guessed)*。"
+measures:
+  - id: step-time
+    value: 0.100
+    unit: ms
+    by: browser
+    detail: "mean 0.003 ms, slowest 0.100 ms, 190 steps"

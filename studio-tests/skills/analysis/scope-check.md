@@ -1,8 +1,10 @@
-# Skill Test Spec: /scope-check
+# Skill Test Spec: $scope-check
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/scope-check` is a Haiku-tier read-only skill that compares a feature's,
+`$scope-check` is a read-only skill that compares a feature's,
 sprint's or milestone's original planned scope against what has actually been
 implemented. It takes the whole argument string — a feature name (which may be
 several words), a sprint number, or a milestone name — and locates the baseline
@@ -22,12 +24,12 @@ No files are written and no director gates are invoked.
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keywords: PASS, CONCERNS, NOT ASSESSED, FAIL
-- [ ] Does NOT require "May I write" language (the skill states it is read-only and `allowed-tools` has no Write/Edit)
+- [ ] 只读分析不改被审阅产物；可选报告写入遵循协作模式及已有授权，不以工具字段代替权限。
 - [ ] Has a next-step handoff (Phase 5: follow-up per verdict)
 
 ---
@@ -42,7 +44,7 @@ None. Scope check is a read-only advisory skill; no gates are invoked.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -56,7 +58,7 @@ Fixture defaults.
 - `src/gameplay/inventory/` and `src/gameplay/crafting/` implement all 20, plus one addition (item sorting) found in a recent commit
 - No items were dropped
 
-**Input:** `/scope-check inventory crafting system`
+**Input:** `$scope-check inventory crafting system`
 
 **Expected behavior:**
 1. Skill uses the whole argument, "inventory crafting system", to locate the baseline — not only "inventory"
@@ -65,7 +67,7 @@ Fixture defaults.
 4. Report lists Original Scope and Current Scope; the Scope Additions table names item sorting with its source, date, justification and effort
 5. Bloat Score: 20 original, 21 current, 1 added (+5%), 0 removed
 6. Verdict: **PASS** — On Track
-7. Phase 5: no action required; suggests re-running before the next milestone; ends with "Run `/scope-check [name]` again after cuts are made to verify the verdict improves."
+7. Phase 5: no action required; suggests re-running before the next milestone; ends with "Run `$scope-check [name]` again after cuts are made to verify the verdict improves."
 
 **Assertions:**
 - [ ] The baseline is located from the full multi-word argument, not its first word
@@ -83,7 +85,7 @@ Fixture defaults.
 - Commits since the sprint start add an online leaderboard, an achievement system and a photo mode, none of which appear in the sprint plan
 - No planned stories were dropped
 
-**Input:** `/scope-check sprint-3`
+**Input:** `$scope-check sprint-3`
 
 **Expected behavior:**
 1. Skill reads `production/sprints/sprint-003.md` as the baseline
@@ -91,12 +93,12 @@ Fixture defaults.
 3. Scope Additions table names all three; Bloat Score shows 8 original, 11 current, +37.5%
 4. Recommendations sort items into Cut / Defer / Keep / Flag
 5. Verdict: **FAIL** — Significant Creep
-6. Phase 5: recommends escalating to the producer and references `/sprint-plan update` for re-planning or `/estimate` to re-baseline
+6. Phase 5: recommends escalating to the producer and references `$sprint-plan update` for re-planning or `$estimate` to re-baseline
 
 **Assertions:**
 - [ ] Each unplanned addition is named explicitly in the Scope Additions table
 - [ ] Verdict is FAIL for a net change between 25% and 50%
-- [ ] Output recommends escalating to the producer and references `/sprint-plan update` or `/estimate`
+- [ ] Output recommends escalating to the producer and references `$sprint-plan update` or `$estimate`
 - [ ] Skill does not edit the sprint plan or remove stories — findings are advisory
 
 ---
@@ -107,7 +109,7 @@ Fixture defaults.
 - No `design/gdd/crafting.md` and no file in `design/` matches "crafting"
 - `src/gameplay/crafting/` contains implemented code
 
-**Input:** `/scope-check crafting`
+**Input:** `$scope-check crafting`
 
 **Expected behavior:**
 1. Phase 1 looks for `design/gdd/crafting.md` and a matching file in `design/`; none exists
@@ -128,7 +130,7 @@ Fixture defaults.
 - `design/gdd/dialogue.md` exists but contains only section headings and `[TO BE CONFIGURED]` placeholders — no scope items
 - `src/narrative/dialogue/` contains implemented code
 
-**Input:** `/scope-check dialogue`
+**Input:** `$scope-check dialogue`
 
 **Expected behavior:**
 1. Phase 1 finds the baseline document, so it does not stop there
@@ -151,7 +153,7 @@ Fixture defaults.
 - `production/sprints/sprint-004.md` lists 6 planned stories
 - No source files relate to those stories, `git log` shows no commits since the sprint start, and nothing is marked in progress
 
-**Input:** `/scope-check sprint-4`
+**Input:** `$scope-check sprint-4`
 
 **Expected behavior:**
 1. Phase 1 reads `production/sprints/sprint-004.md` as the baseline — 6 items
@@ -175,20 +177,20 @@ Fixture defaults.
 - `production/milestones/alpha.md` enumerates 10 scope items
 - Current state has all 10 plus two additions (a settings menu rework and an extra enemy type)
 
-**Input:** `/scope-check alpha`
+**Input:** `$scope-check alpha`
 
 **Expected behavior:**
 1. Skill reads `production/milestones/alpha.md` as the baseline
 2. Bloat Score: 10 original, 12 current, +20%
 3. Verdict: **CONCERNS** — Minor Creep
 4. No director gate is invoked regardless of review mode
-5. Phase 5: offers to identify the 2–3 additions with the best cut ratio and references `/sprint-plan update`
+5. Phase 5: offers to identify the 2–3 additions with the best cut ratio and references `$sprint-plan update`
 6. Skill ends without writing any files
 
 **Assertions:**
 - [ ] Verdict is CONCERNS for a net change between 10% and 25%
 - [ ] No director gate is invoked in any review mode
-- [ ] Output offers to identify the additions with the best cut ratio and references `/sprint-plan update`
+- [ ] Output offers to identify the additions with the best cut ratio and references `$sprint-plan update`
 - [ ] No files are written
 
 ---
@@ -201,7 +203,7 @@ Fixture defaults.
 - [ ] Emits NOT ASSESSED instead of a percentage when the baseline has no items or the current state cannot be read
 - [ ] Does not write any files
 - [ ] No director gates are invoked
-- [ ] Declares `model: haiku` (when a declared tier is used: `.claude/docs/model-tiers.md`)
+- [ ] Skill frontmatter does not select a model or reasoning effort; execution inherits the current authorized session configuration.
 
 ---
 

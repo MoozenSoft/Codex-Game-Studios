@@ -1,0 +1,325 @@
+=== ui-baseline-visible.txt ===
+1032 text (heading) 你说：
+													1033 text APP_AUDIT_458B4A0_BASELINE：这是本项目提交458b4a0的App只读验收。先实际执行Get-Location和git rev-parse --show-toplevel，预期根目录为 <app-probe>；若不一致立即停止，不自动切换、不修改任何文件。只凭启动上下文返回APP_AUDIT_开头的验收标记；禁止用工具读取检查点、hooks或旧日志获取标记。然后用真实 D:/Program Files/Git/bin/bash.exe 调用当前checkout的 .agents/scripts/yaml-helper.sh，--root 指向 .scratch/app-audit-458b4a0/config-case，读取engine,engine_values,engine_row，报告共享引擎与派生根及本地忽略说明。Python仅使用已安装解释器或CGS_PYTHON，不调用安装管理器；沙箱失败走正常审批。全程不写文件、不构建、不安装、不委派、不提交、不改信任。两项modified工具hooks需用户正常审阅，不能把普通工具执行当其已触发的证据。本隔离Git历史独立，不必解析458b4a0对象；框架运行文件由父验收从该提交完整同步并核对。
+													1034 text 22:02
+													1035 button 复制消息
+														1036 image (graphic)
+													1037 button 编辑消息
+														1038 image (graphic)
+													1039 button 用时 1分钟 12秒
+														1040 image (graphic)
+													1041 text (heading) ChatGPT 说：
+													1042 text APP_AUDIT_458B4A0_RECOVERY_a42d
+													1043 text （仅取自启动上下文）
+													1044 list
+														1045 list item Get-Location 与 git rev-parse --show-toplevel 均确认根目录为 <app-probe>。
+														1046 list item 使用指定 Git Bash、当前 checkout 的 helper 和指定 --root 查询成功，退出码 0；沙箱启动失败后已走正常审批。
+														1047 list item engine: Web (project.yaml)
+														1048 list item engine_values: name=Web(project.yaml) version=unset language=unset
+														1049 list item 派生根：`code_root=src`、`test_root=tests`、`asset_root=assets`；来源为 .agents/engines/engines.tsv。
+														1050 list item 本地 engine.name 不允许覆盖共享配置，已被忽略；提示移入 project.yaml 或删除。
+													1051 text 两项 modified 工具 hooks 仍需用户正常审阅；本次工具执行不能证明它们已触发。全程未写文件、构建、安装、委派、提交或修改信任。
+													1052 button 复制
+														1053 image (graphic)
+													1054 button 评价回复 ID: radix-_r_53o_
+													1055 button (toggle button) 朗读
+													1056 button 更多操作 ID: radix-_r_53s_
+													1057 text 22:03
+													1058 text (heading) 最新一条回复
+													1059 status bar (status)
+													1060 group
+														1061 text field (edit) (settable, string) 和 Codex 一起工作 Value: 和 Codex 一起工作
+															1063 text
+														1064 button 添加文件等内容
+														1065 button 更改权限 ID: radix-_r_51e_
+															1066 image (graphic)
+															1067 text 帮我批准
+														1068 button GPT-6.1 Sol 高 ID: radix-_r_51h_
+														1069 button 听写
+															1070 image (graphic)
+														1071 button 开启语音聊天
+											1072 group
+
+=== ui-waiting-visible.txt ===
+1824 group 问题 上一个问题 1 of 2 下一个问题 忽略 write_qa_plan：是否将已展示的完整计划写入 production/qa/qa-plan-app-acceptance-2026-11-17.md？ 听写 跳过 下一步
+															1825 text 问题
+															1826 button (disabled) 上一个问题
+																1827 image (graphic)
+															1828 text 1 of 2
+															1829 button 下一个问题
+																1830 image (graphic)
+															1831 button 忽略
+																1832 image (graphic)
+															1833 text write_qa_plan：是否将已展示的完整计划写入 production/qa/qa-plan-app-acceptance-2026-11-17.md？
+															1834 group (radio group) (settable, string)
+																1835 radio button (selectable, settable, string) 写入完整计划
+																1836 radio button (selectable, settable, string) 不写入计划
+															1837 text field (edit) (settable, string) 或自行撰写回复 Value: 或自行撰写回复
+																2337 text 或自行撰写回复
+																1839 text
+															1840 button 听写
+																1841 image (graphic)
+															1842 button 跳过
+															1843 button (disabled) 下一步
+
+=== ui-question-one-selected.txt ===
+1824 group
+															1825 text 问题
+															1826 button (disabled) 上一个问题
+																1827 image (graphic)
+															1828 text 1 of 2
+															1829 button 下一个问题
+																1830 image (graphic)
+															1831 button 忽略
+																1832 image (graphic)
+															1833 text write_qa_plan：是否将已展示的完整计划写入 production/qa/qa-plan-app-acceptance-2026-11-17.md？
+															1834 group (radio group) (settable, string)
+																1835 radio button (selectable, settable, string) 写入完整计划
+																1836 radio button (selectable, settable, string) 不写入计划
+															1837 text field (edit) (settable, string) 或自行撰写回复 Value: 或自行撰写回复
+																2341 text 或自行撰写回复
+																1839 text
+															1840 button 听写
+																1841 image (graphic)
+															1842 button 跳过
+															1843 button 下一步
+
+=== ui-question-two-selected.txt ===
+2343 group
+															2344 text 问题
+															2345 button 上一个问题
+																2346 image (graphic)
+															2347 text 2 of 2
+															2348 button (disabled) 下一个问题
+																2349 image (graphic)
+															2350 button 忽略
+																2351 image (graphic)
+															2352 text backfill_stories：是否仅将已展示的 QA 用例回填到 .scratch/app-audit-458b4a0/story-app-acceptance.md 的 QA Test Cases，保留故事状态？
+															2353 group (radio group) (settable, string)
+																2354 radio button (selectable, settable, string) 回填专用 story
+																2355 radio button (selectable, settable, string) 不回填 story
+															2356 text field (edit) (settable, string) 或自行撰写回复 Value: 或自行撰写回复
+																2364 text 或自行撰写回复
+																2358 text
+															2359 button 听写
+																2360 image (graphic)
+															2361 button 跳过
+															2362 button 发送
+
+=== ui-answers-submitted.txt ===
+2494 text (heading) 你说：
+													2495 text write_qa_plan：是否将已展示的完整计划写入 production/qa/qa-plan-app-acceptance-2026-11-17.md？
+													2496 text 写入完整计划
+													2497 text backfill_stories：是否仅将已展示的 QA 用例回填到 .scratch/app-audit-458b4a0/story-app-acceptance.md 的 QA Test Cases，保留故事状态？
+													2498 text 不回填 story
+													2499 text 22:15
+													2500 button 复制消息
+														2501 image (graphic)
+													2510 group
+														2511 text (heading) ChatGPT 说：
+														2512 status bar (status)
+														2513 text 已收到两个独立回答：
+														2514 text 写入完整计划，不回填 story
+														2515 text 。我会将已展示的完整草稿保存到固定路径，再核对内容；story 状态和用例保持不变。
+													2516 group
+														2517 button 正在运行 Test-Path -LiteralPath 'production/qa/qa-plan-app-acceptance-2026-11-17.md' Get-FileHash -Algorithm SHA256 -LiteralPath '.scratch/app-audit-458b4a0/story-app-acceptance.md' Get-Content -LiteralPath '.scratch/app-audit-458b4a0/story-app-acceptance.md'
+														2518 text 正在运行 Test-Path -LiteralPath 'production/qa/qa-plan-app-acceptance-2026-11-17.md' Get-FileHash -Algorithm SHA256 -LiteralPath '.scratch/app-audit-458b4a0/story-app-acceptance.md' Get-Content -LiteralPath '.scratch/app-audit-458b4a0/story-app-acceptance.md'
+													1213 button 滚动到底部
+													1058 text (heading) 最新一条回复
+													1059 status bar (status)
+													1060 group
+														1106 text field (edit) (settable, string) 和 Codex 一起工作 Value: 和 Codex 一起工作
+															2384 text 和 Codex 一起工作
+															1108 text
+														1109 button 添加文件等内容
+														2332 button 更改权限 ID: radix-_r_592_
+															2333 image (graphic)
+															2334 text 帮我批准
+														2335 button GPT-6.1 Sol 高 ID: radix-_r_598_
+														1114 button 听写
+															1115 image (graphic)
+														2385 button 停止
+															2386 image (graphic)
+											417 status bar (status) ID: DndLiveRegion-32
+											1072 group
+										315 status bar (status)
+										316 status bar (status) ID: DndLiveRegion-0
+										317 status bar (status) ID: DndLiveRegion-1
+										1073 group
+			319 pane (region)
+				320 pane (region)
+					321 button Minimize ID: view_1
+					322 button Maximize ID: view_2
+					323 button Close ID: view_4
+
+=== ui-qa-output-visible.txt ===
+2812 text (heading) ChatGPT 说：
+													2813 status bar (status)
+													2815 text 已写入完整
+													2816 button QA 计划
+														2817 image (graphic)
+													2818 text ，核对内容与展示草稿一致。
+													2819 text 按你的选择未回填 story；SHA-256 确认其内容未变，状态仍为 Ready。
+													2820 text 框架静态校验退出码为
+													2821 text 0
+													2822 text 。故事用例及完整游戏测试未执行，不代表故事验收通过。
+													2831 group
+														2832 button 查看已更改的文件
+														2833 image (graphic)
+														2834 text 已编辑 qa-plan-app-acceptance-2026-11-17.md
+														2835 text +73
+														2836 text -0
+														2837 button 撤销
+															2838 image (graphic)
+														2839 button 查看变更
+													2840 button 复制
+														2841 image (graphic)
+													2842 button 评价回复 ID: radix-_r_5b8_
+													2843 button (toggle button) 朗读
+													2844 button 更多操作 ID: radix-_r_5bc_
+													2845 text 22:18
+													1213 button 滚动到底部
+													1058 text (heading) 最新一条回复
+													1059 status bar (status)
+													1060 group
+														1106 text field (edit) (settable, string) 和 Codex 一起工作 Value: 和 Codex 一起工作
+															2848 text 和 Codex 一起工作
+															1108 text
+														1109 button 添加文件等内容
+														2332 button 更改权限 ID: radix-_r_592_
+															2333 image (graphic)
+															2334 text 帮我批准
+														2335 button GPT-6.1 Sol 高 ID: radix-_r_598_
+														1114 button 听写
+															1115 image (graphic)
+														2847 button 开启语音聊天
+											417 status bar (status) ID: DndLiveRegion-32
+											1072 group
+										315 status bar (status)
+										316 status bar (status) ID: DndLiveRegion-0
+										317 status bar (status) ID: DndLiveRegion-1
+										1073 group
+			319 pane (region)
+				320 pane (region)
+					321 button Minimize ID: view_1
+					322 button Maximize ID: view_2
+					323 button Close ID: view_4
+
+=== ui-final-business.txt ===
+2916 text (heading) ChatGPT 说：
+														2917 status bar (status)
+														2918 text (heading) 目标操作结果
+														2919 text 当前项目根的
+														2920 text git commit --dry-run
+														2921 text 为
+														2922 text BLOCKED／无提交资格
+														2923 text 。真实 PreToolUse 拒绝原文：
+														2924 text 纯文本
+														2925 button (toggle button) 启用自动换行
+														2926 button 复制代码
+														2927 text Command blocked by PreToolUse hook: 提交前暂存区 JSON 校验未完成：.scratch/app-audit-458b4a0/staged-bad.json Git 暂存内容不是有效 UTF-8 JSON；工作区修复后须重新暂存. Command: git commit --dry-run
+														2928 text 未实际提交，未修复、重新暂存、撤回 fixture 或修改索引。
+														2929 text 依据只读的
+														2930 button 5-report.md
+															2931 image (graphic)
+														2932 text ，按第一匹配规则判定：
+														2933 group
+															2934 table
+																2935 data item (row)
+																	2936 data item (column header) Fixture
+																	2937 data item (column header) 最终 verdict
+																	2938 data item (column header) 首条命中规则
+																2939 data item (row)
+																	2940 data item (item) A
+																	2941 data item (item) FAIL
+																	2942 data item (item) FAIL 第4条：任何必要手工或平台检查 FAIL，包括 Batch 3 性能。MISSING evidence 不会降低已知失败的优先级。
+																2943 data item (row)
+																	2944 data item (item) B
+																	2945 data item (item) NOT ASSESSED
+																	2946 data item (item) NOT ASSESSED 第4条：任何必要手工或平台检查为 NOT TESTED 或 UNANSWERED。
+																2947 data item (row)
+																	2948 data item (item) C
+																	2949 data item (item) FAIL (quick — coverage and Batch 3 not checked)
+																	2950 data item (item) FAIL 第4条：Batch 1 核心稳定性检查 FAIL。quick 后缀不改变 verdict。
+															2951 button 复制表格
+															2952 button 展开表格
+														1213 button 滚动到底部
+														1058 text (heading) 最新一条回复
+														1059 status bar (status)
+														1060 group
+															2874 text field (edit) (settable, string) 和 Codex 一起工作 Value: 和 Codex 一起工作
+																2953 text 和 Codex 一起工作
+																2876 text
+															2877 button 添加文件等内容
+															2878 button 更改权限 ID: radix-_r_592_
+																2879 image (graphic)
+																2880 text 帮我批准
+															2881 button GPT-6.1 Sol 高 ID: radix-_r_598_
+															2882 button 听写
+																2883 image (graphic)
+															2902 button 开启语音聊天
+													2892 group (navigation) 用户消息
+														2893 button 跳转到用户消息 1
+														2894 button 跳转到用户消息 2
+														2895 button 跳转到用户消息 3
+														2898 button 跳转到用户消息 4
+											417 status bar (status) ID: DndLiveRegion-32
+											1072 group
+										315 status bar (status)
+										316 status bar (status) ID: DndLiveRegion-0
+										317 status bar (status) ID: DndLiveRegion-1
+										1073 group
+			319 pane (region)
+				320 pane (region)
+					321 button Minimize ID: view_1
+					322 button Maximize ID: view_2
+					323 button Close ID: view_4
+
+=== ui-final-assertions.txt ===
+2954 text (heading) 验收断言结论
+														2955 list
+															2956 list item 坏暂存 JSON 阻断断言：PASS，实际因指定暂存 JSON 被项目 hook 拒绝；被拒绝内容仍不合格。
+																2957 text PASS
+															2958 list item A／B／C 模型决策断言：PASS，分别命中上述规则；这是规则推演，未执行游戏测试或试玩。
+																2959 text PASS
+															2960 list item 保留此前输出选择：完整 QA 计划已写入；story 回填明确拒绝，保持未回填、Ready。本轮未改写这些文件。
+																2961 button QA 计划
+																	2962 image (graphic)
+														2963 text 本次仅验证 App 当前实际工具路径。真实 PreCompact、全部角色、原生引擎及完整游戏流程均未验证，不能宣称通过。
+														2964 button 复制
+															2965 image (graphic)
+														2966 button 评价回复 ID: radix-_r_5ci_
+														2967 button (toggle button) 朗读
+														2968 button 更多操作 ID: radix-_r_5cm_
+														2969 text 22:20
+														1213 button 滚动到底部
+														1058 text (heading) 最新一条回复
+														1059 status bar (status)
+														1060 group
+															2874 text field (edit) (settable, string) 和 Codex 一起工作 Value: 和 Codex 一起工作
+																2970 text 和 Codex 一起工作
+																2876 text
+															2877 button 添加文件等内容
+															2878 button 更改权限 ID: radix-_r_592_
+																2879 image (graphic)
+																2880 text 帮我批准
+															2881 button GPT-6.1 Sol 高 ID: radix-_r_598_
+															2882 button 听写
+																2883 image (graphic)
+															2902 button 开启语音聊天
+													2892 group (navigation) 用户消息
+														2893 button 跳转到用户消息 1
+														2894 button 跳转到用户消息 2
+														2895 button 跳转到用户消息 3
+														2898 button 跳转到用户消息 4
+											417 status bar (status) ID: DndLiveRegion-32
+											1072 group
+										315 status bar (status)
+										316 status bar (status) ID: DndLiveRegion-0
+										317 status bar (status) ID: DndLiveRegion-1
+										1073 group
+			319 pane (region)
+				320 pane (region)
+					321 button Minimize ID: view_1
+					322 button Maximize ID: view_2
+					323 button Close ID: view_4

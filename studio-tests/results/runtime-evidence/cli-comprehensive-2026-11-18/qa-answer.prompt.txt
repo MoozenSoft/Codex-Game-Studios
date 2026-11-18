@@ -1,0 +1,1 @@
+这是CLI受控验收的明确答案，沿用本线程已有QA草稿和目标路径：write_qa_plan=yes，backfill_stories=no。批准将已展示的完整计划写到production/qa/qa-plan-cli-full-20261118-2026-11-18.md；不批准回填.story，保持.scratch/cli-full-20261118/story.md逐字节不变。不重复询问同一授权，不把计划写入视为实现或测试完成。请按本checkout qa-plan剩余步骤执行和验证，报告真实结果及必要未评估项。不要修改其他文件或调用其他Skill；允许按流程在当前隔离fixture更新检查点，但不得关闭故事。无安装、真实提交或全局设置授权。

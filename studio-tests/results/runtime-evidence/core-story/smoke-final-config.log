@@ -1,0 +1,9 @@
+=== CCGS Config (resolved: local->yaml->legacy->default; use as-is) ===
+automation: collaborative (default)
+workflow: minimal (rigor:minimal)
+qa.level: minimal (rigor:minimal)
+testing.strict: logic=unset integration=true visual=unset ui=unset config=unset (unset = each skill applies its own default)
+=== end ===
+RECEIPT: production/qa/evidence/story-001-n-retry/stamp.txt
+UNCHANGED: src/main.ts
+UNCHANGED: tests/integration/n-retry.spec.ts

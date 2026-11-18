@@ -1,0 +1,37 @@
+{
+  "waiting": {
+    "qa_plan_absent": true,
+    "story_sha256": "1d8b3682ebb4a6c315dfe22272afdb5abb71cea633a9134a689e8c20a9cb2017",
+    "file_change_items": 0
+  },
+  "before_restore": {
+    "source_matches": 1125,
+    "source_mismatches": [],
+    "story_unchanged": true,
+    "story_sha256": "1d8b3682ebb4a6c315dfe22272afdb5abb71cea633a9134a689e8c20a9cb2017",
+    "plan_written": true,
+    "plan_sha256": "abafd2945e2c13bbdc9e992137f05f0313a498b1125a502a8d1f7a27572af4c8",
+    "env_fixture_absent": true,
+    "repaired_json_valid": true
+  },
+  "restoration": {
+    "protected_changes": [],
+    "framework_restore_errors": [],
+    "index_restored": true
+  },
+  "final_isolation": {
+    "retained_reviewed_adapter": [
+      ".codex/hooks.json",
+      ".codex/hooks/dispatch.py",
+      ".codex/hooks/event_input.py",
+      ".codex/hooks/event_log.py",
+      ".codex/hooks/run.sh",
+      ".agents/scripts/git-index-check.py",
+      ".agents/scripts/yaml-helper.sh"
+    ],
+    "retained_matches_current_source": true,
+    "protected_changes": [],
+    "index_restored": true,
+    "reason": "保留用户本轮正常审阅并信任的新hook定义及其运行依赖，其余临时同步文件已恢复"
+  }
+}

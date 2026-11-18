@@ -1,0 +1,5 @@
+{
+  "completed": true,
+  "trigger": "CLI-created thread via installed CLI app-server thread/compact/start",
+  "native_tui_slash_tested": false
+}

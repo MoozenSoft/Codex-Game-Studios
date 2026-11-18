@@ -1,0 +1,7 @@
+这是CLI对中文空格Git工作树的只读实测。不调用其他Skill，不委派，不写文件，不修改信任，不安装。
+1. 实际执行git rev-parse --show-toplevel、git rev-parse --git-dir、git rev-parse --git-common-dir，确认当前src属于独立的detached工作树。
+2. 必须从当前src调用本工作树自身 ../.agents/scripts/yaml-helper.sh resolve_config --keys automation,rigor,engine_row。不得传--root，不得调用原始checkout的helper。Git Bash为D:/Program Files/Git/bin/bash.exe；已有CGS_PYTHON是真实解释器，正常审批重试允许。
+3. 在当前工作树用git check-ignore检查project.local.yaml、production/session-state/active.md、production/agent-notes/qa-tester.md三项，报告实际退出状态。不要创建文件。
+4. 对比原fixture <probe> 的自身helper用--root指向该原fixture时automation值。两个checkout的guided/collaborative结果必须来自真实输出，不根据提示猜。
+5. 新工作树的hooks是否受信任仅按实际客户端回执报告；缺证据写未评估，不触碰全局信任，不将本次路径测试算作hooks实测。
+最终给出路径、分支状态、两个配置来源及是否发生跨checkout写入；任何失败保留。

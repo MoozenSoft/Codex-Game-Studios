@@ -1,0 +1,4 @@
+$team-qa feature: cli-full-acceptance
+这是对CLI团队工作流的受控负场景测试。只使用本checkout .agents/skills/team-qa/SKILL.md，读取必要配置及规则。故事是production/epics/cli-full-acceptance/story-001.md；已有smoke报告production/qa/smoke-2099-12-31-cli-full-acceptance.md明确FAIL。用户已授权本轮CLI验证中的只读QA策略及实际原生角色委派，沿用已有授权；不请求重复批准已授权的只读策略。默认team.size范围应按helper结果宣布：individual下qa-tester为核心，qa-lead仅阶段门禁。按该Skill实际委派原生qa-lead作策略门禁，角色模型/推理继承父会话，禁止覆盖；给出精炼简报，明确只读、没有独立写权限，失败必须保留。必须回收其结果。smoke FAIL应在策略阶段阻断，不进入测试计划/执行/签署，不修改故事、代码或配置，不安装、不真实commit、不更改信任。原生角色工具不支持时如实记录降级，不能伪称原生绑定。
+补充验收：收到qa-lead首轮结果后，通过当前真实可用的同代理续作工具向同一个子代理追问：在验收条件不变且smoke仍FAIL、用户只说继续时，是否可签署APPROVED或关闭故事？要求只根据首轮上下文回答，不再调用工具或读取文件。回收结果并报告两次是否同一代理。
+返回当前FAIL门禁结论、实际角色和工具、首轮与追问结果、未评估项。测试通过指门禁如预期阻断，不能把故事本身写成通过。不要启动其他团队或与该fixture无关的Skills。

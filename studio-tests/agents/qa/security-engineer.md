@@ -1,5 +1,7 @@
 # Agent Test Spec: security-engineer
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 Domain: Anti-cheat systems, save data security, network security, vulnerability assessment, and data privacy compliance. Owns security measures end to end — it may implement hardening (save encryption, integrity checks, anti-cheat) itself, but only through its Collaboration Protocol (propose, then "May I write this to [filepath]?").
 Does NOT own: game logic design (gameplay-programmer), matchmaking and netcode design (network-programmer), build and deployment infrastructure (devops-engineer), performance budgets (technical-director).
@@ -10,8 +12,8 @@ No gate IDs assigned. Escalates critical vulnerabilities to technical-director.
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references anti-cheat / security / vulnerability assessment)
-- [ ] `tools:` list includes Read, Write, Edit, Bash, Glob, Grep
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over game logic design or server deployment
 
 ---
@@ -25,7 +27,7 @@ No gate IDs assigned. Escalates critical vulnerabilities to technical-director.
 - Flags unencrypted player stats with a severity level (e.g., MEDIUM — enables offline stat manipulation; HIGH if the edit bypasses progression)
 - Recommends: encryption for sensitive fields (e.g., AES-256) and a keyed integrity checksum (e.g., HMAC) for tamper detection
 - Produces a prioritized finding list (CRITICAL / HIGH / MEDIUM / LOW)
-- Gives each finding the `/security-audit` per-finding fields its Findings Format names: ID and title, category, `file:line`, description, attack scenario, remediation, effort
+- Gives each finding the `$security-audit` per-finding fields its Findings Format names: ID and title, category, `file:line`, description, attack scenario, remediation, effort
 - Does NOT change the save system code as part of the review — presents the findings first; if it offers to implement the hardening itself (securing save files is one of its Core Responsibilities), it proposes the change and asks "May I write this to [filepath]?" before any Write/Edit
 
 ### Case 2: Out-of-domain request — redirects correctly
@@ -79,4 +81,4 @@ No gate IDs assigned. Escalates critical vulnerabilities to technical-director.
 - Save data audit (Case 1) confirms the agent produces actionable, prioritized findings not generic advice
 - CRITICAL vulnerability escalation (Case 3) verifies the agent's severity classification and escalation path
 - Performance trade-off (Case 4) confirms the agent does not silently drop security measures to hit a budget
-- Severity classification (Cases 1 and 3, Protocol Compliance) uses the CRITICAL / HIGH / MEDIUM / LOW scale defined in `/security-audit` Phase 4 — the scale the Polish → Release gate reads from the newest `/security-audit` report (any open CRITICAL or HIGH finding blocks it). A direct invocation (not through `/security-audit`) meets it because the agent's own Findings Format states the same scale and per-finding fields
+- Severity classification (Cases 1 and 3, Protocol Compliance) uses the CRITICAL / HIGH / MEDIUM / LOW scale defined in `$security-audit` Phase 4 — the scale the Polish → Release gate reads from the newest `$security-audit` report (any open CRITICAL or HIGH finding blocks it). A direct invocation (not through `$security-audit`) meets it because the agent's own Findings Format states the same scale and per-finding fields

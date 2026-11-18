@@ -1,0 +1,214 @@
+{
+  "date": "2026-11-18",
+  "surface": "Codex CLI",
+  "version": "0.169.0",
+  "source_head": "458b4a0e64277b496348e328d003e75e68fdb81e",
+  "source_scope": "当前工作树，含启动前已有暂存改动；逐文件同步哈希见prepared.json",
+  "model": "mixed: gpt-6.1-sol / gpt-6.2-sol",
+  "reasoning_effort": "observed per turn: high / xhigh",
+  "model_override": false,
+  "fresh_execution": {
+    "framework_tests": {
+      "total": 105,
+      "passed": 105,
+      "failed": 0,
+      "skipped": 0
+    },
+    "framework_browser_tests": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    },
+    "existing_game_tests": {
+      "total": 18,
+      "passed": 18,
+      "failed": 0,
+      "unit": 6,
+      "e2e": 12
+    },
+    "bash_scripts": 51,
+    "skills_static_and_discovery": 75,
+    "role_toml_and_source_contracts": 49,
+    "cli_invocations": 9,
+    "cli_exit_zero": 9,
+    "native_role_this_run": "qa-lead",
+    "live_hook_events": [
+      "PostToolUse",
+      "PreCompact",
+      "PreToolUse",
+      "SessionStart",
+      "Stop",
+      "SubagentStart",
+      "SubagentStop"
+    ]
+  },
+  "result": "已执行的自动化与CLI受控关键路径符合预期；不宣称所有工作流逐一完成",
+  "known_product_failures_in_executed_scope": 0,
+  "limitations": [
+    "交互TUI /compact与原生问题卡片未测：PTY进程创建被系统Access denied拒绝；本轮通过已安装CLI app-server原生接口压缩CLI线程。",
+    "自动触发压缩未测。",
+    "75个Skill与49角色均有结构/合同及发现或来源检查，但未逐个完成所有Skill流程或运行每个角色。逐项范围见coverage.json。",
+    "本轮只重跑既有游戏构建/自动测试/输入；从零需求→brief→prototype→grow→Story的完整创建链仅保留历史证据。",
+    "QA明确yes/no由受控测试控制器提供，不是人工点击UI。",
+    "新工作树hooks信任未测；七类事件的通过只属于原受信任probe。",
+    "原生引擎编辑器/构建、人工试玩与乐趣、macOS、远端CI未测。"
+  ],
+  "environment_deviations": [
+    {
+      "id": "powershell-wrapper",
+      "status": "resolved",
+      "observation": "codex.ps1被执行策略阻止，使用现有codex.cmd；没有修改全局策略。"
+    },
+    {
+      "id": "yaml-environment",
+      "status": "resolved",
+      "observation": "默认解释器缺PyYAML，首轮103/105；现有venv含PyYAML6.0.3，重跑105/105。"
+    },
+    {
+      "id": "strict-config-command",
+      "status": "resolved",
+      "observation": "features子命令不支持strict-config；改用app-server --strict-config --print-startup-config，退出0。"
+    },
+    {
+      "id": "sandbox-process",
+      "status": "resolved_for_noninteractive",
+      "observation": "若干Git Bash/Git启动在沙箱失败，正常自动审批重试成功；PTY仍Access denied。"
+    },
+    {
+      "id": "model-catalog-timeout",
+      "status": "observed",
+      "observation": "部分CLI启动刷新模型目录超时；9次执行最终均退出0。"
+    },
+    {
+      "id": "test-path-correction",
+      "status": "resolved",
+      "observation": "最初错误检查agent-notes路径，纠正为合同agent-memory后3项实际忽略匹配。"
+    },
+    {
+      "id": "quoting-and-encoding",
+      "status": "resolved",
+      "observation": "保留Python -c引号失败、初次默认编码读取及修正；未改写成首试成功。"
+    },
+    {
+      "id": "effective-model-selection",
+      "status": "observed",
+      "observation": "未传模型或推理覆盖。前段实际turn_context为6.1-sol/high，QA续作和后段为6.2-sol/xhigh；config/read首末快照分别6.1-sol/high及6.1-sol/low。不从快照推断每回合配置或变化原因，以原始turn_context记证。"
+    }
+  ],
+  "protection": {
+    "probe_protected_changes": [],
+    "restore_errors": [],
+    "probe_index_restored": true,
+    "root_tracked_changes": [],
+    "root_index_unchanged": true
+  },
+  "cleanup": {
+    "future_dated_smoke_removed": true,
+    "epic_fixture_files_removed": true,
+    "generated_qa_plan_archived_then_removed": true,
+    "controlled_worktree_removed": true
+  },
+  "models_by_invocation": {
+    "baseline": [
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "high"
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "high"
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "high"
+      }
+    ],
+    "recovery": [
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "high"
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "high"
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "high"
+      }
+    ],
+    "qa-gate": [
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "high"
+      },
+      {
+        "model": "gpt-6.2-sol",
+        "effort": "xhigh"
+      }
+    ],
+    "qa-answer": [
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "high"
+      },
+      {
+        "model": "gpt-6.2-sol",
+        "effort": "xhigh"
+      }
+    ],
+    "team-gate": [
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "high"
+      }
+    ],
+    "boundaries": [
+      {
+        "model": "gpt-6.2-sol",
+        "effort": "xhigh"
+      }
+    ],
+    "worktree": [
+      {
+        "model": "gpt-6.2-sol",
+        "effort": "xhigh"
+      },
+      {
+        "model": "gpt-6.2-sol",
+        "effort": "xhigh"
+      }
+    ],
+    "worktree-memory": [
+      {
+        "model": "gpt-6.2-sol",
+        "effort": "xhigh"
+      },
+      {
+        "model": "gpt-6.2-sol",
+        "effort": "xhigh"
+      }
+    ],
+    "game-regression": [
+      {
+        "model": "gpt-6.2-sol",
+        "effort": "xhigh"
+      }
+    ]
+  },
+  "config_snapshots": {
+    "initial": {
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "sandbox_mode": "workspace-write",
+      "approval_policy": "on-request"
+    },
+    "final": {
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "low",
+      "sandbox_mode": "workspace-write",
+      "approval_policy": "on-request"
+    }
+  }
+}

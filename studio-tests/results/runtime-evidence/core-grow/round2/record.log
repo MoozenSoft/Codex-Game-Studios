@@ -1,0 +1,68 @@
+engine	written	Web	8.3.4
+engine_reference	written	docs/engine-reference/web/VERSION.md
+
+> dusk-fish@0.0.0 build
+> tsc --noEmit && vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 13 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                 0.46 kB │ gzip: 0.32 kB
+dist/assets/index-BxrPcRSl.js  11.51 kB │ gzip: 5.35 kB
+
+✓ built in 29ms
+engine	Web
+exe	npm	path
+command	default	npm test 2>&1
+timeout	900	timeout
+half	unit	npm run test:unit
+half	e2e	npm run test:e2e
+browser	C:\Program Files\Google\Chrome\Application\chrome.exe	page-shot.sh --which
+ran	yes	-
+unit_exit	0
+unit_timed_out	no
+unit_zero_tests	no	-
+unit_tests	total=6 passed=6 failed=0
+unit_log	production/qa/evidence/core-grow/round2/test-run-grow.log.unit
+e2e_exit	0
+e2e_timed_out	no
+e2e_browser	started	-
+e2e_build	ok
+e2e_zero_tests	no	-
+e2e_tests	total=4 passed=4 failed=0
+e2e_log	production/qa/evidence/core-grow/round2/test-run-grow.log.e2e
+exit	0
+timed_out	no
+zero_tests	no	-
+tests	total=10 passed=10 failed=0
+rule	web:pass	exit 0 in each half that ran; tests passed: 10
+log	production/qa/evidence/core-grow/round2/test-run-grow.log
+
+> dusk-fish@0.0.0 smoke
+> npm run build:single && playwright test --grep @boot
+
+
+> dusk-fish@0.0.0 build:single
+> tsc --noEmit && vite build --mode single
+
+vite v8.3.4 building client environment for single...
+transforming...
+✓ 13 modules transformed.
+rendering chunks...
+[plugin vite:singlefile] 
+
+[plugin vite:singlefile] Inlining: index-BxrPcRSl.js
+computing gzip size...
+dist-single/index.html  11.93 kB │ gzip: 5.62 kB
+
+✓ built in 30ms
+
+Running 1 test using 1 worker
+
+(node:768) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests\integration\boot.spec.ts:19:1 › 标题与画布正常启动，无浏览器错误 @boot (1.3s)
+
+  1 passed (3.9s)

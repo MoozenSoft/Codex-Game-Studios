@@ -1,0 +1,14 @@
+warning: in the working copy of '.gitattributes', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'design/game-brief.md', LF will be replaced by CRLF the next time Git touches it
+[app-acceptance 83646f5] 完成导入截图重验并将单局调整为六十秒
+ 15 files changed, 247 insertions(+), 79 deletions(-)
+ create mode 100644 prototypes/app-dusk-fish/evidence/baseline/first.png
+ create mode 100644 prototypes/app-dusk-fish/evidence/baseline/first.tsv
+ create mode 100644 prototypes/app-dusk-fish/evidence/baseline/inputs.txt
+ create mode 100644 prototypes/app-dusk-fish/evidence/baseline/play-10s.png
+ create mode 100644 prototypes/app-dusk-fish/evidence/baseline/play-10s.tsv
+ create mode 100644 prototypes/app-dusk-fish/evidence/baseline/play-30s.png
+ create mode 100644 prototypes/app-dusk-fish/evidence/baseline/play-30s.tsv
+ create mode 100644 prototypes/app-dusk-fish/evidence/baseline/start.png
+ create mode 100644 prototypes/app-dusk-fish/evidence/baseline/start.tsv
+ create mode 100644 prototypes/app-dusk-fish/evidence/door.md

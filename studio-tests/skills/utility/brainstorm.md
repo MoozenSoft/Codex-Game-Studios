@@ -1,8 +1,10 @@
-# Skill Test Spec: /brainstorm
+# Skill Test Spec: $brainstorm
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/brainstorm` facilitates guided game concept ideation. It branches on the
+`$brainstorm` facilitates guided game concept ideation. It branches on the
 resolved `workflow` tier **first**:
 
 - **`minimal`** (the default — `modes.rigor` defaults to `minimal`) runs the
@@ -27,13 +29,13 @@ Both flows end with `Verdict: **COMPLETE**`.
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keyword: COMPLETE (in both the Lean Brief flow and the full flow)
 - [ ] Contains "May I write" language for both `design/game-brief.md` and `design/gdd/game-concept.md`
-- [ ] Has a next-step handoff at the end (`/map-systems` in the full flow's design-first steps; in the Lean Brief flow `/prototype` with no engine set, `/create-stories` with one)
+- [ ] Has a next-step handoff at the end (`$map-systems` in the full flow's design-first steps; in the Lean Brief flow `$prototype` with no engine set, `$create-stories` with one)
 - [ ] Documents 4 director gates in full mode: CD-PILLARS, AD-CONCEPT-VISUAL, TD-FEASIBILITY, PR-SCOPE
 - [ ] Documents a named skip note for each gate in lean and solo modes
 
@@ -59,7 +61,7 @@ Full flow only (`workflow: standard` or `full`):
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -73,7 +75,7 @@ Fixture defaults.
 - No existing `design/gdd/game-concept.md`
 - CD-PILLARS returns APPROVE; TD-FEASIBILITY returns VIABLE and PR-SCOPE returns REALISTIC (each gate's own verdict words)
 
-**Input:** `/brainstorm`
+**Input:** `$brainstorm`
 
 **Expected behavior:**
 1. Tier branch: `full` → full flow
@@ -86,7 +88,7 @@ Fixture defaults.
    TD-FEASIBILITY spawns after risks are identified, before scope tiers
 6. PR-SCOPE spawns after scope tiers are defined
 7. Skill asks "Game concept is ready. May I write it to `design/gdd/game-concept.md`?"
-8. Written after approval with a Visual Identity Anchor section; the design-first next steps include `/map-systems`
+8. Written after approval with a Visual Identity Anchor section; the design-first next steps include `$map-systems`
 9. Verdict is COMPLETE
 
 **Assertions:**
@@ -95,7 +97,7 @@ Fixture defaults.
 - [ ] TD-FEASIBILITY spawns before scope tiers are defined; PR-SCOPE after
 - [ ] "May I write it to `design/gdd/game-concept.md`?" is asked before writing
 - [ ] The concept document includes a Visual Identity Anchor section
-- [ ] Next-step handoff lists `/map-systems`
+- [ ] Next-step handoff lists `$map-systems`
 - [ ] Verdict is COMPLETE
 
 ---
@@ -108,7 +110,7 @@ Fixture defaults.
 - CD-PILLARS returns REJECT: "The pillars do not carry weight — none forces a design choice"
 - AD-CONCEPT-VISUAL returns 3 named visual directions
 
-**Input:** `/brainstorm`
+**Input:** `$brainstorm`
 
 **Expected behavior:**
 1. Both gates were spawned in parallel; the skill collects both results
@@ -134,7 +136,7 @@ Fixture defaults.
 - `project.yaml` sets `modes.rigor: standard` (`workflow` → `standard`, `review_mode` → `lean`)
 - No existing game concept
 
-**Input:** `/brainstorm`
+**Input:** `$brainstorm`
 
 **Expected behavior:**
 1. Tier branch: `standard` → full flow
@@ -159,7 +161,7 @@ Fixture defaults.
   defaults to `minimal`: `workflow` → `minimal`, `review_mode` → `solo`)
 - No `design/game-brief.md`, no `design/gdd/game-concept.md`
 
-**Input:** `/brainstorm roguelike`
+**Input:** `$brainstorm roguelike`
 
 **Expected behavior:**
 1. Tier branch: `minimal` → Lean Brief flow; Phases 1–5 are skipped
@@ -169,8 +171,8 @@ Fixture defaults.
    avoid, build order, and the one-liners) and presents the brief for one confirmation
 4. Asks "Brief is ready. May I write it to `design/game-brief.md`?" with
    `[A] Yes — write it` / `[B] Revise a field first`
-5. Next steps: `/create-stories`, then `/dev-story`, then one line naming
-   `/prototype --path html` as a browser sketch, not recommended; `/setup-engine`
+5. Next steps: `$create-stories`, then `$dev-story`, then one line naming
+   `$prototype --path html` as a browser sketch, not recommended; `$setup-engine`
    is NOT listed because `engine.name` is set
 6. Verdict is COMPLETE
 
@@ -178,7 +180,7 @@ Fixture defaults.
 - [ ] Output file is `design/game-brief.md`; `design/gdd/game-concept.md` is not written
 - [ ] 2–3 one-line concepts are proposed (not the full 9-field concept cards)
 - [ ] No director agent is spawned
-- [ ] Next steps list `/create-stories` and `/dev-story`, not `/map-systems` or `/setup-engine`
+- [ ] Next steps list `$create-stories` and `$dev-story`, not `$map-systems` or `$setup-engine`
 - [ ] The browser sketch is one line, said to be not recommended, and is not a question
 - [ ] The brief has `## Features` (every item `[ ]`), `## Avoid` and `## Keep` (empty), not `## MVP`
 - [ ] Verdict is COMPLETE
@@ -194,7 +196,7 @@ Fixture defaults.
 - The user cuts the MVP to the adjusted tiers the skill offers, then answers
   `[A] Yes — write it` to the write ask
 
-**Input:** `/brainstorm`
+**Input:** `$brainstorm`
 
 **Expected behavior:**
 1. PR-SCOPE spawns after scope tiers are defined
@@ -219,7 +221,7 @@ Fixture defaults.
 - `project.yaml` sets `modes.rigor: standard` (`workflow` → `standard`)
 - No existing game concept
 
-**Input:** `/brainstorm --review solo`
+**Input:** `$brainstorm --review solo`
 
 **Expected behavior:**
 1. Tier branch: `standard` → full flow; `--review solo` overrides the resolved
@@ -238,7 +240,7 @@ Fixture defaults.
 
 ---
 
-### Case 7: Lean Brief With No Engine — ends on `/prototype`, typed by the person
+### Case 7: Lean Brief With No Engine — ends on `$prototype`, typed by the person
 
 **Fixture:**
 - `project.yaml` has no `engine:` block and no `modes` block (`workflow` → `minimal`)
@@ -246,7 +248,7 @@ Fixture defaults.
 - The user types the hint below, picks a concept, and adds "no combat, it should
   be calm"; "you pick" for the rest; then `[A] Yes — write it`
 
-**Input:** `/brainstorm a lighthouse keeper in a storm`
+**Input:** `$brainstorm a lighthouse keeper in a storm`
 
 **Expected behavior:**
 1. The Lean Brief flow runs as in Case 4
@@ -255,16 +257,16 @@ Fixture defaults.
    there, only which one was picked
 3. "no combat" is an Avoid line; Question, Hooks and Kill condition are proposed
    and marked *(guessed)* where the user did not give them
-4. Next steps name one step: "Type `/prototype` to build it."; `/setup-engine`,
-   `/create-stories` and `/dev-story` are not listed
+4. Next steps name one step: "Type `$prototype` to build it."; `$setup-engine`,
+   `$create-stories` and `$dev-story` are not listed
 5. Verdict is COMPLETE
 
 **Assertions:**
 - [ ] In your words is the user's text word for word, never a summary
 - [ ] "no combat" appears under `## Avoid`
 - [ ] The brief has the template's Question, Hooks and Kill condition lines
-- [ ] The only next step is `/prototype`, and the skill does not start it (no Skill tool call): a typed `/brainstorm` runs on its own model
-- [ ] Variant — `engine.name: web`: the same single `/prototype` step
+- [ ] The only next step is `$prototype`, and the skill does not start it: the user chooses when to begin the next workflow, using the current authorized session model
+- [ ] Variant — `engine.name: web`: the same single `$prototype` step
 
 ---
 
@@ -277,21 +279,21 @@ Fixture defaults.
 - The user picks a concept, then answers `No preference — help me decide` to the
   engine question
 
-**Input:** `/brainstorm cozy farming`
+**Input:** `$brainstorm cozy farming`
 
 **Expected behavior:**
 1. A concept's Why It Could Work that gives a market reason, and every market risk
    in Phase 6, cites a source or says "not researched"
 2. No sales figure, player count or market size is given from memory
 3. The concept written from the game-concept template carries the same marks
-4. With no engine named, Phase 8 recommends prototype-first with `/prototype` as
-   its first step, says "Type `/prototype` to build it." and does not start it
+4. With no engine named, Phase 8 recommends prototype-first with `$prototype` as
+   its first step, says "Type `$prototype` to build it." and does not start it
 
 **Assertions:**
 - [ ] Every market claim has a source or the words "not researched"
 - [ ] No number about the market appears without a source
-- [ ] Phase 8's first prototype-first step is `/prototype`, before `/setup-engine`
-- [ ] Variant — the user names Godot: Phase 8 adds one line naming `/prototype --path html` as a browser sketch, not recommended
+- [ ] Phase 8's first prototype-first step is `$prototype`, before `$setup-engine`
+- [ ] Variant — the user names Godot: Phase 8 adds one line naming `$prototype --path html` as a browser sketch, not recommended
 
 ---
 
@@ -303,7 +305,7 @@ Fixture defaults.
 - [ ] Gates spawn at their own points in full mode (CD-PILLARS + AD-CONCEPT-VISUAL together; TD-FEASIBILITY; PR-SCOPE)
 - [ ] In the full flow (`workflow: standard` / `full`), all 4 gates are skipped in lean and solo modes, each noted by name; the Lean Brief flow spawns no gate at all
 - [ ] Asks "May I write" before writing `design/game-brief.md` or `design/gdd/game-concept.md`
-- [ ] Ends with Verdict COMPLETE and the tier's next-step handoff, and never starts `/prototype` itself
+- [ ] Ends with Verdict COMPLETE and the tier's next-step handoff, and never starts `$prototype` itself
 - [ ] Writes the person's own words to In your words unchanged, and every removal they name to Avoid
 
 ---

@@ -1,0 +1,20 @@
+stories	1	paths
+complete	0
+in_review	0
+in_progress	0
+todo	1
+blocked	0
+other	0
+no_status	0
+lint	1
+STORY	production/epics/EPIC-ACCEPTANCE/story-001-n-retry.md	TODO	Ready	Integration	Core	S	-	n/a	5	0	尚未运行；不声明通过。	None	-
+LINT	production/epics/EPIC-ACCEPTANCE/story-001-n-retry.md	no_tr_id	-
+adrs	0	docs/architecture/adr-*.md
+template_sections	17	.agents/docs/templates/architecture-decision-record.md
+accepted	0
+proposed	0
+deprecated	0
+superseded	0
+unfilled	0
+other	0
+no_status	0

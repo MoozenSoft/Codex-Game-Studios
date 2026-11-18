@@ -1,5 +1,7 @@
 # Agent Test Spec: ue-blueprint-specialist
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 - **Domain**: Blueprint architecture, the Blueprint/C++ boundary, Blueprint graph quality, Blueprint performance optimization, Blueprint Function Library design
 - **Does NOT own**: C++ implementation (gameplay-programmer exposes the C++ hooks Blueprint calls), art assets or shaders, UI/UX flow design (ux-designer)
@@ -10,8 +12,8 @@
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references Blueprint architecture and optimization)
-- [ ] `tools:` list matches the agent's role (Read/Write/Edit for Blueprint-facing files; no server or deployment tools, and Bash withheld via `disallowedTools:`)
-- [ ] Model tier is `sonnet` — frontmatter `model:` reads exactly `sonnet` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over C++ implementation decisions
 
 ---
@@ -76,4 +78,4 @@
 ## Coverage Notes
 - Case 3 (null pointer safety) is a safety-critical test — this is a common source of shipping crashes
 - Case 5 requires that project conventions include a stated node budget; if none is configured, the agent falls back to its own standard (maximum 20 nodes per function graph) and says so
-- No automated runner; review manually or via `/skill-test`
+- No automated runner; review manually or via `$skill-test`

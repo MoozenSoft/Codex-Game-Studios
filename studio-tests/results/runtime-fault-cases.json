@@ -1,0 +1,19 @@
+{
+  "results": [
+    {
+      "id": "configured-browser-missing",
+      "exit_code": 3,
+      "stdout": "not_assessed\tno browser found: Chrome, Edge, Chromium or chrome-headless-shell (set PAGE_SHOT_BROWSER to one)\n",
+      "screenshot_exists": false,
+      "interpretation": "显式指定的浏览器不存在；不是声称本机已卸载Chrome。"
+    },
+    {
+      "id": "node-absent-from-process-path",
+      "exit_code": 3,
+      "stdout": "one_shot\tprototypes/fish\nno_config\tprototypes/fish\tno config.js (a game brought in by the door): no data/config.json is made\nguard\tnode\tfail\t-\tabsent\t^22.12 || ^24 || >=26\nguard\tengine\tpass\tunset\nguard\troot\tfail\tthe tag grown/dusk-fish is here\nguard\tgit\tpass\nguard\tclean\tfail\t1\t.scratch/fault-cases/\\347\\274\\272\\345\\260\\221Node \\345\\234\\272\\346\\231\\257/prototypes/fish/index.html\ncommit\t-\ntag\tone-shot/fish\tnone\n",
+      "project_written": false,
+      "interpretation": "只限制本进程PATH；没有卸载Node或自动安装替代工具。"
+    }
+  ],
+  "scope": "实际共享脚本故障输入，不冒充完整客户端工作流或人工试玩。"
+}

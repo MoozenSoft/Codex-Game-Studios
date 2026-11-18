@@ -1,0 +1,14 @@
+[
+  {
+    "thread": "qa-answer",
+    "type": "function_call",
+    "call_id": "call_8c08b7f082d245c781094b8e9de5d26f",
+    "name": "request_user_input_async",
+    "input": "{\"questions\":[{\"title\":\"write_qa_plan：是否将上述完整草稿写入 production/qa/qa-plan-cli-acceptance-2026-11-17.md？\",\"options\":[\"写入计划\",\"不写入计划\"]},{\"title\":\"backfill_stories：是否将上述 QA-901-01 至 QA-901-06 的用例、执行前提和手工检查清单回填到 .scratch/cli-audit-458b4a0/story-cli-acceptance.md 的 QA Test Cases 节？\",\"options\":[\"回填此 story\",\"不回填\"]}]}"
+  },
+  {
+    "thread": "qa-answer",
+    "call_id": "call_8c08b7f082d245c781094b8e9de5d26f",
+    "output": "{\"accepted\":true}"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "token_limit": 6500,
+  "scope": "total",
+  "payload_bytes": 29146,
+  "first_exit": 0,
+  "thread": "01a1ec4a-0d59-7b03-8b9e-01ee8d35d0d1",
+  "checkpoint_before": "28d520299a2bac91cf0d51114735153eef6135392449be673b2ba5d9666248de",
+  "resume_exit": 0,
+  "expected_marker": "AUTO_RECOVERY_08d687ca3102",
+  "actual_resume": "AUTO_RECOVERY_08d687ca3102",
+  "tool_items": [
+    "error",
+    "error",
+    "error"
+  ],
+  "precompact_events": [
+    {
+      "time": "2026-11-18T01:34:38.849365+00:00",
+      "event": "PreCompact",
+      "tool": null,
+      "tool_use_id": null
+    }
+  ],
+  "checkpoint_after": "28d520299a2bac91cf0d51114735153eef6135392449be673b2ba5d9666248de"
+}

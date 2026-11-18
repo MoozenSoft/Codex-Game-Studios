@@ -1,0 +1,6 @@
+test_app_raw_archive_matches_manifest (test_runtime_archive.RuntimeArchiveTests.test_app_raw_archive_matches_manifest) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.059s
+
+OK

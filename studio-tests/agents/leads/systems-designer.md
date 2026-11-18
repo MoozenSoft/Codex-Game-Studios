@@ -1,19 +1,21 @@
 # Agent Test Spec: systems-designer
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 **Domain owned:** Combat formulas, progression curves, crafting recipes, status effect interaction matrices, feedback loop analysis, tuning documentation, simulation specs.
 **Does NOT own:** High-level design direction (game-designer — direct collaboration partner), level and encounter design (level-designer), narrative and aesthetic decisions, code implementation.
-**Gate IDs handled:** None. Formula reviews return findings and options; design-review verdicts come from the `/design-review` skill, which spawns systems-designer as a specialist.
+**Gate IDs handled:** None. Formula reviews return findings and options; design-review verdicts come from the `$design-review` skill, which spawns systems-designer as a specialist.
 
 ---
 
 ## Static Assertions (Structural)
 
-Verified by reading the agent's `.claude/agents/systems-designer.md` frontmatter:
+Verified by reading the agent's `.codex/agents/systems-designer.toml` frontmatter:
 
 - [ ] `description:` field is present and domain-specific (references formulas, progression curves, balance math, economy — not generic)
-- [ ] `tools:` list is read/write-focused with Bash excluded (`disallowedTools:` lists Bash); every Write/Edit is gated by its "May I write" step or the orchestrator named-path exception
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over narrative, visual design, or conceptual mechanic rule ownership
 
 ---
@@ -38,8 +40,8 @@ Verified by reading the agent's `.claude/agents/systems-designer.md` frontmatter
 - [ ] Offers the systems contribution instead (e.g., the ingredient's reward rarity or drop rate relative to the crafting economy), without making narrative decisions
 
 ### Case 3: Review findings — degenerate case at the boundaries
-**Scenario:** `/design-review` in full mode spawns systems-designer as the adversarial specialist for a combat GDD. The spawn prompt reads: "For every formula in the GDD, plug in boundary values (minimum and maximum plausible inputs). Report whether any outputs go degenerate." The GDD's formula is `damage = base_attack * level_multiplier`, where `level_multiplier = (player_level / enemy_level) ^ 2` and levels run 1–50. At player level 50 against an enemy of level 1, the multiplier is 2500x — 25,000 damage from a 10-base-attack weapon.
-**Expected:** Reports the degenerate case with its exact inputs and output, names the squared ratio as the cause, and offers revision approaches without mandating one. It returns findings, not a verdict — `/design-review` issues the verdict.
+**Scenario:** `$design-review` in full mode spawns systems-designer as the adversarial specialist for a combat GDD. The spawn prompt reads: "For every formula in the GDD, plug in boundary values (minimum and maximum plausible inputs). Report whether any outputs go degenerate." The GDD's formula is `damage = base_attack * level_multiplier`, where `level_multiplier = (player_level / enemy_level) ^ 2` and levels run 1–50. At player level 50 against an enemy of level 1, the multiplier is 2500x — 25,000 damage from a 10-base-attack weapon.
+**Expected:** Reports the degenerate case with its exact inputs and output, names the squared ratio as the cause, and offers revision approaches without mandating one. It returns findings, not a verdict — `$design-review` issues the verdict.
 **Assertions:**
 - [ ] Reports the specific degenerate input values (player level 50, enemy level 1) and the resulting output (2500x multiplier, 25,000 damage from 10 base attack)
 - [ ] Identifies the squared level ratio as the component causing the issue, and states the output is unclamped — bounded only by the 1–50 level range, which caps the multiplier at 2500x — rather than calling it unbounded

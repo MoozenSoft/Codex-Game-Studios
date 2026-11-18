@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-17",
+  "source_commit": "458b4a0",
+  "client": "Codex CLI",
+  "version": "0.169.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "model_override": false,
+  "source_files_matched": 1125,
+  "missing_targets_filled": 18,
+  "run_status": {
+    "baseline": {
+      "exit_code": 0,
+      "elapsed_seconds": 72.203
+    },
+    "qa-gate": {
+      "exit_code": 0,
+      "elapsed_seconds": 316.344
+    },
+    "hooks-live": {
+      "exit_code": 0,
+      "elapsed_seconds": 175.344
+    },
+    "qa-answer": {
+      "exit_code": 0,
+      "elapsed_seconds": 231.672
+    }
+  },
+  "fixture_validator_exit": 0,
+  "checks": [
+    {
+      "id": "startup_checkpoint",
+      "status": "passed"
+    },
+    {
+      "id": "shared_engine_and_windows_absolute_helper",
+      "status": "passed"
+    },
+    {
+      "id": "reviewed_hook_registration",
+      "status": "passed",
+      "scope": "registration/trust only, not seven live events"
+    },
+    {
+      "id": "ordinary_tool_allow",
+      "status": "passed"
+    },
+    {
+      "id": "invalid_json_post_warning_and_repair",
+      "status": "passed"
+    },
+    {
+      "id": "env_patch_pre_denial",
+      "status": "passed"
+    },
+    {
+      "id": "cross_repository_commit_context_denial",
+      "status": "passed"
+    },
+    {
+      "id": "async_receipt_remains_waiting",
+      "status": "passed"
+    },
+    {
+      "id": "qa_plan_yes_backfill_no",
+      "status": "passed"
+    },
+    {
+      "id": "invalid_staged_json_commit_dry_run_denial",
+      "status": "passed"
+    },
+    {
+      "id": "smoke_verdict_fixtures",
+      "status": "passed",
+      "scope": "model decision fixture only"
+    },
+    {
+      "id": "original_game_and_index_preserved",
+      "status": "passed"
+    }
+  ],
+  "not_assessed": [
+    "App retest",
+    "live PreCompact",
+    "full smoke workflow/game playtest",
+    "native engines",
+    "all role workflows",
+    "remote CI"
+  ],
+  "limitations": [
+    "Live CLI tool hooks use canonical Bash/apply_patch names; arbitrary raw event shapes remain fixture evidence.",
+    "Initial QA gate ran against an incomplete old fixture; missing dependencies and validation failures were retained, then remedied only in the fixture."
+  ]
+}

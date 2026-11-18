@@ -1,5 +1,7 @@
 # Agent Test Spec: localization-lead
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 - **Domain**: Internationalization (i18n) architecture, string extraction workflows, locale testing methodology, translation pipeline design (extraction → translation → import), string key and context standards, locale-specific formatting rules (plurals, RTL, date/number formats), fonts and character sets, glossary and translation memory
 - **Does NOT own**: Game narrative content and dialogue writing (writer), translation work itself (translators), UI design decisions (ux-designer), game design decisions (game-designer), which languages to support (producer); it coordinates text rendering and RTL support with ui-programmer and extraction automation with tools-programmer
@@ -10,8 +12,8 @@
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references i18n, string extraction, locale pipeline, localization)
-- [ ] `tools:` reads `Read, Glob, Grep, Write, Edit, Bash` — Bash for string-extraction tooling; writing translations and narrative content is excluded by the body's "What This Agent Must NOT Do" list, not by the tool list
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over narrative content, game code implementation, or translation quality
 
 ---
@@ -78,4 +80,4 @@
 - Case 3 (plural forms) and Case 5 (RTL) are locale-correctness tests — these affect shipping quality in non-English markets
 - Case 4 (key naming conflict) is a pipeline hygiene test — duplicate keys cause ongoing translator confusion and cost
 - Case 5 requires the target locale list to be in context; if it is not provided, the agent should ask rather than choose — which languages to support is producer's decision
-- No automated runner; review manually or via `/skill-test`
+- No automated runner; review manually or via `$skill-test`

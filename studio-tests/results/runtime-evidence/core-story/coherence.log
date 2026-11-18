@@ -1,0 +1,13 @@
+ec8e6b71690e800ea8207ce042fccb70c151f4906b767284631b5e3c420edabb *.agents/scripts/project-coherence.sh
+ec8e6b71690e800ea8207ce042fccb70c151f4906b767284631b5e3c420edabb */d/Git/Codex-Game-Studios/.agents/scripts/project-coherence.sh
+=== project coherence ===
+[DIFFERS]     docs/engine-reference/web/VERSION.md has no 'Installed at pin time' row. /setup-engine is required to write one; its absence means the probe result was never recorded, not that the versions agree.
+[NOT CHECKED] project.yaml version vs pinned reference — no Engine Version row in docs/engine-reference/web/VERSION.md
+[MATCH]       engine.version 8.3.4 matches the installed binary (8.3.4 (node_modules/vite/package.json))
+[NOT CHECKED] project-file checks — implemented for Godot only; Web has no single equivalent file this script can read
+[NOT CHECKED] command checks — project.yaml declares no commands.build or commands.test
+
+checked 2 · differs 1 · not checked 3
+
+Observations only — no verdict. 'not checked' is not agreement:
+each line above names why that comparison could not be made.

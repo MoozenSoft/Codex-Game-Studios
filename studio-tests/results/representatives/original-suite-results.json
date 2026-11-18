@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "suite_input": "runtime-cases/suite-input.json",
+  "completed_date": "2026-11-16",
+  "summary": {
+    "total": 15,
+    "passed": 14,
+    "failed": 0,
+    "not_assessed": 1
+  },
+  "interpretation": "result评价本次明确授权的代表场景行为；领域FAIL/BLOCKED可满足拒绝推进的场景预期。passed不代表案例游戏、所有工作流阶段或原生引擎通过。",
+  "framework_resources": {
+    "skills": ".agents/skills/<component>/SKILL.md",
+    "agents": ".codex/agents/<component>.toml",
+    "source": "当前隔离项目，未调用其他插件同名Skill",
+    "configuration": "逐案例显式读取project.yaml，调用共享yaml-helper.sh --root对应案例；其他检查使用显式案例路径或workdir"
+  },
+  "execution": {
+    "agent_binding": "角色场景及额外评审均使用真实项目角色绑定，已等待回收；项目角色均为gpt-6.1-sol",
+    "concurrency": "独立只读评审受并发槽限制分批执行；无共享文件并发写入",
+    "native_engine_runtime": "not_assessed — 原生引擎运行未验证",
+    "dependency_installation": "未主动安装依赖；首次裸python触发现有Python管理器自动更新至26.0并尝试访问runtime索引，随后网络失败。此后使用已安装Python3.12绝对路径，未安装Python运行时或项目依赖。"
+  },
+  "environment_observations": [
+    "Git Bash在沙箱内启动返回0xC0000142且无输出；沙箱外只读helper调用通过自动审核并成功。未把无输出启动失败误计成功。",
+    "artifact-check.sh显式案例根参数同时决定catalog路径，无法直接复用隔离框架的共享catalog；未修改框架或复制资源，gate-check完整自动扫描保留未评估。",
+    "ADR fixture只有Status: Proposed行，没有## Status；adr-status返回no_status/unversioned，报告同时保留原文及正式状态未知。",
+    "story-facts对普通列表AC计0；报告人工确认实际一条文本条件，未把格式计数当语义缺失。"
+  ],
+  "write_audit": {
+    "original_files_checked": 729,
+    "scope": "runtime-cases、.agents、.codex/agents",
+    "changed_originals": [],
+    "unexpected_additions": [],
+    "approved_outputs": "15份result.md、agent-gameplay-programmer/damage.py与test_damage.py、本suite-results.json",
+    "stage_changes": false,
+    "framework_changes": false
+  },
+  "results": [
+    {
+      "id": "skill-gate-check",
+      "result": "not_assessed",
+      "evidence": "runtime-cases/skill-gate-check/result.md",
+      "observation": "已实际判定阶段 FAIL，四个项目 director 均返回 NOT READY，stage 保持 Concept；artifact-check 因将共享 catalog 绑定案例根而退出1，完整自动扫描未评估。"
+    },
+    {
+      "id": "skill-design-review",
+      "result": "passed",
+      "evidence": "runtime-cases/skill-design-review/result.md",
+      "observation": "结构检查3/8；game-designer、systems-designer、qa-lead真实审查并由creative-director裁为MAJOR REVISION NEEDED，缺验收合同，未批准实施。"
+    },
+    {
+      "id": "skill-quick-design",
+      "result": "passed",
+      "evidence": "runtime-cases/skill-quick-design/result.md",
+      "observation": "展示只读 quick-spec 草稿，识别原公式含crit而请求只述基础倍率，保留待决定项；未保存设计或实施。"
+    },
+    {
+      "id": "skill-story-readiness",
+      "result": "passed",
+      "evidence": "runtime-cases/skill-story-readiness/result.md",
+      "observation": "故事 NEEDS WORK；ADR只有行内Proposed、缺正式Status节，helper返回no_status，状态项NOT ASSESSED且无Accepted证据；QL-STORY-READY为INADEQUATE。"
+    },
+    {
+      "id": "skill-dev-story",
+      "result": "passed",
+      "evidence": "runtime-cases/skill-dev-story/result.md",
+      "observation": "story-facts实际退出3并返回指定故事NOT_FOUND，停在输入阶段，无游戏代码或完成声明。"
+    },
+    {
+      "id": "skill-balance-check",
+      "result": "passed",
+      "evidence": "runtime-cases/skill-balance-check/result.md",
+      "observation": "以案例workdir实算10*2*1.5=30，各位置零为0；说明非负有限域与溢出假设，完整平衡因缺目标/数据保持NOT ASSESSED。"
+    },
+    {
+      "id": "skill-team-combat",
+      "result": "passed",
+      "evidence": "runtime-cases/skill-team-combat/result.md",
+      "observation": "真实gameplay-programmer按minimal/individual合并设计与建议职责，公开未启动角色，展示五节草稿，停在设计Phase1。"
+    },
+    {
+      "id": "skill-sprint-status",
+      "result": "passed",
+      "evidence": "runtime-cases/skill-sprint-status/result.md",
+      "observation": "读取三项原始状态Done/In Progress/TODO，登记完成1/3；报告S01故事TODO与YAML Done冲突，没有提升进行中状态。"
+    },
+    {
+      "id": "skill-project-settings",
+      "result": "passed",
+      "evidence": "runtime-cases/skill-project-settings/result.md",
+      "observation": "实际is_locally_overridable engine.name输出1并退出1，按白名单拒绝local覆盖，Web配置保持不变。"
+    },
+    {
+      "id": "agent-technical-director",
+      "result": "passed",
+      "evidence": "runtime-cases/agent-technical-director/result.md",
+      "observation": "真实technical-director识别A↔B初始化互调风险，裁CONCERNS，提出边界建议，未改架构或实施。"
+    },
+    {
+      "id": "agent-lead-programmer",
+      "result": "passed",
+      "evidence": "runtime-cases/agent-lead-programmer/result.md",
+      "observation": "真实lead-programmer给出A先交付B后接入及shared.py独占串行写入方案，未启动写入任务。"
+    },
+    {
+      "id": "agent-gameplay-programmer",
+      "result": "passed",
+      "evidence": "runtime-cases/agent-gameplay-programmer/result.md",
+      "observation": "真实gameplay-programmer先测试失败exit1（实现模块缺失），再最小实现，unittest四项通过exit0；仅写获批两Python文件及报告。",
+      "artifacts": [
+        "runtime-cases/agent-gameplay-programmer/damage.py",
+        "runtime-cases/agent-gameplay-programmer/test_damage.py"
+      ]
+    },
+    {
+      "id": "agent-godot-specialist",
+      "result": "passed",
+      "evidence": "runtime-cases/agent-godot-specialist/result.md",
+      "observation": "真实godot-specialist仅据案例参考静态核对extends Node，报告项目engine=Web不匹配和版本资料缺失，不声称编辑器/游戏运行通过。"
+    },
+    {
+      "id": "agent-release-manager",
+      "result": "passed",
+      "evidence": "runtime-cases/agent-release-manager/result.md",
+      "observation": "真实release-manager发现无构建/必要测试证据且原记录有失败，交付BLOCKED/NOT READY；未发布或建PR。"
+    },
+    {
+      "id": "agent-qa-tester",
+      "result": "passed",
+      "evidence": "runtime-cases/agent-qa-tester/result.md",
+      "observation": "真实qa-tester读取1PASS/1FAIL（负数用例），验收不通过，保留故事与sprint冲突，不关闭Done。"
+    }
+  ]
+}

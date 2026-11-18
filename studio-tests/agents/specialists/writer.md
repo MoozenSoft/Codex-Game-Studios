@@ -1,5 +1,7 @@
 # Agent Test Spec: writer
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 - **Domain**: In-game written content — NPC dialogue (including branching trees), lore codex entries, item and ability descriptions, environmental text (signs, books, notes), quest text, tutorial text, in-world written documents
 - **Does NOT own**: Story architecture and narrative structure (narrative-director), world lore and world rules (world-builder), UX flows and information architecture (ux-designer; it writes UI microcopy, not the UX around it), patch notes (community-manager)
@@ -10,8 +12,8 @@
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references dialogue, lore entries, item descriptions, in-game text)
-- [ ] `tools:` reads Read, Glob, Grep, Write, Edit and `disallowedTools:` lists Bash — text authoring only, no shell or code execution
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over narrative structure, world rules, or UX copy direction
 
 ---
@@ -79,4 +81,4 @@
 - Case 3 (lore contradiction detection) requires that existing lore is in the conversation context — test is only valid when context is provided
 - Case 4 (dependency gap) tests whether the agent writes descriptions that could set wrong player expectations — a subtle but important quality issue
 - Case 5 is the most important context-awareness test; voice guide compliance must be checked rule-by-rule, not holistically
-- No automated runner; review manually or via `/skill-test`
+- No automated runner; review manually or via `$skill-test`

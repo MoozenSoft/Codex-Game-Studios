@@ -1,0 +1,645 @@
+{
+  "upstream_commit": "abc0de79d6ceb0b5d7aa693945849b3937afbe6a",
+  "model_families": {
+    "opus": "astra",
+    "sonnet": "sol"
+  },
+  "declarations": [
+    {
+      "source": ".claude/agents/community-manager.md",
+      "source_sha256": "621a24b21b4ed3477714afa7087fab7fa87a2811e945467b36136558bf84ce85",
+      "source_model": "sonnet",
+      "target": ".codex/agents/community-manager.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/creative-director.md",
+      "source_sha256": "88c74e347ffdf55a41b04f1fb9bebb198ee0f8fddea13dd9a4bc64e8c22f0c24",
+      "source_model": "opus",
+      "target": ".codex/agents/creative-director.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/devops-engineer.md",
+      "source_sha256": "5c554b26e1e9fb7ef44b6ba8044ab1406b5c90021d9524d12ecadb1727cfc511",
+      "source_model": "sonnet",
+      "target": ".codex/agents/devops-engineer.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/godot-csharp-specialist.md",
+      "source_sha256": "5c12cf49ecdfeefe8cc1316108eb5f58ceb2ec9c2e6df5088f93776867c3c920",
+      "source_model": "sonnet",
+      "target": ".codex/agents/godot-csharp-specialist.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/godot-gdextension-specialist.md",
+      "source_sha256": "2a3a0ff569cc24a7716985387601f1e6e51f93acfefb0ad06a249f0c8b90ca46",
+      "source_model": "sonnet",
+      "target": ".codex/agents/godot-gdextension-specialist.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/godot-gdscript-specialist.md",
+      "source_sha256": "9c151d5a77d483e85dae2ea37a1c847e63e49741bcd6efb3c16731ac205c88c1",
+      "source_model": "sonnet",
+      "target": ".codex/agents/godot-gdscript-specialist.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/godot-shader-specialist.md",
+      "source_sha256": "a1dfbad09f249122833d5357b070dbeddc101d8b468cc970b4cf112ffae55917",
+      "source_model": "sonnet",
+      "target": ".codex/agents/godot-shader-specialist.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/lead-programmer.md",
+      "source_sha256": "040cd3f0f4d310a0490a67bf75835d21dd589050cb1c6c5fa2837df9eb7a0c43",
+      "source_model": "sonnet",
+      "target": ".codex/agents/lead-programmer.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/producer.md",
+      "source_sha256": "31d4c62ab7fcddabbb91a486dbba5e0d1f701ab2e25cb6c9e7577419e754a18c",
+      "source_model": "opus",
+      "target": ".codex/agents/producer.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/prototyper.md",
+      "source_sha256": "3a86381d9cc76f28c5f7fc2143b60c2f336735b84644dffcb255c8ec47c29612",
+      "source_model": "sonnet",
+      "target": ".codex/agents/prototyper.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/technical-director.md",
+      "source_sha256": "8022e08de9f13efc87b78cae3adc3c75ad3af501b63f9ecbd0d7f96e1e8ffc57",
+      "source_model": "opus",
+      "target": ".codex/agents/technical-director.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/ue-blueprint-specialist.md",
+      "source_sha256": "3bd61ad7888f0a24057438eed93da67c60ce9b4c70bd891102be98fe23c28d35",
+      "source_model": "sonnet",
+      "target": ".codex/agents/ue-blueprint-specialist.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/ue-gas-specialist.md",
+      "source_sha256": "6c812f5a42b0cd37e49c5c46999227cbe796a50ee0998114564058cf2997a6b6",
+      "source_model": "sonnet",
+      "target": ".codex/agents/ue-gas-specialist.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/ue-replication-specialist.md",
+      "source_sha256": "42e20e2851d880f7ae6602e31042ae14a693a0257d09fcdc6625e007e46c27b3",
+      "source_model": "sonnet",
+      "target": ".codex/agents/ue-replication-specialist.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/ue-umg-specialist.md",
+      "source_sha256": "8f5d13f67576692d0735e972a0c724bd762be3bef313576785af76b28861b6f5",
+      "source_model": "sonnet",
+      "target": ".codex/agents/ue-umg-specialist.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/unity-addressables-specialist.md",
+      "source_sha256": "cfd7d28d184aff327f3afdb9fe3d3b5bbedfcb3de8cc644980f24a41b0fdef03",
+      "source_model": "sonnet",
+      "target": ".codex/agents/unity-addressables-specialist.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/unity-dots-specialist.md",
+      "source_sha256": "4f54c55d142de8a01bbc7cfbc0fe491a486001b4ebae2ffad158e225f568d47e",
+      "source_model": "sonnet",
+      "target": ".codex/agents/unity-dots-specialist.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/unity-shader-specialist.md",
+      "source_sha256": "b2f8ac7c887fc65f182fcbf71f1366079fcdc87585eaf16970ffecaf4d5d04df",
+      "source_model": "sonnet",
+      "target": ".codex/agents/unity-shader-specialist.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/agents/unity-ui-specialist.md",
+      "source_sha256": "8894127c20d7deda4e6b78e605483fd021f61518c1a75c253458ed6a4aa5e891",
+      "source_model": "sonnet",
+      "target": ".codex/agents/unity-ui-specialist.toml",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/adopt/SKILL.md",
+      "source_sha256": "79547d656e76fde14f1761a6840cb3a6fbb058f69f33d7829d5e073390f46b98",
+      "source_model": "sonnet",
+      "target": ".agents/skills/adopt/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/architecture-decision/SKILL.md",
+      "source_sha256": "b550883ebd9973ad6534c2984a77fdb6229f47eb8d2b2c31e7501d8a89f2cdf5",
+      "source_model": "sonnet",
+      "target": ".agents/skills/architecture-decision/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/architecture-review/SKILL.md",
+      "source_sha256": "6399e55ca408e644db44f8209705ea762fba404c458cc4a5738dc2c42ba534c2",
+      "source_model": "opus",
+      "target": ".agents/skills/architecture-review/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/art-bible/SKILL.md",
+      "source_sha256": "52840ec169b256ccee0a320d2b65a8ec676bdf05afa1450c2ab3c2d25934d682",
+      "source_model": "sonnet",
+      "target": ".agents/skills/art-bible/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/asset-audit/SKILL.md",
+      "source_sha256": "9aaa056c533cd0d61af1da5332fd26065fbfa6937db4bd117ac0692f8c65a3f4",
+      "source_model": "sonnet",
+      "target": ".agents/skills/asset-audit/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/asset-spec/SKILL.md",
+      "source_sha256": "151235216747982563075e0c3e1d37c714d76772b7a007e05343d812e0e50cb5",
+      "source_model": "sonnet",
+      "target": ".agents/skills/asset-spec/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/balance-check/SKILL.md",
+      "source_sha256": "4eafe0eb9569c953b75ed639eede35310663598933e62e2039cfd1bf39292bd5",
+      "source_model": "sonnet",
+      "target": ".agents/skills/balance-check/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/brainstorm/SKILL.md",
+      "source_sha256": "ec5d4da62dd2cb98ed703c7910719b4612cf0bc9b04674d1d54e0fac150c0d34",
+      "source_model": "sonnet",
+      "target": ".agents/skills/brainstorm/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/bug-report/SKILL.md",
+      "source_sha256": "ea3098fc5de983c667831cceeb4346bfceb210fa6a1abd9c86484fbe2348e41e",
+      "source_model": "sonnet",
+      "target": ".agents/skills/bug-report/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/bug-triage/SKILL.md",
+      "source_sha256": "818f27203a1adfe2f5a6bc3a351a2673d5297d2fd3e69d773c228c98c8a83b01",
+      "source_model": "sonnet",
+      "target": ".agents/skills/bug-triage/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/changelog/SKILL.md",
+      "source_sha256": "d14f48f7a9012ff23ce3431140660a310a7afee11876c466b322b502dfc98c11",
+      "source_model": "sonnet",
+      "target": null,
+      "status": "retired"
+    },
+    {
+      "source": ".claude/skills/code-review/SKILL.md",
+      "source_sha256": "230550f59ebfc2b8d1bbac620fb70e9ecbdf67c1bb4c8e1594fe31d9199b12cd",
+      "source_model": "sonnet",
+      "target": ".agents/skills/code-review/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/consistency-check/SKILL.md",
+      "source_sha256": "7fcdd74e370662c4ba6c8917460e46c61a1e1778cf7edff0e768114edb55a5de",
+      "source_model": "sonnet",
+      "target": ".agents/skills/consistency-check/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/content-audit/SKILL.md",
+      "source_sha256": "9f5c56ea2e32b5a96e00c135022e7f4b708d02d5eb31177a778c6dba54e4c509",
+      "source_model": "sonnet",
+      "target": ".agents/skills/content-audit/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/create-architecture/SKILL.md",
+      "source_sha256": "0613360ba1247bbfc53f840b0f97d15430f38799b4a67498c6efabe53763c23d",
+      "source_model": "sonnet",
+      "target": ".agents/skills/create-architecture/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/create-control-manifest/SKILL.md",
+      "source_sha256": "a487bb167b3154b19fe76ac618625ef0bfeb65a2a90432804e96e0a83271b75a",
+      "source_model": "sonnet",
+      "target": ".agents/skills/create-control-manifest/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/create-epics/SKILL.md",
+      "source_sha256": "65df2bb38d25c0e6d33cf1c9189ba0f6fe223d28d9ea7111c0b40199667cdd67",
+      "source_model": "sonnet",
+      "target": ".agents/skills/create-epics/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/create-stories/SKILL.md",
+      "source_sha256": "a3631badeb0595ca02fc2cc1876706ff9bbf7fb036aa3ece6333e51a9611f3d8",
+      "source_model": "sonnet",
+      "target": ".agents/skills/create-stories/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/cut/SKILL.md",
+      "source_sha256": "68e9ba619bcfb9e36370bf191b98b25003bad573aa2e1e503820ffbb0cd0d928",
+      "source_model": "sonnet",
+      "target": ".agents/skills/cut/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/day-one-patch/SKILL.md",
+      "source_sha256": "d3bd1e47339cfd7bc16778a25c6c87da1352e7d2557cafcf34e7d3945d496f63",
+      "source_model": "sonnet",
+      "target": ".agents/skills/day-one-patch/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/design-review/SKILL.md",
+      "source_sha256": "db33649d74589979c48ed3a2b5b9511cbbf5627dd3145694625e849292e8fbfc",
+      "source_model": "sonnet",
+      "target": ".agents/skills/design-review/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/design-system/SKILL.md",
+      "source_sha256": "396e2538228e23bdece0746b9ad968dd20f7bb2372232ec70a0fe939c7fee6a7",
+      "source_model": "sonnet",
+      "target": ".agents/skills/design-system/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/dev-story/SKILL.md",
+      "source_sha256": "1ec6aed96ad3539c018266d75ffb3da9db52ecfc817e6495d9a473464d11af40",
+      "source_model": "sonnet",
+      "target": ".agents/skills/dev-story/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/estimate/SKILL.md",
+      "source_sha256": "61d821627b3db4f4038f60b7ce799599a219b864036023ce15d5fc85348874f0",
+      "source_model": "sonnet",
+      "target": ".agents/skills/estimate/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/gate-check/SKILL.md",
+      "source_sha256": "05106c2d19fe92f6074662ca245a3c499dd4312222740e1fb3dfd14c6ea355f3",
+      "source_model": "opus",
+      "target": ".agents/skills/gate-check/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/hotfix/SKILL.md",
+      "source_sha256": "20233b7851f526da3ad80ee9acb9e2ec9b99bd15e861252eddef04c0d7aaee6c",
+      "source_model": "sonnet",
+      "target": ".agents/skills/hotfix/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/launch-checklist/SKILL.md",
+      "source_sha256": "ce8813df00b1b1f513c935fa6fcefd560c293e96fee02040a7705063a6afa7d2",
+      "source_model": "sonnet",
+      "target": ".agents/skills/launch-checklist/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/localize/SKILL.md",
+      "source_sha256": "49bf8d1f6c12e4aca16f15c7d6f84c7e574f9d34322a1e3475fe9b02b4ffa02a",
+      "source_model": "sonnet",
+      "target": ".agents/skills/localize/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/map-systems/SKILL.md",
+      "source_sha256": "d27959d0043bd8c9f08c0f3fb56aa66de8e6ce84812a7e43d5f2d2c43cae01dd",
+      "source_model": "sonnet",
+      "target": ".agents/skills/map-systems/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/milestone-review/SKILL.md",
+      "source_sha256": "1028ff3cc2f0f1ad609efb5c91d62b40be9644a0d39cc1fb3bb8c0fd42ca29df",
+      "source_model": "sonnet",
+      "target": ".agents/skills/milestone-review/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/patch-notes/SKILL.md",
+      "source_sha256": "01f6a24bbcc95f1db801fc96ddf1e0f062e35657bfd773f74adaa911ea39ff19",
+      "source_model": "sonnet",
+      "target": ".agents/skills/patch-notes/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/perf-profile/SKILL.md",
+      "source_sha256": "34845c7dea542741161557517a25288bb1c5a5bdf5bd580f56986bb8969b6f03",
+      "source_model": "sonnet",
+      "target": ".agents/skills/perf-profile/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/playtest-report/SKILL.md",
+      "source_sha256": "19dca36ed40705bb95dde1d1d49f743ba8e7c3e8657c8e139ba0b89b345fe9bb",
+      "source_model": "sonnet",
+      "target": ".agents/skills/playtest-report/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/project-settings/SKILL.md",
+      "source_sha256": "c73abd78a6905ab6fc90c1bb12f1e86314d3038bbf8bc3081e390d3f1bd4175b",
+      "source_model": "sonnet",
+      "target": ".agents/skills/project-settings/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/propagate-design-change/SKILL.md",
+      "source_sha256": "bf110550ddd1ca9c8bbd266cda2808b40aec02646b6ff9886d850ab9f1f1d7c9",
+      "source_model": "sonnet",
+      "target": ".agents/skills/propagate-design-change/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/qa-plan/SKILL.md",
+      "source_sha256": "fa3a333c9f0e298979e8e174165bcd58042d686b788327644487644c25c8efa5",
+      "source_model": "sonnet",
+      "target": ".agents/skills/qa-plan/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/quick-design/SKILL.md",
+      "source_sha256": "98ca1db62d0cf04bdb8e486fe7cf742f45e4d597efcc856c9905ea2d9f074444",
+      "source_model": "sonnet",
+      "target": ".agents/skills/quick-design/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/regression-suite/SKILL.md",
+      "source_sha256": "65b91a43cfc319b8f369d31f78686549a84cbfaa32ba2c125b9b3abce7f29717",
+      "source_model": "sonnet",
+      "target": ".agents/skills/regression-suite/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/release-checklist/SKILL.md",
+      "source_sha256": "86b0fa29ba147e84106ff0eb32f0ac90906872ee176ee5dcb83c0d1631815599",
+      "source_model": "sonnet",
+      "target": ".agents/skills/release-checklist/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/retrospective/SKILL.md",
+      "source_sha256": "29b136a0f3ea57c09acbc6e97e18df413444305f26e2eeac35c7c99de9f9dc61",
+      "source_model": "sonnet",
+      "target": ".agents/skills/retrospective/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/reverse-document/SKILL.md",
+      "source_sha256": "3626441f583adfd86f8382f94803bb572987d9f90dad0546f7193c4448a2d525",
+      "source_model": "sonnet",
+      "target": ".agents/skills/reverse-document/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/review-all-gdds/SKILL.md",
+      "source_sha256": "b8c32178939feb494a860a2ddb575af0eb8802fa529d7f0ffe9c3ba2c1b748c0",
+      "source_model": "opus",
+      "target": ".agents/skills/review-all-gdds/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/security-audit/SKILL.md",
+      "source_sha256": "cbb680a1a55a5ce9f17560613312a5f2cd6065875e9ee9161bf1537b982cabab",
+      "source_model": "sonnet",
+      "target": ".agents/skills/security-audit/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/settings/SKILL.md",
+      "source_sha256": "eb547a6431e99ac8548ab4f536311a46fe5dfe9e4f3f912e2b0e769f19c8e1bf",
+      "source_model": "sonnet",
+      "target": null,
+      "status": "retired"
+    },
+    {
+      "source": ".claude/skills/setup-engine/SKILL.md",
+      "source_sha256": "a5b6f8cf758aa9c2aa95b9e34163ad1f275262471457ebe511f3ce0c80049c19",
+      "source_model": "sonnet",
+      "target": ".agents/skills/setup-engine/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/skill-improve/SKILL.md",
+      "source_sha256": "79b9febba255d732e2e722d45be8e2b90f7182b7ce5bdb772195e22c1ad8c65e",
+      "source_model": "sonnet",
+      "target": ".agents/skills/skill-improve/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/skill-test/SKILL.md",
+      "source_sha256": "8121f3b12ac56e01fa5ea425e179954be9fed3c7538118a5972040a540fb9852",
+      "source_model": "sonnet",
+      "target": ".agents/skills/skill-test/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/smoke-check/SKILL.md",
+      "source_sha256": "b7e5c02b0d9fae8648fa23235ef5138f98d5456196fdd983a7fab7b9272715e0",
+      "source_model": "sonnet",
+      "target": ".agents/skills/smoke-check/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/soak-test/SKILL.md",
+      "source_sha256": "cd1ad9ab08b98b978f7dc5188822597b602e4f8170a811f0ca2ccab2f7f96122",
+      "source_model": "sonnet",
+      "target": ".agents/skills/soak-test/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/sprint-plan/SKILL.md",
+      "source_sha256": "5f13a36181c02c5d10c55eca5ca8b89da794e3291fe1f726637200da7cf459c3",
+      "source_model": "sonnet",
+      "target": ".agents/skills/sprint-plan/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/start/SKILL.md",
+      "source_sha256": "a0c25e4f3560da88dca9c2fa60d994754ccc2739e38d6cadb845c4f550df991c",
+      "source_model": "sonnet",
+      "target": ".agents/skills/start/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/story-done/SKILL.md",
+      "source_sha256": "7e28072fe673f13af95ae9834be3e64bd65ba1d87bec57bf7782d33d8659e780",
+      "source_model": "sonnet",
+      "target": ".agents/skills/story-done/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/story-readiness/SKILL.md",
+      "source_sha256": "1b86f15e42acabf467311168fc32a3d0cb70195d4348befbdb383e943bbd9aee",
+      "source_model": "sonnet",
+      "target": ".agents/skills/story-readiness/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/team-audio/SKILL.md",
+      "source_sha256": "9bfb647a0d9a68bff9923207f4a042c1f4196cd46ce94b7d489da71da7bc1ad8",
+      "source_model": "sonnet",
+      "target": ".agents/skills/team-audio/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/team-combat/SKILL.md",
+      "source_sha256": "144ef1bf2473d5bd5a716f34e26286ab45a38289d44fa524c2fbdf7b687a0c3a",
+      "source_model": "sonnet",
+      "target": ".agents/skills/team-combat/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/team-level/SKILL.md",
+      "source_sha256": "226bbc8a01b071761fedc60ba222bb51b62818e2ceacc792c6c898fd90311fd4",
+      "source_model": "sonnet",
+      "target": ".agents/skills/team-level/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/team-live-ops/SKILL.md",
+      "source_sha256": "ac1996365db5638b43ae25dd92cba785bdd33333929a43614149c68d0e1a7f03",
+      "source_model": "sonnet",
+      "target": ".agents/skills/team-live-ops/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/team-narrative/SKILL.md",
+      "source_sha256": "66b923ff3dd13b9e633d3ba05885bb5f53b1294c5765ab3a891205dbd8dea8c3",
+      "source_model": "sonnet",
+      "target": ".agents/skills/team-narrative/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/team-polish/SKILL.md",
+      "source_sha256": "396ea7fe51903e712b4967ec1dd63b71e32f5fdd0738a639532b6eb353be25dc",
+      "source_model": "sonnet",
+      "target": ".agents/skills/team-polish/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/team-qa/SKILL.md",
+      "source_sha256": "dd8fb88c5aa7e117f3c81dd5535910b173f4383f58b3251aba78a0fdb3483684",
+      "source_model": "sonnet",
+      "target": ".agents/skills/team-qa/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/team-release/SKILL.md",
+      "source_sha256": "fb03b1b5aa1e3037d3dbd2cf09a2ca07a9e7a9a71632e46d2b9086b96dccf2c1",
+      "source_model": "sonnet",
+      "target": ".agents/skills/team-release/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/team-ui/SKILL.md",
+      "source_sha256": "dce06487831bdcea7f62ead4f47de38c6b6acd877fb047655bf82ed28cfcfb36",
+      "source_model": "sonnet",
+      "target": ".agents/skills/team-ui/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/tech-debt/SKILL.md",
+      "source_sha256": "11299c8a170286b24a040e965fc19d74d9d631b32a021678286e4480a24d1408",
+      "source_model": "sonnet",
+      "target": ".agents/skills/tech-debt/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/test-evidence-review/SKILL.md",
+      "source_sha256": "a7ab49090d3018910d1efc2a43bb16f8239c9150bc3b180bdfdaf8bca208c96f",
+      "source_model": "sonnet",
+      "target": ".agents/skills/test-evidence-review/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/test-flakiness/SKILL.md",
+      "source_sha256": "382ee117ffbcade9c0b598db075a43087762da6873c5e7c7af67b0472e1d42b3",
+      "source_model": "sonnet",
+      "target": ".agents/skills/test-flakiness/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/test-helpers/SKILL.md",
+      "source_sha256": "b368b009a8abd6fd9282ce55b6a88aaccb512535cd9622b405b1f5a3f98053c1",
+      "source_model": "sonnet",
+      "target": ".agents/skills/test-helpers/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/test-setup/SKILL.md",
+      "source_sha256": "ef6ccb22b9ff8e61a3469ee7c7967e2a0cc1acad07a0f53b2f2fc5bb50727fca",
+      "source_model": "sonnet",
+      "target": ".agents/skills/test-setup/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/ux-design/SKILL.md",
+      "source_sha256": "4afc2b07ed5c854906f6a6bebd06f7f10ddc174a80ce30d0df2beddb80cfe101",
+      "source_model": "sonnet",
+      "target": ".agents/skills/ux-design/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/ux-review/SKILL.md",
+      "source_sha256": "064b9ce2ad6b8dd954448dab6e5130da6c8bfc784e368c852202a71bf5a2c619",
+      "source_model": "sonnet",
+      "target": ".agents/skills/ux-review/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/vertical-slice/SKILL.md",
+      "source_sha256": "9a96211f830f5b413188bf44a2dceaf93fc1051052291993bfee704b83748f7c",
+      "source_model": "sonnet",
+      "target": ".agents/skills/vertical-slice/SKILL.md",
+      "status": "active"
+    },
+    {
+      "source": ".claude/skills/write-changelog/SKILL.md",
+      "source_sha256": "532aac96745ef61f5cc77441790e854f451a8baaf7e6a814609a6df9c58f2544",
+      "source_model": "sonnet",
+      "target": ".agents/skills/write-changelog/SKILL.md",
+      "status": "active"
+    }
+  ],
+  "prototype_build": {
+    "source": ".claude/skills/prototype/references/one-shot-1-card.md",
+    "source_sha256": "974ca2b4ae2b4b8ac0a2ab15c060cd046dc99f15af2757169eb4749a708b74ed",
+    "source_model": "opus",
+    "target": ".agents/skills/prototype/references/one-shot-1-card.md"
+  }
+}

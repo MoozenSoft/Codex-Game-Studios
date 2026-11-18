@@ -1,0 +1,57 @@
+
+> app-dusk-fish@0.0.0 test:unit
+> vitest run
+
+
+ RUN  v5.0.5 D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance
+
+ ❯ tests/unit/rules.test.ts (3 tests | 2 failed) 5ms
+   × 固定步进增加计时 4ms
+   × 计时在本局时限截断 0ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/rules.test.ts > 固定步进增加计时
+AssertionError: expected -0.016666666666666666 to be 0.016666666666666666 // Object.is equality
+
+- Expected
++ Received
+
+- 0.016666666666666666
++ -0.016666666666666666
+
+ ❯ tests/unit/rules.test.ts:6:68
+      4|
+      5| test('固定步进增加计时', () => {
+      6|   expect(advanceTime(0, config.step.value, config.duration.value)).toB…
+       |                                                                    ^
+      7| });
+      8| test('计时在本局时限截断', () => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/unit/rules.test.ts > 计时在本局时限截断
+AssertionError: expected 59.95 to be 60 // Object.is equality
+
+- Expected
++ Received
+
+- 60
++ 59.95
+
+ ❯ tests/unit/rules.test.ts:9:112
+      7| });
+      8| test('计时在本局时限截断', () => {
+      9|   expect(advanceTime(config.duration.value - config.step.value, 2 * co…
+       |                                                                                                                ^
+     10| });
+     11| test('零步进保持时间', () => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 1 passed (3)
+   Start at  12:28:54
+   Duration  133ms (transform 58%, import 19%, tests 15%, worker 7%)
+

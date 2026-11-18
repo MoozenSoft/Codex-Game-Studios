@@ -1,0 +1,8 @@
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/art.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/config.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/game/rules.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/game/types.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/input.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/screen.ts', LF will be replaced by CRLF the next time Git touches it

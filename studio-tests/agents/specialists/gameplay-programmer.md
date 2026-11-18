@@ -1,5 +1,7 @@
 # Agent Test Spec: gameplay-programmer
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 Domain: Game mechanics code, player systems, combat implementation, and interactive features.
 Does NOT own: UI implementation (ui-programmer), AI behavior trees (ai-programmer), engine/rendering systems (engine-programmer).
@@ -10,8 +12,8 @@ No gate IDs assigned.
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references game mechanics / player systems)
-- [ ] `tools:` list includes Read, Write, Edit, Bash, Glob, Grep — excludes tools only needed by orchestration agents
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over UI, AI behavior, or engine/rendering code
 
 ---
@@ -49,7 +51,7 @@ No gate IDs assigned.
 - Identifies that the proposed change violates ADR-003 (Accepted status)
 - Does NOT silently implement the violation
 - Flags the conflict to `lead-programmer` with the ADR reference and the trade-off described
-- Implements the change only after ADR-003 is superseded by a new ADR through `/architecture-decision` — which only the user, or technical-director on the user's confirmation, moves to Accepted — never on the original request alone, and not on lead-programmer's approval alone
+- Implements the change only after ADR-003 is superseded by a new ADR through `$architecture-decision` — which only the user, or technical-director on the user's confirmation, moves to Accepted — never on the original request alone, and not on lead-programmer's approval alone
 
 ### Case 5: Context pass — implements to GDD spec
 **Input:** GDD for "PlayerCombat" provided in context. Request: "Implement the stamina drain formula from the combat GDD."

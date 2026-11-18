@@ -1,0 +1,12 @@
+CATALOG: ../../../../.agents/docs/workflow-catalog.yaml
+ROOT: D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/runtime-cases/skill-gate-check
+PHASES: 1
+STEPS: 6
+NO_CHECK: 2
+PHASE: concept
+  STEP: brainstorm required=false repeatable=false check=none status=NO_CHECK
+  STEP: game-concept required=true repeatable=false check=glob status=ABSENT glob=design/gdd/game-concept.md
+  STEP: engine-setup required=true repeatable=false check=any_of status=PRESENT alt=1 match=project.yaml
+  STEP: design-review-concept required=false repeatable=false check=none status=NO_CHECK
+  STEP: art-bible required=true repeatable=false check=glob status=ABSENT glob=design/art/art-bible.md
+  STEP: map-systems required=true repeatable=false check=glob status=ABSENT glob=design/gdd/systems-index.md

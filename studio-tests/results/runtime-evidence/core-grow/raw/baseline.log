@@ -1,0 +1,121 @@
+?? design/game-brief.md
+?? prototypes/dusk-fish/
+warning: in the working copy of 'prototypes/dusk-fish/assets/provenance.yaml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prototypes/dusk-fish/evidence/check-run.yaml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prototypes/dusk-fish/evidence/handover.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prototypes/dusk-fish/evidence/nearest-game.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prototypes/dusk-fish/evidence/self-check.tsv', LF will be replaced by CRLF the next time Git touches it
+ design/game-brief.md                               |  66 +++++++
+ prototypes/dusk-fish/assets/provenance.yaml        |  11 ++
+ prototypes/dusk-fish/brief.md                      |  66 +++++++
+ prototypes/dusk-fish/config.js                     |  57 ++++++
+ prototypes/dusk-fish/evidence/brief-words.tsv      |   7 +
+ prototypes/dusk-fish/evidence/changes.tsv          |   1 +
+ prototypes/dusk-fish/evidence/check-run.yaml       |  87 +++++++++
+ prototypes/dusk-fish/evidence/checklist.tsv        |  12 ++
+ prototypes/dusk-fish/evidence/figures.png          | Bin 0 -> 40112 bytes
+ prototypes/dusk-fish/evidence/handover.md          |  23 +++
+ .../dusk-fish/evidence/iteration-1-small.png       | Bin 0 -> 50583 bytes
+ .../dusk-fish/evidence/iteration-1-timeout.png     | Bin 0 -> 93868 bytes
+ .../dusk-fish/evidence/iteration-1-timeout.tsv     |  43 +++++
+ prototypes/dusk-fish/evidence/iteration-1-win.png  | Bin 0 -> 97967 bytes
+ prototypes/dusk-fish/evidence/iteration-1-win.tsv  |  44 +++++
+ prototypes/dusk-fish/evidence/loss-retry.png       | Bin 0 -> 88771 bytes
+ prototypes/dusk-fish/evidence/loss-retry.tsv       |  41 ++++
+ prototypes/dusk-fish/evidence/nearest-game.txt     |   1 +
+ prototypes/dusk-fish/evidence/pause.png            | Bin 0 -> 92807 bytes
+ prototypes/dusk-fish/evidence/pause.tsv            |  43 +++++
+ prototypes/dusk-fish/evidence/play.png             | Bin 0 -> 89442 bytes
+ prototypes/dusk-fish/evidence/replay.png           | Bin 0 -> 92807 bytes
+ prototypes/dusk-fish/evidence/replay.tsv           |  43 +++++
+ prototypes/dusk-fish/evidence/resume.png           | Bin 0 -> 89110 bytes
+ prototypes/dusk-fish/evidence/resume.tsv           |  41 ++++
+ prototypes/dusk-fish/evidence/self-check.tsv       |  41 ++++
+ prototypes/dusk-fish/evidence/win-retry.png        | Bin 0 -> 89041 bytes
+ prototypes/dusk-fish/evidence/win-retry.tsv        |  42 ++++
+ prototypes/dusk-fish/evidence/win-run.tsv          |  44 +++++
+ prototypes/dusk-fish/evidence/win.png              | Bin 0 -> 97973 bytes
+ prototypes/dusk-fish/feel-log.md                   |   4 +
+ prototypes/dusk-fish/index.html                    | 214 +++++++++++++++++++++
+ 32 files changed, 931 insertions(+)
+warning: in the working copy of 'prototypes/dusk-fish/assets/provenance.yaml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prototypes/dusk-fish/evidence/check-run.yaml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prototypes/dusk-fish/evidence/handover.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prototypes/dusk-fish/evidence/nearest-game.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prototypes/dusk-fish/evidence/self-check.tsv', LF will be replaced by CRLF the next time Git touches it
+[probe 5237684] 原型迭代一：单局改为四十五秒并保存验收基线
+ 32 files changed, 931 insertions(+)
+ create mode 100644 design/game-brief.md
+ create mode 100644 prototypes/dusk-fish/assets/provenance.yaml
+ create mode 100644 prototypes/dusk-fish/brief.md
+ create mode 100644 prototypes/dusk-fish/config.js
+ create mode 100644 prototypes/dusk-fish/evidence/brief-words.tsv
+ create mode 100644 prototypes/dusk-fish/evidence/changes.tsv
+ create mode 100644 prototypes/dusk-fish/evidence/check-run.yaml
+ create mode 100644 prototypes/dusk-fish/evidence/checklist.tsv
+ create mode 100644 prototypes/dusk-fish/evidence/figures.png
+ create mode 100644 prototypes/dusk-fish/evidence/handover.md
+ create mode 100644 prototypes/dusk-fish/evidence/iteration-1-small.png
+ create mode 100644 prototypes/dusk-fish/evidence/iteration-1-timeout.png
+ create mode 100644 prototypes/dusk-fish/evidence/iteration-1-timeout.tsv
+ create mode 100644 prototypes/dusk-fish/evidence/iteration-1-win.png
+ create mode 100644 prototypes/dusk-fish/evidence/iteration-1-win.tsv
+ create mode 100644 prototypes/dusk-fish/evidence/loss-retry.png
+ create mode 100644 prototypes/dusk-fish/evidence/loss-retry.tsv
+ create mode 100644 prototypes/dusk-fish/evidence/nearest-game.txt
+ create mode 100644 prototypes/dusk-fish/evidence/pause.png
+ create mode 100644 prototypes/dusk-fish/evidence/pause.tsv
+ create mode 100644 prototypes/dusk-fish/evidence/play.png
+ create mode 100644 prototypes/dusk-fish/evidence/replay.png
+ create mode 100644 prototypes/dusk-fish/evidence/replay.tsv
+ create mode 100644 prototypes/dusk-fish/evidence/resume.png
+ create mode 100644 prototypes/dusk-fish/evidence/resume.tsv
+ create mode 100644 prototypes/dusk-fish/evidence/self-check.tsv
+ create mode 100644 prototypes/dusk-fish/evidence/win-retry.png
+ create mode 100644 prototypes/dusk-fish/evidence/win-retry.tsv
+ create mode 100644 prototypes/dusk-fish/evidence/win-run.tsv
+ create mode 100644 prototypes/dusk-fish/evidence/win.png
+ create mode 100644 prototypes/dusk-fish/feel-log.md
+ create mode 100644 prototypes/dusk-fish/index.html
+5237684 原型迭代一：单局改为四十五秒并保存验收基线
+ design/game-brief.md                               |  66 +++++++
+ prototypes/dusk-fish/assets/provenance.yaml        |  11 ++
+ prototypes/dusk-fish/brief.md                      |  66 +++++++
+ prototypes/dusk-fish/config.js                     |  57 ++++++
+ prototypes/dusk-fish/evidence/brief-words.tsv      |   7 +
+ prototypes/dusk-fish/evidence/changes.tsv          |   1 +
+ prototypes/dusk-fish/evidence/check-run.yaml       |  87 +++++++++
+ prototypes/dusk-fish/evidence/checklist.tsv        |  12 ++
+ prototypes/dusk-fish/evidence/figures.png          | Bin 0 -> 40112 bytes
+ prototypes/dusk-fish/evidence/handover.md          |  23 +++
+ .../dusk-fish/evidence/iteration-1-small.png       | Bin 0 -> 50583 bytes
+ .../dusk-fish/evidence/iteration-1-timeout.png     | Bin 0 -> 93868 bytes
+ .../dusk-fish/evidence/iteration-1-timeout.tsv     |  43 +++++
+ prototypes/dusk-fish/evidence/iteration-1-win.png  | Bin 0 -> 97967 bytes
+ prototypes/dusk-fish/evidence/iteration-1-win.tsv  |  44 +++++
+ prototypes/dusk-fish/evidence/loss-retry.png       | Bin 0 -> 88771 bytes
+ prototypes/dusk-fish/evidence/loss-retry.tsv       |  41 ++++
+ prototypes/dusk-fish/evidence/nearest-game.txt     |   1 +
+ prototypes/dusk-fish/evidence/pause.png            | Bin 0 -> 92807 bytes
+ prototypes/dusk-fish/evidence/pause.tsv            |  43 +++++
+ prototypes/dusk-fish/evidence/play.png             | Bin 0 -> 89442 bytes
+ prototypes/dusk-fish/evidence/replay.png           | Bin 0 -> 92807 bytes
+ prototypes/dusk-fish/evidence/replay.tsv           |  43 +++++
+ prototypes/dusk-fish/evidence/resume.png           | Bin 0 -> 89110 bytes
+ prototypes/dusk-fish/evidence/resume.tsv           |  41 ++++
+ prototypes/dusk-fish/evidence/self-check.tsv       |  41 ++++
+ prototypes/dusk-fish/evidence/win-retry.png        | Bin 0 -> 89041 bytes
+ prototypes/dusk-fish/evidence/win-retry.tsv        |  42 ++++
+ prototypes/dusk-fish/evidence/win-run.tsv          |  44 +++++
+ prototypes/dusk-fish/evidence/win.png              | Bin 0 -> 97973 bytes
+ prototypes/dusk-fish/feel-log.md                   |   4 +
+ prototypes/dusk-fish/index.html                    | 214 +++++++++++++++++++++
+ 32 files changed, 931 insertions(+)
+one_shot	prototypes/dusk-fish
+guard	node	pass	v24.14.0	ok	^22.12 || ^24 || >=26
+guard	engine	pass	unset
+guard	root	pass	not grown
+guard	git	pass
+guard	clean	pass	0	-
+commit	5237684
+tag	one-shot/dusk-fish	none

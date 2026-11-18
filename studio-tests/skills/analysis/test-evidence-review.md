@@ -1,9 +1,11 @@
-# Skill Test Spec: /test-evidence-review
+# Skill Test Spec: $test-evidence-review
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/test-evidence-review` reviews the **quality** of the test files and evidence
-documents behind stories — `/smoke-check` covers existence and passing. It
+`$test-evidence-review` reviews the **quality** of the test files and evidence
+documents behind stories — `$smoke-check` covers existence and passing. It
 takes a scope: a single story path, `sprint` (the most recent plan in
 `production/sprints/`), or a system name (`production/epics/[system]/story-*.md`);
 with no argument it asks which. If the resolved scope holds zero stories it stops
@@ -14,7 +16,7 @@ criteria with targeted greps, locates the evidence (`tests/unit/[system]/`,
 `production/qa/smoke-*.md`), and reviews automated tests for assertion count,
 edge cases, naming and formula traceability, and manual evidence for criterion
 linkage, sign-offs, retained screenshots and freshness. It resolves `qa.level`
-and `testing.strict` the way `/story-done` does: at `qa.level: minimal` a Logic,
+and `testing.strict` the way `$story-done` does: at `qa.level: minimal` a Logic,
 Integration or Config/Data story with no test evidence is
 `WAIVED (qa.level: minimal)`, not MISSING, and a gap in a test that does exist is
 ADVISORY; Visual/Feel and UI evidence is never waived; otherwise each gap takes
@@ -32,13 +34,13 @@ COMPLETE, or CONCERNS when BLOCKING items were found.
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keywords: ADEQUATE, INCOMPLETE, MISSING, NOT ASSESSED, and the run-level COMPLETE / CONCERNS
 - [ ] Contains "May I write" language for the optional `production/qa/evidence-review-[date].md`
-- [ ] Has a next-step handoff (Section 7: BLOCKING items before `/story-done`, `/test-helpers`, sign-off routing)
+- [ ] Has a next-step handoff (Section 7: BLOCKING items before `$story-done`, `$test-helpers`, sign-off routing)
 - [ ] The `resolve_config` injection names `qa.level` and `testing.strict`, and the skill states the `WAIVED (qa.level: minimal)` result and the per-type `testing.strict.<type>` gate level
 
 ---
@@ -53,7 +55,7 @@ None. Test evidence review is an advisory quality skill; no gates are invoked.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -67,7 +69,7 @@ Fixture defaults.
 - `production/epics/combat/story-001-damage-calc.md` (slug `damage-calc`): `## Test Evidence` gives Story Type Logic and the path `tests/unit/combat/damage-calc_test.gd`; `## Acceptance Criteria` includes "damage is never below 1" and "critical hits multiply damage by 2.0"
 - `tests/unit/combat/damage-calc_test.gd` opens with `# Story: production/epics/combat/story-001-damage-calc.md`, has 4 test functions with 3+ assertions each, named like `test_damage_calc_zero_armor_returns_base_damage` and `test_damage_calc_max_crit_doubles_damage`, and names the GDD's `damage_formula` in a comment
 
-**Input:** `/test-evidence-review production/epics/combat/story-001-damage-calc.md`
+**Input:** `$test-evidence-review production/epics/combat/story-001-damage-calc.md`
 
 **Expected behavior:**
 1. Single-story mode: skill reads the story's Test Evidence and Acceptance Criteria
@@ -93,21 +95,21 @@ Fixture defaults.
 - `production/epics/combat/story-002-crit-roll.md` (slug `crit-roll`): Story Type Logic
 - `tests/unit/combat/crit-roll_test.gd` has `func test_1()` with no assertions and `func test_crit_roll_applies_multiplier()` with one assertion
 
-**Input:** `/test-evidence-review production/epics/combat/story-002-crit-roll.md`
+**Input:** `$test-evidence-review production/epics/combat/story-002-crit-roll.md`
 
 **Expected behavior:**
 1. Skill finds the test file and counts assertions per function
 2. `test_1` has 0 assertions → flagged BLOCKING (passes vacuously, proves nothing); `test_1` is also flagged as a generic name
 3. The one-assertion function is noted as potentially thin
 4. Story verdict: **INCOMPLETE**
-5. Follow-ups: "These must be resolved before `/story-done` can mark the story Complete…" and "Consider running `/test-helpers [system]`…"
+5. Follow-ups: "These must be resolved before `$story-done` can mark the story Complete…" and "Consider running `$test-helpers [system]`…"
 6. Run ends with **CONCERNS** because BLOCKING items were found
 
 **Assertions:**
 - [ ] A test function with zero assertions is flagged BLOCKING
 - [ ] `test_1` is flagged as a naming issue
 - [ ] Story verdict is INCOMPLETE, not ADEQUATE
-- [ ] Output states BLOCKING items must be resolved before `/story-done` and suggests `/test-helpers`
+- [ ] Output states BLOCKING items must be resolved before `$story-done` and suggests `$test-helpers`
 - [ ] Run ends with CONCERNS
 - [ ] The test file is not modified
 - [ ] Variant — with `testing.strict.logic: false` in `project.yaml`, the zero-assertion finding is ADVISORY, the story is still INCOMPLETE, and the run ends COMPLETE
@@ -120,18 +122,18 @@ Fixture defaults.
 - `project.yaml`: `modes.rigor: minimal` (the resolved block shows `workflow: minimal`)
 - `production/sprints/` does not exist
 
-**Input:** `/test-evidence-review sprint`
+**Input:** `$test-evidence-review sprint`
 
 **Expected behavior:**
 1. Sprint mode finds no sprint plan, so the scope holds zero stories
 2. Skill stops and reports `NOT ASSESSED — no stories in scope`, naming the sprint scope and the empty `production/sprints/` path
-3. Because the workflow is minimal (no sprints), it routes to `/test-evidence-review [epic-slug]` instead of `/sprint-plan new`
+3. Because the workflow is minimal (no sprints), it routes to `$test-evidence-review [epic-slug]` instead of `$sprint-plan new`
 4. Skill does not continue to Section 3; no Summary table and no "BLOCKING items: 0" line are rendered
 
 **Assertions:**
 - [ ] Verdict is NOT ASSESSED — no stories in scope
 - [ ] Output names which scope was searched and which path was empty
-- [ ] At minimal workflow the route is `/test-evidence-review [epic-slug]`, not `/sprint-plan new`
+- [ ] At minimal workflow the route is `$test-evidence-review [epic-slug]`, not `$sprint-plan new`
 - [ ] No empty report reading "BLOCKING items: 0 / ADVISORY items: 0" is produced
 
 ---
@@ -143,7 +145,7 @@ Fixture defaults.
 - `production/epics/combat/` contains `story-001-damage-calc.md` (Logic, test as in Case 1) and `story-003-hit-feedback.md`, whose `## Test Evidence` section states no Story Type and no evidence path
 - Full-reading `story-003-hit-feedback.md` does not reveal a type either
 
-**Input:** `/test-evidence-review combat`
+**Input:** `$test-evidence-review combat`
 
 **Expected behavior:**
 1. System mode globs `production/epics/combat/story-*.md` and finds both stories
@@ -168,7 +170,7 @@ Fixture defaults.
 - `production/qa/evidence/hit-flash-evidence.md` references every acceptance criterion, has every sign-off filled, and is dated after the sprint start
 - No `*.png`, `*.jpg` or `*.gif` for this story exists in `production/qa/evidence/`
 
-**Input:** `/test-evidence-review production/epics/combat/story-004-hit-flash.md`
+**Input:** `$test-evidence-review production/epics/combat/story-004-hit-flash.md`
 
 **Expected behavior:**
 1. Section 3 finds `production/qa/evidence/hit-flash-evidence.md`
@@ -196,7 +198,7 @@ Fixture defaults.
 - Both images exist and are dated after the sprint start
 - No `inventory-screen-evidence.md`, no sign-off record and no walkthrough log exist
 
-**Input:** `/test-evidence-review production/epics/ui/story-007-inventory-screen.md`
+**Input:** `$test-evidence-review production/epics/ui/story-007-inventory-screen.md`
 
 **Expected behavior:**
 1. Section 3 uses the two paths the story states before searching
@@ -221,7 +223,7 @@ Fixture defaults.
 - The inventory GDD has no Formulas section, so formula traceability does not apply
 - Nothing named `stack-merge_test.*` exists anywhere, and `tests/unit/` does not exist
 
-**Input:** `/test-evidence-review production/epics/inventory/story-003-stack-merge.md`
+**Input:** `$test-evidence-review production/epics/inventory/story-003-stack-merge.md`
 
 **Expected behavior:**
 1. Section 3 finds the test at the stated path under `Assets/Tests/EditMode/`
@@ -240,7 +242,7 @@ Fixture defaults.
 - `production/epics/combat/` contains `story-003-hit-feedback.md` (no Story Type, as in Case 4) and `story-005-knockback.md`: Story Type Logic, no evidence path stated
 - No test exists for it: `tests/unit/combat/` does not exist, and no other test file names the slug `knockback` or references the story
 
-**Input:** `/test-evidence-review combat`
+**Input:** `$test-evidence-review combat`
 
 **Expected behavior:**
 1. `story-005-knockback` is a Logic story, so a unit test is required; the search of the unit-test root finds none
@@ -263,7 +265,7 @@ Fixture defaults.
 - `project.yaml`: `engine.name: godot`, no `modes` block (so `qa.level: minimal` — tests are waived)
 - `production/epics/combat/` contains `story-005-knockback.md` (Logic, no test anywhere, as in Case 8) and `story-008-pause-menu.md` (UI, no retained image for it in `production/qa/evidence/`)
 
-**Input:** `/test-evidence-review combat`
+**Input:** `$test-evidence-review combat`
 
 **Expected behavior:**
 1. `story-005-knockback` is **WAIVED (qa.level: minimal)** — not MISSING — and raises no BLOCKING item
@@ -276,7 +278,7 @@ Fixture defaults.
 - [ ] The Logic story with no test is WAIVED (qa.level: minimal), not MISSING, and is not listed as BLOCKING
 - [ ] The UI story with no screenshot is still MISSING and BLOCKING at `qa.level: minimal`
 - [ ] The waived story is named as waived in the report, not dropped from it
-- [ ] Variant: an all-waived scope reads WAIVED, with no "must be resolved before `/story-done`" prompt
+- [ ] Variant: an all-waived scope reads WAIVED, with no "must be resolved before `$story-done`" prompt
 
 ---
 

@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "id": "shared-contracts",
+      "exit_code": 0
+    },
+    {
+      "id": "migration-contracts",
+      "exit_code": 0
+    },
+    {
+      "id": "catalog-contracts",
+      "exit_code": 0
+    },
+    {
+      "id": "framework-final",
+      "exit_code": 0
+    },
+    {
+      "id": "complete-final",
+      "exit_code": 0
+    },
+    {
+      "id": "working-diff",
+      "exit_code": 0
+    },
+    {
+      "id": "staged-diff",
+      "exit_code": 0
+    },
+    {
+      "id": "report-links",
+      "exit_code": 0
+    },
+    {
+      "id": "runtime-matrix-links",
+      "exit_code": 0
+    },
+    {
+      "id": "root-index-preserved",
+      "exit_code": 0
+    },
+    {
+      "id": "existing-file-edits-scoped",
+      "exit_code": 0,
+      "changed": [
+        ".agents/docs/hooks-reference.md",
+        ".agents/docs/hooks-reference/codex-events.md",
+        ".gitattributes",
+        "studio-tests/results/codex-adaptation-status.md",
+        "studio-tests/results/runtime-evidence/README.md",
+        "studio-tests/runtime-matrix.json"
+      ]
+    },
+    {
+      "id": "archive-git-clean-byte-preservation",
+      "exit_code": 0
+    }
+  ],
+  "required_failures": 0
+}

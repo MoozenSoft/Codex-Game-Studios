@@ -1,0 +1,55 @@
+[
+  {
+    "timestamp": "2026-11-17T14:08:58.972Z",
+    "type": "hook_context",
+    "text": "以下 JSON 当前无效，允许继续修复，但必要验收不能完成：<app-probe>/.scratch/app-audit-458b4a0/hook-bad.json"
+  },
+  {
+    "timestamp": "2026-11-17T14:09:22.810Z",
+    "call_id": "call_8362c92a67b24539b53503fddb2eb8fe",
+    "tool": "exec",
+    "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Add File: <app-probe>/.scratch/app-audit-458b4a0/.env.app-audit-probe\\n+APP_NON_SECRET_SENTINEL\\n*** End Patch\"));\n",
+    "output": [
+      {
+        "type": "input_text",
+        "text": "Script failed\nWall time 0.6 seconds\nOutput:\n"
+      },
+      {
+        "type": "input_text",
+        "text": "Script error:\nCommand blocked by PreToolUse hook: 项目规则禁止通过工具读取或改写环境凭据文件: <app-probe>/.scratch/app-audit-458b4a0/.env.app-audit-probe. Command: *** Begin Patch\n*** Add File: <app-probe>/.scratch/app-audit-458b4a0/.env.app-audit-probe\n+APP_NON_SECRET_SENTINEL\n*** End Patch"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-11-17T14:09:28.877Z",
+    "call_id": "call_a2d150f1880e49d7b2e9b5b05817ffc7",
+    "tool": "exec",
+    "input": "text(await tools.exec_command({cmd:\"git commit --dry-run\",workdir:\"<app-probe>/.scratch/app-audit-458b4a0/external-repo\",max_output_tokens:4000}));\n",
+    "output": [
+      {
+        "type": "input_text",
+        "text": "Script failed\nWall time 0.6 seconds\nOutput:\n"
+      },
+      {
+        "type": "input_text",
+        "text": "Script error:\nCommand blocked by PreToolUse hook: 提交前校验未评估：实际提交目标不属于当前项目，不能检查另一个仓库的索引. Command: git commit --dry-run"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-11-17T14:20:25.759Z",
+    "call_id": "call_b64eb9265f2b4d79951f88c2c4c70dc2",
+    "tool": "exec",
+    "input": "text(await tools.exec_command({cmd:\"git commit --dry-run\",workdir:\"<app-probe>\",max_output_tokens:4000}));\n",
+    "output": [
+      {
+        "type": "input_text",
+        "text": "Script failed\nWall time 0.8 seconds\nOutput:\n"
+      },
+      {
+        "type": "input_text",
+        "text": "Script error:\nCommand blocked by PreToolUse hook: 提交前暂存区 JSON 校验未完成：.scratch/app-audit-458b4a0/staged-bad.json Git 暂存内容不是有效 UTF-8 JSON；工作区修复后须重新暂存. Command: git commit --dry-run"
+      }
+    ]
+  }
+]

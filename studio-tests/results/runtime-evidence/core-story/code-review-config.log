@@ -1,0 +1,8 @@
+=== CCGS Config (resolved: local->yaml->legacy->default; use as-is) ===
+automation: collaborative (default)
+engine_values: name=Web(project.yaml) version=8.3.4(project.yaml) language=unset
+specialists: primary=lead-programmer(engine.name) code=unset shader=unset ui=unset additional=none (no specialists block; unset = skip that specialist)
+engine_row: engine=Web(project.yaml) code_root=src(engine.name) test_root=tests(engine.name) asset_root=assets run="npm run dev" build="npm run build" test="npm test" smoke="npm run smoke" (.agents/engines/engines.tsv; - = not in the table)
+=== end ===
+ac15b36 新增结果画面按 R 重试并保留 Enter 与局内行为
+41f6f4e 拆分 dusk-fish 为严格类型模块并保持同种子回放一致

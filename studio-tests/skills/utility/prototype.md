@@ -1,12 +1,14 @@
-# Skill Test Spec: /prototype
+# Skill Test Spec: $prototype
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/prototype [what to make] [--path html|engine|paper] [--review full|lean|solo]
+`$prototype [what to make] [--path html|engine|paper] [--review full|lean|solo]
 [--spike]` has two routes, chosen by `engine.name` with no question asked.
 
 **The one-shot** (no engine set, `engine.name: web`, or `--path html`): one round
-of questions drawn from the matched genre sheets (`.claude/genres/chipsets.yaml`
+of questions drawn from the matched genre sheets (`.agents/genres/chipsets.yaml`
 rows, `chipsets/<name>.md`), then a one-page brief shown as the card: Look and
 references, First minute, Challenge, Features and the rest of the brief template,
 with the Effort (high), Engine, Guessed and Writes lines under it and Build it /
@@ -27,7 +29,7 @@ the handover card, and goes on to the debrief (Phase 6).
 
 **The engine or paper prototype** (an engine named) is a throwaway concept
 prototype before GDDs are written. It first
-confirms intent with `AskUserQuestion` (Prototype this concept / Skip — concept
+confirms intent with `当前 Codex 可用的提问工具` (Prototype this concept / Skip — concept
 already proven / Mid-production spike), forms a falsifiable hypothesis ("If the
 player [does X], they will feel [Y] — we will know this is true if [Z]") and asks
 for the riskiest assumption. It picks an Engine or Paper path (genre table,
@@ -41,7 +43,7 @@ JavaScript, `<!-- -->` in HTML and Markdown), and standards are intentionally
 relaxed.
 
 After a one-question-at-a-time debrief, it fills
-`.claude/docs/templates/prototype-report.md`, asks to write
+`.agents/docs/templates/prototype-report.md`, asks to write
 `prototypes/[concept-name]-concept/REPORT.md` and add its row to
 `prototypes/index.md` (one ask naming both). Verdicts are **PROCEED / PIVOT / KILL**. PIVOT writes a
 `PIVOT-NOTE.md`; KILL runs a five-item soundness check and appends to
@@ -59,13 +61,13 @@ no CD gate and no PROCEED/PIVOT/KILL.
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keywords: PROCEED, PIVOT, KILL, NOT ASSESSED (a prototype nobody has played)
 - [ ] Contains "May I create" / "May I write" language before creating the prototype directory and the report
-- [ ] Has a next-step handoff per verdict (PROCEED → `/design-review`, `/gate-check`, `/map-systems`, `/design-system`; PIVOT → `/prototype` or `/brainstorm`; KILL → `/brainstorm`)
+- [ ] Has a next-step handoff per verdict (PROCEED → `$design-review`, `$gate-check`, `$map-systems`, `$design-system`; PIVOT → `$prototype` or `$brainstorm`; KILL → `$brainstorm`)
 
 ---
 
@@ -92,7 +94,7 @@ Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -106,14 +108,14 @@ Fixture defaults.
   `engine.name: Godot` and `engine.language: GDScript`
 - `prototypes/` has no `grapple-hook-concept/`
 - Review mode: `solo`; `modes.workflow: standard` (pinned: unset resolves to
-  minimal, which routes PROCEED to `/create-stories` and `/dev-story` instead of
+  minimal, which routes PROCEED to `$create-stories` and `$dev-story` instead of
   the step 7 list — Case 6 covers that route)
 - In the debrief the user reports the hypothesis CONFIRMED and answers PROCEED
 
-**Input:** `/prototype grapple-hook traversal`
+**Input:** `$prototype grapple-hook traversal`
 
 **Expected behavior:**
-1. `AskUserQuestion` confirms intent; user picks "Prototype this concept"
+1. `当前 Codex 可用的提问工具` confirms intent; user picks "Prototype this concept"
 2. Skill states a falsifiable hypothesis in the If / feel / know-if form and asks
    for the riskiest assumption
 3. Path widget pre-states an Engine recommendation (traversal feel is the
@@ -125,11 +127,11 @@ Fixture defaults.
    file it writes starts with `# PROTOTYPE - NOT FOR PRODUCTION` (GDScript
    comments use `#`; a `//` header would not parse)
 6. Debrief questions are asked one at a time; report drafted from
-   `.claude/docs/templates/prototype-report.md`; "May I write this report to
+   `.agents/docs/templates/prototype-report.md`; "May I write this report to
    `prototypes/grapple-hook-concept/REPORT.md` and add its row to
    `prototypes/index.md`?"; a row is appended to `prototypes/index.md`
-7. Note "CD-PLAYTEST skipped — Solo mode."; PROCEED routes to `/design-review`,
-   `/gate-check`, `/art-bible`, `/map-systems`, `/design-system`, `/review-all-gdds`
+7. Note "CD-PLAYTEST skipped — Solo mode."; PROCEED routes to `$design-review`,
+   `$gate-check`, `$art-bible`, `$map-systems`, `$design-system`, `$review-all-gdds`
 
 **Assertions:**
 - [ ] The hypothesis is falsifiable, with a measurable signal
@@ -137,7 +139,7 @@ Fixture defaults.
 - [ ] The directory ask names `prototypes/grapple-hook-concept/` and comes before any prototype file is written
 - [ ] Every prototype script carries the `PROTOTYPE - NOT FOR PRODUCTION` header as a `#` comment, never `//`; no file is written under the code root
 - [ ] REPORT.md is written only after its ask, that ask also names `prototypes/index.md`, and the index gains a row with verdict PROCEED
-- [ ] PROCEED next steps include `/map-systems` and `/design-system`
+- [ ] PROCEED next steps include `$map-systems` and `$design-system`
 
 ---
 
@@ -148,7 +150,7 @@ Fixture defaults.
 - User answers PIVOT: the route planning was engaging, the upkeep maths was not
 - Review mode: `solo`
 
-**Input:** `/prototype trade-routes --path paper`
+**Input:** `$prototype trade-routes --path paper`
 
 **Expected behavior:**
 1. Paper path writes `prototypes/trade-routes-concept/rules.md` and
@@ -158,15 +160,15 @@ Fixture defaults.
    we should preserve…?" and "What is the single most important thing to change?"
 4. Skill asks "May I write this to `prototypes/trade-routes-concept/PIVOT-NOTE.md`?"
 5. The note holds the original hypothesis, what to keep, what to change and the
-   revised hypothesis; next steps are `/prototype [revised-concept]` or
-   `/brainstorm [hint]`
+   revised hypothesis; next steps are `$prototype [revised-concept]` or
+   `$brainstorm [hint]`
 
 **Assertions:**
 - [ ] `--path paper` is honoured and produces `rules.md` and `play-log.md`
 - [ ] The two carry-forward questions are asked separately
 - [ ] "May I write" names `PIVOT-NOTE.md` before it is written
 - [ ] The note contains a revised hypothesis
-- [ ] Next steps offer `/prototype` for the revised concept or `/brainstorm`
+- [ ] Next steps offer `$prototype` for the revised concept or `$brainstorm`
 
 ---
 
@@ -178,7 +180,7 @@ Fixture defaults.
   action after 2 playtests, no fun moment was observed, and the concept only
   worked when the developer explained it
 
-**Input:** `/prototype procedural-dialogue --path html`
+**Input:** `$prototype procedural-dialogue --path html`
 
 **Expected behavior:**
 1. REPORT.md is written after its ask with verdict KILL
@@ -186,13 +188,13 @@ Fixture defaults.
 3. Skill asks "May I append this concept to `prototypes/GRAVEYARD.md`?"
 4. The entry has Kill reason, What worked, What failed and Next time, with a
    specific kill reason (not "it was boring")
-5. Next step: `/brainstorm open` or `/brainstorm [new-hint]`
+5. Next step: `$brainstorm open` or `$brainstorm [new-hint]`
 
 **Assertions:**
 - [ ] The KILL checklist is applied, with the 2+ rule deciding soundness
 - [ ] "May I append" names `prototypes/GRAVEYARD.md` before writing
 - [ ] The graveyard entry has all four fields and a specific kill reason
-- [ ] Next steps route to `/brainstorm`
+- [ ] Next steps route to `$brainstorm`
 
 ---
 
@@ -204,7 +206,7 @@ Fixture defaults.
   whose spike note and `active.md` wording Case 7 covers)
 - `production/sprints/sprint-004.md` is the current sprint and `active.md` shows it
 
-**Input:** `/prototype rope-physics --spike`
+**Input:** `$prototype rope-physics --spike`
 
 **Expected behavior:**
 1. Skill skips Phases 1–9 and runs Spike Mode
@@ -242,7 +244,7 @@ Fixture defaults.
 - Run B: `--review full`, neither `game-concept.md` nor `design/game-brief.md` exists
 - Run C: `--review lean`
 
-**Input:** `/prototype [concept] --review [mode]`
+**Input:** `$prototype [concept] --review [mode]`
 
 **Expected behavior:**
 1. Run A: `creative-director` is spawned for CD-PLAYTEST with the REPORT.md
@@ -272,19 +274,19 @@ Fixture defaults.
 - Run A: the prototype was built this session but nobody has played it yet
 - Run B: a PROCEED recommendation, `project.yaml` has `modes.workflow: minimal`
 
-**Input:** `/prototype [concept]`
+**Input:** `$prototype [concept]`
 
 **Expected behavior:**
 1. Run A: with no fun evidence yet, PROCEED/PIVOT/KILL are all unreachable; the
    skill reports NOT ASSESSED and stops rather than guessing, naming "play it,
-   then run `/prototype [same concept]` again" as the next step
-2. Run B: Phase 9's PROCEED route offers `/create-stories` (from the brief) then
-   `/dev-story` on the first story, not the GDD/`/map-systems`/`/art-bible` path
+   then run `$prototype [same concept]` again" as the next step
+2. Run B: Phase 9's PROCEED route offers `$create-stories` (from the brief) then
+   `$dev-story` on the first story, not the GDD/`$map-systems`/`$art-bible` path
 
 **Assertions:**
 - [ ] Run A's verdict is NOT ASSESSED, not a guessed PROCEED/PIVOT/KILL
 - [ ] Run A's report and `prototypes/index.md` row both read NOT ASSESSED until a playtest happens
-- [ ] Run B's recommended path is the `workflow: minimal` route (`/create-stories`, `/dev-story`), not the `standard`/`full` GDD pipeline
+- [ ] Run B's recommended path is the `workflow: minimal` route (`$create-stories`, `$dev-story`), not the `standard`/`full` GDD pipeline
 
 ---
 
@@ -298,7 +300,7 @@ Fixture defaults.
   and `production/session-state/active.md` names it as the current task
 - The user answers YES to the spike question
 
-**Input:** `/prototype rope-physics --spike`
+**Input:** `$prototype rope-physics --spike`
 
 **Expected behavior:**
 1. The spike runs as in Case 4, with the same asks: the spike folder, then one ask
@@ -327,14 +329,14 @@ Fixture defaults.
 - The user answers "you pick" to the quick questions, Build it at the card, then
   Commit and tag
 
-**Input:** `/prototype a lighthouse keeper relighting beacons in a storm`
+**Input:** `$prototype a lighthouse keeper relighting beacons in a storm`
 
 **Expected behavior:**
 1. No route or path question. One plain-text message asks one round of at most
    about eight questions drawn from the matched genre sheets, each with its usual
    answer so "you pick" works, with no question tool; what the typed line already
    answers is not asked, and after the reply there is no second round
-2. The skill matches the genre on `.claude/genres/chipsets.yaml`'s rows and
+2. The skill matches the genre on `.agents/genres/chipsets.yaml`'s rows and
    reads only the matched sheets in `chipsets/`, drawing the questions from them
 3. The card is the whole brief, with Look and references, First minute and
    Challenge filled and the "you pick" answers marked *(provisional)*, then
@@ -343,7 +345,7 @@ Fixture defaults.
    Change something; nothing is written before the answer
 4. After Build it: `design/game-brief.md` is written from the brief template, with
    the typed words and the answers under `## In your words`, every Features item
-   `[ ]` and Keep empty; `bash .claude/scripts/one-shot-new.sh` makes the folder
+   `[ ]` and Keep empty; `bash .agents/scripts/one-shot-new.sh` makes the folder
 5. This session builds the game at its own effort; a builder runs only when the
    person named another effort, and the handover's Effort line says which
 6. Before the handover the small check has run: `evidence/self-check.tsv`,
@@ -373,10 +375,10 @@ Fixture defaults.
 - As Case 8, with Chrome or Edge installed
 - The first build freezes after its start key: the screen stops changing while keys go in
 
-**Input:** `/prototype a lighthouse keeper relighting beacons in a storm`, then Build it
+**Input:** `$prototype a lighthouse keeper relighting beacons in a storm`, then Build it
 
 **Expected behavior:**
-1. Before handover the skill runs `bash .claude/scripts/one-shot-check.sh prototypes/<name>
+1. Before handover the skill runs `bash .agents/scripts/one-shot-check.sh prototypes/<name>
    --keys "<inputs>"` (what leaves the title, then a few seconds of the game's own keys) and
    writes no `bot.js`
 2. The `stuck` row fails; the skill fixes the screen in its one fix round and runs the check
@@ -398,17 +400,17 @@ Fixture defaults.
 - As Case 8 (no engine set), with Chrome or Edge installed and Godot installed
 - At the card the person says "I have Godot installed, use that if it's better"
 
-**Input:** `/prototype a lighthouse keeper relighting beacons in a storm`, then the Godot line, then Build it
+**Input:** `$prototype a lighthouse keeper relighting beacons in a storm`, then the Godot line, then Build it
 
 **Expected behavior:**
-1. The card's Engine line reads `Engine: web now; Godot after you've played it`; `/setup-engine`
+1. The card's Engine line reads `Engine: web now; Godot after you've played it`; `$setup-engine`
    does not run, and the browser game is built in `prototypes/<name>/index.html`
 2. The small check runs as in Case 9; no review agent runs
-3. The card carries the Next line naming `/setup-engine` Godot after play; a promised piece the
+3. The card carries the Next line naming `$setup-engine` Godot after play; a promised piece the
    build lacks is on Still to do
 
 **Assertions:**
-- [ ] No `/setup-engine` before the handover; an `index.html` is handed over
+- [ ] No `$setup-engine` before the handover; an `index.html` is handed over
 - [ ] No game-designer review, no look-first step and no review agent run
 
 ---
@@ -419,7 +421,7 @@ Fixture defaults.
 - As Case 8, with Chrome or Edge installed
 - The ask names a 3D game that remembers a best time; the brief's Look is a 3D look
 
-**Input:** `/prototype a 3D marble run against the clock that remembers your best time`, then Build it
+**Input:** `$prototype a 3D marble run against the clock that remembers your best time`, then Build it
 
 **Expected behavior:**
 1. The small check's rows name the WebGL renderer (software in a headless browser is fine) and a
@@ -443,7 +445,7 @@ Fixture defaults.
 - As Case 8: no `engine:` block, no `design/game-brief.md`, no `project.goal`
 - The user picks "an original game in the genre", then Build it at the card
 
-**Input:** `/prototype a Pac-Man clone with the same UI: arrow keys, eat every dot to clear the maze, a ghost touching you costs a life`
+**Input:** `$prototype a Pac-Man clone with the same UI: arrow keys, eat every dot to clear the maze, a ghost touching you costs a life`
 
 **Expected behavior:**
 1. Before anything else, one question: "An original game in the genre of Pac-Man, or Pac-Man
@@ -456,7 +458,7 @@ Fixture defaults.
 - [ ] The Avoid line is in the brief; the built game uses none of Pac-Man's name, art, characters or UI
 - [ ] Variant: "a maze chase like Pac-Man, but you are a ghost" (named as a reference): no copy question
 - [ ] Variant: "an original Pac-Man" (a new label on a copy): the same one question
-- [ ] Variant: `design/game-brief.md` exists, written by `/brainstorm`: no questions; the card reads the brief, and `Writes:` names only `prototypes/<name>/`
+- [ ] Variant: `design/game-brief.md` exists, written by `$brainstorm`: no questions; the card reads the brief, and `Writes:` names only `prototypes/<name>/`
 
 ---
 
@@ -467,7 +469,7 @@ Fixture defaults.
 - [ ] One-shot: asks before committing and tagging `one-shot/<name>`
 - [ ] One-shot: the small check runs before handover with no robot player; a row it could not run is *not assessed* by name, never passed
 - [ ] One-shot: no review agent, art review or cold play run; the person's play is the test
-- [ ] Engine and paper route: confirms intent with `AskUserQuestion` before building (unless `--spike`)
+- [ ] Engine and paper route: confirms intent with `当前 Codex 可用的提问工具` before building (unless `--spike`)
 - [ ] Engine and paper route: forms a falsifiable hypothesis and stops if the concept is too vague to form one
 - [ ] Engine and paper route: presents the plan and gets confirmation before building
 - [ ] Asks before creating `prototypes/[concept-name]-concept/` and before writing REPORT.md (with its `prototypes/index.md` row), PIVOT-NOTE.md or GRAVEYARD.md
@@ -480,8 +482,8 @@ Fixture defaults.
 
 ## Coverage Notes
 
-- "Skip — concept already proven" (records the evidence, suggests `/map-systems`
-  or `/design-system`, and stops) is not tested.
+- "Skip — concept already proven" (records the evidence, suggests `$map-systems`
+  or `$design-system`, and stops) is not tested.
 - A concept too vague to form a hypothesis (skill stops and asks the user to
   narrow it) is covered only by protocol compliance.
 - Reading a prior `PIVOT-NOTE.md` on the next run to seed the revised hypothesis

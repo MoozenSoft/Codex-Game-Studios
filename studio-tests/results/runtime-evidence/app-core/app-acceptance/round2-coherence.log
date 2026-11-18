@@ -1,0 +1,11 @@
+=== project coherence ===
+[NOT CHECKED] pinned-vs-installed at pin time — docs/engine-reference/web/VERSION.md pins the template, and each web project installs its own versions; the installed-bundler check below reads them
+[MATCH]       engine.version (8.3.4) agrees with docs/engine-reference/web/VERSION.md (8.3.4)
+[MATCH]       engine.version 8.3.4 matches the installed binary (8.3.4 (node_modules/vite/package.json))
+[NOT CHECKED] project-file checks — implemented for Godot only; Web has no single equivalent file this script can read
+[NOT CHECKED] command checks — project.yaml declares no commands.build or commands.test
+
+checked 2 · differs 0 · not checked 3
+
+Observations only — no verdict. 'not checked' is not agreement:
+each line above names why that comparison could not be made.

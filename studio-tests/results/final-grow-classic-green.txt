@@ -1,0 +1,6 @@
+test_grow_copy_preserves_classic_top_level_bindings (test_paths.SharedScriptTests.test_grow_copy_preserves_classic_top_level_bindings) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 5.984s
+
+OK

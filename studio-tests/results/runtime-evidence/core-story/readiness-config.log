@@ -1,0 +1,21 @@
+=== CCGS Resolved Config ===
+rigor: minimal (default)
+review_mode: solo (rigor:minimal)
+automation: collaborative (default)
+workflow: minimal (rigor:minimal)
+docs.density: terse (rigor:minimal)
+story_granularity: coarse (rigor:minimal)
+qa.level: minimal (rigor:minimal)
+team.size: individual (rigor:minimal)
+project.stage: not set (unset)
+automation_always_ask: scope_changes, file_deletions, schema_changes (default)
+engine: Web 8.3.4 (project.yaml)
+testing.strict: logic=unset integration=true visual=unset ui=unset config=unset (unset = each skill applies its own default)
+performance.enforce: warn (default)
+platform.cert_tier: (unset -- ask which platforms are in scope)
+system_overrides: none
+workflow[--root]: minimal (no override — project value)
+notes: none
+Values above are fully resolved (local -> yaml -> legacy -> default). Use as-is.
+An inline --review flag, if passed, overrides review_mode.
+=== end CCGS config ===

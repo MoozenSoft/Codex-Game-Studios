@@ -1,19 +1,21 @@
 # Agent Test Spec: narrative-director
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 **Domain owned:** Story architecture, character design direction, world-building oversight, ND-CONSISTENCY gate, dialogue strategy.
 **Does NOT own:** Visual art style (art-director), technical systems or code (lead-programmer), production scheduling (producer), game mechanics rules (game-designer).
-**Gate IDs handled:** ND-CONSISTENCY (verdicts APPROVE / CONCERNS / REJECT, defined in `.claude/docs/director-gates/nd-consistency.md`).
+**Gate IDs handled:** ND-CONSISTENCY (verdicts APPROVE / CONCERNS / REJECT, defined in `.agents/docs/director-gates/nd-consistency.md`).
 
 ---
 
 ## Static Assertions (Structural)
 
-Verified by reading the agent's `.claude/agents/narrative-director.md` frontmatter:
+Verified by reading the agent's `.codex/agents/narrative-director.toml` frontmatter:
 
 - [ ] `description:` field is present and domain-specific (references story, character, world-building, consistency — not generic)
-- [ ] `tools:` reads Read, Glob, Grep, Write, Edit, WebSearch and `disallowedTools:` lists Bash
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over visual style, technical systems, or production scheduling
 
 ---
@@ -21,7 +23,7 @@ Verified by reading the agent's `.claude/agents/narrative-director.md` frontmatt
 ## Test Cases
 
 ### Case 1: In-domain request — appropriate output format
-**Scenario:** A new lore document for "The Sunken Archive" location is submitted. The document establishes that the Archive was flooded 200 years ago during the Great Collapse, consistent with the established timeline in the world-bible. All named characters referenced are consistent with their established profiles, and the tone matches the narrative bible's tone guide. The gate context passes every input `.claude/docs/director-gates/nd-consistency.md` names: the document path, the tone guide, the world-bible's timeline rules, and the profiles of the characters it references. Request is tagged ND-CONSISTENCY.
+**Scenario:** A new lore document for "The Sunken Archive" location is submitted. The document establishes that the Archive was flooded 200 years ago during the Great Collapse, consistent with the established timeline in the world-bible. All named characters referenced are consistent with their established profiles, and the tone matches the narrative bible's tone guide. The gate context passes every input `.agents/docs/director-gates/nd-consistency.md` names: the document path, the tone guide, the world-bible's timeline rules, and the profiles of the characters it references. Request is tagged ND-CONSISTENCY.
 **Expected:** Returns `APPROVE` with rationale confirming the timeline alignment, character consistency, and tone.
 **Assertions:**
 - [ ] Verdict is exactly one of APPROVE / CONCERNS / REJECT (the ND-CONSISTENCY gate's vocabulary) — here APPROVE
@@ -88,6 +90,6 @@ Verified by reading the agent's `.claude/agents/narrative-director.md` frontmatt
 ## Coverage Notes
 - Dialogue quality review (distinct from world-building consistency) is not covered — a dedicated case should be added.
 - The CONCERNS verdict (fixable inconsistencies that do not break the narrative foundation) has no dedicated case.
-- Multi-document consistency check across a full chapter set is not covered — deferred to /review-all-gdds integration.
+- Multi-document consistency check across a full chapter set is not covered — deferred to $review-all-gdds integration.
 - Narrative impact of mechanical changes (e.g., a game mechanic that undermines story tension) requires coordination with game-designer and is not covered here.
 - Character arc review (progression, motivation coherence over time) is not covered.

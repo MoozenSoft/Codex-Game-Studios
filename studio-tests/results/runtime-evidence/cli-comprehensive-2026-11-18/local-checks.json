@@ -1,0 +1,337 @@
+{
+  "checks": [
+    {
+      "id": "agent-observations",
+      "exit_code": 0
+    },
+    {
+      "id": "compat-observations",
+      "exit_code": 0
+    },
+    {
+      "id": "strict-config",
+      "exit_code": 1
+    },
+    {
+      "id": "authentication",
+      "exit_code": 0
+    },
+    {
+      "id": "diff-check",
+      "exit_code": 0
+    },
+    {
+      "id": "index-diff-check",
+      "exit_code": 0
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/adr-dep-graph.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/adr-status.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/agent-check.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/artifact-check.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/asset-scan.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/bug-stats.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/code-markers.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/compat-inventory.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/config-set.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/content-count.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/cut-apply.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/cut-read.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/debt-register.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/door-in.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/flaky-stats.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/game-read.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/gdd-structure-check.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/inputs-check.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/itch-zip.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/md-section.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/migrate-v1-config.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/one-shot-check.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/one-shot-grow.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/one-shot-new.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/one-shot-run.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/one-shot-share.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/one-shot-tune.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/page-shot.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/plan-math.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/project-coherence.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/project-state.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/python-run.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/read-guard.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/references-save.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/registry.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/review-receipts.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/review-scope.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/rotate-session-state.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/session-state.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/set-stage.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/skill-lint.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/story-facts.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/story-status.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/test-run.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/test-scaffold.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/vendor-three.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/web-detect.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/web-scaffold.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/write-guard.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".agents/scripts/yaml-helper.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "id": "bash.syntax",
+      "path": ".codex/hooks/run.sh",
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "bash_scripts": 51,
+  "roles": 49,
+  "role_model_inheritance": true
+}

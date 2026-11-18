@@ -1,0 +1,13 @@
+
+> app-dusk-fish@0.0.0 test:unit
+> vitest run
+
+
+ RUN  v5.0.5 D:/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance
+
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  12:29:20
+   Duration  102ms (import 45%, transform 29%, worker 15%, tests 11%, environment 1%)
+

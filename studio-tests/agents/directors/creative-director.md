@@ -1,5 +1,7 @@
 # Agent Test Spec: creative-director
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 **Domain owned:** Creative vision, game pillars, GDD alignment, systems decomposition feedback, narrative direction, playtest feedback interpretation, phase gate (creative aspect).
 **Does NOT own:** Technical architecture or implementation details (delegates to technical-director), production scheduling (producer), visual art style execution (delegates to art-director).
@@ -9,11 +11,11 @@
 
 ## Static Assertions (Structural)
 
-Verified by reading the agent's `.claude/agents/creative-director.md` frontmatter:
+Verified by reading the agent's `.codex/agents/creative-director.toml` frontmatter:
 
 - [ ] `description:` field is present and domain-specific (references creative vision, pillars, GDD alignment — not generic)
-- [ ] `tools:` reads Read, Glob, Grep, Write, Edit, WebSearch and `disallowedTools:` lists Bash
-- [ ] Model tier is `opus` — frontmatter `model:` reads exactly `opus` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over technical architecture or production scheduling
 
 ---
@@ -87,6 +89,6 @@ Verified by reading the agent's `.claude/agents/creative-director.md` frontmatte
 
 ## Coverage Notes
 - Multi-gate scenario (e.g., single submission triggering both CD-PILLARS and CD-GDD-ALIGN) is not covered here — deferred to integration tests.
-- CD-PHASE-GATE (the creative director's own readiness review, which `/gate-check` runs at `workflow: full`) has no case yet.
-- CD-PLAYTEST (review of a `/playtest-report` report) has no case yet.
+- CD-PHASE-GATE (the creative director's own readiness review, which `$gate-check` runs at `workflow: full`) has no case yet.
+- CD-PLAYTEST (review of a `$playtest-report` report) has no case yet.
 - Interaction with art-director on visual-pillar alignment is not covered.

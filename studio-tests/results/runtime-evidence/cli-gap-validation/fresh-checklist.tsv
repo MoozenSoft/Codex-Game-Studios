@@ -1,0 +1,9 @@
+L1	pass	evidence/play.png	两块深蓝面板分别显示按键、分数、状态及一排三个方形青灯
+L2	pass	index.html:15	只加载本地 config.js；图形、文字与样式均由页面自行绘制，无外部素材
+L3	pass	evidence/play.png	固定 2D 单屏视图
+F1	pass	evidence/reset.png	Chrome 从待机进入游戏和胜利，按 R 后回到待机且三个灯和分数清零
+F2	pass	index.html:154	每次点亮下一格并加固定的 1 分；Chrome 三次 Space 后达到 3 分
+F3	pass	evidence/play.png	Chrome 第三格点亮的同一步为 results，显示胜利和 3 分
+F4	pass	index.html:15	仅本地脚本；浏览器截图确认两个独立面板
+M1	pass	evidence/reset.png	待机三个灯全暗、分数 0；Chrome 记录第 1 步按 Enter 进入 play
+C1	pass	index.html:146	唯一结束条件为三格全亮；无计时门槛、随机或失败分支

@@ -1,0 +1,168 @@
+browser	C:/Program Files/Google/Chrome/Application/chrome.exe
+time	2026-11-17 12:36:33
+render	cheap
+ua	HeadlessChrome/157.0.0.0
+scene	0	title
+state	0	title	{"t":0,"score":0,"gained":"","x":400,"y":510,"phase":0,"target":0.32,"cooldown":0,"feedback":0,"message":"Find the gold. Press Space.","fish":"[8 items]"}
+scene	1	play
+state	1	play	{"t":0,"score":0,"gained":"","x":400,"y":510,"phase":0,"target":0.32,"cooldown":0,"feedback":0,"message":"Find the gold. Press Space.","fish":"[8 items]"}
+playinput	4	ArrowRight
+scene	413	results
+state	413	results	{"t":6.87,"score":3,"gained":"Evening haul complete","x":400,"y":510,"phase":1.37,"target":0.66,"cooldown":0.6,"feedback":1.1,"message":"Landed! Another flash of silver.","fish":"[8 items]"}
+stuck	1020	results	10	
+stuck	1620	results	10	
+stuck	2220	results	10	
+stuck	2820	results	10	
+frame	3481	6b5cd1b1
+frame	3482	6b5cd1b1
+frame	3483	6b5cd1b1
+frame	3484	6b5cd1b1
+frame	3485	6b5cd1b1
+frame	3486	6b5cd1b1
+frame	3487	6b5cd1b1
+frame	3488	6b5cd1b1
+frame	3489	6b5cd1b1
+frame	3490	6b5cd1b1
+frame	3491	6b5cd1b1
+frame	3492	6b5cd1b1
+frame	3493	6b5cd1b1
+frame	3494	6b5cd1b1
+frame	3495	6b5cd1b1
+frame	3496	6b5cd1b1
+frame	3497	6b5cd1b1
+frame	3498	6b5cd1b1
+frame	3499	6b5cd1b1
+frame	3500	6b5cd1b1
+frame	3501	6b5cd1b1
+frame	3502	6b5cd1b1
+frame	3503	6b5cd1b1
+frame	3504	6b5cd1b1
+frame	3505	6b5cd1b1
+frame	3506	6b5cd1b1
+frame	3507	6b5cd1b1
+frame	3508	6b5cd1b1
+frame	3509	6b5cd1b1
+frame	3510	6b5cd1b1
+frame	3511	6b5cd1b1
+frame	3512	6b5cd1b1
+frame	3513	6b5cd1b1
+frame	3514	6b5cd1b1
+frame	3515	6b5cd1b1
+frame	3516	6b5cd1b1
+frame	3517	6b5cd1b1
+frame	3518	6b5cd1b1
+frame	3519	6b5cd1b1
+frame	3520	6b5cd1b1
+frame	3521	6b5cd1b1
+frame	3522	6b5cd1b1
+frame	3523	6b5cd1b1
+frame	3524	6b5cd1b1
+frame	3525	6b5cd1b1
+frame	3526	6b5cd1b1
+frame	3527	6b5cd1b1
+frame	3528	6b5cd1b1
+frame	3529	6b5cd1b1
+frame	3530	6b5cd1b1
+frame	3531	6b5cd1b1
+frame	3532	6b5cd1b1
+frame	3533	6b5cd1b1
+frame	3534	6b5cd1b1
+frame	3535	6b5cd1b1
+frame	3536	6b5cd1b1
+frame	3537	6b5cd1b1
+frame	3538	6b5cd1b1
+frame	3539	6b5cd1b1
+frame	3540	6b5cd1b1
+frame	3541	6b5cd1b1
+frame	3542	6b5cd1b1
+frame	3543	6b5cd1b1
+frame	3544	6b5cd1b1
+frame	3545	6b5cd1b1
+frame	3546	6b5cd1b1
+frame	3547	6b5cd1b1
+frame	3548	6b5cd1b1
+frame	3549	6b5cd1b1
+frame	3550	6b5cd1b1
+frame	3551	6b5cd1b1
+frame	3552	6b5cd1b1
+frame	3553	6b5cd1b1
+frame	3554	6b5cd1b1
+frame	3555	6b5cd1b1
+frame	3556	6b5cd1b1
+frame	3557	6b5cd1b1
+frame	3558	6b5cd1b1
+frame	3559	6b5cd1b1
+frame	3560	6b5cd1b1
+frame	3561	6b5cd1b1
+frame	3562	6b5cd1b1
+frame	3563	6b5cd1b1
+frame	3564	6b5cd1b1
+frame	3565	6b5cd1b1
+frame	3566	6b5cd1b1
+frame	3567	6b5cd1b1
+frame	3568	6b5cd1b1
+frame	3569	6b5cd1b1
+frame	3570	6b5cd1b1
+frame	3571	6b5cd1b1
+frame	3572	6b5cd1b1
+frame	3573	6b5cd1b1
+frame	3574	6b5cd1b1
+frame	3575	6b5cd1b1
+frame	3576	6b5cd1b1
+frame	3577	6b5cd1b1
+frame	3578	6b5cd1b1
+frame	3579	6b5cd1b1
+frame	3580	6b5cd1b1
+frame	3581	6b5cd1b1
+frame	3582	6b5cd1b1
+frame	3583	6b5cd1b1
+frame	3584	6b5cd1b1
+frame	3585	6b5cd1b1
+frame	3586	6b5cd1b1
+frame	3587	6b5cd1b1
+frame	3588	6b5cd1b1
+frame	3589	6b5cd1b1
+frame	3590	6b5cd1b1
+frame	3591	6b5cd1b1
+frame	3592	6b5cd1b1
+frame	3593	6b5cd1b1
+frame	3594	6b5cd1b1
+frame	3595	6b5cd1b1
+frame	3596	6b5cd1b1
+frame	3597	6b5cd1b1
+frame	3598	6b5cd1b1
+frame	3599	6b5cd1b1
+frame	3600	6b5cd1b1
+state	3600	results	{"t":6.87,"score":3,"gained":"Evening haul complete","x":400,"y":510,"phase":1.37,"target":0.66,"cooldown":0.6,"feedback":1.1,"message":"Landed! Another flash of silver.","fish":"[8 items]"}
+digits	log	52px "Trebuchet MS", sans-serif	tabular	0
+digits	log	25px "Trebuchet MS", sans-serif	tabular	0
+digits	log	14px "Trebuchet MS", sans-serif	tabular	0
+digits	log	23px "Trebuchet MS", sans-serif	tabular	0
+loop	log	none	no loop() step was marked
+first	log	none	no state.beat
+ending	log	results	gained	Evening haul complete
+pressure	none	the game set no number state.margin in play
+steptime	3600	0.001	0.300
+frametime	6	2.0	2.8	180	0	0
+done	3600	results	stop	60.0	2100
+measured	1280x720
+text	results	canvas	64,33,179,54	40.5	14.47	inside	dusk-fish
+text	results	canvas	63,75,335,91	22.5	10.73	inside	A small ritual before the light goes.
+text	results	canvas	849,41,1210,58	25.5	10.73	inside	ARROWS move   /   SPACE catch   /   P pause
+text	results	canvas	1015,174,1169,187	25.5	12.00	inside	BEFORE NIGHTFALL
+text	results	canvas	1017,213,1135,252	72.0	15.12	inside	53.1s
+text	results	canvas	1015,289,1170,307	34.5	15.12	inside	3 / 3 CAUGHT
+text	results	canvas	1013,340,1165,351	21.0	11.21	inside	YOUR EVENING HAUL
+text	results	canvas	1013,453,1176,466	22.5	15.12	inside	Three fish. One dusk.
+text	results	canvas	1014,484,1189,496	21.0	11.21	inside	Enter retries at the end.
+text	results	canvas	1014,538,1069,548	19.5	11.21	inside	SEED 721
+text	results	canvas	150,592,405,603	21.0	10.73	inside	REEL WHEN THE NEEDLE IS IN GOLD
+text	results	canvas	151,657,415,671	27.0	11.49	inside	Landed! Another flash of silver.
+text	results	canvas	805,660,889,674	21.0	10.73	inside	Recasting...
+text	results	canvas	399,251,883,296	66.0	11.65	inside	Evening haul complete
+text	results	canvas	493,332,784,349	31.5	14.68	inside	3 fish landed in 6.9 seconds.
+text	results	canvas	517,393,765,408	28.5	10.36	inside	Enter / R for another dusk
+text	results	canvas	491,458,786,475	25.5	10.56	inside	A little patience. A precise moment.
+screen	3600	results	5c0d6eb9	drawn
+uncaught	0
+shot	/d/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/production/qa/evidence/grow-app-dusk-fish/story.png	97727

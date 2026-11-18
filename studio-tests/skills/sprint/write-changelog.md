@@ -1,10 +1,12 @@
-# Skill Test Spec: /write-changelog
+# Skill Test Spec: $write-changelog
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/write-changelog` is a Sonnet-tier skill that generates two changelogs — an internal
+`$write-changelog` is a skill that generates two changelogs — an internal
 one and a player-facing one — from the git commits since the last release tag.
-Before using the injected history it classifies every commit as Game or
+Before using the explicitly fetched history it classifies every commit as Game or
 Framework / maintenance (Unclear counts as Framework), uses only the Game
 commits, and says how many of how many it used; with zero Game commits it stops.
 With no history at all (not a git repository, or no commits) it skips that check
@@ -23,13 +25,13 @@ BLOCKED when there is no history or none of it is the game's.
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keywords: CHANGELOG WRITTEN, COMPLETE, BLOCKED
 - [ ] Contains "May I write" language (skill writes changelog)
-- [ ] Has a next-step handoff (`/patch-notes` for a player-facing release, `/release-checklist`)
+- [ ] Has a next-step handoff (`$patch-notes` for a player-facing release, `$release-checklist`)
 
 ---
 
@@ -43,7 +45,7 @@ None. Changelog generation is a fast compilation task; no gates are invoked.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -53,17 +55,17 @@ Fixture defaults.
 ### Case 1: Happy Path — Multiple sprints since last release tag
 
 **Fixture:**
-- Git history has a tag `v0.3.0`; it is the newest tag in the injected tag list
+- Git history has a tag `v0.3.0`; it is the newest tag in the explicitly fetched tag list
 - Since that tag: 12 commits across sprints 006, 007, 008 — all Game commits
   (mechanics, content, bug fixes) naming systems that appear in `design/`
 - `production/sprints/sprint-006.md` through `sprint-008.md` exist and list the
   stories whose task IDs appear in the commit messages
 - `docs/CHANGELOG.md` does not yet exist
 
-**Input:** `/write-changelog`
+**Input:** `$write-changelog`
 
 **Expected behavior:**
-1. Skill classifies the injected commits as Game or Framework / maintenance and
+1. Skill classifies the explicitly fetched commits as Game or Framework / maintenance and
    states how many of how many it used
 2. Skill reads `git log --oneline v0.3.0..HEAD`
 3. Skill reads the sprint plans for sprints 006–008 in `production/sprints/`
@@ -77,7 +79,7 @@ Fixture defaults.
 7. User selects [B]; the file is created; verdict CHANGELOG WRITTEN
 
 **Assertions:**
-- [ ] Changelog covers the commits in `v0.3.0..HEAD`, and the output states how many of how many injected commits it used
+- [ ] Changelog covers the commits in `v0.3.0..HEAD`, and the output states how many of how many explicitly fetched commits it used
 - [ ] Entries use the skill's section set — New Features, Improvements, Bug Fixes, Balance Changes, Technical Debt / Refactoring, Known Issues, Miscellaneous — not a generic Features/Fixes split
 - [ ] Sprint plans in `production/sprints/` for the covered sprints are read for context before categorizing
 - [ ] Both changelogs are presented before the "May I write" prompt, and nothing is written before approval
@@ -89,10 +91,10 @@ Fixture defaults.
 
 **Fixture:**
 - Git repository has 20 commits and no tags; all 20 are Game commits
-- The injected tag list is empty
+- The explicitly fetched tag list is empty
 - `docs/CHANGELOG.md` does not exist
 
-**Input:** `/write-changelog`
+**Input:** `$write-changelog`
 
 **Expected behavior:**
 1. Skill finds no tag to anchor the range
@@ -121,7 +123,7 @@ Fixture defaults.
   "fix player clipping through ledge", "add footstep sounds", "level tweaks",
   "combat cleanup"
 
-**Input:** `/write-changelog`
+**Input:** `$write-changelog`
 
 **Expected behavior:**
 1. Skill categorizes every commit by what it changed, whether or not it has a
@@ -150,7 +152,7 @@ Fixture defaults.
 - `docs/CHANGELOG.md` already exists with sections for `v0.2.0` and `v0.3.0`
 - New Game commits exist since the `v0.3.0` tag
 
-**Input:** `/write-changelog`
+**Input:** `$write-changelog`
 
 **Expected behavior:**
 1. Skill compiles new entries for the period since `v0.3.0`
@@ -175,7 +177,7 @@ Fixture defaults.
 - Git history has Game commits since the last tag
 - `project.yaml` sets `modes.review_mode: full`
 
-**Input:** `/write-changelog`
+**Input:** `$write-changelog`
 
 **Expected behavior:**
 1. Skill compiles both changelogs; no director gate is spawned (the skill
@@ -195,15 +197,15 @@ Fixture defaults.
 ### Case 6: Provenance Stop — Zero Game commits
 
 **Fixture:**
-- The 30 injected commits all touch the framework or tooling — subjects such as
+- The 30 explicitly fetched commits all touch the framework or tooling — subjects such as
   "fix: session-start hook timeout", "docs: skill catalog", "ci: cache the test
   runner" — and none names a game system in `design/` or the code root
 - `docs/CHANGELOG.md` does not exist
 
-**Input:** `/write-changelog`
+**Input:** `$write-changelog`
 
 **Expected behavior:**
-1. Skill classifies every injected commit: 0 Game, 30 Framework / maintenance
+1. Skill classifies every explicitly fetched commit: 0 Game, 30 Framework / maintenance
 2. Skill stops with "The git history in this repo does not appear to belong to
    [game] …", describing what the commits actually cover
 3. No changelog is generated and nothing is written; verdict BLOCKED
@@ -219,17 +221,16 @@ Fixture defaults.
 ### Case 7: No History — Not a git repository
 
 **Fixture:**
-- The project directory is not a git repository, so both injected history
-  blocks are empty
+- The project directory is not a git repository; the explicit
+  `git rev-parse --is-inside-work-tree` command fails, so no history is fetched
 - `docs/CHANGELOG.md` does not exist
 
-**Input:** `/write-changelog`
+**Input:** `$write-changelog`
 
 **Expected behavior:**
-1. The injected commit list is empty, so the provenance check is skipped —
-   there is nothing to classify
-2. Phase 1's `git rev-parse --is-inside-work-tree` fails; skill outputs "No git
-   history found. A changelog is built from commits …"
+1. The repository check fails before history reads; the provenance check is
+   skipped because no successful history read occurred
+2. Skill outputs "No git history found. A changelog is built from commits …"
 3. Nothing is generated or written; verdict BLOCKED
 
 **Assertions:**
@@ -240,14 +241,39 @@ Fixture defaults.
 
 ---
 
+### Case 8: History commands were not run or failed
+
+**Fixture:**
+- The repository exists and contains commits.
+- The Skill body has loaded, but its fenced history commands have not executed.
+- Variant: `git log` is attempted and fails with a permission or I/O error.
+
+**Input:** `$write-changelog`
+
+**Expected behavior:**
+1. Loading the Skill does not count as a history read. Execute and inspect the
+   repository check, log and tags before classifying their output.
+2. If commands cannot run, report NOT RUN and BLOCKED. On a non-zero read exit,
+   name that failure and return BLOCKED.
+3. Neither state becomes an empty successful history or zero Game commits.
+4. A successful later query for the selected release range receives the same
+   provenance filtering before categorization.
+
+**Assertions:**
+- [ ] No changelog or write prompt is produced from missing command results.
+- [ ] The reported reason distinguishes unavailable execution, read failure,
+      and an actual repository with no commits.
+
+---
+
 ## Protocol Compliance
 
-- [ ] Classifies the injected commits as Game or Framework / maintenance and uses only Game commits
+- [ ] Classifies the explicitly fetched commits as Game or Framework / maintenance and uses only Game commits
 - [ ] Reads the git log and the sprint plans in `production/sprints/` before compiling
 - [ ] Always asks "May I write" before writing the changelog
 - [ ] No director gates are invoked
 - [ ] Verdict is CHANGELOG WRITTEN after a write, COMPLETE when the write is declined, and BLOCKED when there is no history or no Game commit
-- [ ] Declares `model: sonnet` — it writes player-facing copy
+- [ ] Skill body requires the latest available `sol` model and resolves reasoning effort through the client.
 
 ---
 
@@ -259,5 +285,5 @@ Fixture defaults.
   instead of widening the range) is not tested.
 - Merge commits vs. squash commits are not explicitly differentiated in
   these tests; implementation detail of the git log parsing phase.
-- The `/patch-notes` skill should be run after `/write-changelog` for player-facing
+- The `$patch-notes` skill should be run after `$write-changelog` for player-facing
   output; that handoff is verified in the patch-notes spec.

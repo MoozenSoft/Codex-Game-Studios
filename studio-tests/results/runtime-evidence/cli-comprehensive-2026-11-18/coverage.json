@@ -1,0 +1,2489 @@
+{
+  "skills": 75,
+  "agents": 49,
+  "skill_categories": [
+    "analysis",
+    "authoring",
+    "gate",
+    "pipeline",
+    "readiness",
+    "review",
+    "sprint",
+    "team",
+    "utility"
+  ],
+  "agent_categories": [
+    "director",
+    "engine",
+    "lead",
+    "operations",
+    "qa",
+    "specialist"
+  ],
+  "component_entries": [
+    {
+      "kind": "skill",
+      "name": "gate-check",
+      "category": "gate",
+      "path": ".agents/skills/gate-check/SKILL.md",
+      "sha256": "96597e092bea4b3d536d701f13c8f2ab2e9f0a9758a1a21cd5e2dd9a953bedc1",
+      "spec": "studio-tests/skills/gate/gate-check.md",
+      "spec_exists": true,
+      "resources": 13,
+      "resource_sha256": {
+        ".agents/skills/gate-check/SKILL.md": "96597e092bea4b3d536d701f13c8f2ab2e9f0a9758a1a21cd5e2dd9a953bedc1",
+        ".agents/skills/gate-check/references/2b-workflow-tier.md": "02216887f7636f438cfd4ba961d68cf5cc5fcfc11ca1926bbd6169b3e05e4114",
+        ".agents/skills/gate-check/references/3-run-gate-check.md": "437a3030b8b2c53adee795135571108b969e8ec360980c290be338fe2087a6eb",
+        ".agents/skills/gate-check/references/4-assessment.md": "3636adc4fd253f1f93374d933ca5c3e2a7eba85cc88374afa9edce090543fe16",
+        ".agents/skills/gate-check/references/5-verdict.md": "a6aae49e722fa128ba572ef77ad8392d8367625b99639aeeee88b5ead3c44dbc",
+        ".agents/skills/gate-check/references/6-update-stage.md": "ead50268ccc880051afef4cfa806e691928d28979853b26d2e66de0fc20f24c1",
+        ".agents/skills/gate-check/references/7-next-steps.md": "e1ce0eaf7d00fb557a3c38c7114c4effcf1ee3757becaad55616f3ac5911c307",
+        ".agents/skills/gate-check/references/gate-polish.md": "25bc728e8041f571bc4ee78f551a081c1728bc62fe1c466c7d1da89e4b0dfec8",
+        ".agents/skills/gate-check/references/gate-pre-production.md": "303c5a34b67ba74577dd8e5761e77dee64cbf7442ab3bf66f88526f06389b53d",
+        ".agents/skills/gate-check/references/gate-production.md": "4c86971d9d9c072cc36174b9303f770f7623fba436ee9d83765732d82f973377",
+        ".agents/skills/gate-check/references/gate-release.md": "d58cb29b140c056ea6f87c8c052b01de9d8d762ed91cd7284c18f5ea665eaef5",
+        ".agents/skills/gate-check/references/gate-systems-design.md": "2922d29ae25bf551b618929052bffaf68e1e8c20a5e635df9e463520f86bc41e",
+        ".agents/skills/gate-check/references/gate-technical-setup.md": "b039870bb36187ac9e759b85260e7c9ef887a13ee569428d80d460403e385964"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/skill-gate-check.md",
+        "studio-tests/results/representatives/gate-recheck.txt"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "design-review",
+      "category": "review",
+      "path": ".agents/skills/design-review/SKILL.md",
+      "sha256": "9dc32c447ea9632ea3e8722b0a021ab68b002a3d2288f941c63eba50225a6618",
+      "spec": "studio-tests/skills/review/design-review.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/design-review/SKILL.md": "9dc32c447ea9632ea3e8722b0a021ab68b002a3d2288f941c63eba50225a6618"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/skill-design-review.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "story-readiness",
+      "category": "readiness",
+      "path": ".agents/skills/story-readiness/SKILL.md",
+      "sha256": "1dce50e1a3a3e1735495e7d9ae4cdf449b2a158d37ca5a6df9cf62b20f4807c0",
+      "spec": "studio-tests/skills/readiness/story-readiness.md",
+      "spec_exists": true,
+      "resources": 2,
+      "resource_sha256": {
+        ".agents/skills/story-readiness/SKILL.md": "1dce50e1a3a3e1735495e7d9ae4cdf449b2a158d37ca5a6df9cf62b20f4807c0",
+        ".agents/skills/story-readiness/references/qa-lead-gate.md": "f919c5e0cfc94d1caccd0c68c4ab5b97b64fca75c24d1632ab6f2297a534c226"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/skill-story-readiness.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "story-done",
+      "category": "readiness",
+      "path": ".agents/skills/story-done/SKILL.md",
+      "sha256": "9b486354cb5e5bcc15aeea3e8be39813f348783fb2d51b0614a1825fd04ed809",
+      "spec": "studio-tests/skills/readiness/story-done.md",
+      "spec_exists": true,
+      "resources": 4,
+      "resource_sha256": {
+        ".agents/skills/story-done/SKILL.md": "9b486354cb5e5bcc15aeea3e8be39813f348783fb2d51b0614a1825fd04ed809",
+        ".agents/skills/story-done/references/review-gates.md": "49618b4e574a5db5dd9b25bc681b92d357b513ef9e05c760a4509d0471913741",
+        ".agents/skills/story-done/references/sprint-next.md": "7b6ccd2b4abad443b990b28da8ba2db1d861e28c3005d08e1abc5f00d8eef116",
+        ".agents/skills/story-done/references/tech-debt-row.md": "876c7b10231b65a2c7883a4dd8a36eefdba529a2dee5e56bcbef2aa675cf1b21"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "review-all-gdds",
+      "category": "review",
+      "path": ".agents/skills/review-all-gdds/SKILL.md",
+      "sha256": "879dea0c49b43efcc5290c890263f3050dd1f1d93cc8fe8a1e00fd0aa2700b79",
+      "spec": "studio-tests/skills/review/review-all-gdds.md",
+      "spec_exists": true,
+      "resources": 8,
+      "resource_sha256": {
+        ".agents/skills/review-all-gdds/SKILL.md": "879dea0c49b43efcc5290c890263f3050dd1f1d93cc8fe8a1e00fd0aa2700b79",
+        ".agents/skills/review-all-gdds/references/1-load.md": "3a5bfae925faa8ceec1b3533d7eaf12b43b66b0a7b9a00a2d938cb22006ed997",
+        ".agents/skills/review-all-gdds/references/2-consistency.md": "7460f9f660dce6e9f51e28ce2ce192aadc281828696ac026b71719c90dc26389",
+        ".agents/skills/review-all-gdds/references/3-design-holism.md": "6c00a834c1f38348bdc8fda6c2573c9790557616b71b0ad2046773835cc5d2a3",
+        ".agents/skills/review-all-gdds/references/4-scenarios.md": "d047503556c710fc47bd7eb33562e59c10807eb417c4b8639a45f11c6bd32fa6",
+        ".agents/skills/review-all-gdds/references/5-report.md": "5627de2493b435aa561832f268c57c2b092d6c3b9a62bc62c2db66a43993e03f",
+        ".agents/skills/review-all-gdds/references/6-write.md": "591fdfa7904e3d0cf583ec547109781f9bd2f294202a72641ad835feee166d7c",
+        ".agents/skills/review-all-gdds/references/7-handoff.md": "79c3f3f00ba5e7c058a0524129e613412f3476c7c89e02daa61ad3dbee208d6c"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "architecture-review",
+      "category": "review",
+      "path": ".agents/skills/architecture-review/SKILL.md",
+      "sha256": "0854c9b9daae0d63754e3cca8f59d451c880f4f2ffd4aae030a9fd3292c5d9df",
+      "spec": "studio-tests/skills/review/architecture-review.md",
+      "spec_exists": true,
+      "resources": 11,
+      "resource_sha256": {
+        ".agents/skills/architecture-review/SKILL.md": "0854c9b9daae0d63754e3cca8f59d451c880f4f2ffd4aae030a9fd3292c5d9df",
+        ".agents/skills/architecture-review/references/1-load.md": "06b5eff9d1b5970e022aa3731117b76e6868a9460102037d9efd81d912d75c74",
+        ".agents/skills/architecture-review/references/2-extract-requirements.md": "8fbec906d05534bfd1255b719476fd819241527a8df076f2857b17b2f2b44e9e",
+        ".agents/skills/architecture-review/references/3-traceability.md": "45ee337e971f2faab58579398a1bac188b12b4788d98a0d16ce9d5546bcc671a",
+        ".agents/skills/architecture-review/references/4-conflicts.md": "a40a21ac55115ef0e5b0c8cf9df890bd26e754fb0b634408701dd7ff046efbab",
+        ".agents/skills/architecture-review/references/5-engine.md": "df51b572c26e2df2948c79d33afd1ab65045cc6e181cfcf3ad75b353776227ea",
+        ".agents/skills/architecture-review/references/6-document-coverage.md": "08094893a0847b96c8b724b6cbefbf84024ac0d3d320ad2d73fe82015c8d1fb4",
+        ".agents/skills/architecture-review/references/7-report.md": "e7239b150ae9541e26fc5e89ef818a77d2c4c5b1585e3d451bb4add65793a76c",
+        ".agents/skills/architecture-review/references/8-write.md": "77f098728fbbe59984c13680fd0c5bc7e7b93193ef6b7b8973dc1ccc4fecb171",
+        ".agents/skills/architecture-review/references/9-handoff.md": "db0d1d967928ea49f1b5af0097c14363e79053100d8e448425d4ccbc95a9fd2c",
+        ".agents/skills/architecture-review/references/lens-engine.md": "86fae08efe3f23927d8203fd09c29899ed9bf7da0088d0a45842138babd85e2c"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "create-epics",
+      "category": "pipeline",
+      "path": ".agents/skills/create-epics/SKILL.md",
+      "sha256": "1abd44f9b83cc70137c4df3234bdc9fde4a3f2a21b6467f94104cfa3babe345f",
+      "spec": "studio-tests/skills/pipeline/create-epics.md",
+      "spec_exists": true,
+      "resources": 2,
+      "resource_sha256": {
+        ".agents/skills/create-epics/SKILL.md": "1abd44f9b83cc70137c4df3234bdc9fde4a3f2a21b6467f94104cfa3babe345f",
+        ".agents/skills/create-epics/references/pr-epic-gate.md": "990efdfb2d6955ace5c3562e4753a5a8599f63cb39a48e51366124bcbca4f6d3"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "create-stories",
+      "category": "pipeline",
+      "path": ".agents/skills/create-stories/SKILL.md",
+      "sha256": "49584a1384a5a83fe21bf2c55d2c3b64f102afae5dfefa1918a270bebb3cca86",
+      "spec": "studio-tests/skills/pipeline/create-stories.md",
+      "spec_exists": true,
+      "resources": 2,
+      "resource_sha256": {
+        ".agents/skills/create-stories/SKILL.md": "49584a1384a5a83fe21bf2c55d2c3b64f102afae5dfefa1918a270bebb3cca86",
+        ".agents/skills/create-stories/references/qa-lead-gate.md": "1c3eb43de23a63894a51038813e0fc63ae3f514f7d743f15cffff1de8fd9d27b"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "dev-story",
+      "category": "pipeline",
+      "path": ".agents/skills/dev-story/SKILL.md",
+      "sha256": "87e321da60b071bb371e83f5c38536f6a411e6529dd5f1c45b81ebd96087d95f",
+      "spec": "studio-tests/skills/pipeline/dev-story.md",
+      "spec_exists": true,
+      "resources": 3,
+      "resource_sha256": {
+        ".agents/skills/dev-story/SKILL.md": "87e321da60b071bb371e83f5c38536f6a411e6529dd5f1c45b81ebd96087d95f",
+        ".agents/skills/dev-story/references/engine-checks.md": "c3ec789cc1c424366e5e85ebc56e5df317b5dfdd011f9e944e6242235640fdb4",
+        ".agents/skills/dev-story/references/version-mismatch.md": "580aed9de5ab3d43f1d49a9fce8eb13866436131df15eeebfc220feeab3212fb"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/skill-dev-story.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "create-control-manifest",
+      "category": "pipeline",
+      "path": ".agents/skills/create-control-manifest/SKILL.md",
+      "sha256": "6e8f07a089294d196c304196737eb8b5bf11cd71003f1df747b49ad4a57971f4",
+      "spec": "studio-tests/skills/pipeline/create-control-manifest.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/create-control-manifest/SKILL.md": "6e8f07a089294d196c304196737eb8b5bf11cd71003f1df747b49ad4a57971f4"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "propagate-design-change",
+      "category": "pipeline",
+      "path": ".agents/skills/propagate-design-change/SKILL.md",
+      "sha256": "7f4ec1b8029ef97b3183581d7d4876fd10b1c609ad1f25cb7e500333493f4760",
+      "spec": "studio-tests/skills/pipeline/propagate-design-change.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/propagate-design-change/SKILL.md": "7f4ec1b8029ef97b3183581d7d4876fd10b1c609ad1f25cb7e500333493f4760"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "architecture-decision",
+      "category": "authoring",
+      "path": ".agents/skills/architecture-decision/SKILL.md",
+      "sha256": "ae47df16366ae2138a55dadd384d96c9623b4b71baf5cfbc676eada0faf0a0b0",
+      "spec": "studio-tests/skills/authoring/architecture-decision.md",
+      "spec_exists": true,
+      "resources": 7,
+      "resource_sha256": {
+        ".agents/skills/architecture-decision/SKILL.md": "ae47df16366ae2138a55dadd384d96c9623b4b71baf5cfbc676eada0faf0a0b0",
+        ".agents/skills/architecture-decision/references/0-accept.md": "ac4e722d0f8585692857c80286db60714655437032d05f8310c0f8007f8b6066",
+        ".agents/skills/architecture-decision/references/0-retrofit.md": "9e5bf64176685ae736fd97e41a98a5c93f3636de7341423c6547e5472a0b080d",
+        ".agents/skills/architecture-decision/references/1-engine-context.md": "bd8e78028c62a0b78b68ec481b5f919118119cf51d589e2f9d72a0bb700ebdbf",
+        ".agents/skills/architecture-decision/references/3-gather-context.md": "300038f5dd0c98439dd73d728ccef43cb69080b4299e87239de1ff79bc50b91b",
+        ".agents/skills/architecture-decision/references/4-decide.md": "4e9612edecf5b0ddd619660a0984e5901a1be8b73768eeb7e081ee186d05a595",
+        ".agents/skills/architecture-decision/references/5-generate.md": "fc18edaffd8767e66ab26190dbb444972c161fffb7188c9d0634d5d94eb50a20"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "map-systems",
+      "category": "pipeline",
+      "path": ".agents/skills/map-systems/SKILL.md",
+      "sha256": "aa066887be1736940d9cd385adc92715e7db6f44157e56536eca838aef4d6806",
+      "spec": "studio-tests/skills/pipeline/map-systems.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/map-systems/SKILL.md": "aa066887be1736940d9cd385adc92715e7db6f44157e56536eca838aef4d6806"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "vertical-slice",
+      "category": "pipeline",
+      "path": ".agents/skills/vertical-slice/SKILL.md",
+      "sha256": "3ef75439b1515867e229735bb6d8ceae313599aadb1eb06b1f0918991bc2d412",
+      "spec": "studio-tests/skills/pipeline/vertical-slice.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/vertical-slice/SKILL.md": "3ef75439b1515867e229735bb6d8ceae313599aadb1eb06b1f0918991bc2d412"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "design-system",
+      "category": "authoring",
+      "path": ".agents/skills/design-system/SKILL.md",
+      "sha256": "602bda553f2f458a7fafca0157a462e09c6daa6882cefb7f81196742e351be3e",
+      "spec": "studio-tests/skills/authoring/design-system.md",
+      "spec_exists": true,
+      "resources": 10,
+      "resource_sha256": {
+        ".agents/skills/design-system/SKILL.md": "602bda553f2f458a7fafca0157a462e09c6daa6882cefb7f81196742e351be3e",
+        ".agents/skills/design-system/references/1-parse-arguments.md": "8ef3cde4c5ab6d9714ce9f4bcdb0419ef292e09ed0f2094b537ba8e4258604c6",
+        ".agents/skills/design-system/references/2-gather-context.md": "fd60b96fba4690183d037f2e4f38ba3cbd9255d9f972a8d35edcdcf3e8b6f86a",
+        ".agents/skills/design-system/references/3-file-skeleton.md": "d9dfda4386126b76a7ecdd705eed19901d2c11e0773871201214423d4f1eeee6",
+        ".agents/skills/design-system/references/4-section-design.md": "1a126bad33266af36c64f994414ac2166bfd2b80f8e65576b8363c5634d56e88",
+        ".agents/skills/design-system/references/5-post-design.md": "100368a1eb3c38e7730c6494a606d3fbc83f99d54f213bc802be1e8eae232441",
+        ".agents/skills/design-system/references/lens-creative-director.md": "783ae4cb2a19bc79f9ced53cc8da5b19bc77a6a7fc08f83881e42bebcefbb9f7",
+        ".agents/skills/design-system/references/lens-qa-lead.md": "7a6a6e93a1d203039ab7e51da686cdfe93610c7361e71be7ffd1995d2a085dbe",
+        ".agents/skills/design-system/references/lens-specialists.md": "45a71be806d587fa17f527d6baf3ff435f96fa98d7649b18d3a1780ad1f50bc0",
+        ".agents/skills/design-system/references/lens-systems-designer.md": "0a779d324fa54981188dd4c144dcb97de53712f8363bddfebd7fed795d9a37f5"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "consistency-check",
+      "category": "analysis",
+      "path": ".agents/skills/consistency-check/SKILL.md",
+      "sha256": "d9b1c2e9bc1bfbf7667290a41b881c73ec320d3eeb3f428d6863b17de53875fe",
+      "spec": "studio-tests/skills/analysis/consistency-check.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/consistency-check/SKILL.md": "d9b1c2e9bc1bfbf7667290a41b881c73ec320d3eeb3f428d6863b17de53875fe"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "sprint-plan",
+      "category": "sprint",
+      "path": ".agents/skills/sprint-plan/SKILL.md",
+      "sha256": "37f387985fce31ea12fcd83bf80e61a2b8613aa20e8f255130123ef2cd49f37f",
+      "spec": "studio-tests/skills/sprint/sprint-plan.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/sprint-plan/SKILL.md": "37f387985fce31ea12fcd83bf80e61a2b8613aa20e8f255130123ef2cd49f37f"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "sprint-status",
+      "category": "sprint",
+      "path": ".agents/skills/sprint-status/SKILL.md",
+      "sha256": "4476e05942d4f475e138bbd7351abac992a06cf9efbb8a6e277886fae2940e27",
+      "spec": "studio-tests/skills/sprint/sprint-status.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/sprint-status/SKILL.md": "4476e05942d4f475e138bbd7351abac992a06cf9efbb8a6e277886fae2940e27"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/skill-sprint-status.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "team-ui",
+      "category": "team",
+      "path": ".agents/skills/team-ui/SKILL.md",
+      "sha256": "f0154c810f0ed27df456b5997a028568ea955ef85e251a6c1b9707c8574f0df6",
+      "spec": "studio-tests/skills/team/team-ui.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/team-ui/SKILL.md": "f0154c810f0ed27df456b5997a028568ea955ef85e251a6c1b9707c8574f0df6"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "team-combat",
+      "category": "team",
+      "path": ".agents/skills/team-combat/SKILL.md",
+      "sha256": "8880ba91ad36c21208271d4054d697a80be120aafd257a119e86761125387ba1",
+      "spec": "studio-tests/skills/team/team-combat.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/team-combat/SKILL.md": "8880ba91ad36c21208271d4054d697a80be120aafd257a119e86761125387ba1"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/skill-team-combat.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "team-narrative",
+      "category": "team",
+      "path": ".agents/skills/team-narrative/SKILL.md",
+      "sha256": "c64d527b123ea176bdaaad35ce73f7ac94fac8004b8b42a770116311b401777a",
+      "spec": "studio-tests/skills/team/team-narrative.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/team-narrative/SKILL.md": "c64d527b123ea176bdaaad35ce73f7ac94fac8004b8b42a770116311b401777a"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "team-audio",
+      "category": "team",
+      "path": ".agents/skills/team-audio/SKILL.md",
+      "sha256": "692274f9a00e69ba6d978c60d865c12e9376601fe2ee8aadaa04cb44e4834ec7",
+      "spec": "studio-tests/skills/team/team-audio.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/team-audio/SKILL.md": "692274f9a00e69ba6d978c60d865c12e9376601fe2ee8aadaa04cb44e4834ec7"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "team-level",
+      "category": "team",
+      "path": ".agents/skills/team-level/SKILL.md",
+      "sha256": "ee1360ae7a688c51fede3a20a61f8368bfbd6de82d509df1826725d4a69a5fd2",
+      "spec": "studio-tests/skills/team/team-level.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/team-level/SKILL.md": "ee1360ae7a688c51fede3a20a61f8368bfbd6de82d509df1826725d4a69a5fd2"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "team-polish",
+      "category": "team",
+      "path": ".agents/skills/team-polish/SKILL.md",
+      "sha256": "780aaaaf9e4b64c4b7d672db043758bdca90b7b3177543c23318b9f22d33da56",
+      "spec": "studio-tests/skills/team/team-polish.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/team-polish/SKILL.md": "780aaaaf9e4b64c4b7d672db043758bdca90b7b3177543c23318b9f22d33da56"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "team-release",
+      "category": "team",
+      "path": ".agents/skills/team-release/SKILL.md",
+      "sha256": "35ecaf3c03d139574029810f369010ce5a3cf3e24c38fddaef09a953929eda2c",
+      "spec": "studio-tests/skills/team/team-release.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/team-release/SKILL.md": "35ecaf3c03d139574029810f369010ce5a3cf3e24c38fddaef09a953929eda2c"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "team-live-ops",
+      "category": "team",
+      "path": ".agents/skills/team-live-ops/SKILL.md",
+      "sha256": "de4269d5c4e81154e71d99d2fa6a46053d79893359d7771f87986ebf7c5059f0",
+      "spec": "studio-tests/skills/team/team-live-ops.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/team-live-ops/SKILL.md": "de4269d5c4e81154e71d99d2fa6a46053d79893359d7771f87986ebf7c5059f0"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "team-qa",
+      "category": "team",
+      "path": ".agents/skills/team-qa/SKILL.md",
+      "sha256": "c5c85fdb2ae4568002c8498ac50b852f26aecb96cf06abfeec93dada16263ee9",
+      "spec": "studio-tests/skills/team/team-qa.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/team-qa/SKILL.md": "c5c85fdb2ae4568002c8498ac50b852f26aecb96cf06abfeec93dada16263ee9"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "controlled strategy gate with smoke FAIL; expected stop before execution",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "skill-test",
+      "category": "utility",
+      "path": ".agents/skills/skill-test/SKILL.md",
+      "sha256": "63da2d561cd4f2f81859a0d42e88d4aef759cc3447f5bf69ef56164d4ef8c1a2",
+      "spec": "studio-tests/skills/utility/skill-test.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/skill-test/SKILL.md": "63da2d561cd4f2f81859a0d42e88d4aef759cc3447f5bf69ef56164d4ef8c1a2"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "skill-improve",
+      "category": "utility",
+      "path": ".agents/skills/skill-improve/SKILL.md",
+      "sha256": "f59066b77b12958ca2215ae1ba9efa7856184eac691faf22c8f4e714c3c3b0e4",
+      "spec": "studio-tests/skills/utility/skill-improve.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/skill-improve/SKILL.md": "f59066b77b12958ca2215ae1ba9efa7856184eac691faf22c8f4e714c3c3b0e4"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "start",
+      "category": "utility",
+      "path": ".agents/skills/start/SKILL.md",
+      "sha256": "81606827a302475586e934fcfa24c33aafeee1643efb9519c754061000089de4",
+      "spec": "studio-tests/skills/utility/start.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/start/SKILL.md": "81606827a302475586e934fcfa24c33aafeee1643efb9519c754061000089de4"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "next-step",
+      "category": "utility",
+      "path": ".agents/skills/next-step/SKILL.md",
+      "sha256": "c7cef844ec0294ccb08fa84a1497798447b2ce6fb7201c721a2c3badb0d40bfb",
+      "spec": "studio-tests/skills/utility/next-step.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/next-step/SKILL.md": "c7cef844ec0294ccb08fa84a1497798447b2ce6fb7201c721a2c3badb0d40bfb"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "brainstorm",
+      "category": "utility",
+      "path": ".agents/skills/brainstorm/SKILL.md",
+      "sha256": "e6a53724371b936034166cbdf785ac1e603ee566dcdcb57e6d89d7b92e5997d2",
+      "spec": "studio-tests/skills/utility/brainstorm.md",
+      "spec_exists": true,
+      "resources": 2,
+      "resource_sha256": {
+        ".agents/skills/brainstorm/SKILL.md": "e6a53724371b936034166cbdf785ac1e603ee566dcdcb57e6d89d7b92e5997d2",
+        ".agents/skills/brainstorm/references/full-concept.md": "5264df806cb9c2a322c2b53f0af6747e3ad14ea4f3e29318d1890bd10ef44804"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "project-stage-detect",
+      "category": "utility",
+      "path": ".agents/skills/project-stage-detect/SKILL.md",
+      "sha256": "1857b4aa3e586bed8bcb6ad794c22ef2952fe1dc8cb71f8767424b614112734e",
+      "spec": "studio-tests/skills/utility/project-stage-detect.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/project-stage-detect/SKILL.md": "1857b4aa3e586bed8bcb6ad794c22ef2952fe1dc8cb71f8767424b614112734e"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "setup-engine",
+      "category": "utility",
+      "path": ".agents/skills/setup-engine/SKILL.md",
+      "sha256": "f7729154f5df9abb04b731e250b7af395742ed9a9aeb8293702537d716fb7e60",
+      "spec": "studio-tests/skills/utility/setup-engine.md",
+      "spec_exists": true,
+      "resources": 14,
+      "resource_sha256": {
+        ".agents/skills/setup-engine/SKILL.md": "f7729154f5df9abb04b731e250b7af395742ed9a9aeb8293702537d716fb7e60",
+        ".agents/skills/setup-engine/references/11-upgrade.md": "758f9f9f1bd6bfc8980b8ada54c236171efcc483d783018549309d02d68e0a88",
+        ".agents/skills/setup-engine/references/12-output-summary.md": "a9b6385d6da3ddff78abeb3b3315fa39416cd2115ce1745e9dea18ebadb8fbb1",
+        ".agents/skills/setup-engine/references/2-guided-mode.md": "5eb3cfc8a20de757b459212ea1701d815b8bdc4d44b8e1e781edb511933d415a",
+        ".agents/skills/setup-engine/references/3-version.md": "7d2749338a4b90c01f42b29ff551d8743424341f0ab94cb67a8960c9b91210c0",
+        ".agents/skills/setup-engine/references/4-project-stack.md": "18d050cca0d8836acca47e9c54e15f1ec455e03cc86675ca7eb7aa82e8a44a0a",
+        ".agents/skills/setup-engine/references/5-technical-preferences.md": "9fe5254cde8473b0985b3fb16747d0a805276f29db7e6b7581054e134749bcca",
+        ".agents/skills/setup-engine/references/5.5-project-yaml.md": "f349ee132e662c0fba04a9915f5ab463516d62fa7f64a0ac53e7b05d290aa62f",
+        ".agents/skills/setup-engine/references/6-knowledge-gap.md": "21a5ae3ae4b5e438e7bece6f118bfe69883620f9012681421669c05964d712b0",
+        ".agents/skills/setup-engine/references/7-reference-docs.md": "73a74b1ad3c4405dfe15ddc51dc9568165fc059f8da3cfb26e57f0d37dd2e4fc",
+        ".agents/skills/setup-engine/references/7.5-scaffold.md": "c23acaf9fa066ec136a9b7c8d709fe4b46c60086bb2f63eba0094cff23947540",
+        ".agents/skills/setup-engine/references/8-verify.md": "450ffccb1dbd577e3a39b1eaccb4a5f52c9d1ce0416eb3f4beb4bc6bd7636ef5",
+        ".agents/skills/setup-engine/references/godot-language-config.md": "7bf3c486e873f71d72d3f665f7663a411c7ca862732f7a3712f8a5c64c157e71",
+        ".agents/skills/setup-engine/references/web.md": "e39112016aa1f2b29cd45ff5a648118eac6b56a8a182862d2e8a605977036a50"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "quick-design",
+      "category": "authoring",
+      "path": ".agents/skills/quick-design/SKILL.md",
+      "sha256": "c55b4cb70a8f5e81eef1271089c96248738c22f4aed60ddff2f44eab5ec57438",
+      "spec": "studio-tests/skills/authoring/quick-design.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/quick-design/SKILL.md": "c55b4cb70a8f5e81eef1271089c96248738c22f4aed60ddff2f44eab5ec57438"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/skill-quick-design.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "ux-design",
+      "category": "authoring",
+      "path": ".agents/skills/ux-design/SKILL.md",
+      "sha256": "086630beeab20c690d5906bf5df4f406e7792b1c882aec4446871267363f8136",
+      "spec": "studio-tests/skills/authoring/ux-design.md",
+      "spec_exists": true,
+      "resources": 8,
+      "resource_sha256": {
+        ".agents/skills/ux-design/SKILL.md": "086630beeab20c690d5906bf5df4f406e7792b1c882aec4446871267363f8136",
+        ".agents/skills/ux-design/references/2-gather-context.md": "5b02ca139720808be3412997ab102936442fe00ecf6a3ecae7d197010308d5a0",
+        ".agents/skills/ux-design/references/3-file-skeleton.md": "a24525849ee01bd5d9d6df9e98d4f9114297d7d595a4a12697c1540d3dfa31c4",
+        ".agents/skills/ux-design/references/4-authoring.md": "84b2bbea7a8c38dac3a1c23a18f1ad9f5b3614ed0c3c8a01ce738966b3dc5b7e",
+        ".agents/skills/ux-design/references/5-crossref-handoff.md": "7f9e439aed36ab6d976bf8449c8baf7fe4e709716039c32973aaf895ba99f3f1",
+        ".agents/skills/ux-design/references/sections-hud.md": "59524eb5115e7c19e682f379e1e7504d5e3fb4ce07ea48a88f9bf8b8fd95dee3",
+        ".agents/skills/ux-design/references/sections-patterns.md": "e6cef65dcdd31c2ce54818c3bf62ca68de0ca934e72e14d83f18640a294eab2a",
+        ".agents/skills/ux-design/references/sections-ux-spec.md": "585cb36acbe880eee885c3a0352ab6ec1ccddaaf5fb359f0c1dfa8ea65c19afa"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "ux-review",
+      "category": "authoring",
+      "path": ".agents/skills/ux-review/SKILL.md",
+      "sha256": "d0feefd8e9245ede65916555c4b3e77af0243453b7e5ab81c3c33d2b1f8a8a98",
+      "spec": "studio-tests/skills/authoring/ux-review.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/ux-review/SKILL.md": "d0feefd8e9245ede65916555c4b3e77af0243453b7e5ab81c3c33d2b1f8a8a98"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "art-bible",
+      "category": "authoring",
+      "path": ".agents/skills/art-bible/SKILL.md",
+      "sha256": "5a1723f617ff58ff9ea7863af0c47b92b1249f5132b68d9a01c72c0b9e1e9de7",
+      "spec": "studio-tests/skills/authoring/art-bible.md",
+      "spec_exists": true,
+      "resources": 4,
+      "resource_sha256": {
+        ".agents/skills/art-bible/SKILL.md": "5a1723f617ff58ff9ea7863af0c47b92b1249f5132b68d9a01c72c0b9e1e9de7",
+        ".agents/skills/art-bible/references/lens-art-director.md": "166be0dc92fb93416dcbbb0234b467489abf9b0cd57028e736062418e9016b44",
+        ".agents/skills/art-bible/references/lens-technical-artist.md": "547a4f1b1f708f136234e43b47dfbe421b2b0cd835d3c611d6408d8cf6053d4c",
+        ".agents/skills/art-bible/references/lens-ux-designer.md": "a7381144df5014ebbfc115be154924553e9ff1b2397ca1be95b6fa88a2fd9398"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "create-architecture",
+      "category": "authoring",
+      "path": ".agents/skills/create-architecture/SKILL.md",
+      "sha256": "b819e22111ebd31dac27829e497deae1eff67a2e3e8e3adafb7b193805e7c7a8",
+      "spec": "studio-tests/skills/authoring/create-architecture.md",
+      "spec_exists": true,
+      "resources": 10,
+      "resource_sha256": {
+        ".agents/skills/create-architecture/SKILL.md": "b819e22111ebd31dac27829e497deae1eff67a2e3e8e3adafb7b193805e7c7a8",
+        ".agents/skills/create-architecture/references/0-load-context.md": "0b39cb0c8ab23fde2f4627e3789668d93e4fff9bb667399fcd43cdc75167e413",
+        ".agents/skills/create-architecture/references/1-layers.md": "a24a99e3336f0ec0b8424b85819091301021fd78e1002ac7d39163e26b5a1d30",
+        ".agents/skills/create-architecture/references/2-module-ownership.md": "f5b996ff9afaa173787aea35934fd6975b141b2be5ce5597f8eb45295be3322e",
+        ".agents/skills/create-architecture/references/3-data-flow.md": "a5e4d63e3c128878cac7f9630fc3482cfbe881a0a0026506a6d3e55f35f6686f",
+        ".agents/skills/create-architecture/references/4-api-boundaries.md": "27ea33935e8136e671cd7e8c8413a71d493e537866eac8ff535caca3511419dc",
+        ".agents/skills/create-architecture/references/5-adr-audit.md": "cdcab3c6e0d722a31357d38099d474016f4129b88f02e98378725ab9bc5dc6ec",
+        ".agents/skills/create-architecture/references/6-missing-adrs.md": "a09e493f6a8bc0c99c8bc48130f6c773aac0c53c7669706525c99b70f6c6b444",
+        ".agents/skills/create-architecture/references/7-write.md": "a5a68d423e27ec7b3393c370b0ee840439b3194f510623b34046841191353cac",
+        ".agents/skills/create-architecture/references/8-handoff.md": "e24c779a96f51ea8289c440c53464f1e9b36fcc2e23b544314c0ad144a583f22"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "code-review",
+      "category": "analysis",
+      "path": ".agents/skills/code-review/SKILL.md",
+      "sha256": "509703e5ea92533cb06d00e66091c91d427ec640f603c2f62f69cb1797738bfe",
+      "spec": "studio-tests/skills/analysis/code-review.md",
+      "spec_exists": true,
+      "resources": 2,
+      "resource_sha256": {
+        ".agents/skills/code-review/SKILL.md": "509703e5ea92533cb06d00e66091c91d427ec640f603c2f62f69cb1797738bfe",
+        ".agents/skills/code-review/references/lens-engine.md": "936efe6fd444f0b9adb4e8f33a1d2829b7f9f4090a2b2586869fbb583d5464d0"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "balance-check",
+      "category": "analysis",
+      "path": ".agents/skills/balance-check/SKILL.md",
+      "sha256": "d3a7f80159bbd9fdf343621ededdfc75d69c68c45cb193f461857dd85803128d",
+      "spec": "studio-tests/skills/analysis/balance-check.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/balance-check/SKILL.md": "d3a7f80159bbd9fdf343621ededdfc75d69c68c45cb193f461857dd85803128d"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/skill-balance-check.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "asset-audit",
+      "category": "analysis",
+      "path": ".agents/skills/asset-audit/SKILL.md",
+      "sha256": "cc9113ed4127db01b464f5552048e943dbb924fadaa69ffdda86cf38d01af261",
+      "spec": "studio-tests/skills/analysis/asset-audit.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/asset-audit/SKILL.md": "cc9113ed4127db01b464f5552048e943dbb924fadaa69ffdda86cf38d01af261"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "content-audit",
+      "category": "analysis",
+      "path": ".agents/skills/content-audit/SKILL.md",
+      "sha256": "921d8988707e5d0247a17b4a7e3fa4d62ac64f5d6aef3596dae88106a17265d9",
+      "spec": "studio-tests/skills/analysis/content-audit.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/content-audit/SKILL.md": "921d8988707e5d0247a17b4a7e3fa4d62ac64f5d6aef3596dae88106a17265d9"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "tech-debt",
+      "category": "analysis",
+      "path": ".agents/skills/tech-debt/SKILL.md",
+      "sha256": "7dd44727e14a158613a59b174e67620a603abf93e2b089cdf2b6b4e0642d378a",
+      "spec": "studio-tests/skills/analysis/tech-debt.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/tech-debt/SKILL.md": "7dd44727e14a158613a59b174e67620a603abf93e2b089cdf2b6b4e0642d378a"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "scope-check",
+      "category": "analysis",
+      "path": ".agents/skills/scope-check/SKILL.md",
+      "sha256": "8f3b6ef845cb7d00a6224ad46ae9df5a174ea29598e5b05dc20e69ac77b858d8",
+      "spec": "studio-tests/skills/analysis/scope-check.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/scope-check/SKILL.md": "8f3b6ef845cb7d00a6224ad46ae9df5a174ea29598e5b05dc20e69ac77b858d8"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "estimate",
+      "category": "analysis",
+      "path": ".agents/skills/estimate/SKILL.md",
+      "sha256": "9e3397920561d53608678149f2e5356b2069d17d16264a3c1f6cb25adc57d161",
+      "spec": "studio-tests/skills/analysis/estimate.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/estimate/SKILL.md": "9e3397920561d53608678149f2e5356b2069d17d16264a3c1f6cb25adc57d161"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "perf-profile",
+      "category": "analysis",
+      "path": ".agents/skills/perf-profile/SKILL.md",
+      "sha256": "1e2e5150f82312624b268f577d34017227226dd9d52e05cb32740e05f96fbb93",
+      "spec": "studio-tests/skills/analysis/perf-profile.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/perf-profile/SKILL.md": "1e2e5150f82312624b268f577d34017227226dd9d52e05cb32740e05f96fbb93"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "security-audit",
+      "category": "analysis",
+      "path": ".agents/skills/security-audit/SKILL.md",
+      "sha256": "a6f1132bebb3179cd3bd838ba1c11609e360f6e98c770966844c23fdf0f41541",
+      "spec": "studio-tests/skills/analysis/security-audit.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/security-audit/SKILL.md": "a6f1132bebb3179cd3bd838ba1c11609e360f6e98c770966844c23fdf0f41541"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "test-evidence-review",
+      "category": "analysis",
+      "path": ".agents/skills/test-evidence-review/SKILL.md",
+      "sha256": "2277a029e311cd5db500c8f33af1d52ffd6f58a89fb3800e0b771d14ddb0d785",
+      "spec": "studio-tests/skills/analysis/test-evidence-review.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/test-evidence-review/SKILL.md": "2277a029e311cd5db500c8f33af1d52ffd6f58a89fb3800e0b771d14ddb0d785"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "test-flakiness",
+      "category": "analysis",
+      "path": ".agents/skills/test-flakiness/SKILL.md",
+      "sha256": "159567aa3e7a84f8484d899251432a2b104b2b536a37f1c33571054469d2a0c6",
+      "spec": "studio-tests/skills/analysis/test-flakiness.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/test-flakiness/SKILL.md": "159567aa3e7a84f8484d899251432a2b104b2b536a37f1c33571054469d2a0c6"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "reverse-document",
+      "category": "utility",
+      "path": ".agents/skills/reverse-document/SKILL.md",
+      "sha256": "1c57a8803d5e51194bf5b727ef96c7e767985b1c949f5df64ae525ed87c82a7b",
+      "spec": "studio-tests/skills/utility/reverse-document.md",
+      "spec_exists": true,
+      "resources": 2,
+      "resource_sha256": {
+        ".agents/skills/reverse-document/SKILL.md": "1c57a8803d5e51194bf5b727ef96c7e767985b1c949f5df64ae525ed87c82a7b",
+        ".agents/skills/reverse-document/references/from-a-game.md": "1c64e13d84d3cbdf0353e7452d4825cdcbafb8d7dd3a4ef6400a8f02c9c5bdd9"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "bug-report",
+      "category": "utility",
+      "path": ".agents/skills/bug-report/SKILL.md",
+      "sha256": "95a9d3a43a9b02791fe24937735bdb241c43a2c76ee4c195a204045ca38dae23",
+      "spec": "studio-tests/skills/utility/bug-report.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/bug-report/SKILL.md": "95a9d3a43a9b02791fe24937735bdb241c43a2c76ee4c195a204045ca38dae23"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "hotfix",
+      "category": "utility",
+      "path": ".agents/skills/hotfix/SKILL.md",
+      "sha256": "2294a3305340a2c20acd4e9c28130b274d26d78cbf211074bdb4c7719c93051f",
+      "spec": "studio-tests/skills/utility/hotfix.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/hotfix/SKILL.md": "2294a3305340a2c20acd4e9c28130b274d26d78cbf211074bdb4c7719c93051f"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "prototype",
+      "category": "utility",
+      "path": ".agents/skills/prototype/SKILL.md",
+      "sha256": "60b18fbfaa8c1a3bf96d08c2a7fe865eae5e2cd5bbc530af281f99fde65eb614",
+      "spec": "studio-tests/skills/utility/prototype.md",
+      "spec_exists": true,
+      "resources": 19,
+      "resource_sha256": {
+        ".agents/skills/prototype/SKILL.md": "60b18fbfaa8c1a3bf96d08c2a7fe865eae5e2cd5bbc530af281f99fde65eb614",
+        ".agents/skills/prototype/references/1-question.md": "cd7aa43ee013cf950d05c6cb55e4539b9d9d4778296fae73031b9fbe8890d693",
+        ".agents/skills/prototype/references/2-load-context.md": "2b6134f20acd6a9ea53458f16d1fdfdf64142c0b1eef481a99ecac9e96a24291",
+        ".agents/skills/prototype/references/3-choose-path.md": "2271dc20efa39f4973f81a45c0dd92de055f8aebac0ae26466130b9d87d0de51",
+        ".agents/skills/prototype/references/4-plan.md": "d63a17b7f7aa399538e3e0e22ad559c36031aa605e5cb82737c14f4c92e6181a",
+        ".agents/skills/prototype/references/5-implement.md": "7c996727bc6686ea690d5d8b0bd4243c5c0a62b8dc01fb05cb816d0e9983a9a4",
+        ".agents/skills/prototype/references/6-debrief.md": "520531327abdba9e26ce1cb935db17d709ac27fb8413b20f783861cf3c9b2237",
+        ".agents/skills/prototype/references/7-report.md": "e7f28b6188be40cf32fd535b788718d2f541dec926dfe980439935a0b08aebbd",
+        ".agents/skills/prototype/references/8-cd-review.md": "b306ab00170c6fc3fd39a475a7ded7f1717d863c556ac3eea75f64cd0adbe59d",
+        ".agents/skills/prototype/references/9-summary.md": "26fa38c28db154641303f2c9f81ea4aea44cebb4abf74293289125bd1b033ca3",
+        ".agents/skills/prototype/references/one-shot-0-door.md": "a36658122f9eaf277b48d800264bde618e0afc5febc5c1aec929aa361a764a61",
+        ".agents/skills/prototype/references/one-shot-1-card.md": "02b176c5b4d1e7c3328e8824cfb8e753ef40bcb63ed2bb08102f7c85225a39b4",
+        ".agents/skills/prototype/references/one-shot-2-build.md": "df4f4d6f3337bbe317e29f0ec9a8686aa4a9f89bd8faa63221fece793a21a579",
+        ".agents/skills/prototype/references/one-shot-2c-self-check.md": "30c6c9ef123f23bf2124e7c0d4150c9c0d6c4427f28981c35e3bf73213b26fa9",
+        ".agents/skills/prototype/references/one-shot-3-handover.md": "ee785f5e8a4d0041dba467359fc1f0599edf91c1239e91eca5a9f0e5117c1f8f",
+        ".agents/skills/prototype/references/one-shot-4-change.md": "9ab735be8bef484e738a67bd072689bd5b8a3d1274991c8c78407abbee450448",
+        ".agents/skills/prototype/references/one-shot-5-grow.md": "626b538d58f58522a9a92f8ee3cfc600c6592850210f8c53a67c28cc7ada290e",
+        ".agents/skills/prototype/references/one-shot-files.md": "de62cfc9db6c791f8679339938601528ed041f3a19c23ef88ed13a163d12e4c1",
+        ".agents/skills/prototype/references/spike-mode.md": "62610e8fe1ea3b148c7b3d19ea594fed8d32953203b2f1159287abae794e1d94"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "cut",
+      "category": "utility",
+      "path": ".agents/skills/cut/SKILL.md",
+      "sha256": "171d624c24db2e1e9ef231090322e3494576ff32f77bd5f3b7cab4467a367821",
+      "spec": "studio-tests/skills/utility/cut.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/cut/SKILL.md": "171d624c24db2e1e9ef231090322e3494576ff32f77bd5f3b7cab4467a367821"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "playtest-report",
+      "category": "utility",
+      "path": ".agents/skills/playtest-report/SKILL.md",
+      "sha256": "a83cc00d1e0b7f88001d72d675815d1377fa70101df1061bb7a9b5c0ad455214",
+      "spec": "studio-tests/skills/utility/playtest-report.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/playtest-report/SKILL.md": "a83cc00d1e0b7f88001d72d675815d1377fa70101df1061bb7a9b5c0ad455214"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "milestone-review",
+      "category": "sprint",
+      "path": ".agents/skills/milestone-review/SKILL.md",
+      "sha256": "975d59e1a5b58b611584cb8661f40d1a608ebae9699cc4a40ae005521242795a",
+      "spec": "studio-tests/skills/sprint/milestone-review.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/milestone-review/SKILL.md": "975d59e1a5b58b611584cb8661f40d1a608ebae9699cc4a40ae005521242795a"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "retrospective",
+      "category": "sprint",
+      "path": ".agents/skills/retrospective/SKILL.md",
+      "sha256": "4361f0af11d52775093e8e47c11b68f72bd10d559e6d24fab7cefa9d03860037",
+      "spec": "studio-tests/skills/sprint/retrospective.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/retrospective/SKILL.md": "4361f0af11d52775093e8e47c11b68f72bd10d559e6d24fab7cefa9d03860037"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "write-changelog",
+      "category": "sprint",
+      "path": ".agents/skills/write-changelog/SKILL.md",
+      "sha256": "eb915665420dd2bb10c211eea65d6205c9c67db55edb9d2a917ff9e9e7f2d617",
+      "spec": "studio-tests/skills/sprint/write-changelog.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/write-changelog/SKILL.md": "eb915665420dd2bb10c211eea65d6205c9c67db55edb9d2a917ff9e9e7f2d617"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "patch-notes",
+      "category": "sprint",
+      "path": ".agents/skills/patch-notes/SKILL.md",
+      "sha256": "36c05eb97d8cead1b051b5d390fedaf1513bbe6384c520b3ca73f536a13056f4",
+      "spec": "studio-tests/skills/sprint/patch-notes.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/patch-notes/SKILL.md": "36c05eb97d8cead1b051b5d390fedaf1513bbe6384c520b3ca73f536a13056f4"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "onboard",
+      "category": "utility",
+      "path": ".agents/skills/onboard/SKILL.md",
+      "sha256": "70e03330c35627982f97506e742b51d018902003867fdc71d8009b0f19b7630d",
+      "spec": "studio-tests/skills/utility/onboard.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/onboard/SKILL.md": "70e03330c35627982f97506e742b51d018902003867fdc71d8009b0f19b7630d"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "localize",
+      "category": "utility",
+      "path": ".agents/skills/localize/SKILL.md",
+      "sha256": "42452c74830a96828b7c6441edf0d6a7c9eecccaccbc19b2b562b63160003741",
+      "spec": "studio-tests/skills/utility/localize.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/localize/SKILL.md": "42452c74830a96828b7c6441edf0d6a7c9eecccaccbc19b2b562b63160003741"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "launch-checklist",
+      "category": "utility",
+      "path": ".agents/skills/launch-checklist/SKILL.md",
+      "sha256": "5f0c4e254b30274b6e633acdd96303cede7bca3b5736e206565282091042d4e6",
+      "spec": "studio-tests/skills/utility/launch-checklist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/launch-checklist/SKILL.md": "5f0c4e254b30274b6e633acdd96303cede7bca3b5736e206565282091042d4e6"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "release-checklist",
+      "category": "utility",
+      "path": ".agents/skills/release-checklist/SKILL.md",
+      "sha256": "c203c0d7984aa83df1d62f510545eb016fb46fa85a4df119a92d911d66455508",
+      "spec": "studio-tests/skills/utility/release-checklist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/release-checklist/SKILL.md": "c203c0d7984aa83df1d62f510545eb016fb46fa85a4df119a92d911d66455508"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "adopt",
+      "category": "utility",
+      "path": ".agents/skills/adopt/SKILL.md",
+      "sha256": "3c0b61d254a04289105b3bac81238bf75206ba925f5f499be9cbdcfaadb5e9a6",
+      "spec": "studio-tests/skills/utility/adopt.md",
+      "spec_exists": true,
+      "resources": 8,
+      "resource_sha256": {
+        ".agents/skills/adopt/SKILL.md": "3c0b61d254a04289105b3bac81238bf75206ba925f5f499be9cbdcfaadb5e9a6",
+        ".agents/skills/adopt/references/1-detect.md": "d675b18feec4c30f590984c8b7614cbdd29ef8dcb8ebc4fce29912d77aca68da",
+        ".agents/skills/adopt/references/2-format-audit.md": "555f438582457cacbed061901ab295e3e9fcf5711af406e7e64d6f9820c2cab5",
+        ".agents/skills/adopt/references/3-classify.md": "216c3631fb31fe114e740851d7c0fe2eeac7a8f9c79fe6afaf27de294010edca",
+        ".agents/skills/adopt/references/4-migration-plan.md": "e03ff9c8d171458234f5276f901da6e9b73ceba729eb0fddafe9cce472d58a7b",
+        ".agents/skills/adopt/references/5-summary.md": "e6f047dfa7c6d4c5fe03d0136d3e526fb3a5c9172bac88ed625e2de552f06bbf",
+        ".agents/skills/adopt/references/6-write.md": "0eeebfbb7e29fc046da9ab37c1c2792c3ef39e9c171e25814544efe82a7afc8f",
+        ".agents/skills/adopt/references/7-first-action.md": "3ae5a926eeccc95921b8825e23b034b6e9135b1298e3278233d9426acee09687"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "smoke-check",
+      "category": "utility",
+      "path": ".agents/skills/smoke-check/SKILL.md",
+      "sha256": "cff315ce5216428df8943f6a0c8a9da95bb5f7ceb41fa2fd19b7ef7577af7f63",
+      "spec": "studio-tests/skills/utility/smoke-check.md",
+      "spec_exists": true,
+      "resources": 7,
+      "resource_sha256": {
+        ".agents/skills/smoke-check/SKILL.md": "cff315ce5216428df8943f6a0c8a9da95bb5f7ceb41fa2fd19b7ef7577af7f63",
+        ".agents/skills/smoke-check/references/1-detect-setup.md": "10d2bb2796fbd8b31a787bc73890066a86accc8159be398162f03e948cd71069",
+        ".agents/skills/smoke-check/references/2-run-tests.md": "41b1b33fd6891fbeedcb23b9d09b48a911278534c8b1edb4914dc6035ec826af",
+        ".agents/skills/smoke-check/references/3-coverage.md": "db1d5af002dd3d0661a820abbcaa31b21fdfa499153ef6883abc1116c0654d23",
+        ".agents/skills/smoke-check/references/4-manual-checks.md": "b3b61599d614aab513a96aab0b3268644f0cad716082e1d345840e983992ff33",
+        ".agents/skills/smoke-check/references/5-report.md": "bb2ebe79c36466280e269e4ea85fc579897968711dfd4b3fcde3493dafd3716c",
+        ".agents/skills/smoke-check/references/6-write-gate.md": "630e81acd4fb4c8312bfae65afaf83d284a825395c9614d8e49b02a42bc18fec"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "three final-verdict decision fixtures only; not full workflow",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "soak-test",
+      "category": "utility",
+      "path": ".agents/skills/soak-test/SKILL.md",
+      "sha256": "c472c99ca6fb185ecb6fea67462819eb5bcb60eb545845a32f1c6f69063c2afd",
+      "spec": "studio-tests/skills/utility/soak-test.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/soak-test/SKILL.md": "c472c99ca6fb185ecb6fea67462819eb5bcb60eb545845a32f1c6f69063c2afd"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "test-setup",
+      "category": "utility",
+      "path": ".agents/skills/test-setup/SKILL.md",
+      "sha256": "0f816960ac7c1e9db28b67344262724a7103d3d2b1ab49b4650fe45da1e0be80",
+      "spec": "studio-tests/skills/utility/test-setup.md",
+      "spec_exists": true,
+      "resources": 7,
+      "resource_sha256": {
+        ".agents/skills/test-setup/SKILL.md": "0f816960ac7c1e9db28b67344262724a7103d3d2b1ab49b4650fe45da1e0be80",
+        ".agents/skills/test-setup/references/1-detect.md": "5461f9a3399e9af56ae6c23a80271118097465f99f5298ab4ccbbacac3e9f765",
+        ".agents/skills/test-setup/references/2-plan.md": "26c92ffca849dbde78d6ea222979c326e4b620ba8f89e08c092c529d83096309",
+        ".agents/skills/test-setup/references/3-directories.md": "89cb759a8371acf71b36b2f09dea7836a29124929fb4c1a901d4c19d6282be86",
+        ".agents/skills/test-setup/references/4-ci.md": "348c5d26ceeaa945a50adb8d49d3de5d697d76abff3b92c5b8c8f2e033f20081",
+        ".agents/skills/test-setup/references/5-smoke-seed.md": "379591347534bd29c5028c8da812113a2e2f6102f969a16cd394fb298979deb1",
+        ".agents/skills/test-setup/references/6-summary.md": "08efe5ca33797e047ed6c14cc6e121a261033c5c08ed534c3335632202c1d2a4"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "test-helpers",
+      "category": "utility",
+      "path": ".agents/skills/test-helpers/SKILL.md",
+      "sha256": "13beb394053d8cb91b912380c43107e9d4893a25d5356ce07db6090e285530af",
+      "spec": "studio-tests/skills/utility/test-helpers.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/test-helpers/SKILL.md": "13beb394053d8cb91b912380c43107e9d4893a25d5356ce07db6090e285530af"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "regression-suite",
+      "category": "utility",
+      "path": ".agents/skills/regression-suite/SKILL.md",
+      "sha256": "141beb3c9b7ef28b6bc3ac196c62f7cff0759c2a012abf3dfadc6be1a7d2177f",
+      "spec": "studio-tests/skills/utility/regression-suite.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/regression-suite/SKILL.md": "141beb3c9b7ef28b6bc3ac196c62f7cff0759c2a012abf3dfadc6be1a7d2177f"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "qa-plan",
+      "category": "utility",
+      "path": ".agents/skills/qa-plan/SKILL.md",
+      "sha256": "bbf2c6c6514384d0dad6996323231309a452c5fb29d17854fe84b2891aca10dc",
+      "spec": "studio-tests/skills/utility/qa-plan.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/qa-plan/SKILL.md": "bbf2c6c6514384d0dad6996323231309a452c5fb29d17854fe84b2891aca10dc"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "complete controlled single-story plan, async waiting then yes/no outputs",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "bug-triage",
+      "category": "utility",
+      "path": ".agents/skills/bug-triage/SKILL.md",
+      "sha256": "c11ed456a104f714a2fcb4519e432b5f953fb4aa6522d810d7acec7fbec1236b",
+      "spec": "studio-tests/skills/utility/bug-triage.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/bug-triage/SKILL.md": "c11ed456a104f714a2fcb4519e432b5f953fb4aa6522d810d7acec7fbec1236b"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "asset-spec",
+      "category": "utility",
+      "path": ".agents/skills/asset-spec/SKILL.md",
+      "sha256": "479d5a9fb3ff0b2e324f5e3871c9de79fb63d0aca49ca9ee9c824e56fb06cb28",
+      "spec": "studio-tests/skills/utility/asset-spec.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/asset-spec/SKILL.md": "479d5a9fb3ff0b2e324f5e3871c9de79fb63d0aca49ca9ee9c824e56fb06cb28"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "day-one-patch",
+      "category": "utility",
+      "path": ".agents/skills/day-one-patch/SKILL.md",
+      "sha256": "a9c421007b6e0ba85fb51a7c37bbd1ac280f0463b3079c0b376ce87e2d48f440",
+      "spec": "studio-tests/skills/utility/day-one-patch.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/day-one-patch/SKILL.md": "a9c421007b6e0ba85fb51a7c37bbd1ac280f0463b3079c0b376ce87e2d48f440"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "skill",
+      "name": "project-settings",
+      "category": "utility",
+      "path": ".agents/skills/project-settings/SKILL.md",
+      "sha256": "c23a9512485245d0c09e5d60c993854a42f17b2f7e64810f8af5867c0b5ba556",
+      "spec": "studio-tests/skills/utility/project-settings.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".agents/skills/project-settings/SKILL.md": "c23a9512485245d0c09e5d60c993854a42f17b2f7e64810f8af5867c0b5ba556"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/skill-project-settings.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "cli_discovered": true
+    },
+    {
+      "kind": "agent",
+      "name": "creative-director",
+      "category": "director",
+      "path": ".codex/agents/creative-director.toml",
+      "sha256": "957f5374189c634caf8e7b22092a8455c9c36acf5cdfe3695b1ce018808c7046",
+      "spec": "studio-tests/agents/directors/creative-director.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/creative-director.toml": "957f5374189c634caf8e7b22092a8455c9c36acf5cdfe3695b1ce018808c7046"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "technical-director",
+      "category": "director",
+      "path": ".codex/agents/technical-director.toml",
+      "sha256": "ad3ef12a8e0178771227e99a15af8213a37a8727f27c1aa8878ff878cf70de8c",
+      "spec": "studio-tests/agents/directors/technical-director.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/technical-director.toml": "ad3ef12a8e0178771227e99a15af8213a37a8727f27c1aa8878ff878cf70de8c"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/agent-technical-director.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "producer",
+      "category": "director",
+      "path": ".codex/agents/producer.toml",
+      "sha256": "31c548bd58f92e0b5900dbaa9fbef77654fa13d94ac4b1de88550ab7c6cad82d",
+      "spec": "studio-tests/agents/directors/producer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/producer.toml": "31c548bd58f92e0b5900dbaa9fbef77654fa13d94ac4b1de88550ab7c6cad82d"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "art-director",
+      "category": "director",
+      "path": ".codex/agents/art-director.toml",
+      "sha256": "068a008960ba88bb4fb301a60d556580b85d8a4c173f193a67b2913976665149",
+      "spec": "studio-tests/agents/directors/art-director.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/art-director.toml": "068a008960ba88bb4fb301a60d556580b85d8a4c173f193a67b2913976665149"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "lead-programmer",
+      "category": "lead",
+      "path": ".codex/agents/lead-programmer.toml",
+      "sha256": "4298b4e24efee9bf15406833d03e0a82a2d30909b1df5e85bfefc393c5fcfe59",
+      "spec": "studio-tests/agents/leads/lead-programmer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/lead-programmer.toml": "4298b4e24efee9bf15406833d03e0a82a2d30909b1df5e85bfefc393c5fcfe59"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/agent-lead-programmer.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "qa-lead",
+      "category": "lead",
+      "path": ".codex/agents/qa-lead.toml",
+      "sha256": "475f5b7699e98f60006a2188f18183ac03cd095f33120feac4a0f902c529e635",
+      "spec": "studio-tests/agents/leads/qa-lead.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/qa-lead.toml": "475f5b7699e98f60006a2188f18183ac03cd095f33120feac4a0f902c529e635"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "native full instruction binding, first reply plus same-child followup",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "narrative-director",
+      "category": "lead",
+      "path": ".codex/agents/narrative-director.toml",
+      "sha256": "5ff6c6ae8735ee9821f4c7d8c8b9353c66d6a5a2e2346bb5eee9f3ef61c1a567",
+      "spec": "studio-tests/agents/leads/narrative-director.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/narrative-director.toml": "5ff6c6ae8735ee9821f4c7d8c8b9353c66d6a5a2e2346bb5eee9f3ef61c1a567"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "audio-director",
+      "category": "lead",
+      "path": ".codex/agents/audio-director.toml",
+      "sha256": "5ffeb6826f3d5a49ca728d7484f6cf76ec3184daaedab5aee2862e7e67627501",
+      "spec": "studio-tests/agents/leads/audio-director.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/audio-director.toml": "5ffeb6826f3d5a49ca728d7484f6cf76ec3184daaedab5aee2862e7e67627501"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "game-designer",
+      "category": "lead",
+      "path": ".codex/agents/game-designer.toml",
+      "sha256": "8c536ded81a100f570560db8ef14f5fbd993c27c33d0c3b21abdf03d34472a50",
+      "spec": "studio-tests/agents/leads/game-designer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/game-designer.toml": "8c536ded81a100f570560db8ef14f5fbd993c27c33d0c3b21abdf03d34472a50"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "systems-designer",
+      "category": "lead",
+      "path": ".codex/agents/systems-designer.toml",
+      "sha256": "dd42a06443413a496ba451c5c65a571f3e84efcd009c8a9f81b774f655b6d1a7",
+      "spec": "studio-tests/agents/leads/systems-designer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/systems-designer.toml": "dd42a06443413a496ba451c5c65a571f3e84efcd009c8a9f81b774f655b6d1a7"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "level-designer",
+      "category": "lead",
+      "path": ".codex/agents/level-designer.toml",
+      "sha256": "39718b85fae0d79c4359f09a3b5ec6f7a2e2b250279a88c91a20cdfe618908cd",
+      "spec": "studio-tests/agents/leads/level-designer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/level-designer.toml": "39718b85fae0d79c4359f09a3b5ec6f7a2e2b250279a88c91a20cdfe618908cd"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "gameplay-programmer",
+      "category": "specialist",
+      "path": ".codex/agents/gameplay-programmer.toml",
+      "sha256": "593e9e2e691f20aee6d9c11a14ec000448351530e429ad2c9977e2c1942f0e81",
+      "spec": "studio-tests/agents/specialists/gameplay-programmer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/gameplay-programmer.toml": "593e9e2e691f20aee6d9c11a14ec000448351530e429ad2c9977e2c1942f0e81"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/agent-gameplay-programmer.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "ai-programmer",
+      "category": "specialist",
+      "path": ".codex/agents/ai-programmer.toml",
+      "sha256": "29cdf9ada3cfaefea5bea5d2440fe612de890a62c89c8923b4d504350612d7a2",
+      "spec": "studio-tests/agents/specialists/ai-programmer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/ai-programmer.toml": "29cdf9ada3cfaefea5bea5d2440fe612de890a62c89c8923b4d504350612d7a2"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "technical-artist",
+      "category": "specialist",
+      "path": ".codex/agents/technical-artist.toml",
+      "sha256": "7c1bb82f8a60ce01e571c422999fa3379332743bb0d8aa7fc8c712f2ded11ba3",
+      "spec": "studio-tests/agents/specialists/technical-artist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/technical-artist.toml": "7c1bb82f8a60ce01e571c422999fa3379332743bb0d8aa7fc8c712f2ded11ba3"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "sound-designer",
+      "category": "specialist",
+      "path": ".codex/agents/sound-designer.toml",
+      "sha256": "92d4b04c2fd5bda0d12fef746cfd8a877eacf351e023a0df1435880e03880450",
+      "spec": "studio-tests/agents/specialists/sound-designer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/sound-designer.toml": "92d4b04c2fd5bda0d12fef746cfd8a877eacf351e023a0df1435880e03880450"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "engine-programmer",
+      "category": "specialist",
+      "path": ".codex/agents/engine-programmer.toml",
+      "sha256": "9e4664c48273f4e84edb595ae95a4440c83b1d5bad79bb6beb15fd7634304cb2",
+      "spec": "studio-tests/agents/specialists/engine-programmer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/engine-programmer.toml": "9e4664c48273f4e84edb595ae95a4440c83b1d5bad79bb6beb15fd7634304cb2"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "tools-programmer",
+      "category": "specialist",
+      "path": ".codex/agents/tools-programmer.toml",
+      "sha256": "c2fa18766a85ce3e04fe99223a10d59b7315816d5fe48b492e4792f9a0b6b9c6",
+      "spec": "studio-tests/agents/specialists/tools-programmer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/tools-programmer.toml": "c2fa18766a85ce3e04fe99223a10d59b7315816d5fe48b492e4792f9a0b6b9c6"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "network-programmer",
+      "category": "specialist",
+      "path": ".codex/agents/network-programmer.toml",
+      "sha256": "b9ddc46c359adfa239536fdc696b1787f4f1fd50e64dd55b72fbe8a5bc498a82",
+      "spec": "studio-tests/agents/specialists/network-programmer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/network-programmer.toml": "b9ddc46c359adfa239536fdc696b1787f4f1fd50e64dd55b72fbe8a5bc498a82"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "security-engineer",
+      "category": "specialist",
+      "path": ".codex/agents/security-engineer.toml",
+      "sha256": "381aab59fbe773a7b3161647587759a9084bd8e00b37595c8b8f1fe80b976ba8",
+      "spec": "studio-tests/agents/qa/security-engineer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/security-engineer.toml": "381aab59fbe773a7b3161647587759a9084bd8e00b37595c8b8f1fe80b976ba8"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "accessibility-specialist",
+      "category": "specialist",
+      "path": ".codex/agents/accessibility-specialist.toml",
+      "sha256": "00939d0175c4fbd78da62045cf018d4d292f55eefb404dd7e28c0f73d989b24a",
+      "spec": "studio-tests/agents/qa/accessibility-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/accessibility-specialist.toml": "00939d0175c4fbd78da62045cf018d4d292f55eefb404dd7e28c0f73d989b24a"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "ux-designer",
+      "category": "specialist",
+      "path": ".codex/agents/ux-designer.toml",
+      "sha256": "eefef1960b9252c809d6518d0f97838308b6eeb6a96c7fcaa6f9846b6939d43d",
+      "spec": "studio-tests/agents/specialists/ux-designer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/ux-designer.toml": "eefef1960b9252c809d6518d0f97838308b6eeb6a96c7fcaa6f9846b6939d43d"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "ui-programmer",
+      "category": "specialist",
+      "path": ".codex/agents/ui-programmer.toml",
+      "sha256": "42bc219b4c9db6692fecb6d89d31e07621695a91842d29bfdfcb6ce034b17699",
+      "spec": "studio-tests/agents/specialists/ui-programmer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/ui-programmer.toml": "42bc219b4c9db6692fecb6d89d31e07621695a91842d29bfdfcb6ce034b17699"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "performance-analyst",
+      "category": "specialist",
+      "path": ".codex/agents/performance-analyst.toml",
+      "sha256": "abe5ec52ce32d8b5f7d2fefdf8f7992e2bd89cae539196cad964a6b6be013eea",
+      "spec": "studio-tests/agents/specialists/performance-analyst.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/performance-analyst.toml": "abe5ec52ce32d8b5f7d2fefdf8f7992e2bd89cae539196cad964a6b6be013eea"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "godot-specialist",
+      "category": "engine",
+      "path": ".codex/agents/godot-specialist.toml",
+      "sha256": "171a81b9fdf61d70157b480577b92b2923ff706ff768bc57b22f9addfded904a",
+      "spec": "studio-tests/agents/engine/godot/godot-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/godot-specialist.toml": "171a81b9fdf61d70157b480577b92b2923ff706ff768bc57b22f9addfded904a"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/agent-godot-specialist.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "godot-gdscript-specialist",
+      "category": "engine",
+      "path": ".codex/agents/godot-gdscript-specialist.toml",
+      "sha256": "f3311a653c6fe8ca7d8d07f3666d3cc59055ac103dba2b41fa5ca635c49c89c7",
+      "spec": "studio-tests/agents/engine/godot/godot-gdscript-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/godot-gdscript-specialist.toml": "f3311a653c6fe8ca7d8d07f3666d3cc59055ac103dba2b41fa5ca635c49c89c7"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "godot-csharp-specialist",
+      "category": "engine",
+      "path": ".codex/agents/godot-csharp-specialist.toml",
+      "sha256": "aa1e247e977cbdbf5643034de1a5452a4a3265ce3b8b54220b68450892e8e807",
+      "spec": "studio-tests/agents/engine/godot/godot-csharp-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/godot-csharp-specialist.toml": "aa1e247e977cbdbf5643034de1a5452a4a3265ce3b8b54220b68450892e8e807"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "godot-shader-specialist",
+      "category": "engine",
+      "path": ".codex/agents/godot-shader-specialist.toml",
+      "sha256": "f9281f6b70f0c48b3ba688a0795603909f235d3225c2a8061ed6e84644c798de",
+      "spec": "studio-tests/agents/engine/godot/godot-shader-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/godot-shader-specialist.toml": "f9281f6b70f0c48b3ba688a0795603909f235d3225c2a8061ed6e84644c798de"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "godot-gdextension-specialist",
+      "category": "engine",
+      "path": ".codex/agents/godot-gdextension-specialist.toml",
+      "sha256": "23e6a3e50eb3be5d64e5da1ea26f4b5ce6717a307451d618d45e54d5e1af25ba",
+      "spec": "studio-tests/agents/engine/godot/godot-gdextension-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/godot-gdextension-specialist.toml": "23e6a3e50eb3be5d64e5da1ea26f4b5ce6717a307451d618d45e54d5e1af25ba"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "unity-specialist",
+      "category": "engine",
+      "path": ".codex/agents/unity-specialist.toml",
+      "sha256": "67f2fb99cc0cc737ed0e8702b6f94039804daba19c168e23f1206d73955a47c7",
+      "spec": "studio-tests/agents/engine/unity/unity-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/unity-specialist.toml": "67f2fb99cc0cc737ed0e8702b6f94039804daba19c168e23f1206d73955a47c7"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "unity-ui-specialist",
+      "category": "engine",
+      "path": ".codex/agents/unity-ui-specialist.toml",
+      "sha256": "7411fb307919b06fcdb5504ae9bbe81a6753fb528b4470148b082ff34f29a586",
+      "spec": "studio-tests/agents/engine/unity/unity-ui-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/unity-ui-specialist.toml": "7411fb307919b06fcdb5504ae9bbe81a6753fb528b4470148b082ff34f29a586"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "unity-shader-specialist",
+      "category": "engine",
+      "path": ".codex/agents/unity-shader-specialist.toml",
+      "sha256": "1fe5ffb0c22ed26a10a44f532b69ca3efc7342fadf6c966f3d85a7e8dd6db2d4",
+      "spec": "studio-tests/agents/engine/unity/unity-shader-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/unity-shader-specialist.toml": "1fe5ffb0c22ed26a10a44f532b69ca3efc7342fadf6c966f3d85a7e8dd6db2d4"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "unity-dots-specialist",
+      "category": "engine",
+      "path": ".codex/agents/unity-dots-specialist.toml",
+      "sha256": "c96d444e2a4859697f6007927c6c7e09e1b84cac34846de1db27990c94f0e636",
+      "spec": "studio-tests/agents/engine/unity/unity-dots-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/unity-dots-specialist.toml": "c96d444e2a4859697f6007927c6c7e09e1b84cac34846de1db27990c94f0e636"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "unity-addressables-specialist",
+      "category": "engine",
+      "path": ".codex/agents/unity-addressables-specialist.toml",
+      "sha256": "30a7d359ec7df967a810ee969a00a6df987c38a25de986b7958dc81649c99458",
+      "spec": "studio-tests/agents/engine/unity/unity-addressables-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/unity-addressables-specialist.toml": "30a7d359ec7df967a810ee969a00a6df987c38a25de986b7958dc81649c99458"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "unreal-specialist",
+      "category": "engine",
+      "path": ".codex/agents/unreal-specialist.toml",
+      "sha256": "b5e8597c7fbe84bde645eea7bc3dde66192e419bb5c67510f9c1d6866429241b",
+      "spec": "studio-tests/agents/engine/unreal/unreal-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/unreal-specialist.toml": "b5e8597c7fbe84bde645eea7bc3dde66192e419bb5c67510f9c1d6866429241b"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "ue-blueprint-specialist",
+      "category": "engine",
+      "path": ".codex/agents/ue-blueprint-specialist.toml",
+      "sha256": "653c10a23c1d4222701bfab349213dbac41b1412c619ce9146d93b61cfbb185d",
+      "spec": "studio-tests/agents/engine/unreal/ue-blueprint-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/ue-blueprint-specialist.toml": "653c10a23c1d4222701bfab349213dbac41b1412c619ce9146d93b61cfbb185d"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "ue-gas-specialist",
+      "category": "engine",
+      "path": ".codex/agents/ue-gas-specialist.toml",
+      "sha256": "bc984e12c30342f63cf04d12b16740193b7a91d241636df89e2a40c0a0545d91",
+      "spec": "studio-tests/agents/engine/unreal/ue-gas-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/ue-gas-specialist.toml": "bc984e12c30342f63cf04d12b16740193b7a91d241636df89e2a40c0a0545d91"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "ue-umg-specialist",
+      "category": "engine",
+      "path": ".codex/agents/ue-umg-specialist.toml",
+      "sha256": "afb977ecefe8a98bc906dfc73d6e6d7ef2321f89212fe5ea801f0227a4164f49",
+      "spec": "studio-tests/agents/engine/unreal/ue-umg-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/ue-umg-specialist.toml": "afb977ecefe8a98bc906dfc73d6e6d7ef2321f89212fe5ea801f0227a4164f49"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "ue-replication-specialist",
+      "category": "engine",
+      "path": ".codex/agents/ue-replication-specialist.toml",
+      "sha256": "c92308569140bc1d771a07484d8e30918d1c60b55c71b92a433887cf71a28582",
+      "spec": "studio-tests/agents/engine/unreal/ue-replication-specialist.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/ue-replication-specialist.toml": "c92308569140bc1d771a07484d8e30918d1c60b55c71b92a433887cf71a28582"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "devops-engineer",
+      "category": "operations",
+      "path": ".codex/agents/devops-engineer.toml",
+      "sha256": "88f2b304ca1705535d6837e8594875615174ffb8b9a62d348a7ac043fccf7d6b",
+      "spec": "studio-tests/agents/operations/devops-engineer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/devops-engineer.toml": "88f2b304ca1705535d6837e8594875615174ffb8b9a62d348a7ac043fccf7d6b"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "release-manager",
+      "category": "operations",
+      "path": ".codex/agents/release-manager.toml",
+      "sha256": "30a5d46fb5d45a3f07de1b1425fd8c32c8705f1ccd1f347a79d69ff39acbbaec",
+      "spec": "studio-tests/agents/operations/release-manager.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/release-manager.toml": "30a5d46fb5d45a3f07de1b1425fd8c32c8705f1ccd1f347a79d69ff39acbbaec"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/agent-release-manager.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "live-ops-designer",
+      "category": "operations",
+      "path": ".codex/agents/live-ops-designer.toml",
+      "sha256": "f4ce2e5863622409db6e2577d3d8761815633855e9376f38f99648f84e54566a",
+      "spec": "studio-tests/agents/operations/live-ops-designer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/live-ops-designer.toml": "f4ce2e5863622409db6e2577d3d8761815633855e9376f38f99648f84e54566a"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "community-manager",
+      "category": "operations",
+      "path": ".codex/agents/community-manager.toml",
+      "sha256": "c2998e9eca4fd17415923c7a1cf0149d1cd4455d53876b1bc9eb40fb6dddf895",
+      "spec": "studio-tests/agents/operations/community-manager.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/community-manager.toml": "c2998e9eca4fd17415923c7a1cf0149d1cd4455d53876b1bc9eb40fb6dddf895"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "analytics-engineer",
+      "category": "operations",
+      "path": ".codex/agents/analytics-engineer.toml",
+      "sha256": "f3d2214b96b79c9937a2f9714dcd4ad81a063828106870565c0ce31f93c136fb",
+      "spec": "studio-tests/agents/operations/analytics-engineer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/analytics-engineer.toml": "f3d2214b96b79c9937a2f9714dcd4ad81a063828106870565c0ce31f93c136fb"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "economy-designer",
+      "category": "operations",
+      "path": ".codex/agents/economy-designer.toml",
+      "sha256": "10b315f4cfe6ce01f335e4de76cfdccf6f2a80a3439334a1f29098c956e25888",
+      "spec": "studio-tests/agents/operations/economy-designer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/economy-designer.toml": "10b315f4cfe6ce01f335e4de76cfdccf6f2a80a3439334a1f29098c956e25888"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "localization-lead",
+      "category": "operations",
+      "path": ".codex/agents/localization-lead.toml",
+      "sha256": "5bc85d60977cc4119aaf1ed2d0f631a539646210d884861685a86ed58b259428",
+      "spec": "studio-tests/agents/operations/localization-lead.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/localization-lead.toml": "5bc85d60977cc4119aaf1ed2d0f631a539646210d884861685a86ed58b259428"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "qa-tester",
+      "category": "qa",
+      "path": ".codex/agents/qa-tester.toml",
+      "sha256": "e1f103f0dfed94d068739da3514716aedb3e2e14ca8a3d0672fe79923735c081",
+      "spec": "studio-tests/agents/qa/qa-tester.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/qa-tester.toml": "e1f103f0dfed94d068739da3514716aedb3e2e14ca8a3d0672fe79923735c081"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [
+        "studio-tests/results/representatives/agent-qa-tester.md"
+      ],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "prototyper",
+      "category": "specialist",
+      "path": ".codex/agents/prototyper.toml",
+      "sha256": "97c393b52e43be57d480e36620676aad8a57b255672cc08b13e80b9d4f6ee0d3",
+      "spec": "studio-tests/agents/specialists/prototyper.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/prototyper.toml": "97c393b52e43be57d480e36620676aad8a57b255672cc08b13e80b9d4f6ee0d3"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "writer",
+      "category": "specialist",
+      "path": ".codex/agents/writer.toml",
+      "sha256": "b4d4f746377c129e8e99edaf501fc8baefc091eb4bdb12d6b5261f7605eec8ae",
+      "spec": "studio-tests/agents/specialists/writer.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/writer.toml": "b4d4f746377c129e8e99edaf501fc8baefc091eb4bdb12d6b5261f7605eec8ae"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    },
+    {
+      "kind": "agent",
+      "name": "world-builder",
+      "category": "specialist",
+      "path": ".codex/agents/world-builder.toml",
+      "sha256": "2a84b1bcfa325094b341c5b11bd0dd721b335133f95c7853aef0aed8d061b5a0",
+      "spec": "studio-tests/agents/specialists/world-builder.md",
+      "spec_exists": true,
+      "resources": 1,
+      "resource_sha256": {
+        ".codex/agents/world-builder.toml": "2a84b1bcfa325094b341c5b11bd0dd721b335133f95c7853aef0aed8d061b5a0"
+      },
+      "static_coverage": "full automated parsing and contract suite",
+      "historical_category_evidence": [],
+      "runtime_scope_this_run": "not individually executed",
+      "model_inherited": true
+    }
+  ],
+  "test_files": [
+    {
+      "file": "studio-tests/automated/test_agents.py",
+      "tests": [
+        "test_core_roles_are_valid_codex_configs",
+        "test_project_leaves_session_and_subagent_model_choices_unset",
+        "test_validator_accepts_inheritance_and_user_model_override",
+        "test_lead_required_skill_is_available"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_catalog.py",
+      "tests": [
+        "test_formal_skill_set_is_complete",
+        "test_role_set_is_complete_and_uses_native_schema"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_config.py",
+      "tests": [
+        "test_default_automation_is_collaborative",
+        "test_automation_independent_of_rigor",
+        "test_local_automation_override",
+        "test_invalid_local_enum_falls_back_with_warning",
+        "test_subdirectory_uses_helpers_checkout",
+        "test_explicit_root_wins_over_callers_project",
+        "test_unknown_command_fails",
+        "test_invalid_explicit_interpreter_does_not_fall_back_to_launcher",
+        "test_framework_folders_are_not_game_test_roots",
+        "test_locked_local_engine_cannot_change_derived_roots",
+        "test_windows_absolute_script_path_reads_its_own_engine_table"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_core_skills.py",
+      "tests": [
+        "test_core_skill_metadata_and_resources_exist",
+        "test_story_lifecycle_requires_explicit_invocation",
+        "test_story_close_policy_rejects_required_failure_and_unknown"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_git_index.py",
+      "tests": [
+        "test_invalid_index_is_not_hidden_by_repaired_worktree",
+        "test_valid_index_does_not_validate_unstaged_worktree",
+        "test_non_repository_is_unassessed",
+        "test_native_cmd_commit_checks_actual_staged_json",
+        "test_commit_detection_ignores_quoted_prose_and_supports_global_options",
+        "test_native_commit_context_never_checks_a_different_index"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_hooks.py",
+      "tests": [
+        "test_native_exec_names_fields_and_registration_are_consistent",
+        "test_native_patch_input_forms_cannot_bypass_path_guard",
+        "test_native_patch_post_event_reports_bad_json_and_unknown_input",
+        "test_patch_paths_include_moves_and_multiple_files",
+        "test_forbidden_operation_blocked_before_execution",
+        "test_incomplete_artifact_allows_repair",
+        "test_required_failure_blocks_completion",
+        "test_optional_unassessed_is_reported",
+        "test_dispatch_returns_deny_without_running_command",
+        "test_session_start_restores_checkpoint",
+        "test_post_tool_warns_without_claiming_rollback",
+        "test_validator_checks_executable_skill_references",
+        "test_changed_scope_checks_reference_when_skill_entry_is_unchanged",
+        "test_long_checkpoint_keeps_current_task_not_only_tail",
+        "test_duplicate_tool_event_has_one_log_record",
+        "test_commit_guard_rejects_invalid_staged_json",
+        "test_unknown_or_malformed_event_is_unassessed",
+        "test_concurrent_tool_logs_remain_complete_and_unique",
+        "test_logging_failure_does_not_disable_tool_guard",
+        "test_registered_events_accept_sanitized_protocol_examples",
+        "test_complete_validation_checks_new_native_dependencies"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_inspection.py",
+      "tests": [
+        "test_compat_separates_source_quotes_from_active_legacy_references",
+        "test_agent_check_reads_native_role",
+        "test_skill_lint_uses_codex_metadata"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_inventory.py",
+      "tests": [
+        "test_inventory_covers_sources",
+        "test_formal_skills_match_catalog",
+        "test_retirement_has_replacement",
+        "test_hook_events_have_explicit_dispositions",
+        "test_source_snapshot_survives_retirement_without_git_history",
+        "test_dependencies_resolve_and_active_targets_exist",
+        "test_pass_claims_require_evidence",
+        "test_runtime_matrix_covers_clients_and_catalog_categories"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_migration_complete.py",
+      "tests": [
+        "test_old_runtime_entrypoints_are_retired",
+        "test_every_source_has_final_disposition"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_paths.py",
+      "tests": [
+        "test_web_scaffold_escapes_title_and_preserves_existing_files",
+        "test_web_scaffold_refuses_existing_package",
+        "test_config_set_rejects_unshared_local_engine",
+        "test_grow_record_writes_engine_without_touching_agents",
+        "test_grow_guard_treats_src_agents_as_metadata",
+        "test_grow_copy_preserves_extra_config_globals_and_functions",
+        "test_grow_copy_preserves_classic_top_level_bindings",
+        "test_session_checkpoint_is_repeatable_and_preserves_notes",
+        "test_reference_files_are_saved_and_deduplicated",
+        "test_stage_writer_creates_consistent_config_and_mirror",
+        "test_artifact_check_uses_shared_catalog_for_external_project",
+        "test_disabled_session_tracking_keeps_tool_guard_active",
+        "test_registry_reports_invalid_status_and_removed_entry",
+        "test_review_receipt_detects_content_change_with_same_mtime",
+        "test_python_entry_uses_explicit_runtime_and_preserves_arguments",
+        "test_python_entry_does_not_fallback_from_invalid_explicit_runtime"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_role_content.py",
+      "tests": [
+        "test_inverse_edits_preserve_preexisting_replacement_text",
+        "test_role_domain_content_is_preserved_with_explicit_codex_edits",
+        "test_specialist_and_worktree_instructions_use_actual_capabilities",
+        "test_skill_invocation_edits_preserve_resource_paths",
+        "test_workflow_confirmations_are_conditional"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_rule_routing.py",
+      "tests": [
+        "test_cross_engine_gameplay_and_shader_paths",
+        "test_rule_does_not_expand_to_unrelated_directories",
+        "test_windows_relative_paths_are_normalized"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_runtime_archive.py",
+      "tests": [
+        "test_app_raw_archive_matches_manifest"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_shared_codex_contracts.py",
+      "tests": [
+        "test_memory_uses_single_checkpoint_and_existing_authorization",
+        "test_read_guard_contract_calls_real_helper_and_handles_observations",
+        "test_role_template_checks_native_toml_and_inheritance",
+        "test_event_documentation_distinguishes_registration_from_evidence",
+        "test_recovery_template_requires_agent_branch_check",
+        "test_source_only_functions_have_six_argument_call_protocol",
+        "test_effects_map_documents_fallback_and_no_startup_schema_audit",
+        "test_engine_chain_ignores_local_engine_for_all_derived_roots"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_skill_codex_contracts.py",
+      "tests": [
+        "test_question_examples_fit_single_selection_schema",
+        "test_async_question_receipts_remain_pending_until_user_answers",
+        "test_manual_checks_define_non_permissive_response_mapping",
+        "test_report_verdict_covers_all_manual_batches_and_platforms",
+        "test_qa_output_outcomes_include_both_choices_and_unanswered_state",
+        "test_template_remote_classifier_handles_transports_and_forks",
+        "test_formal_specs_require_codex_invocation_policy",
+        "test_client_mechanisms_do_not_claim_implicit_execution_or_grants",
+        "test_specs_and_handoffs_do_not_assign_separate_skill_models",
+        "test_formal_question_specs_preserve_actual_single_selection_protocol"
+      ]
+    },
+    {
+      "file": "studio-tests/automated/test_yaml.py",
+      "tests": [
+        "test_malformed_yaml_is_not_reported_as_valid",
+        "test_yaml_and_skill_frontmatter_are_both_parsed"
+      ]
+    },
+    {
+      "file": "studio-tests/browser/test_grow_config_scope.py",
+      "tests": [
+        "test_generated_config_keeps_classic_bindings_in_chrome"
+      ]
+    },
+    {
+      "file": "studio-tests/browser/test_import_runner.py",
+      "tests": [
+        "test_import_with_existing_manual_hook_still_draws",
+        "test_import_without_hook_still_draws"
+      ]
+    }
+  ],
+  "interpretation": "结构和发现全量覆盖；逐个完整工作流/角色运行未全覆盖，不将类别代表或静态结果扩张为全组件实际运行。"
+}

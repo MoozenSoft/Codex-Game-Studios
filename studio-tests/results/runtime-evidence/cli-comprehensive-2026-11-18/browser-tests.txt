@@ -1,0 +1,8 @@
+test_generated_config_keeps_classic_bindings_in_chrome (test_grow_config_scope.GrowConfigBrowserTests.test_generated_config_keeps_classic_bindings_in_chrome) ... ok
+test_import_with_existing_manual_hook_still_draws (test_import_runner.ImportRunnerBrowserTests.test_import_with_existing_manual_hook_still_draws) ... ok
+test_import_without_hook_still_draws (test_import_runner.ImportRunnerBrowserTests.test_import_without_hook_still_draws) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 18.424s
+
+OK

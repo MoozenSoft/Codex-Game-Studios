@@ -1,0 +1,21 @@
+warning: in the working copy of 'docs/engine-reference/web/VERSION.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/test-run-grow.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/test-run-grow.log.e2e', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/test-run-grow.log.unit', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/grow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'project.yaml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/engine-reference/web/VERSION.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/test-run-grow.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/test-run-grow.log.e2e', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/test-run-grow.log.unit', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/grow.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'project.yaml', LF will be replaced by CRLF the next time Git touches it
+[probe bec28ab] 完成 dusk-fish Web 迁移记录与构建测试交接
+ 8 files changed, 214 insertions(+), 1 deletion(-)
+ create mode 100644 docs/engine-reference/web/VERSION.md
+ create mode 100644 production/qa/evidence/core-grow/round2/record.log
+ create mode 100644 production/qa/evidence/core-grow/round2/test-run-grow.log
+ create mode 100644 production/qa/evidence/core-grow/round2/test-run-grow.log.e2e
+ create mode 100644 production/qa/evidence/core-grow/round2/test-run-grow.log.unit
+ create mode 100644 production/qa/evidence/grow-dusk-fish/grow.md
+ create mode 100644 project.yaml

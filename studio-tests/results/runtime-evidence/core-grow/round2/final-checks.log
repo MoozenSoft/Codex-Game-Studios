@@ -1,0 +1,120 @@
+
+> dusk-fish@0.0.0 build
+> tsc --noEmit && vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 13 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                 0.46 kB │ gzip: 0.32 kB
+dist/assets/index-7nSlXmj5.js  11.54 kB │ gzip: 5.37 kB
+
+✓ built in 31ms
+
+> dusk-fish@0.0.0 test
+> npm run test:unit && npm run test:e2e
+
+
+> dusk-fish@0.0.0 test:unit
+> vitest run
+
+
+ RUN  v5.0.5 <probe>
+
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  22:12:36
+   Duration  105ms (import 39%, transform 28%, tests 17%, worker 15%, environment 1%)
+
+
+> dusk-fish@0.0.0 test:e2e
+> npm run build:single && playwright test
+
+
+> dusk-fish@0.0.0 build:single
+> tsc --noEmit && vite build --mode single
+
+vite v8.3.4 building client environment for single...
+transforming...
+✓ 13 modules transformed.
+rendering chunks...
+[plugin vite:singlefile] 
+
+[plugin vite:singlefile] Inlining: index-7nSlXmj5.js
+computing gzip size...
+dist-single/index.html  11.97 kB │ gzip: 5.64 kB
+
+✓ built in 31ms
+
+Running 9 tests using 2 workers
+
+(node:34832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:38352) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests\integration\retry.spec.ts:22:5 › over 画面真实键盘 r 重试并重置整局 (1.1s)
+  ✓  1 tests\integration\boot.spec.ts:19:1 › 标题与画布正常启动，无浏览器错误 @boot (1.5s)
+  ✓  4 tests\integration\boot.spec.ts:27:1 › reference 开场输入钓满三鱼，同 seed 完整状态和画面重复 (153ms)
+  ✓  3 tests\integration\retry.spec.ts:22:5 › over 画面真实键盘 Enter 重试并重置整局 (691ms)
+  ✓  5 tests\integration\boot.spec.ts:51:1 › 方向键移动、暂停冻结和恢复均保留 (128ms)
+  ✓  7 tests\integration\boot.spec.ts:74:1 › 零 seed 有效，非法 seed 保持原型的默认回退 (201ms)
+  ✓  6 tests\integration\retry.spec.ts:22:5 › results 画面真实键盘 r 重试并重置整局 (256ms)
+  ✓  8 tests\integration\retry.spec.ts:22:5 › results 画面真实键盘 Enter 重试并重置整局 (195ms)
+  ✓  9 tests\integration\retry.spec.ts:58:1 › R 在标题、游玩及暂停时均不会重开游戏 (161ms)
+
+  9 passed (6.4s)
+engine	Web
+exe	npm	path
+command	default	npm test 2>&1
+timeout	900	timeout
+half	unit	npm run test:unit
+half	e2e	npm run test:e2e
+browser	C:\Program Files\Google\Chrome\Application\chrome.exe	page-shot.sh --which
+ran	yes	-
+unit_exit	0
+unit_timed_out	no
+unit_zero_tests	no	-
+unit_tests	total=6 passed=6 failed=0
+unit_log	production/qa/evidence/core-grow/round2/test-run-final.log.unit
+e2e_exit	0
+e2e_timed_out	no
+e2e_browser	started	-
+e2e_build	ok
+e2e_zero_tests	no	-
+e2e_tests	total=9 passed=9 failed=0
+e2e_log	production/qa/evidence/core-grow/round2/test-run-final.log.e2e
+exit	0
+timed_out	no
+zero_tests	no	-
+tests	total=15 passed=15 failed=0
+rule	web:pass	exit 0 in each half that ran; tests passed: 15
+log	production/qa/evidence/core-grow/round2/test-run-final.log
+
+> dusk-fish@0.0.0 smoke
+> npm run build:single && playwright test --grep @boot
+
+
+> dusk-fish@0.0.0 build:single
+> tsc --noEmit && vite build --mode single
+
+vite v8.3.4 building client environment for single...
+transforming...
+✓ 13 modules transformed.
+rendering chunks...
+[plugin vite:singlefile] 
+
+[plugin vite:singlefile] Inlining: index-7nSlXmj5.js
+computing gzip size...
+dist-single/index.html  11.97 kB │ gzip: 5.64 kB
+
+✓ built in 30ms
+
+Running 1 test using 1 worker
+
+(node:38700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests\integration\boot.spec.ts:19:1 › 标题与画布正常启动，无浏览器错误 @boot (376ms)
+
+  1 passed (3.6s)

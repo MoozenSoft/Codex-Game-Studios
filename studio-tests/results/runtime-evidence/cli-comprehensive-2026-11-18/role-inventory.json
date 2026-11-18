@@ -1,0 +1,345 @@
+[
+  {
+    "name": "accessibility-specialist",
+    "path": ".codex/agents/accessibility-specialist.toml",
+    "sha256": "00939d0175c4fbd78da62045cf018d4d292f55eefb404dd7e28c0f73d989b24a",
+    "instructions_sha256": "afdfcee8f8b8d84b409dba7808ad1ce95e9504e70703785aed6d10b340cdcaa3",
+    "inherits_model": true
+  },
+  {
+    "name": "ai-programmer",
+    "path": ".codex/agents/ai-programmer.toml",
+    "sha256": "29cdf9ada3cfaefea5bea5d2440fe612de890a62c89c8923b4d504350612d7a2",
+    "instructions_sha256": "7ce73e95ea61fafbddfa682b940f973a1c2c40b4bd5e7fb1e229c62c3f9c46dc",
+    "inherits_model": true
+  },
+  {
+    "name": "analytics-engineer",
+    "path": ".codex/agents/analytics-engineer.toml",
+    "sha256": "f3d2214b96b79c9937a2f9714dcd4ad81a063828106870565c0ce31f93c136fb",
+    "instructions_sha256": "68a6cc579e0ebbb2922744eb62cbb0156f3cd34a8d4c557ac918c70e0343efd9",
+    "inherits_model": true
+  },
+  {
+    "name": "art-director",
+    "path": ".codex/agents/art-director.toml",
+    "sha256": "068a008960ba88bb4fb301a60d556580b85d8a4c173f193a67b2913976665149",
+    "instructions_sha256": "1e4360fdd8603f37c09b35b948f7af07feb2fcdeb9f13c3ae93efc782e70ea1d",
+    "inherits_model": true
+  },
+  {
+    "name": "audio-director",
+    "path": ".codex/agents/audio-director.toml",
+    "sha256": "5ffeb6826f3d5a49ca728d7484f6cf76ec3184daaedab5aee2862e7e67627501",
+    "instructions_sha256": "88ca992d6de625a8427307d5513c9dc3c4c6bcf846b0c650f575b3088fa283ea",
+    "inherits_model": true
+  },
+  {
+    "name": "community-manager",
+    "path": ".codex/agents/community-manager.toml",
+    "sha256": "c2998e9eca4fd17415923c7a1cf0149d1cd4455d53876b1bc9eb40fb6dddf895",
+    "instructions_sha256": "f1d72a1c8ced1fccc178614f134baffe17d11ba2887d0a10f176651e8431c127",
+    "inherits_model": true
+  },
+  {
+    "name": "creative-director",
+    "path": ".codex/agents/creative-director.toml",
+    "sha256": "957f5374189c634caf8e7b22092a8455c9c36acf5cdfe3695b1ce018808c7046",
+    "instructions_sha256": "1c53cdcf5c3c1c2b2cfb4336632cdc04b3f12bcc47c9a9c410b6d6e923047a04",
+    "inherits_model": true
+  },
+  {
+    "name": "devops-engineer",
+    "path": ".codex/agents/devops-engineer.toml",
+    "sha256": "88f2b304ca1705535d6837e8594875615174ffb8b9a62d348a7ac043fccf7d6b",
+    "instructions_sha256": "7b4f0f562f23e74064701c3a1c8dc021dd94f2c610a95fb10dea8a4175d2b6fb",
+    "inherits_model": true
+  },
+  {
+    "name": "economy-designer",
+    "path": ".codex/agents/economy-designer.toml",
+    "sha256": "10b315f4cfe6ce01f335e4de76cfdccf6f2a80a3439334a1f29098c956e25888",
+    "instructions_sha256": "e774fd114c2e096c58f627dd0cf5a8247d489dacc758e1bfc2225ddc6360d27a",
+    "inherits_model": true
+  },
+  {
+    "name": "engine-programmer",
+    "path": ".codex/agents/engine-programmer.toml",
+    "sha256": "9e4664c48273f4e84edb595ae95a4440c83b1d5bad79bb6beb15fd7634304cb2",
+    "instructions_sha256": "f7bca7740e58035ebf2e4b286a243f4e838e83c74794e0e8325574947fe492a2",
+    "inherits_model": true
+  },
+  {
+    "name": "game-designer",
+    "path": ".codex/agents/game-designer.toml",
+    "sha256": "8c536ded81a100f570560db8ef14f5fbd993c27c33d0c3b21abdf03d34472a50",
+    "instructions_sha256": "0cf880e9c20ef90fab48d3fb6a912f663f5b0d9c5d4c2749e132a7acf65a22ae",
+    "inherits_model": true
+  },
+  {
+    "name": "gameplay-programmer",
+    "path": ".codex/agents/gameplay-programmer.toml",
+    "sha256": "593e9e2e691f20aee6d9c11a14ec000448351530e429ad2c9977e2c1942f0e81",
+    "instructions_sha256": "98368f0951005f965ee45a9ddaea4790151310246823f4a2060b54bf47738c62",
+    "inherits_model": true
+  },
+  {
+    "name": "godot-csharp-specialist",
+    "path": ".codex/agents/godot-csharp-specialist.toml",
+    "sha256": "aa1e247e977cbdbf5643034de1a5452a4a3265ce3b8b54220b68450892e8e807",
+    "instructions_sha256": "bad12f0730ed379973a02c884204a25ed57618d9cb6f75fa89ee5775e6e20db0",
+    "inherits_model": true
+  },
+  {
+    "name": "godot-gdextension-specialist",
+    "path": ".codex/agents/godot-gdextension-specialist.toml",
+    "sha256": "23e6a3e50eb3be5d64e5da1ea26f4b5ce6717a307451d618d45e54d5e1af25ba",
+    "instructions_sha256": "bbfea37135cbab1f046121cd1af02a787d6424a28e279f477e26b146822da0c6",
+    "inherits_model": true
+  },
+  {
+    "name": "godot-gdscript-specialist",
+    "path": ".codex/agents/godot-gdscript-specialist.toml",
+    "sha256": "f3311a653c6fe8ca7d8d07f3666d3cc59055ac103dba2b41fa5ca635c49c89c7",
+    "instructions_sha256": "fa71be08072f31a7587a518cf2417311773ed67e13476fc43921db0b37e1b16b",
+    "inherits_model": true
+  },
+  {
+    "name": "godot-shader-specialist",
+    "path": ".codex/agents/godot-shader-specialist.toml",
+    "sha256": "f9281f6b70f0c48b3ba688a0795603909f235d3225c2a8061ed6e84644c798de",
+    "instructions_sha256": "8f8735508f2c7f04fe4d909c6a7332dc1facbf1996336712b0feb953c922b489",
+    "inherits_model": true
+  },
+  {
+    "name": "godot-specialist",
+    "path": ".codex/agents/godot-specialist.toml",
+    "sha256": "171a81b9fdf61d70157b480577b92b2923ff706ff768bc57b22f9addfded904a",
+    "instructions_sha256": "a4958a54451c511151287cd220ba7144274cbc09b1ad4ef2f2d19267e4f76a4b",
+    "inherits_model": true
+  },
+  {
+    "name": "lead-programmer",
+    "path": ".codex/agents/lead-programmer.toml",
+    "sha256": "4298b4e24efee9bf15406833d03e0a82a2d30909b1df5e85bfefc393c5fcfe59",
+    "instructions_sha256": "88b980f7c77fbfe06236cf8d037c59544428373e5e4c82ac36803b541523e670",
+    "inherits_model": true
+  },
+  {
+    "name": "level-designer",
+    "path": ".codex/agents/level-designer.toml",
+    "sha256": "39718b85fae0d79c4359f09a3b5ec6f7a2e2b250279a88c91a20cdfe618908cd",
+    "instructions_sha256": "4dbb7babf1d94f45031d6ffa6e6be9d137ef647c251dece107c4d6919f867643",
+    "inherits_model": true
+  },
+  {
+    "name": "live-ops-designer",
+    "path": ".codex/agents/live-ops-designer.toml",
+    "sha256": "f4ce2e5863622409db6e2577d3d8761815633855e9376f38f99648f84e54566a",
+    "instructions_sha256": "cdaea31a1d624aa465f887b604119e84957b469210d83574bc03ced19cc6622d",
+    "inherits_model": true
+  },
+  {
+    "name": "localization-lead",
+    "path": ".codex/agents/localization-lead.toml",
+    "sha256": "5bc85d60977cc4119aaf1ed2d0f631a539646210d884861685a86ed58b259428",
+    "instructions_sha256": "a3bc9b852855aa049802524f9dcbf166cabef92b332ff179c61c4bfd47501936",
+    "inherits_model": true
+  },
+  {
+    "name": "narrative-director",
+    "path": ".codex/agents/narrative-director.toml",
+    "sha256": "5ff6c6ae8735ee9821f4c7d8c8b9353c66d6a5a2e2346bb5eee9f3ef61c1a567",
+    "instructions_sha256": "40a25e2f7d0847faec43cc2c28ba8db310adb1aaf908eb24e431be927cb8f3d6",
+    "inherits_model": true
+  },
+  {
+    "name": "network-programmer",
+    "path": ".codex/agents/network-programmer.toml",
+    "sha256": "b9ddc46c359adfa239536fdc696b1787f4f1fd50e64dd55b72fbe8a5bc498a82",
+    "instructions_sha256": "72461766eb7da15303ada1818f23fea938e89a1cdc5af5c8d8f02ec959193cff",
+    "inherits_model": true
+  },
+  {
+    "name": "performance-analyst",
+    "path": ".codex/agents/performance-analyst.toml",
+    "sha256": "abe5ec52ce32d8b5f7d2fefdf8f7992e2bd89cae539196cad964a6b6be013eea",
+    "instructions_sha256": "b5b80b74e0d1f233d63795c4c8b4414f2ea52260668159d364b8da0e187849c7",
+    "inherits_model": true
+  },
+  {
+    "name": "producer",
+    "path": ".codex/agents/producer.toml",
+    "sha256": "31c548bd58f92e0b5900dbaa9fbef77654fa13d94ac4b1de88550ab7c6cad82d",
+    "instructions_sha256": "eadb9fb656c8f229b0272d99cec48e4bb5470909aa2c82fb3c23f753d751e576",
+    "inherits_model": true
+  },
+  {
+    "name": "prototyper",
+    "path": ".codex/agents/prototyper.toml",
+    "sha256": "97c393b52e43be57d480e36620676aad8a57b255672cc08b13e80b9d4f6ee0d3",
+    "instructions_sha256": "b1cf8b75ecda004d4cf44a0eda2730237cd0481cb764778bfe9fa3a57046be7c",
+    "inherits_model": true
+  },
+  {
+    "name": "qa-lead",
+    "path": ".codex/agents/qa-lead.toml",
+    "sha256": "475f5b7699e98f60006a2188f18183ac03cd095f33120feac4a0f902c529e635",
+    "instructions_sha256": "1ebeaeb886a144e2b2e70e4d6240b1970de8290208bdda395ee9c3352849cd70",
+    "inherits_model": true
+  },
+  {
+    "name": "qa-tester",
+    "path": ".codex/agents/qa-tester.toml",
+    "sha256": "e1f103f0dfed94d068739da3514716aedb3e2e14ca8a3d0672fe79923735c081",
+    "instructions_sha256": "14767974ce07ec0a3e65226906f6e4fc5ea8c62a5e4ee95c3dd08825096616ee",
+    "inherits_model": true
+  },
+  {
+    "name": "release-manager",
+    "path": ".codex/agents/release-manager.toml",
+    "sha256": "30a5d46fb5d45a3f07de1b1425fd8c32c8705f1ccd1f347a79d69ff39acbbaec",
+    "instructions_sha256": "d2e390c6d412f57d2d54b4245ed330c80db2c79167510199f4203595b442da1d",
+    "inherits_model": true
+  },
+  {
+    "name": "security-engineer",
+    "path": ".codex/agents/security-engineer.toml",
+    "sha256": "381aab59fbe773a7b3161647587759a9084bd8e00b37595c8b8f1fe80b976ba8",
+    "instructions_sha256": "6f999e2b8544e758fb6229ced2bd0355aefac2d6b8fd80101f3e6a86b02886b3",
+    "inherits_model": true
+  },
+  {
+    "name": "sound-designer",
+    "path": ".codex/agents/sound-designer.toml",
+    "sha256": "92d4b04c2fd5bda0d12fef746cfd8a877eacf351e023a0df1435880e03880450",
+    "instructions_sha256": "733df2473f400425329609f9756fa79b6e806ab0018edffa1d27bd294512f31f",
+    "inherits_model": true
+  },
+  {
+    "name": "systems-designer",
+    "path": ".codex/agents/systems-designer.toml",
+    "sha256": "dd42a06443413a496ba451c5c65a571f3e84efcd009c8a9f81b774f655b6d1a7",
+    "instructions_sha256": "41b42f5a8d4b370d3133958768b11dc7f97c30b53802ff0e77eb42edeb54d224",
+    "inherits_model": true
+  },
+  {
+    "name": "technical-artist",
+    "path": ".codex/agents/technical-artist.toml",
+    "sha256": "7c1bb82f8a60ce01e571c422999fa3379332743bb0d8aa7fc8c712f2ded11ba3",
+    "instructions_sha256": "0e97ad17e322032923561ce24efbd5fa224a76e45a74899aace7777b09b67473",
+    "inherits_model": true
+  },
+  {
+    "name": "technical-director",
+    "path": ".codex/agents/technical-director.toml",
+    "sha256": "ad3ef12a8e0178771227e99a15af8213a37a8727f27c1aa8878ff878cf70de8c",
+    "instructions_sha256": "52a35232bc4201896bf0780253976cf01d16ab22e66dde53f4b31f626da8267a",
+    "inherits_model": true
+  },
+  {
+    "name": "tools-programmer",
+    "path": ".codex/agents/tools-programmer.toml",
+    "sha256": "c2fa18766a85ce3e04fe99223a10d59b7315816d5fe48b492e4792f9a0b6b9c6",
+    "instructions_sha256": "f7ef3b0e7be4decf66ea1f76d033205d4653054afa749e8f3682c7713b97bdcc",
+    "inherits_model": true
+  },
+  {
+    "name": "ue-blueprint-specialist",
+    "path": ".codex/agents/ue-blueprint-specialist.toml",
+    "sha256": "653c10a23c1d4222701bfab349213dbac41b1412c619ce9146d93b61cfbb185d",
+    "instructions_sha256": "f58110c7c8e3a4279be0ac2869194bf11d50c78edb36a6bdacca88e0065867b2",
+    "inherits_model": true
+  },
+  {
+    "name": "ue-gas-specialist",
+    "path": ".codex/agents/ue-gas-specialist.toml",
+    "sha256": "bc984e12c30342f63cf04d12b16740193b7a91d241636df89e2a40c0a0545d91",
+    "instructions_sha256": "6268cd7673147f903be75199e381e44a1662601de071f25e6ab49c91282d2b4b",
+    "inherits_model": true
+  },
+  {
+    "name": "ue-replication-specialist",
+    "path": ".codex/agents/ue-replication-specialist.toml",
+    "sha256": "c92308569140bc1d771a07484d8e30918d1c60b55c71b92a433887cf71a28582",
+    "instructions_sha256": "097699b6c293b2fb007c31c9e36ce7d2082104e9705f4673cb35f522adb9c2c4",
+    "inherits_model": true
+  },
+  {
+    "name": "ue-umg-specialist",
+    "path": ".codex/agents/ue-umg-specialist.toml",
+    "sha256": "afb977ecefe8a98bc906dfc73d6e6d7ef2321f89212fe5ea801f0227a4164f49",
+    "instructions_sha256": "ea231dd5538e4025aea024e887d3c80ce0c746aab03f9a58ace16ba58d216f27",
+    "inherits_model": true
+  },
+  {
+    "name": "ui-programmer",
+    "path": ".codex/agents/ui-programmer.toml",
+    "sha256": "42bc219b4c9db6692fecb6d89d31e07621695a91842d29bfdfcb6ce034b17699",
+    "instructions_sha256": "a19fc0637f81c21747b4f4017e119754ee90cfecdefcd563bd92968f833bd8eb",
+    "inherits_model": true
+  },
+  {
+    "name": "unity-addressables-specialist",
+    "path": ".codex/agents/unity-addressables-specialist.toml",
+    "sha256": "30a7d359ec7df967a810ee969a00a6df987c38a25de986b7958dc81649c99458",
+    "instructions_sha256": "61cb076377fdedd1a4dd84cbbe1a428787a599f8b4b26666218b7aef437413ac",
+    "inherits_model": true
+  },
+  {
+    "name": "unity-dots-specialist",
+    "path": ".codex/agents/unity-dots-specialist.toml",
+    "sha256": "c96d444e2a4859697f6007927c6c7e09e1b84cac34846de1db27990c94f0e636",
+    "instructions_sha256": "3710478eace0faa7d97e2fa31808fe4fbfced626d8a790dcb4c66d2036f14610",
+    "inherits_model": true
+  },
+  {
+    "name": "unity-shader-specialist",
+    "path": ".codex/agents/unity-shader-specialist.toml",
+    "sha256": "1fe5ffb0c22ed26a10a44f532b69ca3efc7342fadf6c966f3d85a7e8dd6db2d4",
+    "instructions_sha256": "d7dc0b7a2ab9c4e8b6b56a8bd52a011861462ebfab1555fd97fc5e02a0219b3b",
+    "inherits_model": true
+  },
+  {
+    "name": "unity-specialist",
+    "path": ".codex/agents/unity-specialist.toml",
+    "sha256": "67f2fb99cc0cc737ed0e8702b6f94039804daba19c168e23f1206d73955a47c7",
+    "instructions_sha256": "4a4cd944e49774d15d85c2ab99b6dbdece9175869036cb88dc04b548f68d03da",
+    "inherits_model": true
+  },
+  {
+    "name": "unity-ui-specialist",
+    "path": ".codex/agents/unity-ui-specialist.toml",
+    "sha256": "7411fb307919b06fcdb5504ae9bbe81a6753fb528b4470148b082ff34f29a586",
+    "instructions_sha256": "cd5aad04216f43c796112a00d92882e30e1c9a6fee3d8a27c498c8fa9135b50e",
+    "inherits_model": true
+  },
+  {
+    "name": "unreal-specialist",
+    "path": ".codex/agents/unreal-specialist.toml",
+    "sha256": "b5e8597c7fbe84bde645eea7bc3dde66192e419bb5c67510f9c1d6866429241b",
+    "instructions_sha256": "fe2b8aa3a58857fd9ae6273b18284c8ab8dfd5690695e1d580e0aa8deed5c8bd",
+    "inherits_model": true
+  },
+  {
+    "name": "ux-designer",
+    "path": ".codex/agents/ux-designer.toml",
+    "sha256": "eefef1960b9252c809d6518d0f97838308b6eeb6a96c7fcaa6f9846b6939d43d",
+    "instructions_sha256": "bf328266ae5c8670164e58b7f1f0c2d30db719bc3263e002e50ca091be057a5a",
+    "inherits_model": true
+  },
+  {
+    "name": "world-builder",
+    "path": ".codex/agents/world-builder.toml",
+    "sha256": "2a84b1bcfa325094b341c5b11bd0dd721b335133f95c7853aef0aed8d061b5a0",
+    "instructions_sha256": "ff1bdfee9fc3db79cafdd6153a3794c5bffe2fcb5322aa18db56e143c4f3b25d",
+    "inherits_model": true
+  },
+  {
+    "name": "writer",
+    "path": ".codex/agents/writer.toml",
+    "sha256": "b4d4f746377c129e8e99edaf501fc8baefc091eb4bdb12d6b5261f7605eec8ae",
+    "instructions_sha256": "f680b815c8cf67f009c072aa78913f0a2091760c50540f1cb75cd591206fc810",
+    "inherits_model": true
+  }
+]

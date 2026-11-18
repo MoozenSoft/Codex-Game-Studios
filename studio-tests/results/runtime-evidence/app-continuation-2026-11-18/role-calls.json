@@ -1,0 +1,20 @@
+[
+  {
+    "timestamp": "2026-11-18T00:22:25.265Z",
+    "call_id": "call_ff4a130e619546c49563370dd6fa2968",
+    "tool": "spawn_agent",
+    "arguments_without_message": {
+      "task_name": "qa_tester_readonly_acceptance",
+      "agent_type": "qa-tester",
+      "fork_turns": "none"
+    }
+  },
+  {
+    "timestamp": "2026-11-18T00:29:33.070Z",
+    "call_id": "call_c5f8714f5c6d44b4b56e27b1341fe5b5",
+    "tool": "followup_task",
+    "arguments_without_message": {
+      "target": "/root/qa_tester_readonly_acceptance"
+    }
+  }
+]

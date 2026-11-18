@@ -1,0 +1,75 @@
+
+> app-dusk-fish@0.0.0 test:e2e
+> npm run build:single && playwright test tests/integration/n-retry.spec.ts
+
+
+> app-dusk-fish@0.0.0 build:single
+> tsc --noEmit && vite build --mode single
+
+vite v8.3.4 building client environment for single...
+transforming...
+✓ 13 modules transformed.
+rendering chunks...
+[plugin vite:singlefile] 
+
+[plugin vite:singlefile] Inlining: index-BjZDzI7d.js
+computing gzip size...
+dist-single/index.html  11.92 kB │ gzip: 5.68 kB
+
+✓ built in 32ms
+
+Running 5 tests using 1 worker
+
+(node:42904) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\integration\n-retry.spec.ts:6:3 › N retry boundary: over (212ms)
+(node:28980) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 tests\integration\n-retry.spec.ts:6:3 › N retry boundary: results (186ms)
+(node:37136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 3 tests\integration\n-retry.spec.ts:6:3 › N retry boundary: title (244ms)
+  ok 4 tests\integration\n-retry.spec.ts:6:3 › N retry boundary: play (166ms)
+  ok 5 tests\integration\n-retry.spec.ts:6:3 › N retry boundary: pause (192ms)
+
+
+  1) tests\integration\n-retry.spec.ts:6:3 › N retry boundary: over ────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "play"
+    Received: "over"
+
+      13 |     const after = await page.evaluate(() => ({scene:window.game!.scene,state:window.game!.state as {x:number;t:number}}));
+      14 |     const result = scene === 'over' || scene === 'results';
+    > 15 |     expect(after.scene).toBe(result ? 'play' : scene);
+         |                         ^
+      16 |     if(result) { expect(after.state.t).toBeLessThan(0.1); expect((after.state as {score:number}).score).toBe(0); }
+      17 |     else expect(after.state.x).toBe(before.x);
+      18 |     await page.screenshot({path:`production/qa/evidence/app-acceptance/n-${scene}.png`});
+        at D:\Git\Codex-Game-Studios\.scratch\codex-capability-probe\app-web-acceptance\tests\integration\n-retry.spec.ts:15:25
+
+    Error Context: test-results\n-retry-N-retry-boundary-over\error-context.md
+
+  2) tests\integration\n-retry.spec.ts:6:3 › N retry boundary: results ─────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "play"
+    Received: "results"
+
+      13 |     const after = await page.evaluate(() => ({scene:window.game!.scene,state:window.game!.state as {x:number;t:number}}));
+      14 |     const result = scene === 'over' || scene === 'results';
+    > 15 |     expect(after.scene).toBe(result ? 'play' : scene);
+         |                         ^
+      16 |     if(result) { expect(after.state.t).toBeLessThan(0.1); expect((after.state as {score:number}).score).toBe(0); }
+      17 |     else expect(after.state.x).toBe(before.x);
+      18 |     await page.screenshot({path:`production/qa/evidence/app-acceptance/n-${scene}.png`});
+        at D:\Git\Codex-Game-Studios\.scratch\codex-capability-probe\app-web-acceptance\tests\integration\n-retry.spec.ts:15:25
+
+    Error Context: test-results\n-retry-N-retry-boundary-results\error-context.md
+
+  2 failed
+    tests\integration\n-retry.spec.ts:6:3 › N retry boundary: over ─────────────────────────────────
+    tests\integration\n-retry.spec.ts:6:3 › N retry boundary: results ──────────────────────────────
+  3 passed (3.7s)

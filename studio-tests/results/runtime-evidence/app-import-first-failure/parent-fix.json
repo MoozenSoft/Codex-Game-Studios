@@ -1,0 +1,7 @@
+{
+  "file": ".agents/scripts/one-shot-run.sh",
+  "before": "6bb203ac0ffe6aeb3e03a0e13cf1c227edb282f910abad981b975e6014daedc3",
+  "after": "2e3a00327d81d64ad0010f4f6716c7fae3b75ff341c0e706108a8e06dcf4369e",
+  "reason": "hookless导入模式去掉manual=1，让游戏自身RAF循环运行；普通native手动模式不变。",
+  "browser_regression": "2/2真实Chrome通过；已有manual hook的resize黑图用例先失败，再修复，无hook对照始终绘制。"
+}

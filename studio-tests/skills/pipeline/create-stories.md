@@ -1,8 +1,10 @@
-# Skill Test Spec: /create-stories
+# Skill Test Spec: $create-stories
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/create-stories` breaks a single epic into developer-ready story files. At
+`$create-stories` breaks a single epic into developer-ready story files. At
 `standard`/`full` workflow it reads `production/epics/[epic-slug]/EPIC.md`, the
 epic's GDD, the governing ADRs (section-bounded reads, never unbounded), this
 layer's rules from the control manifest and this system's entries in the TR
@@ -27,13 +29,13 @@ or BLOCKED (user declined).
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keywords: COMPLETE, BLOCKED
 - [ ] Contains "May I write" collaborative protocol language (one approval for the full story set)
-- [ ] Has a next-step handoff at the end (`/story-readiness`, `/dev-story`)
+- [ ] Has a next-step handoff at the end (`$story-readiness`, `$dev-story`)
 - [ ] Documents story Status: Blocked when governing ADR is Proposed
 - [ ] Documents QL-STORY-READY gate: active in full mode, skipped in lean/solo
 
@@ -45,7 +47,7 @@ In `full` mode: `qa-lead` is spawned once via `Agent` with gate QL-STORY-READY
 after all stories are decomposed and before the write ask. It returns a verdict per
 story (ADEQUATE / GAPS / INADEQUATE) plus Given/When/Then specs (Logic,
 Integration) or manual verification steps (Visual/Feel, UI) for ADEQUATE stories.
-GAPS → `AskUserQuestion` with `Revise flagged criteria` / `Accept and proceed` /
+GAPS → `当前 Codex 可用的提问工具` with `Revise flagged criteria` / `Accept and proceed` /
 `Discuss further` — nothing is revised before the user chooses. INADEQUATE →
 blocking: the story is revised with the user (or dropped and named) before the
 write ask. NOT ASSESSED [missing input] → never read as ADEQUATE: the input is
@@ -64,7 +66,7 @@ In `solo` mode: QL-STORY-READY is skipped. Output notes:
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -86,7 +88,7 @@ Fixture defaults.
 - `docs/architecture/tr-registry.yaml` has TR-IDs for all 3 requirements
 - `production/epics/index.md` has a row for the epic with `Not yet created`
 
-**Input:** `/create-stories combat`
+**Input:** `$create-stories combat`
 
 **Expected behavior:**
 1. Reads EPIC.md and the GDD in full; greps this layer's `## <layer> Layer Rules`
@@ -100,7 +102,7 @@ Fixture defaults.
    update `production/epics/combat/EPIC.md` and `production/epics/index.md`?"
 7. Writes `story-001-[slug].md` … `story-003-[slug].md`, updates the EPIC.md
    Stories table and the index row to `3 stories`
-8. Asks what next, recommending `/story-readiness [first-story-path]`; Verdict: COMPLETE
+8. Asks what next, recommending `$story-readiness [first-story-path]`; Verdict: COMPLETE
 
 **Assertions:**
 - [ ] Exactly 3 stories are drafted — one per acceptance criterion at `fine`
@@ -120,19 +122,19 @@ Fixture defaults.
 - `project.yaml`: `modes.workflow: full`
 - `production/epics/` contains other epics but no `nonexistent-epic/` directory
 
-**Input:** `/create-stories nonexistent-epic`
+**Input:** `$create-stories nonexistent-epic`
 
 **Expected behavior:**
 1. Skill looks for `production/epics/nonexistent-epic/EPIC.md` — not found
 2. Skill outputs a clear error naming that path
-3. Skill recommends `/create-epics` (the Previous step) or checking the slug
+3. Skill recommends `$create-epics` (the Previous step) or checking the slug
    against the epics under `production/epics/`
 4. No story files are created and no epic is synthesized from the brief
 
 **Assertions:**
 - [ ] Skill outputs a clear error naming `production/epics/nonexistent-epic/EPIC.md`
 - [ ] No story files, EPIC.md or index row are written
-- [ ] Skill recommends `/create-epics`
+- [ ] Skill recommends `$create-epics`
 - [ ] Skill does NOT fall through to the `minimal` brief-synthesis branch at `full`
 
 ---
@@ -147,19 +149,19 @@ Fixture defaults.
 - Requirement 1 is governed by an ADR with `## Status` Accepted
 - Requirement 2 is governed by ADR-0007 with `## Status` Proposed
 
-**Input:** `/create-stories [epic-slug]`
+**Input:** `$create-stories [epic-slug]`
 
 **Expected behavior:**
 1. Both ADR files exist, so the `full`-tier existence check passes
 2. Skill reads each governing ADR's status and finds ADR-0007 Proposed
 3. Story 2 is drafted with `Status: Blocked` and the note
-   "BLOCKED: ADR-0007 is Proposed — accept it with `/architecture-decision accept ADR-0007` once decided"
+   "BLOCKED: ADR-0007 is Proposed — accept it with `$architecture-decision accept ADR-0007` once decided"
 4. Story 1 is drafted with `Status: Ready`
 5. The blocked story is flagged in the story list before the single "May I write" ask
 
 **Assertions:**
 - [ ] The ADR status is taken from the ADR's `## Status` section, not assumed
-- [ ] Story 2 has `Status: Blocked` and the note names ADR-0007 and `/architecture-decision accept` — never a bare `/architecture-decision`, which starts a new ADR
+- [ ] Story 2 has `Status: Blocked` and the note names ADR-0007 and `$architecture-decision accept` — never a bare `$architecture-decision`, which starts a new ADR
 - [ ] Variant — ADR-0007's `## Status` reads `Superseded by ADR-0009`: story 2 is still `Status: Blocked`, and its note names ADR-0009 as the ADR to point it at
 - [ ] Story 1 has `Status: Ready` — the blocked ADR does not affect it
 - [ ] The blocked story is flagged before write approval, not discovered after writing
@@ -173,12 +175,12 @@ Fixture defaults.
 - `project.yaml`: `modes.workflow: standard`
 - `production/epics/` contains 2 epic subdirectories, each with an `EPIC.md`
 
-**Input:** `/create-stories` (no argument)
+**Input:** `$create-stories` (no argument)
 
 **Expected behavior:**
 1. Skill detects no argument at `standard`
 2. Globs `production/epics/*/EPIC.md`
-3. Asks via `AskUserQuestion`: "Which epic would you like to break into stories?"
+3. Asks via `当前 Codex 可用的提问工具`: "Which epic would you like to break into stories?"
    with the 2 epics (and their status) as options
 4. Decomposes only the epic the user picks
 
@@ -195,12 +197,12 @@ Fixture defaults.
 
 **Expected behavior (no epics):**
 1. The glob returns nothing, so the skill stops: "No epics found under
-   `production/epics/`. Run `/create-epics layer: foundation` first — an epic is
+   `production/epics/`. Run `$create-epics layer: foundation` first — an epic is
    what this skill decomposes."
 
 **Assertions (no epics):**
 - [ ] No "Which epic…" question is asked with an empty option list
-- [ ] The stop names `/create-epics` and nothing is written
+- [ ] The stop names `$create-epics` and nothing is written
 
 ---
 
@@ -215,14 +217,14 @@ Fixture defaults.
   acceptance criterion)
 - At the GAPS question the user picks `Revise flagged criteria`
 
-**Input:** `/create-stories [epic-slug]`
+**Input:** `$create-stories [epic-slug]`
 
 **Expected behavior:**
 1. Both stories are decomposed
 2. `qa-lead` is spawned once with QL-STORY-READY for the whole story list
 3. The assessment is presented: story 1 ADEQUATE with its test-case specs; story 2
    GAPS naming the vague criterion
-4. `AskUserQuestion` for story 2: `Revise flagged criteria` / `Accept and proceed`
+4. `当前 Codex 可用的提问工具` for story 2: `Revise flagged criteria` / `Accept and proceed`
    / `Discuss further`
 5. On Revise: story 2's revised criteria are drafted and shown; specs for story 2
    alone are re-requested in one follow-up call
@@ -234,7 +236,7 @@ Fixture defaults.
 - [ ] Per-story verdicts use ADEQUATE / GAPS / INADEQUATE and name the failing criterion
 - [ ] The GAPS verdict goes to the user with the three options — story 2's criteria are not revised before the user chooses
 - [ ] Story 2's revised criteria are shown before the write ask; it carries no specs until ADEQUATE
-- [ ] Had the user picked `Accept and proceed`, story 2 would be written with its criteria unchanged and its QA Test Cases reading `*Test cases not yet defined — run /qa-plan to generate them.*`
+- [ ] Had the user picked `Accept and proceed`, story 2 would be written with its criteria unchanged and its QA Test Cases reading `*Test cases not yet defined — run $qa-plan to generate them.*`
 - [ ] Story 1's QA Test Cases section contains Given/When/Then (Logic/Integration) or Setup/Verify/Pass condition (Visual/Feel, UI) blocks from the gate
 - [ ] No "QL-STORY-READY skipped" note appears in `full` mode
 
@@ -252,7 +254,7 @@ Fixture defaults.
 - `docs/engine-reference/godot/VERSION.md` is absent
 - No `production/epics/` directory
 
-**Input:** `/create-stories`
+**Input:** `$create-stories`
 
 **Expected behavior:**
 1. No argument at `minimal` takes Step 2's `minimal` branch and reads the brief;
@@ -265,8 +267,8 @@ Fixture defaults.
    does not exist)
 5. Writes `EPIC.md` and both stories; prints `Epics index not updated:
    production/epics/index.md absent`
-6. Recommends `/dev-story [first-story-path]` — no `/story-readiness`, no
-   `/sprint-plan` option
+6. Recommends `$dev-story [first-story-path]` — no `$story-readiness`, no
+   `$sprint-plan` option
 
 **Assertions:**
 - [ ] Nothing, `EPIC.md` included, is written before the single write ask, and that ask names `EPIC.md`
@@ -293,7 +295,7 @@ Fixture defaults.
 - [ ] `EPIC.md` keeps its two rows and every other section; exactly one row is appended
 
 **Fixture (an `EPIC.md` with no stories yet):**
-- As the first fixture, but `/create-epics` was run anyway, so
+- As the first fixture, but `$create-epics` was run anyway, so
   `production/epics/lantern-keeper/EPIC.md` exists (scope from the brief, Stories
   "Not yet created") and the folder holds no story files
 
@@ -315,16 +317,16 @@ Fixture defaults.
 - [ ] Blocked stories flagged before write approval — not discovered after writing
 - [ ] TR-IDs reference the registry — requirement text is not embedded inline in story files
 - [ ] Control manifest rules quoted per-story from the manifest, not invented
-- [ ] Ends with next-step handoff: `/story-readiness` → `/dev-story` (`/dev-story` directly at `minimal`)
+- [ ] Ends with next-step handoff: `$story-readiness` → `$dev-story` (`$dev-story` directly at `minimal`)
 
 ---
 
 ## Coverage Notes
 
-- At `minimal`, the "run `/brainstorm` first" stop when no brief exists (or
-  `/reverse-document design [code root]` when the game is already built) and a named
+- At `minimal`, the "run `$brainstorm` first" stop when no brief exists (or
+  `$reverse-document design [code root]` when the game is already built) and a named
   epic slug that does not exist (the `minimal` branch is taken instead of
-  `/create-epics`) are not given fixtures.
+  `$create-epics`) are not given fixtures.
 - The `full` missing-ADR-file stop and the `standard` critical/non-critical ADR
   split are not separately tested.
 - INADEQUATE (the story is revised with the user, or dropped and named) and a

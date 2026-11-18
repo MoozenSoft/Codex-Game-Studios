@@ -1,0 +1,6 @@
+=== CCGS Config (resolved: local->yaml->legacy->default; use as-is) ===
+automation: collaborative (default)
+workflow: minimal (rigor:minimal)
+qa.level: minimal (rigor:minimal)
+testing.strict: logic=unset integration=true visual=unset ui=unset config=unset (unset = each skill applies its own default)
+=== end ===

@@ -1,0 +1,10 @@
+{
+  "files": 599,
+  "unchanged": false,
+  "changes": [
+    ".codex/hooks/__pycache__/event_input.cpython-312.pyc",
+    ".codex/hooks/__pycache__/event_log.cpython-312.pyc",
+    ".codex/hooks/dispatch.py",
+    ".codex/hooks/event_log.py"
+  ]
+}

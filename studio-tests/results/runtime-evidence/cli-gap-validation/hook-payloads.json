@@ -1,0 +1,41 @@
+{
+  "source_hashes": {
+    ".codex/hooks.json": {
+      "checkout": "e1a64dbb661a65b0dc1a0363accf1d6afe3cab5a99e5012a431c0a087edbc11e",
+      "probe": "e1a64dbb661a65b0dc1a0363accf1d6afe3cab5a99e5012a431c0a087edbc11e",
+      "equal": true
+    },
+    ".codex/hooks/dispatch.py": {
+      "checkout": "c521380133c2a663821940cec8a305db2d412b74911b2fd8f0d703cdee063499",
+      "probe": "c521380133c2a663821940cec8a305db2d412b74911b2fd8f0d703cdee063499",
+      "equal": true
+    },
+    ".codex/hooks/run.sh": {
+      "checkout": "a8f4ad04fb05a9d09774f1ff176c55c4fd67defcfc0e40b49cc354bd7e443d01",
+      "probe": "a8f4ad04fb05a9d09774f1ff176c55c4fd67defcfc0e40b49cc354bd7e443d01",
+      "equal": true
+    }
+  },
+  "dispatcher_payloads": {
+    "PreCompact": {
+      "exit": 0,
+      "stdout": {
+        "hookSpecificOutput": {
+          "hookEventName": "PreCompact",
+          "additionalContext": "压缩前保留已授权任务的检查点；production/session-state/active.md 是恢复依据，事件日志不替代任务内容。"
+        }
+      },
+      "stderr": ""
+    },
+    "SubagentStop": {
+      "exit": 0,
+      "stdout": {
+        "hookSpecificOutput": {
+          "hookEventName": "SubagentStop",
+          "additionalContext": "核对该子代理简报中约定的产物路径和证据；仅有完成事件不代表产物验收通过。"
+        }
+      },
+      "stderr": ""
+    }
+  }
+}

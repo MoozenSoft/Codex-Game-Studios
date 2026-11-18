@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-16",
+  "platform": "Windows",
+  "client": "Codex CLI",
+  "version": "0.169.0",
+  "model": "gpt-6.1-sol",
+  "sandbox": "read-only",
+  "fixture_root": ".scratch/codex-capability-probe",
+  "checks": [
+    {
+      "name": "skill_absent_control",
+      "result": "expected_failure",
+      "observed": "PROBE_UNAVAILABLE"
+    },
+    {
+      "name": "project_skill_read",
+      "result": "passed",
+      "observed": "STUDIO_SKILL_OK_6f19"
+    },
+    {
+      "name": "project_role_ephemeral",
+      "result": "failed",
+      "observed": "collab spawn failed: no rollout found for thread id"
+    },
+    {
+      "name": "project_role_persistent",
+      "result": "passed",
+      "observed": "已真实委派 studio-probe 并等待返回，子代理原始输出为 STUDIO_ROLE_OK_e94a。"
+    },
+    {
+      "name": "session_start_hook",
+      "result": "passed",
+      "observed": "正常 Review hooks -> Allow selected 后，新的 CLI 会话启动上下文返回 STUDIO_HOOK_OK_b57c，且隔离目录生成 hook-fired.txt；模型未读取 hook 文件，未绕过信任检查。"
+    },
+    {
+      "name": "project_hook_discovery",
+      "result": "passed",
+      "observed": "本机 app-server hooks/list 识别到项目 SessionStart hook，无解析错误和警告，enabled=true；正常审阅前 trustStatus=untrusted，审阅后为 trusted。"
+    }
+  ]
+}

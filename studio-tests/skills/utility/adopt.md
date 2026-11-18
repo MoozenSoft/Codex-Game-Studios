@@ -1,29 +1,31 @@
-# Skill Test Spec: /adopt
+# Skill Test Spec: $adopt
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/adopt` audits an existing project's artifacts — GDDs, ADRs, stories, infrastructure
+`$adopt` audits an existing project's artifacts — GDDs, ADRs, stories, infrastructure
 files, and `technical-preferences.md` — for format compliance with the template's
 skill pipeline. It classifies every gap by severity (BLOCKING / HIGH / MEDIUM / LOW),
 composes a numbered, ordered migration plan, and writes it to `docs/adoption-plan-[date].md`
-after explicit user approval via `AskUserQuestion`.
+after explicit user approval via `当前 Codex 可用的提问工具`.
 
 The resolved `workflow` tier scopes the audit: `full` requires all 8 GDD sections,
 `standard` requires 5 (+ Formulas for numeric systems), and `minimal` — the
 default, since `modes.rigor` defaults to `minimal` — audits `design/game-brief.md`
 instead and checks any existing GDD only advisorily, and the plan prescribes no
-infrastructure bootstrap (`/architecture-review`, `/create-control-manifest`,
-`/sprint-plan`, `/gate-check` are not on the minimal path). Fixtures that exercise the
+infrastructure bootstrap (`$architecture-review`, `$create-control-manifest`,
+`$sprint-plan`, `$gate-check` are not on the minimal path). Fixtures that exercise the
 GDD and ADR audits therefore set `modes.rigor: full` in `project.yaml`.
 
 A v1.0 project (no `project.yaml`, legacy config with real values) is migrated
-only by `.claude/scripts/migrate-v1-config.sh` — `--dry-run` first, the real run
+only by `.agents/scripts/migrate-v1-config.sh` — `--dry-run` first, the real run
 after an ask naming the files it writes, and `--finalize` left until the user
-has read the migration report. `/adopt` never writes a review mode; it reports
+has read the migration report. `$adopt` never writes a review mode; it reports
 the resolved one.
 
-This skill is distinct from `/project-stage-detect` (which checks what exists).
-`/adopt` checks whether what exists will actually work with the template's skills.
+This skill is distinct from `$project-stage-detect` (which checks what exists).
+`$adopt` checks whether what exists will actually work with the template's skills.
 
 No director gates apply. The skill does NOT invoke any director agents.
 
@@ -31,19 +33,19 @@ No director gates apply. The skill does NOT invoke any director agents.
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains severity tier keywords: BLOCKING, HIGH, MEDIUM, LOW
-- [ ] Contains "May I write" or `AskUserQuestion` language before writing the adoption plan
+- [ ] Contains "May I write" or `当前 Codex 可用的提问工具` language before writing the adoption plan
 - [ ] Has a next-step handoff at the end (e.g., offering to fix the highest-priority gap immediately)
 
 ---
 
 ## Director Gate Checks
 
-None. `/adopt` is a brownfield audit utility. No director gates apply.
+None. `$adopt` is a brownfield audit utility. No director gates apply.
 
 ---
 
@@ -51,7 +53,7 @@ None. `/adopt` is a brownfield audit utility. No director gates apply.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -70,7 +72,7 @@ Fixture defaults.
 - `docs/architecture/tr-registry.yaml` and `docs/architecture/control-manifest.md` exist
 - `docs/engine-reference/[engine]/VERSION.md` exists
 
-**Input:** `/adopt`
+**Input:** `$adopt`
 
 **Expected behavior:**
 1. Skill emits "Scanning project artifacts..." then reads all artifacts silently
@@ -82,7 +84,7 @@ Fixture defaults.
 6. Phase 3: zero BLOCKING and zero HIGH gaps — the project is reported
    template-compatible with only advisory improvements remaining (any MEDIUM/LOW
    item, e.g. a missing `sprint-status.yaml`, is listed as advisory)
-7. Uses `AskUserQuestion` to ask about writing the plan; user selects write
+7. Uses `当前 Codex 可用的提问工具` to ask about writing the plan; user selects write
 8. Adoption plan is written to `docs/adoption-plan-[date].md`
 9. Phase 6b reports the resolved review mode ("Review mode resolves to `full` —
    from `modes.rigor`, unless something pins it") and writes nothing for it
@@ -94,10 +96,10 @@ Fixture defaults.
 - [ ] "Scanning project artifacts..." appears before the silent read phase
 - [ ] `gdd-structure-check.sh` is invoked with an explicit path per GDD (not bare)
 - [ ] Gap counts show `BLOCKING: 0` and `HIGH: 0`, and the project is reported template-compatible
-- [ ] `AskUserQuestion` is used before writing the adoption plan
+- [ ] `当前 Codex 可用的提问工具` is used before writing the adoption plan
 - [ ] Adoption plan file is written to `docs/adoption-plan-[date].md`
 - [ ] `modes.review_mode` is not written to `project.yaml` and `production/review-mode.txt` is not created — the review mode is reported, never pinned
-- [ ] Phase 7 asks "No blocking gaps — this project is template-compatible. What next?" via `AskUserQuestion`
+- [ ] Phase 7 asks "No blocking gaps — this project is template-compatible. What next?" via `当前 Codex 可用的提问工具`
 
 ---
 
@@ -111,7 +113,7 @@ Fixture defaults.
 - One ADR (`adr-0001.md`) is missing `## Status` section
 - `docs/architecture/tr-registry.yaml` does not exist
 
-**Input:** `/adopt`
+**Input:** `$adopt`
 
 **Expected behavior:**
 1. Skill scans all artifacts
@@ -124,12 +126,12 @@ Fixture defaults.
    - HIGH: `tr-registry.yaml` missing; `combat.md` missing Acceptance Criteria (can't generate stories)
    - MEDIUM: `combat.md` missing Formulas
 4. Phase 4 builds ordered migration plan:
-   - Step 1 (BLOCKING): Add `## Status` to `adr-0001.md` — command: `/architecture-decision retrofit`
-   - Step 2 (HIGH): Run `/architecture-review` to bootstrap tr-registry.yaml
-   - Step 3 (HIGH): Add Acceptance Criteria to `combat.md` — command: `/design-system retrofit`
+   - Step 1 (BLOCKING): Add `## Status` to `adr-0001.md` — command: `$architecture-decision retrofit`
+   - Step 2 (HIGH): Run `$architecture-review` to bootstrap tr-registry.yaml
+   - Step 3 (HIGH): Add Acceptance Criteria to `combat.md` — command: `$design-system retrofit`
    - Step 4 (MEDIUM): Add Formulas to `combat.md`
 5. Gap Preview shows BLOCKING items as bullets (actual file names), HIGH/MEDIUM as counts
-6. `AskUserQuestion` asks to write the plan; writes after approval
+6. `当前 Codex 可用的提问工具` asks to write the plan; writes after approval
 7. Phase 7 offers to fix the highest-priority gap (ADR Status) immediately
 
 **Assertions:**
@@ -137,7 +139,7 @@ Fixture defaults.
 - [ ] HIGH and MEDIUM shown as counts in Gap Preview
 - [ ] Migration plan items are in BLOCKING-first order
 - [ ] Each plan item includes the fix command or manual steps
-- [ ] `AskUserQuestion` is used before writing
+- [ ] `当前 Codex 可用的提问工具` is used before writing
 - [ ] Phase 7 offers to immediately retrofit the first BLOCKING item
 
 ---
@@ -151,7 +153,7 @@ Fixture defaults.
 - Stories: 5 files — 3 have TR-ID references, 2 do not
 - Infrastructure: all critical files present
 
-**Input:** `/adopt`
+**Input:** `$adopt`
 
 **Expected behavior:**
 1. Skill audits all artifact types
@@ -165,7 +167,7 @@ Fixture defaults.
 5. Migration plan lists the HIGH gap first, then MEDIUM gaps with GDD gaps before story gaps
 6. Note included: "Existing stories continue to work — do not regenerate stories
    that are in progress or done"
-7. `AskUserQuestion` to write plan; writes after approval
+7. `当前 Codex 可用的提问工具` to write plan; writes after approval
 
 **Assertions:**
 - [ ] Summary shows GDD and ADR tallies as `N (X fully compliant, Y with gaps)` and `Stories audited: 5`
@@ -173,11 +175,11 @@ Fixture defaults.
 - [ ] The 2 stories without TR-IDs are counted as MEDIUM gaps
 - [ ] Existing story compatibility note is included in the plan
 - [ ] HIGH gap precedes MEDIUM gaps; MEDIUM GDD gaps precede MEDIUM story gaps
-- [ ] `AskUserQuestion` is used before writing
+- [ ] `当前 Codex 可用的提问工具` is used before writing
 
 ---
 
-### Case 4: No Artifacts Found — Fresh project, guidance to run /start
+### Case 4: No Artifacts Found — Fresh project, guidance to run $start
 
 **Fixture:**
 - Repository has no files in `design/gdd/`, `docs/architecture/`, `production/epics/`
@@ -185,21 +187,21 @@ Fixture defaults.
 - No source code: none of `src/`, `Assets/` or `Source/` exists
 - No game-concept.md, no game-brief.md, no systems-index.md
 
-**Input:** `/adopt`
+**Input:** `$adopt`
 
 **Expected behavior:**
 1. Phase 1 existence check finds no artifacts
 2. Skill infers "Fresh" — no brownfield work to migrate
-3. Uses `AskUserQuestion`:
-   - "This looks like a fresh project — no existing artifacts found. `/adopt` is for
+3. Uses `当前 Codex 可用的提问工具`:
+   - "This looks like a fresh project — no existing artifacts found. `$adopt` is for
      projects with work to migrate. What would you like to do?"
-   - Options: "Run `/start`", "My artifacts are in a non-standard location", "Cancel"
-4. The user picks "Run `/start`"; the skill says so and stops — no audit
+   - Options: "Run `$start`", "My artifacts are in a non-standard location", "Cancel"
+4. The user picks "Run `$start`"; the skill says so and stops — no audit
 
 **Assertions:**
-- [ ] `AskUserQuestion` is used (not a plain text message) when no artifacts are found
-- [ ] `/start` is presented as a named option
-- [ ] After `/start` or Cancel the skill stops — no audit phases run; "help me find them" leads to a search, not a stop
+- [ ] `当前 Codex 可用的提问工具` is used (not a plain text message) when no artifacts are found
+- [ ] `$start` is presented as a named option
+- [ ] After `$start` or Cancel the skill stops — no audit phases run; "help me find them" leads to a search, not a stop
 - [ ] No adoption plan file is written
 
 ---
@@ -212,24 +214,24 @@ Fixture defaults.
 - `design/game-brief.md` exists
 - `design/gdd/combat.md` exists and is missing `## Acceptance Criteria`
 
-**Input:** `/adopt`
+**Input:** `$adopt`
 
 **Expected behavior:**
 1. Phase 2 audits `design/game-brief.md`; GDDs, ADRs and UX specs are not expected
 2. `combat.md` is checked at the `standard` bar advisorily — its missing Acceptance
    Criteria is reported as informational, not as a HIGH gap
 3. The plan does not prescribe the infrastructure bootstrap: its Step 3 says in
-   one line that it is not on the minimal path and names `/create-stories` as
+   one line that it is not on the minimal path and names `$create-stories` as
    the next step (no stories exist)
 4. No director agents are spawned at any point
 5. No gate IDs (CD-*, TD-*, AD-*, PR-*) appear in output
-6. No `/gate-check` is invoked during the skill run
+6. No `$gate-check` is invoked during the skill run
 
 **Assertions:**
 - [ ] `design/game-brief.md` is audited
 - [ ] Absent ADRs and UX specs are not reported as gaps
 - [ ] `combat.md`'s missing Acceptance Criteria is not counted in the HIGH total
-- [ ] The plan prescribes none of `/architecture-review`, `/create-control-manifest`, `/sprint-plan` or `/gate-check` — none is on the minimal path
+- [ ] The plan prescribes none of `$architecture-review`, `$create-control-manifest`, `$sprint-plan` or `$gate-check` — none is on the minimal path
 - [ ] No director gate is invoked and no gate skip messages appear
 - [ ] Skill reaches plan-writing or cancellation without any gate verdict
 
@@ -239,16 +241,16 @@ Fixture defaults.
 
 **Fixture:**
 - No `project.yaml` at the repo root
-- `production/stage.txt` reads `Production`; `.claude/docs/technical-preferences.md`
+- `production/stage.txt` reads `Production`; `.agents/docs/technical-preferences.md`
   has `- **Engine**: Godot 4.6` and a filled naming section
 - `design/gdd/` holds GDDs; no `production/migration-report.md`
 
-**Input:** `/adopt`
+**Input:** `$adopt`
 
 **Expected behavior:**
 1. Phase 2g identifies a v1.0 project needing migration (no `project.yaml`,
    legacy files with real, migratable values)
-2. It runs `bash .claude/scripts/migrate-v1-config.sh --dry-run` during the
+2. It runs `bash .agents/scripts/migrate-v1-config.sh --dry-run` during the
    audit (the dry run writes nothing) — it does not hand-write `project.yaml`
 3. The migration is classified BLOCKING in Phase 3 and heads the plan, which
    reports what the dry run listed
@@ -256,7 +258,7 @@ Fixture defaults.
    converter? It writes `project.yaml` and `production/migration-report.md`."
    and runs it without `--dry-run` only after approval
 5. It tells the user to read `production/migration-report.md` before running
-   `bash .claude/scripts/migrate-v1-config.sh --finalize`, and does not run
+   `bash .agents/scripts/migrate-v1-config.sh --finalize`, and does not run
    `--finalize` itself before the user has read the report
 
 **Assertions:**
@@ -273,7 +275,7 @@ Fixture defaults.
 - [ ] Emits "Scanning project artifacts..." before silent read phase
 - [ ] Reads all artifacts silently before presenting any results
 - [ ] Shows Adoption Audit Summary and Gap Preview before asking to write
-- [ ] Uses `AskUserQuestion` before writing the adoption plan file
+- [ ] Uses `当前 Codex 可用的提问工具` before writing the adoption plan file
 - [ ] Adoption plan written to `docs/adoption-plan-[date].md` — not to any other path
 - [ ] Migration plan items ordered: BLOCKING first, HIGH second, MEDIUM third, LOW last
 - [ ] Phase 7 always offers a single specific next action (not a generic list)

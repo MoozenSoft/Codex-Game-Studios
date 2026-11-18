@@ -1,0 +1,66 @@
+ac15b36 新增结果画面按 R 重试并保留 Enter 与局内行为
+bec28ab 完成 dusk-fish Web 迁移记录与构建测试交接
+6d50a7d 验证钓鱼规则红绿测试及浏览器启动与确定性回放
+41f6f4e 拆分 dusk-fish 为严格类型模块并保持同种子回放一致
+ad655cf 迁移 dusk-fish 为 Web 工程并验证配置初始化等价
+.codex/config.toml
+AGENTS.md
+dusk-fish@0.0.0 <probe>
+├── @playwright/test@1.64.1
+├── typescript@7.0.2
+├── vite-plugin-singlefile@2.3.3
+├── vite@8.3.4
+└── vitest@5.0.5
+
+.gitignore
+assets/provenance.yaml
+data/config-notes.md
+data/config.json
+design/feel-log.md
+design/game-brief.md
+docs/engine-reference/web/VERSION.md
+index.html
+package-lock.json
+package.json
+playwright.config.ts
+production/qa/evidence/core-grow/round2/record.log
+production/qa/evidence/core-grow/round2/retry-green.log
+production/qa/evidence/core-grow/round2/retry-over-after.png
+production/qa/evidence/core-grow/round2/retry-over-before.png
+production/qa/evidence/core-grow/round2/retry-over.json
+production/qa/evidence/core-grow/round2/retry-red.log
+production/qa/evidence/core-grow/round2/retry-results-after.png
+production/qa/evidence/core-grow/round2/retry-results-before.png
+production/qa/evidence/core-grow/round2/retry-results.json
+production/qa/evidence/core-grow/round2/rule-red.log
+production/qa/evidence/core-grow/round2/story-pixel-comparison.json
+production/qa/evidence/core-grow/round2/story-state-comparison.json
+production/qa/evidence/core-grow/round2/test-run-grow.log
+production/qa/evidence/core-grow/round2/test-run-grow.log.e2e
+production/qa/evidence/core-grow/round2/test-run-grow.log.unit
+production/qa/evidence/core-grow/round2/tests-green-corrected.log
+production/qa/evidence/core-grow/round2/tests-green.log
+production/qa/evidence/grow-dusk-fish/accepted.png
+production/qa/evidence/grow-dusk-fish/accepted.tsv
+production/qa/evidence/grow-dusk-fish/copy.png
+production/qa/evidence/grow-dusk-fish/copy.tsv
+production/qa/evidence/grow-dusk-fish/grow.md
+production/qa/evidence/grow-dusk-fish/story.png
+production/qa/evidence/grow-dusk-fish/story.tsv
+production/qa/evidence/grow-dusk-fish/typescript.png
+production/qa/evidence/grow-dusk-fish/typescript.tsv
+project.yaml
+src/art.ts
+src/config.ts
+src/dev/tune.ts
+src/game/rules.ts
+src/game/types.ts
+src/hook.ts
+src/input.ts
+src/main.ts
+src/screen.ts
+tests/integration/boot.spec.ts
+tests/integration/retry.spec.ts
+tests/unit/rules.test.ts
+tsconfig.json
+vite.config.ts

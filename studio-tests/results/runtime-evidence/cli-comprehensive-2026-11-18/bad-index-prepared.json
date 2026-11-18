@@ -1,0 +1,5 @@
+{
+  "fixture": ".scratch/cli-full-20261118/bad-index.json",
+  "staged_sha256": "630ca70010a34668976b60380983d6d8c88862bf49bb253d25ce86163cdb63cb",
+  "staged_content": "{broken-index-fixture\n"
+}

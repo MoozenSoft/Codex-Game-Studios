@@ -1,0 +1,13 @@
+test_effects_map_documents_fallback_and_no_startup_schema_audit (test_shared_codex_contracts.SharedCodexContracts.test_effects_map_documents_fallback_and_no_startup_schema_audit) ... ok
+test_engine_chain_ignores_local_engine_for_all_derived_roots (test_shared_codex_contracts.SharedCodexContracts.test_engine_chain_ignores_local_engine_for_all_derived_roots) ... ok
+test_event_documentation_distinguishes_registration_from_evidence (test_shared_codex_contracts.SharedCodexContracts.test_event_documentation_distinguishes_registration_from_evidence) ... ok
+test_memory_uses_single_checkpoint_and_existing_authorization (test_shared_codex_contracts.SharedCodexContracts.test_memory_uses_single_checkpoint_and_existing_authorization) ... ok
+test_read_guard_contract_calls_real_helper_and_handles_observations (test_shared_codex_contracts.SharedCodexContracts.test_read_guard_contract_calls_real_helper_and_handles_observations) ... ok
+test_recovery_template_requires_agent_branch_check (test_shared_codex_contracts.SharedCodexContracts.test_recovery_template_requires_agent_branch_check) ... ok
+test_role_template_checks_native_toml_and_inheritance (test_shared_codex_contracts.SharedCodexContracts.test_role_template_checks_native_toml_and_inheritance) ... ok
+test_source_only_functions_have_six_argument_call_protocol (test_shared_codex_contracts.SharedCodexContracts.test_source_only_functions_have_six_argument_call_protocol) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+OK

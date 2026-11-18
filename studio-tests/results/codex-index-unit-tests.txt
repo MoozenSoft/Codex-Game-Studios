@@ -1,0 +1,9 @@
+test_commit_detection_ignores_quoted_prose_and_supports_global_options (test_git_index.GitIndexTests.test_commit_detection_ignores_quoted_prose_and_supports_global_options) ... ok
+test_invalid_index_is_not_hidden_by_repaired_worktree (test_git_index.GitIndexTests.test_invalid_index_is_not_hidden_by_repaired_worktree) ... ok
+test_non_repository_is_unassessed (test_git_index.GitIndexTests.test_non_repository_is_unassessed) ... ok
+test_valid_index_does_not_validate_unstaged_worktree (test_git_index.GitIndexTests.test_valid_index_does_not_validate_unstaged_worktree) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.361s
+
+OK

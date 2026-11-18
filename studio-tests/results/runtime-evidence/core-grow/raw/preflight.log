@@ -1,0 +1,15 @@
+/d/Git/Codex-Game-Studios/.scratch/codex-capability-probe
+v24.14.0
+
+11.9.0
+Python 3.12.10
+
+=== CCGS Config (resolved: local->yaml->legacy->default; use as-is) ===
+review_mode: solo (rigor:minimal)
+automation: collaborative (default)
+workflow: minimal (rigor:minimal)
+automation_always_ask: scope_changes, file_deletions, schema_changes (default)
+=== end ===
+?? design/game-brief.md
+?? prototypes/dusk-fish/
+keep	lines	0	pinned	0

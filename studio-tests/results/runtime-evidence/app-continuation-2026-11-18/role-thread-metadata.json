@@ -1,0 +1,109 @@
+{
+  "parent": {
+    "id": "01a1ec07-e928-7b43-a32d-5812c6c70316",
+    "cwd": "<app-probe>",
+    "originator": "Codex Desktop",
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "high",
+    "cliVersion": "0.169.0-alpha.11.1"
+  },
+  "child": {
+    "id": "01a1ec08-8b01-7443-b760-d4c3cd2f8b5b",
+    "parentThreadId": "01a1ec07-e928-7b43-a32d-5812c6c70316",
+    "agentRole": "qa-tester",
+    "agentNickname": "Nash",
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "high",
+    "source": {
+      "subAgent": {
+        "thread_spawn": {
+          "parent_thread_id": "01a1ec07-e928-7b43-a32d-5812c6c70316",
+          "depth": 1,
+          "agent_path": "/root/qa_tester_readonly_acceptance",
+          "agent_nickname": "Nash",
+          "agent_role": "qa-tester"
+        }
+      }
+    }
+  },
+  "parent_activity": [
+    {
+      "type": "subAgentActivity",
+      "model": "gpt-6.1-sol",
+      "reasoningEffort": "high",
+      "id": "call_ff4a130e619546c49563370dd6fa2968",
+      "kind": "started",
+      "agentThreadId": "01a1ec08-8b01-7443-b760-d4c3cd2f8b5b",
+      "agentPath": "/root/qa_tester_readonly_acceptance",
+      "startedAtMs": 1794961348858,
+      "completedAtMs": 1794961348859
+    },
+    {
+      "type": "subAgentActivity",
+      "model": null,
+      "reasoningEffort": null,
+      "id": "subagent-completed-01a1ec08-98fa-75f0-ae7a-f75b6dd8dc2d",
+      "kind": "completed",
+      "agentThreadId": "01a1ec08-8b01-7443-b760-d4c3cd2f8b5b",
+      "agentPath": "/root/qa_tester_readonly_acceptance",
+      "startedAtMs": 1794961429339,
+      "completedAtMs": 1794961429339
+    },
+    {
+      "type": "subAgentActivity",
+      "model": null,
+      "reasoningEffort": null,
+      "id": "call_c5f8714f5c6d44b4b56e27b1341fe5b5",
+      "kind": "interacted",
+      "agentThreadId": "01a1ec08-8b01-7443-b760-d4c3cd2f8b5b",
+      "agentPath": "/root/qa_tester_readonly_acceptance",
+      "startedAtMs": 1794961773085,
+      "completedAtMs": 1794961773085
+    },
+    {
+      "type": "subAgentActivity",
+      "model": null,
+      "reasoningEffort": null,
+      "id": "subagent-completed-01a1ec0f-121d-7b70-853b-7368504fb7ee",
+      "kind": "completed",
+      "agentThreadId": "01a1ec08-8b01-7443-b760-d4c3cd2f8b5b",
+      "agentPath": "/root/qa_tester_readonly_acceptance",
+      "startedAtMs": 1794961778149,
+      "completedAtMs": 1794961778149
+    }
+  ],
+  "child_turns": [
+    {
+      "id": "01a1ec08-98fa-75f0-ae7a-f75b6dd8dc2d",
+      "status": "completed",
+      "item_types": [
+        "agentMessage",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "reasoning",
+        "commandExecution",
+        "reasoning",
+        "commandExecution",
+        "commandExecution",
+        "reasoning",
+        "commandExecution",
+        "reasoning",
+        "commandExecution",
+        "reasoning",
+        "agentMessage"
+      ]
+    },
+    {
+      "id": "01a1ec0f-121d-7b70-853b-7368504fb7ee",
+      "status": "completed",
+      "item_types": [
+        "reasoning",
+        "agentMessage"
+      ]
+    }
+  ]
+}

@@ -1,8 +1,10 @@
-# Skill Test Spec: /reverse-document
+# Skill Test Spec: $reverse-document
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/reverse-document <type> <path>` works backwards from existing implementation to
+`$reverse-document <type> <path>` works backwards from existing implementation to
 a document. `type` is `design` (a GDD, written to `design/gdd/[system-name].md`),
 `architecture` (an ADR, written to `docs/architecture/[decision-name].md`) or
 `concept` (a concept doc from a prototype). It reads the code, runs a
@@ -24,19 +26,19 @@ declined the write).
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keywords: COMPLETE, BLOCKED
 - [ ] Contains "May I write" collaborative protocol language before writing the doc
-- [ ] Has a next-step handoff (Phase 8 follow-up list, e.g. `/balance-check`)
+- [ ] Has a next-step handoff (Phase 8 follow-up list, e.g. `$balance-check`)
 
 ---
 
 ## Director Gate Checks
 
-None. `/reverse-document` is a documentation utility. No director gates apply.
+None. `$reverse-document` is a documentation utility. No director gates apply.
 
 ---
 
@@ -44,7 +46,7 @@ None. `/reverse-document` is a documentation utility. No director gates apply.
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -63,7 +65,7 @@ Fixture defaults.
   - Docstrings on all public methods
 - The user answers every `UNCLEAR INTENT AREAS` question and approves the write
 
-**Input:** `/reverse-document design src/gameplay/health_system.gd`
+**Input:** `$reverse-document design src/gameplay/health_system.gd`
 
 **Expected behavior:**
 1. Skill reads the source and passes the Phase 3b sufficiency check
@@ -100,7 +102,7 @@ Fixture defaults.
 - The user replies "just draft it" without answering the intent questions, then
   approves the write
 
-**Input:** `/reverse-document design src/gameplay/enemy_ai.gd`
+**Input:** `$reverse-document design src/gameplay/enemy_ai.gd`
 
 **Expected behavior:**
 1. Sufficiency check passes (mechanics and tuning values found)
@@ -132,7 +134,7 @@ Fixture defaults.
   `combat_system.gd` calls `damage_resolver.gd` through an injected reference
 - The user answers the architecture questions and approves the write
 
-**Input:** `/reverse-document architecture src/core/combat/`
+**Input:** `$reverse-document architecture src/core/combat/`
 
 **Expected behavior:**
 1. Skill reads every file under the directory path
@@ -160,20 +162,20 @@ Fixture defaults.
   `class_name InventorySystem`, `extends Node` and an empty `_ready()` —
   no mechanics, no formulas, no tuning values (under 20 non-boilerplate lines)
 
-**Input:** `/reverse-document design src/gameplay/inventory_system.gd`
+**Input:** `$reverse-document design src/gameplay/inventory_system.gd`
 
 **Expected behavior:**
 1. Skill reads the file; Phase 3b counts 0 mechanics, 0 formulas, 0 values
 2. Skill stops with: "`src/gameplay/inventory_system.gd` does not contain enough
    implementation to reverse-document. Found: 0 mechanics, 0 formulas, 0 tuning
    values. …"
-3. Skill points to `/design-system [name]` as the skill that captures a design
+3. Skill points to `$design-system [name]` as the skill that captures a design
    that exists only in the user's head
 4. No findings are presented, no draft is produced, no file is written
 
 **Assertions:**
 - [ ] The stop message names the path and the three counts (all 0)
-- [ ] `/design-system` is suggested — not a fabricated skeleton
+- [ ] `$design-system` is suggested — not a fabricated skeleton
 - [ ] No write tool is called
 - [ ] No verdict is issued (the run stops before Phase 4)
 
@@ -184,7 +186,7 @@ Fixture defaults.
 **Fixture:**
 - Same source as Case 1; the user declines at the "May I write" prompt
 
-**Input:** `/reverse-document design src/gameplay/health_system.gd`
+**Input:** `$reverse-document design src/gameplay/health_system.gd`
 
 **Expected behavior:**
 1. Skill analyzes, presents findings, and drafts the document
@@ -206,12 +208,12 @@ Fixture defaults.
 - Same source as Case 1 (`src/gameplay/health_system.gd`)
 - The user answers every `UNCLEAR INTENT AREAS` question and approves the write
 
-**Input:** `/reverse-document design src/gameplay/health_system.gd`
+**Input:** `$reverse-document design src/gameplay/health_system.gd`
 
 **Expected behavior:**
 1. The tier resolves to `minimal` from the config block, not assumed
 2. Findings are presented and answered before any draft
-3. The draft is a one-page game brief in the `.claude/docs/templates/game-brief.md`
+3. The draft is a one-page game brief in the `.agents/docs/templates/game-brief.md`
    format — not a GDD — for this one system
 4. The provenance banner sits directly under the title
 5. Skill asks "May I write this to `design/health-system-brief.md`?" — not
@@ -234,12 +236,12 @@ Fixture defaults.
 - No `design/game-brief.md` exists
 - The user answers every `UNCLEAR INTENT AREAS` question and approves the write
 
-**Input:** `/reverse-document design src/`
+**Input:** `$reverse-document design src/`
 
 **Expected behavior:**
 1. The tier resolves to `minimal` from the config block; the path is the code root itself, so the target is the whole game, not one system
 2. Findings are presented and answered before any draft
-3. The draft is a one-page game brief in the `.claude/docs/templates/game-brief.md` format covering the whole game (pitch, core loop, what is built), not a GDD and not a brief for one system
+3. The draft is a one-page game brief in the `.agents/docs/templates/game-brief.md` format covering the whole game (pitch, core loop, what is built), not a GDD and not a brief for one system
 4. The provenance banner sits directly under the title
 5. Skill asks "May I write this to `design/game-brief.md`?" — not `design/gdd/`, and not a `design/[system-name]-brief.md` path
 6. File written on approval; verdict COMPLETE
@@ -251,7 +253,7 @@ Fixture defaults.
 - [ ] "May I write" names `design/game-brief.md` and is asked before the file is written
 - [ ] Verdict is COMPLETE
 
-**Case 7b — a path inside the code root:** the same fixture with `/reverse-document design src/gameplay/health_system.gd`.
+**Case 7b — a path inside the code root:** the same fixture with `$reverse-document design src/gameplay/health_system.gd`.
 
 **Assertions (7b):**
 - [ ] The brief is written to `design/health-system-brief.md` (Case 6), never to `design/game-brief.md`

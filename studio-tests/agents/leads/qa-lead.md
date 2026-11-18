@@ -1,5 +1,7 @@
 # Agent Test Spec: qa-lead
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 **Domain owned:** Test strategy, QL-STORY-READY gate, QL-TEST-COVERAGE gate, bug severity triage, release quality gates.
 **Does NOT own:** Feature implementation (programmers), game design decisions, creative direction, production scheduling.
@@ -9,11 +11,11 @@
 
 ## Static Assertions (Structural)
 
-Verified by reading the agent's `.claude/agents/qa-lead.md` frontmatter:
+Verified by reading the agent's `.codex/agents/qa-lead.toml` frontmatter:
 
 - [ ] `description:` field is present and domain-specific (references test strategy, story readiness, coverage, bug triage — not generic)
-- [ ] `tools:` includes Read for story files, test files, and coding-standards; Bash because it runs `/smoke-check` before every QA hand-off; Write/Edit for the QA plans and sign-off reports it produces, each write gated on the user's approval in its collaboration protocol
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over implementation decisions or game design
 
 ---
@@ -21,11 +23,11 @@ Verified by reading the agent's `.claude/agents/qa-lead.md` frontmatter:
 ## Test Cases
 
 ### Case 1: In-domain request — appropriate output format
-**Scenario:** A Logic-type story for "Player takes damage from hazard tiles" is submitted for readiness check. The gate context passes every input `.claude/docs/director-gates/ql-story-ready.md` names: the story file path (`production/epics/hazards/story-002-hazard-damage.md`), the story type (Logic), the acceptance criteria verbatim — (1) Player health decreases by the hazard's damage value, (2) A `damaged` event is emitted carrying the damage amount, (3) Player cannot take damage again for 0.5 seconds of simulated time (invincibility window) — and the GDD requirement the story covers (`TR-hazards-002`: "Hazard tiles damage the player on contact; each hit grants 0.5 seconds of invincibility"). All three ACs are measurable and specific. Request is tagged QL-STORY-READY.
+**Scenario:** A Logic-type story for "Player takes damage from hazard tiles" is submitted for readiness check. The gate context passes every input `.agents/docs/director-gates/ql-story-ready.md` names: the story file path (`production/epics/hazards/story-002-hazard-damage.md`), the story type (Logic), the acceptance criteria verbatim — (1) Player health decreases by the hazard's damage value, (2) A `damaged` event is emitted carrying the damage amount, (3) Player cannot take damage again for 0.5 seconds of simulated time (invincibility window) — and the GDD requirement the story covers (`TR-hazards-002`: "Hazard tiles damage the player on contact; each hit grants 0.5 seconds of invincibility"). All three ACs are measurable and specific. Request is tagged QL-STORY-READY.
 **Expected:** Returns the verdict ADEQUATE with rationale confirming that all three ACs are specific and each can be verified by an automated test.
 **Assertions:**
 - [ ] Verdict is exactly one of ADEQUATE / GAPS / INADEQUATE (the QL-STORY-READY verdicts) — every input the gate names is supplied, so NOT ASSESSED does not apply
-- [ ] States the verdict word `ADEQUATE` explicitly — `/story-readiness` and `/create-stories` branch on the bare verdict word
+- [ ] States the verdict word `ADEQUATE` explicitly — `$story-readiness` and `$create-stories` branch on the bare verdict word
 - [ ] Rationale addresses each of the three ACs and confirms each can be verified by an automated test (the gate's Logic-story check)
 - [ ] Output stays within QA scope — does not comment on whether the mechanic is designed well
 
@@ -95,6 +97,6 @@ Verified by reading the agent's `.claude/agents/qa-lead.md` frontmatter:
 
 ## Coverage Notes
 - QL-TEST-COVERAGE (overall coverage assessment for a sprint or milestone) is not covered — a dedicated case should be added when coverage reports are available.
-- Bug severity triage (S1–S4 classification) is not covered here — deferred to /bug-triage skill integration.
+- Bug severity triage (S1–S4 classification) is not covered here — deferred to $bug-triage skill integration.
 - Release quality gate enforcement (crash rate, critical bug count, performance benchmarks) is not covered.
-- Interaction between QL-STORY-READY and story Done criteria (/story-done skill) is not covered.
+- Interaction between QL-STORY-READY and story Done criteria ($story-done skill) is not covered.

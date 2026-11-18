@@ -1,0 +1,10 @@
+=== CCGS Config (resolved: local->yaml->legacy->default; use as-is) ===
+automation: collaborative (default)
+workflow: minimal (rigor:minimal)
+qa.level: minimal (rigor:minimal)
+system_overrides: none
+gate_level: logic=blocking(default) integration=blocking(project.yaml) visual=blocking(default) ui=blocking(default) config=advisory(default; /smoke-check: blocking)
+engine_values: name=Web(project.yaml) version=8.3.4(project.yaml) language=unset
+specialists: primary=lead-programmer(engine.name) code=unset shader=unset ui=unset additional=none (no specialists block; unset = skip that specialist)
+perf_budgets: target_framerate=unset frame_budget_ms=unset draw_call_limit=unset memory_ceiling_mb=unset (project.yaml)
+=== end ===

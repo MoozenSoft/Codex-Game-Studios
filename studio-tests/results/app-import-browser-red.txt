@@ -1,0 +1,37 @@
+test_import_with_existing_manual_hook_still_draws (test_import_runner.ImportRunnerBrowserTests.test_import_with_existing_manual_hook_still_draws) ... FAIL
+test_import_without_hook_still_draws (test_import_runner.ImportRunnerBrowserTests.test_import_without_hook_still_draws) ... ok
+
+======================================================================
+FAIL: test_import_with_existing_manual_hook_still_draws (test_import_runner.ImportRunnerBrowserTests.test_import_with_existing_manual_hook_still_draws)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Git\Codex-Game-Studios\studio-tests\browser\test_import_runner.py", line 41, in test_import_with_existing_manual_hook_still_draws
+    def test_import_with_existing_manual_hook_still_draws(self):self.run_game(True)
+                                                                ^^^^^^^^^^^^^^^^^^^
+  File "D:\Git\Codex-Game-Studios\studio-tests\browser\test_import_runner.py", line 38, in run_game
+    self.assertEqual(screens[-1][4],'drawn',result.stdout)
+AssertionError: 'blank' != 'drawn'
+- blank
++ drawn
+ : browser	C:/Program Files/Google/Chrome/Application/chrome.exe
+time	2026-11-17 12:14:20
+render	cheap
+hookless	the game has window.game; its own loop is stepped
+ua	HeadlessChrome/157.0.0.0
+scene	0	hookless
+state	0	hookless	{}
+state	30	hookless	{}
+pressure	none	the game set no number state.margin in play
+steptime	30	0.000	0.000
+frametime	none	no frame was drawn in play
+done	30	hookless	stop	0.5	1294
+measured	1280x720
+screen	30	hookless	c9d0dc5	blank
+uncaught	0
+shot	D:\Git\Codex-Game-Studios\.scratch\framework-tmp\import-browser-ue1wzcfv\out.png	4250
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 13.037s
+
+FAILED (failures=1)

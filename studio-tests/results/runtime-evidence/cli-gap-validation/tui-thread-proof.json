@@ -1,0 +1,332 @@
+{
+  "thread": "01a1ec4f-0e97-7ef0-bb4f-d0a0883d2139",
+  "originator": "codex-tui",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "turns": [
+    {
+      "id": "01a1ec51-104e-7160-9f2c-aac879a7009d",
+      "status": "completed",
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "01a1ec51-171e-7fb3-ab42-cff3ce61686b",
+          "startedAtMs": 1794966099749,
+          "completedAtMs": 1794966099749
+        },
+        {
+          "type": "agentMessage",
+          "id": "msg_09875073ed1f267d016afd0255dfb887d0a250770cbd91a5cb",
+          "text": "TUI_READY",
+          "startedAtMs": 1794966102846,
+          "completedAtMs": 1794966102918
+        }
+      ]
+    },
+    {
+      "id": "01a1ec52-3fe2-7332-923e-c2ada4bfe4b9",
+      "status": "completed",
+      "items": [
+        {
+          "type": "contextCompaction",
+          "id": "01a1ec52-42de-7b52-810a-30f868915325",
+          "startedAtMs": 1794966176478,
+          "completedAtMs": 1794966188018
+        }
+      ]
+    },
+    {
+      "id": "01a1ec54-146a-7871-9fd5-c88d3aaf2b06",
+      "status": "completed",
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "01a1ec54-173f-73a1-bcfd-4a435cf37c98",
+          "startedAtMs": 1794966296389,
+          "completedAtMs": 1794966296389
+        },
+        {
+          "type": "agentMessage",
+          "id": "msg_09875073ed1f267d016afd0319a89087d09711a0acb5b91845",
+          "text": "TUI_GAP_80QF7",
+          "startedAtMs": 1794966298633,
+          "completedAtMs": 1794966298709
+        }
+      ]
+    },
+    {
+      "id": "01a1ec55-7e9b-7053-9bfa-40715b92fcd9",
+      "status": "completed",
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "01a1ec55-7eeb-7823-a23b-bac235aa0942",
+          "startedAtMs": 1794966388471,
+          "completedAtMs": 1794966388471
+        },
+        {
+          "type": "agentMessage",
+          "id": "msg_09875073ed1f267d016afd03952b0487d09da0120525e8fc0f",
+          "text": "SIGNAL Alpha",
+          "startedAtMs": 1794966422159,
+          "completedAtMs": 1794966422231
+        }
+      ]
+    },
+    {
+      "id": "01a1ec56-5744-7e40-b754-762910683e56",
+      "status": "completed",
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "01a1ec56-5796-7f63-8e4d-38486c29e05c",
+          "startedAtMs": 1794966443934,
+          "completedAtMs": 1794966443934
+        },
+        {
+          "type": "agentMessage",
+          "id": "msg_09875073ed1f267d016afd03dff87087d08b85de404ce2e906",
+          "text": "SIGNAL Alpha",
+          "startedAtMs": 1794966497016,
+          "completedAtMs": 1794966497151
+        }
+      ]
+    }
+  ],
+  "rollout_marker_matches": [
+    {
+      "timestamp": "2026-11-18T01:41:38.222Z",
+      "type": "session_meta",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:41:39.134Z",
+      "type": "response_item",
+      "subtype": "additional_tools",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:41:39.134Z",
+      "type": "response_item",
+      "subtype": "message",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:41:39.134Z",
+      "type": "response_item",
+      "subtype": "message",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:41:39.142Z",
+      "type": "world_state",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:41:39.149Z",
+      "type": "turn_context",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:41:39.149Z",
+      "type": "event_msg",
+      "subtype": "thread_settings_applied",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:43:08.004Z",
+      "type": "compacted",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:43:08.004Z",
+      "type": "world_state",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:43:08.004Z",
+      "type": "turn_context",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:43:08.004Z",
+      "type": "event_msg",
+      "subtype": "thread_settings_applied",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:44:55.674Z",
+      "type": "event_msg",
+      "subtype": "thread_settings_applied",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:44:55.768Z",
+      "type": "turn_context",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:46:28.396Z",
+      "type": "event_msg",
+      "subtype": "thread_settings_applied",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:46:28.448Z",
+      "type": "turn_context",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:46:28.460Z",
+      "type": "response_item",
+      "subtype": "message",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:46:28.471Z",
+      "type": "event_msg",
+      "subtype": "item_completed",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:46:34.274Z",
+      "type": "response_item",
+      "subtype": "function_call",
+      "matches": [
+        "request_user_input",
+        "Which test signal should I echo?"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:46:59.174Z",
+      "type": "retained_context",
+      "subtype": "verified_answer",
+      "matches": [
+        "Which test signal should I echo?"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:47:02.231Z",
+      "type": "event_msg",
+      "subtype": "item_completed",
+      "matches": [
+        "SIGNAL Alpha"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:47:02.239Z",
+      "type": "response_item",
+      "subtype": "message",
+      "matches": [
+        "SIGNAL Alpha"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:47:03.373Z",
+      "type": "event_msg",
+      "subtype": "task_complete",
+      "matches": [
+        "SIGNAL Alpha"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:47:23.860Z",
+      "type": "event_msg",
+      "subtype": "thread_settings_applied",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:47:23.915Z",
+      "type": "turn_context",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:47:26.923Z",
+      "type": "response_item",
+      "subtype": "function_call",
+      "matches": [
+        "request_user_input",
+        "Which test signal should I echo?"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:48:14.851Z",
+      "type": "retained_context",
+      "subtype": "verified_answer",
+      "matches": [
+        "Which test signal should I echo?"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:48:17.151Z",
+      "type": "event_msg",
+      "subtype": "item_completed",
+      "matches": [
+        "SIGNAL Alpha"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:48:17.159Z",
+      "type": "response_item",
+      "subtype": "message",
+      "matches": [
+        "SIGNAL Alpha"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:48:18.307Z",
+      "type": "event_msg",
+      "subtype": "task_complete",
+      "matches": [
+        "SIGNAL Alpha"
+      ]
+    }
+  ]
+}

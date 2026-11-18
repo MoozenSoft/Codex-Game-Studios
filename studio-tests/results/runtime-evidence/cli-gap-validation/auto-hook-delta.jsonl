@@ -1,0 +1,6 @@
+{"time": "2026-11-18T01:34:10.550331+00:00", "event": "SessionStart", "tool": null, "tool_use_id": null}
+{"time": "2026-11-18T01:34:16.673523+00:00", "event": "Stop", "tool": null, "tool_use_id": null}
+{"time": "2026-11-18T01:34:38.849365+00:00", "event": "PreCompact", "tool": null, "tool_use_id": null}
+{"time": "2026-11-18T01:34:54.925483+00:00", "event": "SessionStart", "tool": null, "tool_use_id": null}
+{"time": "2026-11-18T01:34:55.480205+00:00", "event": "SessionStart", "tool": null, "tool_use_id": null}
+{"time": "2026-11-18T01:35:01.773360+00:00", "event": "Stop", "tool": null, "tool_use_id": null}

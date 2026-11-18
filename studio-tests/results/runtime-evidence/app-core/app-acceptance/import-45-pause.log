@@ -1,0 +1,43 @@
+browser	C:/Program Files/Google/Chrome/Application/chrome.exe
+time	2026-11-17 12:04:08
+render	cheap
+ua	HeadlessChrome/157.0.0.0
+scene	0	title
+state	0	title	{"t":0,"score":0,"gained":"","x":400,"y":510,"phase":0,"target":0.32,"cooldown":0,"feedback":0,"message":"Find the gold. Press Space.","fish":"[8 items]"}
+scene	1	play
+state	1	play	{"t":0,"score":0,"gained":"","x":400,"y":510,"phase":0,"target":0.32,"cooldown":0,"feedback":0,"message":"Find the gold. Press Space.","fish":"[8 items]"}
+playinput	4	ArrowRight
+scene	67	pause
+state	67	pause	{"t":1.08,"score":0,"gained":"","x":580,"y":510,"phase":0.7,"target":0.32,"cooldown":0,"feedback":0,"message":"Find the gold. Press Space.","fish":"[8 items]"}
+state	400	pause	{"t":1.08,"score":0,"gained":"","x":580,"y":510,"phase":0.7,"target":0.32,"cooldown":0,"feedback":0,"message":"Find the gold. Press Space.","fish":"[8 items]"}
+digits	log	52px "Trebuchet MS", sans-serif	tabular	0
+digits	log	25px "Trebuchet MS", sans-serif	tabular	0
+digits	log	14px "Trebuchet MS", sans-serif	tabular	0
+digits	log	23px "Trebuchet MS", sans-serif	tabular	0
+loop	log	none	no loop() step was marked
+first	log	none	no state.beat
+pressure	none	the game set no number state.margin in play
+steptime	400	0.001	0.100
+frametime	1	1.7	1.7	60	0	0
+done	400	pause	stop	6.7	97
+measured	1280x720
+text	pause	canvas	64,33,179,54	40.5	14.47	inside	dusk-fish
+text	pause	canvas	63,75,335,91	22.5	10.73	inside	A small ritual before the light goes.
+text	pause	canvas	849,41,1210,58	25.5	10.73	inside	ARROWS move   /   SPACE catch   /   P pause
+text	pause	canvas	1015,174,1169,187	25.5	12.00	inside	BEFORE NIGHTFALL
+text	pause	canvas	1014,213,1135,252	72.0	15.12	inside	43.9s
+text	pause	canvas	1014,289,1170,307	34.5	15.12	inside	0 / 3 CAUGHT
+text	pause	canvas	1013,340,1165,351	21.0	11.21	inside	YOUR EVENING HAUL
+text	pause	canvas	1013,453,1176,466	22.5	15.12	inside	Three fish. One dusk.
+text	pause	canvas	1014,484,1189,496	21.0	11.21	inside	Enter retries at the end.
+text	pause	canvas	1014,538,1069,548	19.5	11.21	inside	SEED 721
+text	pause	canvas	150,592,405,603	21.0	10.73	inside	REEL WHEN THE NEEDLE IS IN GOLD
+text	pause	canvas	151,657,378,675	27.0	14.47	inside	Find the gold. Press Space.
+text	pause	canvas	795,659,890,671	21.0	10.73	inside	SPACE to reel
+text	pause	canvas	493,251,785,296	66.0	11.65	inside	A quiet pause
+text	pause	canvas	487,332,790,349	31.5	14.68	inside	The water and clock are still.
+text	pause	canvas	578,393,703,408	28.5	10.36	inside	P to continue
+text	pause	canvas	565,458,712,471	25.5	10.56	inside	Your catch is safe.
+screen	400	pause	be08d3f1	drawn
+uncaught	0
+shot	/d/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/production/qa/evidence/app-acceptance/45-pause.png	93050

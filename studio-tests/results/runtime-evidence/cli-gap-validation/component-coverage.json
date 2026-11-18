@@ -1,0 +1,1406 @@
+{
+  "skills": 75,
+  "agents": 49,
+  "components": [
+    {
+      "kind": "skill",
+      "name": "gate-check",
+      "category": "gate",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/skill-gate-check.md",
+        "studio-tests/results/representatives/gate-recheck.txt"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "design-review",
+      "category": "review",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/skill-design-review.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "story-readiness",
+      "category": "readiness",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/skill-story-readiness.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "story-done",
+      "category": "readiness",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "fresh-close",
+          "exit": 0,
+          "completed": true,
+          "result_file": "fresh-close.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "review-all-gdds",
+      "category": "review",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "architecture-review",
+      "category": "review",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "create-epics",
+      "category": "pipeline",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "create-epics",
+          "exit": 0,
+          "completed": true,
+          "result_file": "create-epics.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "create-stories",
+      "category": "pipeline",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "fresh-story",
+          "exit": 0,
+          "completed": true,
+          "result_file": "fresh-story.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "dev-story",
+      "category": "pipeline",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/skill-dev-story.md"
+      ],
+      "current_runs": [
+        {
+          "name": "fresh-implementation",
+          "exit": 124,
+          "completed": false,
+          "result_file": "fresh-implementation.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "create-control-manifest",
+      "category": "pipeline",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "propagate-design-change",
+      "category": "pipeline",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "architecture-decision",
+      "category": "authoring",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "map-systems",
+      "category": "pipeline",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "vertical-slice",
+      "category": "pipeline",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "design-system",
+      "category": "authoring",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "consistency-check",
+      "category": "analysis",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "sprint-plan",
+      "category": "sprint",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "sprint-status",
+      "category": "sprint",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/skill-sprint-status.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "team-ui",
+      "category": "team",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "team-combat",
+      "category": "team",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/skill-team-combat.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "team-narrative",
+      "category": "team",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "team-narrative",
+          "exit": 0,
+          "completed": true,
+          "result_file": "team-narrative.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "team-audio",
+      "category": "team",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "team-level",
+      "category": "team",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "team-polish",
+      "category": "team",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "team-release",
+      "category": "team",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "team-live-ops",
+      "category": "team",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "team-qa",
+      "category": "team",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "controlled strategy gate with smoke FAIL; expected stop before execution",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "skill-test",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "skill-improve",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "start",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "next-step",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "next-step",
+          "exit": 0,
+          "completed": true,
+          "result_file": "next-step.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "brainstorm",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "project-stage-detect",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "project-stage-detect",
+          "exit": 0,
+          "completed": true,
+          "result_file": "project-stage-detect.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "setup-engine",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "quick-design",
+      "category": "authoring",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/skill-quick-design.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "ux-design",
+      "category": "authoring",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "ux-review",
+      "category": "authoring",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "ux-review",
+          "exit": 0,
+          "completed": true,
+          "result_file": "ux-review.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "art-bible",
+      "category": "authoring",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "create-architecture",
+      "category": "authoring",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "code-review",
+      "category": "analysis",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "balance-check",
+      "category": "analysis",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/skill-balance-check.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "asset-audit",
+      "category": "analysis",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "content-audit",
+      "category": "analysis",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "content-audit",
+          "exit": 0,
+          "completed": true,
+          "result_file": "content-audit.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "tech-debt",
+      "category": "analysis",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "scope-check",
+      "category": "analysis",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "estimate",
+      "category": "analysis",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "perf-profile",
+      "category": "analysis",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "security-audit",
+      "category": "analysis",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "test-evidence-review",
+      "category": "analysis",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "test-flakiness",
+      "category": "analysis",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "test-flakiness",
+          "exit": 0,
+          "completed": true,
+          "result_file": "test-flakiness.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "reverse-document",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "bug-report",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "hotfix",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "prototype",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "fresh-brief",
+          "exit": 0,
+          "completed": true,
+          "result_file": "fresh-brief.md"
+        },
+        {
+          "name": "fresh-build",
+          "exit": 0,
+          "completed": true,
+          "result_file": "fresh-build.md"
+        },
+        {
+          "name": "fresh-handoff",
+          "exit": 0,
+          "completed": true,
+          "result_file": "fresh-handoff.md"
+        },
+        {
+          "name": "fresh-grow",
+          "exit": 0,
+          "completed": true,
+          "result_file": "fresh-grow.md"
+        },
+        {
+          "name": "fresh-grow-approved",
+          "exit": 124,
+          "completed": false,
+          "result_file": "fresh-grow-approved.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "cut",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "playtest-report",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "milestone-review",
+      "category": "sprint",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "retrospective",
+      "category": "sprint",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "write-changelog",
+      "category": "sprint",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "patch-notes",
+      "category": "sprint",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "onboard",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "localize",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "launch-checklist",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "release-checklist",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "release-checklist",
+          "exit": 0,
+          "completed": true,
+          "result_file": "release-checklist.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "adopt",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "smoke-check",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "three final-verdict decision fixtures only; not full workflow",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "smoke-check",
+          "exit": 0,
+          "completed": true,
+          "result_file": "smoke-check.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "soak-test",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "test-setup",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "test-helpers",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "regression-suite",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "regression-suite",
+          "exit": 0,
+          "completed": true,
+          "result_file": "regression-suite.md"
+        }
+      ],
+      "scope": "已执行所链接的场景"
+    },
+    {
+      "kind": "skill",
+      "name": "qa-plan",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "complete controlled single-story plan, async waiting then yes/no outputs",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "bug-triage",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "asset-spec",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "day-one-patch",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "skill",
+      "name": "project-settings",
+      "category": "utility",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/skill-project-settings.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "creative-director",
+      "category": "director",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "technical-director",
+      "category": "director",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/agent-technical-director.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "producer",
+      "category": "director",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "art-director",
+      "category": "director",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "lead-programmer",
+      "category": "lead",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/agent-lead-programmer.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "qa-lead",
+      "category": "lead",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "native full instruction binding, first reply plus same-child followup",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "narrative-director",
+      "category": "lead",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "audio-director",
+      "category": "lead",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "game-designer",
+      "category": "lead",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "systems-designer",
+      "category": "lead",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "level-designer",
+      "category": "lead",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "gameplay-programmer",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/agent-gameplay-programmer.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "ai-programmer",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "technical-artist",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "sound-designer",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "engine-programmer",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "tools-programmer",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "network-programmer",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "security-engineer",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "accessibility-specialist",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "ux-designer",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "ui-programmer",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "performance-analyst",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "godot-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/agent-godot-specialist.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "godot-gdscript-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "godot-csharp-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "godot-shader-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "godot-gdextension-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "unity-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "unity-ui-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "unity-shader-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "unity-dots-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "unity-addressables-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "unreal-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "ue-blueprint-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "ue-gas-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "ue-umg-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "ue-replication-specialist",
+      "category": "engine",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "devops-engineer",
+      "category": "operations",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "release-manager",
+      "category": "operations",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/agent-release-manager.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "live-ops-designer",
+      "category": "operations",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "community-manager",
+      "category": "operations",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "analytics-engineer",
+      "category": "operations",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "economy-designer",
+      "category": "operations",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "localization-lead",
+      "category": "operations",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "qa-tester",
+      "category": "qa",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [
+        "studio-tests/results/representatives/agent-qa-tester.md"
+      ],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "prototyper",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    },
+    {
+      "kind": "agent",
+      "name": "writer",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [
+        {
+          "name": "team-narrative",
+          "exit": 0,
+          "completed": true,
+          "result_file": "team-narrative.md"
+        }
+      ],
+      "scope": "从本地规范降级委派，原生角色绑定未验证"
+    },
+    {
+      "kind": "agent",
+      "name": "world-builder",
+      "category": "specialist",
+      "source_sha256_matches_prior": true,
+      "prior_runtime_scope": "not individually executed",
+      "prior_category_evidence": [],
+      "current_runs": [],
+      "scope": "本轮无独立运行"
+    }
+  ]
+}

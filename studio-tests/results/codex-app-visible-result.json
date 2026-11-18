@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-16",
+  "client": "Codex App",
+  "conversation": "验证项目能力探针",
+  "verification": "直接读取当前 App 窗口可访问性树并查看同次截图，未重新提交请求。",
+  "result": "passed",
+  "visible_results": [
+    "Skill 验证口令：STUDIO_SKILL_OK_6f19",
+    "已使用 studio-probe 角色委派只读任务并等待完成，子代理原文输出：STUDIO_ROLE_OK_e94a",
+    "本轮启动上下文实际收到的 SessionStart hook 验证口令：STUDIO_HOOK_OK_b57c"
+  ],
+  "visible_controls": ["Worked for 33秒", "Copy", "Rate response", "Work with Codex", "Send"],
+  "thinking_visible": false,
+  "stop_button_visible": false,
+  "local_screenshot": ".scratch/codex-capability-probe/app-final-visible.png",
+  "scope": "验证最小探测结果正常显示，不代表完整游戏流程或全部 App 交互已验收。"
+}

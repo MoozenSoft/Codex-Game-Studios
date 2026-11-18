@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-16",
+  "platform": "Windows",
+  "client": "Codex App",
+  "package": "OpenAI.Codex",
+  "version": "26.1111.2228.0",
+  "checks": [
+    {
+      "name": "codex_surface_available",
+      "result": "passed",
+      "observed": "当前模式为 Codex，已进入隔离项目本地模式，显示迁移分支 codex/codex-adaptation；项目配置加载后模型选择器显示 6.1 Sol Light。"
+    },
+    {
+      "name": "isolated_project_prepared",
+      "result": "passed",
+      "observed": "用户明确批准后创建 Codex Studio 验收，关联 .scratch/codex-capability-probe，并正常信任指定隔离目录。"
+    },
+    {
+      "name": "review_single_test_hook",
+      "result": "passed",
+      "observed": "用户明确批准该唯一测试定义；正常 Review hooks 查看项目来源、SessionStart、已检查的 Python 命令与 10 秒超时，仅勾选 Hook 1 后 Allow selected。只读接口证实 trustStatus=trusted。"
+    },
+    {
+      "name": "workspace_settings",
+      "result": "passed",
+      "observed": "本次重试已无工作区设置错误，Send 可用；在既有本地项目中实际提交只读验收请求，会话运行记录显示 completed。"
+    },
+    {
+      "name": "project_skill_read",
+      "result": "passed",
+      "observed": "App 请求实际读取隔离目录中的 SKILL.md，退出码 0；最终返回 STUDIO_SKILL_OK_6f19。"
+    },
+    {
+      "name": "project_role_delegation",
+      "result": "passed",
+      "observed": "App 请求实际启动 studio-probe 子代理，子代理完成并原文返回 STUDIO_ROLE_OK_e94a，父会话等待后回收结果。"
+    },
+    {
+      "name": "session_start_hook",
+      "result": "passed",
+      "observed": "App 父会话实际报告启动上下文中的 STUDIO_HOOK_OK_b57c；运行记录未读取 hook 源码或标记文件。"
+    },
+    {
+      "name": "completed_response_rendering",
+      "result": "passed",
+      "observed": "本次直接检查 App 窗口，最终答案完整显示三个正确口令，Worked for 33秒、Copy、Rate response 和 Send 可见，Thinking 与 Stop 不再显示；与已完成的父子会话运行记录一致。"
+    }
+  ],
+  "evidence": ["studio-tests/results/codex-app-probe-trace.json", "studio-tests/results/codex-app-visible-result.json"]
+}

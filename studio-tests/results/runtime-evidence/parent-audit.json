@@ -1,0 +1,62 @@
+{
+  "scope": "CLI grow 第二轮报告中的框架哈希变化由主迁移会话在测试期间同步日志修复造成，非测试执行者改写。保留原报告 CONCERNS 和原始审计结果。",
+  "authorized_change": "deploy_hook_runtime.py 原子同步4项实现，注册文件与信任状态未改；新增 event_log.py，dispatch.py 改为调用它；缓存文件随 Python 导入变化。",
+  "hook_hashes": {
+    "dispatch.py": {
+      "sha256": "972ed512be17456026d16e5371256adf81a7ebaa06565b4f864c6df31adf4b23",
+      "matches_framework": true
+    },
+    "event_log.py": {
+      "sha256": "51e658b9d4ad69e7d467c02a386207ed7646be04ee356e658f4d9eb595d4c9f9",
+      "matches_framework": true
+    },
+    "event_input.py": {
+      "sha256": "75715cda49b17fd1fbb49b8c821cf7f31782ad6e86b9e92107d4ca425ef2bb41",
+      "matches_framework": true
+    },
+    "run.sh": {
+      "sha256": "a8f4ad04fb05a9d09774f1ff176c55c4fd67defcfc0e40b49cc354bd7e443d01",
+      "matches_framework": true
+    }
+  },
+  "prototype_comparison": {
+    "before_count": 31,
+    "after_count": 31,
+    "unchanged": true,
+    "differences": []
+  },
+  "event_counts_observed": {
+    "SessionStart": 14,
+    "PreToolUse": 235,
+    "PostToolUse": 231,
+    "Stop": 10,
+    "SubagentStart": 13,
+    "SubagentStop": 17
+  },
+  "app_postfix_tool_events": [
+    {
+      "time": "2026-11-16T14:11:45.496736+00:00",
+      "event": "PreToolUse",
+      "tool": "Bash",
+      "tool_use_id": "exec-faafde60-52cf-4982-b297-98f611decc40"
+    },
+    {
+      "time": "2026-11-16T14:11:46.665305+00:00",
+      "event": "PostToolUse",
+      "tool": "Bash",
+      "tool_use_id": "exec-faafde60-52cf-4982-b297-98f611decc40"
+    },
+    {
+      "time": "2026-11-16T14:11:52.809556+00:00",
+      "event": "PreToolUse",
+      "tool": "Bash",
+      "tool_use_id": "exec-630bf4ad-d319-49d3-82be-09075add63c7"
+    },
+    {
+      "time": "2026-11-16T14:11:54.157604+00:00",
+      "event": "PostToolUse",
+      "tool": "Bash",
+      "tool_use_id": "exec-630bf4ad-d319-49d3-82be-09075add63c7"
+    }
+  ]
+}

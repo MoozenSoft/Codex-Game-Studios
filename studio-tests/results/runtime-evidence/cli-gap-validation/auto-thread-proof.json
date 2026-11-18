@@ -1,0 +1,110 @@
+{
+  "thread": "01a1ec4a-0d59-7b03-8b9e-01ee8d35d0d1",
+  "originator": "codex_exec",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "turns": [
+    {
+      "id": "01a1ec4a-355e-7a10-a985-a35c8e011732",
+      "status": "completed",
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "01a1ec4a-3c9b-7392-ba60-a502c016fdef",
+          "startedAtMs": 1794965650594,
+          "completedAtMs": 1794965650594
+        },
+        {
+          "type": "agentMessage",
+          "id": "msg_08e218e6284ee294016afd0094cc8c87d0955e8a7817c38e77",
+          "text": "ACK",
+          "startedAtMs": 1794965656082,
+          "completedAtMs": 1794965656082
+        }
+      ]
+    },
+    {
+      "id": "01a1ec4a-a1f4-77b2-945f-7586c1c46c10",
+      "status": "completed",
+      "items": [
+        {
+          "type": "contextCompaction",
+          "id": "01a1ec4a-ab1f-7e91-a23b-91b4c00fd22f",
+          "startedAtMs": 1794965678879,
+          "completedAtMs": 1794965694069
+        },
+        {
+          "type": "userMessage",
+          "id": "01a1ec4a-ec27-75e1-b183-03807a87572d",
+          "startedAtMs": 1794965695535,
+          "completedAtMs": 1794965695535
+        },
+        {
+          "type": "agentMessage",
+          "id": "msg_0f8ac11a1dbdad9b016afd00c2998487d0a9038b0ed6082e6e",
+          "text": "AUTO_RECOVERY_08d687ca3102",
+          "startedAtMs": 1794965701260,
+          "completedAtMs": 1794965701260
+        }
+      ]
+    }
+  ],
+  "rollout_marker_matches": [
+    {
+      "timestamp": "2026-11-18T01:34:08.895Z",
+      "type": "session_meta",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:34:10.026Z",
+      "type": "response_item",
+      "subtype": "additional_tools",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:34:10.026Z",
+      "type": "response_item",
+      "subtype": "message",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:34:10.027Z",
+      "type": "response_item",
+      "subtype": "message",
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:34:10.034Z",
+      "type": "world_state",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:34:54.054Z",
+      "type": "compacted",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    },
+    {
+      "timestamp": "2026-11-18T01:34:54.054Z",
+      "type": "world_state",
+      "subtype": null,
+      "matches": [
+        "request_user_input"
+      ]
+    }
+  ]
+}

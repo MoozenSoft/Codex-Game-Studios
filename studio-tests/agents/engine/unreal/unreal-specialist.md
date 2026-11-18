@@ -1,5 +1,7 @@
 # Agent Test Spec: unreal-specialist
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 - **Domain**: Unreal Engine patterns and architecture — Blueprint vs C++ decisions, UE subsystems (GAS, Enhanced Input, Niagara), UE project structure, plugin integration, and engine-level configuration
 - **Does NOT own**: Art style and visual direction (art-director), server infrastructure and deployment (devops-engineer), UI/UX flow design (ux-designer)
@@ -10,8 +12,8 @@
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references Unreal Engine)
-- [ ] `tools:` reads Read, Glob, Grep, Write, Edit, Bash and `Agent`, and its body tells it to start only its four sub-specialists (ue-gas, ue-blueprint, ue-replication, ue-umg), since a type list in a subagent's `tools` is ignored
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority outside its declared domain (no art, no server infra)
 
 ---
@@ -76,7 +78,7 @@
 ---
 
 ## Coverage Notes
-- No automated runner exists for agent behavior tests — these are reviewed manually or via `/skill-test`
+- No automated runner exists for agent behavior tests — these are reviewed manually or via `$skill-test`
 - Version-awareness (Case 3, Case 5) is the highest-risk failure mode for this agent; test regularly when engine version changes
-- Cases 3 and 5 pass only if the agent is directed to `docs/engine-reference/unreal/`; `CLAUDE.md` imports the Unreal `VERSION.md` only after `/setup-engine` selects Unreal, so the agent's own file must carry that direction
+- Cases 3 and 5 pass only if the agent is directed to `docs/engine-reference/unreal/`; `AGENTS.md` imports the Unreal `VERSION.md` only after `$setup-engine` selects Unreal, so the agent's own file must carry that direction
 - Case 4 integration with lead-programmer is a coordination test, not a technical correctness test

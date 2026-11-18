@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-16",
+  "client": "Codex CLI 0.169.0",
+  "model": "gpt-6.1-sol",
+  "fixture": ".scratch/codex-capability-probe",
+  "result": "passed",
+  "scope": [
+    "gameplay-programmer真实绑定",
+    "同一代理追加问题和回收",
+    "未知角色错误反馈"
+  ],
+  "final_output": "- 实际绑定角色：`gameplay-programmer`。首轮返回三条所需输入：伤害公式与运算顺序、输入数据与边界约定、验收条件与预期样例；明确不能给出“运行通过”结论。\n- 续作成功：同一子代理回答，缺少验收条件时应列明缺项、待确认预期及影响，请求补充；验收标记为 `BLOCKED`，相关检查注明“未评估”。\n- 失败反馈：请求 `missing-studio-role` 返回工具错误：`unknown agent_type 'missing-studio-role'`。未用其他角色替代。\n\n全程未修改文件、未读取凭据、未开展其他工作。",
+  "limits": [
+    "并发额度不足和无角色绑定接口的流程按运行约定串行降级，未将本次调用记为这两种接口的真实验证。"
+  ]
+}

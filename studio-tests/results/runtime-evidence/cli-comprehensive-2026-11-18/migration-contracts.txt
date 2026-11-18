@@ -1,0 +1,7 @@
+test_every_source_has_final_disposition (test_migration_complete.CompleteMigrationTests.test_every_source_has_final_disposition) ... ok
+test_old_runtime_entrypoints_are_retired (test_migration_complete.CompleteMigrationTests.test_old_runtime_entrypoints_are_retired) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.016s
+
+OK

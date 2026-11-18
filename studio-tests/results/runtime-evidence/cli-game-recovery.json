@@ -1,0 +1,28 @@
+{
+  "configured_model": "gpt-6.1-sol",
+  "tool_call_count": 0,
+  "events": [
+    {
+      "type": "thread.started",
+      "thread_id": "01a1e54d-4ed8-72e1-a21a-931707aae8b0"
+    },
+    {
+      "type": "item.completed",
+      "item": {
+        "id": "item_3",
+        "type": "agent_message",
+        "text": "本轮启动上下文已收到检查点：\n\n- 当前 Story：`production/epics/EPIC-ACCEPTANCE/story-001-n-retry.md`\n- 状态：`COMPLETE WITH NOTES`，已关闭；未提交。\n- 下一步：人工试玩 build。完整人工 smoke 尚未评估，不作 `PROCEED` 判断，不继续扩大本 Story。\n\n本轮未调用工具、读取文件或进行修改，未切换模型。"
+      }
+    },
+    {
+      "type": "turn.completed",
+      "usage": {
+        "input_tokens": 23897,
+        "cached_input_tokens": 7040,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 101,
+        "reasoning_output_tokens": 0
+      }
+    }
+  ]
+}

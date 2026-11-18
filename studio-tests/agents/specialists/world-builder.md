@@ -1,5 +1,7 @@
 # Agent Test Spec: world-builder
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 - **Domain**: World lore architecture — factions and their cultures/governments/motivations, world history, geography and ecology, cosmology and metaphysics, world rules (how magic works, what is and is not possible), internal consistency enforcement across the world document
 - **Does NOT own**: Specific NPC or quest dialogue (writer), game mechanics rules derived from world rules (game-designer/systems-designer), narrative story structure and arc design (narrative-director)
@@ -10,8 +12,8 @@
 ## Static Assertions (Structural)
 
 - [ ] `description:` field is present and domain-specific (references world lore, factions, history, world rules, ecology)
-- [ ] `tools:` reads Read, Glob, Grep, Write, Edit and `disallowedTools:` lists Bash — document authoring only, no shell or code execution
-- [ ] Model tier is `inherit` — frontmatter `model:` reads exactly `inherit` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over dialogue writing, mechanic design, or narrative arc structure
 
 ---
@@ -77,4 +79,4 @@
 - Case 3 (contradiction detection) requires existing lore to be in context — this is the most important consistency test
 - Case 4 (world rule/mechanic coordination) tests cross-domain awareness; verify the agent identifies the mechanic boundary without crossing it
 - Case 5 is the most important context-awareness test; the agent must use established facts, not creative alternatives
-- No automated runner; review manually or via `/skill-test`
+- No automated runner; review manually or via `$skill-test`

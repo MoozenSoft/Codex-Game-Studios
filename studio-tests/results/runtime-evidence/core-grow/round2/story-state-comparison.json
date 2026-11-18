@@ -1,0 +1,30 @@
+{
+  "reference": "reference.tsv",
+  "current": "story.tsv",
+  "same_gameplay_rows": true,
+  "row_count": 10,
+  "reference_rows": [
+    "scene\t0\ttitle",
+    "state\t0\ttitle\t{\"t\":0,\"score\":0,\"gained\":\"\",\"x\":400,\"y\":510,\"phase\":0,\"target\":0.32,\"cooldown\":0,\"feedback\":0,\"message\":\"Find the gold. Press Space.\",\"fish\":\"[8 items]\"}",
+    "scene\t1\tplay",
+    "state\t1\tplay\t{\"t\":0,\"score\":0,\"gained\":\"\",\"x\":400,\"y\":510,\"phase\":0,\"target\":0.32,\"cooldown\":0,\"feedback\":0,\"message\":\"Find the gold. Press Space.\",\"fish\":\"[8 items]\"}",
+    "playinput\t31\tSpace",
+    "scene\t184\tresults",
+    "state\t184\tresults\t{\"t\":3.05,\"score\":3,\"gained\":\"Evening haul complete\",\"x\":400,\"y\":510,\"phase\":0.68,\"target\":0.66,\"cooldown\":0.6,\"feedback\":1.1,\"message\":\"Landed! Another flash of silver.\",\"fish\":\"[8 items]\"}",
+    "state\t3600\tresults\t{\"t\":3.05,\"score\":3,\"gained\":\"Evening haul complete\",\"x\":400,\"y\":510,\"phase\":0.68,\"target\":0.66,\"cooldown\":0.6,\"feedback\":1.1,\"message\":\"Landed! Another flash of silver.\",\"fish\":\"[8 items]\"}",
+    "done\t3600\tresults\tstop\t60.0",
+    "uncaught\t0"
+  ],
+  "current_rows": [
+    "scene\t0\ttitle",
+    "state\t0\ttitle\t{\"t\":0,\"score\":0,\"gained\":\"\",\"x\":400,\"y\":510,\"phase\":0,\"target\":0.32,\"cooldown\":0,\"feedback\":0,\"message\":\"Find the gold. Press Space.\",\"fish\":\"[8 items]\"}",
+    "scene\t1\tplay",
+    "state\t1\tplay\t{\"t\":0,\"score\":0,\"gained\":\"\",\"x\":400,\"y\":510,\"phase\":0,\"target\":0.32,\"cooldown\":0,\"feedback\":0,\"message\":\"Find the gold. Press Space.\",\"fish\":\"[8 items]\"}",
+    "playinput\t31\tSpace",
+    "scene\t184\tresults",
+    "state\t184\tresults\t{\"t\":3.05,\"score\":3,\"gained\":\"Evening haul complete\",\"x\":400,\"y\":510,\"phase\":0.68,\"target\":0.66,\"cooldown\":0.6,\"feedback\":1.1,\"message\":\"Landed! Another flash of silver.\",\"fish\":\"[8 items]\"}",
+    "state\t3600\tresults\t{\"t\":3.05,\"score\":3,\"gained\":\"Evening haul complete\",\"x\":400,\"y\":510,\"phase\":0.68,\"target\":0.66,\"cooldown\":0.6,\"feedback\":1.1,\"message\":\"Landed! Another flash of silver.\",\"fish\":\"[8 items]\"}",
+    "done\t3600\tresults\tstop\t60.0",
+    "uncaught\t0"
+  ]
+}

@@ -1,5 +1,7 @@
 # Agent Test Spec: lead-programmer
 
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
+
 ## Agent Summary
 **Domain owned:** Code architecture decisions, LP-FEASIBILITY gate, LP-CODE-REVIEW gate, coding standards enforcement, tech stack decisions within the approved engine.
 **Does NOT own:** Game design decisions (game-designer), creative direction (creative-director), production scheduling (producer), visual art direction (art-director).
@@ -9,11 +11,11 @@
 
 ## Static Assertions (Structural)
 
-Verified by reading the agent's `.claude/agents/lead-programmer.md` frontmatter:
+Verified by reading the agent's `.codex/agents/lead-programmer.toml` frontmatter:
 
 - [ ] `description:` field is present and domain-specific (references code architecture, feasibility, code review, coding standards — not generic)
-- [ ] `tools:` includes Read for source files and Bash for static analysis or test runs; Write/Edit are gated in the body — every write waits for the user's "yes", and the orchestrated-run exception covers only new artifacts under `production/`, `docs/` or `tests/`
-- [ ] Model tier is `sonnet` — frontmatter `model:` reads exactly `sonnet` (tiers: `.claude/docs/model-tiers.md`)
+- [ ] developer_instructions 明确领域职责、允许修改路径和产物；工具可用性由当前 Codex 提供。
+- [ ] TOML 省略 `model` 与 `model_reasoning_effort`，默认继承父会话；委派规则见 `.agents/docs/model-tiers.md`。
 - [ ] Agent definition does not claim authority over game design, creative direction, or production scheduling
 
 ---
@@ -25,7 +27,7 @@ Verified by reading the agent's `.claude/agents/lead-programmer.md` frontmatter:
 **Expected:** Returns the verdict APPROVE with rationale confirming the ADR boundary match, correctness against the GDD rules, dependency injection usage, doc comment coverage, data-driven configuration, and a testable public API.
 **Assertions:**
 - [ ] Verdict is exactly one of APPROVE / CONCERNS / REJECT (the LP-CODE-REVIEW verdicts)
-- [ ] States the verdict word `APPROVE` explicitly — `/story-done` branches on the gate's verdict words, so a verdict left implicit in prose cannot be acted on
+- [ ] States the verdict word `APPROVE` explicitly — `$story-done` branches on the gate's verdict words, so a verdict left implicit in prose cannot be acted on
 - [ ] Rationale references specific criteria from its Coding Standards Enforcement list and the gate prompt (ADR boundary, GDD rules, DI, doc comments, data-driven values, testable API)
 - [ ] Output stays within code quality scope — does not comment on whether the mechanic is fun or fits creative vision
 
@@ -88,6 +90,6 @@ Verified by reading the agent's `.claude/agents/lead-programmer.md` frontmatter:
 
 ## Coverage Notes
 - Multi-file code review spanning several interdependent systems is not covered — deferred to integration tests.
-- Tech debt assessment and prioritization are not covered here — deferred to /tech-debt skill integration.
+- Tech debt assessment and prioritization are not covered here — deferred to $tech-debt skill integration.
 - Coding standards document updates (adding a new forbidden pattern) are not covered.
 - Interaction with qa-lead on what constitutes a testable unit (LP vs QL boundary) is not covered.

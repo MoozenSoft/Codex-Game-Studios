@@ -1,0 +1,16 @@
+browser	C:/Program Files/Google/Chrome/Application/chrome.exe
+time	2026-11-17 12:07:28
+render	cheap
+hookless	the game has window.game; its own loop is stepped
+ua	HeadlessChrome/157.0.0.0
+scene	0	hookless
+state	0	hookless	{}
+state	120	hookless	{}
+pressure	none	the game set no number state.margin in play
+steptime	120	0.001	0.100
+frametime	none	no frame was drawn in play
+done	120	hookless	stop	2.0	55
+measured	1280x720
+screen	120	hookless	c9d0dc5	blank
+uncaught	0
+shot	/d/Git/Codex-Game-Studios/.scratch/codex-capability-probe/app-web-acceptance/production/qa/evidence/app-acceptance/repro-hookless.png	4250

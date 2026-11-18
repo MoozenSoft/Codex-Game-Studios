@@ -1,0 +1,10 @@
+=== CCGS Config (resolved: local->yaml->legacy->default; use as-is) ===
+review_mode: solo (rigor:minimal)
+automation: collaborative (default)
+workflow: minimal (rigor:minimal)
+qa.level: minimal (rigor:minimal)
+automation_always_ask: scope_changes, file_deletions, schema_changes (default)
+system_overrides: none
+gate_level: logic=blocking(default) integration=blocking(project.yaml) visual=blocking(default) ui=blocking(default) config=advisory(default; /smoke-check: blocking)
+review_gate: skill-gates=skip phase-gates=skip (review_mode solo, rigor:minimal; a --review flag overrides)
+=== end ===

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "surface": "当前 Codex 终端会话的真实子代理工具；App 角色绑定另见 runtime-evidence/app-fresh-result.md",
+  "role_fallback": {
+    "api_has_agent_type": false,
+    "task_name": "/root/role_binding_fallback_probe",
+    "role_source": ".codex/agents/technical-director.toml",
+    "binding": "未原生绑定；由独立子代理显式读取 developer_instructions 和必读运行/协作规则",
+    "actual_result": "已实际读取角色定义。A/B 初始化互相调用存在循环依赖与初始化契约风险；缺少语言、源码、构建和运行证据，因此实际运行未评估。无文件修改。",
+    "status": "passed",
+    "interpretation": "通过的是无角色绑定参数时的显式读取降级路径，不冒充原生绑定或游戏运行通过。"
+  },
+  "concurrency_limit": {
+    "active_test_agents": ["/root/quota_probe_1", "/root/quota_probe_2", "/root/quota_probe_3"],
+    "boundary_request": "/root/quota_probe_overflow",
+    "actual_tool_result": "collab spawn failed: agent thread limit reached",
+    "status": "passed",
+    "cleanup": "确认额度反馈后逐一 interrupt 三个测试对象，三个 previous_status 均为 running；没有读取文件、修改产物或派发实现。",
+    "interpretation": "当前会话主代理加三个测试对象时触及额度；不是所有 Codex 客户端都固定同一额度。"
+  },
+  "other_runtime_evidence": ["studio-tests/results/task3-role-runtime.json", "studio-tests/results/runtime-evidence/app-fresh-result.md"]
+}

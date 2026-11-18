@@ -1,16 +1,18 @@
-# Skill Test Spec: /setup-engine
+# Skill Test Spec: $setup-engine
+
+> Codex 验收约定：本文件保留领域用例；配置来源为 `.agents/skills/` 与 `.codex/agents/`。提问、确认、写入及并发按实际客户端能力和 `automation-modes.md` 执行，复用已有授权；静态推理不等于真实运行通过。
 
 ## Skill Summary
 
-`/setup-engine` pins the project's engine, version and language. It accepts
+`$setup-engine` pins the project's engine, version and language. It accepts
 `[engine]`, `[engine] [version]`, `refresh`, `upgrade [old] [new]`, or no
 argument for guided selection: an existing project keeps its engine, and a new
 one with no engine named is offered web first. For Godot it asks which language (GDScript, C#
 or Both) before showing the Technology Stack. It then:
 
 - writes the Technology Stack and the `ENGINE-REFERENCE-IMPORT` line to
-  `CLAUDE.md` after "May I write these engine settings to `CLAUDE.md`?"
-- fills `.claude/docs/technical-preferences.md` (the legacy mirror: naming
+  `AGENTS.md` after "May I write these engine settings to `AGENTS.md`?"
+- fills `.agents/docs/technical-preferences.md` (the legacy mirror: naming
   conventions, specialist routing table, input/platform, performance budgets)
   after the user approves the presented defaults
 - dual-writes the `engine`, `specialists`, `naming` and `commands` blocks to
@@ -28,19 +30,19 @@ engine is configured.
 
 ## Static Assertions (Structural)
 
-Checked against the SKILL.md by `/skill-test spec` — no fixture needed.
+Checked against the SKILL.md by `$skill-test spec` — no fixture needed.
 
-- [ ] Has required frontmatter fields: `name`, `description`, `argument-hint`, `user-invocable`, `allowed-tools`
+- [ ] Skill frontmatter 包含可解析的 `name`、`description`，目录名与 name 一致，不依赖旧客户端字段。
 - [ ] Has ≥2 phase headings
 - [ ] Contains verdict keyword: COMPLETE
-- [ ] Contains "May I write" language before writing `CLAUDE.md` and before writing the `project.yaml` blocks
-- [ ] Has a next-step handoff (Section 12 prints one Next-Steps list in `/next-step`'s order: `/prototype` first when there is no game yet, studio mode added at `standard` and `full`)
+- [ ] Contains "May I write" language before writing `AGENTS.md` and before writing the `project.yaml` blocks
+- [ ] Has a next-step handoff (Section 12 prints one Next-Steps list in `$next-step`'s order: `$prototype` first when there is no game yet, studio mode added at `standard` and `full`)
 
 ---
 
 ## Director Gate Checks
 
-None. `/setup-engine` is a technical configuration skill. No director gates apply.
+None. `$setup-engine` is a technical configuration skill. No director gates apply.
 
 ---
 
@@ -48,7 +50,7 @@ None. `/setup-engine` is a technical configuration skill. No director gates appl
 
 Every case's `project.yaml` sets `modes.rigor: minimal` and
 `modes.automation: collaborative`, with no `project.local.yaml`, unless its own
-Fixture says otherwise. Rules: `studio-tests/CLAUDE.md` §
+Fixture says otherwise. Rules: `studio-tests/AGENTS.md` §
 Fixture defaults.
 
 ---
@@ -63,12 +65,12 @@ Fixture defaults.
 - `docs/engine-reference/godot/VERSION.md` already pins 4.7
 - No `project.godot` at the repo root; the user approves every write
 
-**Input:** `/setup-engine godot 4.7`
+**Input:** `$setup-engine godot 4.7`
 
 **Expected behavior:**
 1. Full-spec mode: Section 2's guided selection is skipped
 2. Skill asks the Godot language question (A GDScript / B C# / C Both); user picks GDScript
-3. Skill shows the Technology Stack and asks "May I write these engine settings to `CLAUDE.md`?"
+3. Skill shows the Technology Stack and asks "May I write these engine settings to `AGENTS.md`?"
 4. Technical preferences are presented with GDScript naming (snake_case files and
    variables) and the A3 routing table: `.gd` → godot-gdscript-specialist,
    `.gdshader` → godot-shader-specialist, `.tscn` → godot-specialist
@@ -89,7 +91,7 @@ Fixture defaults.
 - [ ] `naming.variables` and `naming.files` are `snake_case`
 - [ ] Routing table includes `.gd`, `.gdshader`, and `.tscn` entries; `specialists.code` is `godot-gdscript-specialist`
 - [ ] The rendering/physics shape is asked, not inferred from the engine name
-- [ ] "May I write" is asked before `CLAUDE.md` and before `project.yaml` are written
+- [ ] "May I write" is asked before `AGENTS.md` and before `project.yaml` are written
 - [ ] Knowledge Risk is HIGH — the Section 6 table's cutoff is May 2025 and its Godot row ~4.3, as in the shipped VERSION.md
 - [ ] Verdict is COMPLETE
 
@@ -101,11 +103,11 @@ Fixture defaults.
 - Placeholders only in `technical-preferences.md`; no `engine` block in `project.yaml`
 - The user supplies the version and the build target when asked
 
-**Input:** `/setup-engine unity`
+**Input:** `$setup-engine unity`
 
 **Expected behavior:**
 1. Engine-only mode: version looked up and confirmed with the user
-2. No language question (Unity is C#); CLAUDE.md Language is `C#`
+2. No language question (Unity is C#); AGENTS.md Language is `C#`
 3. Naming: PascalCase classes/methods, `_camelCase` private fields
 4. Routing: `.cs` → unity-specialist, `.shader`/`.shadergraph` → unity-shader-specialist,
    `.unity`/`.prefab` → unity-specialist, `.uxml`/`.uss` → unity-ui-specialist
@@ -130,10 +132,10 @@ Fixture defaults.
 - Placeholders only; the user never states that the project is Blueprint-primary
 - The session runs on Windows (`uname -s` is neither `Linux` nor `Darwin`), so the Windows `commands` block applies
 
-**Input:** `/setup-engine unreal 5.8`
+**Input:** `$setup-engine unreal 5.8`
 
 **Expected behavior:**
-1. The primary-language question defaults to C++, so CLAUDE.md Language reads
+1. The primary-language question defaults to C++, so AGENTS.md Language reads
    `C++ (primary), Blueprint (gameplay prototyping)` — the line follows the
    answer, and a Blueprint-primary answer would write
    `Blueprint (primary), C++ where needed`
@@ -142,7 +144,7 @@ Fixture defaults.
    `specialists.additional` includes ue-blueprint-specialist
 4. `commands` are written as single-quoted scalars under a
    `# TODO: confirm these` comment; `engine.path` is recorded
-5. Performance budgets are asked via `AskUserQuestion` (set defaults / leave
+5. Performance budgets are asked via `当前 Codex 可用的提问工具` (set defaults / leave
    `[TO BE CONFIGURED]`), not pre-filled
 6. No `.uproject` is scaffolded; verdict COMPLETE
 
@@ -163,7 +165,7 @@ Fixture defaults.
 - `project.godot` exists at the repo root
 - `docs/engine-reference/godot/VERSION.md` pins 4.7
 
-**Input:** `/setup-engine godot 4.7`
+**Input:** `$setup-engine godot 4.7`
 
 **Expected behavior:**
 1. Skill reads `project.yaml` before editing it
@@ -190,7 +192,7 @@ Fixture defaults.
 **Fixture:**
 - Fresh project with no engine configured
 
-**Input:** `/setup-engine godot`
+**Input:** `$setup-engine godot`
 
 **Expected behavior:**
 1. Skill completes full engine configuration
@@ -211,7 +213,7 @@ Fixture defaults.
 - `godot --version` reports `4.5.1.stable`
 - The user picks "pin the newer one and upgrade later"
 
-**Input:** `/setup-engine godot 4.7`
+**Input:** `$setup-engine godot 4.7`
 
 **Expected behavior:**
 1. Section 3 probes the installed editor and finds 4.5.1 — a mismatch
@@ -238,7 +240,7 @@ Fixture defaults.
 - The probe finds `C:/Program Files/Godot/Godot_v4.7.2-stable_win64.exe`, which reports `4.7.2.stable`
 - The user names the export preset `Windows Desktop`
 
-**Input:** `/setup-engine godot 4.7`
+**Input:** `$setup-engine godot 4.7`
 
 **Expected behavior:**
 1. Section 3 reads the version from the executable it found — it does not report "no engine installed"
@@ -262,18 +264,18 @@ Fixture defaults.
 - Fresh project: no engine configured, no `project.yaml` engine block
 - The engine question comes back skipped: the user closes it, or a headless run
   returns every question as skipped
-- The sandbox carries the framework's `CLAUDE.md`. The rule this case checks is
+- The sandbox carries the framework's `AGENTS.md`. The rule this case checks is
   stated there ("A skipped or dismissed question is not an answer") and in
-  `.claude/docs/automation-modes.md`, not in `/setup-engine`'s own files; a rule
-  `CLAUDE.md` loads counts as the skill's own (`/skill-test` spec mode, Step 3),
+  `.agents/docs/automation-modes.md`, not in `$setup-engine`'s own files; a rule
+  `AGENTS.md` loads counts as the skill's own (`$skill-test` spec mode, Step 3),
   so a sandbox without it is set up wrong, not a skill FAIL
 
-**Input:** `/setup-engine`
+**Input:** `$setup-engine`
 
 **Expected behavior:**
 1. The skill does not choose an engine, language or version itself
 2. It asks again in plain text, saying what is waiting on the answer, and waits
-3. Nothing is written to `CLAUDE.md`, `project.yaml`, `technical-preferences.md`
+3. Nothing is written to `AGENTS.md`, `project.yaml`, `technical-preferences.md`
    or `VERSION.md` before the user answers
 4. In a run where nobody can answer, it stops and reports what is waiting
 
@@ -287,14 +289,14 @@ Fixture defaults.
 ### Case 9: An existing web project — recorded as it is, no game file changed
 
 **Fixture:**
-- A git repository holding a web game committed before Claude Code Game Studios: `package.json`
+- A git repository holding a web game committed before Codex Game Studios: `package.json`
   (scripts `dev`, `build` = `webpack --config webpack/config.prod.js`, `test` =
   `jest`), `package-lock.json`, `src/`, `tests/score.test.js`, webpack and Jest in
   `devDependencies`, Phaser in `dependencies`, no `tsconfig.json`, no
-  `window.game`; Claude Code Game Studios' files added in a later commit; no `node_modules/`
+  `window.game`; Codex Game Studios' files added in a later commit; no `node_modules/`
 - Variant A — `package.json` has `"workspaces": ["packages/*"]`
 
-**Input:** `/setup-engine web`
+**Input:** `$setup-engine web`
 
 **Expected behavior:**
 1. Reads the project with `web-detect.sh` and never runs `web-scaffold.sh`
@@ -302,7 +304,7 @@ Fixture defaults.
    `npm run build`, `npm test`, smoke = the build; `src/` and `tests/` (nothing
    extra to write); JavaScript; webpack and its version; Jest; Phaser; hook absent
 3. Says the reference describes the template's versions, not this project's
-4. On a yes, writes only `CLAUDE.md`, `technical-preferences.md` and
+4. On a yes, writes only `AGENTS.md`, `technical-preferences.md` and
    `project.yaml` (`engine.name: "Web"`, webpack's version, `commands`; no
    `rendering`, no `physics`)
 5. Asks before `npm ci`, then runs the build and `test-run.sh web`
@@ -328,7 +330,7 @@ Fixture defaults.
   no `*.uproject`, no `package.json`; no concept or brief
 - Variant A — `design/game-brief.md` says the game is for console and names no engine
 
-**Input:** `/setup-engine`
+**Input:** `$setup-engine`
 
 **Expected behavior:**
 1. One line before the question says when Godot, Unity or Unreal fit better
@@ -353,11 +355,11 @@ Fixture defaults.
 - Variant A — `project.yaml` has `engine.name: "Godot"` (4.7)
 - Variant B — no `engine` block, but `project.godot` is at the repo root
 
-**Input:** `/setup-engine`
+**Input:** `$setup-engine`
 
 **Expected behavior:**
 1. Variant A: says the engine is Godot and carries on with Godot, as
-   `/setup-engine godot`; no engine question
+   `$setup-engine godot`; no engine question
 2. Variant B: says it found `project.godot` and carries on with Godot
 3. Neither variant offers web or another engine, and neither writes `engine.name`
    as anything but Godot
@@ -372,7 +374,7 @@ Fixture defaults.
 ## Protocol Compliance
 
 - [ ] Presents draft configuration before asking to write
-- [ ] Asks "May I write" before writing `CLAUDE.md` and the `project.yaml` blocks; technical preferences are written only after the user approves the presented defaults
+- [ ] Asks "May I write" before writing `AGENTS.md` and the `project.yaml` blocks; technical preferences are written only after the user approves the presented defaults
 - [ ] Respects engine argument when provided (skips guided selection)
 - [ ] Dual-writes `project.yaml` and `technical-preferences.md`, then reads `project.yaml` back to confirm they agree
 - [ ] On re-run, edits existing `project.yaml` blocks in place without duplicating them

@@ -1,0 +1,84 @@
+accepted	production/qa/evidence/grow-dusk-fish/accepted.tsv	production/qa/evidence/grow-dusk-fish/accepted.png
+diff --git a/design/game-brief.md b/design/game-brief.md
+index eddf12d..9991cdf 100644
+--- a/design/game-brief.md
++++ b/design/game-brief.md
+@@ -10,7 +10,7 @@ After play: 这是一条明确标注为自动验收输入的反馈，不是人
+ 
+ **Pitch:** 黄昏池畔移动渔夫，抓准判定条时机，在四十五秒内收获三条鱼。
+ **Genre:** arcade fishing。
+-**Controls:** 方向键移动；Space 收鱼；Enter 开始/重试；P 暂停/继续。
++**Controls:** 方向键移动；Space 收鱼；Enter 开始/重试；胜利或失败画面也可按 R 重试；P 暂停/继续。
+ **Question:** 移动与定时收鱼能否构成完整、清楚、可重试的短局？*(inferred (strong))*
+ **Hooks:** 暮色水面上的鱼影、移动判定条与三鱼倒计时。
+ **Intent:** 本次无人试玩；乐趣与难度未评估。
+@@ -20,7 +20,7 @@ After play: 这是一条明确标注为自动验收输入的反馈，不是人
+ - View: 2D 固定俯视镜头；池畔木栈道和可游动的鱼影。*(guessed)*
+ 
+ ## First minute
+-Enter 离开标题后，方向键沿池畔栈道移动，观察循环判定条，Space 在金色区域内收鱼；三条后进入胜利结果，或四十五秒到时失败，Enter 立即重试。
++Enter 离开标题后，方向键沿池畔栈道移动，观察循环判定条，Space 在金色区域内收鱼；三条后进入胜利结果，或四十五秒到时失败，Enter 或 R 立即重试。
+ 
+ ## Challenge
+ 开局即需瞄准时机；每条鱼后判定条加快，失误有短暂收线冷却但不扣已获鱼，失败清空本局重新开始。加速与冷却细节 *(guessed)*。
+@@ -28,7 +28,7 @@ Enter 离开标题后，方向键沿池畔栈道移动，观察循环判定条
+ ## Core loop
+ - 沿池畔移动渔夫，调整钓竿与落点。
+ - 看判定条并按 Space，成功增加渔获，失误等待短暂冷却。
+-- 达到三鱼获胜或到时失败，Enter 重试。
++- 达到三鱼获胜或到时失败，Enter 或 R 重试；游玩中 R 不重置。
+ 
+ ## Goal & fail state
+ - 45 秒内钓到 3 条赢；超时输。暂停冻结本局与判定条。
+@@ -40,6 +40,7 @@ Enter 离开标题后，方向键沿池畔栈道移动，观察循环判定条
+ - [x] Enter 开始/重试，P 暂停/继续，显示操作与结果。
+ - [x] data/config.json 集中可调数值，TypeScript 模块保留固定步进、seed 回放及 window.game 钩子。
+ - [x] Vitest 核心规则测试、Playwright 启动与同 seed 确定性验证。
++- [x] 胜利或失败画面按 R 重试，Enter 原行为保留；标题、游玩及暂停时 R 不重置。
+ 
+ ## Your systems
+ - 移动、判定条、收鱼 · in the slice
+diff --git a/src/main.ts b/src/main.ts
+index 47733ad..603fd11 100644
+--- a/src/main.ts
++++ b/src/main.ts
+@@ -82,8 +82,8 @@ const scenes: Record<Scene, { update(dt: number): void; draw(): void }>={
+     }
+   },draw:world},
+   pause:{update(){if(pressed('KeyP')){scene='play';events.push('resume');}},draw(){modal('A quiet pause','The water and clock are still.','P to continue','Your catch is safe.');}},
+-  over:{update(){if(pressed('Enter'))begin();},draw(){modal('Night fell',`${state.score} / ${tune.quota} caught. A new dusk awaits.`,'Enter to try again','Watch the needle cross the gold.');}},
+-  results:{update(){if(pressed('Enter'))begin();},draw(){modal('Evening haul complete',`${state.score} fish landed in ${state.t.toFixed(S.one)} seconds.`,'Enter for another dusk','A little patience. A precise moment.');}}
++  over:{update(){if(pressed('Enter')||pressed('KeyR'))begin();},draw(){modal('Night fell',`${state.score} / ${tune.quota} caught. A new dusk awaits.`,'Enter or R to try again','Watch the needle cross the gold.');}},
++  results:{update(){if(pressed('Enter')||pressed('KeyR'))begin();},draw(){modal('Evening haul complete',`${state.score} fish landed in ${state.t.toFixed(S.one)} seconds.`,'Enter or R for another dusk','A little patience. A precise moment.');}}
+ };
+ 
+ // ---- Loop: fixed step, frame time clamped ---------------------------------------------
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/retry-over.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/retry-results.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/story-pixel-comparison.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/accepted.tsv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/story.tsv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/integration/retry.spec.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/retry-over.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/retry-results.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/core-grow/round2/story-pixel-comparison.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/accepted.tsv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'production/qa/evidence/grow-dusk-fish/story.tsv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/integration/retry.spec.ts', LF will be replaced by CRLF the next time Git touches it
+[probe ac15b36] 新增结果画面按 R 重试并保留 Enter 与局内行为
+ 17 files changed, 748 insertions(+), 5 deletions(-)
+ create mode 100644 production/qa/evidence/core-grow/round2/retry-green.log
+ create mode 100644 production/qa/evidence/core-grow/round2/retry-over-after.png
+ create mode 100644 production/qa/evidence/core-grow/round2/retry-over-before.png
+ create mode 100644 production/qa/evidence/core-grow/round2/retry-over.json
+ create mode 100644 production/qa/evidence/core-grow/round2/retry-red.log
+ create mode 100644 production/qa/evidence/core-grow/round2/retry-results-after.png
+ create mode 100644 production/qa/evidence/core-grow/round2/retry-results-before.png
+ create mode 100644 production/qa/evidence/core-grow/round2/retry-results.json
+ create mode 100644 production/qa/evidence/core-grow/round2/story-pixel-comparison.json
+ create mode 100644 production/qa/evidence/core-grow/round2/story-state-comparison.json
+ create mode 100644 production/qa/evidence/grow-dusk-fish/accepted.png
+ create mode 100644 production/qa/evidence/grow-dusk-fish/accepted.tsv
+ create mode 100644 production/qa/evidence/grow-dusk-fish/story.png
+ create mode 100644 production/qa/evidence/grow-dusk-fish/story.tsv
+ create mode 100644 tests/integration/retry.spec.ts

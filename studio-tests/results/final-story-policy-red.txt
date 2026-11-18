@@ -1,0 +1,21 @@
+test_core_skill_metadata_and_resources_exist (test_core_skills.CoreSkillTests.test_core_skill_metadata_and_resources_exist) ... ok
+test_story_close_policy_rejects_required_failure_and_unknown (test_core_skills.CoreSkillTests.test_story_close_policy_rejects_required_failure_and_unknown) ... FAIL
+test_story_lifecycle_requires_explicit_invocation (test_core_skills.CoreSkillTests.test_story_lifecycle_requires_explicit_invocation) ... ok
+
+======================================================================
+FAIL: test_story_close_policy_rejects_required_failure_and_unknown (test_core_skills.CoreSkillTests.test_story_close_policy_rejects_required_failure_and_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Git\Codex-Game-Studios\studio-tests\automated\test_core_skills.py", line 35, in test_story_close_policy_rejects_required_failure_and_unknown
+    self.assertEqual(rows,{'COMPLETE':'ALLOW','COMPLETE WITH NOTES':'ALLOW','NOT ASSESSED':'DENY','BLOCKED':'DENY'},'客户端关闭资格合同必须覆盖四种判定，必要失败/未知不得关闭')
+AssertionError: {} != {'COMPLETE': 'ALLOW', 'COMPLETE WITH NOTES[49 chars]ENY'}
+- {}
++ {'BLOCKED': 'DENY',
++  'COMPLETE': 'ALLOW',
++  'COMPLETE WITH NOTES': 'ALLOW',
++  'NOT ASSESSED': 'DENY'} : 客户端关闭资格合同必须覆盖四种判定，必要失败/未知不得关闭
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+FAILED (failures=1)

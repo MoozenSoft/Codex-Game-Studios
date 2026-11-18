@@ -1,0 +1,177 @@
+{
+  "qa_plan_absent_while_waiting": true,
+  "qa_story_unchanged": true,
+  "story_sha256": "a4838dd8480b24d0c678809a86ae42fef310217cc2c17fa4890c06160d993233",
+  "qa_plan_exists_after_explicit_yes": true,
+  "qa_plan_sha256": "b7817ddd2dc6da5b7e48a538fb2e749492b299c8355c4935fd050428e224d035",
+  "env_target_absent": true,
+  "json_repaired_value": {
+    "probe": "CLI_FULL_REPAIRED_20261118"
+  },
+  "fixture_fail_story_unchanged": true,
+  "live_event_names": [
+    "PostToolUse",
+    "PreCompact",
+    "PreToolUse",
+    "SessionStart",
+    "Stop",
+    "SubagentStart",
+    "SubagentStop"
+  ],
+  "event_count": 129,
+  "run_status": {
+    "baseline": {
+      "exit_code": 0,
+      "elapsed_seconds": 121.594,
+      "command": [
+        "%USERPROFILE%\\AppData\\Local\\fnm_multishells\\29384_1794561706594\\codex.cmd",
+        "exec",
+        "--json",
+        "--approve-for-me",
+        "-C",
+        "<probe>",
+        "-o",
+        "<repo>\\.scratch\\cli-comprehensive-2026-11-18\\baseline.result.md",
+        "<stdin prompt>"
+      ],
+      "model_override": false
+    },
+    "recovery": {
+      "exit_code": 0,
+      "elapsed_seconds": 19.14,
+      "command": [
+        "%USERPROFILE%\\AppData\\Local\\fnm_multishells\\29384_1794561706594\\codex.cmd",
+        "exec",
+        "--json",
+        "--approve-for-me",
+        "-C",
+        "<probe>",
+        "-o",
+        "<repo>\\.scratch\\cli-comprehensive-2026-11-18\\recovery.result.md",
+        "resume",
+        "01a1ec2e-523f-7331-8d74-394f0d37c6f4",
+        "<stdin prompt>"
+      ],
+      "model_override": false
+    },
+    "qa-gate": {
+      "exit_code": 0,
+      "elapsed_seconds": 190.266,
+      "command": [
+        "%USERPROFILE%\\AppData\\Local\\fnm_multishells\\29384_1794561706594\\codex.cmd",
+        "exec",
+        "--json",
+        "--approve-for-me",
+        "-C",
+        "<probe>",
+        "-o",
+        "<repo>\\.scratch\\cli-comprehensive-2026-11-18\\qa-gate.result.md",
+        "<stdin prompt>"
+      ],
+      "model_override": false
+    },
+    "qa-answer": {
+      "exit_code": 0,
+      "elapsed_seconds": 213.172,
+      "command": [
+        "%USERPROFILE%\\AppData\\Local\\fnm_multishells\\29384_1794561706594\\codex.cmd",
+        "exec",
+        "--json",
+        "--approve-for-me",
+        "-C",
+        "<probe>",
+        "-o",
+        "<repo>\\.scratch\\cli-comprehensive-2026-11-18\\qa-answer.result.md",
+        "resume",
+        "01a1ec32-32ce-74a1-b82f-2d574257354d",
+        "<stdin prompt>"
+      ],
+      "model_override": false
+    },
+    "team-gate": {
+      "exit_code": 0,
+      "elapsed_seconds": 168.187,
+      "command": [
+        "%USERPROFILE%\\AppData\\Local\\fnm_multishells\\29384_1794561706594\\codex.cmd",
+        "exec",
+        "--json",
+        "--approve-for-me",
+        "-C",
+        "<probe>",
+        "-o",
+        "<repo>\\.scratch\\cli-comprehensive-2026-11-18\\team-gate.result.md",
+        "<stdin prompt>"
+      ],
+      "model_override": false
+    },
+    "boundaries": {
+      "exit_code": 0,
+      "elapsed_seconds": 32.906,
+      "command": [
+        "%USERPROFILE%\\AppData\\Local\\fnm_multishells\\29384_1794561706594\\codex.cmd",
+        "exec",
+        "--json",
+        "--approve-for-me",
+        "-C",
+        "<probe>",
+        "-o",
+        "<repo>\\.scratch\\cli-comprehensive-2026-11-18\\boundaries.result.md",
+        "<stdin prompt>"
+      ],
+      "model_override": false
+    },
+    "worktree": {
+      "exit_code": 0,
+      "elapsed_seconds": 105.172,
+      "command": [
+        "%USERPROFILE%\\AppData\\Local\\fnm_multishells\\29384_1794561706594\\codex.cmd",
+        "exec",
+        "--json",
+        "--approve-for-me",
+        "-C",
+        "<probe>\\.scratch\\CLI 全量 工作树\\src",
+        "-o",
+        "<repo>\\.scratch\\cli-comprehensive-2026-11-18\\worktree.result.md",
+        "<stdin prompt>"
+      ],
+      "model_override": false
+    },
+    "worktree-memory": {
+      "exit_code": 0,
+      "elapsed_seconds": 35.906,
+      "command": [
+        "%USERPROFILE%\\AppData\\Local\\fnm_multishells\\29384_1794561706594\\codex.cmd",
+        "exec",
+        "--json",
+        "--approve-for-me",
+        "-C",
+        "<probe>\\.scratch\\CLI 全量 工作树\\src",
+        "-o",
+        "<repo>\\.scratch\\cli-comprehensive-2026-11-18\\worktree-memory.result.md",
+        "resume",
+        "01a1ec33-eef7-7010-94c4-513509dc3371",
+        "<stdin prompt>"
+      ],
+      "model_override": false
+    },
+    "game-regression": {
+      "exit_code": 0,
+      "elapsed_seconds": 155.485,
+      "command": [
+        "%USERPROFILE%\\AppData\\Local\\fnm_multishells\\29384_1794561706594\\codex.cmd",
+        "exec",
+        "--json",
+        "--approve-for-me",
+        "-C",
+        "<probe>",
+        "-o",
+        "<repo>\\.scratch\\cli-comprehensive-2026-11-18\\game-regression.result.md",
+        "<stdin prompt>"
+      ],
+      "model_override": false
+    }
+  },
+  "probe_index_restored": true,
+  "root_index_unchanged": true,
+  "screenshot_sha256": "1dea5f6a11db4ba1cd68bc8b3f1665c55de6c3e8c92839f41ddf1d05c00b26d8"
+}
